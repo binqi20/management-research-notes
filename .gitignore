@@ -6,6 +6,9 @@
 library/*/*/pdfs/
 library/*/*/text/
 
+# Duplicate / retired PDFs retained locally for audit but never published.
+library/*/*/_duplicates/
+
 # Per-paper extraction bundles. These embed the full paper text verbatim and
 # must never leave a local machine.
 incoming/_bundles/
@@ -27,6 +30,15 @@ reviews/
 *.key
 *.pem
 secrets.*
+
+# --- Claude Code session state ------------------------------------------------
+# Ignore per-user session state while keeping the tracked `commands/` and
+# `skills/` subtrees (these define the project's slash commands and skills).
+.claude/*
+!.claude/commands/
+!.claude/commands/**
+!.claude/skills/
+!.claude/skills/**
 
 # --- macOS / editor cruft ----------------------------------------------------
 .DS_Store

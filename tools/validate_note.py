@@ -13,7 +13,10 @@ Checks (in order, with early exit on fatal frontmatter errors):
   7. For each section heading, the content is either non-trivial or exactly
      "Not reported in paper" (with paper-type-aware exemption).
   8. The verbatim Abstract is a substring of the extracted PDF text (whitespace
-     normalized). Skipped if abstract is "Not reported in paper".
+     and soft-hyphen normalized). Skipped if abstract is "Not reported in paper".
+  9. Prose drift: any backticked kebab-case token in the body that is within
+     edit distance 2 of a real topics.json slug but isn't an exact match is
+     flagged as a likely typo (e.g., `unehical-behavior` near `unethical-behavior`).
 
 On failure: prints a list of errors to stderr and exits non-zero. With `--flag`,
 also moves the note (or, if it isn't there yet, writes a stub) to
@@ -119,10 +122,41 @@ def parse_body_sections(body: str) -> dict[str, str]:
 
 
 def normalize_ws(s: str) -> str:
+    # Strip soft hyphens (U+00AD). pdftotext emits them mid-word as an
+    # invisible typography hint — they don't render in editors, but they
+    # are real bytes in the file and silently break the verbatim-substring
+    # check. Stripping them from both sides of the comparison is safe
+    # because soft hyphens carry no semantic content.
+    s = s.replace("\u00ad", "")
     # Reunite line-wrap hyphenations BEFORE collapsing whitespace, so the
     # comparison is robust to PDF extraction artifacts.
     s = re.sub(r"(\w)-\s+(\w)", r"\1\2", s)
     return re.sub(r"\s+", " ", s).strip()
+
+
+def _edit_distance_le(a: str, b: str, k: int) -> bool:
+    """True iff Levenshtein distance between a and b is <= k.
+
+    Fast-reject via length difference; otherwise standard DP. Inputs are
+    short topic slugs (< 40 chars) so the DP is trivially cheap.
+    """
+    if a == b:
+        return True
+    if abs(len(a) - len(b)) > k:
+        return False
+    la, lb = len(a), len(b)
+    prev = list(range(lb + 1))
+    for i in range(1, la + 1):
+        curr = [i] + [0] * lb
+        for j in range(1, lb + 1):
+            cost = 0 if a[i - 1] == b[j - 1] else 1
+            curr[j] = min(
+                curr[j - 1] + 1,      # insertion
+                prev[j] + 1,          # deletion
+                prev[j - 1] + cost,   # substitution
+            )
+        prev = curr
+    return prev[lb] <= k
 
 
 # --- check functions --------------------------------------------------------------
@@ -283,6 +317,41 @@ def check_apa_citation_doi(body_sections: dict, fm: dict, errors: list[str]) -> 
         )
 
 
+def check_prose_topic_drift(body: str, errors: list[str]) -> None:
+    """Flag backticked kebab-case tokens in the body that look like topic
+    slugs but are near-misses to a real entry in index/topics.json.
+
+    This is a narrow backstop against prose drift — the LLM writing e.g.
+    `unehical-behavior` (a 1-character typo of `unethical-behavior`) in a
+    distillation section, which the current frontmatter-only topic check
+    would never catch. We deliberately only flag tokens that are within
+    edit distance 2 of a real topic slug, so incidental kebab-case code
+    like `pdf-to-text` or `not-reported-in-paper` does NOT trigger false
+    positives — they aren't close to any vocabulary term.
+    """
+    allowed = load_allowed_topics()
+    if not allowed:
+        return
+    # Tokens shaped like a topic slug: lowercase kebab-case with 2-5 segments,
+    # enclosed in backticks in the body prose. No dots/slashes/underscores.
+    candidates = set(
+        re.findall(
+            r"`([a-z][a-z0-9]*(?:-[a-z0-9]+){1,4})`",
+            body,
+        )
+    )
+    for cand in sorted(candidates):
+        if cand in allowed:
+            continue
+        close = sorted(t for t in allowed if _edit_distance_le(cand, t, 2))
+        if close:
+            errors.append(
+                f"body prose contains backticked topic-like token {cand!r} "
+                f"that is not in index/topics.json. Likely typo of: "
+                f"{', '.join(close)}"
+            )
+
+
 def check_abstract_verbatim(body_sections: dict, fm: dict, errors: list[str]) -> None:
     abstract = body_sections.get("Abstract", "")
     if abstract == NOT_REPORTED or not abstract:
@@ -321,6 +390,7 @@ def validate(note_path: Path) -> list[str]:
     check_required_headings(sections, fm, errors)
     check_apa_citation_doi(sections, fm, errors)
     check_abstract_verbatim(sections, fm, errors)
+    check_prose_topic_drift(body, errors)
     return errors
 
 
