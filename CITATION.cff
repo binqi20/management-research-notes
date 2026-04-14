@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Tang"
     given-names: "Binqi"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add when available
+    orcid: "https://orcid.org/0000-0002-5095-3710"
 repository-code: "https://github.com/binqi20/Synapse"
 url: "https://github.com/binqi20/Synapse"
 license: MIT
