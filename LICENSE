@@ -19,19 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Scope of this license
-
-This MIT license covers the original software (the Python tools, configuration,
-documentation, and SQL schema in this repository) and the original curated notes
-authored for this knowledge base (the Markdown files in `notes/` and the derived
-indexes in `index/`).
-
-It does NOT and cannot extend to the underlying journal articles that the notes
-summarize. Those articles remain the copyright of their respective publishers
-and authors. The original PDFs are intentionally excluded from this repository.
-Each note in `notes/` cites the original work via DOI; obtain the source through
-legitimate channels (your institution, the publisher, or the author) if you
-need to reproduce the full ingestion pipeline locally.
