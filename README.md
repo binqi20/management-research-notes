@@ -6,6 +6,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![Notes](https://img.shields.io/badge/curated%20notes-62-brightgreen.svg)](notes/)
 [![Source](https://img.shields.io/badge/source-NBS%202026--02-orange.svg)](https://nbs.net/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
 > One Markdown note per peer-reviewed paper. Trusted bibliographic metadata
 > from manifests, analytic distillation from a verbatim-anchored extraction
@@ -193,7 +194,8 @@ you both APA and BibTeX automatically. Or, manually:
                   Management and Business Sustainability Research},
   year         = {2026},
   version      = {0.1.0},
-  url          = {https://github.com/binqi20/Synapse},
+  doi          = {10.5281/zenodo.19564336},
+  url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}
 }
 ```

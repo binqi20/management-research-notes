@@ -11,6 +11,10 @@ url: "https://github.com/binqi20/Synapse"
 license: MIT
 date-released: "2026-04-14"
 version: "0.1.0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19564336"
+    description: "Zenodo archive of Synapse v0.1.0."
 keywords:
   - academic knowledge base
   - management research
