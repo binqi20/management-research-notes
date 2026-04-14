@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "Synapse — A File-Based Academic Knowledge Base for Management and Business Sustainability Research"
+message: "If you use Synapse (the pipeline or the curated notes), please cite it as below."
+type: software
+authors:
+  - family-names: "Tang"
+    given-names: "Binqi"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add when available
+repository-code: "https://github.com/binqi20/Synapse"
+url: "https://github.com/binqi20/Synapse"
+license: MIT
+date-released: "2026-04-14"
+version: "0.1.0"
+keywords:
+  - academic knowledge base
+  - management research
+  - business sustainability
+  - business ethics
+  - literature review
+  - zettelkasten
+  - bibliographic metadata
+  - research infrastructure
+  - claude code
+abstract: >-
+  Synapse is a portable, file-based academic knowledge base for management and
+  business sustainability research. Each peer-reviewed article becomes one
+  Markdown note with YAML frontmatter (trusted bibliographic metadata, a
+  controlled-vocabulary topic taxonomy, and three custom analytic fields:
+  unit_of_analysis, level_of_theory, dependent_variable_family) and a
+  human-readable distillation (research question, mechanism, theoretical
+  contribution, limitations, future research, APA citation). A small Python
+  pipeline derives a SQLite index, a CSV export, and a BibTeX file from the
+  notes, while a verbatim-abstract validator anchors trust in the source PDF.
+  This release contains 62 curated notes from the Network for Business
+  Sustainability (NBS) February 2026 monthly digest.

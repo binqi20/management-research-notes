@@ -1,0 +1,55 @@
+# --- Copyright-sensitive: never commit ---------------------------------------
+# Original journal PDFs and any text extracted from them. Synapse is published
+# without these because the underlying articles are copyrighted by their
+# respective publishers. Run the pipeline locally if you have legitimate access
+# to the source PDFs.
+library/*/*/pdfs/
+library/*/*/text/
+
+# Per-paper extraction bundles. These embed the full paper text verbatim and
+# must never leave a local machine.
+incoming/_bundles/
+
+# Validator-flagged notes — may contain reasons that reference local paths or
+# wrong-PDF debugging context. Keep local.
+incoming/_flagged/
+
+# Other incoming staging artifacts
+incoming/*.pdf
+incoming/*.txt
+
+# Personal review drafts (folder kept private until ready for publication)
+reviews/
+
+# --- Secrets / local config --------------------------------------------------
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+
+# --- macOS / editor cruft ----------------------------------------------------
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+build/
+dist/

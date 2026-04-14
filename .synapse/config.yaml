@@ -1,0 +1,91 @@
+# Synapse configuration. Paths are relative to the Synapse root.
+
+root: .
+
+paths:
+  library: library
+  notes: notes
+  index: index
+  tools: tools
+  incoming: incoming
+  flagged: incoming/_flagged
+  bundles: incoming/_bundles
+
+# Sources. Each source has a slug used in paper IDs and a default issue layout.
+sources:
+  NBS:
+    name: "Network for Business Sustainability"
+    slug: nbs
+    description: "Monthly curated digest of newly published management / sustainability research."
+    issue_format: "YYYY-MM"      # so 'February 2026' becomes '2026-02'
+    manifest_filename: manifest.tsv
+    missing_filename: missing.tsv
+    # Column names in the manifest.tsv (matches the existing download-report.tsv)
+    manifest_columns:
+      title: title
+      first_author_last: first_author_last
+      year: year
+      doi: doi
+      saved_filename: saved_filename
+      publisher_link: publisher_link
+
+# Extraction settings
+extraction:
+  prompt_path: docs/extraction-prompt.md
+  prompt_version: v1
+  model: claude-opus-4-6                # for provenance only; extraction runs in CC session
+  max_text_chars: 200000                # truncate PDF text above this when building bundles
+
+# Controlled vocabulary + custom analytic fields
+taxonomy:
+  topics_path: index/topics.json        # controlled vocabulary enforced by validator
+custom_fields:
+  unit_of_analysis:
+    allowed: [individual, dyad, team, organization, firm, industry, market, country, multi-level, na]
+    description: "The primary entity the paper makes claims about."
+  level_of_theory:
+    allowed: [micro, meso, macro, cross-level, na]
+    description: "The level at which the paper's theoretical argument operates."
+  dependent_variable_family:
+    allowed: [financial, social, environmental, mixed, na]
+    description: "The family the focal DV / outcome belongs to."
+
+# ID generation
+ids:
+  # paper_id = {source_slug}-{year-month}-{first-author-slug}-{year}
+  # e.g. nbs-2026-02-spoor-2026
+  slug_lowercase: true
+  slug_max_length: 40
+
+# Validator policy
+validator:
+  on_failure: flag                       # 'flag' or 'reject'
+  abstract_min_chars: 80
+  abstract_substring_check: true
+  bib_match_strict: true
+  required_fields:
+    - title
+    - authors
+    - year
+    - journal
+    - doi
+    - paper_type
+    - unit_of_analysis
+    - level_of_theory
+    - dependent_variable_family
+    - topics
+  paper_types:
+    - empirical-quantitative
+    - empirical-qualitative
+    - empirical-mixed
+    - conceptual
+    - review
+    - editorial
+    - book-review
+    - other
+  # Fields that may be 'Not reported in paper' for these paper types
+  optional_for_type:
+    book-review: [research_question, mechanism_process, sample, theoretical_contribution]
+    editorial:   [research_question, mechanism_process, sample]
+    review:      [mechanism_process, sample]
+    conceptual:  [sample, mechanism_process]

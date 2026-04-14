@@ -1,0 +1,251 @@
+{
+  "version": "v1",
+  "description": "Controlled vocabulary for the Synapse knowledge base. Every note must carry 1-4 tags drawn from the union of 'domains' (coarse) and 'subtopics' (fine), plus optionally any number of 'context_tags'. The extraction prompt references this file; the validator enforces membership. Slugs are lowercase, kebab-case, and stable once published — adding new slugs is fine, renaming or deleting them is a breaking change.",
+  "domains": {
+    "sustainability-environment": {
+      "label": "Sustainability & Environment",
+      "description": "Climate, biodiversity, circular economy, and the natural environment as the focus of business research.",
+      "subtopics": [
+        "climate-policy",
+        "carbon-pricing",
+        "decarbonization",
+        "net-zero-transitions",
+        "circular-economy",
+        "biodiversity",
+        "ecosystem-services",
+        "renewable-energy",
+        "sustainable-materials",
+        "waste-management",
+        "pollution-environmental-health",
+        "environmental-regulation"
+      ]
+    },
+    "corporate-social-responsibility": {
+      "label": "Corporate Social Responsibility & ESG",
+      "description": "CSR, ESG disclosure, stakeholder engagement, and corporate sustainability strategy.",
+      "subtopics": [
+        "csr-strategy",
+        "esg-disclosure",
+        "sustainability-reporting",
+        "stakeholder-engagement",
+        "greenwashing",
+        "corporate-purpose",
+        "triple-bottom-line",
+        "impact-measurement",
+        "responsible-investing",
+        "sustainable-development-goals"
+      ]
+    },
+    "business-ethics": {
+      "label": "Business Ethics & Moral Philosophy",
+      "description": "Ethical decision-making, moral philosophy applied to business, corruption, and ethical climate.",
+      "subtopics": [
+        "ethical-decision-making",
+        "moral-philosophy",
+        "corruption-bribery",
+        "ethical-climate",
+        "whistleblowing",
+        "unethical-behavior",
+        "virtue-ethics",
+        "stakeholder-ethics",
+        "ai-ethics",
+        "role-morality"
+      ]
+    },
+    "social-entrepreneurship-impact": {
+      "label": "Social Entrepreneurship & Impact",
+      "description": "Hybrid organizations, social enterprise, impact investing, and dual-purpose organizing.",
+      "subtopics": [
+        "social-enterprise",
+        "hybrid-organizations",
+        "impact-investing",
+        "social-innovation",
+        "benefit-corporations",
+        "compassion-venturing",
+        "base-of-pyramid",
+        "grassroots-entrepreneurship",
+        "dual-purpose-organizations",
+        "nonprofit-management"
+      ]
+    },
+    "diversity-equity-inclusion": {
+      "label": "Diversity, Equity & Inclusion",
+      "description": "Gender, race, disability, neurodiversity, LGBTQ+, intersectionality, and inclusive organizing.",
+      "subtopics": [
+        "gender-in-organizations",
+        "racial-inequality",
+        "disability-inclusion",
+        "neurodiversity",
+        "lgbtq-inclusion",
+        "intersectionality",
+        "inclusive-leadership",
+        "dei-initiatives",
+        "workplace-discrimination",
+        "universal-design"
+      ]
+    },
+    "governance-leadership": {
+      "label": "Corporate Governance & Leadership",
+      "description": "Boards, CEOs, executive compensation, political activity, and corporate control.",
+      "subtopics": [
+        "corporate-governance",
+        "board-of-directors",
+        "ceo-leadership",
+        "executive-compensation",
+        "shareholder-activism",
+        "ownership-structure",
+        "corporate-political-activity",
+        "lobbying-regulation",
+        "family-business",
+        "crisis-leadership"
+      ]
+    },
+    "strategy-innovation": {
+      "label": "Strategy, Innovation & Entrepreneurship",
+      "description": "Competitive strategy, innovation, business models, and new-venture creation.",
+      "subtopics": [
+        "competitive-strategy",
+        "business-models",
+        "innovation-management",
+        "technology-adoption",
+        "entrepreneurship",
+        "new-venture-creation",
+        "dynamic-capabilities",
+        "mergers-acquisitions",
+        "ecosystems-platforms",
+        "digital-transformation",
+        "ai-automation"
+      ]
+    },
+    "finance-accounting": {
+      "label": "Finance & Accounting",
+      "description": "Corporate finance, accounting, valuation, and sustainable finance.",
+      "subtopics": [
+        "corporate-finance",
+        "financial-accounting",
+        "management-accounting",
+        "asset-pricing",
+        "green-bonds",
+        "sustainable-finance",
+        "financial-reporting",
+        "auditing",
+        "risk-management",
+        "banking-regulation"
+      ]
+    },
+    "operations-supply-chain": {
+      "label": "Operations & Supply Chain",
+      "description": "Production, logistics, supply chains, and sustainable operations.",
+      "subtopics": [
+        "supply-chain-management",
+        "sustainable-operations",
+        "sourcing-procurement",
+        "logistics",
+        "production-scheduling",
+        "supply-chain-transparency",
+        "modern-slavery",
+        "food-systems",
+        "energy-operations",
+        "quality-management"
+      ]
+    },
+    "marketing-consumer-behavior": {
+      "label": "Marketing & Consumer Behavior",
+      "description": "Marketing strategy, branding, and consumer psychology — including sustainable and ethical consumption.",
+      "subtopics": [
+        "sustainable-consumption",
+        "ethical-consumption",
+        "consumer-psychology",
+        "branding",
+        "pricing",
+        "willingness-to-pay",
+        "marketing-strategy",
+        "consumer-segmentation",
+        "pro-environmental-behavior",
+        "green-marketing"
+      ]
+    },
+    "organizational-behavior-hrm": {
+      "label": "Organizational Behavior & HRM",
+      "description": "Individuals and teams in organizations — motivation, wellbeing, teamwork, HR practices.",
+      "subtopics": [
+        "motivation-engagement",
+        "employee-wellbeing",
+        "teams-collaboration",
+        "leadership-behavior",
+        "organizational-identity",
+        "organizational-culture",
+        "meaningful-work",
+        "hr-practices",
+        "work-arrangements",
+        "emotions-at-work",
+        "conflict-resolution"
+      ]
+    },
+    "management-education": {
+      "label": "Management Education",
+      "description": "Business schools, MBA pedagogy, and the role of management education in society.",
+      "subtopics": [
+        "business-school-curriculum",
+        "mba-pedagogy",
+        "responsible-management-education",
+        "experiential-learning",
+        "case-method",
+        "student-outcomes",
+        "faculty-development",
+        "accreditation"
+      ]
+    },
+    "economics-public-policy": {
+      "label": "Economics & Public Policy",
+      "description": "Economic policy, institutional economics, and regulation as context for business.",
+      "subtopics": [
+        "institutional-economics",
+        "industrial-organization",
+        "public-policy",
+        "regulation",
+        "labor-economics",
+        "behavioral-economics",
+        "political-economy",
+        "development-economics",
+        "trade-globalization"
+      ]
+    },
+    "methods-theory": {
+      "label": "Methods & Theory Development",
+      "description": "Methodological advances, theory-building, and review articles cutting across domains.",
+      "subtopics": [
+        "theory-development",
+        "qualitative-methods",
+        "quantitative-methods",
+        "mixed-methods",
+        "experiments",
+        "meta-analysis",
+        "literature-review",
+        "measurement-validation",
+        "causal-inference",
+        "philosophy-of-science"
+      ]
+    }
+  },
+  "context_tags": {
+    "description": "Cross-cutting, always-allowed tags capturing geography, institutional setting, or temporal scope. Use any number (including zero) in addition to the 1-4 domain/subtopic tags.",
+    "tags": [
+      "developing-economies",
+      "emerging-markets",
+      "global-south",
+      "africa",
+      "latin-america",
+      "asia",
+      "china",
+      "india",
+      "europe",
+      "north-america",
+      "cross-national-comparative",
+      "longitudinal",
+      "historical",
+      "covid-19",
+      "grand-challenges"
+    ]
+  }
+}

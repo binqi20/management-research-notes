@@ -1,0 +1,37 @@
+MIT License
+
+Copyright (c) 2026 Binqi Tang
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Scope of this license
+
+This MIT license covers the original software (the Python tools, configuration,
+documentation, and SQL schema in this repository) and the original curated notes
+authored for this knowledge base (the Markdown files in `notes/` and the derived
+indexes in `index/`).
+
+It does NOT and cannot extend to the underlying journal articles that the notes
+summarize. Those articles remain the copyright of their respective publishers
+and authors. The original PDFs are intentionally excluded from this repository.
+Each note in `notes/` cites the original work via DOI; obtain the source through
+legitimate channels (your institution, the publisher, or the author) if you
+need to reproduce the full ingestion pipeline locally.
