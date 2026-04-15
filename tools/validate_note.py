@@ -12,8 +12,11 @@ Checks (in order, with early exit on fatal frontmatter errors):
   6. All required body headings are present in the right order.
   7. For each section heading, the content is either non-trivial or exactly
      "Not reported in paper" (with paper-type-aware exemption).
-  8. The verbatim Abstract is a substring of the extracted PDF text (whitespace
-     and soft-hyphen normalized). Skipped if abstract is "Not reported in paper".
+  8. The verbatim Abstract is a substring of the extracted PDF text. Both sides
+     are normalized for whitespace, soft hyphens (U+00AD), curly quotes/
+     apostrophes (→ ASCII), and stray C0 control characters. A second hyphen-
+     agnostic pass tolerates PDF line-wrap concatenation artifacts. Skipped if
+     abstract is "Not reported in paper".
   9. Prose drift: any backticked kebab-case token in the body that is within
      edit distance 2 of a real topics.json slug but isn't an exact match is
      flagged as a likely typo (e.g., `unehical-behavior` near `unethical-behavior`).
@@ -128,10 +131,45 @@ def normalize_ws(s: str) -> str:
     # check. Stripping them from both sides of the comparison is safe
     # because soft hyphens carry no semantic content.
     s = s.replace("\u00ad", "")
+    # Normalize curly quotes and apostrophes to ASCII equivalents. LLM
+    # output and pdftotext output often disagree on quote style even when
+    # the underlying characters are "the same" — e.g., an LLM may emit
+    # ASCII ' while the PDF contains U+2019 RIGHT SINGLE QUOTATION MARK.
+    # Unifying both sides is always safe for substring matching.
+    s = (
+        s.replace("\u2018", "'")   # left single quote
+         .replace("\u2019", "'")   # right single quote / apostrophe
+         .replace("\u201A", "'")   # single low-9 quote
+         .replace("\u2032", "'")   # prime
+         .replace("\u201C", '"')   # left double quote
+         .replace("\u201D", '"')   # right double quote
+         .replace("\u201E", '"')   # double low-9 quote
+         .replace("\u2033", '"')   # double prime
+    )
+    # Strip C0/C1 control characters (except \t, \n, \r, which get folded
+    # into spaces by the whitespace regex below). pdftotext occasionally
+    # emits stray U+0001 bytes mid-word when it fails to interpret an
+    # encoded glyph, silently defeating the verbatim-substring check.
+    s = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", "", s)
     # Reunite line-wrap hyphenations BEFORE collapsing whitespace, so the
     # comparison is robust to PDF extraction artifacts.
     s = re.sub(r"(\w)-\s+(\w)", r"\1\2", s)
     return re.sub(r"\s+", " ", s).strip()
+
+
+def normalize_for_verbatim(s: str) -> str:
+    """Stricter-tolerance normalization for the abstract verbatim check only.
+
+    On top of normalize_ws, this also strips ASCII hyphens entirely. PDF
+    extractors sometimes concatenate line-wrapped words without preserving
+    the hyphen ("self-\\ncategorization" → "selfcategorization"), while the
+    LLM reconstructs the hyphenated form from context. Neither side is
+    wrong, but a plain substring check fails. Dropping hyphens from both
+    sides of the comparison recovers the match without weakening any other
+    check — this helper is deliberately scoped to the abstract check only
+    so the title-match check stays strict.
+    """
+    return normalize_ws(s).replace("-", "")
 
 
 def _edit_distance_le(a: str, b: str, k: int) -> bool:
@@ -361,11 +399,16 @@ def check_abstract_verbatim(body_sections: dict, fm: dict, errors: list[str]) ->
         errors.append(f"text_path does not exist for verbatim check: {text_path}")
         return
     src = text_path.read_text(encoding="utf-8", errors="replace")
+    # Two-pass check: first try the strict normalization (whitespace, soft
+    # hyphens, curly quotes, control chars); if that fails, fall back to
+    # hyphen-agnostic matching to tolerate PDF line-wrap concatenation
+    # artifacts. Only if BOTH fail do we report paraphrase.
     if normalize_ws(abstract) not in normalize_ws(src):
-        errors.append(
-            "Abstract is not a verbatim substring of the extracted PDF text "
-            "(whitespace-normalized). The LLM may have paraphrased."
-        )
+        if normalize_for_verbatim(abstract) not in normalize_for_verbatim(src):
+            errors.append(
+                "Abstract is not a verbatim substring of the extracted PDF text "
+                "(whitespace-normalized). The LLM may have paraphrased."
+            )
 
 
 # --- main -------------------------------------------------------------------------
