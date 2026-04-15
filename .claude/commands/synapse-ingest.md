@@ -96,34 +96,87 @@ Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 >    text + paper_id. Treat the bib block as authoritative.
 >
 > **Output**: use the `Write` tool to create exactly one file at
-> `notes/<PAPER_ID>.md`. Then run:
+> `notes/<PAPER_ID>.md`. Then run these two checks, in order, and record
+> the exit code plus the printed output of each:
 >
->     python tools/validate_note.py notes/<PAPER_ID>.md
+>     python tools/audit_note.py    notes/<PAPER_ID>.md --flag
+>     python tools/validate_note.py notes/<PAPER_ID>.md --flag
 >
-> **Report one of three outcomes, under 150 words each:**
-> - **OK** — the note was written and `validate_note.py` exited zero.
-> - **FAIL** — validator reported errors. Quote the validator's error list
->   verbatim. Do NOT try to "fix" a structural problem by inventing content —
->   that violates the no-invention rule.
-> - **STOP** — you hit a hard-rule trigger: the trusted bib block contradicts
->   what the PDF text clearly says, the paper isn't scholarly (dataset,
->   website snapshot, book chapter without a DOI, etc.), or the text block
->   in the bundle is a different paper than the one named in the bib block.
->   Write a short `.reason.txt` file at `incoming/_flagged/<PAPER_ID>.reason.txt`
->   explaining what went wrong. Do NOT write a `notes/` file.
+> These two tools check **different** things and must **both** pass.
+>
+> - `audit_note.py` runs the **two-layer faithfulness audit**. Layer 1
+>   substring-checks every quote in the note's `evidence:` frontmatter
+>   block against the extracted PDF text (same two-pass normalization the
+>   abstract check uses). Layer 2 dispatches a fresh Claude subagent in a
+>   cold context that reads `docs/audit-rubric.md`, the note body, and
+>   the PDF, and returns per-prose-field verdicts
+>   (`SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`) for
+>   research question, mechanism, theoretical contribution, practical
+>   implication, limitations, and future research. On success writes
+>   `incoming/_audits/<PAPER_ID>.audit.json`. On failure also writes
+>   `incoming/_flagged/<PAPER_ID>.reason.txt` (because of `--flag`).
+>   **Takes roughly 1–5 minutes per paper** — Layer 2 is an LLM call.
+> - `validate_note.py` runs the **structural and vocabulary check**:
+>   verbatim-abstract substring check, controlled-vocabulary topic slugs,
+>   paper-type enum, custom analytic field enums, and the same Layer 1
+>   evidence-anchor check (gated on `extraction_version: "v2"` — v1 notes
+>   skip it and keep passing). Writes its own `.reason.txt` sidecar on
+>   failure. Runs in well under a second.
+>
+> Run the audit **before** the validator. Both tools use the same `--flag`
+> sidecar convention and neither moves the note file, so a note that fails
+> the audit can still be validated for a more complete debugging picture.
+> Run both unconditionally — don't short-circuit on audit failure.
+>
+> **Report one of four outcomes, under 150 words each:**
+> - **OK** — both `audit_note.py` and `validate_note.py` exited zero.
+> - **AUDIT_FAIL** — `audit_note.py` exited non-zero. Quote the audit
+>   report's flagged claims verbatim: every Layer 1
+>   "anchor not found in PDF" entry, plus every Layer 2
+>   `UNSUPPORTED` / `CONTRADICTED` verdict with its `field` name and
+>   `note:` text. Do NOT try to "fix" a fabricated anchor by rewriting the
+>   note — that just papers over a faithfulness problem.
+> - **FAIL** — `validate_note.py` reported errors (and the audit may or
+>   may not also have failed; report both if so). Quote the validator's
+>   error list verbatim. Do NOT try to "fix" a structural problem by
+>   inventing content — that violates the no-invention rule.
+> - **STOP** — you hit a hard-rule trigger: the trusted bib block
+>   contradicts what the PDF text clearly says, the paper isn't scholarly
+>   (dataset, website snapshot, book chapter without a DOI, etc.), or the
+>   text block in the bundle is a different paper than the one named in
+>   the bib block. Write a short `.reason.txt` file at
+>   `incoming/_flagged/<PAPER_ID>.reason.txt` explaining what went wrong.
+>   Do NOT write a `notes/` file.
 
 ## Step 3 — Aggregate outcomes
 
-As each batch returns, log one line per paper: `OK <paper_id>`, `FAIL <paper_id>`,
-or `STOP <paper_id>`. After all batches complete, compile:
+As each batch returns, log one line per paper using one of four prefixes:
+`OK <paper_id>`, `AUDIT_FAIL <paper_id>`, `FAIL <paper_id>`, or
+`STOP <paper_id>`. (A paper that fails BOTH the audit and the validator
+gets logged as `AUDIT_FAIL` — the faithfulness failure is the more
+important signal. The validator errors go into the summary alongside the
+audit errors.) After all batches complete, compile:
 
-- **OK count**, **FAIL count**, **STOP count**.
+- **OK count**, **AUDIT_FAIL count**, **FAIL count**, **STOP count**.
 - The list of flagged paper IDs and the first line of each `.reason.txt`.
-- **Systemic-failure check**: if ≥3 papers fail for the same root-cause error
-  (e.g., "topic slug X not in index/topics.json", or "abstract is not a
-  verbatim substring"), **stop and ask** the user — this signals that the
-  extraction prompt or the topic vocabulary needs tightening, not that the
-  notes need individual fixing.
+  Note that `AUDIT_FAIL` and `FAIL` both produce `.reason.txt` sidecars but
+  in different shapes — audit sidecars list flagged claims and Layer 2
+  verdicts, validator sidecars list error messages. When both tools flag
+  the same paper, the audit sidecar overwrites the validator sidecar in
+  the filesystem, so also print the validator errors in the batch report.
+- **Systemic validator-failure check**: if ≥3 papers fail VALIDATION for the
+  same root-cause error (e.g., "topic slug X not in index/topics.json", or
+  "abstract is not a verbatim substring"), **stop and ask** the user — this
+  signals that the extraction prompt or the topic vocabulary needs
+  tightening, not that the notes need individual fixing.
+- **Systemic audit-failure check**: if ≥3 papers fail the AUDIT for the
+  same root-cause reason (e.g., >3 papers have a fabricated `sample_n`
+  anchor, or >3 papers have an `UNSUPPORTED` verdict on
+  `theoretical_contribution`), **stop and ask** the user — same pattern as
+  the validator rule above. A flood of audit failures usually means the
+  extraction prompt is drifting in a specific way, or the rubric is
+  miscalibrated, or the PDF text is being corrupted by two-column
+  concatenation — NOT that the individual notes need hand-editing.
 
 ## Step 4 — Rebuild derived indexes
 

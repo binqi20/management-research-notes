@@ -36,6 +36,16 @@ research. Read this file before doing anything in this folder.
    move the note to `incoming/_flagged/` with a `.reason.txt`).
 6. **One paper, one note.** Never split a paper across multiple notes. Never merge two
    papers into one note.
+7. **Faithfulness is checked, not assumed.** Every v2 note must carry an `evidence:`
+   frontmatter block whose quotes are verbatim substrings of the PDF text (same
+   two-pass normalization the abstract check uses). The Layer 1 substring check is
+   mechanical and deterministic — fabricated anchors will fail `tools/validate_note.py`
+   and `tools/audit_note.py` identically. Layer 2 dispatches a fresh cold-context
+   Claude subagent that scores the prose fields (research question, mechanism,
+   theoretical contribution, practical implication, limitations, future research)
+   against the PDF via the rubric at `docs/audit-rubric.md`. Both layers run
+   automatically inside `/synapse-ingest`; `/audit-note <paper_id>` re-runs them on
+   a single note on demand. v1 notes are exempt via an `extraction_version` gate.
 
 ## When the user asks "what's in the library?"
 
@@ -58,9 +68,16 @@ research. Read this file before doing anything in this folder.
 3. Read the bundle, apply the extraction prompt to the text, and write the resulting
    note to `notes/{paper_id}.md` using the `Write` tool. The bundle tells you exactly
    what `paper_id` to use and what frontmatter is mandatory.
-4. Run `tools/validate_note.py notes/{paper_id}.md`. If it fails, fix the note OR
-   move it to `incoming/_flagged/` with a `.reason.txt` and report what went wrong.
-5. Run `tools/build_index.py` to update the SQLite index.
+4. Run `python tools/audit_note.py notes/{paper_id}.md --flag`. This is the
+   two-layer faithfulness audit: Layer 1 substring-checks the `evidence:` anchors
+   against the PDF text, Layer 2 dispatches a fresh cold-context Claude subagent
+   that scores the six prose fields against `docs/audit-rubric.md`. On fail, writes
+   `incoming/_audits/{paper_id}.audit.json` and `incoming/_flagged/{paper_id}.reason.txt`.
+   Takes roughly 1–5 minutes per paper — the Layer 2 subagent is the dominant cost.
+5. Run `python tools/validate_note.py notes/{paper_id}.md`. If it fails, fix the
+   note OR move it to `incoming/_flagged/` with a `.reason.txt` and report what
+   went wrong.
+6. Run `python tools/build_index.py` to update the SQLite index.
 
 ## Things that should make you stop and ask the user
 

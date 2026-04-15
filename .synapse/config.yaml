@@ -32,9 +32,20 @@ sources:
 # Extraction settings
 extraction:
   prompt_path: docs/extraction-prompt.md
-  prompt_version: v1
+  prompt_version: v2                    # v2 adds the evidence: frontmatter block (Layer 1 audit anchors)
   model: claude-opus-4-6                # for provenance only; extraction runs in CC session
   max_text_chars: 200000                # truncate PDF text above this when building bundles
+
+# Faithfulness audit layer (added in v2)
+audit:
+  enabled: true
+  rubric_path: docs/audit-rubric.md
+  rubric_version: v1
+  auditor_model: claude-opus-4-6        # Layer 2 subagent model; fresh context, no prompt-cache sharing
+  layer_1_required: true                # mechanical evidence-anchor substring check runs inside validate_note.py
+  layer_2_required: true                # LLM audit subagent runs inside audit_note.py
+  fail_on_partial: false                # PARTIAL verdicts are surfaced in the sidecar but don't block the note
+  max_evidence_quote_words: 25          # anchor word cap (warning-tier, not fatal)
 
 # Controlled vocabulary + custom analytic fields
 taxonomy:

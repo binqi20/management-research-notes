@@ -17,6 +17,12 @@ incoming/_bundles/
 # wrong-PDF debugging context. Keep local.
 incoming/_flagged/
 
+# Faithfulness-audit reports (v2+). These reference paper-specific reasoning
+# and verdicts that shouldn't be shipped publicly — and they're derived from
+# the note + PDF anyway, so they can be regenerated locally with
+# `python tools/audit_note.py notes/<paper_id>.md`.
+incoming/_audits/
+
 # Other incoming staging artifacts
 incoming/*.pdf
 incoming/*.txt

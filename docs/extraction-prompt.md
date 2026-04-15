@@ -1,10 +1,10 @@
 # Canonical Extraction Prompt
 
-Version: **v1**
+Version: **v2**
 
 This is the prompt that turns a single scholarly article (extracted text + trusted
 bibliographic metadata) into a Synapse note. It is based on the user's original
-extraction prompt with four changes:
+extraction prompt with five changes:
 
 1. **Bibliographic fields are NOT extracted by the LLM.** They are passed in from the
    trusted manifest and the LLM is told to use them verbatim. This eliminates the
@@ -18,6 +18,11 @@ extraction prompt with four changes:
    in developing economies").
 4. **Controlled-vocabulary topics.** Every note must include at least one `topics` tag
    drawn from `index/topics.json`. Tags outside this file will fail validation.
+5. **Evidence anchors (new in v2).** Every note must include an `evidence:` frontmatter
+   block with ≤25-word verbatim quotes from the PDF text backing each factual claim
+   (sample size, country, industry, time period, theoretical lens, methodology,
+   keywords). These anchors are checked by `tools/validate_note.py` as a mechanical
+   Layer 1 faithfulness audit. See the "Evidence anchors" section below for the schema.
 
 ---
 
@@ -107,6 +112,99 @@ You will be told the `paper_type` from a list of: `empirical-quantitative`,
 If you are unsure of the paper type, infer it from the text and state it. The validator
 will catch mismatches.
 
+### Evidence anchors (new in v2 — mandatory)
+
+Every note must include an `evidence:` frontmatter block containing short verbatim
+quotes from the extracted PDF text that back each factual claim in the note. These
+quotes are mechanically checked by `tools/validate_note.py` as a substring of the
+PDF text (using the same whitespace/hyphen-tolerant normalization the abstract check
+uses). Fabricated quotes will be caught deterministically — the validator will fail
+the note and move it to `incoming/_flagged/`.
+
+**Required keys by paper type:**
+
+| Key                    | empirical-* | conceptual / review | editorial / book-review |
+|------------------------|:-----------:|:-------------------:|:-----------------------:|
+| `sample_n`             | required    | "Not reported in paper" | "Not reported in paper" |
+| `sample_country`       | required    | "Not reported in paper" | "Not reported in paper" |
+| `sample_industry`      | required    | "Not reported in paper" | "Not reported in paper" |
+| `sample_time_period`   | required    | "Not reported in paper" | "Not reported in paper" |
+| `theories_overview`    | required    | required            | optional                |
+| `methods_overview`     | required    | required            | optional                |
+| `keywords_source`      | required    | required            | optional                |
+
+For `editorial` and `book-review` the whole block may be omitted. For `conceptual`
+and `review`, the four `sample_*` keys may be set to the literal string
+`"Not reported in paper"` (exact, case-sensitive).
+
+**Rules for every quote value:**
+
+1. **Verbatim.** Each value must appear as a contiguous substring of the extracted
+   PDF text (modulo whitespace, soft hyphens, and line-wrap hyphenation). If you
+   cannot find a real quote in the PDF, write `"Not reported in paper"` — NEVER
+   paraphrase, reconstruct, or invent.
+2. **Short.** Each quote should be **≤25 words**. Quotes longer than 25 words will
+   trigger a validator warning. Aim for the minimum passage that unambiguously
+   supports the corresponding factual claim in the body of the note.
+3. **Escape valve.** If the paper genuinely does not report the relevant fact, write
+   exactly `"Not reported in paper"` (case-sensitive, no trailing punctuation). This
+   is the only acceptable form of abdication. A blank value or a paraphrase will
+   fail validation.
+4. **Meaning must match.** The anchor is evidence for a specific claim in the note.
+   A quote that is a real substring of the PDF but does not support the associated
+   claim is a failure of the second-layer LLM audit, not Layer 1 — so write quotes
+   that actually back the claim, not any-old-substring the PDF happens to contain.
+
+**What each key anchors:**
+
+- `sample_n` — the sample size you put in `sample.n` (e.g., "Our final sample
+  consists of 243 manufacturing firms").
+- `sample_country` — the country or region in `sample.country` (e.g., "All firms
+  were headquartered in the United States").
+- `sample_industry` — the industry or sector in `sample.industry` (e.g.,
+  "manufacturing firms in SIC codes 2000-3999").
+- `sample_time_period` — the data collection window in `sample.time_period` (e.g.,
+  "data collected between January 2018 and December 2021").
+- `theories_overview` — a passage showing the paper invokes **at least one** of the
+  theories you listed in `theory:` (e.g., "drawing on stakeholder theory (Freeman
+  1984), we argue that…"). One anchor is enough; you do not need one per theory.
+- `methods_overview` — a passage showing the methodology you described in `methods:`
+  (e.g., "We estimate OLS regressions with industry fixed effects").
+- `keywords_source` — a passage showing where the `keywords:` list came from. If the
+  paper has an explicit Keywords line, quote it (e.g., "Keywords: legitimacy,
+  stakeholder pressure, sustainability"). If you derived the keywords from the
+  abstract or theory section, quote one phrase from there that shows at least one
+  keyword appearing in the paper's own language.
+
+**Worked example (empirical-quantitative):**
+
+```yaml
+evidence:
+  sample_n: "Our final sample consists of 243 manufacturing firms that responded to the 2020 survey wave."
+  sample_country: "All firms in the sample were headquartered in the United States, spanning 38 states."
+  sample_industry: "We focus on manufacturing firms in SIC codes 2000-3999, excluding regulated utilities."
+  sample_time_period: "Survey data were collected between January 2018 and December 2021, yielding three annual waves."
+  theories_overview: "Drawing on stakeholder theory (Freeman, 1984) and legitimacy theory, we theorize that..."
+  methods_overview: "We estimate OLS regressions with industry and year fixed effects, clustering standard errors by firm."
+  keywords_source: "Keywords: legitimacy, stakeholder pressure, corporate sustainability, institutional theory."
+```
+
+**Worked example (conceptual paper with no sample):**
+
+```yaml
+evidence:
+  sample_n: "Not reported in paper"
+  sample_country: "Not reported in paper"
+  sample_industry: "Not reported in paper"
+  sample_time_period: "Not reported in paper"
+  theories_overview: "Building on the microfoundations of dynamic capabilities (Teece, 2007), we develop..."
+  methods_overview: "This is a conceptual paper; we develop our propositions through theoretical synthesis."
+  keywords_source: "Keywords: dynamic capabilities, microfoundations, strategic sensemaking, cognition."
+```
+
+The evidence block is placed at the **end** of the YAML frontmatter, immediately
+before the closing `---`. See the output template below.
+
 ### Output format (strict)
 
 Produce a single Markdown file. The file MUST start with a YAML frontmatter block
@@ -131,7 +229,7 @@ pdf_path: "{pdf_path}"                  # from trusted metadata
 text_path: "{text_path}"                # from trusted metadata
 ingested_at: "{YYYY-MM-DD}"             # from trusted metadata
 extraction_model: "{model}"             # from trusted metadata
-extraction_version: "v1"
+extraction_version: "v2"                # v2 = includes the evidence block below
 
 paper_type: "{one of the 8 types}"
 keywords: ["...", "..."]
@@ -147,6 +245,19 @@ sample:
   time_period: "..."
   units: "..."
   n: "..."
+
+# Mandatory evidence anchors (v2 — Layer 1 faithfulness audit).
+# Each value is a <=25-word verbatim quote from the PDF text, or the literal
+# string "Not reported in paper" (case-sensitive). See the Evidence anchors
+# section above for the full schema.
+evidence:
+  sample_n: "..."
+  sample_country: "..."
+  sample_industry: "..."
+  sample_time_period: "..."
+  theories_overview: "..."
+  methods_overview: "..."
+  keywords_source: "..."
 ---
 
 # {title}

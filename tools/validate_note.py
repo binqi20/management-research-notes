@@ -20,6 +20,11 @@ Checks (in order, with early exit on fatal frontmatter errors):
   9. Prose drift: any backticked kebab-case token in the body that is within
      edit distance 2 of a real topics.json slug but isn't an exact match is
      flagged as a likely typo (e.g., `unehical-behavior` near `unethical-behavior`).
+ 10. Evidence anchors (Layer 1 faithfulness audit — v2+ only): each key in the
+     'evidence:' frontmatter block must be a verbatim substring of the extracted
+     PDF text, or the literal string "Not reported in paper". Skipped for notes
+     with extraction_version != "v2" (backward compatibility with the 90 v1 notes
+     already in the corpus).
 
 On failure: prints a list of errors to stderr and exits non-zero. With `--flag`,
 also moves the note (or, if it isn't there yet, writes a stub) to
@@ -90,6 +95,58 @@ OPTIONAL_FOR_TYPE = {
 }
 
 NOT_REPORTED = "Not reported in paper"
+
+# ---- Layer 1 evidence anchor schema (added in v2) --------------------------------
+#
+# Required keys in the frontmatter's `evidence:` block, per paper type. For
+# paper types listed with an empty list, the evidence block is optional (the
+# note can omit it entirely). For all other types, each required key must
+# carry either a verbatim substring of the extracted PDF text (<=25 words) or
+# the literal string NOT_REPORTED ("Not reported in paper", case-sensitive).
+#
+# This gating only applies to notes with extraction_version == "v2" — older
+# v1 notes (the 90 existing notes at the time v2 shipped) have no evidence
+# block and are exempt for backward compatibility.
+
+EVIDENCE_REQUIRED_KEYS_BY_TYPE: dict[str, list[str]] = {
+    "empirical-quantitative": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+    ],
+    "empirical-qualitative": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+    ],
+    "empirical-mixed": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+    ],
+    # Conceptual / review papers have no empirical sample; the four sample_*
+    # keys are still required (the LLM writes "Not reported in paper" into
+    # them), so the validator can detect a missing block instead of a quietly
+    # absent one. Theories / methods / keywords still apply.
+    "conceptual": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+    ],
+    "review": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+    ],
+    # Editorials / book reviews / uncategorized: evidence block is optional.
+    # The note may omit it entirely without a validation error. If a block is
+    # present, its entries are still checked for substring faithfulness.
+    "editorial":   [],
+    "book-review": [],
+    "other":       [],
+}
+
+EVIDENCE_ALL_KNOWN_KEYS = {
+    "sample_n", "sample_country", "sample_industry", "sample_time_period",
+    "theories_overview", "methods_overview", "keywords_source",
+}
+
+EVIDENCE_MAX_WORDS = 25  # warning-tier cap; longer quotes emit a warning but don't fail
 
 
 # --- parsing helpers --------------------------------------------------------------
@@ -411,6 +468,115 @@ def check_abstract_verbatim(body_sections: dict, fm: dict, errors: list[str]) ->
             )
 
 
+def check_evidence_anchors(fm: dict, errors: list[str]) -> None:
+    """Layer 1 faithfulness audit — mechanical substring check of evidence anchors.
+
+    For notes produced by extraction prompt v2+, the frontmatter must contain an
+    'evidence:' mapping. Each value in that mapping is either a verbatim <=25-word
+    substring of the extracted PDF text OR the literal string 'Not reported in
+    paper' (case-sensitive — the only permissible escape valve). Fabricated quotes
+    are caught deterministically by the two-pass normalization used for the
+    abstract verbatim check.
+
+    This function:
+      - Skips v1 (pre-audit) notes entirely, preserving the existing corpus as a
+        regression baseline.
+      - Fails if a v2 note is missing the 'evidence:' block for a paper type that
+        requires one.
+      - Fails if a required key is missing or empty.
+      - Fails if a quote is not a substring of the PDF text under either
+        normalization pass.
+      - Emits a stderr warning (not a fatal error) if a quote is longer than
+        EVIDENCE_MAX_WORDS. The cap exists to keep anchors short enough that
+        whitespace/hyphen normalization can't make a fabricated quote match by
+        accident — but we prefer a too-long real quote to a paraphrased short one.
+      - Warns (stderr only) about unknown keys present in the evidence block, so
+        prompt-drift doesn't silently ship a new required key without a validator
+        update.
+    """
+    # Backward compatibility: only enforce for v2+ notes. The 90 existing notes
+    # carry extraction_version == "v1" and have no evidence block.
+    if fm.get("extraction_version") != "v2":
+        return
+    paper_type = fm.get("paper_type", "")
+    required_keys = EVIDENCE_REQUIRED_KEYS_BY_TYPE.get(paper_type, [])
+    evidence = fm.get("evidence")
+    # Paper types with no required keys (editorial, book-review, other) may
+    # omit the block entirely. If they include one, still fall through to the
+    # per-key checks below so a present-but-malformed block is not silently
+    # accepted.
+    if not required_keys and evidence is None:
+        return
+    if evidence is None:
+        errors.append(
+            f"v2 note is missing the 'evidence:' frontmatter block "
+            f"(paper_type={paper_type!r} requires keys: {required_keys})"
+        )
+        return
+    if not isinstance(evidence, dict):
+        errors.append(
+            f"'evidence' frontmatter must be a mapping, got {type(evidence).__name__}"
+        )
+        return
+
+    # Load the PDF text once so the per-key loop does no extra I/O.
+    text_path = SYNAPSE_ROOT / fm.get("text_path", "")
+    if not text_path.exists():
+        errors.append(
+            f"text_path does not exist for evidence-anchor check: {text_path}"
+        )
+        return
+    src = text_path.read_text(encoding="utf-8", errors="replace")
+    src_norm = normalize_ws(src)
+    src_norm_hyphen = normalize_for_verbatim(src)
+
+    # Required-key presence check.
+    for key in required_keys:
+        if key not in evidence:
+            errors.append(f"evidence missing required key: {key!r}")
+
+    # Unknown-key warning (stderr only; not a fatal error).
+    unknown = set(evidence.keys()) - EVIDENCE_ALL_KNOWN_KEYS
+    for key in sorted(unknown):
+        print(
+            f"  warning: evidence contains unknown key {key!r} — not in the v2 "
+            f"schema. Remove it or extend EVIDENCE_ALL_KNOWN_KEYS.",
+            file=sys.stderr,
+        )
+
+    # Substring check for each present key (required or not — we audit every
+    # anchor the note emits).
+    for key, quote in evidence.items():
+        if not isinstance(quote, str) or not quote.strip():
+            errors.append(f"evidence[{key!r}] is empty or not a string")
+            continue
+        quote = quote.strip()
+        # The ONLY acceptable escape valve — case-sensitive, exact match.
+        if quote == NOT_REPORTED:
+            continue
+        # Word-count warning (not fatal).
+        word_count = len(quote.split())
+        if word_count > EVIDENCE_MAX_WORDS:
+            print(
+                f"  warning: evidence[{key!r}] is {word_count} words "
+                f"(cap is {EVIDENCE_MAX_WORDS}); prefer a shorter anchor quote",
+                file=sys.stderr,
+            )
+        # Two-pass substring check — same machinery as the abstract check.
+        if normalize_ws(quote) in src_norm:
+            continue
+        if normalize_for_verbatim(quote) in src_norm_hyphen:
+            continue
+        # Fabrication caught. Surface the first 40 chars to help triage.
+        preview = quote[:40] + ("…" if len(quote) > 40 else "")
+        errors.append(
+            f"evidence[{key!r}] is not a verbatim substring of the extracted "
+            f"PDF text (first 40 chars: {preview!r}). The LLM may have "
+            f"fabricated this anchor, or the extraction prompt failed to "
+            f"retrieve the right passage."
+        )
+
+
 # --- main -------------------------------------------------------------------------
 
 
@@ -434,6 +600,7 @@ def validate(note_path: Path) -> list[str]:
     check_apa_citation_doi(sections, fm, errors)
     check_abstract_verbatim(sections, fm, errors)
     check_prose_topic_drift(body, errors)
+    check_evidence_anchors(fm, errors)  # Layer 1 faithfulness audit (v2+ only)
     return errors
 
 
