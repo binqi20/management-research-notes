@@ -1,6 +1,6 @@
 # --- Copyright-sensitive: never commit ---------------------------------------
-# Original journal PDFs and any text extracted from them. Synapse is published
-# without these because the underlying articles are copyrighted by their
+# Original journal PDFs and any text extracted from them. This repository is
+# published without these because the underlying articles are copyrighted by their
 # respective publishers. Run the pipeline locally if you have legitimate access
 # to the source PDFs.
 library/*/*/pdfs/

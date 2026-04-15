@@ -1,4 +1,4 @@
-# Working in Synapse
+# Working in Management Research Notes
 
 This folder is an academic knowledge base for management / business sustainability
 research. Read this file before doing anything in this folder.

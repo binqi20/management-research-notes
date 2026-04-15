@@ -1,4 +1,4 @@
-# Synapse configuration. Paths are relative to the Synapse root.
+# Pipeline configuration. Paths are relative to the repository root.
 
 root: .
 

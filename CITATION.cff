@@ -1,20 +1,20 @@
 cff-version: 1.2.0
-title: "Synapse — A File-Based Academic Knowledge Base for Management and Business Sustainability Research"
-message: "If you use Synapse (the pipeline or the curated notes), please cite it as below."
+title: "Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research"
+message: "If you use Management Research Notes (the pipeline or the curated notes), please cite it as below."
 type: software
 authors:
   - family-names: "Tang"
     given-names: "Binqi"
     orcid: "https://orcid.org/0000-0002-5095-3710"
-repository-code: "https://github.com/binqi20/Synapse"
-url: "https://github.com/binqi20/Synapse"
+repository-code: "https://github.com/binqi20/management-research-notes"
+url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-04-14"
 version: "0.1.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
-    description: "Zenodo archive of Synapse v0.1.0."
+    description: "Zenodo archive of Management Research Notes v0.1.0."
 keywords:
   - academic knowledge base
   - management research
@@ -26,8 +26,9 @@ keywords:
   - research infrastructure
   - claude code
 abstract: >-
-  Synapse is a portable, file-based academic knowledge base for management and
-  business sustainability research. Each peer-reviewed article becomes one
+  Management Research Notes is a portable, file-based academic knowledge
+  base for management and business sustainability research. Each
+  peer-reviewed article becomes one
   Markdown note with YAML frontmatter (trusted bibliographic metadata, a
   controlled-vocabulary topic taxonomy, and three custom analytic fields:
   unit_of_analysis, level_of_theory, dependent_variable_family) and a

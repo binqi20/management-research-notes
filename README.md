@@ -1,4 +1,4 @@
-# Synapse
+# Management Research Notes
 
 **A file-based academic knowledge base for management and business sustainability research.**
 
@@ -17,17 +17,20 @@
 
 ## Author
 
-Synapse is authored and maintained by **[Binqi Tang](https://github.com/binqi20)**,
-a researcher in management and business sustainability. If you'd like to
-collaborate, co-author with me, or use Synapse in your own research workflow,
-please [open an issue](https://github.com/binqi20/Synapse/issues) or reach out
-on GitHub. Citations welcome — see [How to cite](#how-to-cite) below.
+**Management Research Notes** is authored and maintained by
+**[Binqi Tang](https://github.com/binqi20)**, a researcher in management and
+business sustainability. Collaborations are welcome — whether that means
+using this knowledge base in your own research workflow, adapting it for a
+new source or subfield, or discussing joint projects. Please
+[open an issue](https://github.com/binqi20/management-research-notes/issues)
+or reach out on GitHub. Citations welcome — see [How to cite](#how-to-cite)
+below.
 
 ---
 
-## What Synapse is
+## What it is
 
-Synapse is a Zettelkasten-style knowledge base for academic literature. Each
+This project is a Zettelkasten-style knowledge base for academic literature. Each
 peer-reviewed article is stored as a single Markdown file in `notes/` with two
 parts:
 
@@ -93,7 +96,7 @@ Science (6).
 ## Repository layout
 
 ```
-Synapse/
+management-research-notes/
 ├── README.md                          ← you are here
 ├── LICENSE                            ← MIT
 ├── CITATION.cff                       ← cite-this-repo metadata
@@ -128,8 +131,8 @@ Synapse/
 ## Quick start
 
 ```bash
-git clone https://github.com/binqi20/Synapse.git
-cd Synapse
+git clone https://github.com/binqi20/management-research-notes.git
+cd management-research-notes
 
 # Optional: rebuild the SQLite index from the notes
 python tools/build_index.py
@@ -188,10 +191,10 @@ to render a "Cite this repository" button in the right sidebar. It will give
 you both APA and BibTeX automatically. Or, manually:
 
 ```bibtex
-@software{tang_synapse_2026,
+@software{tang_mgmt_research_notes_2026,
   author       = {Tang, Binqi},
-  title        = {Synapse: A File-Based Academic Knowledge Base for
-                  Management and Business Sustainability Research},
+  title        = {Management Research Notes: A File-Based Academic Knowledge
+                  Base for Management and Business Sustainability Research},
   year         = {2026},
   version      = {0.1.0},
   doi          = {10.5281/zenodo.19564336},
@@ -206,8 +209,8 @@ not a substitute.
 
 ## Roadmap
 
-Synapse is intended to be a long-running research-infrastructure project, not
-a one-shot data drop. The near-term roadmap:
+This project is intended to be a long-running research-infrastructure
+project, not a one-shot data drop. The near-term roadmap:
 
 - **More monthly batches** — extend coverage with each new NBS digest, keeping
   paper IDs stable across updates.
@@ -217,7 +220,7 @@ a one-shot data drop. The near-term roadmap:
   text reconstruction, fewer false-positive verbatim failures.
 - **Vector search** — only after the library passes ~5,000 notes; the SQLite
   FTS5 index is plenty for now.
-- **Co-author contributions** — issues and pull requests welcome from
+- **Community contributions** — issues and pull requests welcome from
   collaborators who want to share extraction prompts, topic taxonomies, or
   curated subsets.
 
