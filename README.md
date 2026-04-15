@@ -18,8 +18,10 @@
 ## Author
 
 **Management Research Notes** is authored and maintained by
-**[Binqi Tang](https://github.com/binqi20)**, a researcher in management and
-business sustainability. Collaborations are welcome — whether that means
+**[Binqi Tang](https://github.com/binqi20)**
+[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--5095--3710-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0000-0002-5095-3710),
+a researcher in management and business sustainability. Collaborations are
+welcome — whether that means
 using this knowledge base in your own research workflow, adapting it for a
 new source or subfield, or discussing joint projects. Please
 [open an issue](https://github.com/binqi20/management-research-notes/issues)
