@@ -112,6 +112,41 @@ You will be told the `paper_type` from a list of: `empirical-quantitative`,
 If you are unsure of the paper type, infer it from the text and state it. The validator
 will catch mismatches.
 
+### Mechanism Process formatting (paper-type-dependent)
+
+The **Mechanism Process** section should use different structural elements
+depending on the paper type. Do NOT force the IV/DV/mediator/moderator variable
+schema onto studies that do not use a causal-variable methodology:
+
+- **`empirical-quantitative`**: use the variable schema (`IV(s)`, `DV(s)`,
+  `Mediators`, `Moderators`). This is the natural fit for hypothesis-testing
+  studies with explicit causal models.
+- **`empirical-qualitative`**: do NOT use IV/DV/mediator/moderator labels —
+  they impose a causal-variable structure on studies that use process,
+  narrative, or interpretive logics. Instead, use the paper's own terminology
+  for structural elements as bullets (e.g., `Key constructs / tensions`,
+  `Process / phases`, `Practices`, `Triggering conditions`,
+  `Emergent outcomes`, `Boundary conditions`). Choose the labels that best
+  fit the particular study's methodology.
+- **`empirical-mixed`**: use whichever schema best fits the **dominant**
+  methodology. If the paper is primarily quantitative with a qualitative
+  supplement, use the variable schema. If it is primarily qualitative with
+  quantitative validation, use the process schema. If in doubt, prefer the
+  process schema — it can accommodate variable-based elements but not vice
+  versa.
+- **`conceptual` / `review`**: describe the core propositions or argument
+  elements as bullets (e.g., `Core argument`, `Key constructs`,
+  `Boundary conditions`), or write `Not reported in paper` if the paper
+  type permits it (see table above).
+- **`editorial` / `book-review`**: write `Not reported in paper` if the paper
+  type permits it. If the editorial does develop an argument, describe it
+  using whatever structural elements fit.
+
+The narrative paragraph that follows the bullets should always summarize the
+central mechanism or process — use "mechanism" for variable-based studies and
+"process" for interpretive studies. Do not force "causal" language on studies
+that do not make causal claims.
+
 ### Evidence anchors (new in v2 — mandatory)
 
 Every note must include an `evidence:` frontmatter block containing short verbatim
@@ -269,12 +304,17 @@ evidence:
 {1-2 sentences, paper's own terminology, or "Not reported in paper"}
 
 **Mechanism Process**
-- IV(s): ...
-- DV(s): ...
-- Mediators: ...
-- Moderators: ...
+{Structural elements as bullets — format depends on paper type.
+ For empirical-quantitative papers:
+ - IV(s): ...
+ - DV(s): ...
+ - Mediators: ...
+ - Moderators: ...
+ For empirical-qualitative papers, use the paper's own constructs, phases,
+ tensions, or practices as bullets — see "Mechanism Process formatting" above.
+ For empirical-mixed, use whichever schema fits the dominant methodology.}
 
-{2-5 sentence causal mechanism summary grounded in the paper's theory}
+{2-5 sentence mechanism or process summary grounded in the paper's theory}
 
 **Theoretical Contribution**
 {2-3 sentences, paper's own terminology}

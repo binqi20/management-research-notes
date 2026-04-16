@@ -171,6 +171,53 @@ def run_layer_1(fm: dict) -> dict:
     }
 
 
+# --- Layer 2 helpers ----------------------------------------------------------------
+
+
+def _strip_references(text: str) -> tuple[str, int]:
+    """Strip the References/Bibliography section from the end of PDF text.
+
+    Academic papers end with a References section (sometimes followed by
+    appendices). For audit purposes, the Discussion and Conclusions sections
+    are far more valuable than the bibliography, so stripping references
+    before truncation preserves the content the auditor actually needs to
+    verify limitations and future-research claims.
+
+    Returns (stripped_text, chars_removed). If no references heading is found,
+    returns the original text unchanged with 0 chars removed.
+
+    Safety guard: only strips if the heading appears in the back half of the
+    text (>50% offset), to avoid false positives from a "References" heading
+    that appears early in the introduction.
+    """
+    # Common headings, anchored at the start of a line (after a newline).
+    # Allow optional leading whitespace (\s*) because two-column PDF
+    # extractions often center section headings with spaces.
+    # Use \b (word boundary) at the end instead of \s*\n — two-column
+    # PDF extraction often concatenates the heading with the first
+    # reference entry on the same line, so there's no trailing newline.
+    # We search for the LAST match in the back half of the text.
+    patterns = [
+        r"\n\s*References\b",
+        r"\n\s*REFERENCES\b",
+        r"\n\s*Bibliography\b",
+        r"\n\s*BIBLIOGRAPHY\b",
+        r"\n\s*Works Cited\b",
+        r"\n\s*Literature Cited\b",
+    ]
+    last_pos = -1
+    for pat in patterns:
+        for m in re.finditer(pat, text):
+            if m.start() > last_pos:
+                last_pos = m.start()
+
+    if last_pos > 0 and last_pos > len(text) * 0.5:
+        stripped = text[:last_pos].rstrip()
+        return stripped, len(text) - len(stripped)
+
+    return text, 0
+
+
 # --- Layer 2 prompt building -------------------------------------------------------
 
 
@@ -196,14 +243,29 @@ def build_auditor_prompt(
     defensively in parse_auditor_response so a non-compliant response doesn't
     hang the pipeline.
     """
-    truncated = pdf_text[:max_pdf_chars]
+    # Strip the references/bibliography section before truncating.
+    # The Discussion and Conclusions sections are far more valuable for
+    # audit than the bibliography, and stripping references first keeps
+    # them in the context window.
+    stripped, refs_removed = _strip_references(pdf_text)
+    truncated = stripped[:max_pdf_chars]
+
     truncated_note = ""
-    if len(pdf_text) > max_pdf_chars:
+    if refs_removed > 0 or len(stripped) > max_pdf_chars:
+        parts: list[str] = []
+        if refs_removed > 0:
+            parts.append(
+                f"References/bibliography section stripped "
+                f"({refs_removed:,} chars)"
+            )
+        if len(stripped) > max_pdf_chars:
+            parts.append(
+                f"remaining text truncated at {max_pdf_chars:,} chars "
+                f"(post-strip length: {len(stripped):,} chars)"
+            )
         truncated_note = (
-            f"\n\n[PDF text truncated at {max_pdf_chars:,} chars "
-            f"(original: {len(pdf_text):,} chars). "
-            f"You are reading the beginning of the paper; the references and "
-            f"appendix may be cut off.]\n"
+            f"\n\n[{'; '.join(parts)}. "
+            f"Original PDF text: {len(pdf_text):,} chars.]\n"
         )
 
     # The assembled prompt. Order matters:
