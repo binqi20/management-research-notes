@@ -14,9 +14,9 @@ pages: "1300-1327"
 source: "AMJ/vol-68-no-6"
 pdf_path: "library/AMJ/vol-68-no-6/pdfs/Mahringer 2025 Autonomous, Yet Interdependent Designing Interfaces across Routine Clusters.pdf"
 text_path: "library/AMJ/vol-68-no-6/text/Mahringer 2025 Autonomous, Yet Interdependent Designing Interfaces across Routine Clusters.txt"
-ingested_at: "2026-04-14"
+ingested_at: "2026-04-17"
 extraction_model: "claude-opus-4-6"
-extraction_version: "v1"
+extraction_version: "v2"
 
 paper_type: "empirical-qualitative"
 keywords: ["routine dynamics", "interdependence", "interface design", "routine clusters", "organizational design", "autonomy", "agile software development", "Scrum", "resources", "pooled, sequential, and reciprocal interdependence"]
@@ -32,6 +32,15 @@ sample:
   time_period: "November 2016 - October 2017 (primary fieldwork), with trace data and follow-up interviews extending to 2021"
   units: "Two agile (Scrum) software development teams ('Team Alpha' and 'Team Beta') embedded in one medium-sized firm ('Technology Innovation Corporation', a pseudonym)"
   n: "2 teams (~10-12 developers, product owners, and Scrum masters in total) within 1 firm"
+
+evidence:
+  sample_n: "Team Beta, which consisted of four to five members"
+  sample_country: "from the University of Stuttgart, Germany."
+  sample_industry: "medium-sized, high-tech manufacturing"
+  sample_time_period: "November 2016 and October 2017. He used four"
+  theories_overview: "applied Thompson's (1967) distinction between"
+  methods_overview: "ethnographic study of the reorganization of agile software development"
+  keywords_source: "research on routine dynamics, interdependence, and organizations design"
 ---
 
 # Autonomous, Yet Interdependent: Designing Interfaces across Routine Clusters
@@ -43,10 +52,11 @@ This paper examines the process of designing interfaces between routine clusters
 The paper asks: (1) How do interdependencies emerge during the reorganization of routine clusters? (2) How does the process of designing interfaces to manage those interdependencies unfold?
 
 **Mechanism Process**
-- IV(s): Reorganization of work into two semi-autonomous routine clusters through replication of routines and sharing of (scarce) resources (actors and artifacts such as software code)
-- DV(s): Stabilized interfaces between routine clusters that allow the clusters to operate relatively autonomously; patterning of interactions across clusters
-- Mediators: Emerging interdependencies (pooled, sequential, reciprocal) across clusters and the four practices of interface design work (analyzing interdependencies, reconfiguring resources, mitigating interferences, reconfiguring schedules)
-- Moderators: Divisibility vs. indivisibility of resources; time pressure (which compresses sequential interdependencies into reciprocal ones); autonomy aspirations and mutual respect between teams
+- Triggering conditions: Reorganization of work into two semi-autonomous routine clusters through replication of routines across teams and the sharing of scarce resources (actors and artifacts such as software code).
+- Key constructs / tensions: Autonomy aspiration vs. emergent interdependence; pooled, sequential, and reciprocal interdependencies (Thompson 1967); divisibility vs. indivisibility of shared resources; transitory vs. patterning interventions.
+- Practices ("interface design work"): analyzing interdependencies, reconfiguring resources, mitigating interferences, and reconfiguring schedules — differentiated along two dimensions: durability (transitory vs. patterning) and design elements (artifacts vs. timing).
+- Process / phases: (1) implementing the second cluster and discovering emergent pooled interdependencies; (2) iterative harmonization that escalates pooled interdependencies into sequential and, under time pressure, reciprocal ones; (3) stabilization of interfaces that allows the clusters to operate relatively autonomously.
+- Emergent outcomes: Stabilized interfaces between the clusters and a mutually constitutive relationship between resourcing, patterning, and performing.
 
 Because contemporary organizations operate in flux, interdependencies between routine clusters are not exogenously given but emerge as actors replicate routines and share resources across clusters. These emergent pooled interdependencies trigger "interface design work": actors analyze interdependencies and mitigate interferences through transitory adjustments within routine performances, while reconfiguring resources and reconfiguring schedules produce more durable patterning of interfaces. Harmonizing one interdependence often creates new and more complex ones — pooled interdependencies can escalate into sequential ones when reconfiguration work must precede regular work, and sequential interdependencies compress into reciprocal ones under time pressure. Through iterative cycles of creating and harmonizing interdependencies, routine participants themselves act as endogenous designers who eventually stabilize interfaces, disentangling the clusters.
 
@@ -57,7 +67,7 @@ The paper advances routine dynamics, interdependence, and organizational design 
 Managers reorganizing work into autonomous units (e.g., agile teams, project-based structures) should not treat interface design as a one-off, up-front architectural task: because interdependencies between clusters emerge as routines are performed and resources are shared, routine participants themselves need the latitude and tooling to act as endogenous interface designers. Practically, the study points to four concrete practices — analyzing interdependencies, reconfiguring resources, mitigating interferences, and reconfiguring schedules — that teams can deploy, combining transitory fixes within ongoing routines with more durable patterning of shared artifacts and timing. Managers should also anticipate that sharing scarce, indivisible resources can escalate pooled interdependencies into sequential and reciprocal ones under time pressure, so synchronizing release cadences and reserving slack for joint reconfiguration work is essential to actually realize the autonomy that reorganization is meant to create.
 
 **Limitations**
-Not reported in paper
+The authors acknowledge that their theoretical insights rest on a single 12-month ethnographic case study of two agile (Scrum) software development teams in one high-tech manufacturing firm, so the findings are bounded by this particular context. The setting is one in which both teams valued autonomy and operated with high mutual respect, shared scarce (rather than freely copiable) resources, used Scrum routines that combine task decomposition with regular collective-reflection meetings, and involved only two clusters that replicated essentially the same routines. The authors flag each of these features as scope conditions rather than general properties, noting in particular that the absence of power asymmetries and the presence of Scrum-enabled reflection may have shaped how interface design work unfolded in ways that would not necessarily transfer to other settings.
 
 **Future Research**
 The authors identify four boundary conditions inviting further work: (a) settings with more than two clusters sharing resources, or with orchestrated resource allocation across multiple clusters, and settings where resource allocation shifts over time; (b) reorganizations in which autonomy is less central, or which involve clusters with entirely different routines or temporal rhythms, potentially collapsing into a single cluster; (c) contexts where routines are not based on Scrum or task decomposition, and where routines afford less collective reflection, to clarify how task decomposition and reflection shape interface design; and (d) cases of lower mutual respect or power asymmetries between clusters, where breakdowns or alternative resolutions might emerge.

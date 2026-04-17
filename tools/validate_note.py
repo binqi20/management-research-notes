@@ -394,9 +394,11 @@ def check_required_headings(body_sections: dict, fm: dict, errors: list[str]) ->
         if not content:
             errors.append(f"section {heading!r} is empty")
             continue
-        if content == NOT_REPORTED and key not in optional and key != "limitations":
-            # 'limitations' is allowed to be Not reported for any type — many empirical
-            # papers don't have an explicit limitations section.
+        if content == NOT_REPORTED and key not in optional and key not in {"limitations", "future_research"}:
+            # 'limitations' and 'future_research' are allowed to be Not reported for any
+            # type — many empirical papers don't have an explicit limitations or future-
+            # research section. Forcing extractors to invent content here is exactly what
+            # the faithfulness audit layer catches (see the Li 2026 FAIL in audit sweep).
             errors.append(
                 f"section {heading!r} is 'Not reported in paper' but the paper_type "
                 f"{pt!r} requires it"

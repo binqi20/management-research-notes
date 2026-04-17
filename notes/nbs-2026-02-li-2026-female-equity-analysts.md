@@ -17,9 +17,9 @@ pages: null
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Li 2026 Female Equity Analysts and Corporate Environmental and Social Performance.pdf"
 text_path: "library/NBS/2026-02/text/Li 2026 Female Equity Analysts and Corporate Environmental and Social Performance.txt"
-ingested_at: "2026-04-14"
+ingested_at: "2026-04-17"
 extraction_model: "claude-opus-4-6"
-extraction_version: "v1"
+extraction_version: "v2"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -52,6 +52,15 @@ sample:
   time_period: "2005-2021 (main E&S sample); 2004-2020 (report-level and recommendation samples)"
   units: "Firm-year observations; analyst reports; earnings conference calls"
   n: "20,423 firm-year observations covering 3,567 unique firms; more than 11,000 sell-side equity analysts; 2.4 million analyst reports; 120,000 earnings call transcripts"
+
+evidence:
+  sample_n: "The sample consists of 20,423 firm-year observations (representing 3,567 unique firms)"
+  sample_country: "U.S. equities over the period 2004–2020"
+  sample_industry: "Industry fixed effects are based on Fama-French 12-industry classifications"
+  sample_time_period: "observations (representing 3,567 unique firms) with data on corporate E&S performance over the period 2005–2021"
+  theories_overview: "because of gender differences in values and preferences"
+  methods_overview: "machine-learning models to analyze more than 2.4 million analyst reports and 120,000 earnings"
+  keywords_source: "Keywords: analyst coverage • analyst monitoring • analyst reports • cognition"
 ---
 
 # Female Equity Analysts and Corporate Environmental and Social Performance
@@ -80,7 +89,7 @@ The findings imply that firms, brokerages, and regulators interested in strength
 The analysis relies on hand-collected gender inferences and on E&S ratings (e.g., LSEG, ASSET4, KLD, Sustainalytics) that are known to contain measurement noise and inter-rater disagreement. The broker-closure design yields a small, clean treated-control sample, so the economic magnitude of the causal effect should be interpreted with care. The machine-learning pipeline, while extensively validated, still depends on the quality of human-labeled training data and on the coverage of the FinBERT backbone.
 
 **Future Research**
-Future work could extend the gender-lens approach to other information intermediaries (e.g., credit rating agencies, proxy advisors, auditors) to see whether similar E&S monitoring effects hold. Researchers could also explore whether the mechanisms identified here—thematic focus, cognitive style, linguistic clarity, and willingness to downgrade—generalize beyond E&S to other domains of corporate governance. Finally, the active-learning plus large-language-model methodology invites replication and extension to other unstructured financial text corpora and to non-U.S. settings.
+Not reported in paper
 
 **APA 7th Citation**
 Li, K., Mai, F., Wong, G., Yang, C., & Zhang, T. (2026). Female equity analysts and corporate environmental and social performance. *Management Science*. https://doi.org/10.1287/mnsc.2024.06429
