@@ -16,19 +16,31 @@ identifiers:
     value: "10.5281/zenodo.19564336"
     description: "Zenodo archive of Management Research Notes."
 keywords:
-  - academic knowledge base
+  # Domain
   - management research
   - business sustainability
   - business ethics
+  - business research
+  # Research practice
+  - academic research
+  - academic writing
   - literature review
+  - literature review tool
   - zettelkasten
   - bibliographic metadata
+  # Technical format
+  - sqlite
+  - bibtex
+  - knowledge base
+  - academic knowledge base
   - research infrastructure
-  - faithfulness audit
-  - retrieval-augmented generation
+  # AI agents and retrieval
   - ai agents
   - agents.md
   - claude code
+  - retrieval-augmented generation
+  # Quality assurance
+  - faithfulness audit
 abstract: >-
   Management Research Notes is a portable, file-based academic knowledge
   base for management and business sustainability research. Each
