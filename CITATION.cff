@@ -9,12 +9,12 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-04-14"
-version: "0.1.0"
+date-released: "2026-04-17"
+version: "0.2.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
-    description: "Zenodo archive of Management Research Notes v0.1.0."
+    description: "Zenodo archive of Management Research Notes."
 keywords:
   - academic knowledge base
   - management research
@@ -24,17 +24,30 @@ keywords:
   - zettelkasten
   - bibliographic metadata
   - research infrastructure
+  - faithfulness audit
+  - retrieval-augmented generation
+  - ai agents
+  - agents.md
   - claude code
 abstract: >-
   Management Research Notes is a portable, file-based academic knowledge
   base for management and business sustainability research. Each
-  peer-reviewed article becomes one
-  Markdown note with YAML frontmatter (trusted bibliographic metadata, a
-  controlled-vocabulary topic taxonomy, and three custom analytic fields:
-  unit_of_analysis, level_of_theory, dependent_variable_family) and a
-  human-readable distillation (research question, mechanism, theoretical
-  contribution, limitations, future research, APA citation). A small Python
-  pipeline derives a SQLite index, a CSV export, and a BibTeX file from the
-  notes, while a verbatim-abstract validator anchors trust in the source PDF.
-  This release contains 62 curated notes from the Network for Business
-  Sustainability (NBS) February 2026 monthly digest.
+  peer-reviewed article becomes one Markdown note with YAML frontmatter
+  (trusted bibliographic metadata, a controlled-vocabulary topic taxonomy,
+  three custom analytic fields — unit_of_analysis, level_of_theory,
+  dependent_variable_family — and verbatim evidence anchors on every
+  factual claim) and a human-readable distillation (research question,
+  mechanism, theoretical contribution, practical implication, limitations,
+  future research, APA citation). A small Python pipeline derives a SQLite
+  index with FTS5, a CSV export, and a BibTeX file from the notes, and a
+  two-layer faithfulness audit (mechanical substring check on evidence
+  anchors plus a cold-context Claude subagent scoring prose fields against
+  a published rubric) gates every note into the library. Version 0.2.0
+  (2026-04-17) contains 90 curated notes: 62 from the Network for Business
+  Sustainability (NBS) February 2026 monthly digest plus a 28-note Academy
+  of Management Journal pilot across vol. 68 no. 5, vol. 68 no. 6, and
+  vol. 69 no. 1. The full library passed the audit sweep with 90/90 PASS
+  and zero CONTRADICTED verdicts. An AGENTS.md file provides a tool-agnostic
+  entry point so that AI agents (Claude Code, Cursor, Windsurf, custom SDK
+  apps) can discover and consume the data with known faithfulness
+  guarantees.

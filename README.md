@@ -4,8 +4,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-62-brightgreen.svg)](notes/)
-[![Source](https://img.shields.io/badge/source-NBS%202026--02-orange.svg)](https://nbs.net/)
+[![Notes](https://img.shields.io/badge/curated%20notes-90-brightgreen.svg)](notes/)
+[![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-release)
+[![Audit](https://img.shields.io/badge/audit-90%2F90%20PASS-success.svg)](#faithfulness-audit)
+[![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
 > One Markdown note per peer-reviewed paper. Trusted bibliographic metadata
@@ -69,61 +71,102 @@ for the best. That breaks down for three reasons:
 The design assumes the library will grow from dozens of papers to tens of
 thousands without changing shape.
 
+## Faithfulness audit
+
+Every analytic field in every note is checked by a **two-layer faithfulness
+audit** before it is accepted into the library:
+
+- **Layer 1 — Evidence anchors (mechanical, deterministic).** Each factual
+  claim in the frontmatter (sample size, country, industry, time period,
+  theories, methods, keywords) carries a ≤25-word verbatim quote from the
+  PDF. The validator checks each quote is a substring of the extracted
+  PDF text under hyphen-tolerant normalization. A fabricated quote fails
+  deterministically — there is no way to pass Layer 1 with invented
+  evidence.
+- **Layer 2 — Semantic audit (fresh cold-context subagent).** For the
+  prose fields (research question, mechanism, theoretical contribution,
+  practical implication, limitations, future research) a fresh Claude
+  subagent reads the PDF, reads the note, and emits a per-field verdict
+  against the rubric at [`docs/audit-rubric.md`](docs/audit-rubric.md):
+  `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. A note is
+  rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
+
+The full library was swept on **2026-04-17**:
+**90 / 90 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** Two notes that
+initially failed (Mahringer 2025, Li 2026) were re-extracted; the validator
+was tightened in one place (extended the `Not reported in paper` escape
+valve to `future_research`, mirroring the `limitations` exemption) based
+on what the audit found.
+
+Run the audit on a single note with:
+
+```bash
+python tools/audit_note.py notes/<paper_id>.md
+```
+
+Or, from inside a Claude Code session: `/audit-note <paper_id>`.
+
 ## What's in this release
 
-This first public release contains **62 curated notes** distilled from the
-[Network for Business Sustainability (NBS)](https://nbs.net/) February 2026
-monthly research digest.
+This release contains **90 curated notes** across two source streams:
+
+- **NBS 2026-02** — 62 notes distilled from the [Network for Business
+  Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
+  digest.
+- **AMJ pilot** — 28 notes across three recent issues of the
+  [Academy of Management Journal](https://journals.aom.org/journal/amj)
+  (vol. 68 no. 5, vol. 68 no. 6, vol. 69 no. 1), stress-testing the
+  pipeline on a single-journal source.
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |    23 |
-| empirical-qualitative  |    14 |
+| empirical-quantitative |    35 |
+| empirical-qualitative  |    24 |
 | conceptual             |    14 |
+| editorial              |     6 |
+| empirical-mixed        |     5 |
 | review                 |     3 |
-| editorial              |     3 |
 | book-review            |     3 |
-| empirical-mixed        |     2 |
-| **Total**              | **62** |
+| **Total**              | **90** |
 
-**Top topics** (controlled vocabulary, 14 domains): business-ethics (10),
-circular-economy (9), decarbonization (8), grand-challenges (8),
-stakeholder-engagement (8), sustainable-consumption (7), entrepreneurship (6),
-developing-economies (5), …
-
-**Top journals**: Journal of Industrial Ecology (9), Business Ethics Quarterly
-(8), Journal of Management (7), Journal of Consumer Marketing (6), Management
-Science (6).
+Every note carries a v2 `evidence:` anchor block (Layer 1) and has passed
+the Layer 2 semantic audit. See [Faithfulness audit](#faithfulness-audit)
+above.
 
 ## Repository layout
 
 ```
 management-research-notes/
 ├── README.md                          ← you are here
+├── AGENTS.md                          ← tool-agnostic entry point for AI agents
 ├── LICENSE                            ← MIT
 ├── CITATION.cff                       ← cite-this-repo metadata
-├── CLAUDE.md                          ← rules for any Claude session in this folder
+├── CLAUDE.md                          ← rules for any Claude Code session in this folder
 ├── docs/
-│   └── extraction-prompt.md           ← the canonical 17-field extraction prompt
-├── notes/                             ← 62 curated paper notes (the source of truth)
+│   ├── extraction-prompt.md           ← the canonical extraction prompt (v2)
+│   └── audit-rubric.md                ← rubric the Layer 2 auditor uses
+├── notes/                             ← 90 curated paper notes (the source of truth)
 │   └── nbs-2026-02-spoor-2026.md
 ├── index/                             ← derived views, all rebuildable
-│   ├── synapse.db                     ← SQLite + FTS5 (~1.2 MB)
-│   ├── papers.csv                     ← flat tabular export (~390 KB)
+│   ├── synapse.db                     ← SQLite + FTS5 (~1.7 MB)
+│   ├── papers.csv                     ← flat tabular export
 │   ├── library.bib                    ← BibTeX, one @article per note
 │   └── topics.json                    ← 14-domain controlled vocabulary
 ├── tools/                             ← the Python pipeline
 │   ├── pdf_to_text.py                 ← PDF → plain text (pdftotext + pdfplumber)
 │   ├── prepare_paper.py               ← bundle a paper for extraction
 │   ├── ingest_batch.py                ← walk a folder of PDFs
-│   ├── validate_note.py               ← verbatim-abstract + bib + taxonomy gate
+│   ├── validate_note.py               ← verbatim-abstract + bib + taxonomy + anchors
+│   ├── audit_note.py                  ← two-layer faithfulness audit (Layer 1 + Layer 2)
 │   ├── build_index.py                 ← rebuild SQLite from notes/
 │   ├── export_csv.py                  ← rebuild papers.csv
 │   └── export_bibtex.py               ← rebuild library.bib
 ├── library/
-│   └── NBS/2026-02/
-│       ├── manifest.tsv               ← trusted bibliographic source for the batch
-│       └── missing.tsv                ← papers NBS listed but PDFs unavailable
+│   ├── NBS/2026-02/
+│   │   ├── manifest.tsv               ← trusted bibliographic source for the batch
+│   │   └── missing.tsv                ← papers NBS listed but PDFs unavailable
+│   └── AMJ/{vol-68-5,vol-68-6,vol-69-1}/
+│       └── manifest.tsv               ← per-issue manifests for the AMJ pilot
 │       (pdfs/ and text/ are intentionally NOT published — see Copyright below)
 └── .synapse/
     ├── config.yaml                    ← validator policy + custom-field schema
@@ -164,10 +207,28 @@ pip install pyyaml pdfplumber   # pyyaml: validator; pdfplumber: extraction fall
 ```
 
 The validator (`tools/validate_note.py`) reads the corresponding extracted
-text file under `library/NBS/<issue>/text/` to perform its verbatim-abstract
+text file under `library/<source>/<issue>/text/` to perform its verbatim-abstract
 substring check. That folder is intentionally absent from the public repo
 because the text is derived from copyrighted PDFs — see below. For a public
 clone, the SQLite, CSV, and BibTeX queries above all work without it.
+
+## For AI agents
+
+If you are an AI agent (or writing one) and want to consume or contribute
+to this knowledge base, start with [`AGENTS.md`](AGENTS.md) — it is the
+tool-agnostic entry point covering:
+
+- the data formats you can consume without running any tooling
+  (Markdown notes, SQLite + FTS5, CSV, BibTeX),
+- the [7 hard rules](AGENTS.md#4-rules-for-agents-that-modify-content)
+  any agent must follow when creating or editing notes,
+- the [faithfulness guarantees](AGENTS.md#5-faithfulness-guarantees)
+  this library carries (every abstract verbatim-anchored, every prose
+  field audited, zero contradictions),
+- and how to cite the knowledge base if your agent surfaces a note.
+
+For Claude Code-specific operational conventions (slash commands,
+subagent dispatch, tool names), see [`CLAUDE.md`](CLAUDE.md) as well.
 
 ## Copyright and licensing
 
@@ -198,7 +259,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.1.0},
+  version      = {0.2.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}
@@ -214,17 +275,21 @@ not a substitute.
 This project is intended to be a long-running research-infrastructure
 project, not a one-shot data drop. The near-term roadmap:
 
-- **More monthly batches** — extend coverage with each new NBS digest, keeping
+- **More monthly batches** — extend NBS coverage with each new digest and
+  continue the AMJ sweep beyond the current three-issue pilot, keeping
   paper IDs stable across updates.
-- **Non-NBS sources** — add Web of Science exports and journal RSS feeds as
-  parallel `library/{source}/{issue}/` trees, reusing the same pipeline.
-- **Validator hardening** — soft-hyphen normalization, better 2-column PDF
-  text reconstruction, fewer false-positive verbatim failures.
-- **Vector search** — only after the library passes ~5,000 notes; the SQLite
-  FTS5 index is plenty for now.
+- **Additional journal sources** — add Web of Science exports and journal
+  RSS feeds as parallel `library/{source}/{issue}/` trees, reusing the
+  same pipeline.
+- **Audit layer hardening** — cross-model auditing (run Layer 2 with a
+  second model vendor), automated re-audit on prompt changes, and a
+  lightweight public audit-summary CSV so consumers can see which prose
+  fields carry `PARTIAL` verdicts without needing to regenerate.
+- **Vector search** — only after the library passes ~5,000 notes; the
+  SQLite FTS5 index is plenty for now.
 - **Community contributions** — issues and pull requests welcome from
-  collaborators who want to share extraction prompts, topic taxonomies, or
-  curated subsets.
+  collaborators who want to share extraction prompts, topic taxonomies,
+  or curated subsets.
 
 ## Acknowledgements
 
