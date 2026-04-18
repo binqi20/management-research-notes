@@ -54,22 +54,49 @@ python tools/export_bibtex.py`.
 
 ## Why it exists
 
-Modern LLMs make it tempting to stuff a literature review with PDFs and hope
-for the best. That breaks down for three reasons:
+Large language models have made it tempting to build a literature review by
+dropping a pile of PDFs into a chat window and trusting the response. For
+scholars in management, economics, and adjacent citation-heavy fields —
+disciplines where every substantive claim is expected to be traceable to a
+specific prior study — that naive workflow breaks down for three reasons:
 
 - **Context windows are finite.** Even a 200K-token model cannot hold a few
-  hundred full papers. You need *distilled* notes that are small enough to load
+  hundred full papers at once. You need *distilled* notes small enough to load
   in bulk but faithful enough to support real argument.
-- **Provenance matters.** Every analytic claim in a note is traceable to a
-  cited paper, and the verbatim abstract is checked as a contiguous substring
-  of the extracted PDF text by `tools/validate_note.py` — so paraphrased or
-  hallucinated abstracts cannot slip through.
-- **Cross-platform reuse.** The same note file is grep-able from Claude Code,
-  uploadable as project knowledge to Claude.ai, and citable directly from a
-  Word / LaTeX / Typst draft via the BibTeX export.
+- **Provenance is non-negotiable.** Every analytic claim in a note is traceable
+  to a cited paper. The verbatim abstract is checked as a contiguous substring
+  of the extracted PDF text, every factual claim in a v2 note carries a ≤25-word
+  evidence anchor verified against the PDF by `tools/validate_note.py`, and a
+  two-layer faithfulness audit (see [below](#faithfulness-audit)) has a
+  fresh-eyes LLM subagent cross-check the prose fields. Hallucinated or
+  paraphrased content does not reach the published library — which is what
+  makes these notes safe to cite in a defensible review.
+- **Cross-platform and agent-ready.** The same note is grep-able from the
+  command line, uploadable as project knowledge to an LLM chat, and citable
+  from a Word / LaTeX / Typst draft via the BibTeX export. Via the SQLite + FTS5
+  index and the [`AGENTS.md`](AGENTS.md) entry point, any AI agent — Claude
+  Code, Cursor, Windsurf, a custom SDK app — can consume the library to run
+  retrieval-augmented analysis *with known faithfulness guarantees*. That's the
+  piece that matters for researchers: it lets one scholar (or an agent acting
+  on their behalf) reason across a literature much larger than any single head
+  can hold, without sacrificing the citation trail a peer reviewer, committee,
+  or journal editor will expect.
 
-The design assumes the library will grow from dozens of papers to tens of
-thousands without changing shape.
+The corpus shipped here is management and business sustainability, but the
+pattern — one Markdown file per paper, trusted bibliographic manifests, a
+verbatim-anchored extraction prompt, a two-layer audit — transfers
+straightforwardly to any scholarly corpus where paraphrastic drift is costly:
+economics working papers, organization theory, policy analysis, STS, labor
+studies. Fork the repo, point it at your own manifest, and the validator and
+audit layer come along for free.
+
+The current design targets libraries growing from dozens to tens of thousands of
+papers. Whether the shape holds at that scale is an empirical question rather
+than a settled assumption: some parts — one file per paper, SQLite-derived
+indexes, the controlled-vocabulary topic list, even the extraction prompt's
+field set — may need to evolve as the library grows, new sources appear, or
+research workflows change. Treat the current architecture as a working
+hypothesis refined by each release, not a frozen spec.
 
 ## Faithfulness audit
 
