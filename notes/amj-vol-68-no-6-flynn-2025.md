@@ -42,10 +42,11 @@ Resistance to diversity initiatives can undermine their effectiveness. I advance
 Do employees form lay theories about why the gender gap in career attainment persists, and if so, how do the locus and controllability attributions implied by these lay theories shape perceived responsibility for the gap and, in turn, support for organizational diversity initiatives?
 
 **Mechanism Process**
-- IV(s): Endorsement of three gender gap lay theories — organizational barriers, dispositional factors (traits/competencies), and personal choices
+- IV(s): Endorsement of three gender gap lay theories — organizational barriers, dispositional factors (traits/competencies), and personal choices (manipulated experimentally in Study 4)
 - DV(s): Support for organizational diversity initiatives (and, secondarily, priority ranking of such initiatives)
 - Mediators: Locus attributions (internal vs. external to women); controllability attributions (controllable vs. uncontrollable by women); perceived responsibility of women for the gender gap
-- Moderators: Target group of the gap (gender vs. racial; Study 3); experimental manipulation of lay-theory framing (Study 4); tested against self-interest (gender) and ideology (political and diversity ideologies) as competing predictors
+- Competing predictors / controls: Self-interest (respondent gender) and ideology (political ideology and diversity ideologies) — included as existing predictors against which lay-theory effects are tested for incremental validity, not as moderators
+- Comparative condition: Target group of the gap (gender vs. racial; Study 3) used to contrast lay-theory endorsement across inequality domains
 
 Drawing on classic attribution theory (Weiner), Flynn argues that each lay theory carries distinct causal-dimensional implications. The organizational barriers theory locates causes as external and uncontrollable, so women are judged less responsible and diversity initiatives are seen as a legitimate corrective — increasing support. The dispositional factors theory locates causes as internal but not clearly controllable, modestly increasing attributions of responsibility and dampening support. The personal choice theory locates causes as both internal and controllable, maximally increasing perceived responsibility and most strongly undermining diversity initiative support. Because gender gaps are attributed to personal choice more than racial gaps are, this mechanism helps explain resistance that cannot be accounted for by demographics or ideology alone.
 
