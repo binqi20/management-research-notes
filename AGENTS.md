@@ -15,12 +15,13 @@ focuses on what's portable across agents.
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**90 curated notes** on peer-reviewed papers in management and business
+**105 curated notes** on peer-reviewed papers in management and business
 sustainability research (sources: Network for Business Sustainability
-2026-02 digest and the Academy of Management Journal pilot across
-vol-68-5, vol-68-6, and vol-69-1). Every note is a single Markdown file
-with YAML frontmatter and a structured Markdown body. The repository is
-MIT licensed; individual PDFs are not redistributed.
+2026-02 digest — 77 notes — and the Academy of Management Journal pilot
+across vol-68-5, vol-68-6, and vol-69-1 — 28 notes). Every note is a
+single Markdown file with YAML frontmatter and a structured Markdown
+body. The repository is MIT licensed; individual PDFs are not
+redistributed.
 
 **Why it exists for agents specifically.** Raw PDFs are expensive to load
 in bulk and their text layers vary in quality. These notes are a
@@ -118,11 +119,13 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** Each factual claim (sample size, country, industry, time period, theories, methods, keywords) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically.
 - **Layer 2 — Semantic audit (fresh subagent).** A fresh Claude subagent with cold context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Full-library sweep result (2026-04-17):
-90 / 90 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The full verdict
+**Full-library sweep result (2026-04-17, v0.3.0):
+105 / 105 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The full verdict
 distribution per field is in the release notes; `PARTIAL` verdicts (stylistic
 compressions that don't rise to a faithfulness failure) are flagged for
-human review but do not block publication.
+human review but do not block publication. Across two release cycles
+(v0.2.0 → v0.3.0) the library has never produced a `CONTRADICTED`
+verdict — no claim in any note actively contradicts its source paper.
 
 Agents querying the data can rely on the following:
 
@@ -143,7 +146,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.2.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.3.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
