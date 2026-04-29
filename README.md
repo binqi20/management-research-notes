@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-105-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-113-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-release)
-[![Audit](https://img.shields.io/badge/audit-105%2F105%20PASS-success.svg)](#faithfulness-audit)
+[![Audit](https://img.shields.io/badge/audit-113%2F113%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -118,7 +118,7 @@ audit** before it is accepted into the library:
   `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. A note is
   rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-The full library has been swept twice:
+The full library has been swept three times across releases:
 
 - **v0.2.0 sweep (2026-04-17, 90 notes):** 88 / 90 initial PASS; two
   fails (Mahringer 2025, Li 2026) repaired via re-extraction, and the
@@ -129,6 +129,11 @@ The full library has been swept twice:
   **105 / 105 PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** One PARTIAL verdict
   (Castelló 2025 citing the EU Digital Markets Act instead of the EU
   Digital Services Act) was surfaced and fixed before release.
+- **v0.4.0 sweep (2026-04-18, full 113 notes):**
+  **113 / 113 PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** Eight new notes
+  added from AMJ vol. 68 no. 4 (Grégoire editorial + 7 substantive
+  papers). Across three release cycles the library has now produced
+  zero CONTRADICTED verdicts.
 
 Run the audit on a single note with:
 
@@ -140,27 +145,28 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this release
 
-This release contains **105 curated notes** across two source streams:
+This release contains **113 curated notes** across two source streams:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
   digest. (62 notes shipped in v0.2.0; 15 previously-missing papers were
   recovered and added in v0.3.0.)
-- **AMJ pilot** — 28 notes across three recent issues of the
+- **AMJ pilot** — 36 notes across four recent issues of the
   [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 68 no. 5, vol. 68 no. 6, vol. 69 no. 1), stress-testing the
-  pipeline on a single-journal source.
+  (vol. 68 no. 4, vol. 68 no. 5, vol. 68 no. 6, vol. 69 no. 1).
+  v0.4.0 added vol. 68 no. 4 (8 notes); previous pilot covered the
+  other three issues (28 notes).
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |    39 |
-| empirical-qualitative  |    28 |
+| empirical-quantitative |    43 |
+| empirical-qualitative  |    30 |
 | conceptual             |    19 |
-| empirical-mixed        |     6 |
-| editorial              |     6 |
+| empirical-mixed        |     7 |
+| editorial              |     7 |
 | review                 |     4 |
 | book-review            |     3 |
-| **Total**              | **105** |
+| **Total**              | **113** |
 
 Every note carries a v2 `evidence:` anchor block (Layer 1) and has passed
 the Layer 2 semantic audit. See [Faithfulness audit](#faithfulness-audit)
@@ -178,7 +184,7 @@ management-research-notes/
 ├── docs/
 │   ├── extraction-prompt.md           ← the canonical extraction prompt (v2)
 │   └── audit-rubric.md                ← rubric the Layer 2 auditor uses
-├── notes/                             ← 105 curated paper notes (the source of truth)
+├── notes/                             ← 113 curated paper notes (the source of truth)
 │   └── nbs-2026-02-spoor-2026.md
 ├── index/                             ← derived views, all rebuildable
 │   ├── synapse.db                     ← SQLite + FTS5 (~1.7 MB)
@@ -292,7 +298,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.3.0},
+  version      = {0.4.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

@@ -10,7 +10,7 @@ repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-04-18"
-version: "0.3.0"
+version: "0.4.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,13 +54,14 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context Claude subagent scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.3.0
-  (2026-04-18) contains 105 curated notes: 77 from the Network for Business
+  a published rubric) gates every note into the library. Version 0.4.0
+  (2026-04-18) contains 113 curated notes: 77 from the Network for Business
   Sustainability (NBS) February 2026 monthly digest (62 in v0.2.0 plus 15
-  previously-missing papers recovered in v0.3.0) and a 28-note Academy of
-  Management Journal pilot across vol. 68 no. 5, vol. 68 no. 6, and vol.
-  69 no. 1. The full library passes the v0.3.0 audit sweep with 105/105
-  PASS and zero CONTRADICTED verdicts across two release cycles. An
-  AGENTS.md file provides a tool-agnostic entry point so that AI agents
-  (Claude Code, Cursor, Windsurf, custom SDK apps) can discover and
-  consume the data with known faithfulness guarantees.
+  previously-missing papers recovered in v0.3.0) and a 36-note Academy of
+  Management Journal pilot across vol. 68 no. 4, vol. 68 no. 5, vol. 68
+  no. 6, and vol. 69 no. 1 (vol. 68 no. 4 added in v0.4.0). The full
+  library passes the v0.4.0 audit sweep with 113/113 PASS and zero
+  CONTRADICTED verdicts across three release cycles. An AGENTS.md file
+  provides a tool-agnostic entry point so that AI agents (Claude Code,
+  Cursor, Windsurf, custom SDK apps) can discover and consume the data
+  with known faithfulness guarantees.
