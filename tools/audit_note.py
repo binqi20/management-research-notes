@@ -108,8 +108,13 @@ CONFIDENCE_ENUM = {"high", "medium", "low"}
 # The middle — typically detailed results — is the safest part to drop because
 # the six audited prose fields draw from the front (research_question,
 # mechanism_process, theoretical_contribution) and the back (practical_implication,
-# limitations, future_research). 0.6 is front-heavy; raise toward 0.5 if you want
-# more tail context, lower toward 0.7 if a future audit prompt grows on the front.
+# limitations, future_research).
+#
+# This ratio is a tunable knob. If future audit JSONs in incoming/_audits/ show
+# new mechanism_process PARTIALs whose notes say the auditor "couldn't find" a
+# measure or hypothesis, raise toward 0.65–0.70 (more front context). If
+# limitations or future_research PARTIALs reappear with truncation-related
+# language, lower toward 0.55–0.50 (more tail context).
 SANDWICH_HEAD_RATIO = 0.6
 # Bytes reserved for the "[... middle of paper truncated (NNNNN chars dropped) ...]"
 # marker inside the sandwich. Generous bound — the actual marker is ~75 chars.
