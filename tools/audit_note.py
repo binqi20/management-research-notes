@@ -101,6 +101,20 @@ LAYER_2_PROSE_FIELDS = [
 VERDICT_ENUM = {"SUPPORTED", "PARTIAL", "UNSUPPORTED", "CONTRADICTED"}
 CONFIDENCE_ENUM = {"high", "medium", "low"}
 
+# When the post-strip PDF text exceeds max_pdf_chars, build_auditor_prompt
+# uses a "sandwich": keep SANDWICH_HEAD_RATIO of the budget for the front of
+# the paper (abstract, intro, theory, methods, results) and the remainder for
+# the tail (discussion, practical implications, limitations, future research).
+# The middle — typically detailed results — is the safest part to drop because
+# the six audited prose fields draw from the front (research_question,
+# mechanism_process, theoretical_contribution) and the back (practical_implication,
+# limitations, future_research). 0.6 is front-heavy; raise toward 0.5 if you want
+# more tail context, lower toward 0.7 if a future audit prompt grows on the front.
+SANDWICH_HEAD_RATIO = 0.6
+# Bytes reserved for the "[... middle of paper truncated (NNNNN chars dropped) ...]"
+# marker inside the sandwich. Generous bound — the actual marker is ~75 chars.
+SANDWICH_SEPARATOR_RESERVE = 80
+
 
 # --- loading helpers ---------------------------------------------------------------
 
@@ -231,37 +245,69 @@ def build_auditor_prompt(
 ) -> str:
     """Construct the prompt for the Layer 2 auditor subagent.
 
-    The PDF text is truncated to max_pdf_chars to stay within a reasonable
-    context budget. We truncate from the END on the theory that front matter
-    (title, abstract, intro, theory) is where most of the claims come from;
-    losing the back of the references section is acceptable. For exceptionally
-    long papers, the user can re-audit with --auditor-model set to a
-    larger-context model.
+    The PDF text is fitted into max_pdf_chars by a two-step process:
+      1. Strip the References/Bibliography section via _strip_references().
+      2. If the post-strip text still exceeds max_pdf_chars, apply a
+         "sandwich" truncation: keep SANDWICH_HEAD_RATIO of the budget
+         from the front of the paper (abstract, intro, theory, methods,
+         early results) and the remainder from the back (discussion,
+         practical implications, limitations, future research). The
+         middle (typically detailed results) is dropped, with a marker
+         inserted so the auditor can see where the gap is.
+
+    Why the sandwich: the six prose fields the auditor verifies live at
+    BOTH ends of the paper — research_question / mechanism_process /
+    theoretical_contribution at the front; practical_implication /
+    limitations / future_research at the back. A naive head-only truncation
+    drops the back-half fields entirely on long papers (~3% of audited
+    notes empirically), generating PARTIAL verdicts that are verification
+    artifacts rather than real drift. The sandwich preserves both ends.
 
     The prompt is deliberately structured so the subagent's output IS a JSON
     object — no preamble, no prose wrapper, no fenced block. We re-parse
     defensively in parse_auditor_response so a non-compliant response doesn't
     hang the pipeline.
     """
-    # Strip the references/bibliography section before truncating.
-    # The Discussion and Conclusions sections are far more valuable for
-    # audit than the bibliography, and stripping references first keeps
-    # them in the context window.
+    # Step 1 — strip references. Always cheap, often dispositive on its own
+    # for medium-length papers (post-strip length now fits the budget).
     stripped, refs_removed = _strip_references(pdf_text)
-    truncated = stripped[:max_pdf_chars]
+
+    # Step 2 — fit to budget. If post-strip already fits, use as-is. Otherwise
+    # apply the sandwich.
+    sandwich_head_chars = sandwich_tail_chars = sandwich_middle_dropped = 0
+    if len(stripped) <= max_pdf_chars:
+        truncated = stripped
+    else:
+        available = max_pdf_chars - SANDWICH_SEPARATOR_RESERVE
+        sandwich_head_chars = int(available * SANDWICH_HEAD_RATIO)
+        sandwich_tail_chars = available - sandwich_head_chars
+        sandwich_middle_dropped = (
+            len(stripped) - sandwich_head_chars - sandwich_tail_chars
+        )
+        separator = (
+            f"\n\n[... middle of paper truncated "
+            f"({sandwich_middle_dropped:,} chars dropped) ...]\n\n"
+        )
+        truncated = (
+            stripped[:sandwich_head_chars]
+            + separator
+            + stripped[-sandwich_tail_chars:]
+        )
 
     truncated_note = ""
-    if refs_removed > 0 or len(stripped) > max_pdf_chars:
+    if refs_removed > 0 or sandwich_middle_dropped > 0:
         parts: list[str] = []
         if refs_removed > 0:
             parts.append(
                 f"References/bibliography section stripped "
                 f"({refs_removed:,} chars)"
             )
-        if len(stripped) > max_pdf_chars:
+        if sandwich_middle_dropped > 0:
             parts.append(
-                f"remaining text truncated at {max_pdf_chars:,} chars "
-                f"(post-strip length: {len(stripped):,} chars)"
+                f"sandwich-truncated to {sandwich_head_chars:,} head + "
+                f"{sandwich_tail_chars:,} tail chars "
+                f"(post-strip length: {len(stripped):,} chars; "
+                f"{sandwich_middle_dropped:,} chars dropped from middle)"
             )
         truncated_note = (
             f"\n\n[{'; '.join(parts)}. "
