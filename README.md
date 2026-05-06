@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-147-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-156-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-release)
-[![Audit](https://img.shields.io/badge/audit-147%2F147%20PASS-success.svg)](#faithfulness-audit)
+[![Audit](https://img.shields.io/badge/audit-156%2F156%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -145,12 +145,20 @@ The full library has been swept three times across releases:
   139 / 139 PASS, 0 UNSUPPORTED, 0 CONTRADICTED. Ten new notes
   added from AMJ vol. 68 no. 1 (Gruber + Cronin editorials + 8
   substantive papers — first 10-paper issue we've processed).
-- **v0.8.0 sweep (2026-05-05, full 147 notes):**
-  **147 / 147 PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** Eight new notes
+- **v0.8.0 sweep (2026-05-05, 147 notes):**
+  147 / 147 PASS, 0 UNSUPPORTED, 0 CONTRADICTED. Eight new notes
   added from AMJ vol. 67 no. 6 (Reinecke editorial + 7 substantive
-  papers — first issue from volume 67 we've processed). Across
-  seven release cycles the library has now produced zero CONTRADICTED
-  verdicts.
+  papers — first issue from volume 67 we've processed).
+- **v0.9.0 sweep (2026-05-05, full 156 notes):**
+  **156 / 156 PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** Nine new notes
+  added from AMJ vol. 67 no. 5 (Dorobantu editorial + 8 substantive
+  papers). **Cleanest batch ever: zero PARTIAL verdicts across all
+  54 prose-field audits** — first time we've seen a perfect-SUPPORTED
+  batch since the audit layer was introduced. Two papers triggered
+  the new sandwich truncation (Tedder-King: 44K chars dropped from
+  middle; Zhang: 16K chars dropped) and both still resolved to all
+  SUPPORTED. Across eight release cycles the library has now
+  produced zero CONTRADICTED verdicts.
 
 Run the audit on a single note with:
 
@@ -162,31 +170,32 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this release
 
-This release contains **147 curated notes** across two source streams:
+This release contains **156 curated notes** across two source streams:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
   digest. (62 notes shipped in v0.2.0; 15 previously-missing papers were
   recovered and added in v0.3.0.)
-- **AMJ pilot** — 70 notes across eight recent issues of the
+- **AMJ pilot** — 79 notes across nine recent issues of the
   [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 67 no. 6, vol. 68 no. 1, vol. 68 no. 2, vol. 68 no. 3, vol. 68
-  no. 4, vol. 68 no. 5, vol. 68 no. 6, vol. 69 no. 1). v0.8.0 added
-  vol. 67 no. 6 (8 notes); v0.7.0 added vol. 68 no. 1 (10 notes);
-  v0.6.0 added vol. 68 no. 2 (8 notes); v0.5.0 added vol. 68 no. 3
-  (8 notes); v0.4.0 added vol. 68 no. 4 (8 notes); the original pilot
-  covered the remaining three issues (28 notes).
+  (vol. 67 no. 5, vol. 67 no. 6, vol. 68 no. 1, vol. 68 no. 2, vol. 68
+  no. 3, vol. 68 no. 4, vol. 68 no. 5, vol. 68 no. 6, vol. 69 no. 1).
+  v0.9.0 added vol. 67 no. 5 (9 notes); v0.8.0 added vol. 67 no. 6
+  (8 notes); v0.7.0 added vol. 68 no. 1 (10 notes); v0.6.0 added vol.
+  68 no. 2 (8 notes); v0.5.0 added vol. 68 no. 3 (8 notes); v0.4.0
+  added vol. 68 no. 4 (8 notes); the original pilot covered the
+  remaining three issues (28 notes).
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |    57 |
-| empirical-qualitative  |    41 |
+| empirical-quantitative |    63 |
+| empirical-qualitative  |    42 |
 | conceptual             |    19 |
-| editorial              |    12 |
-| empirical-mixed        |    11 |
+| editorial              |    13 |
+| empirical-mixed        |    12 |
 | review                 |     4 |
 | book-review            |     3 |
-| **Total**              | **147** |
+| **Total**              | **156** |
 
 Every note carries a v2 `evidence:` anchor block (Layer 1) and has passed
 the Layer 2 semantic audit. See [Faithfulness audit](#faithfulness-audit)
@@ -204,7 +213,7 @@ management-research-notes/
 ├── docs/
 │   ├── extraction-prompt.md           ← the canonical extraction prompt (v2)
 │   └── audit-rubric.md                ← rubric the Layer 2 auditor uses
-├── notes/                             ← 147 curated paper notes (the source of truth)
+├── notes/                             ← 156 curated paper notes (the source of truth)
 │   └── nbs-2026-02-spoor-2026.md
 ├── index/                             ← derived views, all rebuildable
 │   ├── synapse.db                     ← SQLite + FTS5 (~1.7 MB)
@@ -318,7 +327,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.8.0},
+  version      = {0.9.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}
