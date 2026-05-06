@@ -94,6 +94,19 @@ applicable topics. If the paper spans multiple domains, pick up to 4. Never inve
 slugs — if nothing fits well, ask the user to extend the vocabulary rather than making
 one up. The validator will reject unknown slugs.
 
+The vocabulary has two structurally different kinds of slug:
+
+- **Subject-matter domains** (14 of them: `sustainability-environment`,
+  `corporate-social-responsibility`, `business-ethics`, etc.) describe *what the paper
+  is about*. Most papers should carry at least one subject-matter slug.
+- **Theoretical perspectives** (`theoretical-perspectives` domain — `signaling-theory`,
+  `institutional-theory`, `agency-theory`, `resource-based-view`, etc.) describe *how
+  the paper theorizes*. Tag these only when a paper explicitly draws on a named theory
+  as its primary or central framing — not for passing literature-review mentions. The
+  free-form `theory:` field still captures the full citation; the slug provides a
+  normalized navigation path. A typical paper might carry one subject-matter slug
+  plus one theoretical-perspectives slug (e.g., `csr-strategy` + `institutional-theory`).
+
 ### Paper-type rules
 
 You will be told the `paper_type` from a list of: `empirical-quantitative`,

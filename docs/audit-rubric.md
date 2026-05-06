@@ -37,6 +37,40 @@ claims**. Writing quality, topic choice, and completeness are out of scope.
    extraction prompt's paper-type rules); a "Not reported in paper" value is
    not a faithfulness violation when the field is exempt.
 
+### Reading the PDF text — known extraction artifacts
+
+The PDF text was produced by `pdftotext` (poppler), which has a few
+recurring rendering quirks worth knowing about. These are *artifacts of
+extraction*, not errors in the original paper or the note:
+
+- **`= → 5` in italic-math equations.** The italic equals sign in some
+  fonts maps to the digit `5` in pdftotext's output. So `k = 11` in the
+  paper appears as `k 5 11` in the extracted text, `N = 3,748` becomes
+  `N 5 3,748`, `p = 0.05` becomes `p 5 0.05`. Treat these as the
+  corresponding equation when verifying claims like "the study includes
+  11 conditions" or "the result is significant at p < .05". The note's
+  evidence anchor will preserve the artifact verbatim (`k 5 11`) — that
+  is the correct behavior, because Layer 1 checks the anchor against
+  the extracted text, not the original paper. Your job is to verify the
+  *meaning* against the *paper*, not the *literal characters* against
+  the *extracted text*.
+- **Two-column layout interleaving.** AMJ and similar journals use
+  two-column typesetting; pdftotext concatenates left+right column text
+  on the same output line. So a sentence that wraps "...mobility was
+  | inversely related..." across columns may appear in the extracted
+  text as "...mobility was [intervening text] inversely related..." with
+  unrelated words spliced between. Read the PDF text generously when
+  this happens — the note's evidence anchors are typically short
+  intra-column substrings chosen to avoid the splice points.
+- **Soft hyphens and U+2010.** Some publishers use soft hyphens (U+00AD)
+  or non-breaking hyphens (U+2010) for line breaks. These render as
+  literal characters in the extracted text, so `long-term` may appear as
+  `long‐ term` or `long term` depending on the publisher. Treat both
+  forms as the intended phrase.
+
+None of these artifacts justify an UNSUPPORTED verdict on their own —
+they affect what you *see*, not what the note *claims*.
+
 ---
 
 ## Verdict definitions

@@ -226,6 +226,34 @@
         "causal-inference",
         "philosophy-of-science"
       ]
+    },
+    "theoretical-perspectives": {
+      "label": "Theoretical Perspectives",
+      "description": "Canonical theoretical lenses used to analyze management and organizational phenomena. Use these slugs when a paper explicitly draws on a named theory as its primary or central theoretical framing — not for passing mentions in a literature review. Orthogonal to the subject-matter domains: a paper can be tagged with both the domain it studies (e.g., 'csr-strategy') and the theory it uses (e.g., 'institutional-theory'). The free-form 'theory:' frontmatter field still captures full citations (e.g., 'signaling theory (Spence, 1973; Connelly et al., 2011)'); these slugs provide a normalized navigation path for cross-paper queries via the SQLite topics table.",
+      "subtopics": [
+        "absorptive-capacity",
+        "agency-theory",
+        "attribution-theory",
+        "behavioral-theory-of-the-firm",
+        "bounded-rationality",
+        "dynamic-capabilities",
+        "identity-theory",
+        "institutional-logics",
+        "institutional-theory",
+        "practice-theory",
+        "prospect-theory",
+        "resource-based-view",
+        "role-theory",
+        "screening-theory",
+        "self-determination-theory",
+        "signaling-theory",
+        "social-capital-theory",
+        "social-exchange-theory",
+        "social-identity-theory",
+        "stakeholder-theory",
+        "transaction-cost-theory",
+        "upper-echelons-theory"
+      ]
     }
   },
   "context_tags": {
