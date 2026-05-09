@@ -4,7 +4,7 @@ title: "CEO Political Partisanship and Corporate Misconduct"
 authors:
   - "Fewer, T. J."
   - "Tarakci, M."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0909"
 volume: 68
@@ -72,4 +72,4 @@ The study cannot disentangle whether tracked-but-unobserved value differences pr
 Future work should test whether other deep-rooted belief systems (religious, populist) drive misconduct, and how political ideology interacts with pressure and opportunity (e.g., board ideology, stakeholder alignment) to shape misconduct. Researchers should pursue more direct ideology measures (e.g., social-media content analysis, factor-analytic separation of values and identity), dyadic and longer-run mechanism tests of perspective taking and moral foundations, and cross-national designs in multiparty or authoritarian regimes. Studies should also examine whether partisan CEOs alienate ideologically distant stakeholders and whether ideologically homogeneous TMTs and boards function as echo chambers that magnify the partisanship-misconduct effect.
 
 **APA 7th Citation**
-Fewer, T. J., & Tarakci, M. (2024). CEO political partisanship and corporate misconduct. *Academy of Management Journal*, 68(2), 357-379. https://doi.org/10.5465/amj.2022.0909
+Fewer, T. J., & Tarakci, M. (2025). CEO political partisanship and corporate misconduct. *Academy of Management Journal*, 68(2), 357-379. https://doi.org/10.5465/amj.2022.0909

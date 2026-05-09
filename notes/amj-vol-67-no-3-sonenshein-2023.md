@@ -4,7 +4,7 @@ title: "When the Symphony Does Jazz: How Resourcefulness Fosters Organizational 
 authors:
   - "Sonenshein, S."
   - "Nault, K."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0988"
 volume: 67
@@ -74,4 +74,4 @@ The study examines two organizations within a single industry (professional orch
 Scholars should examine whether "resilience contagion" operates within and across organizations, whether adversity adjustment is zero-sum across competitors, and what constitutes a suitable time period for studying adversity adjustment. Additional research could investigate shifts from promotive to preventative resourcefulness (the reverse trajectory), how updating functions when it fails to trigger a shift, and whether updating provides a relational pause that resets low-trust environments.
 
 **APA 7th Citation**
-Sonenshein, S., & Nault, K. (2023). When the symphony does jazz: How resourcefulness fosters organizational resilience during adversity. *Academy of Management Journal*, 67(3), 648-678. https://doi.org/10.5465/amj.2022.0988
+Sonenshein, S., & Nault, K. (2024). When the symphony does jazz: How resourcefulness fosters organizational resilience during adversity. *Academy of Management Journal*, 67(3), 648-678. https://doi.org/10.5465/amj.2022.0988

@@ -5,7 +5,7 @@ authors:
   - "Brändle, L."
   - "Berger, E. S. C."
   - "Howard, M. D."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0439"
 volume: 68
@@ -73,4 +73,4 @@ First, the empirical focus on the joint evolution of two networks (mAbs and smal
 The authors call for studies that (1) model true coevolution of multiple networks with two-way interdependencies, (2) examine how broker dynamics change when emergent technologies become new dominant standards (e.g., CRISPR-Cas), (3) investigate cyclical phases of technology emergence and their effects on cross-network broker behavior, and (4) explore multiplex technology closure within and across innovation communities defined by relational distance, asking how broker separation strategies play out across community boundaries.
 
 **APA 7th Citation**
-Brändle, L., Berger, E. S. C., & Howard, M. D. (2024). Crossing technological boundaries: Brokerage and the emergence of innovation networks. *Academy of Management Journal*, 68(3), 620-647. https://doi.org/10.5465/amj.2023.0439
+Brändle, L., Berger, E. S. C., & Howard, M. D. (2025). Crossing technological boundaries: Brokerage and the emergence of innovation networks. *Academy of Management Journal*, 68(3), 620-647. https://doi.org/10.5465/amj.2023.0439

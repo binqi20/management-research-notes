@@ -5,7 +5,7 @@ authors:
   - "Fitzsimons, D."
   - "Petriglieri, J. L."
   - "Petriglieri, G."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0564"
 volume: 68
@@ -75,4 +75,4 @@ The theory rests on a single 42-month ethnography of one professional services f
 Future studies should examine how emotions, especially anxiety, fundamentally shape organizational processes such as change, innovation, and crisis response — generating better meso-level theories linking individual experience to organized processes. Researchers should investigate what replaces social defenses once they collapse (a leadership change initiating a new defensive arc, or genuine adaptive awakening) and what factors hinder or facilitate post-defensive transitions. Psychometric work could probe baseline executive distress as a moderator of defensive organizing, and scholars should attend to mood shifts that occur without changes in circumstances as a signal that systems psychodynamic investigation is warranted.
 
 **APA 7th Citation**
-Fitzsimons, D., Petriglieri, J. L., & Petriglieri, G. (2024). The fury beneath the morphing: A theory of defensive organizing. *Academy of Management Journal*, 68(2), 409-435. https://doi.org/10.5465/amj.2023.0564
+Fitzsimons, D., Petriglieri, J. L., & Petriglieri, G. (2025). The fury beneath the morphing: A theory of defensive organizing. *Academy of Management Journal*, 68(2), 409-435. https://doi.org/10.5465/amj.2023.0564

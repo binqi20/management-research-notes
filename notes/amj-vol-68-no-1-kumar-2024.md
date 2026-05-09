@@ -5,7 +5,7 @@ authors:
   - "Kumar, Pankaj"
   - "Nowinska, Agnieszka"
   - "Zaheer, Akbar"
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.1143"
 volume: 68
@@ -94,4 +94,4 @@ The voyage-level longitudinal database originates from a single focal firm in a 
 Future work could theorize about the effect of geography on brokerage stability when the broker and its partners stand in horizontal rather than vertical relationships — for example, brokerage structures within networks of strategic alliances — and disentangle trust violation from broker competitive behavior in such settings. The interplay between different types of embeddedness deserves deeper conceptual treatment, building on the paper's post hoc finding that collocated relationally embedded shipbrokers face a more severe reinitiation penalty than non-collocated relationally embedded ones, examining how spatial and relational embeddedness combine and substitute. Extending the framework to other mediated market contexts (real estate, talent agency, financial intermediation) would test the generalizability of the paradox.
 
 **APA 7th Citation**
-Kumar, P., Nowinska, A., & Zaheer, A. (2024). The paradox of spatial and relational embeddedness: Tie reinitiation after a trust violation. *Academy of Management Journal*, 68(1), 81-107. https://doi.org/10.5465/amj.2022.1143
+Kumar, P., Nowinska, A., & Zaheer, A. (2025). The paradox of spatial and relational embeddedness: Tie reinitiation after a trust violation. *Academy of Management Journal*, 68(1), 81-107. https://doi.org/10.5465/amj.2022.1143

@@ -6,7 +6,7 @@ authors:
   - "Connelly, B. L."
   - "Ketchen, D. J."
   - "Shi, W."
-year: 2025
+year: 2026
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0914"
 volume: 69
@@ -80,4 +80,4 @@ The authors could not fully account for why particular firms are susceptible to 
 Scholars could test these ideas experimentally (e.g., policy-capturing studies with executives) to unpack decision-making; explore other forms of awareness such as shared buyers/suppliers or socially interconnected firms; integrate AIM with protection motivation theory, threat rigidity theory, signaling theory, and the attention-based view to build a multiplex theory of proactive responses; and examine other potential adverse events (hostile takeovers, market entry, labor disputes, regulatory changes) where CEO language may serve as a first line of defense.
 
 **APA 7th Citation**
-Song, R., Connelly, B. L., Ketchen, D. J., & Shi, W. (2025). Anticipatory impression management for potential adverse events: Positive framing in the wake of short seller attacks on a competitor. *Academy of Management Journal*, 69(1), 99-122. https://doi.org/10.5465/amj.2023.0914
+Song, R., Connelly, B. L., Ketchen, D. J., & Shi, W. (2026). Anticipatory impression management for potential adverse events: Positive framing in the wake of short seller attacks on a competitor. *Academy of Management Journal*, 69(1), 99-122. https://doi.org/10.5465/amj.2023.0914

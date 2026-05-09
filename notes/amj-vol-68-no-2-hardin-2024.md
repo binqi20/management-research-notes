@@ -6,7 +6,7 @@ authors:
   - "Schinoff, B. S."
   - "Byron, K."
   - "Balven, R. M."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0683"
 volume: 68
@@ -74,4 +74,4 @@ The studies measure only short-term intent or recent investment, leaving open ho
 Future work should examine longer-term affective and behavioral consequences of these learning dimensions (e.g., avoidance, ambivalence, ongoing engagement); explore additional learning dimensions such as the source of information (direct observation vs. gossip), the timing/location of learning, and audience size; and investigate contextual antecedents like organizational culture, open office plans, and individual differences (openness, extraversion). Researchers should also adopt dyadic designs (live video recordings, paired interviews) to capture how the person being learned about experiences such disclosures.
 
 **APA 7th Citation**
-Hardin, A. E., Schinoff, B. S., Byron, K., & Balven, R. M. (2024). A window into coworkers' worlds: The relational outcomes of learning vivid, unintentional, and nonwork-related information about coworkers. *Academy of Management Journal*, 68(2), 267-296. https://doi.org/10.5465/amj.2022.0683
+Hardin, A. E., Schinoff, B. S., Byron, K., & Balven, R. M. (2025). A window into coworkers' worlds: The relational outcomes of learning vivid, unintentional, and nonwork-related information about coworkers. *Academy of Management Journal*, 68(2), 267-296. https://doi.org/10.5465/amj.2022.0683

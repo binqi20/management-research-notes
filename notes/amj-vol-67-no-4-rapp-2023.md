@@ -5,7 +5,7 @@ authors:
   - "Rapp, Devin J."
   - "Hughey, J. Matthew"
   - "Kreiner, Glen E."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0502"
 volume: 67
@@ -75,4 +75,4 @@ The authors interviewed only healthcare workers, not the evaluators themselves; 
 Future work should dive deeper into hero-washing across other lauded-yet-neglected occupations (teachers, soldiers, mental health professionals, neurodiverse workers) and quantitatively test how varying dimensions of stigma (and their combinations, e.g., physical-social) generate behavioral and adaptive outcomes. Researchers should also explore how the proximity, informedness, and authenticity criteria operate in occupations with different status and legitimacy profiles, and probe boundary conditions linking legitimacy, status, and stigma response.
 
 **APA 7th Citation**
-Rapp, D. J., Hughey, J. M., & Kreiner, G. E. (2023). Dirty heroes? Healthcare workers’ experience of mixed social evaluations during the pandemic. *Academy of Management Journal*, 67(4), 1124–1157. https://doi.org/10.5465/amj.2022.0502
+Rapp, D. J., Hughey, J. M., & Kreiner, G. E. (2024). Dirty heroes? Healthcare workers’ experience of mixed social evaluations during the pandemic. *Academy of Management Journal*, 67(4), 1124–1157. https://doi.org/10.5465/amj.2022.0502

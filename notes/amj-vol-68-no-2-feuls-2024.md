@@ -5,7 +5,7 @@ authors:
   - "Feuls, M."
   - "Hernes, T."
   - "Schultz, M."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0257"
 volume: 68
@@ -74,4 +74,4 @@ The model is grounded in a sequence of meetings dedicated to developing one sust
 Future research adopting a path enactment perspective could examine how multiple paths diverge, converge, or change across organizations, industries, or intersecting grand challenges (climate change, inequality, poverty). Scholars should explore path enactment in different contexts and over longer horizons to test the model's robustness, and investigate how power imbalances and misalignment between corporate and sustainability strategies condition the stretching of paths toward distant futures.
 
 **APA 7th Citation**
-Feuls, M., Hernes, T., & Schultz, M. (2024). Putting distant futures into action: How actors sustain a course of action toward distant-future goals through path enactment. *Academy of Management Journal*, 68(2), 297-325. https://doi.org/10.5465/amj.2022.0257
+Feuls, M., Hernes, T., & Schultz, M. (2025). Putting distant futures into action: How actors sustain a course of action toward distant-future goals through path enactment. *Academy of Management Journal*, 68(2), 297-325. https://doi.org/10.5465/amj.2022.0257

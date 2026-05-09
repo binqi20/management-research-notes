@@ -6,7 +6,7 @@ authors:
   - "de Vries, T. A."
   - "Li, H."
   - "Shaw, J. D."
-year: 2025
+year: 2026
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2024.0176"
 volume: 69
@@ -65,4 +65,4 @@ The model was tested in a single organization (J. P. Morgan) with comparable fin
 Future work should conduct replication studies in other industries (e.g., manufacturing) and regions (e.g., Africa, Europe, Asia), operationalize external network and role mechanisms in alternative ways, and integrate structural adaptation theory to examine which types of adaptations are hindered or enabled by MTM. Scholars should extend the model to team viability and turnover, investigate whether autonomy over role choice shapes MTM effects in contexts where roles are organizationally assigned, and differentiate task-related from demographic diversity in moderating MTM's team-level consequences.
 
 **APA 7th Citation**
-Lang, T., de Vries, T. A., Li, H., & Shaw, J. D. (2025). The dualities of multiple team membership: Implications for team performance and adaptability. *Academy of Management Journal*, 69(1), 176-203. https://doi.org/10.5465/amj.2024.0176
+Lang, T., de Vries, T. A., Li, H., & Shaw, J. D. (2026). The dualities of multiple team membership: Implications for team performance and adaptability. *Academy of Management Journal*, 69(1), 176-203. https://doi.org/10.5465/amj.2024.0176

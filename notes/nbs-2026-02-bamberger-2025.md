@@ -3,7 +3,7 @@ id: nbs-2026-02-bamberger-2025
 title: "2025 Presidential Address: Activism, Impact and Science: Management Scholarship in a Challenging Era"
 authors:
   - "Bamberger, P."
-year: 2025
+year: 2026
 journal: "Academy of Management Review"
 doi: "https://doi.org/10.5465/amr.2025.0742"
 volume: null
@@ -77,4 +77,4 @@ Not reported in paper
 Bamberger calls on the field to move from reactive to agenda-setting research, including work that: (a) broadens sustainability research to encompass human-capital sustainability and work-based interventions; (b) examines how business organizations can serve as vehicles for sustainable economic development and regional conflict resolution; and (c) develops and tests new models of educational organizations to replace industrial-scale public schooling grounded in scientific management.
 
 **APA 7th Citation**
-Bamberger, P. (2025). 2025 Presidential Address: Activism, impact and science: Management scholarship in a challenging era. *Academy of Management Review*, 1-5. https://doi.org/10.5465/amr.2025.0742
+Bamberger, P. (2026). 2025 Presidential Address: Activism, impact and science: Management scholarship in a challenging era. *Academy of Management Review*, 1-5. https://doi.org/10.5465/amr.2025.0742

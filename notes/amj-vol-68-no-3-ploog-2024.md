@@ -4,7 +4,7 @@ title: "Rolling the Dice: Resolving Demand Uncertainty in Markets with Partial N
 authors:
   - "Ploog, J. N."
   - "Rietveld, J."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0133"
 volume: 68
@@ -84,4 +84,4 @@ The study relies on archival data from a single, contextualized analog setting (
 Future work should replicate findings in other industries—including digital product markets—and use laboratory experiments or demand-uncertainty questionnaires to measure perceived uncertainty more directly. Researchers could also study contexts with truly heterogeneous network effects, settings where firms add network value post-release, two- or multisided platform markets, and the dynamics of user engagement (versus mere adoption) in sustaining network effects.
 
 **APA 7th Citation**
-Ploog, J. N., & Rietveld, J. (2024). Rolling the dice: Resolving demand uncertainty in markets with partial network effects. *Academy of Management Journal*, 68(3), 598-619. https://doi.org/10.5465/amj.2023.0133
+Ploog, J. N., & Rietveld, J. (2025). Rolling the dice: Resolving demand uncertainty in markets with partial network effects. *Academy of Management Journal*, 68(3), 598-619. https://doi.org/10.5465/amj.2023.0133

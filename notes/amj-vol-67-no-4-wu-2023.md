@@ -5,7 +5,7 @@ authors:
   - "Wu, X."
   - "Adbi, A."
   - "Mahmood, I. P."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0925"
 volume: 67
@@ -73,4 +73,4 @@ The study focuses on a single country (China), raising generalizability concerns
 Future studies can explore the performance effects of network communities in more- versus less-developed economies, investigate how informal institutions interact with formal institutions and network communities, and examine network configurations that lead to the emergence and persistence of multiple insiders. Researchers can combine CPM with exponential random graph models or relational event models to study the coevolution of insiders and outsiders, and analyze how bridging ties operate within, outside, and across community boundaries.
 
 **APA 7th Citation**
-Wu, X., Adbi, A., & Mahmood, I. P. (2023). The social structure of insiders and outsiders: Toward a network community perspective on firm performance. *Academy of Management Journal*, 67(4), 903-932. https://doi.org/10.5465/amj.2022.0925
+Wu, X., Adbi, A., & Mahmood, I. P. (2024). The social structure of insiders and outsiders: Toward a network community perspective on firm performance. *Academy of Management Journal*, 67(4), 903-932. https://doi.org/10.5465/amj.2022.0925

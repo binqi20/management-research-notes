@@ -5,7 +5,7 @@ authors:
   - "Yu, Q."
   - "Cuypers, I. R. P."
   - "Wang, H."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0862"
 volume: 68
@@ -74,4 +74,4 @@ The empirical setting is restricted to U.S.-listed high-tech firms, which face h
 Scholars should test the framework in other industry contexts, examine the interplay between partner CSR and CSI rather than treating them only as independent signals, and use field or survey data that distinguishes alliance initiators from receivers to study how partner role asymmetries shape signal use. Further work could also extend the framework beyond alliance formation to other alliance outcomes such as governance-mode choice, alliance stability, and innovative or financial performance.
 
 **APA 7th Citation**
-Yu, Q., Cuypers, I. R. P., & Wang, H. (2024). A tale of two signals: Partner CSR versus CSI and alliance formation. *Academy of Management Journal*, 68(1), 138-161. https://doi.org/10.5465/amj.2022.0862
+Yu, Q., Cuypers, I. R. P., & Wang, H. (2025). A tale of two signals: Partner CSR versus CSI and alliance formation. *Academy of Management Journal*, 68(1), 138-161. https://doi.org/10.5465/amj.2022.0862

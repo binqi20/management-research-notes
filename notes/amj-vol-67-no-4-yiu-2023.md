@@ -6,7 +6,7 @@ authors:
   - "Wan, W. P."
   - "Chen, K. X."
   - "Tian, X."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0239"
 volume: 67
@@ -74,4 +74,4 @@ The empirical context is limited to Chinese firm acquisitions of U.S. targets be
 Future research can extend the theory using different country dyads (e.g., Korea, India as acquirers in the United States) to differentiate how host country sentiments affect inward acquisition outcomes from different home countries. The theory is generalizable to other salient inter-country events such as IPOs, foreign CEO appointments, MNE HR policies, and inter-country tensions. Future efforts can also investigate the inconclusive effects of host country sentiment volatility and explore cross-lag interactions between host country sentiment types.
 
 **APA 7th Citation**
-Yiu, D. W., Wan, W. P., Chen, K. X., & Tian, X. (2023). A theory of host country sentiments: An illustration in cross-border acquisitions. *Academy of Management Journal*, 67(4), 1024-1054. https://doi.org/10.5465/amj.2022.0239
+Yiu, D. W., Wan, W. P., Chen, K. X., & Tian, X. (2024). A theory of host country sentiments: An illustration in cross-border acquisitions. *Academy of Management Journal*, 67(4), 1024-1054. https://doi.org/10.5465/amj.2022.0239

@@ -4,7 +4,7 @@ title: "Chasing Storms: Temporal Work to Foster Group Engagement under Uncertain
 authors:
   - "Kent, D."
   - "Granqvist, N."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2021.1316"
 volume: 68
@@ -74,4 +74,4 @@ The study examines small-group interactions in a setting of extreme temporal unc
 Future work could examine how temporal work manifests in settings with more predictable or routinized transitions, how interdepartmental or interorganizational settings shape durational experiences, how "temporal macro-structures" in large-scale projects influence experienced duration, and how individuals develop "temporal competence" to feel in control and immerse themselves in work despite incomplete control over events.
 
 **APA 7th Citation**
-Kent, D., & Granqvist, N. (2024). Chasing storms: Temporal work to foster group engagement under uncertainty. *Academy of Management Journal*, 68(2), 380-408. https://doi.org/10.5465/amj.2021.1316
+Kent, D., & Granqvist, N. (2025). Chasing storms: Temporal work to foster group engagement under uncertainty. *Academy of Management Journal*, 68(2), 380-408. https://doi.org/10.5465/amj.2021.1316

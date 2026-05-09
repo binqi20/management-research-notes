@@ -5,7 +5,7 @@ authors:
   - "Chon, D."
   - "Sezer, O."
   - "Flynn, F. J."
-year: 2025
+year: 2026
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.1044"
 volume: 69
@@ -64,4 +64,4 @@ The studies are largely hypothetical vignette-based designs and focus narrowly o
 Future work could conduct longitudinal or experience-sampling investigations of ongoing leader-follower relationships to examine how change-rate evaluations evolve over multiple timepoints and whether sub-variants of change rates (e.g., constant vs. slow-start-then-flurry) moderate the effect. Researchers could also explore possible asymmetries between judgments of authenticity and inauthenticity, test whether different types of leader behaviors (e.g., interpersonal vs. task-oriented) strengthen or attenuate the authenticity penalty, and replicate the findings using non-Western theoretical perspectives and populations with different conceptions of self.
 
 **APA 7th Citation**
-Chon, D., Sezer, O., & Flynn, F. J. (2025). Not so fast? Rapid response to voice leads to perceived inauthenticity. *Academy of Management Journal*, 69(1), 123–148. https://doi.org/10.5465/amj.2023.1044
+Chon, D., Sezer, O., & Flynn, F. J. (2026). Not so fast? Rapid response to voice leads to perceived inauthenticity. *Academy of Management Journal*, 69(1), 123–148. https://doi.org/10.5465/amj.2023.1044

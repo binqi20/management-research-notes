@@ -7,7 +7,7 @@ authors:
   - "Bates, Jay T."
   - "Parkinson, Shaun M."
   - "Sheppard, Leah D."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0221"
 volume: 68
@@ -97,4 +97,4 @@ Reliance on self-report measures raises common-method-variance concerns, althoug
 Scholars should use experience-sampling methods to capture real-time emotional and behavioral responses to identity threats in naturalistic settings, and measure actual rather than self-reported behaviors via coworker/supervisor reports. Future work should explore the broader range of discrete emotions (e.g., anger when injustice is salient) elicited by different identity threats, treat threat severity as a continuum, and test whether the type of threatened identity (personal, role, or group) shapes which protection responses dominate and whether solidarity with the threatened-identity in-group interacts with coworker solidarity. Researchers should also investigate identity-restructuring responses (beyond identity-protection) and how organizational context — leadership style, collectivist culture, organizational justice — amplifies or dampens identity-threat consequences.
 
 **APA 7th Citation**
-Johnson, H. H., Umphress, E., Bates, J. T., Parkinson, S. M., & Sheppard, L. D. (2024). Does identification hurt or help under identity threat? The exacerbating role of identity centrality on feeling offended and the buffering role of coworker solidarity on identity-protection behaviors. *Academy of Management Journal*, 68(1), 50-80. https://doi.org/10.5465/amj.2022.0221
+Johnson, H. H., Umphress, E., Bates, J. T., Parkinson, S. M., & Sheppard, L. D. (2025). Does identification hurt or help under identity threat? The exacerbating role of identity centrality on feeling offended and the buffering role of coworker solidarity on identity-protection behaviors. *Academy of Management Journal*, 68(1), 50-80. https://doi.org/10.5465/amj.2022.0221

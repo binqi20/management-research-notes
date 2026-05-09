@@ -4,7 +4,7 @@ title: "The Outcomes of Cross-Category Career Moves: How Cross-Industry Mobility
 authors:
   - "Sabanci, H."
   - "Elvira, M. M."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2020.1423"
 volume: 67

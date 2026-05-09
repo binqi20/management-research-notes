@@ -4,7 +4,7 @@ title: "External Disruption Following CEO Succession: How Human and Social Capit
 authors:
   - "Lee, E. Y."
   - "Tsai, W."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0448"
 volume: 67
@@ -88,4 +88,4 @@ The study examines only the competitive landscape, leaving other forms of extern
 Future studies could (a) extend the disruption framework to other external stakeholders (regulators, social movements, ESG-focused activists) and to industry-wide succession waves; (b) qualitatively or experimentally identify the specific cues that lead competitors to assess a CEO succession as an opportunity or a future threat; (c) investigate preemption more broadly as a competitive behavior, given the scarcity of empirical work; and (d) examine whether PSPED's effects vary by the substantive content of professional-experience changes (e.g., functional area combinations, functional vs. industry experience).
 
 **APA 7th Citation**
-Lee, E. Y., & Tsai, W. (2023). External disruption following CEO succession: How human and social capital changes may attract competitive attacks. *Academy of Management Journal*, 67(3), 625-647. https://doi.org/10.5465/amj.2022.0448
+Lee, E. Y., & Tsai, W. (2024). External disruption following CEO succession: How human and social capital changes may attract competitive attacks. *Academy of Management Journal*, 67(3), 625-647. https://doi.org/10.5465/amj.2022.0448

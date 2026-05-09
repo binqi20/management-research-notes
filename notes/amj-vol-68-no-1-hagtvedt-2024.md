@@ -6,7 +6,7 @@ authors:
   - "Harvey, Sarah"
   - "Demir-Caliskan, Ozumcan"
   - "Hagtvedt, Henrik"
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0850"
 volume: 68
@@ -96,4 +96,4 @@ The study cannot reveal whether one approach (disconnecting or integrating) is m
 Future work should investigate how creators develop ideas that are simultaneously novel, useful, and minimally harmful, and how other criteria such as sustainability, aesthetic dimensions, or long-term value enter creators' projections. Scholars could explore the relative effectiveness of customized product constraints versus broader regulation, examine how alternative forms of constraint interact within a domain, and study how power imbalances and collective dynamics shape which form of imagining dominates over time.
 
 **APA 7th Citation**
-Hagtvedt, L. P., Harvey, S., Demir-Caliskan, O., & Hagtvedt, H. (2024). Bright and dark imagining: How creators navigate moral consequences of developing ideas for artificial intelligence. *Academy of Management Journal*, 68(1), 19-49. https://doi.org/10.5465/amj.2022.0850
+Hagtvedt, L. P., Harvey, S., Demir-Caliskan, O., & Hagtvedt, H. (2025). Bright and dark imagining: How creators navigate moral consequences of developing ideas for artificial intelligence. *Academy of Management Journal*, 68(1), 19-49. https://doi.org/10.5465/amj.2022.0850

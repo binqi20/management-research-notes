@@ -8,7 +8,7 @@ authors:
   - "Wang, Mo"
   - "Cai, Di"
   - "Liu, Jia"
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0669"
 volume: 68
@@ -99,4 +99,4 @@ Adjustment outcomes were rated only by supervisors, so multi-source replication 
 Future studies should replicate the model with multi-source adjustment data and in non-Chinese contexts to test cultural generalizability, control for additional interpersonal-skill confounds (emotional intelligence, emotional regulation, impression management) while parsing variance overlap with proactive personality and Big Five traits, and examine alternative moderators such as psychological safety climate or the level of organizational politics. Researchers should also empirically test the qualitative speculations about why vertical interactions matter for early-entry states and horizontal interactions for growth rates, and explore reciprocal dynamics in which political skill is itself shaped over time through interactions with insiders.
 
 **APA 7th Citation**
-Deng, Y., Lin, W., Song, Y., Wang, M., Cai, D., & Liu, J. (2024). Socialization as a political arena: A multi-agent interactionist perspective to understand political skill and newcomer socialization rates. *Academy of Management Journal*, 68(1), 108-137. https://doi.org/10.5465/amj.2022.0669
+Deng, Y., Lin, W., Song, Y., Wang, M., Cai, D., & Liu, J. (2025). Socialization as a political arena: A multi-agent interactionist perspective to understand political skill and newcomer socialization rates. *Academy of Management Journal*, 68(1), 108-137. https://doi.org/10.5465/amj.2022.0669

@@ -6,7 +6,7 @@ authors:
   - "Kim, D."
   - "Schaubroeck, J. M."
   - "Zeng, W."
-year: 2025
+year: 2026
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2024.0108"
 volume: 69
@@ -65,4 +65,4 @@ Three of the four studies relied on self-reports, which may introduce common met
 Future work should test the theory using externally rated pro-organizational behavior, examine whether group-level shared perceptions of stigma add explanatory power beyond individual perceptions, and explore "incongruent" cases such as workers in tainted occupations performing ordinary tasks or workers in low-stigma occupations performing highly dirty tasks. Researchers could also investigate pivotal or crucial moments (e.g., a police officer using force) that temporarily heighten work dirtiness and activate social identity, and consider how comparative fit (alongside normative fit) and other forms of societal stigma (e.g., discrimination, social exclusion) guide identity processes and workplace behavior.
 
 **APA 7th Citation**
-Peng, A. C., Kim, D., Schaubroeck, J. M., & Zeng, W. (2025). When dirty work inspires: The joint effect of work dirtiness and perceived stigma on pro-organizational behavior. *Academy of Management Journal*, 69(1), 149-175. https://doi.org/10.5465/amj.2024.0108
+Peng, A. C., Kim, D., Schaubroeck, J. M., & Zeng, W. (2026). When dirty work inspires: The joint effect of work dirtiness and perceived stigma on pro-organizational behavior. *Academy of Management Journal*, 69(1), 149-175. https://doi.org/10.5465/amj.2024.0108

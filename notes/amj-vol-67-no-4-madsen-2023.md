@@ -4,7 +4,7 @@ title: "Change at Last, but When Does Change Last? Preserving Attentional Engage
 authors:
   - "Madsen, P. M."
   - "Desai, V."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0391"
 volume: 67
@@ -72,4 +72,4 @@ The findings concern failure experience and may not generalize to nonfailure (su
 Future work should apply the theory and the novel feNmlm-based depreciation estimation method to other forms of experience and to other types of organizational failures. The authors encourage examination of additional experiential and organizational factors that may influence depreciation rates and call for richer measurement of organizational knowledge creation and depreciation.
 
 **APA 7th Citation**
-Madsen, P. M., & Desai, V. (2023). Change at last, but when does change last? Preserving attentional engagement around past failures and their lessons. *Academy of Management Journal*, 67(4), 933-955. https://doi.org/10.5465/amj.2022.0391
+Madsen, P. M., & Desai, V. (2024). Change at last, but when does change last? Preserving attentional engagement around past failures and their lessons. *Academy of Management Journal*, 67(4), 933-955. https://doi.org/10.5465/amj.2022.0391

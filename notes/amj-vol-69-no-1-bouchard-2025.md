@@ -6,7 +6,7 @@ authors:
   - "Chreim, S."
   - "Langley, A."
   - "Boivin, A."
-year: 2025
+year: 2026
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0645"
 volume: null
@@ -81,4 +81,4 @@ The study relies on a single case — a weekly multidisciplinary meeting in one 
 Future work could adopt multi-case designs to compare vulnerability practices across contexts and processes, examine online versus in-person dynamics, and explore other groups mixing disciplinary and seniority statuses to understand how to "level the playing field." The authors also suggest investigating how rotating the facilitator role across disciplinary statuses, or convening groups whose members do not otherwise work together, might reshape power dynamics and participants' appraisals of the benefits and risks of vulnerability practices.
 
 **APA 7th Citation**
-Bouchard, M., Chreim, S., Langley, A., & Boivin, A. (2025). Vulnerability practices among professionals in multidisciplinary settings. *Academy of Management Journal*. https://doi.org/10.5465/amj.2023.0645
+Bouchard, M., Chreim, S., Langley, A., & Boivin, A. (2026). Vulnerability practices among professionals in multidisciplinary settings. *Academy of Management Journal*. https://doi.org/10.5465/amj.2023.0645

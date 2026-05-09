@@ -6,7 +6,7 @@ authors:
   - "Nyberg, A. J."
   - "Maltarich, M. A."
   - "Reilly, G."
-year: 2025
+year: 2026
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0311"
 volume: null
@@ -81,4 +81,4 @@ The study uses data from a single U.S. Fortune 500 retail firm, so generalizabil
 Future research should test boundary conditions across industries and settings, examine the duration and decay of transfer effects on HCR over longer horizons, and directly measure the quality of transferred human capital, the content of pre-existing relationships, and within-unit knowledge diversity to test the proposed mechanism more cleanly. Scholars should also model the causes of transfer decisions (e.g., employee self-selection into higher-performing units), explore more complex HCR configurations such as fault lines and subgroup dynamics among transfers, and untangle role-specific effects (e.g., manager versus frontline transfers) on unit outcomes.
 
 **APA 7th Citation**
-Ray, C., Nyberg, A. J., Maltarich, M. A., & Reilly, G. (2025). On the move: The impact of internal mobility and internal comobility on unit- and organization-level outcomes. *Academy of Management Journal*, 69(1), 76-98. https://doi.org/10.5465/amj.2023.0311
+Ray, C., Nyberg, A. J., Maltarich, M. A., & Reilly, G. (2026). On the move: The impact of internal mobility and internal comobility on unit- and organization-level outcomes. *Academy of Management Journal*, 69(1), 76-98. https://doi.org/10.5465/amj.2023.0311

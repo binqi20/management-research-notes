@@ -4,7 +4,7 @@ title: "Organizational Ghosts: How “Ghostly Encounters” Enable Former Leader
 authors:
   - "Bednar, J. S."
   - "Brown, J. A."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0622"
 volume: 67
@@ -88,4 +88,4 @@ The two organizations were small, multigenerational family businesses with long-
 Future studies could examine ghostly encounters in larger, more dispersed, or non-family organizations and in periods of stability rather than upheaval; use longitudinal designs to study "ghosts in the making" prior to a leader's exit; explore negatively valenced ghosts, ghosts crossing organizational boundaries (e.g., Jack Welch's surrogates), and demographic variation (gender, race) in who becomes a ghost; and investigate the relative effectiveness of intentional summonings versus organic appearances and how depersonalized trust enables connection for members who never met the former leader.
 
 **APA 7th Citation**
-Bednar, J. S., & Brown, J. A. (2023). Organizational ghosts: How "ghostly encounters" enable former leaders to influence current organizational members. *Academy of Management Journal*, 67(3), 737-766. https://doi.org/10.5465/amj.2022.0622
+Bednar, J. S., & Brown, J. A. (2024). Organizational ghosts: How "ghostly encounters" enable former leaders to influence current organizational members. *Academy of Management Journal*, 67(3), 737-766. https://doi.org/10.5465/amj.2022.0622

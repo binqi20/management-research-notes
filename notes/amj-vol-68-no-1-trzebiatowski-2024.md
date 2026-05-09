@@ -7,7 +7,7 @@ authors:
   - "Zhang, Zhen"
   - "Eckardt, Rory"
   - "Kim, Yeongsu Anthony"
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2020.1838"
 volume: 68
@@ -99,4 +99,4 @@ Study 1's law firm setting limits generalizability because law is among the leas
 Future studies should test the model with field samples of managers and across more hierarchical and demographically diverse industries, expand the set of diversity practices examined (including AI- and VR-enabled vignettes and eye-tracking of attention to signals), and explore additional mechanisms such as other-oriented relevance and exclusion, as well as reactions of dominant-group non-beneficiaries. Time-separated or experimentally manipulated mediator designs could strengthen causal inference about concerns-about-unfair-treatment and personal-relevance pathways, and scholars could relax the substantive-intent assumption to study signal intent alongside signal quality.
 
 **APA 7th Citation**
-Trzebiatowski, T., Jiang, K., Zhang, Z., Eckardt, R., & Kim, Y. A. (2024). A diversity signal set perspective: Examining interactive effects of diversity practices on women and racialized non-leader and leader turnover. *Academy of Management Journal*, 68(1), 191-220. https://doi.org/10.5465/amj.2020.1838
+Trzebiatowski, T., Jiang, K., Zhang, Z., Eckardt, R., & Kim, Y. A. (2025). A diversity signal set perspective: Examining interactive effects of diversity practices on women and racialized non-leader and leader turnover. *Academy of Management Journal*, 68(1), 191-220. https://doi.org/10.5465/amj.2020.1838

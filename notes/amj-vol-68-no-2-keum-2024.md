@@ -3,7 +3,7 @@ id: amj-vol-68-no-2-keum-2024
 title: "The Psychological Design of Firm Boundaries: Preempting Escalating Commitment through Buy vs. Make"
 authors:
   - "Keum, D. D."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0730"
 volume: 68
@@ -71,4 +71,4 @@ The study does not claim causal inference and cannot rule out unobserved product
 Future work should employ field and laboratory experiments to manipulate psychological attachment directly and to observe underlying psychological constructs that archival data only proxy. Researchers should examine how managers' own characteristics (regulatory focus, risk preference, overconfidence) interact with cognitive biases to shape buy vs. make choices, and extend the framework to other biases (envy, home bias, homophily, 1/N allocation) and to hybrid governance forms such as alliances and joint ventures across asset-heavy industries.
 
 **APA 7th Citation**
-Keum, D. D. (2024). The psychological design of firm boundaries: Preempting escalating commitment through buy vs. make. *Academy of Management Journal*, 68(2), 436–463. https://doi.org/10.5465/amj.2022.0730
+Keum, D. D. (2025). The psychological design of firm boundaries: Preempting escalating commitment through buy vs. make. *Academy of Management Journal*, 68(2), 436–463. https://doi.org/10.5465/amj.2022.0730

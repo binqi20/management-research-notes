@@ -7,7 +7,7 @@ authors:
   - "Richards, Harriette"
   - "Nyilasy, Greg"
   - "Tracey, Paul"
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.1258"
 volume: 68
@@ -68,4 +68,4 @@ The study examines only one accelerator in Australia and three focal ventures, s
 Researchers should examine the role of emotions in new venture legitimation outside accelerators—in incubators, science parks, venture capital relationships, and other make-or-break settings—and across diverse ecosystems with different resource endowments. Further work could study more ventures at different stages to uncover additional legitimation pathways and emotional responses, and investigate how the legitimacy of the accelerator itself shapes the legitimacy concerns of participating ventures.
 
 **APA 7th Citation**
-Neuberger, I., Mattioli, F., Richards, H., Nyilasy, G., & Tracey, P. (2024). Intermediated legitimation: How founders build new venture legitimacy among make-or-break audiences. *Academy of Management Journal*, 68(6), 1235-1265. https://doi.org/10.5465/amj.2022.1258
+Neuberger, I., Mattioli, F., Richards, H., Nyilasy, G., & Tracey, P. (2025). Intermediated legitimation: How founders build new venture legitimacy among make-or-break audiences. *Academy of Management Journal*, 68(6), 1235-1265. https://doi.org/10.5465/amj.2022.1258

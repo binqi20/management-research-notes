@@ -10,7 +10,7 @@ repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-05-07"
-version: "0.11.0"
+version: "0.11.1"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,10 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context Claude subagent scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.11.0
-  (2026-05-07) contains 175 curated notes: 77 from the Network for Business
+  a published rubric) gates every note into the library. Version 0.11.1
+  (2026-05-07) contains 175 curated notes (a patch release of v0.11.0
+  correcting 48 issue-year discrepancies surfaced by a CrossRef
+  cross-check; see release notes for details): 77 from the Network for Business
   Sustainability (NBS) February 2026 monthly digest (62 in v0.2.0 plus 15
   previously-missing papers recovered in v0.3.0) and a 98-note Academy of
   Management Journal pilot across vol. 67 no. 3, vol. 67 no. 4, vol. 67

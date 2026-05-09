@@ -5,7 +5,7 @@ authors:
   - "DesJardine, Mark R."
   - "Li, Boshuo"
   - "Shi, Wei"
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0421"
 volume: 68
@@ -95,4 +95,4 @@ The empirical strategy does not lag explanatory variables (because investor infl
 Scholars should explore information-based competition along three dimensions: the actor engaging in it (institutional vs. individual investors, formal officeholders inside intermediaries), the type of intermediary (social media platforms like X, online review aggregators like Yelp), and the tie through which influence is exerted (ownership, formal position, advertising). Future work could disentangle whether common-owner influence operates through investor-initiated intervention or executive-initiated pacification, examine information-based competition in non-rating contexts, and probe how multiple competing information sources interact in shaping firm reputations and competitive dynamics.
 
 **APA 7th Citation**
-DesJardine, M. R., Li, B., & Shi, W. (2024). Information-based competition: The case of rival owners in rating agencies. *Academy of Management Journal*, 68(1), 221-256. https://doi.org/10.5465/amj.2022.0421
+DesJardine, M. R., Li, B., & Shi, W. (2025). Information-based competition: The case of rival owners in rating agencies. *Academy of Management Journal*, 68(1), 221-256. https://doi.org/10.5465/amj.2022.0421

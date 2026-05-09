@@ -6,7 +6,7 @@ authors:
   - "Lok, J."
   - "Jarzabkowski, P."
   - "Wenzel, M."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2021.1389"
 volume: 68
@@ -95,4 +95,4 @@ The study relies primarily on video data, which cannot capture all dimensions of
 Future work should systematically explore the longitudinal effects of atmospheric dynamics on individuals and groups, including whether and how atmospheres become characteristic of a group over time and shift with the nature of issues a team encounters. Phenomenological-ethnographic methods that incorporate the researcher's own bodily experience could complement video-based approaches. Promising avenues include the relationship between atmosphere and authority (whether some actors disproportionately "set the tone" through affective tonality), and deeper exploration of how the normative and teleoaffective dimensions of practice worlds — beyond materiality — shape atmospheric dynamics.
 
 **APA 7th Citation**
-Knight, E., Lok, J., Jarzabkowski, P., & Wenzel, M. (2024). Sensing the room: The role of atmosphere in collective sensemaking. *Academy of Management Journal*, 68(2), 326-356. https://doi.org/10.5465/amj.2021.1389
+Knight, E., Lok, J., Jarzabkowski, P., & Wenzel, M. (2025). Sensing the room: The role of atmosphere in collective sensemaking. *Academy of Management Journal*, 68(2), 326-356. https://doi.org/10.5465/amj.2021.1389

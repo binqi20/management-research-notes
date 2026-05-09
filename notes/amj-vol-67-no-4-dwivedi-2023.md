@@ -4,7 +4,7 @@ title: "Tick Off the Gender Diversity Box: Examining the Cross-Level Effects of 
 authors:
   - "Dwivedi, P."
   - "Paolella, L."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2021.0506"
 volume: 67
@@ -73,4 +73,4 @@ The data are survey-based archival data, which precludes definitive causal claim
 Future work should use experimental or quasi-experimental designs (e.g., leveraging European Commission Directive 2022 board quotas) to identify causal effects, examine industries with more balanced gender composition, investigate alternative mitigating conditions involving male allyship and client engagement, and extend the framework to other forms of inequality (racial, LGBTQ+) and other outcomes (pay disparity, turnover).
 
 **APA 7th Citation**
-Dwivedi, P., & Paolella, L. (2023). Tick off the gender diversity box: Examining the cross-level effects of women’s representation in senior management. *Academy of Management Journal*, 67(4), 991-1023. https://doi.org/10.5465/amj.2021.0506
+Dwivedi, P., & Paolella, L. (2024). Tick off the gender diversity box: Examining the cross-level effects of women’s representation in senior management. *Academy of Management Journal*, 67(4), 991-1023. https://doi.org/10.5465/amj.2021.0506

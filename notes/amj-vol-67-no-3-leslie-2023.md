@@ -6,7 +6,7 @@ authors:
   - "Flynn, E."
   - "Foster-Gimbel, O. A."
   - "Manchester, C. F."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2021.1402"
 volume: 67
@@ -74,4 +74,4 @@ Findings may not generalize to all samples or settings; the studies relied large
 Future work should investigate boundary conditions such as whether the relative effectiveness of contingent versus value rhetoric varies by diversity-initiative maturity (new vs. established), the specific rationale invoked (business case, moral case), and additional rhetoric types (e.g., colorblind, challenge-only). Researchers should also examine whether integrating diversity's challenges into related constructs—diversity climates, pro-diversity beliefs, and multicultural ideologies—similarly amplifies their effects on diversity outcomes.
 
 **APA 7th Citation**
-Leslie, L. M., Flynn, E., Foster-Gimbel, O. A., & Manchester, C. F. (2023). Happy talk: Is common diversity rhetoric effective diversity rhetoric? *Academy of Management Journal*, 67(3), 595-624. https://doi.org/10.5465/amj.2021.1402
+Leslie, L. M., Flynn, E., Foster-Gimbel, O. A., & Manchester, C. F. (2024). Happy talk: Is common diversity rhetoric effective diversity rhetoric? *Academy of Management Journal*, 67(3), 595-624. https://doi.org/10.5465/amj.2021.1402

@@ -5,7 +5,7 @@ authors:
   - "Ehidiamen, A."
   - "Cheetham, F."
   - "Nikitas, A."
-year: 2025
+year: 2026
 journal: "Journal of Consumer Marketing"
 doi: "https://doi.org/10.1108/JCM-01-2025-7571"
 volume: null
@@ -76,4 +76,4 @@ The sample is skewed toward younger consumers because of online recruitment and 
 Further studies should explicitly explore older consumers' attitudes toward informal sharing practices. Future research could expand the inquiry to other sectors and contrasting cultural contexts to offer a more comprehensive understanding of sharing practices across societies. Quantitative methodologies could also be adopted to test relationships between cultural sharing values and consumer motivations for engaging in ride sharing.
 
 **APA 7th Citation**
-Ehidiamen, A., Cheetham, F., & Nikitas, A. (2025). A cultural perspective on informal ride sharing. *Journal of Consumer Marketing*. https://doi.org/10.1108/JCM-01-2025-7571
+Ehidiamen, A., Cheetham, F., & Nikitas, A. (2026). A cultural perspective on informal ride sharing. *Journal of Consumer Marketing*. https://doi.org/10.1108/JCM-01-2025-7571

@@ -5,7 +5,7 @@ authors:
   - "Jiang, Winnie Y."
   - "Zhao-Ding, Amy"
   - "Qi, Shelly"
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.1104"
 volume: 68
@@ -99,4 +99,4 @@ The study cannot speak to whether or how compatible or synergistic inter-identit
 Researchers should track inter-identity relationships over longer periods to assess the stability of compatible and synergistic ties and the factors that destabilize them. They should also investigate how individuals overcome internal obstacles arising from personal (rather than social or relational) identities, and what explains varied entrepreneurial outcomes for socially disadvantaged individuals in cultural contexts where entrepreneurship is not aspirational or status-conferring.
 
 **APA 7th Citation**
-Jiang, W. Y., Zhao-Ding, A., & Qi, S. (2024). Breaking free or locking in: How socially disadvantaged individuals achieve or reject an aspired identity in an entrepreneurial context. *Academy of Management Journal*, 68(1), 162-190. https://doi.org/10.5465/amj.2022.1104
+Jiang, W. Y., Zhao-Ding, A., & Qi, S. (2025). Breaking free or locking in: How socially disadvantaged individuals achieve or reject an aspired identity in an entrepreneurial context. *Academy of Management Journal*, 68(1), 162-190. https://doi.org/10.5465/amj.2022.1104

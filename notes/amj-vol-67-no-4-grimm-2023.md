@@ -4,7 +4,7 @@ title: "Collaborating on the Edge of Failure: Frame Alignment across Multiple In
 authors:
   - "Grimm, J."
   - "Reinecke, J."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2021.0466"
 volume: 67
@@ -74,4 +74,4 @@ The authors could not directly observe Steering Committee meetings due to confid
 Future work should apply close-up observational methods or conversation analysis to capture additional cross-arena framing dynamics. Researchers could extend the model to a third negotiation table inside participants' home organizations, examining how CSR managers function as internal activists who "sell" frames to colleagues. Comparative studies of MSPs with and without government sponsorship and of varying degrees of representative authorization and accountability could illuminate how external context shapes framing strategies. Further work could probe the emotional and identity challenges faced by individuals navigating between arenas and how representatives cope with frame shifts at a personal level while remaining "true" to their constituents.
 
 **APA 7th Citation**
-Grimm, J., & Reinecke, J. (2023). Collaborating on the edge of failure: Frame alignment across multiple interaction arenas in multi-stakeholder partnerships. *Academy of Management Journal*, 67(4), 956-990. https://doi.org/10.5465/amj.2021.0466
+Grimm, J., & Reinecke, J. (2024). Collaborating on the edge of failure: Frame alignment across multiple interaction arenas in multi-stakeholder partnerships. *Academy of Management Journal*, 67(4), 956-990. https://doi.org/10.5465/amj.2021.0466

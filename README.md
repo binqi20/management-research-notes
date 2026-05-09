@@ -158,18 +158,21 @@ The full library has been swept three times across releases:
   165 / 165 PASS, 0 UNSUPPORTED, 0 CONTRADICTED. Nine new notes
   added from AMJ vol. 67 no. 4 (Bliese editorial + 8 substantive
   papers). 1 PARTIAL.
-- **v0.11.0 sweep (2026-05-07, full 175 notes):**
-  **175 / 175 PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** Ten new notes
-  added from AMJ vol. 67 no. 3 (Ravasi editorial + 9 substantive
-  papers). Only 1 PARTIAL across 60 audits (Bednar 2023
-  practical_implication — "HR practitioners" framing is mild
-  extrapolation). Half the batch triggered the sandwich (Barnes,
-  Bednar, Compagni, Sabanci, Sonenshein); all resolved
-  all-SUPPORTED. **Three consecutive batches at ≤1 PARTIAL** —
-  strong evidence the v0.8.x sandwich + theoretical-perspectives
-  expansion have tightened audit calibration globally. Across ten
-  release cycles the library has produced zero CONTRADICTED
-  verdicts.
+- **v0.11.0 sweep (2026-05-07, 175 notes):**
+  175 / 175 PASS, 0 UNSUPPORTED, 0 CONTRADICTED. Ten new notes
+  added from AMJ vol. 67 no. 3. Three-batch ≤1-PARTIAL streak.
+- **v0.11.1 patch (2026-05-07, 175 notes):**
+  Bibliographic-integrity correction. A user-flagged check against
+  Google Scholar surfaced that the Bednar 2024 note (and many
+  others) were citing the *online-first* publication year rather
+  than the *issue year* per APA 7. Built `tools/verify_years.py`
+  to cross-check every DOI against CrossRef's `published-print`
+  field. Found **48 papers (27% of library)** carrying the
+  online-first year. All 48 corrected: manifest rows, frontmatter
+  `year:` fields, and APA citations updated to the issue year.
+  175/175 now align with CrossRef. The audit prose fields are
+  unchanged (year doesn't affect any audited content claim), so
+  no re-audit was needed.
 
 Run the audit on a single note with:
 
@@ -339,7 +342,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.11.0},
+  version      = {0.11.1},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

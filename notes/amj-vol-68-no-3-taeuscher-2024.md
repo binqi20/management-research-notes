@@ -4,7 +4,7 @@ title: "It Is Not the Whole Story: Toward a Broader Understanding of Entrepreneu
 authors:
   - "Taeuscher, Karl"
   - "Lounsbury, Michael D."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0581"
 volume: 68
@@ -72,4 +72,4 @@ The authors only have access to ventures' narratives at one point in time, preve
 Future research could track narrative changes longitudinally as ventures accumulate patents, contextualize arguments to audience-specific differentiation by analyzing private documents like pitch decks, and explore how other quality-signaling resources (e.g., strategic alliances, founder experience) influence narrative distinctiveness. Microlevel process studies could also illuminate the cognitive and motivational processes underlying entrepreneurs' storytelling and symbolic differentiation efforts.
 
 **APA 7th Citation**
-Taeuscher, K., & Lounsbury, M. D. (2024). It is not the whole story: Toward a broader understanding of entrepreneurial ventures’ symbolic differentiation. *Academy of Management Journal*, 68(3), 648–668. https://doi.org/10.5465/amj.2023.0581
+Taeuscher, K., & Lounsbury, M. D. (2025). It is not the whole story: Toward a broader understanding of entrepreneurial ventures’ symbolic differentiation. *Academy of Management Journal*, 68(3), 648–668. https://doi.org/10.5465/amj.2023.0581

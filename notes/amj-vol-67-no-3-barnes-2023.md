@@ -5,7 +5,7 @@ authors:
   - "Barnes, Liza Y."
   - "Lacerenza, Christina N."
   - "Volpone, Sabrina D."
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2021.1390"
 volume: 67
@@ -93,4 +93,4 @@ The sampling strategy — asking COSs to introduce their leaders — likely bias
 Future work should examine right-hand partners outside the corporate COS context — including government, military, athletic teams, the arts, ghost writers, and graduate-student–advisor dyads — to test boundary conditions of the heedful challenging process. Additional research could investigate whether having a right-hand partner steers leaders away from unethical behavior, improves operational and firm performance, and reshapes the leader's identity, as well as how demographic homophily (especially gender, given the predominance of women in COS roles versus men in executive roles) shapes right-hand partner emergence. Longitudinal designs could trace how long individuals remain right-hand partners and what propels transitions out of the role, and could probe whether some right-hand partners pursue their own power agendas inauthentically.
 
 **APA 7th Citation**
-Barnes, L. Y., Lacerenza, C. N., & Volpone, S. D. (2023). Becoming a right-hand partner: How lower-power employees heedfully challenge organizational leaders. *Academy of Management Journal*, 67(3), 704-736. https://doi.org/10.5465/amj.2021.1390
+Barnes, L. Y., Lacerenza, C. N., & Volpone, S. D. (2024). Becoming a right-hand partner: How lower-power employees heedfully challenge organizational leaders. *Academy of Management Journal*, 67(3), 704-736. https://doi.org/10.5465/amj.2021.1390

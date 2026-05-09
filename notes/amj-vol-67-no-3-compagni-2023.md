@@ -5,7 +5,7 @@ authors:
   - "Compagni, Amelia"
   - "Cappellaro, Giulia"
   - "Nigam, Amit"
-year: 2023
+year: 2024
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.0697"
 volume: 67
@@ -75,4 +75,4 @@ The setting is highly professionalized — Italian academic-medicine physicians 
 Future work could systematically explore professionals' role in producing responses to societal challenges and the conditions under which knowledge disruptions of unmitigable uncertainty are central features of those challenges. Comparative research in less professionalized occupations (e.g., animal-shelter workers, journalists) and in occupational groups for whom collegial and humanistic work is closer to baseline (e.g., nurses, social workers, teachers) could illuminate how epistemic emotions interact with or are displaced by other emotions such as compassion and empathy. Longitudinal studies should examine whether consolidated service-oriented practices persist over time and whether moving away from a knowledge-focused professionalism erodes or reshapes professional status vis-a-vis other groups.
 
 **APA 7th Citation**
-Compagni, A., Cappellaro, G., & Nigam, A. (2023). Responding to professional knowledge disruptions of unmitigable uncertainty: The role of emotions, practices, and moral duty among COVID-19 physicians. *Academy of Management Journal*, 67(3), 829-861. https://doi.org/10.5465/amj.2022.0697
+Compagni, A., Cappellaro, G., & Nigam, A. (2024). Responding to professional knowledge disruptions of unmitigable uncertainty: The role of emotions, practices, and moral duty among COVID-19 physicians. *Academy of Management Journal*, 67(3), 829-861. https://doi.org/10.5465/amj.2022.0697

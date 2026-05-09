@@ -5,7 +5,7 @@ authors:
   - "Goodwin, R. D."
   - "Garrett, L. E."
   - "Block, A. P."
-year: 2025
+year: 2026
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0187"
 volume: 69
@@ -80,4 +80,4 @@ The study may not be readily transferable to all competitive organizational sett
 Future deductive and experimental studies should test the moderating effects of dehumanization and rehumanization on perfectionism while controlling for trait perfectionism, conscientiousness, and gender, and should explore gendered dynamics in how dehumanization and perfectionism co-develop. Scholars should extend the model to less physically demanding work, investigate other maladaptive responses (e.g., unethical behavior) triggered by internalized dehumanization, and examine self-compassion as an environmentally induced response rather than a purely individual trait. Additional work is encouraged on organizational-level outcomes such as retention and performance tied to adaptive vs. maladaptive perfectionism, and on the nature of performance pressure (including time-vs-precision tensions) across competitive industries.
 
 **APA 7th Citation**
-Goodwin, R. D., Garrett, L. E., & Block, A. P. (2025). Under pressure to be perfect: How dehumanizing and rehumanizing social cues lead to maladaptive and adaptive perfectionism in professional ballet. *Academy of Management Journal*, 69(1), 6-45. https://doi.org/10.5465/amj.2023.0187
+Goodwin, R. D., Garrett, L. E., & Block, A. P. (2026). Under pressure to be perfect: How dehumanizing and rehumanizing social cues lead to maladaptive and adaptive perfectionism in professional ballet. *Academy of Management Journal*, 69(1), 6-45. https://doi.org/10.5465/amj.2023.0187

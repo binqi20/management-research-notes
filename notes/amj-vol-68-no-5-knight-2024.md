@@ -5,7 +5,7 @@ authors:
   - "Knight, E."
   - "Grimes, M. G."
   - "Gehman, J."
-year: 2024
+year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0314"
 volume: 68
@@ -81,4 +81,4 @@ The study is an inductive single-case study of one publicly listed micro-cap med
 Future work should examine how different cultural contexts and alternative narrative devices (e.g., disruptive innovation, evolutionary change, high-impact social mission) shape the effectiveness of pivoting narratives, and test whether the findings generalize to larger organizations and other industries. Researchers should explore the full set of stakeholder orientations (including authority ranking and equality matching), investigate the long-term limits and resilience of scientific revision narratives, and extend the culturally informed runway concept to additional forms of capital (technological, intellectual, social, institutional).
 
 **APA 7th Citation**
-Knight, E., Grimes, M. G., & Gehman, J. (2024). The limits of pivoting: A culturally informed model of resource commitments during repeated organizational transformation. *Academy of Management Journal*, 68(5), 1130-1162. https://doi.org/10.5465/amj.2023.0314
+Knight, E., Grimes, M. G., & Gehman, J. (2025). The limits of pivoting: A culturally informed model of resource commitments during repeated organizational transformation. *Academy of Management Journal*, 68(5), 1130-1162. https://doi.org/10.5465/amj.2023.0314
