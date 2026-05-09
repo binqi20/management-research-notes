@@ -1,5 +1,5 @@
 ---
-description: Ingest a new monthly batch of academic papers into Synapse — runs the full pipeline (pdf_to_text → prepare_paper → parallel extraction → validate_note → build_index → export) on a folder of PDFs, honoring every hard rule in CLAUDE.md.
+description: Ingest a new monthly batch of academic papers into Synapse — runs the full pipeline (pdf_to_text → prepare_paper → parallel extraction → validate_note → audit → build_index → export → verify_years) on a folder of PDFs, honoring every hard rule in CLAUDE.md.
 argument-hint: "<library/SOURCE/YYYY-MM/pdfs>"
 ---
 
@@ -197,6 +197,47 @@ python tools/validate_note.py notes/*.md
 Expected: every existing note in `notes/` passes. If anything in the
 pre-existing corpus suddenly fails, the new batch has touched something it
 shouldn't — stop and investigate before continuing.
+
+## Step 4.5 — Bibliographic-integrity check (mandatory)
+
+Run the CrossRef cross-check on every note's year. This catches the class of
+error that v0.11.1 fixed: extracting the **online-first** year (e.g.,
+"published 2023 online") instead of the **issue year** (e.g., "appears in
+the 2024 vol-67-no-3 print issue"). APA 7 requires the issue year for
+journal article citations.
+
+```bash
+python tools/verify_years.py
+```
+
+Expected: `MATCH: <total>, MISMATCH: 0`. Exit code 0 on success, 1 on any
+mismatch.
+
+**If the script reports MISMATCH:** stop. The new batch's manifest has the
+wrong year for at least one paper. Fix the manifest's `year` column for
+those papers (CrossRef's `published-print` is the authoritative value),
+then re-run extraction for the affected notes (since the year propagates
+into the note frontmatter and APA citation). Do NOT commit until verify_years
+returns clean.
+
+This step is mandatory because:
+
+- The manifest is treated as the trusted source for bibliographic metadata
+  (CLAUDE.md hard rule 1), but the manifest itself is not automatically
+  validated against any external authority. Without this check, a wrong
+  year in the manifest silently propagates through the entire pipeline —
+  exactly the bug v0.11.1 patched after a 27%-of-library systematic error
+  surfaced from a single user check against Google Scholar.
+- The audit layers (Layer 1 anchors, Layer 2 prose) verify content against
+  the source PDF. They do NOT cross-check bibliographic metadata. Year
+  errors are invisible to them.
+- CrossRef is free, fast (cached at `/tmp/crossref_cache/` after first run),
+  and authoritative — it's the canonical DOI registry. There is no good
+  reason to skip the check.
+
+If you have many papers and want to see ONLY mismatches: `verify_years.py
+--quiet`. To get machine-readable TSV for scripting: `--tsv`. To re-check a
+single paper without the cache: `--paper-id <id> --no-cache`.
 
 ## Step 5 — Sanity checks
 

@@ -21,7 +21,13 @@ research. Read this file before doing anything in this folder.
 1. **Never invent bibliographic fields.** Title, authors, year, journal, DOI,
    volume/issue/pages — these come only from `library/.../manifest.tsv` (the trusted
    source) or, if missing there, from CrossRef looked up by DOI. If a field is unknown,
-   write `Not reported in paper`. Never guess.
+   write `Not reported in paper`. Never guess. **After any new ingestion, run
+   `python tools/verify_years.py` to cross-check every note's `year:` against
+   CrossRef's `published-print` field.** APA 7 cites the **issue year**, not the
+   online-first year — manifest errors otherwise propagate silently into note
+   frontmatter and APA citations. v0.11.1 fixed 48 such cases (27% of the library)
+   surfaced by this check. A clean `verify_years` run is a precondition for
+   committing new notes; it is also the last step inside `/synapse-ingest`.
 2. **Verbatim means verbatim.** When the extraction prompt says "extract the abstract
    verbatim," the text in the note must appear as a contiguous substring of the
    extracted PDF text (modulo whitespace). The validator will check this.
