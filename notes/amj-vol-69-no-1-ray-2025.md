@@ -9,9 +9,9 @@ authors:
 year: 2026
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0311"
-volume: null
-issue: null
-pages: null
+volume: 69
+issue: 1
+pages: "76-98"
 
 source: "AMJ/vol-69-no-1"
 pdf_path: "library/AMJ/vol-69-no-1/pdfs/Ray 2025 On the Move The Impact of Internal Mobility and Internal Comobility on Unit- and Organization-Level Outcomes.pdf"

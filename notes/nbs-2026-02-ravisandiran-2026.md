@@ -9,9 +9,9 @@ authors:
 year: 2026
 journal: "Journal of Industrial Ecology"
 doi: "https://doi.org/10.1007/s44498-026-00012-4"
-volume: null
-issue: null
-pages: null
+volume: 30
+issue: 1
+pages: "151-163"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Ravisandiran 2026 Reframing perceptions on the informal and formal waste sectors an analysis of the social and systemic hotspots of the plastic waste management system of Chennai, India.pdf"
@@ -78,4 +78,4 @@ The study is exploratory: chain-referral sampling introduces selection bias, and
 Further research should engage self-organized associations of informal workers to overcome data collection barriers and build more representative pictures of the IWS across Indian cities. Comparative work is needed on participatory, bottom-up integration models (e.g., SWaCH Pune, São Paulo cooperatives) applied to other Indian megacities, and on how transparent reporting and independent worker-satisfaction surveys can be institutionalized within privatized SWM systems. Studies should also explore how monetary incentives can mobilize IWS capacity for collecting non-profitable plastic polymers and reduce environmental leakage.
 
 **APA 7th Citation**
-Ravisandiran, S. M., Navarre, N., Mogollón, J. M., & Cucurachi, S. (2026). Reframing perceptions on the informal and formal waste sectors: An analysis of the social and systemic hotspots of the plastic waste management system of Chennai, India. *Journal of Industrial Ecology*. https://doi.org/10.1007/s44498-026-00012-4
+Ravisandiran, S. M., Navarre, N., Mogollón, J. M., & Cucurachi, S. (2026). Reframing perceptions on the informal and formal waste sectors: An analysis of the social and systemic hotspots of the plastic waste management system of Chennai, India. *Journal of Industrial Ecology*, 30(1), 151-163. https://doi.org/10.1007/s44498-026-00012-4

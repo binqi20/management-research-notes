@@ -9,7 +9,7 @@ year: 2026
 journal: "Journal of Business Venturing"
 doi: "https://doi.org/10.1016/j.jbusvent.2026.106586"
 volume: 41
-issue: null
+issue: 3
 pages: "106586"
 
 source: "NBS/2026-02"
@@ -77,4 +77,4 @@ The authors do not directly observe individual-level motivations of backers, so 
 Future research should directly test the underlying community-logic mechanism using surveys, experiments, or qualitative analyses of backer motivations and project communications, and should examine backer heterogeneity and specific environmental policy dimensions rather than composite indices. Longitudinal studies are needed to document how crowdfunding platforms' role as cross-border institutional carriers evolves with technological, political, and social change, and to identify project- and country-level factors (including culture and language) that amplify or dampen this carrier role. Researchers should also investigate reverse flows — how innovations from weak-institution contexts diffuse to developed settings — and test whether the institutional-logic framework extends to funding of other social grand challenges beyond environmental issues.
 
 **APA 7th Citation**
-Sewaid, A., Vanacker, T., & Zahra, S. A. (2026). Rewards-based crowdfunding as an institutional carrier: The cross-border backing of environmental projects. *Journal of Business Venturing*, 41, 106586. https://doi.org/10.1016/j.jbusvent.2026.106586
+Sewaid, A., Vanacker, T., & Zahra, S. A. (2026). Rewards-based crowdfunding as an institutional carrier: The cross-border backing of environmental projects. *Journal of Business Venturing*, 41(3), 106586. https://doi.org/10.1016/j.jbusvent.2026.106586

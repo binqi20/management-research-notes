@@ -9,7 +9,7 @@ year: 2026
 journal: "Journal of Business Venturing"
 doi: "https://doi.org/10.1016/j.jbusvent.2026.106579"
 volume: 41
-issue: null
+issue: 3
 pages: "106579"
 
 source: "NBS/2026-02"
@@ -64,4 +64,4 @@ The findings rest on a single exemplary case (CQLP) in France, so the distribute
 More work is needed on cognitive and emotional dynamics around social and environmental problems, including conditions under which emotional energy dissipates rather than accumulates. Comparative and cross-national studies could examine how energized framing interacts with deep versus up scaling, whether it transfers across product categories, and how authenticity is preserved when powerful actors co-opt the frame. Future research could also build on identity-based typologies to ask which social entrepreneurs are most likely to pursue distributed scaling processes.
 
 **APA 7th Citation**
-Snihur, Y., Bluntz, C., & Bocken, N. (2026). The power of consumer solidarity framing in scaling up social impact. *Journal of Business Venturing*, *41*, 106579. https://doi.org/10.1016/j.jbusvent.2026.106579
+Snihur, Y., Bluntz, C., & Bocken, N. (2026). The power of consumer solidarity framing in scaling up social impact. *Journal of Business Venturing*, *41*(3), 106579. https://doi.org/10.1016/j.jbusvent.2026.106579

@@ -9,7 +9,7 @@ journal: "Business Ethics Quarterly"
 doi: "https://doi.org/10.1017/beq.2025.10103"
 volume: null
 issue: null
-pages: null
+pages: "1-28"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Kingston 2026 Social Upgrading in Global Supply Chains Reframing Corporate Responsibilities.pdf"
@@ -76,4 +76,4 @@ The article focuses exclusively on the duties of big buyers and brackets the res
 Future work should examine the responsibilities of sovereign governments and other actors (consumers, trade policy-makers, domestic regulators) alongside those of big buyers, and assess how state regulation can best interact with federated buyer commitments. Further scholarship is needed on the design and effectiveness of transnational industrial agreements beyond the International Accord and on how collective wage-setting initiatives such as ACT can navigate trade-offs between efficiency and living-wage goals. The authors also invite deeper exploration of how structural theorists' accounts of responsibility can be operationalized across different consumer-goods sectors.
 
 **APA 7th Citation**
-Kingston, E., & Carnovale, M. (2026). Social upgrading in global supply chains: Reframing corporate responsibilities. *Business Ethics Quarterly*. https://doi.org/10.1017/beq.2025.10103
+Kingston, E., & Carnovale, M. (2026). Social upgrading in global supply chains: Reframing corporate responsibilities. *Business Ethics Quarterly*, 1-28. https://doi.org/10.1017/beq.2025.10103

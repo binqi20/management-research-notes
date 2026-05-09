@@ -6,9 +6,9 @@ authors:
 year: 2026
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2026.4001"
-volume: null
-issue: null
-pages: null
+volume: 69
+issue: 1
+pages: "1-5"
 
 source: "AMJ/vol-69-no-1"
 pdf_path: "library/AMJ/vol-69-no-1/pdfs/Roberson 2026 Stewardship at Scale A New Editorial Term at AMJ.pdf"

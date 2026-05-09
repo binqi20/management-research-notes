@@ -9,7 +9,7 @@ year: 2026
 journal: "Journal of Operations Management"
 doi: "https://doi.org/10.1002/joom.70035"
 volume: 72
-issue: null
+issue: 3
 pages: "439-461"
 
 source: "NBS/2026-02"
@@ -88,4 +88,4 @@ The two supply chain guardianship measures (corrective actions and information s
 Future work should use primary field data (firms in fraud, guardians, compliance teams, lawyers, victims) to assess real-world guardianship effectiveness, and investigate additional meso/macro factors such as organizational culture, power, trust, and industry pressures. Researchers should examine decision-making under uncertainty before fraud is confirmed, study temporal dynamics, and explore configurational combinations of causal factors. The guardianship concept could also be extended to monitoring technologies, wildlife trafficking, and preventive (rather than reactive) interventions.
 
 **APA 7th Citation**
-DuHadway, S., Carnovale, S., & Kaufmann, L. (2026). Supply chain guardianship: Why some firms intervene when other firms commit fraud. *Journal of Operations Management*, 72, 439-461. https://doi.org/10.1002/joom.70035
+DuHadway, S., Carnovale, S., & Kaufmann, L. (2026). Supply chain guardianship: Why some firms intervene when other firms commit fraud. *Journal of Operations Management*, 72(3), 439-461. https://doi.org/10.1002/joom.70035

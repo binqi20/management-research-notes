@@ -194,48 +194,30 @@ def _norm_family_name(s: str) -> str:
 def parse_note_frontmatter(note_path: Path) -> dict:
     """Pull the bibliographic fields we need from a note's YAML frontmatter.
 
-    We don't import a full YAML parser to keep this script self-contained
-    and fast. The frontmatter format is well-controlled so a simple regex
-    pass is reliable.
+    Uses PyYAML so that escape sequences like `\\u201C` (smart quote)
+    resolve to their actual Unicode character. A naive regex parser
+    would capture the literal 6 characters and falsely flag titles
+    that are perfectly valid YAML — discovered the hard way during
+    the v0.11.2 cleanup pass on Lazar 2025.
     """
+    import yaml
+
     text = note_path.read_text()
     parts = text.split("---", 2)
     if len(parts) < 3:
         raise ValueError(f"{note_path.name}: no YAML frontmatter found")
-    fm = parts[1]
+    fm_dict = yaml.safe_load(parts[1]) or {}
 
     out = {"path": note_path, "paper_id": note_path.stem}
-
-    # Scalar fields
-    for field in ("doi", "year", "title", "journal", "volume", "issue", "pages"):
-        m = re.search(rf'^{field}:\s*"?([^"\n]+)"?\s*$', fm, re.MULTILINE)
-        if m:
-            value = m.group(1).strip().strip('"').rstrip("/")
-            if field == "year":
-                try:
-                    value = int(value)
-                except ValueError:
-                    pass
-            elif field == "doi":
-                value = re.sub(r"^https?://(dx\.)?doi\.org/", "", value)
-            out[field] = value
-
-    # Authors: list under `authors:` block
-    authors = []
-    in_authors = False
-    for line in fm.splitlines():
-        if re.match(r"^authors:\s*$", line):
-            in_authors = True
-            continue
-        if in_authors:
-            m = re.match(r'^\s*-\s*"?([^"\n]+)"?\s*$', line)
-            if m:
-                authors.append(m.group(1).strip().strip('"'))
-            elif line.strip() and not line.startswith(" "):
-                # next top-level key, stop
-                in_authors = False
-    out["authors"] = authors
-
+    for field in ("title", "journal", "volume", "issue", "pages", "year"):
+        if field in fm_dict:
+            out[field] = fm_dict[field]
+    if "doi" in fm_dict:
+        out["doi"] = re.sub(r"^https?://(dx\.)?doi\.org/", "", str(fm_dict["doi"]).rstrip("/"))
+    if "authors" in fm_dict and isinstance(fm_dict["authors"], list):
+        out["authors"] = [str(a) for a in fm_dict["authors"]]
+    else:
+        out["authors"] = []
     return out
 
 

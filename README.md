@@ -173,6 +173,21 @@ The full library has been swept three times across releases:
   175/175 now align with CrossRef. The audit prose fields are
   unchanged (year doesn't affect any audited content claim), so
   no re-audit was needed.
+- **v0.11.2 patch (2026-05-09, 175 notes):**
+  Bibliographic cross-check extended to all seven CrossRef fields
+  (year, title, journal, volume, issue, pages, authors) via the
+  new `tools/verify_metadata.py`. The first full sweep on the
+  v0.11.1 library surfaced 21 papers needing manifest backfills
+  (mostly online-first papers in the NBS digest and AMJ vol-69-1
+  whose issues had since published) plus one wrong-page error
+  (Bamberger's *AMR* address) and one missing-Oxford-comma title
+  typo in the same paper. After fixes: **175/175 MATCH for year,
+  journal, and authors**, and **0 MISMATCH** across volume / issue
+  / pages on every paper where CrossRef carries those fields. One
+  remaining flag (Reinecke book review) is documented as a
+  CrossRef-side data corruption, not a note error. Like v0.11.1,
+  no re-audit needed — the audit prose fields are independent of
+  bibliographic metadata.
 
 Run the audit on a single note with:
 
@@ -342,7 +357,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.11.1},
+  version      = {0.11.2},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

@@ -9,7 +9,7 @@ year: 2026
 journal: "Journal of Business Venturing"
 doi: "https://doi.org/10.1016/j.jbusvent.2026.106580"
 volume: 41
-issue: null
+issue: 3
 pages: "106580"
 
 source: "NBS/2026-02"
@@ -75,4 +75,4 @@ Not reported in paper
 Future scholarship can examine the value and trade-offs of simultaneously mobilizing local embeddedness for customization while leveraging non-local pipelines for scale, including coordination costs, legitimacy or authenticity threats, and mission drift, and explore the feasibility of achieving scalable customization of responses. Researchers could also integrate the framework with humanitarian logistics and supply-chain management to study how complementary rather than duplicative efforts can be encouraged, and extend it to explore the dark side of compassion venturing (e.g., virtue washing and exploitation of brokering positions). Further work could examine how path dependence in early resourcing choices shapes ventures' longer-term viability and their role in system-level recovery.
 
 **APA 7th Citation**
-Seyb, S., Williams, T. A., & Shepherd, D. A. (2026). Scale, scope, speed, and customization (pick two): Resourcing drives trade-offs in local compassion venturing effectiveness. *Journal of Business Venturing*, 41, 106580. https://doi.org/10.1016/j.jbusvent.2026.106580
+Seyb, S., Williams, T. A., & Shepherd, D. A. (2026). Scale, scope, speed, and customization (pick two): Resourcing drives trade-offs in local compassion venturing effectiveness. *Journal of Business Venturing*, 41(3), 106580. https://doi.org/10.1016/j.jbusvent.2026.106580

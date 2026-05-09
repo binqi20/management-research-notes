@@ -10,9 +10,9 @@ authors:
 year: 2026
 journal: "Journal of Industrial Ecology"
 doi: "https://doi.org/10.1007/s44498-026-00018-y"
-volume: null
-issue: null
-pages: null
+volume: 30
+issue: 1
+pages: "249-267"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Schuppler 2026 What do circular cities do Insights from 26 case studies.pdf"
@@ -79,4 +79,4 @@ The analysis predominantly covers European and North American cities, limiting g
 Future research should use the four archetypes as a starting point to investigate archetype-specific barriers, opportunities, and development trajectories, ultimately testing whether these strategic classifications translate into tangible resource and emission reductions. Additional work is needed to extend the typology beyond European and North American contexts and to examine transitions between archetypes over time as cities' conditions, priorities, and capacities evolve.
 
 **APA 7th Citation**
-Schuppler, M., Bidmon, C., Roelfsema, M., van Vuuren, D., & Kirchherr, J. (2026). What do circular cities do? Insights from 26 case studies. *Journal of Industrial Ecology*. https://doi.org/10.1007/s44498-026-00018-y
+Schuppler, M., Bidmon, C., Roelfsema, M., van Vuuren, D., & Kirchherr, J. (2026). What do circular cities do? Insights from 26 case studies. *Journal of Industrial Ecology*, 30(1), 249-267. https://doi.org/10.1007/s44498-026-00018-y
