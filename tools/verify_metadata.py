@@ -100,6 +100,27 @@ RATE_LIMIT_SLEEP_SECONDS = 0.025  # 40 req/sec — well under CrossRef's 50/sec 
 # Fields we know how to compare. Order is the report order.
 ALL_FIELDS = ("year", "title", "journal", "volume", "issue", "pages", "authors")
 
+# Known CrossRef-side data errors. Mismatches matching (paper_id, field)
+# entries here are reported as KNOWN_FP rather than MISMATCH, so the gate
+# stays clean. Add entries here only after manually confirming that the
+# CrossRef record itself is wrong (not the note). Each entry must include
+# a dated rationale so future maintainers can re-verify whether the
+# upstream record has since been fixed.
+#
+# TODO: migrate to a JSON file (e.g. tools/known_crossref_issues.json)
+# if this list grows past ~5 entries — at that point the source-code
+# edits feel more like data updates than code changes.
+KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
+    "nbs-2026-02-reinecke-2026": {
+        "title": (
+            "CrossRef record duplicates the title and embeds the author "
+            "name mid-string ('...PaulKalpita Bhar. Ecophenomenology and "
+            "the Environmental Crisis in the Sundarbans...'). The note's "
+            "title matches the PDF correctly. Suppressed 2026-05-09."
+        ),
+    },
+}
+
 
 # ---------------------------------------------------------------------------
 # Normalization helpers
@@ -393,7 +414,10 @@ def main():
     else:
         notes = sorted(NOTES_DIR.glob("*.md"))
 
-    rows = []  # (paper_id, doi, field, status, note_val, cr_val)
+    # Each row is a 7-tuple: (paper_id, doi, field, status, note_val,
+    # cr_val, rationale). `rationale` is empty for normal rows; populated
+    # for KNOWN_FP rows with the dated explanation from the registry.
+    rows = []
     parse_errors = 0
     no_doi = 0
     lookup_errors = 0
@@ -401,57 +425,84 @@ def main():
         try:
             fm = parse_note_frontmatter(note_path)
         except Exception as e:
-            rows.append((note_path.stem, "", "frontmatter", "ERROR", "", str(e)[:80]))
+            rows.append((note_path.stem, "", "frontmatter", "ERROR", "", str(e)[:80], ""))
             parse_errors += 1
             continue
 
         doi = fm.get("doi")
         if not doi:
-            rows.append((fm["paper_id"], "", "doi", "SKIP", "", "no DOI in frontmatter"))
+            rows.append((fm["paper_id"], "", "doi", "SKIP", "", "no DOI in frontmatter", ""))
             no_doi += 1
             continue
 
         msg = fetch_crossref(doi)
         if msg is None:
-            rows.append((fm["paper_id"], doi, "crossref", "ERROR", "", "CrossRef fetch failed"))
+            rows.append((fm["paper_id"], doi, "crossref", "ERROR", "", "CrossRef fetch failed", ""))
             lookup_errors += 1
             continue
 
         for field in fields:
             note_val = fm.get(field)
             status, n_repr, c_repr = compare_field(field, note_val, msg)
-            rows.append((fm["paper_id"], doi, field, status, n_repr, c_repr))
+            rationale = ""
+            # Suppress known CrossRef-side data errors: re-classify
+            # MISMATCH as KNOWN_FP if the (paper_id, field) is in the
+            # registry. This keeps the gate clean while leaving an
+            # audit trail in the report (and the TSV's rationale column).
+            if status == "MISMATCH":
+                rationale = KNOWN_CROSSREF_DATA_ERRORS.get(
+                    fm["paper_id"], {}
+                ).get(field, "")
+                if rationale:
+                    status = "KNOWN_FP"
+            rows.append((fm["paper_id"], doi, field, status, n_repr, c_repr, rationale))
 
     # ---------- TSV output ----------
     if args.tsv:
-        print("paper_id\tdoi\tfield\tstatus\tnote\tcrossref")
+        # 7th column "rationale" is new in v0.11.3+. Empty for normal
+        # rows, populated for KNOWN_FP rows with the dated explanation.
+        # Existing scripts that consume the first 6 columns still work.
+        print("paper_id\tdoi\tfield\tstatus\tnote\tcrossref\trationale")
         for r in rows:
-            paper_id, doi, field, status, n_repr, c_repr = r
+            paper_id, doi, field, status, n_repr, c_repr, rationale = r
             # tab-safe
             n_repr = (n_repr or "").replace("\t", " ")
             c_repr = (c_repr or "").replace("\t", " ")
-            print(f"{paper_id}\t{doi}\t{field}\t{status}\t{n_repr}\t{c_repr}")
+            rationale = (rationale or "").replace("\t", " ")
+            print(f"{paper_id}\t{doi}\t{field}\t{status}\t{n_repr}\t{c_repr}\t{rationale}")
         any_mismatch = any(r[3] == "MISMATCH" for r in rows)
         return 1 if any_mismatch else 0
 
     # ---------- Human report ----------
-    by_field = {f: {"MATCH": 0, "MISMATCH": 0, "MISSING": 0} for f in fields}
-    mismatches = []  # list of rows with status==MISMATCH
+    by_field = {
+        f: {"MATCH": 0, "MISMATCH": 0, "MISSING": 0, "KNOWN_FP": 0}
+        for f in fields
+    }
+    mismatches = []  # rows with status==MISMATCH (real failures)
+    known_fps = []   # rows with status==KNOWN_FP (suppressed, audit-only)
     for r in rows:
-        paper_id, doi, field, status, n_repr, c_repr = r
+        paper_id, doi, field, status, n_repr, c_repr, rationale = r
         if field in by_field and status in by_field[field]:
             by_field[field][status] += 1
         if status == "MISMATCH":
             mismatches.append(r)
+        elif status == "KNOWN_FP":
+            known_fps.append(r)
 
     notes_checked = len({r[0] for r in rows if r[3] != "ERROR" and r[2] != "doi"})
     print(f"Verified {notes_checked} notes against CrossRef.")
     print(f"  Fields checked: {', '.join(fields)}\n")
-    print(f"  {'Field':<10}  {'MATCH':>6}  {'MISMATCH':>9}  {'MISSING':>8}")
-    print(f"  {'-'*10}  {'-'*6}  {'-'*9}  {'-'*8}")
+    print(
+        f"  {'Field':<10}  {'MATCH':>6}  {'MISMATCH':>9}  "
+        f"{'MISSING':>8}  {'KNOWN_FP':>9}"
+    )
+    print(f"  {'-'*10}  {'-'*6}  {'-'*9}  {'-'*8}  {'-'*9}")
     for f in fields:
         s = by_field[f]
-        print(f"  {f:<10}  {s['MATCH']:>6}  {s['MISMATCH']:>9}  {s['MISSING']:>8}")
+        print(
+            f"  {f:<10}  {s['MATCH']:>6}  {s['MISMATCH']:>9}  "
+            f"{s['MISSING']:>8}  {s['KNOWN_FP']:>9}"
+        )
     print()
     if no_doi:
         print(f"  Skipped:        {no_doi}  (no DOI in frontmatter — typically editorials)")
@@ -474,13 +525,36 @@ def main():
             print(f"\n  {paper_id}")
             print(f"    DOI: {rows_for_paper[0][1]}")
             for r in rows_for_paper:
-                _, _, field, _, n_repr, c_repr = r
+                _, _, field, _, n_repr, c_repr, _ = r
                 # Show titles in full so the diff is visible; truncate
                 # very long fields (rare) at 200 chars.
                 n_show = (n_repr or "")[:200]
                 c_show = (c_repr or "")[:200]
                 print(f"    {field:<10} note: {n_show}")
                 print(f"    {' '*10} cref: {c_show}")
+
+    if known_fps:
+        print()
+        print("=" * 78)
+        print("  KNOWN FALSE POSITIVES — suppressed by registry (audit only)")
+        print("=" * 78)
+        # Group by paper_id for readable output
+        kfp_by_paper: dict[str, list[tuple]] = {}
+        for r in known_fps:
+            kfp_by_paper.setdefault(r[0], []).append(r)
+        for paper_id in sorted(kfp_by_paper):
+            rows_for_paper = kfp_by_paper[paper_id]
+            print(f"\n  {paper_id}")
+            print(f"    DOI: {rows_for_paper[0][1]}")
+            for r in rows_for_paper:
+                _, _, field, _, _, _, rationale = r
+                print(f"    {field:<10} suppressed: {rationale}")
+        print()
+        print(
+            "  These do NOT count as mismatches and do NOT fail the "
+            "pipeline gate.\n  To audit, see KNOWN_CROSSREF_DATA_ERRORS "
+            "in tools/verify_metadata.py."
+        )
 
     return 1 if mismatches else 0
 
