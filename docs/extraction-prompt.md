@@ -203,6 +203,34 @@ and `review`, the four `sample_*` keys may be set to the literal string
    claim is a failure of the second-layer LLM audit, not Layer 1 — so write quotes
    that actually back the claim, not any-old-substring the PDF happens to contain.
 
+**How to choose anchors that survive validation (two-column PDF artifact):**
+
+AMJ and most management journals use **two-column typesetting**. `pdftotext`
+(the extractor used in `tools/pdf_to_text.py`) emits the left and right column
+side-by-side on the same output line. So a sentence that *visually* wraps
+across two PDF lines — say, `...mobility was [line break] inversely related...` —
+appears in the extracted text as `...mobility was [unrelated col-2 text]
+inversely related...` with column-2 fragments spliced between the words you
+remember reading.
+
+This causes a specific class of Layer-1 failure: an anchor that **looks**
+contiguous when you read the PDF but is **not** contiguous in the extracted
+text. The validator's substring check fails it deterministically. Your note
+gets flagged.
+
+**The heuristic that works**: prefer anchors that fit within a **single
+physical line** of the extracted text — abstract sentences (which usually
+render as one column), table cells, table notes, captions, and short phrases
+inside a paragraph. Avoid spans that look like they cross a line break in
+the PDF unless you can verify in the extracted text that the line break has
+no column-2 splice in it.
+
+When in doubt, use `Grep` or `Read` to **search the extracted text file
+itself** (under `library/<source>/<issue>/text/`) for the candidate phrase.
+If you can paste your candidate verbatim into a grep that returns a hit,
+the validator will accept it. If you cannot, pick a shorter intra-line
+phrase.
+
 **What each key anchors:**
 
 - `sample_n` — the sample size you put in `sample.n` (e.g., "Our final sample

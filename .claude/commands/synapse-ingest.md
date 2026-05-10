@@ -189,6 +189,18 @@ Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 >   may not also have failed; report both if so). Quote the validator's
 >   error list verbatim. Do NOT try to "fix" a structural problem by
 >   inventing content — that violates the no-invention rule.
+>   - **Common Layer 1 failure pattern: anchors not contiguous in the
+>     extracted text**, even though they look contiguous in the PDF.
+>     Cause: two-column journal layouts get linearized by `pdftotext` so
+>     a sentence wrapping across the column break has unrelated col-2
+>     text spliced into it. **Fix**: re-dispatch the extraction agent
+>     with the explicit instruction to use the `Grep`/`Read` tools on
+>     the extracted text file (`library/<source>/<issue>/text/...`) to
+>     verify each candidate anchor is actually a substring before writing
+>     it. Prefer anchors that fit within a single physical line — abstract
+>     sentences, table cells, captions, intra-paragraph phrases. The
+>     extraction prompt's "How to choose anchors that survive validation"
+>     section has the full guidance.
 > - **STOP** — you hit a hard-rule trigger: the trusted bib block
 >   contradicts what the PDF text clearly says, the paper isn't scholarly
 >   (dataset, website snapshot, book chapter without a DOI, etc.), or the
