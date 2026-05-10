@@ -21,15 +21,26 @@ research. Read this file before doing anything in this folder.
 1. **Never invent bibliographic fields.** Title, authors, year, journal, DOI,
    volume/issue/pages — these come only from `library/.../manifest.tsv` (the trusted
    source) or, if missing there, from CrossRef looked up by DOI. If a field is unknown,
-   write `Not reported in paper`. Never guess. **After any new ingestion, run
-   `python tools/verify_metadata.py` to cross-check every note's bibliographic
-   fields (year, title, journal, volume, issue, pages, authors) against CrossRef.**
-   The manifest is the trusted source but the manifest itself is hand-entered and
-   error-prone. v0.11.1 fixed 48 issue-year mismatches (27% of the library) where
-   the manifest had silently stored the *online-first* year instead of APA 7's
-   *issue year* — only an external cross-check surfaced this. A clean
-   `verify_metadata` run is a precondition for committing new notes; it is also
-   the last gating step inside `/synapse-ingest`. The legacy `tools/verify_years.py`
+   write `Not reported in paper`. Never guess. The manifest is the trusted source but
+   it is hand-entered and error-prone, so the project uses **two CrossRef-based gates
+   that bookend the pipeline**:
+   - **Before extraction (Tier 3, mandatory):** run
+     `python tools/populate_manifest.py library/<source>/<issue>/manifest.tsv --apply --fix-year`
+     to upgrade the manifest with `volume`, `issue`, `pages` columns from CrossRef
+     and auto-correct any year mismatches against `published-print` (APA 7 issue
+     year). This is Step 0 of `/synapse-ingest` and prevents wrong-year/null-vol
+     errors from ever propagating into note frontmatter.
+   - **After extraction (Tier 2, mandatory):** run `python tools/verify_metadata.py`
+     to cross-check every note's bibliographic fields (year, title, journal,
+     volume, issue, pages, authors) against CrossRef. This is Step 4.5 of
+     `/synapse-ingest`, the last gating step before commit.
+
+   v0.11.1 fixed 48 issue-year mismatches (27% of the library) where the manifest
+   had silently stored the *online-first* year — only an external cross-check
+   surfaced this. v0.11.2 fixed 21 papers' missing volume/issue/pages by
+   backfilling from CrossRef. v0.12.0 introduced Tier 3 (`populate_manifest.py`)
+   so future batches never need this kind of cleanup. A clean `verify_metadata`
+   run is a precondition for committing new notes. The legacy `tools/verify_years.py`
    is preserved as a year-only alias and is equivalent to
    `verify_metadata.py --field year`.
 2. **Verbatim means verbatim.** When the extraction prompt says "extract the abstract

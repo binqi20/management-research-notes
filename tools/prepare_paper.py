@@ -238,6 +238,18 @@ def main() -> int:
     rel_text = text_path.relative_to(SYNAPSE_ROOT)
     today = dt.date.today().isoformat()
 
+    # Optional bibliographic columns populated by tools/populate_manifest.py
+    # (Tier 3, introduced v0.12.0). When present, they're passed to the
+    # extraction agent as TRUSTED values — eliminating the v0.11.2 bug
+    # class where the agent had no manifest source for these fields and
+    # had to either look them up itself or write null. Empty values are
+    # written as `null` so the extraction prompt's existing null-aware
+    # logic at docs/extraction-prompt.md (lines 271-273) handles them.
+    def _opt_field(name: str, label: str | None = None) -> str:
+        label = label or name
+        v = (row.get(name) or "").strip()
+        return f"{label}: {v}" if v else f"{label}: null"
+
     bib_block = "\n".join(
         [
             "TRUSTED BIBLIOGRAPHIC METADATA (use verbatim, do not change):",
@@ -246,6 +258,9 @@ def main() -> int:
             f"first_author_last: {row['first_author_last']}",
             f"year: {row['year']}",
             f"doi: {doi_full}",
+            _opt_field("volume"),
+            _opt_field("issue"),
+            _opt_field("pages"),
             f"source: {source}/{issue}",
             f"pdf_path: {rel_pdf}",
             f"text_path: {rel_text}",

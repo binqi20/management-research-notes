@@ -119,6 +119,15 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "title matches the PDF correctly. Suppressed 2026-05-09."
         ),
     },
+    "amj-vol-67-no-2-liao-2024": {
+        "authors": (
+            "CrossRef stores the last author as family='Man Tang', given='Pok' "
+            "(Cantonese-romanization compound-surname interpretation). The PDF "
+            "byline reads 'POK MAN TANG' and the journal's own running header "
+            "uses 'Tang' as the family name throughout. The note matches the "
+            "PDF + the journal convention. Suppressed 2026-05-10."
+        ),
+    },
 }
 
 

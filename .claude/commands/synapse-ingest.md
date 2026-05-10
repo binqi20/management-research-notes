@@ -1,5 +1,5 @@
 ---
-description: Ingest a new monthly batch of academic papers into Synapse — runs the full pipeline (pdf_to_text → prepare_paper → parallel extraction → validate_note → audit → build_index → export → verify_metadata) on a folder of PDFs, honoring every hard rule in CLAUDE.md.
+description: Ingest a new monthly batch of academic papers into Synapse — runs the full pipeline (populate_manifest → pdf_to_text → prepare_paper → parallel extraction → validate_note → audit → build_index → export → verify_metadata) on a folder of PDFs, honoring every hard rule in CLAUDE.md.
 argument-hint: "<library/SOURCE/YYYY-MM/pdfs>"
 ---
 
@@ -49,6 +49,55 @@ Verify all of these **before** starting extraction. If any fail, stop and report
 4. `index/topics.json` exists (controlled vocabulary — enforces topic tags).
 5. `pdftotext` is on `PATH` (from the poppler package). Run `which pdftotext`
    to confirm; if missing, tell the user to `brew install poppler` and stop.
+
+---
+
+## Step 0 — Populate manifest from CrossRef (Tier 3, mandatory)
+
+Before extraction, **upgrade the manifest with authoritative bibliographic
+metadata from CrossRef**. The manifest's `title`, `first_author_last`, `year`,
+`doi` columns are typically populated by hand (from journal TOCs); the
+`volume`, `issue`, `pages` columns are usually missing entirely until this
+step. Tier 3 fills the gaps and cross-checks existing fields against the
+canonical DOI registry.
+
+```bash
+python tools/populate_manifest.py library/<source>/<year-month>/manifest.tsv --apply --fix-year
+```
+
+This:
+
+1. Queries CrossRef per DOI and **adds `volume`, `issue`, `pages` columns**
+   to the manifest (or upgrades them if already present).
+2. Cross-checks `year` against CrossRef's `published-print` date (APA 7
+   issue year). If `--fix-year` is passed, year mismatches are
+   auto-corrected from CrossRef and a warning is emitted for the audit
+   trail; without `--fix-year`, mismatches only warn.
+3. Cross-checks `title` and `journal`. These are warning-only — title
+   variations between manifest and CrossRef are common (smart-quote
+   normalization, missing Oxford commas) and need human review.
+4. Writes the upgraded manifest back atomically.
+
+**Why this is Step 0 and not deferred to Step 4.5:** if the manifest's
+`year` is wrong (the v0.11.1 bug class — manifest stores online-first year
+instead of issue year), then prepare_paper.py would build extraction
+bundles with the wrong year, and the extraction agent would write the
+wrong year into note frontmatter and APA citations. v0.11.1 patched 48
+such cases retroactively; Tier 3 catches them BEFORE extraction. Same
+logic for null vol/issue/pages — without Step 0, prepare_paper.py would
+pass `null` to the extraction agent, which would write `null` into the
+note. v0.11.2 cleaned up 21 such cases retroactively.
+
+**Expected output for a clean batch:** "X row(s) have CrossRef-derived
+changes to ('volume', 'issue', 'pages')" with no warnings (or only
+expected ones — e.g., year auto-corrections from online-first to issue
+year, which are exactly what Tier 3 is designed to apply). If there are
+unexpected warnings (e.g., title mismatch, journal mismatch), stop and
+investigate before continuing.
+
+**If `--fix-year` auto-corrects any years**, the manifest's `year`
+column is now authoritative. No manual cleanup needed afterwards;
+Step 4.5 (verify_metadata.py) confirms everything round-trips cleanly.
 
 ---
 
