@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-05-10"
-version: "0.12.0"
+date-released: "2026-05-12"
+version: "0.13.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,21 +54,24 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context Claude subagent scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.12.0
-  (2026-05-10) contains 186 curated notes — adds AMJ vol-67-no-2 (11
-  notes: Anderson, Arslan, Grégoire, Gruber, Li, Liao, Muethel, Pache,
-  Piazza, Preston, Rostain) plus the Tier 3 prevention infrastructure
-  (tools/populate_manifest.py) that auto-populates manifest bibliographic
-  columns from CrossRef BEFORE extraction, eliminating the wrong-year
-  and null-vol/issue/pages bug classes that v0.11.1 and v0.11.2 patched
-  retroactively: 77 from the Network for Business
+  a published rubric) gates every note into the library. Version 0.13.0
+  (2026-05-12) contains 197 curated notes — adds AMJ vol-67-no-1 (11
+  notes: Barkema, Bettinazzi, Cao, Dorobantu, Gruber editorial, Han,
+  Jia, two Park papers, Soublière, To). The vol-67-no-1 batch is the
+  second consecutive batch ingested under the Tier 3 prevention
+  infrastructure (tools/populate_manifest.py, introduced in v0.12.0)
+  and the post-extraction column-merge heuristic in
+  docs/extraction-prompt.md (commit 59a9ace) — all 11 papers passed
+  Layer 1 (anchor validity) on first extraction and Layer 2 audit with
+  only 1 PARTIAL across the batch: 77 from the Network for Business
   Sustainability (NBS) February 2026 monthly digest (62 in v0.2.0 plus 15
-  previously-missing papers recovered in v0.3.0) and a 109-note Academy of
-  Management Journal pilot across vol. 67 no. 2, vol. 67 no. 3, vol. 67
-  no. 4, vol. 67 no. 5, vol. 67 no. 6, vol. 68 no. 1 through vol. 68 no.
-  6, and vol. 69 no. 1 (vol. 67 no. 2 added in v0.12.0). The full library
-  passes the v0.12.0 audit sweep with 186/186 PASS and zero CONTRADICTED verdicts
-  across twelve release cycles. An AGENTS.md file provides a tool-agnostic
+  previously-missing papers recovered in v0.3.0) and a 120-note Academy of
+  Management Journal pilot across vol. 67 no. 1, vol. 67 no. 2, vol. 67
+  no. 3, vol. 67 no. 4, vol. 67 no. 5, vol. 67 no. 6, vol. 68 no. 1
+  through vol. 68 no. 6, and vol. 69 no. 1 (vol. 67 no. 1 added in
+  v0.13.0). The full library passes the v0.13.0 audit sweep with
+  197/197 PASS and zero CONTRADICTED verdicts
+  across thirteen release cycles. An AGENTS.md file provides a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom
   SDK apps) can discover and consume the data with known faithfulness
   guarantees.

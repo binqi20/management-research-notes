@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-186-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-197-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-release)
-[![Audit](https://img.shields.io/badge/audit-186%2F186%20PASS-success.svg)](#faithfulness-audit)
+[![Audit](https://img.shields.io/badge/audit-197%2F197%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -202,6 +202,22 @@ The full library has been swept three times across releases:
   proved the mechanism: Tier 3 caught and fixed 7 wrong-year manifest
   rows in vol-67-no-2 before extraction started — exactly the v0.11.1
   bug class, prevented at the source instead of patched retroactively.
+- **v0.13.0 sweep (2026-05-12, 197 notes):**
+  Adds AMJ vol. 67 no. 1 (10 substantive papers: Barkema, Bettinazzi,
+  Cao, Dorobantu, Han, Jia, two Park papers, Soublière, To, plus
+  Gruber editorial on the new Research Methods Articles portfolio).
+  **197 / 197 PASS, 0 UNSUPPORTED, 0 CONTRADICTED, 1 PARTIAL** (Cao
+  practical_implication — minor extrapolation from a contributions
+  paragraph). Second consecutive batch ingested under the Tier 3
+  prevention infrastructure (introduced v0.12.0) and the post-extraction
+  column-merge heuristic (introduced commit `59a9ace`). Tier 3 found
+  zero year mismatches in this batch (the manifest had already been
+  captured after print publication), but still backfilled 11
+  vol/issue/pages columns. Every extraction agent independently used
+  `grep` on the extracted text to verify anchor contiguity before
+  writing — Layer 1 passed on first try for all 11 papers, the first
+  batch since the column-merge heuristic went into the extraction
+  prompt to do so.
 
 Run the audit on a single note with:
 
@@ -213,33 +229,34 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this release
 
-This release contains **186 curated notes** across two source streams:
+This release contains **197 curated notes** across two source streams:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
   digest. (62 notes shipped in v0.2.0; 15 previously-missing papers were
   recovered and added in v0.3.0.)
-- **AMJ pilot** — 109 notes across twelve recent issues of the
+- **AMJ pilot** — 120 notes across thirteen recent issues of the
   [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 67 no. 2, vol. 67 no. 3, vol. 67 no. 4, vol. 67 no. 5, vol. 67
-  no. 6, vol. 68 no. 1 through 6, vol. 69 no. 1). v0.12.0 added vol. 67
-  no. 2 (11 notes); v0.11.0 added vol. 67 no. 3 (10 notes); v0.10.0
-  added vol. 67 no. 4 (9 notes); v0.9.0 added vol. 67 no. 5 (9 notes);
-  v0.8.0 added vol. 67 no. 6 (8 notes); v0.7.0 added vol. 68 no. 1 (10
-  notes); v0.6.0 added vol. 68 no. 2 (8 notes); v0.5.0 added vol. 68
-  no. 3 (8 notes); v0.4.0 added vol. 68 no. 4 (8 notes); the original
-  pilot covered the remaining three issues (28 notes).
+  (vol. 67 no. 1, vol. 67 no. 2, vol. 67 no. 3, vol. 67 no. 4, vol. 67
+  no. 5, vol. 67 no. 6, vol. 68 no. 1 through 6, vol. 69 no. 1).
+  v0.13.0 added vol. 67 no. 1 (11 notes); v0.12.0 added vol. 67 no. 2
+  (11 notes); v0.11.0 added vol. 67 no. 3 (10 notes); v0.10.0 added
+  vol. 67 no. 4 (9 notes); v0.9.0 added vol. 67 no. 5 (9 notes);
+  v0.8.0 added vol. 67 no. 6 (8 notes); v0.7.0 added vol. 68 no. 1
+  (10 notes); v0.6.0 added vol. 68 no. 2 (8 notes); v0.5.0 added vol.
+  68 no. 3 (8 notes); v0.4.0 added vol. 68 no. 4 (8 notes); the
+  original pilot covered the remaining three issues (28 notes).
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |    75 |
+| empirical-quantitative |    82 |
 | empirical-qualitative  |    54 |
 | conceptual             |    19 |
-| editorial              |    16 |
-| empirical-mixed        |    15 |
+| empirical-mixed        |    18 |
+| editorial              |    17 |
 | review                 |     4 |
 | book-review            |     3 |
-| **Total**              | **186** |
+| **Total**              | **197** |
 
 Every note carries a v2 `evidence:` anchor block (Layer 1) and has passed
 the Layer 2 semantic audit. See [Faithfulness audit](#faithfulness-audit)
@@ -371,7 +388,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.12.0},
+  version      = {0.13.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}
