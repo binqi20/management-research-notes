@@ -52,6 +52,32 @@ research. Read this file before doing anything in this folder.
 4. **Stable IDs.** Every paper has a `paper_id` like `nbs-2026-02-spoor-2026` that is
    derived from `{source-slug}-{year-month}-{first-author-slug}-{year}`. Once assigned,
    it never changes. The note file is `notes/{paper_id}.md`.
+
+   *Historical exception — the v0.13.x cleanup cohort (2026-05-12):* 11 paper_ids
+   were renamed in a single bounded cleanup pass after `slugify()` was updated
+   to fold diacritics and strip apostrophes (so "Soublière" → `soubliere`
+   instead of `soubli-re`, "D'Amico" → `damico` instead of `d-amico`, etc.)
+   AND after `tools/lint_manifests.py` was built and surfaced 6 additional
+   manifest-population bugs of the same class. The cohort closed in two
+   releases:
+
+   - **v0.13.1** (5 papers): renames surfaced by manual inspection during
+     the slugify migration — Pérezts, Soublière, two Grégoire papers, D'Amico.
+   - **v0.13.2** (6 papers): renames surfaced when `lint_manifests.py` was
+     built and run for the first time — Anjier Chen, Chang Lu, Yuliya Snihur,
+     Stella Seyb, Ahmed Sewaid, Nuno Clara (all had full given+family names
+     captured in the manifest's `first_author_last` column instead of just
+     the family name).
+
+   This was a **deliberate, bounded one-time cleanup pass** taken when the
+   library was small (197 notes) and had no known external citations by
+   paper_id. The "cohort" framing matters: the right rule for future agents
+   is **"when you build a detector for a known bug class, run it once and fix
+   everything it finds before declaring the cohort closed"** — not "fix what
+   you happened to notice manually." The 11-paper cohort is closed; future
+   renames should be exceptional, well-justified, and explicitly documented.
+   The rule's "once assigned, never changes" invariant remains in force for
+   all post-v0.13.2 paper_ids.
 5. **Validate before committing.** After producing or editing a note, run
    `python tools/validate_note.py notes/<id>.md` and only proceed if it passes (or
    move the note to `incoming/_flagged/` with a `.reason.txt`).
