@@ -1,5 +1,5 @@
 ---
-id: amj-vol-68-no-4-gr-goire-2025
+id: amj-vol-68-no-4-gregoire-2025
 title: "Compelling Empirics in Quantitative Studies"
 authors:
   - "Grégoire, Denis A."

@@ -1,5 +1,5 @@
 ---
-id: amj-vol-67-no-1-soubli-re-2024
+id: amj-vol-67-no-1-soubliere-2024
 title: "Coherence within and across Categories: The Dynamic Viability of Product Categories on Kickstarter"
 authors:
   - "Soublière, J.-F."

@@ -26,6 +26,7 @@ import csv
 import datetime as dt
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 # --- locate the Synapse root ------------------------------------------------------
@@ -46,10 +47,30 @@ EXTRACTION_VERSION = "v1"
 
 
 def slugify(value: str, max_length: int = 40) -> str:
-    """Lowercase, ASCII-ish, hyphen-separated. Used for paper IDs."""
+    """Lowercase, ASCII-ish, hyphen-separated. Used for paper IDs.
+
+    Behavior worth knowing:
+      - Diacritics are folded to base ASCII letters via NFKD decomposition,
+        so "Grégoire" → "gregoire", "Soublière" → "soubliere", "Pérezts"
+        → "perezts". (Before v0.13.1 these stripped to "gr-goire" etc.,
+        producing ugly hyphen-fragmented slugs — see migration commit.)
+      - Apostrophes (straight ' and curly ’) are removed entirely, NOT
+        replaced with hyphens. So "D'Amico" → "damico", not "d-amico".
+        Apostrophes in contractions/names aren't real word boundaries.
+      - Smart quotes, en-dashes, em-dashes still normalize to ASCII
+        equivalents before the alphanumeric regex.
+      - Any remaining non-alphanumeric run collapses to a single hyphen.
+    """
+    # Fold diacritics first: NFKD decomposes é → e + combining-acute,
+    # then we drop the combining marks. Same pattern as the accent-fold
+    # in tools/verify_metadata.py.
+    value = unicodedata.normalize("NFKD", value)
+    value = "".join(c for c in value if not unicodedata.combining(c))
     value = value.lower()
-    # Replace common diacritics minimally
-    replacements = {"’": "'", "–": "-", "—": "-", "“": '"', "”": '"'}
+    # Strip apostrophes (no hyphen replacement). Both straight and curly.
+    value = value.replace("'", "").replace("’", "")
+    # Normalize remaining punctuation to ASCII before the alphanumeric pass.
+    replacements = {"–": "-", "—": "-", "“": '"', "”": '"'}
     for k, v in replacements.items():
         value = value.replace(k, v)
     value = re.sub(r"[^a-z0-9]+", "-", value)

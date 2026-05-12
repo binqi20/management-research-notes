@@ -10,7 +10,8 @@ repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-05-12"
-version: "0.13.0"
+# Note: v0.13.1 same-day patch — see release notes for ID-cleanup migration.
+version: "0.13.1"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"

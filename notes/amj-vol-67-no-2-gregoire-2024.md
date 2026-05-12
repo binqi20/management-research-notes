@@ -1,5 +1,5 @@
 ---
-id: amj-vol-67-no-2-gr-goire-2024
+id: amj-vol-67-no-2-gregoire-2024
 title: "Mobilizing New Sources of Data: Opportunities and Recommendations"
 authors:
   - "Grégoire, Denis A."
