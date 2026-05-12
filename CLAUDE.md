@@ -22,14 +22,24 @@ research. Read this file before doing anything in this folder.
    volume/issue/pages — these come only from `library/.../manifest.tsv` (the trusted
    source) or, if missing there, from CrossRef looked up by DOI. If a field is unknown,
    write `Not reported in paper`. Never guess. The manifest is the trusted source but
-   it is hand-entered and error-prone, so the project uses **two CrossRef-based gates
-   that bookend the pipeline**:
-   - **Before extraction (Tier 3, mandatory):** run
+   it is hand-entered and error-prone, so the project uses **three CrossRef-based gates
+   that bracket the pipeline**:
+   - **Before extraction, populate (Tier 3, mandatory):** run
      `python tools/populate_manifest.py library/<source>/<issue>/manifest.tsv --apply --fix-year`
      to upgrade the manifest with `volume`, `issue`, `pages` columns from CrossRef
      and auto-correct any year mismatches against `published-print` (APA 7 issue
      year). This is Step 0 of `/synapse-ingest` and prevents wrong-year/null-vol
      errors from ever propagating into note frontmatter.
+   - **Before extraction, validate (mandatory):** run
+     `python tools/lint_manifests.py --manifest library/<source>/<issue>/manifest.tsv`
+     to structurally audit each manifest row (heuristic checks on `first_author_last`,
+     `year`, `doi`, `saved_filename`) and cross-check `first_author_last` against
+     CrossRef's first-author family name. This is Step 0.5 of `/synapse-ingest` and
+     catches the **D'Amico bug class**: a manifest row that is internally consistent
+     but structurally wrong (e.g., full given+family name captured in
+     `first_author_last` instead of just the family name). v0.13.2 ran this linter
+     for the first time and found 6 latent bugs that had been in the library since
+     the original NBS-2026-02 ingestion.
    - **After extraction (Tier 2, mandatory):** run `python tools/verify_metadata.py`
      to cross-check every note's bibliographic fields (year, title, journal,
      volume, issue, pages, authors) against CrossRef. This is Step 4.5 of
@@ -39,10 +49,11 @@ research. Read this file before doing anything in this folder.
    had silently stored the *online-first* year — only an external cross-check
    surfaced this. v0.11.2 fixed 21 papers' missing volume/issue/pages by
    backfilling from CrossRef. v0.12.0 introduced Tier 3 (`populate_manifest.py`)
-   so future batches never need this kind of cleanup. A clean `verify_metadata`
-   run is a precondition for committing new notes. The legacy `tools/verify_years.py`
-   is preserved as a year-only alias and is equivalent to
-   `verify_metadata.py --field year`.
+   so future batches never need this kind of cleanup. v0.13.2 introduced
+   `lint_manifests.py` to catch structural manifest bugs that the other gates
+   miss. All three gates must exit 0 before committing new notes. The legacy
+   `tools/verify_years.py` is preserved as a year-only alias and is equivalent
+   to `verify_metadata.py --field year`.
 2. **Verbatim means verbatim.** When the extraction prompt says "extract the abstract
    verbatim," the text in the note must appear as a contiguous substring of the
    extracted PDF text (modulo whitespace). The validator will check this.

@@ -1,5 +1,5 @@
 ---
-description: Ingest a new monthly batch of academic papers into Synapse — runs the full pipeline (populate_manifest → pdf_to_text → prepare_paper → parallel extraction → validate_note → audit → build_index → export → verify_metadata) on a folder of PDFs, honoring every hard rule in CLAUDE.md.
+description: Ingest a new monthly batch of academic papers into Synapse — runs the full pipeline (populate_manifest → lint_manifests → pdf_to_text → prepare_paper → parallel extraction → validate_note → audit → build_index → export → verify_metadata) on a folder of PDFs, honoring every hard rule in CLAUDE.md.
 argument-hint: "<library/SOURCE/YYYY-MM/pdfs>"
 ---
 
@@ -98,6 +98,70 @@ investigate before continuing.
 **If `--fix-year` auto-corrects any years**, the manifest's `year`
 column is now authoritative. No manual cleanup needed afterwards;
 Step 4.5 (verify_metadata.py) confirms everything round-trips cleanly.
+
+---
+
+## Step 0.5 — Manifest structural lint (mandatory)
+
+After populate_manifest fills in the bibliographic columns, **lint the
+manifest's structure** before extraction begins. This catches the class
+of bug that v0.13.2 surfaced retroactively: a manifest row that is
+*internally consistent but structurally wrong* (e.g., the full given+family
+name captured in `first_author_last` instead of just the family name).
+Such rows propagate cleanly through every downstream step — they pass
+validation, pass audit, pass `verify_metadata` — because no other gate
+asks "is the manifest field structurally well-formed?"
+
+```bash
+python tools/lint_manifests.py --manifest library/<source>/<year-month>/manifest.tsv
+```
+
+The linter runs two tiers of check:
+
+- **Heuristic (fast, no network)**: flags numeric, empty, comma-containing,
+  or overly-long `first_author_last` values; out-of-range years; malformed
+  DOIs; missing PDF files referenced by `status=downloaded`.
+- **Authoritative (CrossRef per-DOI)**: compares manifest `first_author_last`
+  against CrossRef's first-author family name (after accent-fold). A
+  mismatch is the **D'Amico bug class**: the manifest captured a full
+  given+family name instead of just the family.
+
+Expected output for a clean batch: `✓ All checks passed` for the
+manifest, exit code 0.
+
+**If the linter flags rows:** stop. Triage by the message:
+
+- **`first_author_last`: contains comma** → manifest has `"Last, First"`
+  instead of just `Last`. Fix the manifest row.
+- **`first_author_last`: unusually long (X chars)** → likely full-name
+  capture. Cross-check with the linter's CrossRef output and the PDF
+  byline, then fix the manifest row to just the family name.
+- **`crossref:` mismatch** → either a D'Amico-class bug (fix the
+  manifest) OR a legitimate compound surname where CrossRef has the
+  formal version and the manifest uses the citation short form (add to
+  `KNOWN_COMPOUND_SURNAMES` in `tools/lint_manifests.py` with a dated
+  rationale, same pattern as `verify_metadata.py`'s false-positive
+  registry).
+- **`saved_filename`: file not found** → either rename the PDF to match
+  the manifest, or update the manifest to match the actual PDF on disk.
+
+Do NOT proceed to Step 1 until the linter exits 0 (or every remaining
+flag is documented as an allowlisted false positive).
+
+**This step is mandatory because:**
+
+- The manifest is the trusted source for bibliographic metadata. If a
+  manifest row has a structural anomaly, every downstream step inherits
+  it. The lint catches the anomaly at the cheapest possible point.
+- `populate_manifest.py` (Step 0) populates fields but does NOT validate
+  the structure of pre-existing fields. `verify_metadata.py` (Step 4.5)
+  audits notes, not manifest rows. The linter fills the only remaining
+  gap.
+- v0.13.2 ran this linter for the first time and found 6 latent
+  D'Amico-class bugs that had been in the library since the original
+  NBS-2026-02 ingestion (v0.2.0). Without the linter, those would have
+  remained latent until the next manual cleanup pass — and any new batch
+  with similar manifest-population errors would compound the problem.
 
 ---
 
