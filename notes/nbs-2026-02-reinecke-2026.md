@@ -6,8 +6,8 @@ authors:
 year: 2026
 journal: "Administrative Science Quarterly"
 doi: "https://doi.org/10.1177/00018392261428471"
-volume: null
-issue: null
+volume: 71
+issue: 2
 pages: "1-4"
 
 source: "NBS/2026-02"
@@ -62,4 +62,4 @@ Reinecke notes that Paul’s call to "let go" and adopt an "ethos of letting be"
 The review suggests that organization scholars could build on ecophenomenology as a methodological provocation—studying organizations and institutions as part of, rather than apart from, the living environments that sustain them—and develop leadership and governance approaches for the Anthropocene that cultivate sensitivity to how ecosystems co-create resilience and align strategy with natural limits and rhythms.
 
 **APA 7th Citation**
-Reinecke, J. (2026). Kalpita Bhar Paul. Ecophenomenology and the environmental crisis in the Sundarbans: Towards a community-based ethic. *Administrative Science Quarterly*, 1–4. https://doi.org/10.1177/00018392261428471
+Reinecke, J. (2026). Kalpita Bhar Paul. Ecophenomenology and the environmental crisis in the Sundarbans: Towards a community-based ethic. *Administrative Science Quarterly*, 71(2), 1–4. https://doi.org/10.1177/00018392261428471

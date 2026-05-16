@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-197-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-210-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-release)
-[![Audit](https://img.shields.io/badge/audit-197%2F197%20PASS-success.svg)](#faithfulness-audit)
+[![Audit](https://img.shields.io/badge/audit-210%2F210%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -218,6 +218,38 @@ The full library has been swept three times across releases:
   writing — Layer 1 passed on first try for all 11 papers, the first
   batch since the column-merge heuristic went into the extraction
   prompt to do so.
+- **v0.13.1 patch (2026-05-12, 197 notes):**
+  `slugify()` updated to fold diacritics via NFKD and strip apostrophes,
+  resolving fragmented paper_ids like `gr-goire-2024` → `gregoire-2024`.
+  5 paper_ids renamed as a deliberate, one-time exception to hard rule 4
+  (stable IDs) while the library was small and had no known external
+  citations by paper_id.
+- **v0.13.2 patch (2026-05-12, 197 notes):**
+  Adds `tools/lint_manifests.py` — a per-row structural + CrossRef
+  audit of every manifest. First run surfaced 4 legitimate compound
+  surnames (von Krogh, Lee Cunningham, Ter Wal, van den Oever — added
+  to `KNOWN_COMPOUND_SURNAMES` allowlist) and **6 latent D'Amico-class
+  bugs** in the NBS-2026-02 manifest (full given+family name captured
+  instead of just the family name). 6 more paper_ids renamed; combined
+  with v0.13.1 this closes the **v0.13.x cleanup cohort** (11 papers
+  total). Hard rule 4's footnote in CLAUDE.md revised to use cohort
+  framing.
+- **v0.14.0 sweep (2026-05-16, 210 notes):**
+  Adds AMJ vol. 66 no. 6 (12 substantive papers + Grimes editorial on
+  generative AI's impact on management scholarship). **210 / 210 PASS,
+  0 UNSUPPORTED, 0 CONTRADICTED, 3 PARTIAL** (Couture and Sajjadiani
+  mechanism_process — minor attribution drift; Zhang limitations —
+  added "cross-sectional" label not in paper). First batch ingested
+  under the complete three-gate pipeline: Step 0 `populate_manifest.py`
+  (Tier 3), Step 0.5 `lint_manifests.py` (structural), Step 4.5
+  `verify_metadata.py` (Tier 2 content). All three gates exit 0.
+  Also backfills v0.11.2-pattern drift on two ASQ papers
+  (Lee Democratic Deviations, Reinecke book review) whose vol-71 issue
+  2 published after their extraction; their note frontmatter + APA
+  citations now reflect the issued version. Xu 2023 title added to
+  `KNOWN_CROSSREF_DATA_ERRORS` (CrossRef has malformed `Forest<i>and</i>the
+  Trees` with no spaces around the italic; note matches the published
+  version correctly).
 
 Run the audit on a single note with:
 
@@ -229,34 +261,35 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this release
 
-This release contains **197 curated notes** across two source streams:
+This release contains **210 curated notes** across two source streams:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
   digest. (62 notes shipped in v0.2.0; 15 previously-missing papers were
   recovered and added in v0.3.0.)
-- **AMJ pilot** — 120 notes across thirteen recent issues of the
+- **AMJ pilot** — 133 notes across fourteen recent issues of the
   [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 67 no. 1, vol. 67 no. 2, vol. 67 no. 3, vol. 67 no. 4, vol. 67
-  no. 5, vol. 67 no. 6, vol. 68 no. 1 through 6, vol. 69 no. 1).
-  v0.13.0 added vol. 67 no. 1 (11 notes); v0.12.0 added vol. 67 no. 2
-  (11 notes); v0.11.0 added vol. 67 no. 3 (10 notes); v0.10.0 added
-  vol. 67 no. 4 (9 notes); v0.9.0 added vol. 67 no. 5 (9 notes);
-  v0.8.0 added vol. 67 no. 6 (8 notes); v0.7.0 added vol. 68 no. 1
-  (10 notes); v0.6.0 added vol. 68 no. 2 (8 notes); v0.5.0 added vol.
-  68 no. 3 (8 notes); v0.4.0 added vol. 68 no. 4 (8 notes); the
-  original pilot covered the remaining three issues (28 notes).
+  (vol. 66 no. 6, vol. 67 no. 1, vol. 67 no. 2, vol. 67 no. 3, vol. 67
+  no. 4, vol. 67 no. 5, vol. 67 no. 6, vol. 68 no. 1 through 6, vol.
+  69 no. 1). v0.14.0 added vol. 66 no. 6 (13 notes); v0.13.0 added
+  vol. 67 no. 1 (11 notes); v0.12.0 added vol. 67 no. 2 (11 notes);
+  v0.11.0 added vol. 67 no. 3 (10 notes); v0.10.0 added vol. 67 no. 4
+  (9 notes); v0.9.0 added vol. 67 no. 5 (9 notes); v0.8.0 added vol.
+  67 no. 6 (8 notes); v0.7.0 added vol. 68 no. 1 (10 notes); v0.6.0
+  added vol. 68 no. 2 (8 notes); v0.5.0 added vol. 68 no. 3 (8 notes);
+  v0.4.0 added vol. 68 no. 4 (8 notes); the original pilot covered the
+  remaining three issues (28 notes).
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |    82 |
-| empirical-qualitative  |    54 |
+| empirical-quantitative |    85 |
+| empirical-qualitative  |    60 |
+| empirical-mixed        |    21 |
 | conceptual             |    19 |
-| empirical-mixed        |    18 |
-| editorial              |    17 |
+| editorial              |    18 |
 | review                 |     4 |
 | book-review            |     3 |
-| **Total**              | **197** |
+| **Total**              | **210** |
 
 Every note carries a v2 `evidence:` anchor block (Layer 1) and has passed
 the Layer 2 semantic audit. See [Faithfulness audit](#faithfulness-audit)
@@ -388,7 +421,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.13.2},
+  version      = {0.14.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

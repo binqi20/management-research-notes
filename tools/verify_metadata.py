@@ -128,6 +128,16 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "PDF + the journal convention. Suppressed 2026-05-10."
         ),
     },
+    "amj-vol-66-no-6-xu-2023": {
+        "title": (
+            "CrossRef record has malformed inline HTML: title contains "
+            "'Forest<i>and</i>the Trees' with NO spaces around the italic "
+            "tag, so even after tag-strip normalization the CrossRef value "
+            "renders as 'Forestandthe Trees'. The note's title matches the "
+            "PDF and the journal's published version with proper spacing. "
+            "Suppressed 2026-05-16."
+        ),
+    },
 }
 
 

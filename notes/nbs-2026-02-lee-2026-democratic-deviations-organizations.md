@@ -7,9 +7,9 @@ authors:
 year: 2026
 journal: "Administrative Science Quarterly"
 doi: "https://doi.org/10.1177/00018392261421927"
-volume: null
-issue: null
-pages: null
+volume: 71
+issue: 2
+pages: "352-394"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Lee 2026 Democratic Deviations How Organizations Sustain Decentralization Commitments in the Face of Centralization Pressures.pdf"
@@ -77,4 +77,4 @@ The study is based on four extreme cases of radically decentralized, knowledge-i
 Future scholarship should examine whether the democratic-deviation model extends to less extreme contexts and to situations other than pandemic-induced crises, where workers may be less forgiving of leaders and where the processes of authorization and enactment may be even more consequential. Further work could explore how democratic rules emerge, are revised, and interact with ownership structures, and how democratic deviation applies to sustaining other foundational organizational commitments such as corporate purpose.
 
 **APA 7th Citation**
-Lee, M. Y., & Young-Hyman, T. (2026). Democratic deviations: How organizations sustain decentralization commitments in the face of centralization pressures. *Administrative Science Quarterly*. https://doi.org/10.1177/00018392261421927
+Lee, M. Y., & Young-Hyman, T. (2026). Democratic deviations: How organizations sustain decentralization commitments in the face of centralization pressures. *Administrative Science Quarterly*, 71(2), 352-394. https://doi.org/10.1177/00018392261421927
