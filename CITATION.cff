@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-05-16"
-version: "0.14.0"
+date-released: "2026-05-20"
+version: "0.15.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,25 +54,23 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context Claude subagent scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.14.0
-  (2026-05-16) contains 210 curated notes — adds AMJ vol-66-no-6 (13
-  notes: Couture, Fetzer, Grimes editorial, Hampel, Keller, Kwon,
-  Little, Rahman, Sajjadiani, Shulist, Sugiyama, Xu, Zhang). First
-  batch ingested under the complete three-gate prevention infrastructure
-  (Step 0 populate_manifest + Step 0.5 lint_manifests + Step 4.5
-  verify_metadata), wired into the slash command in commit ced6717.
-  Also backfills v0.11.2-pattern drift on two ASQ papers whose issues
-  (vol 71 issue 2) published after their original extraction (Lee
-  Democratic Deviations and Reinecke book review): 77 from the Network
-  for Business Sustainability (NBS) February 2026 monthly digest (62 in
-  v0.2.0 plus 15 previously-missing papers recovered in v0.3.0) and a
-  133-note Academy of Management Journal pilot across vol. 66 no. 6,
-  vol. 67 no. 1, vol. 67 no. 2, vol. 67 no. 3, vol. 67 no. 4, vol. 67
-  no. 5, vol. 67 no. 6, vol. 68 no. 1 through vol. 68 no. 6, and vol.
-  69 no. 1 (vol. 66 no. 6 added in v0.14.0). The full library passes
-  the v0.14.0 audit sweep with 210/210 PASS and zero CONTRADICTED
-  verdicts across fourteen release cycles. An AGENTS.md file provides
-  a tool-agnostic
+  a published rubric) gates every note into the library. Version 0.15.0
+  (2026-05-20) contains 222 curated notes — adds AMJ vol-66-no-5 (12
+  notes: Carnabuci, Dang, Dencker editorial, Doyle, Engel, Hennekam,
+  Kim, Lander, Liao, Ross, Rua-Gomez, Voronov). Ingested under the
+  complete three-gate prevention infrastructure (Step 0
+  populate_manifest + Step 0.5 lint_manifests + Step 4.5
+  verify_metadata); the batch was perfectly clean — 12/12 Layer 1
+  first-try PASS and 12/12 Layer 2 PASS with zero PARTIAL verdicts:
+  77 from the Network for Business Sustainability (NBS) February 2026
+  monthly digest (62 in v0.2.0 plus 15 previously-missing papers
+  recovered in v0.3.0) and a 145-note Academy of Management Journal
+  pilot across vol. 66 no. 5, vol. 66 no. 6, vol. 67 no. 1, vol. 67
+  no. 2, vol. 67 no. 3, vol. 67 no. 4, vol. 67 no. 5, vol. 67 no. 6,
+  vol. 68 no. 1 through vol. 68 no. 6, and vol. 69 no. 1 (vol. 66 no. 5
+  added in v0.15.0). The full library passes the v0.15.0 audit sweep
+  with 222/222 PASS and zero CONTRADICTED verdicts across fifteen
+  release cycles. An AGENTS.md file provides a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom
   SDK apps) can discover and consume the data with known faithfulness
   guarantees.
