@@ -146,7 +146,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.15.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.16.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
