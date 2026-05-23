@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-233-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-244-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-release)
-[![Audit](https://img.shields.io/badge/audit-233%2F233%20PASS-success.svg)](#faithfulness-audit)
+[![Audit](https://img.shields.io/badge/audit-244%2F244%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -273,6 +273,16 @@ The full library has been swept three times across releases:
   correctly reports the empirical result rather than the failed
   hypothesis, which the auditor verified as faithful rather than
   CONTRADICTED.
+- **v0.17.0 sweep (2026-05-20, 244 notes):**
+  Adds AMJ vol. 66 no. 3 (10 substantive papers + Langley editorial on
+  opening up AMJ's research methods repertoire). **244 / 244 PASS, 0
+  UNSUPPORTED, 0 CONTRADICTED, 1 PARTIAL** (Toivonen practical_implication
+  — practitioner prescriptions synthesized from a paper with no dedicated
+  implications section). Ingested under the complete three-gate pipeline;
+  all gates exit 0 with no drift findings or new false positives. 11/11
+  Layer 1 first-try PASS (sixth consecutive batch at 100%). This sweep
+  completes the AMJ vol. 66 + vol. 67 coverage from no. 3 onward — the
+  pilot now spans 13 consecutive AMJ issues plus vol. 68 and vol. 69.
 
 Run the audit on a single note with:
 
@@ -284,37 +294,37 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this release
 
-This release contains **233 curated notes** across two source streams:
+This release contains **244 curated notes** across two source streams:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
   digest. (62 notes shipped in v0.2.0; 15 previously-missing papers were
   recovered and added in v0.3.0.)
-- **AMJ pilot** — 156 notes across sixteen recent issues of the
+- **AMJ pilot** — 167 notes across seventeen recent issues of the
   [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 66 no. 4, vol. 66 no. 5, vol. 66 no. 6, vol. 67 no. 1, vol. 67
-  no. 2, vol. 67 no. 3, vol. 67 no. 4, vol. 67 no. 5, vol. 67 no. 6,
-  vol. 68 no. 1 through 6, vol. 69 no. 1). v0.16.0 added vol. 66 no. 4
-  (11 notes); v0.15.0 added vol. 66 no. 5 (12 notes); v0.14.0 added
-  vol. 66 no. 6 (13 notes); v0.13.0 added vol. 67 no. 1 (11 notes);
-  v0.12.0 added vol. 67 no. 2 (11 notes); v0.11.0 added vol. 67 no. 3
-  (10 notes); v0.10.0 added vol. 67 no. 4 (9 notes); v0.9.0 added vol.
-  67 no. 5 (9 notes); v0.8.0 added vol. 67 no. 6 (8 notes); v0.7.0
-  added vol. 68 no. 1 (10 notes); v0.6.0 added vol. 68 no. 2 (8 notes);
-  v0.5.0 added vol. 68 no. 3 (8 notes); v0.4.0 added vol. 68 no. 4
-  (8 notes); the original pilot covered the remaining three issues
-  (28 notes).
+  (vol. 66 no. 3, vol. 66 no. 4, vol. 66 no. 5, vol. 66 no. 6, vol. 67
+  no. 1, vol. 67 no. 2, vol. 67 no. 3, vol. 67 no. 4, vol. 67 no. 5,
+  vol. 67 no. 6, vol. 68 no. 1 through 6, vol. 69 no. 1). v0.17.0 added
+  vol. 66 no. 3 (11 notes); v0.16.0 added vol. 66 no. 4 (11 notes);
+  v0.15.0 added vol. 66 no. 5 (12 notes); v0.14.0 added vol. 66 no. 6
+  (13 notes); v0.13.0 added vol. 67 no. 1 (11 notes); v0.12.0 added
+  vol. 67 no. 2 (11 notes); v0.11.0 added vol. 67 no. 3 (10 notes);
+  v0.10.0 added vol. 67 no. 4 (9 notes); v0.9.0 added vol. 67 no. 5
+  (9 notes); v0.8.0 added vol. 67 no. 6 (8 notes); v0.7.0 added vol.
+  68 no. 1 (10 notes); v0.6.0 added vol. 68 no. 2 (8 notes); v0.5.0
+  added vol. 68 no. 3 (8 notes); v0.4.0 added vol. 68 no. 4 (8 notes);
+  the original pilot covered the remaining three issues (28 notes).
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |    97 |
-| empirical-qualitative  |    65 |
-| empirical-mixed        |    25 |
-| editorial              |    20 |
+| empirical-quantitative |   102 |
+| empirical-qualitative  |    69 |
+| empirical-mixed        |    26 |
+| editorial              |    21 |
 | conceptual             |    19 |
 | review                 |     4 |
 | book-review            |     3 |
-| **Total**              | **233** |
+| **Total**              | **244** |
 
 Every note carries a v2 `evidence:` anchor block (Layer 1) and has passed
 the Layer 2 semantic audit. See [Faithfulness audit](#faithfulness-audit)
