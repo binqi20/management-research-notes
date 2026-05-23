@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-244-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-257-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-release)
-[![Audit](https://img.shields.io/badge/audit-244%2F244%20PASS-success.svg)](#faithfulness-audit)
+[![Audit](https://img.shields.io/badge/audit-257%2F257%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -283,6 +283,22 @@ The full library has been swept three times across releases:
   Layer 1 first-try PASS (sixth consecutive batch at 100%). This sweep
   completes the AMJ vol. 66 + vol. 67 coverage from no. 3 onward — the
   pilot now spans 13 consecutive AMJ issues plus vol. 68 and vol. 69.
+- **v0.18.0 sweep (2026-05-23, 257 notes):**
+  Adds AMJ vol. 66 no. 2 (12 substantive papers + Krogh editorial on AI
+  research opportunities). **257 / 257 PASS, 0 UNSUPPORTED, 0
+  CONTRADICTED, 1 PARTIAL** (Zhang mechanism_process — minor mediator-vs-
+  DV imprecision in one study). 13/13 Layer 1 first-try PASS (seventh
+  consecutive batch at 100%). Three of this issue's papers (Krogh→von
+  Krogh, Cunningham→Lee Cunningham, Wal→Ter Wal) are the compound
+  surnames already in the `KNOWN_COMPOUND_SURNAMES` allowlist; Step 0.5
+  suppressed all three cleanly, and verify_metadata's note-level author
+  check passed without new false positives (notes carry the full byline
+  forms that match CrossRef; the short form lives only in the paper_id
+  slug). This release also **promotes the `extraction_model`-verbatim
+  instruction into `docs/extraction-prompt.md`** — a validated systemic
+  fix (13/13 agents kept the field uniform this batch vs. up to 7
+  outliers needing manual cleanup in prior batches), eliminating a
+  recurring per-batch provenance-field normalization.
 
 Run the audit on a single note with:
 
@@ -294,17 +310,18 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this release
 
-This release contains **244 curated notes** across two source streams:
+This release contains **257 curated notes** across two source streams:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
   digest. (62 notes shipped in v0.2.0; 15 previously-missing papers were
   recovered and added in v0.3.0.)
-- **AMJ pilot** — 167 notes across seventeen recent issues of the
+- **AMJ pilot** — 180 notes across eighteen recent issues of the
   [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 66 no. 3, vol. 66 no. 4, vol. 66 no. 5, vol. 66 no. 6, vol. 67
-  no. 1, vol. 67 no. 2, vol. 67 no. 3, vol. 67 no. 4, vol. 67 no. 5,
-  vol. 67 no. 6, vol. 68 no. 1 through 6, vol. 69 no. 1). v0.17.0 added
+  (vol. 66 no. 2, vol. 66 no. 3, vol. 66 no. 4, vol. 66 no. 5, vol. 66
+  no. 6, vol. 67 no. 1, vol. 67 no. 2, vol. 67 no. 3, vol. 67 no. 4,
+  vol. 67 no. 5, vol. 67 no. 6, vol. 68 no. 1 through 6, vol. 69 no. 1).
+  v0.18.0 added vol. 66 no. 2 (13 notes); v0.17.0 added
   vol. 66 no. 3 (11 notes); v0.16.0 added vol. 66 no. 4 (11 notes);
   v0.15.0 added vol. 66 no. 5 (12 notes); v0.14.0 added vol. 66 no. 6
   (13 notes); v0.13.0 added vol. 67 no. 1 (11 notes); v0.12.0 added
@@ -317,14 +334,14 @@ This release contains **244 curated notes** across two source streams:
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |   102 |
-| empirical-qualitative  |    69 |
-| empirical-mixed        |    26 |
-| editorial              |    21 |
+| empirical-quantitative |   109 |
+| empirical-qualitative  |    71 |
+| empirical-mixed        |    29 |
+| editorial              |    22 |
 | conceptual             |    19 |
 | review                 |     4 |
 | book-review            |     3 |
-| **Total**              | **244** |
+| **Total**              | **257** |
 
 Every note carries a v2 `evidence:` anchor block (Layer 1) and has passed
 the Layer 2 semantic audit. See [Faithfulness audit](#faithfulness-audit)

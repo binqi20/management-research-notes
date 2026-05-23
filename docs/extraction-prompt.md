@@ -304,7 +304,7 @@ source: "{source}"                      # e.g., NBS/2026-02
 pdf_path: "{pdf_path}"                  # from trusted metadata
 text_path: "{text_path}"                # from trusted metadata
 ingested_at: "{YYYY-MM-DD}"             # from trusted metadata
-extraction_model: "{model}"             # from trusted metadata
+extraction_model: "{model}"             # COPY VERBATIM from the bundle — controlled provenance field, do NOT "correct" it to whatever model you think you are
 extraction_version: "v2"                # v2 = includes the evidence block below
 
 paper_type: "{one of the 8 types}"
@@ -375,7 +375,10 @@ evidence:
 
 ### Forbidden behaviors
 
-- Do not change anything inside the trusted bibliographic block.
+- Do not change anything inside the trusted bibliographic block. This explicitly
+  includes `extraction_model`: copy the bundle's value verbatim. It records which
+  model the *pipeline* was configured for, not your own self-assessment — do not
+  "correct" it (this caused recurring per-batch cleanup before v0.18.0).
 - Do not invent volumes, issues, or page numbers. If they are not in the trusted block,
   use `null` (frontmatter) or omit them (APA citation).
 - Do not write a "summary" or "key takeaways" section beyond the headings above.
