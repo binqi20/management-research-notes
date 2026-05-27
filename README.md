@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-257-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-270-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-release)
-[![Audit](https://img.shields.io/badge/audit-257%2F257%20PASS-success.svg)](#faithfulness-audit)
+[![Audit](https://img.shields.io/badge/audit-270%2F270%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -299,6 +299,25 @@ The full library has been swept three times across releases:
   fix (13/13 agents kept the field uniform this batch vs. up to 7
   outliers needing manual cleanup in prior batches), eliminating a
   recurring per-batch provenance-field normalization.
+- **v0.19.0 sweep (2026-05-23, 270 notes):**
+  Adds AMJ vol. 66 no. 1 (12 substantive papers + Gruber editorial on
+  the 23rd editorial term's strategic priorities). **270 / 270 PASS, 0
+  UNSUPPORTED, 0 CONTRADICTED, 0 PARTIAL** — the third perfectly-clean
+  batch (after v0.12.0 and v0.15.0). This release also served as a
+  **standalone validation of two infrastructure fixes from prior
+  releases**:
+  - **`extraction_model` verbatim** (codified in v0.18.0, commit
+    `cc16c71`): extraction agents were deliberately dispatched WITHOUT
+    the inline reminder; 13/13 still kept the field uniform purely
+    from reading `docs/extraction-prompt.md`. The codified location is
+    independently load-bearing.
+  - **Editorial-abstract escape** (added in commit `5b4ae81`,
+    pre-v0.19.0): Gruber editorial — the first editorial extracted
+    after the fix — wrote `"Not reported in paper"` for Abstract
+    instead of the sentence-fragment workaround used by all five
+    earlier editorials.
+  13/13 Layer 1 first-try PASS (eighth consecutive batch at 100%).
+  All three gates exit 0; zero post-extraction remediation needed.
 
 Run the audit on a single note with:
 
@@ -310,38 +329,38 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this release
 
-This release contains **257 curated notes** across two source streams:
+This release contains **270 curated notes** across two source streams:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
   digest. (62 notes shipped in v0.2.0; 15 previously-missing papers were
   recovered and added in v0.3.0.)
-- **AMJ pilot** — 180 notes across eighteen recent issues of the
-  [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 66 no. 2, vol. 66 no. 3, vol. 66 no. 4, vol. 66 no. 5, vol. 66
-  no. 6, vol. 67 no. 1, vol. 67 no. 2, vol. 67 no. 3, vol. 67 no. 4,
-  vol. 67 no. 5, vol. 67 no. 6, vol. 68 no. 1 through 6, vol. 69 no. 1).
-  v0.18.0 added vol. 66 no. 2 (13 notes); v0.17.0 added
-  vol. 66 no. 3 (11 notes); v0.16.0 added vol. 66 no. 4 (11 notes);
-  v0.15.0 added vol. 66 no. 5 (12 notes); v0.14.0 added vol. 66 no. 6
-  (13 notes); v0.13.0 added vol. 67 no. 1 (11 notes); v0.12.0 added
-  vol. 67 no. 2 (11 notes); v0.11.0 added vol. 67 no. 3 (10 notes);
-  v0.10.0 added vol. 67 no. 4 (9 notes); v0.9.0 added vol. 67 no. 5
-  (9 notes); v0.8.0 added vol. 67 no. 6 (8 notes); v0.7.0 added vol.
-  68 no. 1 (10 notes); v0.6.0 added vol. 68 no. 2 (8 notes); v0.5.0
-  added vol. 68 no. 3 (8 notes); v0.4.0 added vol. 68 no. 4 (8 notes);
-  the original pilot covered the remaining three issues (28 notes).
+- **AMJ pilot** — 193 notes across nineteen consecutive recent issues of
+  the [Academy of Management Journal](https://journals.aom.org/journal/amj)
+  (vol. 66 no. 1 through vol. 66 no. 6, vol. 67 no. 1 through vol. 67
+  no. 6, vol. 68 no. 1 through vol. 68 no. 6, and vol. 69 no. 1).
+  v0.19.0 added vol. 66 no. 1 (13 notes); v0.18.0 added vol. 66 no. 2
+  (13 notes); v0.17.0 added vol. 66 no. 3 (11 notes); v0.16.0 added
+  vol. 66 no. 4 (11 notes); v0.15.0 added vol. 66 no. 5 (12 notes);
+  v0.14.0 added vol. 66 no. 6 (13 notes); v0.13.0 added vol. 67 no. 1
+  (11 notes); v0.12.0 added vol. 67 no. 2 (11 notes); v0.11.0 added
+  vol. 67 no. 3 (10 notes); v0.10.0 added vol. 67 no. 4 (9 notes);
+  v0.9.0 added vol. 67 no. 5 (9 notes); v0.8.0 added vol. 67 no. 6
+  (8 notes); v0.7.0 added vol. 68 no. 1 (10 notes); v0.6.0 added vol.
+  68 no. 2 (8 notes); v0.5.0 added vol. 68 no. 3 (8 notes); v0.4.0
+  added vol. 68 no. 4 (8 notes); the original pilot covered the
+  remaining three issues (28 notes).
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |   109 |
-| empirical-qualitative  |    71 |
-| empirical-mixed        |    29 |
-| editorial              |    22 |
+| empirical-quantitative |   113 |
+| empirical-qualitative  |    75 |
+| empirical-mixed        |    33 |
+| editorial              |    23 |
 | conceptual             |    19 |
 | review                 |     4 |
 | book-review            |     3 |
-| **Total**              | **257** |
+| **Total**              | **270** |
 
 Every note carries a v2 `evidence:` anchor block (Layer 1) and has passed
 the Layer 2 semantic audit. See [Faithfulness audit](#faithfulness-audit)
