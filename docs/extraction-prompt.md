@@ -117,10 +117,18 @@ You will be told the `paper_type` from a list of: `empirical-quantitative`,
 | Paper type            | Fields that may be `Not reported in paper`                         |
 |-----------------------|--------------------------------------------------------------------|
 | `book-review`         | research_question, mechanism, sample, theoretical_contribution     |
-| `editorial`           | research_question, mechanism, sample                               |
+| `editorial`           | research_question, mechanism, sample, **abstract**                 |
 | `review`              | mechanism, sample                                                  |
 | `conceptual`          | mechanism, sample                                                  |
 | empirical-*           | none — all fields should be present                                |
+
+**Editorial abstract note:** "From the Editors" pieces typically have no formal
+abstract section. If the editorial has one (rare), extract it verbatim as usual.
+If it does not, you may write `Not reported in paper` for the Abstract field —
+this is the honest escape. Do NOT manufacture a "fake" abstract by paraphrasing.
+A verbatim sentence fragment that cleanly captures the editorial's thesis is also
+acceptable (e.g., the lead sentence) — but only if it survives the validator's
+contiguous-substring check. When in doubt, use `Not reported in paper`.
 
 If you are unsure of the paper type, infer it from the text and state it. The validator
 will catch mismatches.

@@ -89,7 +89,17 @@ REQUIRED_HEADINGS = [
 
 OPTIONAL_FOR_TYPE = {
     "book-review": {"research_question", "mechanism_process", "sample", "theoretical_contribution"},
-    "editorial":   {"research_question", "mechanism_process", "sample"},
+    # 'abstract' is optional for editorials because "From the Editors" pieces
+    # typically have no formal abstract section. Without this exemption,
+    # editorial extractors are forced to pick a sentence fragment as a
+    # stand-in abstract — which has shipped cleanly through v0.14.0–v0.18.0
+    # for Grimes, Dencker, Langley, Wellman, and Krogh, but the stand-in is
+    # awkward when no clean intra-line fragment captures the thesis. With
+    # 'abstract' optional, editorial extractors may write "Not reported in
+    # paper" instead. Verbatim fragments still pass too — the verbatim
+    # check's existing escape (check_abstract_verbatim line 454) was already
+    # in place; this exemption just lets check_required_headings agree.
+    "editorial":   {"research_question", "mechanism_process", "sample", "abstract"},
     "review":      {"mechanism_process", "sample"},
     "conceptual":  {"mechanism_process", "sample"},
 }
