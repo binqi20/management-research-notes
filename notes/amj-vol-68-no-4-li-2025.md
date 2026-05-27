@@ -16,7 +16,7 @@ source: "AMJ/vol-68-no-4"
 pdf_path: "library/AMJ/vol-68-no-4/pdfs/Li 2025 The Roles of Learning and Status Attainment in Successful Newcomer Socialization Random Assignments to Complex Projects and Early Career Outcomes.pdf"
 text_path: "library/AMJ/vol-68-no-4/text/Li 2025 The Roles of Learning and Status Attainment in Successful Newcomer Socialization Random Assignments to Complex Projects and Early Career Outcomes.txt"
 ingested_at: "2026-04-18"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

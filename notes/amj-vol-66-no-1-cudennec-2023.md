@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Cudennec 2023 Valuing Spanners Why Category Nesting and Expertise Matter.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Cudennec 2023 Valuing Spanners Why Category Nesting and Expertise Matter.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

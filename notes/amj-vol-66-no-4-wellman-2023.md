@@ -19,7 +19,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Wellman 2023 Publishing Multimethod Research in AMJ A Review and Best-Practice Recommendations.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Wellman 2023 Publishing Multimethod Research in AMJ A Review and Best-Practice Recommendations.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

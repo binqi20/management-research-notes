@@ -17,7 +17,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Dwertmann 2023 Receiving Service from a Person with a Disability Stereotypes, Perceptions of Corporate Social Responsibility, and the Opportunity for Increased Corporate Reputation.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Dwertmann 2023 Receiving Service from a Person with a Disability Stereotypes, Perceptions of Corporate Social Responsibility, and the Opportunity for Increased Corporate Reputation.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

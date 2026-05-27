@@ -18,7 +18,7 @@ source: "AMJ/vol-66-no-6"
 pdf_path: "library/AMJ/vol-66-no-6/pdfs/Zhang 2023 The Effects of Between-Group Pay Dispersion.pdf"
 text_path: "library/AMJ/vol-66-no-6/text/Zhang 2023 The Effects of Between-Group Pay Dispersion.txt"
 ingested_at: "2026-05-16"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

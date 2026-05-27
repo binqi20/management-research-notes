@@ -15,7 +15,7 @@ source: "AMJ/vol-68-no-3"
 pdf_path: "library/AMJ/vol-68-no-3/pdfs/Taeuscher 2024 It Is Not the Whole Story Toward a Broader Understanding of Entrepreneurial Ventures’ Symbolic Differentiation.pdf"
 text_path: "library/AMJ/vol-68-no-3/text/Taeuscher 2024 It Is Not the Whole Story Toward a Broader Understanding of Entrepreneurial Ventures’ Symbolic Differentiation.txt"
 ingested_at: "2026-04-30"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

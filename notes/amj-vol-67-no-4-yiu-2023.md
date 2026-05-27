@@ -17,7 +17,7 @@ source: "AMJ/vol-67-no-4"
 pdf_path: "library/AMJ/vol-67-no-4/pdfs/Yiu 2023 A Theory of Host Country Sentiments An Illustration in Cross-Border Acquisitions.pdf"
 text_path: "library/AMJ/vol-67-no-4/text/Yiu 2023 A Theory of Host Country Sentiments An Illustration in Cross-Border Acquisitions.txt"
 ingested_at: "2026-05-06"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

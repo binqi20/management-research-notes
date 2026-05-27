@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-6"
 pdf_path: "library/AMJ/vol-66-no-6/pdfs/Little 2023 Mother’s Reentry A Relative Contribution Perspective of Dual-Earner Parents’ Roles, Resources, and Outcomes.pdf"
 text_path: "library/AMJ/vol-66-no-6/text/Little 2023 Mother’s Reentry A Relative Contribution Perspective of Dual-Earner Parents’ Roles, Resources, and Outcomes.txt"
 ingested_at: "2026-05-16"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

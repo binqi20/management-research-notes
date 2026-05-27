@@ -17,7 +17,7 @@ source: "AMJ/vol-66-no-3"
 pdf_path: "library/AMJ/vol-66-no-3/pdfs/Toivonen 2023 Creative Jolts Exploring How Entrepreneurs Let Go of Ideas During Creative Revision.pdf"
 text_path: "library/AMJ/vol-66-no-3/text/Toivonen 2023 Creative Jolts Exploring How Entrepreneurs Let Go of Ideas During Creative Revision.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

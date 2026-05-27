@@ -19,7 +19,7 @@ source: "AMJ/vol-67-no-2"
 pdf_path: "library/AMJ/vol-67-no-2/pdfs/Grégoire 2024 Mobilizing New Sources of Data Opportunities and Recommendations.pdf"
 text_path: "library/AMJ/vol-67-no-2/text/Grégoire 2024 Mobilizing New Sources of Data Opportunities and Recommendations.txt"
 ingested_at: "2026-05-10"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

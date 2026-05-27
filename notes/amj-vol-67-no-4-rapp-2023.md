@@ -16,7 +16,7 @@ source: "AMJ/vol-67-no-4"
 pdf_path: "library/AMJ/vol-67-no-4/pdfs/Rapp 2023 Dirty Heroes Healthcare Workers’ Experience of Mixed Social Evaluations during the Pandemic.pdf"
 text_path: "library/AMJ/vol-67-no-4/text/Rapp 2023 Dirty Heroes Healthcare Workers’ Experience of Mixed Social Evaluations during the Pandemic.txt"
 ingested_at: "2026-05-06"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

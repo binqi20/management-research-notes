@@ -15,7 +15,7 @@ source: "AMJ/vol-67-no-1"
 pdf_path: "library/AMJ/vol-67-no-1/pdfs/Gruber 2024 Expanding AMJ’S Manuscript Portfolio Research Methods Articles Designed to Advance Theory and Span Boundaries.pdf"
 text_path: "library/AMJ/vol-67-no-1/text/Gruber 2024 Expanding AMJ’S Manuscript Portfolio Research Methods Articles Designed to Advance Theory and Span Boundaries.txt"
 ingested_at: "2026-05-12"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

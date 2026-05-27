@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-6"
 pdf_path: "library/AMJ/vol-66-no-6/pdfs/Rahman 2023 The Experimental Hand How Platform-Based Experimentation Reconfigures Worker Autonomy.pdf"
 text_path: "library/AMJ/vol-66-no-6/text/Rahman 2023 The Experimental Hand How Platform-Based Experimentation Reconfigures Worker Autonomy.txt"
 ingested_at: "2026-05-16"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

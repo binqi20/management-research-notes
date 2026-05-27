@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-3"
 pdf_path: "library/AMJ/vol-66-no-3/pdfs/Roccapriore 2023 I Don’t Need a Degree, I’ve Got Abs Influencer Warmth and Competence, Communication Mode, and Stakeholder Engagement on Social Media.pdf"
 text_path: "library/AMJ/vol-66-no-3/text/Roccapriore 2023 I Don’t Need a Degree, I’ve Got Abs Influencer Warmth and Competence, Communication Mode, and Stakeholder Engagement on Social Media.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

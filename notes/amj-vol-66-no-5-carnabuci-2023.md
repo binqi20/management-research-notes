@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-5"
 pdf_path: "library/AMJ/vol-66-no-5/pdfs/Carnabuci 2023 When People Build Networks That Hurt Their Performance Structural Holes, Cognitive Style, and the Unintended Consequences of Person–Network Fit.pdf"
 text_path: "library/AMJ/vol-66-no-5/text/Carnabuci 2023 When People Build Networks That Hurt Their Performance Structural Holes, Cognitive Style, and the Unintended Consequences of Person–Network Fit.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

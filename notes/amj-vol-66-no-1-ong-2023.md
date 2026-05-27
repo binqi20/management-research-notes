@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Ong 2023 Toward a Configural Theory of Job Demands and Resources.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Ong 2023 Toward a Configural Theory of Job Demands and Resources.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

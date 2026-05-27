@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Xu 2023 The Impact of Communist Ideology on the Patenting Activity of Chinese Firms.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Xu 2023 The Impact of Communist Ideology on the Patenting Activity of Chinese Firms.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

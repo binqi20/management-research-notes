@@ -14,7 +14,7 @@ source: "AMJ/vol-66-no-2"
 pdf_path: "library/AMJ/vol-66-no-2/pdfs/Pradies 2023 With Head and Heart How Emotions Shape Paradox Navigation in Veterinary Work.pdf"
 text_path: "library/AMJ/vol-66-no-2/text/Pradies 2023 With Head and Heart How Emotions Shape Paradox Navigation in Veterinary Work.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

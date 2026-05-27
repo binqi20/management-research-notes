@@ -15,7 +15,7 @@ source: "AMJ/vol-67-no-6"
 pdf_path: "library/AMJ/vol-67-no-6/pdfs/Harmon 2024 Divergent Market Reactions to Abstract Language A Multicountry Event Study of European Central Bank Communications.pdf"
 text_path: "library/AMJ/vol-67-no-6/text/Harmon 2024 Divergent Market Reactions to Abstract Language A Multicountry Event Study of European Central Bank Communications.txt"
 ingested_at: "2026-05-05"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

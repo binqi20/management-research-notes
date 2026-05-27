@@ -15,7 +15,7 @@ source: "AMJ/vol-67-no-3"
 pdf_path: "library/AMJ/vol-67-no-3/pdfs/Lee 2023 External Disruption Following CEO Succession How Human and Social Capital Changes May Attract Competitive Attacks.pdf"
 text_path: "library/AMJ/vol-67-no-3/text/Lee 2023 External Disruption Following CEO Succession How Human and Social Capital Changes May Attract Competitive Attacks.txt"
 ingested_at: "2026-05-07"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

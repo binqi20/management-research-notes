@@ -15,7 +15,7 @@ source: "AMJ/vol-67-no-2"
 pdf_path: "library/AMJ/vol-67-no-2/pdfs/Preston 2024 Echoes from the Past The Impact of Racial Transference on Leader Selection during Succession.pdf"
 text_path: "library/AMJ/vol-67-no-2/text/Preston 2024 Echoes from the Past The Impact of Racial Transference on Leader Selection during Succession.txt"
 ingested_at: "2026-05-10"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

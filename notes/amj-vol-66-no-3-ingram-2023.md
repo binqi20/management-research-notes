@@ -14,7 +14,7 @@ source: "AMJ/vol-66-no-3"
 pdf_path: "library/AMJ/vol-66-no-3/pdfs/Ingram 2023 Identity Multiplicity and the Formation of Professional Network Ties.pdf"
 text_path: "library/AMJ/vol-66-no-3/text/Ingram 2023 Identity Multiplicity and the Formation of Professional Network Ties.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

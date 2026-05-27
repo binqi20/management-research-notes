@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-5"
 pdf_path: "library/AMJ/vol-66-no-5/pdfs/Kim 2023 Wearing Your Worth at Work The Consequences of Employees’ Daily Clothing Choices.pdf"
 text_path: "library/AMJ/vol-66-no-5/text/Kim 2023 Wearing Your Worth at Work The Consequences of Employees’ Daily Clothing Choices.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

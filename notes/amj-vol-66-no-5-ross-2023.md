@@ -17,7 +17,7 @@ source: "AMJ/vol-66-no-5"
 pdf_path: "library/AMJ/vol-66-no-5/pdfs/Ross 2023 Resource Idling and Capability Erosion.pdf"
 text_path: "library/AMJ/vol-66-no-5/text/Ross 2023 Resource Idling and Capability Erosion.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

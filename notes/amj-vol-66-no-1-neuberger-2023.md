@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Neuberger 2023 Balancing “Protective Disguise” with “Harmonious Advocacy” Social Venture Legitimation in Authoritarian Contexts.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Neuberger 2023 Balancing “Protective Disguise” with “Harmonious Advocacy” Social Venture Legitimation in Authoritarian Contexts.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

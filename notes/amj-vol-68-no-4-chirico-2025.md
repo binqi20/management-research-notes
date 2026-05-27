@@ -17,7 +17,7 @@ source: "AMJ/vol-68-no-4"
 pdf_path: "library/AMJ/vol-68-no-4/pdfs/Chirico 2025 Calm in the Storm Job Security and Post-Merger Performance in Family versus Nonfamily Firms.pdf"
 text_path: "library/AMJ/vol-68-no-4/text/Chirico 2025 Calm in the Storm Job Security and Post-Merger Performance in Family versus Nonfamily Firms.txt"
 ingested_at: "2026-04-18"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

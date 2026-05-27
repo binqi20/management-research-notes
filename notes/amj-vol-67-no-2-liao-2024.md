@@ -19,7 +19,7 @@ source: "AMJ/vol-67-no-2"
 pdf_path: "library/AMJ/vol-67-no-2/pdfs/Liao 2023 The Gendered Liability of Venture Novelty.pdf"
 text_path: "library/AMJ/vol-67-no-2/text/Liao 2023 The Gendered Liability of Venture Novelty.txt"
 ingested_at: "2026-05-10"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

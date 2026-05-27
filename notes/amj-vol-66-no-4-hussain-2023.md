@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Hussain 2023 Signaling Legitimacy Why Mixed-Gender Coalitions Outperform Single-Gender Coalitions in Advocating for Gender Equity.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Hussain 2023 Signaling Legitimacy Why Mixed-Gender Coalitions Outperform Single-Gender Coalitions in Advocating for Gender Equity.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

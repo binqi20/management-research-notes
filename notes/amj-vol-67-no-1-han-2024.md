@@ -16,7 +16,7 @@ source: "AMJ/vol-67-no-1"
 pdf_path: "library/AMJ/vol-67-no-1/pdfs/Han 2024 Now You See Me How Status and Categorical Proximity Shape Misconduct Scandalization.pdf"
 text_path: "library/AMJ/vol-67-no-1/text/Han 2024 Now You See Me How Status and Categorical Proximity Shape Misconduct Scandalization.txt"
 ingested_at: "2026-05-12"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

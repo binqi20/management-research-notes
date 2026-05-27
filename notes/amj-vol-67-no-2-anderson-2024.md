@@ -14,7 +14,7 @@ source: "AMJ/vol-67-no-2"
 pdf_path: "library/AMJ/vol-67-no-2/pdfs/Anderson 2023 Left Behind Understanding the Career Consequences of Collaborator Exits.pdf"
 text_path: "library/AMJ/vol-67-no-2/text/Anderson 2023 Left Behind Understanding the Career Consequences of Collaborator Exits.txt"
 ingested_at: "2026-05-10"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

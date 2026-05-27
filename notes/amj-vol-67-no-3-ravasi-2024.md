@@ -18,7 +18,7 @@ source: "AMJ/vol-67-no-3"
 pdf_path: "library/AMJ/vol-67-no-3/pdfs/Ravasi 2024 What Makes Research Collaborations Successful Advice from AMJ Authors.pdf"
 text_path: "library/AMJ/vol-67-no-3/text/Ravasi 2024 What Makes Research Collaborations Successful Advice from AMJ Authors.txt"
 ingested_at: "2026-05-07"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

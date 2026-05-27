@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-2"
 pdf_path: "library/AMJ/vol-66-no-2/pdfs/Wal 2023 Inside-Out, Outside-In, or All-in-One The Role of Network Sequencing in the Elaboration of Ideas.pdf"
 text_path: "library/AMJ/vol-66-no-2/text/Wal 2023 Inside-Out, Outside-In, or All-in-One The Role of Network Sequencing in the Elaboration of Ideas.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

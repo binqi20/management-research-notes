@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-2"
 pdf_path: "library/AMJ/vol-66-no-2/pdfs/Lee 2023 The Role of Attribution in Learning from Performance Feedback Behavioral Perspective on the Choice between Alliances and Acquisitions.pdf"
 text_path: "library/AMJ/vol-66-no-2/text/Lee 2023 The Role of Attribution in Learning from Performance Feedback Behavioral Perspective on the Choice between Alliances and Acquisitions.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

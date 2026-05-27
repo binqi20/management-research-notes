@@ -19,7 +19,7 @@ source: "AMJ/vol-67-no-5"
 pdf_path: "library/AMJ/vol-67-no-5/pdfs/Kilduff 2024 Hiding and Seeking Knowledge-Providing Ties from Rivals A Strategic Perspective on Network Perceptions.pdf"
 text_path: "library/AMJ/vol-67-no-5/text/Kilduff 2024 Hiding and Seeking Knowledge-Providing Ties from Rivals A Strategic Perspective on Network Perceptions.txt"
 ingested_at: "2026-05-05"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

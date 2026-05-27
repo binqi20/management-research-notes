@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-5"
 pdf_path: "library/AMJ/vol-66-no-5/pdfs/Dang 2023 On the Plurality and Politics of Ally Work Liberalism and Self, Relational, and Organizational Ally Work.pdf"
 text_path: "library/AMJ/vol-66-no-5/text/Dang 2023 On the Plurality and Politics of Ally Work Liberalism and Self, Relational, and Organizational Ally Work.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

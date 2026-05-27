@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Lee 2023 The Glass Wall and the Gendered Evaluation of Role Expansion in Freelancing Careers.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Lee 2023 The Glass Wall and the Gendered Evaluation of Role Expansion in Freelancing Careers.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

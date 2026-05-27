@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Kundro 2023 Does Power Protect Female Moral Objectors How and When Moral Objectors’ Gender, Power, and Use of Organizational Frames Influence Perceived Self-Control and Experienced Retaliation.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Kundro 2023 Does Power Protect Female Moral Objectors How and When Moral Objectors’ Gender, Power, and Use of Organizational Frames Influence Perceived Self-Control and Experienced Retaliation.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

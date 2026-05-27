@@ -17,7 +17,7 @@ source: "AMJ/vol-66-no-3"
 pdf_path: "library/AMJ/vol-66-no-3/pdfs/Watkins 2023 Rekindling the Fire and Stoking the Flames How and When Workplace Interpersonal Capitalization Facilitates Pride and Knowledge Sharing at Work.pdf"
 text_path: "library/AMJ/vol-66-no-3/text/Watkins 2023 Rekindling the Fire and Stoking the Flames How and When Workplace Interpersonal Capitalization Facilitates Pride and Knowledge Sharing at Work.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

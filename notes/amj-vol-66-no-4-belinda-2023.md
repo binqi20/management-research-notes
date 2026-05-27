@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Belinda 2023 A Spillover Model of Dreams and Work Behavior How Dream Meaning Ascription Promotes Awe and Employee Resilience.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Belinda 2023 A Spillover Model of Dreams and Work Behavior How Dream Meaning Ascription Promotes Awe and Employee Resilience.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

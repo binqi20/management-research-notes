@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Schuessler 2023 “We Can’t Compete on Human Rights” Creating Market-Protected Spaces to Institutionalize the Emerging Logic of Responsible Management.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Schuessler 2023 “We Can’t Compete on Human Rights” Creating Market-Protected Spaces to Institutionalize the Emerging Logic of Responsible Management.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

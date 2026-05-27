@@ -318,6 +318,22 @@ The full library has been swept three times across releases:
     earlier editorials.
   13/13 Layer 1 first-try PASS (eighth consecutive batch at 100%).
   All three gates exit 0; zero post-extraction remediation needed.
+- **v0.19.1 patch (2026-05-27, 270 notes):**
+  Provenance correction — `extraction_model` field. No content changes;
+  no new notes. The v0.18.0 fix had standardized this field to
+  `claude-opus-4-6` (the bundle's stale default), but the actual
+  extraction model for batches from **2026-04-18 onward** was
+  Claude Opus 4.7 (the parent session's model, with 57 notes carrying
+  direct agent self-reports as evidence). Updated 108 notes that
+  predated my v0.18.0 fix-to-verbatim with the accurate `claude-opus-4-7`
+  value; left 105 pre-cutover notes at `claude-opus-4-6` (no direct
+  evidence of model identity for those earlier batches). Constant in
+  `tools/prepare_paper.py` updated to `claude-opus-4-7` so future
+  bundles record the accurate model. Library is now provenance-correct
+  for everything where we have direct evidence; pre-cutover notes
+  retain their original metadata as historical record. All three gates
+  still exit 0 after the sweep (provenance field is not validated or
+  audited).
 
 Run the audit on a single note with:
 
@@ -492,7 +508,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.14.0},
+  version      = {0.19.1},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

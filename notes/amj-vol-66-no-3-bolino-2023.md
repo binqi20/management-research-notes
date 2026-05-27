@@ -17,7 +17,7 @@ source: "AMJ/vol-66-no-3"
 pdf_path: "library/AMJ/vol-66-no-3/pdfs/Bolino 2023 May I Please Go the Extra Mile Citizenship Communication Strategies and Their Effect on Individual Initiative OCB, Work–Family Conflict, and Partner Satisfaction.pdf"
 text_path: "library/AMJ/vol-66-no-3/text/Bolino 2023 May I Please Go the Extra Mile Citizenship Communication Strategies and Their Effect on Individual Initiative OCB, Work–Family Conflict, and Partner Satisfaction.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

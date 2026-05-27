@@ -16,7 +16,7 @@ source: "AMJ/vol-67-no-2"
 pdf_path: "library/AMJ/vol-67-no-2/pdfs/Pache 2024 An Integrative Model of Hybrid Governance The Role of Boards in Helping Sustain Organizational Hybridity.pdf"
 text_path: "library/AMJ/vol-67-no-2/text/Pache 2024 An Integrative Model of Hybrid Governance The Role of Boards in Helping Sustain Organizational Hybridity.txt"
 ingested_at: "2026-05-10"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

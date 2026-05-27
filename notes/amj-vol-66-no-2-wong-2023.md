@@ -17,7 +17,7 @@ source: "AMJ/vol-66-no-2"
 pdf_path: "library/AMJ/vol-66-no-2/pdfs/Wong 2023 Pay Transparency as a Moving Target A Multistep Model of Pay Compression, I-Deals, and Collectivist Shared Values.pdf"
 text_path: "library/AMJ/vol-66-no-2/text/Wong 2023 Pay Transparency as a Moving Target A Multistep Model of Pay Compression, I-Deals, and Collectivist Shared Values.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

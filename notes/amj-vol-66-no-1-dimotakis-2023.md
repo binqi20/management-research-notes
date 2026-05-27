@@ -22,7 +22,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Dimotakis 2023 Gains and Losses Week-To-Week Changes in Leader–Follower Relationships.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Dimotakis 2023 Gains and Losses Week-To-Week Changes in Leader–Follower Relationships.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

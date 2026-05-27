@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Leppänen 2023 When Do Novel Business Models Lead to High Performance A Configurational Approach to Value Drivers, Competitive Strategy, and Firm Environment.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Leppänen 2023 When Do Novel Business Models Lead to High Performance A Configurational Approach to Value Drivers, Competitive Strategy, and Firm Environment.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

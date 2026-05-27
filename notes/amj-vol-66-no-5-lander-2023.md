@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-5"
 pdf_path: "library/AMJ/vol-66-no-5/pdfs/Lander 2023 Tempering Temperance A Contingency Approach to Social Movements’ Entry Deterrence in Scottish Whisky Distilling, 1823–1921.pdf"
 text_path: "library/AMJ/vol-66-no-5/text/Lander 2023 Tempering Temperance A Contingency Approach to Social Movements’ Entry Deterrence in Scottish Whisky Distilling, 1823–1921.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

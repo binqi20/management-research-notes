@@ -15,7 +15,7 @@ source: "AMJ/vol-67-no-5"
 pdf_path: "library/AMJ/vol-67-no-5/pdfs/Tedder-King 2024 Fairness Judgments in the Context of Structural Sexism The Role of Beliefs in Individual and Structural Causes of Success.pdf"
 text_path: "library/AMJ/vol-67-no-5/text/Tedder-King 2024 Fairness Judgments in the Context of Structural Sexism The Role of Beliefs in Individual and Structural Causes of Success.txt"
 ingested_at: "2026-05-05"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

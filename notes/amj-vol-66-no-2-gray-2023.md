@@ -18,7 +18,7 @@ source: "AMJ/vol-66-no-2"
 pdf_path: "library/AMJ/vol-66-no-2/pdfs/Gray 2023 Leveraging Knowledge Diversity in Hierarchically Differentiated Teams The Critical Role of Hierarchy Stability.pdf"
 text_path: "library/AMJ/vol-66-no-2/text/Gray 2023 Leveraging Knowledge Diversity in Hierarchically Differentiated Teams The Critical Role of Hierarchy Stability.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-3"
 pdf_path: "library/AMJ/vol-66-no-3/pdfs/Jones 2023 Structuring the Start-Up How Coordination Emerges in Start-Ups through Learning Sequencing.pdf"
 text_path: "library/AMJ/vol-66-no-3/text/Jones 2023 Structuring the Start-Up How Coordination Emerges in Start-Ups through Learning Sequencing.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

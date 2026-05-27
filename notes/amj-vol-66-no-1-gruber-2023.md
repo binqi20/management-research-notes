@@ -14,7 +14,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Gruber 2023 From the Editors—An Innovative Journal during Transformational Times Embarking on the 23rd Editorial Term.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Gruber 2023 From the Editors—An Innovative Journal during Transformational Times Embarking on the 23rd Editorial Term.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

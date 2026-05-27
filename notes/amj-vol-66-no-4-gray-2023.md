@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Gray 2023 The Technological Entrainment of Moral Issues The Case of Genomic Data Markets.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Gray 2023 The Technological Entrainment of Moral Issues The Case of Genomic Data Markets.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

@@ -18,7 +18,7 @@ source: "AMJ/vol-66-no-6"
 pdf_path: "library/AMJ/vol-66-no-6/pdfs/Xu 2023 Seeing the Forest and the Trees Exploring the Impact of Inter- and Intra-Entrepreneurial Ecosystem Embeddedness on New Venture Creation.pdf"
 text_path: "library/AMJ/vol-66-no-6/text/Xu 2023 Seeing the Forest and the Trees Exploring the Impact of Inter- and Intra-Entrepreneurial Ecosystem Embeddedness on New Venture Creation.txt"
 ingested_at: "2026-05-16"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

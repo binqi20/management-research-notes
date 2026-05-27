@@ -18,7 +18,7 @@ source: "AMJ/vol-66-no-6"
 pdf_path: "library/AMJ/vol-66-no-6/pdfs/Grimes 2023 From Scarcity to Abundance Scholars and Scholarship in an Age of Generative Artificial Intelligence.pdf"
 text_path: "library/AMJ/vol-66-no-6/text/Grimes 2023 From Scarcity to Abundance Scholars and Scholarship in an Age of Generative Artificial Intelligence.txt"
 ingested_at: "2026-05-16"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

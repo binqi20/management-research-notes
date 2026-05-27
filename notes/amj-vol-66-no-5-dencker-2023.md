@@ -18,7 +18,7 @@ source: "AMJ/vol-66-no-5"
 pdf_path: "library/AMJ/vol-66-no-5/pdfs/Dencker 2023 Positioning Research on Novel Phenomena The Winding Road From Periphery to Core.pdf"
 text_path: "library/AMJ/vol-66-no-5/text/Dencker 2023 Positioning Research on Novel Phenomena The Winding Road From Periphery to Core.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

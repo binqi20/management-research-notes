@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Kim 2023 Corporate Proximity and Product Market Reentry The Role of Corporate Headquarters in Business Unit Response to Product Failure.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Kim 2023 Corporate Proximity and Product Market Reentry The Role of Corporate Headquarters in Business Unit Response to Product Failure.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

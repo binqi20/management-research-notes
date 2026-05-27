@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Lockwood 2023 Polishing the Gilt Edge Elite Category Endurance and Symbolic Boundaries in U.S. Luxury Hotels, 1790–2015.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Lockwood 2023 Polishing the Gilt Edge Elite Category Endurance and Symbolic Boundaries in U.S. Luxury Hotels, 1790–2015.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

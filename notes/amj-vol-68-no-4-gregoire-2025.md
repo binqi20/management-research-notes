@@ -20,7 +20,7 @@ source: "AMJ/vol-68-no-4"
 pdf_path: "library/AMJ/vol-68-no-4/pdfs/Grégoire 2025 Compelling Empirics in Quantitative Studies.pdf"
 text_path: "library/AMJ/vol-68-no-4/text/Grégoire 2025 Compelling Empirics in Quantitative Studies.txt"
 ingested_at: "2026-04-18"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

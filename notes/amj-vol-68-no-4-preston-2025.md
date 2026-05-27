@@ -14,7 +14,7 @@ source: "AMJ/vol-68-no-4"
 pdf_path: "library/AMJ/vol-68-no-4/pdfs/Preston 2025 The Moral Case Revisited Moral Framing as a Double-Edged Sword for Motivating Majority Group Leaders to Support DEI.pdf"
 text_path: "library/AMJ/vol-68-no-4/text/Preston 2025 The Moral Case Revisited Moral Framing as a Double-Edged Sword for Motivating Majority Group Leaders to Support DEI.txt"
 ingested_at: "2026-04-18"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

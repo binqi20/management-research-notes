@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Sala 2023 How Organizations Influence Interpersonal Trust Repair The Case of a French Antiterrorist Unit.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Sala 2023 How Organizations Influence Interpersonal Trust Repair The Case of a French Antiterrorist Unit.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

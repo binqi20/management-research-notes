@@ -15,7 +15,7 @@ source: "AMJ/vol-68-no-2"
 pdf_path: "library/AMJ/vol-68-no-2/pdfs/Kent 2024 Chasing Storms Temporal Work to Foster Group Engagement under Uncertainty.pdf"
 text_path: "library/AMJ/vol-68-no-2/text/Kent 2024 Chasing Storms Temporal Work to Foster Group Engagement under Uncertainty.txt"
 ingested_at: "2026-04-30"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

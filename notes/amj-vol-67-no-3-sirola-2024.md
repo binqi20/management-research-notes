@@ -14,7 +14,7 @@ source: "AMJ/vol-67-no-3"
 pdf_path: "library/AMJ/vol-67-no-3/pdfs/Sirola 2024 Job Insecurity and Well-Being Integrating Life History and Transactional Stress Theories.pdf"
 text_path: "library/AMJ/vol-67-no-3/text/Sirola 2024 Job Insecurity and Well-Being Integrating Life History and Transactional Stress Theories.txt"
 ingested_at: "2026-05-07"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

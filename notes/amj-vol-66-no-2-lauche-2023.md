@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-2"
 pdf_path: "library/AMJ/vol-66-no-2/pdfs/Lauche 2023 The Relational Dynamics of Issue-Selling Enacting Different Genres for Dealing with Discontent.pdf"
 text_path: "library/AMJ/vol-66-no-2/text/Lauche 2023 The Relational Dynamics of Issue-Selling Enacting Different Genres for Dealing with Discontent.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

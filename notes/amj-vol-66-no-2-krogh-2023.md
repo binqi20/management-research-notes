@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-2"
 pdf_path: "library/AMJ/vol-66-no-2/pdfs/Krogh 2023 Recognizing and Utilizing Novel Research Opportunities with Artificial Intelligence.pdf"
 text_path: "library/AMJ/vol-66-no-2/text/Krogh 2023 Recognizing and Utilizing Novel Research Opportunities with Artificial Intelligence.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

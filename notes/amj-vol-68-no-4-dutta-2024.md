@@ -15,7 +15,7 @@ source: "AMJ/vol-68-no-4"
 pdf_path: "library/AMJ/vol-68-no-4/pdfs/Dutta 2024 Fostering Entrepreneurship in Nonmetro Areas Ecosystem Architects as Conduits of Knowledge Spillovers.pdf"
 text_path: "library/AMJ/vol-68-no-4/text/Dutta 2024 Fostering Entrepreneurship in Nonmetro Areas Ecosystem Architects as Conduits of Knowledge Spillovers.txt"
 ingested_at: "2026-04-18"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

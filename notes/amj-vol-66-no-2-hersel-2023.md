@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-2"
 pdf_path: "library/AMJ/vol-66-no-2/pdfs/Hersel 2023 Mixed Messages Crisis Communication–Dismissal (In)Coherence and Shareholder Trust Following Misconduct.pdf"
 text_path: "library/AMJ/vol-66-no-2/text/Hersel 2023 Mixed Messages Crisis Communication–Dismissal (In)Coherence and Shareholder Trust Following Misconduct.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

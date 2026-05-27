@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-3"
 pdf_path: "library/AMJ/vol-66-no-3/pdfs/Lee 2023 Betwixt and Between National and Organizational Identification of Host Country Managers Working in MNE Subsidiaries.pdf"
 text_path: "library/AMJ/vol-66-no-3/text/Lee 2023 Betwixt and Between National and Organizational Identification of Host Country Managers Working in MNE Subsidiaries.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

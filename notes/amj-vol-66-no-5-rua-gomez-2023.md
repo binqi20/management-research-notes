@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-5"
 pdf_path: "library/AMJ/vol-66-no-5/pdfs/Rua-Gomez 2023 Reaching for the Stars How Gender Influences the Formation of High-Status Collaboration Ties.pdf"
 text_path: "library/AMJ/vol-66-no-5/text/Rua-Gomez 2023 Reaching for the Stars How Gender Influences the Formation of High-Status Collaboration Ties.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

@@ -18,7 +18,7 @@ source: "AMJ/vol-66-no-5"
 pdf_path: "library/AMJ/vol-66-no-5/pdfs/Doyle 2023 Hierarchical Team Structures Limit Joint Gain in Interteam Negotiations The Role of Information Elaboration and Value-Claiming Behavior.pdf"
 text_path: "library/AMJ/vol-66-no-5/text/Doyle 2023 Hierarchical Team Structures Limit Joint Gain in Interteam Negotiations The Role of Information Elaboration and Value-Claiming Behavior.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

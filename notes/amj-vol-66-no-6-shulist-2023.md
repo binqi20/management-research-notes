@@ -17,7 +17,7 @@ source: "AMJ/vol-66-no-6"
 pdf_path: "library/AMJ/vol-66-no-6/pdfs/Shulist 2023 “Can I Sell You Avocadoes and Talk to You About Contraception” “Well, It Depends Which Comes First” Anchor Roles and Asymmetric Boundaries.pdf"
 text_path: "library/AMJ/vol-66-no-6/text/Shulist 2023 “Can I Sell You Avocadoes and Talk to You About Contraception” “Well, It Depends Which Comes First” Anchor Roles and Asymmetric Boundaries.txt"
 ingested_at: "2026-05-16"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

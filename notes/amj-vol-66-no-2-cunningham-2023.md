@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-2"
 pdf_path: "library/AMJ/vol-66-no-2/pdfs/Cunningham 2023 Do I Dare The Psychodynamics of Anticipated Image Risk, Leader-Identity Endorsement, and Leader Emergence.pdf"
 text_path: "library/AMJ/vol-66-no-2/text/Cunningham 2023 Do I Dare The Psychodynamics of Anticipated Image Risk, Leader-Identity Endorsement, and Leader Emergence.txt"
 ingested_at: "2026-05-23"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

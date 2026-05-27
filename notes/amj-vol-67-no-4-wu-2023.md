@@ -16,7 +16,7 @@ source: "AMJ/vol-67-no-4"
 pdf_path: "library/AMJ/vol-67-no-4/pdfs/Wu 2023 The Social Structure of Insiders and Outsiders Toward a Network Community Perspective on Firm Performance.pdf"
 text_path: "library/AMJ/vol-67-no-4/text/Wu 2023 The Social Structure of Insiders and Outsiders Toward a Network Community Perspective on Firm Performance.txt"
 ingested_at: "2026-05-06"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

@@ -17,7 +17,7 @@ source: "AMJ/vol-67-no-1"
 pdf_path: "library/AMJ/vol-67-no-1/pdfs/Jia 2024 When and How Artificial Intelligence Augments Employee Creativity.pdf"
 text_path: "library/AMJ/vol-67-no-1/text/Jia 2024 When and How Artificial Intelligence Augments Employee Creativity.txt"
 ingested_at: "2026-05-12"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

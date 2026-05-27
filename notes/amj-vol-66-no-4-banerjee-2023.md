@@ -16,7 +16,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Banerjee 2023 “Distinctive from What And for Whom” Deep Learning-Based Product Distinctiveness, Social Structure, and Third-Party Certifications.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Banerjee 2023 “Distinctive from What And for Whom” Deep Learning-Based Product Distinctiveness, Social Structure, and Third-Party Certifications.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

@@ -16,7 +16,7 @@ source: "AMJ/vol-68-no-4"
 pdf_path: "library/AMJ/vol-68-no-4/pdfs/Chung 2025 Threading the Needle of Corporate Activism How Firms Frame Their Stances on Polarizing Social Issues.pdf"
 text_path: "library/AMJ/vol-68-no-4/text/Chung 2025 Threading the Needle of Corporate Activism How Firms Frame Their Stances on Polarizing Social Issues.txt"
 ingested_at: "2026-04-18"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

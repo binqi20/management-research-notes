@@ -16,7 +16,7 @@ source: "AMJ/vol-67-no-2"
 pdf_path: "library/AMJ/vol-67-no-2/pdfs/Muethel 2023 Erring Professionals as Second Victims Grappling with Guilt and Identity in the Aftermath of Error.pdf"
 text_path: "library/AMJ/vol-67-no-2/text/Muethel 2023 Erring Professionals as Second Victims Grappling with Guilt and Identity in the Aftermath of Error.txt"
 ingested_at: "2026-05-10"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

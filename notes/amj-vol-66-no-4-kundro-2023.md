@@ -14,7 +14,7 @@ source: "AMJ/vol-66-no-4"
 pdf_path: "library/AMJ/vol-66-no-4/pdfs/Kundro 2023 The Benefits and Burdens of Work Moralization on Creativity.pdf"
 text_path: "library/AMJ/vol-66-no-4/text/Kundro 2023 The Benefits and Burdens of Work Moralization on Creativity.txt"
 ingested_at: "2026-05-20"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

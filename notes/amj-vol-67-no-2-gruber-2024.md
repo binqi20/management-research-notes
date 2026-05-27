@@ -16,7 +16,7 @@ source: "AMJ/vol-67-no-2"
 pdf_path: "library/AMJ/vol-67-no-2/pdfs/Gruber 2023 How Founder Human Capital and Founding Conditions Shape New Firm Performance A Study of Necessity Entrepreneurship during Times of Economic Crisis.pdf"
 text_path: "library/AMJ/vol-67-no-2/text/Gruber 2023 How Founder Human Capital and Founding Conditions Shape New Firm Performance A Study of Necessity Entrepreneurship during Times of Economic Crisis.txt"
 ingested_at: "2026-05-10"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

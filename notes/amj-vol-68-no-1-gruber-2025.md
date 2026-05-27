@@ -14,7 +14,7 @@ source: "AMJ/vol-68-no-1"
 pdf_path: "library/AMJ/vol-68-no-1/pdfs/Gruber 2025 Analyzing Academy of Management Journal Operations with Artificial Intelligence (2006–2022).pdf"
 text_path: "library/AMJ/vol-68-no-1/text/Gruber 2025 Analyzing Academy of Management Journal Operations with Artificial Intelligence (2006–2022).txt"
 ingested_at: "2026-04-30"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

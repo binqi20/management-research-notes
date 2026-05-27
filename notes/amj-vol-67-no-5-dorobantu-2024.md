@@ -17,7 +17,7 @@ source: "AMJ/vol-67-no-5"
 pdf_path: "library/AMJ/vol-67-no-5/pdfs/Dorobantu 2024 The AMJ Management Research Canvas A Tool for Conducting and Reporting Empirical Research.pdf"
 text_path: "library/AMJ/vol-67-no-5/text/Dorobantu 2024 The AMJ Management Research Canvas A Tool for Conducting and Reporting Empirical Research.txt"
 ingested_at: "2026-05-05"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "editorial"

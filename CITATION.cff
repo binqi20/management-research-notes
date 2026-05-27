@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-05-23"
-version: "0.19.0"
+date-released: "2026-05-27"
+version: "0.19.1"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,27 +54,29 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context Claude subagent scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.19.0
-  (2026-05-23) contains 270 curated notes — adds AMJ vol-66-no-1 (13
-  notes: Carton, Chan, Cudennec, Dimotakis, Dwertmann, Gruber editorial,
-  Kundro, Lauriano, Leppänen, Lockwood, Neuberger, Ong, Xu). This batch
-  served as the standalone validation of the extraction_model fix
-  promoted to docs/extraction-prompt.md in v0.18.0: agents were
-  dispatched WITHOUT the inline instruction, and 13/13 kept the
-  extraction_model field uniform — confirming the codified location
-  works on its own. Also includes the first practical use of the
-  editorial-abstract escape (Gruber editorial wrote "Not reported in
-  paper" for Abstract rather than the sentence-fragment workaround used
-  by earlier editorials). 13/13 Layer 1 first-try PASS, 13/13 Layer 2
-  PASS with 0 PARTIAL — the third perfectly-clean batch:
+  a published rubric) gates every note into the library. Version 0.19.1
+  (2026-05-27) is a provenance-correction patch over v0.19.0: no new
+  notes; the extraction_model field was corrected from claude-opus-4-6
+  (the bundle's stale default that v0.18.0 had standardized into 108
+  notes) to claude-opus-4-7 for all notes ingested on or after
+  2026-04-18 — the earliest date with direct agent self-report evidence
+  of Opus 4.7 use. 105 pre-cutover notes retain claude-opus-4-6 as
+  historical record. tools/prepare_paper.py constant updated so future
+  bundles record the accurate model. v0.19.0 (2026-05-23) added AMJ
+  vol-66-no-1 (13 notes: Carton, Chan, Cudennec, Dimotakis, Dwertmann,
+  Gruber editorial, Kundro, Lauriano, Leppänen, Lockwood, Neuberger,
+  Ong, Xu) and served as the standalone validation of the
+  extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
+  Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
+  perfectly-clean batch:
   77 from the Network for Business Sustainability (NBS) February 2026
   monthly digest (62 in v0.2.0 plus 15 previously-missing papers
   recovered in v0.3.0) and a 193-note Academy of Management Journal
   pilot across vol. 66 no. 1 through vol. 66 no. 6, vol. 67 no. 1
   through vol. 67 no. 6, vol. 68 no. 1 through vol. 68 no. 6, and vol.
   69 no. 1 (vol. 66 no. 1 added in v0.19.0). The full library passes
-  the v0.19.0 audit sweep with 270/270 PASS and zero CONTRADICTED
-  verdicts across nineteen release cycles. An AGENTS.md file provides
+  the v0.19.1 audit sweep with 270/270 PASS and zero CONTRADICTED
+  verdicts across twenty release cycles. An AGENTS.md file provides
   a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom
   SDK apps) can discover and consume the data with known faithfulness

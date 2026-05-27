@@ -15,7 +15,7 @@ source: "AMJ/vol-66-no-1"
 pdf_path: "library/AMJ/vol-66-no-1/pdfs/Chan 2023 The Role of Discernment and Modulation in Enacting Occupational Values How Career Advising Professionals Navigate Tensions with Clients.pdf"
 text_path: "library/AMJ/vol-66-no-1/text/Chan 2023 The Role of Discernment and Modulation in Enacting Occupational Values How Career Advising Professionals Navigate Tensions with Clients.txt"
 ingested_at: "2026-05-27"
-extraction_model: "claude-opus-4-6"
+extraction_model: "claude-opus-4-7"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"
