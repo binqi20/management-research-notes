@@ -39,7 +39,7 @@ BUNDLES_DIR = SYNAPSE_ROOT / "incoming" / "_bundles"
 NOTES_DIR = SYNAPSE_ROOT / "notes"
 PROMPT_PATH = SYNAPSE_ROOT / "docs" / "extraction-prompt.md"
 
-EXTRACTION_MODEL = "claude-opus-4-7"
+EXTRACTION_MODEL = "claude-opus-4-8"
 EXTRACTION_VERSION = "v1"
 
 

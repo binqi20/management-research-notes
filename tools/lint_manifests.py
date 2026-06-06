@@ -122,6 +122,36 @@ KNOWN_COMPOUND_SURNAMES: dict[str, dict[str, str]] = {
             "convention short form 'Oever'. Suppressed 2026-05-12."
         ),
     },
+    "10.1177/01708406251362935": {
+        "manifest_surname": "Shantz",
+        "crossref_family": "Slade Shantz",
+        "rationale": (
+            "Angelique Slade Shantz — compound family name. CrossRef stores "
+            "'Slade Shantz'; manifest (filename-derived) uses the citation "
+            "short form 'Shantz'. NBS 2026-01; DOI verified (title "
+            "gate-matches CrossRef). Suppressed 2026-06-06."
+        ),
+    },
+    "10.1016/j.respol.2025.105408": {
+        "manifest_surname": "Silva",
+        "crossref_family": "De Silva",
+        "rationale": (
+            "Muthu De Silva — 'De Silva' compound surname. CrossRef stores "
+            "'De Silva'; manifest (filename-derived) uses the citation short "
+            "form 'Silva'. NBS 2026-01; DOI verified (title gate-matches "
+            "CrossRef). Suppressed 2026-06-06."
+        ),
+    },
+    "10.25300/misq/2025/17970": {
+        "manifest_surname": "Vaujany",
+        "crossref_family": "de Vaujany",
+        "rationale": (
+            "François-Xavier de Vaujany — French 'de Vaujany' nobiliary "
+            "particle. CrossRef stores 'de Vaujany'; manifest (filename-"
+            "derived) uses the citation short form 'Vaujany'. NBS 2026-01; "
+            "DOI verified (title gate-matches CrossRef). Suppressed 2026-06-06."
+        ),
+    },
 }
 
 # ---------------------------------------------------------------------------
