@@ -126,18 +126,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 17 PDFs in → 17 notes out. If ≥3 fail for the SAME root cause,
@@ -193,18 +216,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 17 PDFs in → 17 notes out. If ≥3 fail for the SAME root cause,
@@ -260,18 +306,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 16 PDFs in → 16 notes out. If ≥3 fail for the SAME root cause,
@@ -326,18 +395,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 16 PDFs in → 16 notes out. If ≥3 fail for the SAME root cause,
@@ -392,18 +484,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 16 PDFs in → 16 notes out. If ≥3 fail for the SAME root cause,
@@ -607,18 +722,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 11 PDFs in → 11 notes out. If ≥3 fail for the SAME root cause,
@@ -668,18 +806,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 11 PDFs in → 11 notes out. If ≥3 fail for the SAME root cause,
@@ -729,18 +890,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 11 PDFs in → 11 notes out. If ≥3 fail for the SAME root cause,
@@ -790,18 +974,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 10 PDFs in → 10 notes out. If ≥3 fail for the SAME root cause,
@@ -850,18 +1057,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 10 PDFs in → 10 notes out. If ≥3 fail for the SAME root cause,
@@ -910,18 +1140,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 10 PDFs in → 10 notes out. If ≥3 fail for the SAME root cause,
@@ -970,18 +1223,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 10 PDFs in → 10 notes out. If ≥3 fail for the SAME root cause,
@@ -1030,18 +1306,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 10 PDFs in → 10 notes out. If ≥3 fail for the SAME root cause,
@@ -1090,18 +1389,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 10 PDFs in → 10 notes out. If ≥3 fail for the SAME root cause,
@@ -1150,18 +1472,41 @@ THIS BATCH, run, with the filename quoted exactly:
 prepare_paper.py prints the paper_id and bundle path — collect them. If a file
 has no matching manifest row or prepare_paper errors, stop and show me.
 
-STEP B — extract (one subagent per paper; waves of MAX 3 concurrent — higher
-fan-out has triggered socket-close cascades on this repo). For each paper_id,
-dispatch an Agent subtask using the canonical Step-2 template in
-.claude/commands/synapse-ingest.md ("You are extracting a single paper"). Each:
-  • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
-    incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted)
-  • writes one note with Write to notes/<paper_id>.md
-  • runs, recording exit code + output:
-        python3 tools/audit_note.py    notes/<paper_id>.md --flag
+STEP B — extract + audit in TWO PHASES. Why two phases: audit_note.py's Layer-2
+pass shells out to a `claude` CLI that is "Not logged in" in this environment, so
+the cold-context Layer-2 audit is dispatched by YOU (the orchestrator) via the
+Agent tool and composed back with --layer-2-json. Layer 1 still runs mechanically
+inside validate_note.py — its evidence-anchor check IS audit_note.py's Layer 1
+(same function), so no faithfulness coverage is lost. (If you instead run in a
+terminal where the `claude` CLI is logged in, you can collapse this back to the
+one-agent flow: each Agent runs audit_note.py --flag AND validate_note.py --flag.)
+
+  PHASE B1 — extraction (one Agent per paper; waves of MAX 3 concurrent — higher
+  fan-out has triggered socket-close cascades on this repo). Each Agent:
+    • reads CLAUDE.md (5 hard rules), docs/extraction-prompt.md, index/topics.json,
+      incoming/_bundles/<paper_id>.bundle.txt  (bib block is trusted; bundle is v2)
+    • writes one v2 note (WITH the `evidence:` anchor block) to notes/<paper_id>.md
+    • runs ONLY (do NOT run audit_note.py in this phase):
         python3 tools/validate_note.py notes/<paper_id>.md --flag
-  • reports exactly one of OK / AUDIT_FAIL / FAIL / STOP (<150 words; quote
-    flagged anchors/verdicts verbatim — never invent content to pass a gate)
+      (structural + controlled-vocab + the Layer-1 evidence-anchor substring check)
+    • reports OK / FAIL / STOP (<150 words; quote validator errors verbatim;
+      never invent content to pass)
+
+  PHASE B2 — Layer-2 semantic audit (one FRESH cold-context Agent per B1-OK note;
+  waves of MAX 3). Each Agent did NOT write the note (independence is the point):
+    • reads docs/audit-rubric.md (verdict defs + the exact JSON Output format),
+      notes/<paper_id>.md (frontmatter has `text_path:`), and the PDF text at that
+      text_path
+    • verdicts the six prose fields, writes the JSON object EXACTLY per the rubric
+      to incoming/_audits/<paper_id>.layer2.json
+    • runs:
+        python3 tools/audit_note.py notes/<paper_id>.md --flag --layer-2-json incoming/_audits/<paper_id>.layer2.json
+      (--layer-2-json SKIPS the broken CLI dispatch and composes Layer 1 + the
+      supplied Layer 2 into incoming/_audits/<paper_id>.audit.json)
+    • reports OK / AUDIT_FAIL (<150 words; quote each UNSUPPORTED/CONTRADICTED
+      field + note). Must NOT edit the note to pass.
+
+  A paper is fully done only when BOTH its B1 (validate) and B2 (audit) pass.
 
 STEP C — aggregate. One line per paper: OK/AUDIT_FAIL/FAIL/STOP <paper_id>.
 Cross-check 10 PDFs in → 10 notes out. If ≥3 fail for the SAME root cause,
