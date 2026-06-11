@@ -11,9 +11,9 @@ authors:
 year: 2026
 journal: "Journal of Industrial Ecology"
 doi: "https://doi.org/10.1007/s44498-026-00040-0"
-volume: null
-issue: null
-pages: null
+volume: 30
+issue: 2
+pages: "589-605"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Savvidou 2026 Circular technology design and its potential influence on minor metals demand in wind and solar expansion.pdf"
@@ -80,4 +80,4 @@ The analysis runs only until 2050, so it does not fully capture the long-term im
 Future research could extend the time horizon beyond 2050 to assess long-run lifespan effects and combine the studied strategies with CE strategies from other lifecycle stages—such as operation, maintenance, reuse, refurbishment, and recycling. Researchers could also investigate the performance, supply-risk, and social-environmental-economic trade-offs of specific substitution options, and incorporate recycling rates into the MFA to jointly assess primary metal demand and secondary supply availability.
 
 **APA 7th Citation**
-Savvidou, G., Johnsson, F., Ljunggren, M., Liu, Q., Tasseven, U., & Zachariadis, T. (2026). Circular technology design and its potential influence on minor metals demand in wind and solar expansion. *Journal of Industrial Ecology*. https://doi.org/10.1007/s44498-026-00040-0
+Savvidou, G., Johnsson, F., Ljunggren, M., Liu, Q., Tasseven, U., & Zachariadis, T. (2026). Circular technology design and its potential influence on minor metals demand in wind and solar expansion. *Journal of Industrial Ecology*, 30(2), 589–605. https://doi.org/10.1007/s44498-026-00040-0

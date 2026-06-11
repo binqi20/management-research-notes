@@ -10,9 +10,9 @@ authors:
 year: 2026
 journal: "Journal of Industrial Ecology"
 doi: "https://doi.org/10.1007/s44498-026-00038-8"
-volume: null
-issue: null
-pages: null
+volume: 30
+issue: 2
+pages: "555-569"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Aguilar-Hernandez 2026 Is academia addressing relevant questions to support a circularity transition in Latin America and the Caribbean.pdf"
@@ -78,4 +78,4 @@ The interview sample size (19 experts, 35% response rate) may limit full themati
 Further country-level research—particularly in Brazil, Mexico, Chile, and Colombia—should refine understanding of research alignment in specific national contexts. Future work should investigate the degree of connection and collaboration among CE researchers across LAC, the role of gender dynamics given that ~70% of interviewees were women and CE initiatives in the region appear often driven by women, and how participatory and pragmatic stakeholder engagement approaches can be applied to LAC's cultural and institutional context to co-develop research agendas. Additional empirical work is needed on the informal sector's CE practices beyond waste management.
 
 **APA 7th Citation**
-Aguilar-Hernandez, G. A., Guerrero, A. B., Vásquez-Ibarra, L., Rebolledo-Leiva, R., & Gallego-Schmid, A. (2026). Is academia addressing relevant questions to support a circularity transition in Latin America and the Caribbean? *Journal of Industrial Ecology*. https://doi.org/10.1007/s44498-026-00038-8
+Aguilar-Hernandez, G. A., Guerrero, A. B., Vásquez-Ibarra, L., Rebolledo-Leiva, R., & Gallego-Schmid, A. (2026). Is academia addressing relevant questions to support a circularity transition in Latin America and the Caribbean? *Journal of Industrial Ecology*, 30(2), 555–569. https://doi.org/10.1007/s44498-026-00038-8

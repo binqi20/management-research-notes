@@ -9,9 +9,9 @@ authors:
 year: 2026
 journal: "Journal of Management"
 doi: "https://doi.org/10.1177/01492063251406535"
-volume: null
-issue: null
-pages: null
+volume: 52
+issue: 6
+pages: "2469-2508"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Lee 2026 Physical Disability in the Workplace A Comprehensive Review and Unifying Framework.pdf"
@@ -65,4 +65,4 @@ Not reported in paper
 Future research should examine interpersonal outcomes (e.g., well-being, organizational commitment of coworkers without disabilities interacting with PWPDs), disaggregate disability types rather than aggregating them, and assess how specific disability attributes (severity, visibility, unpredictability, progression) shape outcomes. Scholars should also explore cross-national and cross-organizational differences — particularly outside Europe and the United States — and apply underused theoretical lenses such as expectancy violation theory and agency theory to questions of perception formation, accommodation monitoring, and performance evaluation for PWPDs.
 
 **APA 7th Citation**
-Lee, W. E., Roccapriore, A. Y., Lohrke, F. T., & Reutzel, C. R. (2026). Physical disability in the workplace: A comprehensive review and unifying framework. *Journal of Management*. https://doi.org/10.1177/01492063251406535
+Lee, W. E., Roccapriore, A. Y., Lohrke, F. T., & Reutzel, C. R. (2026). Physical disability in the workplace: A comprehensive review and unifying framework. *Journal of Management*, 52(6), 2469–2508. https://doi.org/10.1177/01492063251406535

@@ -1,5 +1,5 @@
 ---
-id: nbs-2026-02-boussebaa-2025
+id: nbs-2026-02-boussebaa-2026
 title: "Englishization Beyond the Global North: Dependency, Struggle, and Resistance in Brazilian Management Research"
 authors:
   - "Boussebaa, M."
@@ -7,12 +7,12 @@ authors:
   - "Vianna, F."
   - "Pina e Cunha, M."
   - "Clegg, S."
-year: 2025
+year: 2026
 journal: "Academy of Management Learning & Education"
 doi: "https://doi.org/10.5465/amle.2023.0245"
-volume: null
-issue: null
-pages: null
+volume: 25
+issue: 2
+pages: "187-205"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Boussebaa 2025 Englishization Beyond the Global North Dependency, Struggle, and Resistance in Brazilian Management Research.pdf"
@@ -85,4 +85,4 @@ Findings from Brazil may not generalize to other Global South contexts with diff
 Future studies should investigate Englishization in other Global South countries (e.g., China, former British and French colonies) and use comparative cross-national designs to examine how different colonial legacies and academic traditions shape dependency, struggle, and resistance. Research should also explore disciplinary variation in Englishization within Brazilian and other Global South contexts, use quantitative methods to systematically examine patterns of Englishization and its impact on visibility, and extend analysis to teaching and service domains of academic work.
 
 **APA 7th Citation**
-Boussebaa, M., Alcadipani, R., Vianna, F., Pina e Cunha, M., & Clegg, S. (2025). Englishization beyond the Global North: Dependency, struggle, and resistance in Brazilian management research. *Academy of Management Learning & Education*. https://doi.org/10.5465/amle.2023.0245
+Boussebaa, M., Alcadipani, R., Vianna, F., Pina e Cunha, M., & Clegg, S. (2026). Englishization beyond the Global North: Dependency, struggle, and resistance in Brazilian management research. *Academy of Management Learning & Education*, 25(2), 187–205. https://doi.org/10.5465/amle.2023.0245

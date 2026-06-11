@@ -8,9 +8,9 @@ authors:
 year: 2026
 journal: "Journal of Industrial Ecology"
 doi: "https://doi.org/10.1007/s44498-026-00031-1"
-volume: null
-issue: null
-pages: null
+volume: 30
+issue: 2
+pages: "461-474"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Blanco-Espeleta 2026 Supporting repairability analysis through graph-based visualisation.pdf"
@@ -75,4 +75,4 @@ The work is an exploratory investigation tested through an in-depth case study o
 Future work will apply the approach to additional product models and categories to assess its versatility and generalisability, and will conduct systematic sensitivity and uncertainty analyses to examine how alternative weighting schemes influence the indicators. Empirical validation in collaboration with repair centres and manufacturers is planned to compare model-derived indicators (disassembly paths, repair effort, graph-based RI) with real-world repair times, frequencies and outcomes. The authors also plan to automate data integration and graph generation by linking the EN 45554-based Repair Matrix and the graph-based model directly to CAD environments, using machine learning to assist in the automatic identification and classification of components and connections.
 
 **APA 7th Citation**
-Blanco-Espeleta, E., Pérez-Belis, V., & Bovea, M. D. (2026). Supporting repairability analysis through graph-based visualisation. *Journal of Industrial Ecology*. https://doi.org/10.1007/s44498-026-00031-1
+Blanco-Espeleta, E., Pérez-Belis, V., & Bovea, M. D. (2026). Supporting repairability analysis through graph-based visualisation. *Journal of Industrial Ecology*, 30(2), 461–474. https://doi.org/10.1007/s44498-026-00031-1
