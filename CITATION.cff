@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-05-27"
-version: "0.19.1"
+date-released: "2026-06-11"
+version: "0.20.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,17 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context Claude subagent scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.19.1
+  a published rubric) gates every note into the library. Version 0.20.0 (2026-06-11) adds the Network for Business
+  Sustainability (NBS) December 2025 monthly digest: 82 peer-reviewed
+  papers spanning Ecological Economics (including the biodiversity-and-
+  finance special issue), the Academy of Management Journal, Business &
+  Society, Review of Finance, Strategic Management Journal, and other
+  journals, all passing the two-layer faithfulness audit. The batch
+  introduced masthead-based detection of SSRN working papers that had
+  reached their published journal version (upgrading them to the journal
+  DOI and bibliographic metadata) and a code-orchestrated parallel-
+  dispatch extraction workflow that guarantees the subagent count.
+  Earlier, version 0.19.1
   (2026-05-27) is a provenance-correction patch over v0.19.0: no new
   notes; the extraction_model field was corrected from claude-opus-4-6
   (the bundle's stale default that v0.18.0 had standardized into 108
@@ -75,8 +85,8 @@ abstract: >-
   pilot across vol. 66 no. 1 through vol. 66 no. 6, vol. 67 no. 1
   through vol. 67 no. 6, vol. 68 no. 1 through vol. 68 no. 6, and vol.
   69 no. 1 (vol. 66 no. 1 added in v0.19.0). The full library passes
-  the v0.19.1 audit sweep with 270/270 PASS and zero CONTRADICTED
-  verdicts across twenty release cycles. An AGENTS.md file provides
+  the v0.20.0 audit sweep with 352/352 PASS and zero CONTRADICTED
+  verdicts across twenty-one release cycles. An AGENTS.md file provides
   a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom
   SDK apps) can discover and consume the data with known faithfulness
