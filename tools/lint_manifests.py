@@ -158,11 +158,14 @@ KNOWN_COMPOUND_SURNAMES: dict[str, dict[str, str]] = {
 # Heuristic validators
 # ---------------------------------------------------------------------------
 
-# Latin letters (A-Za-z) + common diacritics + apostrophes (straight/curly) +
-# hyphens + whitespace. Allows compound surnames like "van der Berg",
-# "De La Cruz", "O'Brien", "Tröster", but flags numerics or other oddities.
+# Latin letters (A-Za-z) + diacritics across Latin-1 Supplement, Latin
+# Extended-A/B, and Latin Extended Additional (U+1E00–U+1EFF, e.g. Vietnamese
+# "Thảo") + apostrophes (straight/curly) + hyphens + whitespace. Allows
+# compound surnames like "van der Berg", "De La Cruz", "O'Brien", "Tröster",
+# "Peñaloza-Pacheco", "Strøm-Andersen", but still flags numerics, commas,
+# over-long full-name captures, and non-Latin scripts (Cyrillic/CJK/etc.).
 _FIRST_AUTHOR_LAST_RE = re.compile(
-    r"^[A-Za-zÀ-ſƀ-ɏ'’\-\s]+$"
+    r"^[A-Za-zÀ-ſƀ-ɏḀ-ỿ'’\-\s]+$"
 )
 
 _DOI_RE = re.compile(r"^10\.\d{3,}/\S+$")
