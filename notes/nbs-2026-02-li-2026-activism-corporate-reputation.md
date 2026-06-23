@@ -7,9 +7,9 @@ authors:
 year: 2026
 journal: "Journal of Management Studies"
 doi: "https://doi.org/10.1111/joms.70060"
-volume: null
-issue: null
-pages: null
+volume: 63
+issue: 5
+pages: "2175-2201"
 
 source: "NBS/2026-02"
 pdf_path: "library/NBS/2026-02/pdfs/Li 2026 CEO Activism and Corporate Reputation How Authenticity and CSR Mitigate Stakeholder Misalignment.pdf"
@@ -72,4 +72,4 @@ Study 1 is correlational and its mediation analysis does not establish causality
 Examine more contentious and politically costly forms of CSR (e.g., BLM-aligned CSR) to test whether CSR alone can trigger authenticity perceptions in charged domains. Employ non-intrusive methods such as sentiment analysis to trace longitudinal reputational effects in real-world settings, and investigate the antecedents of CEO activism — in particular, why B Corps were less likely than Fortune 500 firms to issue activist statements despite benefiting more from doing so.
 
 **APA 7th Citation**
-Li, L. Z., & Soule, S. A. (2026). CEO activism and corporate reputation: How authenticity and CSR mitigate stakeholder misalignment. *Journal of Management Studies*. https://doi.org/10.1111/joms.70060
+Li, L. Z., & Soule, S. A. (2026). CEO activism and corporate reputation: How authenticity and CSR mitigate stakeholder misalignment. *Journal of Management Studies*, 63(5), 2175-2201. https://doi.org/10.1111/joms.70060
