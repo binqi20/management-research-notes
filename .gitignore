@@ -75,3 +75,12 @@ venv/
 env/
 build/
 dist/
+
+# --- Ingestion pipeline working artifacts -------------------------------------
+# Manifest backups (manifest.tsv.bak and manifest.tsv.<label>.bak) and the
+# stub-audit reports (missing-pdfs.tsv/.xlsx, download-report.tsv). Local
+# working files from the ingest/cleanup passes — regenerable, never published.
+*.tsv.bak
+*.tsv.*.bak
+missing-pdfs.*
+download-report.tsv
