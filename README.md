@@ -351,6 +351,25 @@ The full library has been swept three times across releases:
   indexed). All three gates exit 0; 6 *Review of Finance* DOIs are valid but
   CrossRef-pending and will verify once indexed.
 
+- **v0.21.0 sweep (2026-06-23, 465 notes):**
+  Adds the NBS **January 2026** monthly digest — **113 peer-reviewed
+  papers**, led by the *Journal of Business Ethics* (40) with *Research
+  Policy* (14), the *Journal of Environmental Economics and Management*,
+  *Organization Science*, *Human Relations*, *The Journal of Finance*,
+  *MIS Quarterly*, and others. **113 / 113 PASS** (Layer 1 + Layer 2).
+  Each batch ran as two ~5–6-paper waves through the `pipeline()`
+  extraction workflow to stay under a transient server rate-limit while
+  keeping the subagent count code-guaranteed. Surfaced more SSRN working
+  papers that had reached their published journal version (upgraded to
+  the journal DOI/metadata — e.g. Wang → *Journal of Business Ethics*,
+  Duguay → *Journal of Accounting and Economics*) and several
+  filename-lossy title restorations (dropped colons / question marks
+  repaired against CrossRef). Seven incomplete-PDF stubs were found; six
+  were re-acquired and ingested and one (Myers, a special-issue
+  editorial) was skipped. A separate commit cleaned CrossRef metadata
+  drift in 3 prior-release NBS-2026-02 notes. All three gates exit 0
+  (validate, verify_metadata, lint_manifests).
+
 Run the audit on a single note with:
 
 ```bash
@@ -361,13 +380,14 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this release
 
-This release contains **352 curated notes**:
+This release contains **465 curated notes**:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
   digest. (62 notes shipped in v0.2.0; 15 previously-missing papers were
   recovered and added in v0.3.0.)
 - **NBS 2025-12** — 82 notes from the NBS **December 2025** monthly digest, spanning the *Ecological Economics* biodiversity-and-finance special issue, AMJ, *Business & Society*, *Review of Finance*, *Strategic Management Journal*, and other journals (added in v0.20.0).
+- **NBS 2026-01** — 113 notes from the NBS **January 2026** monthly digest, led by the *Journal of Business Ethics* (40) with *Research Policy* (14), the *Journal of Environmental Economics and Management*, *Organization Science*, *Human Relations*, *The Journal of Finance*, *MIS Quarterly*, and other journals (added in v0.21.0).
 - **AMJ pilot** — 193 notes across nineteen consecutive recent issues of
   the [Academy of Management Journal](https://journals.aom.org/journal/amj)
   (vol. 66 no. 1 through vol. 66 no. 6, vol. 67 no. 1 through vol. 67
@@ -525,7 +545,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.20.0},
+  version      = {0.21.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

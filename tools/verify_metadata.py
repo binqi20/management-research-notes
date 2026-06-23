@@ -138,6 +138,23 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "Suppressed 2026-05-16."
         ),
     },
+    "nbs-2026-01-groutsis-2026": {
+        "authors": (
+            "CrossRef truncates the 4th author's compound family name to "
+            "family='Remedios', dropping 'D'Almada'. The PDF byline reads "
+            "'Rose D'Almada Remedios', so 'D'Almada Remedios' is the full "
+            "compound surname and the note matches the byline. "
+            "Suppressed 2026-06-20."
+        ),
+    },
+    "nbs-2026-01-maggio-2026": {
+        "authors": (
+            "CrossRef parses the first author 'Marco Di Maggio' as "
+            "family='Maggio', dropping the 'Di' particle. The PDF byline "
+            "reads 'MARCO DI MAGGIO', so 'Di Maggio' is the full surname "
+            "and the note matches the byline. Suppressed 2026-06-20."
+        ),
+    },
 }
 
 
