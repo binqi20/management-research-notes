@@ -118,7 +118,7 @@ audit** before it is accepted into the library:
   `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. A note is
   rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-The full library has been swept three times across releases:
+The full library has been swept four times across releases:
 
 - **v0.2.0 sweep (2026-04-17, 90 notes):** 88 / 90 initial PASS; two
   fails (Mahringer 2025, Li 2026) repaired via re-extraction, and the
@@ -370,6 +370,17 @@ The full library has been swept three times across releases:
   drift in 3 prior-release NBS-2026-02 notes. All three gates exit 0
   (validate, verify_metadata, lint_manifests).
 
+- **v0.22.0 sweep (2026-06-24, 542 notes):**
+  Adds **Academy of Management Journal volume 65, issues 1-6** — **77
+  peer-reviewed papers** with issue counts **13, 13, 13, 12, 13, 13**.
+  This completes AMJ pilot coverage from vol. 65 no. 1 through vol. 69
+  no. 1. **77 / 77 PASS** the faithfulness audit for the AMJ volume-65
+  batch; the full library now has **542 / 542 PASS**, 0 `UNSUPPORTED`,
+  and 0 `CONTRADICTED` verdicts. All six AMJ volume-65 manifests lint
+  cleanly, all notes validate, and CrossRef metadata verification exits
+  0 with no mismatches. The public indexes were rebuilt from notes:
+  SQLite, CSV, and BibTeX all contain 542 records.
+
 Run the audit on a single note with:
 
 ```bash
@@ -393,7 +404,7 @@ This main-branch snapshot contains **542 curated notes**:
   (vol. 65 no. 1 through vol. 65 no. 6, vol. 66 no. 1 through vol.
   66 no. 6, vol. 67 no. 1 through vol. 67 no. 6, vol. 68 no. 1
   through vol. 68 no. 6, and vol. 69 no. 1).
-  The current main-branch update adds vol. 65 no. 1-6 (77 notes);
+  v0.22.0 added vol. 65 no. 1-6 (77 notes);
   v0.19.0 added vol. 66 no. 1 (13 notes); v0.18.0 added vol. 66 no. 2
   (13 notes); v0.17.0 added vol. 66 no. 3 (11 notes); v0.16.0 added
   vol. 66 no. 4 (11 notes); v0.15.0 added vol. 66 no. 5 (12 notes);
@@ -547,7 +558,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.21.0},
+  version      = {0.22.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}
