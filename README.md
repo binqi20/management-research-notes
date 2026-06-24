@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-270-brightgreen.svg)](notes/)
-[![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-release)
-[![Audit](https://img.shields.io/badge/audit-270%2F270%20PASS-success.svg)](#faithfulness-audit)
+[![Notes](https://img.shields.io/badge/curated%20notes-542-brightgreen.svg)](notes/)
+[![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-snapshot)
+[![Audit](https://img.shields.io/badge/audit-542%2F542%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -378,9 +378,9 @@ python tools/audit_note.py notes/<paper_id>.md
 
 Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
-## What's in this release
+## What's in this snapshot
 
-This release contains **465 curated notes**:
+This main-branch snapshot contains **542 curated notes**:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
@@ -388,10 +388,12 @@ This release contains **465 curated notes**:
   recovered and added in v0.3.0.)
 - **NBS 2025-12** — 82 notes from the NBS **December 2025** monthly digest, spanning the *Ecological Economics* biodiversity-and-finance special issue, AMJ, *Business & Society*, *Review of Finance*, *Strategic Management Journal*, and other journals (added in v0.20.0).
 - **NBS 2026-01** — 113 notes from the NBS **January 2026** monthly digest, led by the *Journal of Business Ethics* (40) with *Research Policy* (14), the *Journal of Environmental Economics and Management*, *Organization Science*, *Human Relations*, *The Journal of Finance*, *MIS Quarterly*, and other journals (added in v0.21.0).
-- **AMJ pilot** — 193 notes across nineteen consecutive recent issues of
+- **AMJ pilot** — 270 notes across 25 consecutive recent issues of
   the [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 66 no. 1 through vol. 66 no. 6, vol. 67 no. 1 through vol. 67
-  no. 6, vol. 68 no. 1 through vol. 68 no. 6, and vol. 69 no. 1).
+  (vol. 65 no. 1 through vol. 65 no. 6, vol. 66 no. 1 through vol.
+  66 no. 6, vol. 67 no. 1 through vol. 67 no. 6, vol. 68 no. 1
+  through vol. 68 no. 6, and vol. 69 no. 1).
+  The current main-branch update adds vol. 65 no. 1-6 (77 notes);
   v0.19.0 added vol. 66 no. 1 (13 notes); v0.18.0 added vol. 66 no. 2
   (13 notes); v0.17.0 added vol. 66 no. 3 (11 notes); v0.16.0 added
   vol. 66 no. 4 (11 notes); v0.15.0 added vol. 66 no. 5 (12 notes);
@@ -406,18 +408,18 @@ This release contains **465 curated notes**:
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |   113 |
-| empirical-qualitative  |    75 |
-| empirical-mixed        |    33 |
-| editorial              |    23 |
-| conceptual             |    19 |
-| review                 |     4 |
-| book-review            |     3 |
-| **Total**              | **270** |
+| empirical-quantitative |   258 |
+| empirical-qualitative  |   133 |
+| conceptual             |    52 |
+| empirical-mixed        |    50 |
+| editorial              |    34 |
+| review                 |     9 |
+| book-review            |     6 |
+| **Total**              | **542** |
 
-Every note carries a v2 `evidence:` anchor block (Layer 1) and has passed
-the Layer 2 semantic audit. See [Faithfulness audit](#faithfulness-audit)
-above.
+All notes have passed the semantic audit. The corpus contains 88 legacy v1
+notes and 454 v2 notes; v2 notes carry an `evidence:` anchor block checked by
+Layer 1. See [Faithfulness audit](#faithfulness-audit) above.
 
 ## Repository layout
 
@@ -431,10 +433,10 @@ management-research-notes/
 ├── docs/
 │   ├── extraction-prompt.md           ← the canonical extraction prompt (v2)
 │   └── audit-rubric.md                ← rubric the Layer 2 auditor uses
-├── notes/                             ← 175 curated paper notes (the source of truth)
+├── notes/                             ← 542 curated paper notes (the source of truth)
 │   └── nbs-2026-02-spoor-2026.md
 ├── index/                             ← derived views, all rebuildable
-│   ├── synapse.db                     ← SQLite + FTS5 (~1.7 MB)
+│   ├── synapse.db                     ← SQLite + FTS5 (~9.1 MB)
 │   ├── papers.csv                     ← flat tabular export
 │   ├── library.bib                    ← BibTeX, one @article per note
 │   └── topics.json                    ← 14-domain controlled vocabulary
@@ -451,7 +453,7 @@ management-research-notes/
 │   ├── NBS/2026-02/
 │   │   ├── manifest.tsv               ← trusted bibliographic source for the batch
 │   │   └── missing.tsv                ← papers NBS listed but PDFs unavailable
-│   └── AMJ/{vol-68-5,vol-68-6,vol-69-1}/
+│   └── AMJ/vol-65-no-1 ... vol-69-no-1/
 │       └── manifest.tsv               ← per-issue manifests for the AMJ pilot
 │       (pdfs/ and text/ are intentionally NOT published — see Copyright below)
 └── .synapse/

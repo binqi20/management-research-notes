@@ -113,6 +113,63 @@ KNOWN_COMPOUND_SURNAMES: dict[str, dict[str, str]] = {
             "'Wal'. Suppressed 2026-05-12."
         ),
     },
+    "10.5465/amj.2020.1623": {
+        "manifest_surname": "Leon",
+        "crossref_family": "de Leon",
+        "rationale": (
+            "Rebecca Ponce de Leon — Spanish compound surname 'Ponce de "
+            "Leon' (the article cites it 17x). CrossRef splits it as "
+            "given='Rebecca Ponce', family='de Leon'; manifest uses the "
+            "citation-convention short form 'Leon'. Suppressed 2026-06-23."
+        ),
+    },
+    "10.5465/amj.2020.1740": {
+        "manifest_surname": "Gomez",
+        "crossref_family": "Munguia Gomez",
+        "rationale": (
+            "David M. Munguia Gomez — compound family name. CrossRef stores "
+            "'Munguia Gomez'; manifest uses the citation-convention short "
+            "form 'Gomez'. Suppressed 2026-06-23."
+        ),
+    },
+    "10.5465/amj.2020.1492": {
+        "manifest_surname": "Rond",
+        "crossref_family": "de Rond",
+        "rationale": (
+            "Mark de Rond (Cambridge) — 'de Rond' compound prefix. CrossRef "
+            "stores 'de Rond'; manifest uses the citation-convention short "
+            "form 'Rond'. Suppressed 2026-06-23."
+        ),
+    },
+    "10.5465/amj.2020.1516": {
+        "manifest_surname": "Tang",
+        "crossref_family": "Man Tang",
+        "rationale": (
+            "Pok Man Tang — Cantonese romanization; CrossRef parses "
+            "family='Man Tang'. The journal running header and the existing "
+            "liao-2024 note use 'Tang'; manifest matches that convention. "
+            "Suppressed 2026-06-23."
+        ),
+    },
+    "10.5465/amj.2019.1402": {
+        "manifest_surname": "Eleazar",
+        "crossref_family": "Welbourne Eleazar",
+        "rationale": (
+            "Miranda J. Welbourne Eleazar — compound family name 'Welbourne "
+            "Eleazar' (cited 12x). CrossRef stores 'Welbourne Eleazar'; "
+            "manifest uses the citation-convention short form 'Eleazar'. "
+            "Suppressed 2026-06-23."
+        ),
+    },
+    "10.5465/amj.2019.0616": {
+        "manifest_surname": "Pamphile",
+        "crossref_family": "Deeds Pamphile",
+        "rationale": (
+            "Vontrese Deeds Pamphile — compound family name. CrossRef stores "
+            "'Deeds Pamphile'; manifest and the article's running text use the "
+            "citation-convention short form 'Pamphile'. Suppressed 2026-06-23."
+        ),
+    },
     "10.5465/amj.2022.1075": {
         "manifest_surname": "Oever",
         "crossref_family": "van den Oever",

@@ -15,13 +15,13 @@ focuses on what's portable across agents.
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**175 curated notes** on peer-reviewed papers in management and business
-sustainability research (sources: Network for Business Sustainability
-2026-02 digest — 77 notes — and the Academy of Management Journal pilot
-across vol-67-3, vol-67-4, vol-67-5, vol-67-6, vol-68-1 through 6, and
-vol-69-1 — 98 notes). Every note is a single Markdown file with YAML
-frontmatter and a structured Markdown body. The repository is MIT
-licensed; individual PDFs are not redistributed.
+**542 curated notes** on peer-reviewed papers in management and business
+sustainability research. The current main-branch snapshot contains 272
+Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
+and 270 Academy of Management Journal notes across 25 recent issues
+(vol. 65 no. 1 through vol. 69 no. 1). Every note is a single Markdown
+file with YAML frontmatter and a structured Markdown body. The repository
+is MIT licensed; individual PDFs are not redistributed.
 
 **Why it exists for agents specifically.** Raw PDFs are expensive to load
 in bulk and their text layers vary in quality. These notes are a
@@ -116,28 +116,28 @@ from [`CLAUDE.md`](CLAUDE.md)):
 Every note in this repository has been through a **two-layer faithfulness
 audit**:
 
-- **Layer 1 — Evidence anchors (mechanical).** Each factual claim (sample size, country, industry, time period, theories, methods, keywords) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically.
+- **Layer 1 — Evidence anchors (mechanical).** For v2 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh subagent).** A fresh Claude subagent with cold context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Full-library sweep result (2026-05-07, v0.11.0):
-175 / 175 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The full verdict
-distribution per field is in the release notes; `PARTIAL` verdicts (stylistic
-compressions that don't rise to a faithfulness failure) are flagged for
-human review but do not block publication. Across ten release cycles
-(v0.2.0 through v0.11.0) the library has never produced a `CONTRADICTED`
-verdict — no claim in any note actively contradicts its source paper.
+**Current main-branch audit state (2026-06-24):
+542 / 542 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The corpus contains
+88 legacy v1 notes and 454 v2 notes with evidence anchors. `PARTIAL`
+verdicts (stylistic compressions that don't rise to a faithfulness failure)
+are flagged for human review but do not block publication. The library has
+never produced a `CONTRADICTED` verdict — no claim in any note actively
+contradicts its source paper.
 
 Agents querying the data can rely on the following:
 
 - **Every abstract is a verbatim substring of the source PDF.** If your agent quotes an abstract from a note, it is quoting the paper.
-- **Every factual claim in v2 note frontmatter is anchored.** If your agent cites a sample size or a theory from the frontmatter, there is a verbatim PDF quote behind it in the `evidence:` block.
+- **Every factual claim in v2 note frontmatter is anchored.** If your agent cites a sample size or a theory from v2 frontmatter, there is a verbatim PDF quote behind it in the `evidence:` block.
 - **Every prose field has passed a semantic audit.** If your agent summarizes a research question, mechanism, or theoretical contribution from a note, it's quoting a claim that was independently cross-checked against the PDF.
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The library was last swept on 2026-04-17.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-06-24.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
-- `PARTIAL` verdicts (~60 across the library) indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
+- `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
 ---
 

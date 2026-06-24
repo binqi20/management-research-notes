@@ -155,6 +155,38 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "and the note matches the byline. Suppressed 2026-06-20."
         ),
     },
+    "amj-vol-65-no-2-wang-2022": {
+        "authors": (
+            "CrossRef truncates the 2nd author's compound surname to "
+            "family='Pahnke', dropping 'Cox'. The PDF byline reads 'EMILY "
+            "COX PAHNKE', so 'Cox Pahnke' is the full surname and the note "
+            "matches the byline. Suppressed 2026-06-23."
+        ),
+    },
+    "amj-vol-65-no-3-leon-2022": {
+        "authors": (
+            "CrossRef truncates the first author's compound surname to "
+            "family='de Leon', dropping 'Ponce'. The byline and running text "
+            "read 'Rebecca Ponce de Leon', so 'Ponce de Leon' is the full "
+            "surname and the note matches it. Suppressed 2026-06-23."
+        ),
+    },
+    "amj-vol-65-no-3-tang-2022": {
+        "authors": (
+            "CrossRef parses the first author 'Pok Man Tang' as "
+            "family='Man Tang'. The journal running header and the existing "
+            "liao-2024 note use 'Tang'; the note matches that convention. "
+            "Suppressed 2026-06-23."
+        ),
+    },
+    "amj-vol-65-no-4-pamphile-2022": {
+        "authors": (
+            "CrossRef stores the compound family name 'Deeds Pamphile'; the "
+            "article's running text cites the first author as 'Pamphile' "
+            "(18x) and the note matches that citation-convention short form. "
+            "Suppressed 2026-06-23."
+        ),
+    },
 }
 
 
