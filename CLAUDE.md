@@ -98,12 +98,14 @@ research. Read this file before doing anything in this folder.
    frontmatter block whose quotes are verbatim substrings of the PDF text (same
    two-pass normalization the abstract check uses). The Layer 1 substring check is
    mechanical and deterministic — fabricated anchors will fail `tools/validate_note.py`
-   and `tools/audit_note.py` identically. Layer 2 dispatches a fresh cold-context
-   Claude subagent that scores the prose fields (research question, mechanism,
+   and `tools/audit_note.py` identically. Layer 2 uses a fresh, independent
+   auditor context that scores the prose fields (research question, mechanism,
    theoretical contribution, practical implication, limitations, future research)
-   against the PDF via the rubric at `docs/audit-rubric.md`. Both layers run
-   automatically inside `/synapse-ingest`; `/audit-note <paper_id>` re-runs them on
-   a single note on demand. v1 notes are exempt via an `extraction_version` gate.
+   against the PDF via the rubric at `docs/audit-rubric.md`. The auditor must
+   not be the same agent/session that wrote the note. When the audit is run by
+   Codex or another external agent, write the Layer 2 verdict as provenance-
+   checked JSON and assemble it with `tools/audit_note.py --layer-2-json`.
+   v1 notes are exempt via an `extraction_version` gate.
 
 ## When the user asks "what's in the library?"
 
@@ -126,16 +128,33 @@ research. Read this file before doing anything in this folder.
 3. Read the bundle, apply the extraction prompt to the text, and write the resulting
    note to `notes/{paper_id}.md` using the `Write` tool. The bundle tells you exactly
    what `paper_id` to use and what frontmatter is mandatory.
-4. Run `python tools/audit_note.py notes/{paper_id}.md --flag`. This is the
-   two-layer faithfulness audit: Layer 1 substring-checks the `evidence:` anchors
-   against the PDF text, Layer 2 dispatches a fresh cold-context Claude subagent
-   that scores the six prose fields against `docs/audit-rubric.md`. On fail, writes
-   `incoming/_audits/{paper_id}.audit.json` and `incoming/_flagged/{paper_id}.reason.txt`.
-   Takes roughly 1–5 minutes per paper — the Layer 2 subagent is the dominant cost.
-5. Run `python tools/validate_note.py notes/{paper_id}.md`. If it fails, fix the
+4. Run `python tools/validate_note.py notes/{paper_id}.md`. If it fails, fix the
    note OR move it to `incoming/_flagged/` with a `.reason.txt` and report what
    went wrong.
+5. Run the two-layer faithfulness audit with an independent Layer 2 auditor.
+   Layer 1 substring-checks the `evidence:` anchors against the PDF text. Layer
+   2 scores the six prose fields against `docs/audit-rubric.md`. If you are
+   using Claude Code's built-in path, run `python tools/audit_note.py
+   notes/{paper_id}.md --flag`. If you are using Codex or another external
+   auditor, have that independent auditor write `incoming/_audits/{paper_id}.layer2.json`
+   with provenance fields, then assemble the official report with
+   `python tools/audit_note.py notes/{paper_id}.md --layer-2-json
+   incoming/_audits/{paper_id}.layer2.json --flag`.
 6. Run `python tools/build_index.py` to update the SQLite index.
+
+## Parallel agent slot policy
+
+When ingesting or auditing a paper issue with parallel agents, keep at most 5
+active subagents at a time. This is a Synapse operating default for stability,
+not a universal platform limit. Use separate waves for extraction and Layer 2
+audit: extraction agents may write only `notes/{paper_id}.md`, audit agents may
+write only `incoming/_audits/{paper_id}.layer2.json`, and the parent session
+assembles official audit reports and rebuilds derived indexes.
+
+After any worker returns, record its result and close the completed agent thread
+before spawning another. If spawning hits an active-agent cap, close completed
+agents and retry once; if it still fails, continue with a wave of 3 or serial
+execution while preserving extraction/audit independence.
 
 ## Things that should make you stop and ask the user
 

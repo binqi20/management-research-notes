@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-542-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-617-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-snapshot)
-[![Audit](https://img.shields.io/badge/audit-542%2F542%20PASS-success.svg)](#faithfulness-audit)
+[![Audit](https://img.shields.io/badge/audit-617%2F617%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -112,13 +112,13 @@ audit** before it is accepted into the library:
   evidence.
 - **Layer 2 — Semantic audit (fresh cold-context subagent).** For the
   prose fields (research question, mechanism, theoretical contribution,
-  practical implication, limitations, future research) a fresh Claude
-  subagent reads the PDF, reads the note, and emits a per-field verdict
+  practical implication, limitations, future research) a fresh independent
+  auditor reads the PDF, reads the note, and emits a per-field verdict
   against the rubric at [`docs/audit-rubric.md`](docs/audit-rubric.md):
   `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. A note is
   rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-The full library has been swept four times across releases:
+The full library has been swept across releases:
 
 - **v0.2.0 sweep (2026-04-17, 90 notes):** 88 / 90 initial PASS; two
   fails (Mahringer 2025, Li 2026) repaired via re-extraction, and the
@@ -381,6 +381,18 @@ The full library has been swept four times across releases:
   0 with no mismatches. The public indexes were rebuilt from notes:
   SQLite, CSV, and BibTeX all contain 542 records.
 
+- **v0.23.0 sweep (2026-06-27, 617 notes):**
+  Adds **Academy of Management Journal volume 64, issues 1-6** — **75
+  peer-reviewed papers** with issue counts **12, 12, 13, 12, 13, 13**.
+  This completes AMJ pilot coverage from vol. 64 no. 1 through vol. 69
+  no. 1. **75 / 75 PASS** the faithfulness audit for the AMJ volume-64
+  batch; the full library now has **617 / 617 PASS**, 0 `UNSUPPORTED`,
+  and 0 `CONTRADICTED` verdicts. All six AMJ volume-64 manifests lint
+  cleanly, all notes validate, and CrossRef metadata verification exits
+  0 with no mismatches; remaining notices are documented CrossRef-side
+  false positives or lookup warnings. The public indexes were rebuilt from
+  notes: SQLite, CSV, and BibTeX all contain 617 records.
+
 Run the audit on a single note with:
 
 ```bash
@@ -391,7 +403,7 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this snapshot
 
-This main-branch snapshot contains **542 curated notes**:
+This main-branch snapshot contains **617 curated notes**:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
@@ -399,11 +411,13 @@ This main-branch snapshot contains **542 curated notes**:
   recovered and added in v0.3.0.)
 - **NBS 2025-12** — 82 notes from the NBS **December 2025** monthly digest, spanning the *Ecological Economics* biodiversity-and-finance special issue, AMJ, *Business & Society*, *Review of Finance*, *Strategic Management Journal*, and other journals (added in v0.20.0).
 - **NBS 2026-01** — 113 notes from the NBS **January 2026** monthly digest, led by the *Journal of Business Ethics* (40) with *Research Policy* (14), the *Journal of Environmental Economics and Management*, *Organization Science*, *Human Relations*, *The Journal of Finance*, *MIS Quarterly*, and other journals (added in v0.21.0).
-- **AMJ pilot** — 270 notes across 25 consecutive recent issues of
+- **AMJ pilot** — 345 notes across 31 consecutive recent issues of
   the [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 65 no. 1 through vol. 65 no. 6, vol. 66 no. 1 through vol.
+  (vol. 64 no. 1 through vol. 64 no. 6, vol. 65 no. 1 through vol.
+  65 no. 6, vol. 66 no. 1 through vol.
   66 no. 6, vol. 67 no. 1 through vol. 67 no. 6, vol. 68 no. 1
   through vol. 68 no. 6, and vol. 69 no. 1).
+  v0.23.0 added vol. 64 no. 1-6 (75 notes);
   v0.22.0 added vol. 65 no. 1-6 (77 notes);
   v0.19.0 added vol. 66 no. 1 (13 notes); v0.18.0 added vol. 66 no. 2
   (13 notes); v0.17.0 added vol. 66 no. 3 (11 notes); v0.16.0 added
@@ -419,17 +433,17 @@ This main-branch snapshot contains **542 curated notes**:
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |   258 |
-| empirical-qualitative  |   133 |
+| empirical-quantitative |   311 |
+| empirical-qualitative  |   145 |
 | conceptual             |    52 |
-| empirical-mixed        |    50 |
-| editorial              |    34 |
+| empirical-mixed        |    56 |
+| editorial              |    38 |
 | review                 |     9 |
 | book-review            |     6 |
-| **Total**              | **542** |
+| **Total**              | **617** |
 
 All notes have passed the semantic audit. The corpus contains 88 legacy v1
-notes and 454 v2 notes; v2 notes carry an `evidence:` anchor block checked by
+notes and 529 v2 notes; v2 notes carry an `evidence:` anchor block checked by
 Layer 1. See [Faithfulness audit](#faithfulness-audit) above.
 
 ## Repository layout
@@ -444,10 +458,10 @@ management-research-notes/
 ├── docs/
 │   ├── extraction-prompt.md           ← the canonical extraction prompt (v2)
 │   └── audit-rubric.md                ← rubric the Layer 2 auditor uses
-├── notes/                             ← 542 curated paper notes (the source of truth)
+├── notes/                             ← 617 curated paper notes (the source of truth)
 │   └── nbs-2026-02-spoor-2026.md
 ├── index/                             ← derived views, all rebuildable
-│   ├── synapse.db                     ← SQLite + FTS5 (~9.1 MB)
+│   ├── synapse.db                     ← SQLite + FTS5 (~10 MB)
 │   ├── papers.csv                     ← flat tabular export
 │   ├── library.bib                    ← BibTeX, one @article per note
 │   └── topics.json                    ← 14-domain controlled vocabulary
@@ -464,7 +478,7 @@ management-research-notes/
 │   ├── NBS/2026-02/
 │   │   ├── manifest.tsv               ← trusted bibliographic source for the batch
 │   │   └── missing.tsv                ← papers NBS listed but PDFs unavailable
-│   └── AMJ/vol-65-no-1 ... vol-69-no-1/
+│   └── AMJ/vol-64-no-1 ... vol-69-no-1/
 │       └── manifest.tsv               ← per-issue manifests for the AMJ pilot
 │       (pdfs/ and text/ are intentionally NOT published — see Copyright below)
 └── .synapse/
@@ -558,7 +572,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.22.0},
+  version      = {0.23.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}
@@ -575,8 +589,8 @@ This project is intended to be a long-running research-infrastructure
 project, not a one-shot data drop. The near-term roadmap:
 
 - **More monthly batches** — extend NBS coverage with each new digest and
-  continue the AMJ sweep beyond the current three-issue pilot, keeping
-  paper IDs stable across updates.
+  continue the AMJ backfill into earlier volumes, keeping paper IDs stable
+  across updates.
 - **Additional journal sources** — add Web of Science exports and journal
   RSS feeds as parallel `library/{source}/{issue}/` trees, reusing the
   same pipeline.
@@ -596,6 +610,8 @@ project, not a one-shot data drop. The near-term roadmap:
   curating the monthly research digest that seeds this library.
 - **[Anthropic Claude Code](https://www.anthropic.com/claude-code)** for the
   extraction-and-validation workflow that drives the ingestion pipeline.
+- **OpenAI Codex** for the issue-level extraction and independent-audit
+  orchestration used in the AMJ volume 64 backfill.
 - The authors of every paper in `notes/` — without their original scholarship,
   there is nothing to distill.
 

@@ -23,6 +23,11 @@ incoming/_flagged/
 # `python tools/audit_note.py notes/<paper_id>.md`.
 incoming/_audits/
 
+# Issue-level ingestion ledgers. These are local process records with repair
+# notes, counts, and audit state; keep them private unless deliberately
+# converted into public documentation.
+incoming/_ledgers/
+
 # Other incoming staging artifacts
 incoming/*.pdf
 incoming/*.txt

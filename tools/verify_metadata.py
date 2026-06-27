@@ -138,6 +138,25 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "Suppressed 2026-05-16."
         ),
     },
+    "amj-vol-64-no-5-claus-2021": {
+        "title": (
+            "CrossRef record has malformed inline HTML: title contains "
+            "'Case of<i>Villages for Africa</i>in Rural Tanzania' with NO "
+            "spaces around the italic tag, so even after tag-strip "
+            "normalization the CrossRef value renders as 'Case ofVillages "
+            "for Africain Rural Tanzania'. The note's title matches the PDF "
+            "and the journal's published version with proper spacing. "
+            "Suppressed 2026-06-26."
+        ),
+    },
+    "amj-vol-64-no-6-cunningham-2021": {
+        "authors": (
+            "CrossRef stores the first author's family name as 'Lee Cunningham'. "
+            "The PDF byline reads 'JULIA LEE CUNNINGHAM' while the article "
+            "running head and citation convention use 'Cunningham'. The note "
+            "matches the PDF citation convention. Suppressed 2026-06-26."
+        ),
+    },
     "nbs-2026-01-groutsis-2026": {
         "authors": (
             "CrossRef truncates the 4th author's compound family name to "

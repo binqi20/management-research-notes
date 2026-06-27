@@ -188,8 +188,21 @@ failures to the user** before proceeding.
 ## Step 2 — Extract notes in parallel batches
 
 For every bundle produced in step 1, dispatch one `Agent` subtask to extract
-that paper into a Synapse note. **Batch size: 8 concurrent agents.** Dispatch
-a batch, wait for all 8 to return, then dispatch the next batch.
+that paper into a Synapse note. **Synapse agent-slot policy: keep at most 5
+active extraction agents at a time.** This is a local operating default for
+stability and token control, not a claimed universal Codex platform limit.
+Dispatch a wave, wait for workers to return, record each result, close each
+completed agent thread, then spawn the next wave.
+
+If spawning fails with an agent-cap error, first close any completed agents and
+retry once. If the retry still fails, continue with a smaller wave of 3 or
+serial execution. Do not weaken the extraction/audit separation to recover
+speed.
+
+Extraction agents write notes only. They must not run the semantic Layer 2 audit
+on their own work, and they must not produce the external Layer 2 JSON. The
+audit layer is deliberately separated into Step 2.5 so the auditor has fresh
+context and no prior commitment to the note's claims.
 
 Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 
@@ -209,26 +222,11 @@ Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 >    text + paper_id. Treat the bib block as authoritative.
 >
 > **Output**: use the `Write` tool to create exactly one file at
-> `notes/<PAPER_ID>.md`. Then run these two checks, in order, and record
-> the exit code plus the printed output of each:
+> `notes/<PAPER_ID>.md`. Then run this structural check and record the exit
+> code plus printed output:
 >
->     python tools/audit_note.py    notes/<PAPER_ID>.md --flag
 >     python tools/validate_note.py notes/<PAPER_ID>.md --flag
 >
-> These two tools check **different** things and must **both** pass.
->
-> - `audit_note.py` runs the **two-layer faithfulness audit**. Layer 1
->   substring-checks every quote in the note's `evidence:` frontmatter
->   block against the extracted PDF text (same two-pass normalization the
->   abstract check uses). Layer 2 dispatches a fresh Claude subagent in a
->   cold context that reads `docs/audit-rubric.md`, the note body, and
->   the PDF, and returns per-prose-field verdicts
->   (`SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`) for
->   research question, mechanism, theoretical contribution, practical
->   implication, limitations, and future research. On success writes
->   `incoming/_audits/<PAPER_ID>.audit.json`. On failure also writes
->   `incoming/_flagged/<PAPER_ID>.reason.txt` (because of `--flag`).
->   **Takes roughly 1–5 minutes per paper** — Layer 2 is an LLM call.
 > - `validate_note.py` runs the **structural and vocabulary check**:
 >   verbatim-abstract substring check, controlled-vocabulary topic slugs,
 >   paper-type enum, custom analytic field enums, and the same Layer 1
@@ -236,21 +234,12 @@ Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 >   skip it and keep passing). Writes its own `.reason.txt` sidecar on
 >   failure. Runs in well under a second.
 >
-> Run the audit **before** the validator. Both tools use the same `--flag`
-> sidecar convention and neither moves the note file, so a note that fails
-> the audit can still be validated for a more complete debugging picture.
-> Run both unconditionally — don't short-circuit on audit failure.
+> Do not run `tools/audit_note.py` from the extraction agent. The independent
+> auditor in Step 2.5 will run Layer 2 and produce the official audit report.
 >
 > **Report one of four outcomes, under 150 words each:**
-> - **OK** — both `audit_note.py` and `validate_note.py` exited zero.
-> - **AUDIT_FAIL** — `audit_note.py` exited non-zero. Quote the audit
->   report's flagged claims verbatim: every Layer 1
->   "anchor not found in PDF" entry, plus every Layer 2
->   `UNSUPPORTED` / `CONTRADICTED` verdict with its `field` name and
->   `note:` text. Do NOT try to "fix" a fabricated anchor by rewriting the
->   note — that just papers over a faithfulness problem.
-> - **FAIL** — `validate_note.py` reported errors (and the audit may or
->   may not also have failed; report both if so). Quote the validator's
+> - **OK** — `validate_note.py` exited zero.
+> - **FAIL** — `validate_note.py` reported errors. Quote the validator's
 >   error list verbatim. Do NOT try to "fix" a structural problem by
 >   inventing content — that violates the no-invention rule.
 >   - **Common Layer 1 failure pattern: anchors not contiguous in the
@@ -273,6 +262,71 @@ Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 >   `incoming/_flagged/<PAPER_ID>.reason.txt` explaining what went wrong.
 >   Do NOT write a `notes/` file.
 
+## Step 2.5 — Independent Layer 2 audit
+
+After notes validate structurally, dispatch separate auditor agents. **Keep at
+most 5 active auditor agents at a time.** Do not mix extraction and audit waves
+for the same issue. As with extraction, record each returned audit result, close
+the completed auditor thread, then spawn the next wave.
+
+If an audit-agent spawn hits the active-agent cap, close completed agents and
+retry once. If it still fails, reduce the wave to 3 or run serially while
+preserving auditor independence. Each auditor handles exactly one note and must
+read only:
+
+1. `docs/audit-rubric.md`
+2. `tools/audit_note.py` usage notes for `--layer-2-json`
+3. `notes/<PAPER_ID>.md`
+4. The note's referenced extracted text file under `library/.../text/`
+
+The auditor must not read the extraction agent's reasoning, drafts, chat
+transcript, or self-evaluation. It emits a JSON file at
+`incoming/_audits/<PAPER_ID>.layer2.json` with this top-level shape:
+
+```json
+{
+  "provenance": {
+    "paper_id": "<PAPER_ID>",
+    "note_sha256": "<sha256 of current note text>",
+    "text_sha256": "<sha256 of current extracted PDF text>",
+    "rubric_version": "v1",
+    "auditor_model": "<model name>",
+    "generated_at": "<UTC ISO timestamp>",
+    "dispatch_mode": "codex-independent-agent"
+  },
+  "layer_2": {
+    "overall": "pass",
+    "scores": {
+      "research_question": {
+        "verdict": "SUPPORTED",
+        "confidence": "high",
+        "evidence_page_hint": null,
+        "note": "..."
+      }
+    }
+  }
+}
+```
+
+The `scores` object must include all six fields required by
+`docs/audit-rubric.md`: `research_question`, `mechanism_process`,
+`theoretical_contribution`, `practical_implication`, `limitations`, and
+`future_research`. Missing fields are an audit error, not an implied pass.
+
+The parent operator then assembles the official report:
+
+```bash
+python tools/audit_note.py notes/<PAPER_ID>.md \
+  --layer-2-json incoming/_audits/<PAPER_ID>.layer2.json \
+  --auditor-model <model name> \
+  --flag
+```
+
+This command verifies Layer 1 anchors, validates the external Layer 2 provenance
+against the current note/PDF hashes, writes
+`incoming/_audits/<PAPER_ID>.audit.json`, and writes
+`incoming/_flagged/<PAPER_ID>.reason.txt` only if the audit fails.
+
 ## Step 3 — Aggregate outcomes
 
 As each batch returns, log one line per paper using one of four prefixes:
@@ -284,11 +338,10 @@ audit errors.) After all batches complete, compile:
 
 - **OK count**, **AUDIT_FAIL count**, **FAIL count**, **STOP count**.
 - The list of flagged paper IDs and the first line of each `.reason.txt`.
-  Note that `AUDIT_FAIL` and `FAIL` both produce `.reason.txt` sidecars but
-  in different shapes — audit sidecars list flagged claims and Layer 2
-  verdicts, validator sidecars list error messages. When both tools flag
-  the same paper, the audit sidecar overwrites the validator sidecar in
-  the filesystem, so also print the validator errors in the batch report.
+  Audit reports live in `incoming/_audits/<PAPER_ID>.audit.json`; validator
+  failures and audit failures may both write a `.reason.txt`, so preserve the
+  printed validator output in the batch report instead of relying on one shared
+  sidecar to carry every failure detail.
 - **Systemic validator-failure check**: if ≥3 papers fail VALIDATION for the
   same root-cause error (e.g., "topic slug X not in index/topics.json", or
   "abstract is not a verbatim substring"), **stop and ask** the user — this
@@ -303,7 +356,7 @@ audit errors.) After all batches complete, compile:
   miscalibrated, or the PDF text is being corrupted by two-column
   concatenation — NOT that the individual notes need hand-editing.
 
-## Step 4 — Rebuild derived indexes
+## Step 4 — Issue-level closeout and derived indexes
 
 Once the note set is stable (no FAIL entries that can be fixed inline):
 
@@ -313,38 +366,61 @@ python tools/export_csv.py
 python tools/export_bibtex.py
 ```
 
-Then run a full-corpus validator sweep as a regression check:
+Run these three commands **sequentially**. Do not export CSV or BibTeX in
+parallel with `build_index.py`; the exporters read `index/synapse.db`, so they
+must wait until the SQLite rebuild has finished. After the rebuild, verify that
+the SQLite paper count, CSV data-row count, and BibTeX `@article` count agree
+and that the new issue has the expected number of records.
+
+For an ordinary issue-level ingest where only a bounded set of notes changed,
+close out the issue with targeted gates:
+
+- Validate the changed/touched notes, e.g. `python tools/validate_note.py
+  notes/<issue-paper-id-prefix>*.md`.
+- Scan the issue's official audit reports in `incoming/_audits/` and confirm
+  no `PARTIAL`, `UNSUPPORTED`, or `CONTRADICTED` verdict remains unresolved.
+- Confirm counts agree: manifest rows = PDFs = extracted text files = bundles =
+  notes = official audit reports.
+- Run the scoped CrossRef metadata check described in Step 4.5.
+
+Full-library local note validation is useful but not mandatory for every
+issue-level run. At the current corpus size it may still be acceptable as
+cautious extra assurance:
 
 ```bash
 python tools/validate_note.py notes/*.md
 ```
 
-Expected: every existing note in `notes/` passes. If anything in the
-pre-existing corpus suddenly fails, the new batch has touched something it
-shouldn't — stop and investigate before continuing.
+Run this full sweep when the run changes schema, validator behavior,
+parser/indexer behavior, the extraction prompt, many notes by batch edit or
+migration, global metadata, or when prior validation state is stale/unreliable,
+a systemic issue is suspected, a volume/release/milestone is being closed, an
+official research output is being prepared, or the user explicitly asks for it.
+If targeted issue validation already gives equivalent assurance, do not treat
+the full sweep as a ritual.
 
 ## Step 4.5 — Bibliographic-integrity check (mandatory)
 
-Run the CrossRef cross-check on every note's bibliographic metadata. This
-catches the class of error that v0.11.1 fixed (extracting the **online-first**
-year instead of the **issue year**, which APA 7 requires) plus the broader
-class of metadata errors that any manual manifest entry is prone to: typos
-in titles, missing Oxford commas, swapped authors, null volume/issue/pages
-on online-first papers that have since been issued.
+For ordinary issue closeout, identify the changed issue paper IDs from the issue
+note filenames, bundle filenames, or private issue ledger, then run the CrossRef
+cross-check with `--paper-id` once per note (or an equivalent small loop):
 
 ```bash
-python tools/verify_metadata.py
+python tools/verify_metadata.py --quiet --paper-id <PAPER_ID>
 ```
 
 The tool checks **seven fields per note** against CrossRef (year, title,
 journal, volume, issue, pages, authors). Exit code 0 if all selected fields
 match for all checked notes; exit code 1 on any mismatch (suitable as a
-pipeline gate).
+pipeline gate). Full-library CrossRef verification is more expensive than local
+note validation, so reserve `python tools/verify_metadata.py --quiet` for
+release/milestone checks, metadata-logic changes, `verify_metadata.py` changes,
+suspected systemic metadata drift, or explicit user request.
 
-Expected output for a clean batch: `MATCH` for every selected field across
-every note, with one possible exception — `MISSING` rows for books / book
-reviews / editorials that CrossRef doesn't carry full structured metadata
-for. Those are not errors; they're absences.
+Expected output for a clean scoped check: every changed note matches CrossRef,
+with one possible exception — `MISSING` rows for books / book reviews /
+editorials that CrossRef doesn't carry full structured metadata for. Those are
+not errors; they're absences.
 
 **If the script reports MISMATCH:** stop and triage by field:
 
@@ -359,9 +435,9 @@ for. Those are not errors; they're absences.
 - **volume / issue / pages mismatch** with concrete values on both sides →
   real conflict; investigate.
 
-Do NOT commit until verify_metadata returns clean (or you have explicit
-notes in the commit message explaining each remaining mismatch as a
-known false positive).
+Do NOT commit until the required metadata-verification scope returns clean (or
+you have explicit notes in the commit message explaining each remaining
+mismatch as a known false positive).
 
 This step is mandatory because:
 
@@ -374,9 +450,9 @@ This step is mandatory because:
 - The audit layers (Layer 1 anchors, Layer 2 prose) verify content against
   the source PDF. They do NOT cross-check bibliographic metadata. Errors
   in title / authors / volume / etc. are invisible to them.
-- CrossRef is free, fast (cached at `/tmp/crossref_cache/` after first run),
-  and authoritative — it's the canonical DOI registry. There is no good
-  reason to skip the check.
+- For scoped checks, CrossRef is free and usually fast once cached at
+  `/tmp/crossref_cache/`; it is also authoritative as the canonical DOI
+  registry. There is no good reason to skip the required scoped check.
 
 **Useful flags:**
 

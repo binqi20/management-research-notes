@@ -104,6 +104,15 @@ KNOWN_COMPOUND_SURNAMES: dict[str, dict[str, str]] = {
             "form 'Cunningham'. Suppressed 2026-05-12."
         ),
     },
+    "10.5465/amj.2018.0790": {
+        "manifest_surname": "Cunningham",
+        "crossref_family": "Lee Cunningham",
+        "rationale": (
+            "Julia Lee Cunningham — compound family name. CrossRef stores "
+            "'Lee Cunningham'; the PDF running head and citation convention "
+            "use the short form 'Cunningham'. Suppressed 2026-06-26."
+        ),
+    },
     "10.5465/amj.2020.1231": {
         "manifest_surname": "Wal",
         "crossref_family": "Ter Wal",

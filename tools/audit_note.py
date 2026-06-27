@@ -34,9 +34,11 @@ Options
     --prompt-only             Print the Layer 2 prompt to stdout and exit 0.
                               Useful when the calling agent wants to dispatch
                               the Task tool directly and needs the prompt text.
-    --layer-2-json PATH       Skip Layer 2 dispatch; read the subagent's JSON
-                              verdict from PATH. Used when the calling agent
-                              has already dispatched the Task tool externally.
+    --layer-2-json PATH       Skip Layer 2 dispatch; read an independent
+                              subagent's JSON verdict from PATH. The JSON must
+                              include provenance tying it to the current note,
+                              extracted text, rubric, model, timestamp, and
+                              dispatch mode.
     --force-layer-2           Run Layer 2 even if Layer 1 failed (debugging).
     --auditor-model MODEL     Override the auditor model (default: config value)
 
@@ -58,6 +60,7 @@ Designed to be cheap to re-run. The audit JSON is the source of truth; calling
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -85,6 +88,8 @@ AUDITS_DIR = SYNAPSE_ROOT / "incoming" / "_audits"
 FLAGGED_DIR = SYNAPSE_ROOT / "incoming" / "_flagged"
 RUBRIC_PATH = SYNAPSE_ROOT / "docs" / "audit-rubric.md"
 DEFAULT_AUDITOR_MODEL = "claude-opus-4-6"
+AUDIT_VERSION = "v1"
+RUBRIC_VERSION = "v1"
 
 # Prose fields the Layer 2 subagent verdicts against. Must match the keys in
 # the rubric's output-format example — if the rubric changes, this list must
@@ -100,6 +105,15 @@ LAYER_2_PROSE_FIELDS = [
 
 VERDICT_ENUM = {"SUPPORTED", "PARTIAL", "UNSUPPORTED", "CONTRADICTED"}
 CONFIDENCE_ENUM = {"high", "medium", "low"}
+EXTERNAL_PROVENANCE_REQUIRED_KEYS = {
+    "paper_id",
+    "note_sha256",
+    "text_sha256",
+    "rubric_version",
+    "auditor_model",
+    "generated_at",
+    "dispatch_mode",
+}
 
 # When the post-strip PDF text exceeds max_pdf_chars, build_auditor_prompt
 # uses a "sandwich": keep SANDWICH_HEAD_RATIO of the budget for the front of
@@ -147,6 +161,11 @@ def load_rubric() -> str:
     if not RUBRIC_PATH.exists():
         raise FileNotFoundError(f"rubric missing: {RUBRIC_PATH}")
     return RUBRIC_PATH.read_text(encoding="utf-8")
+
+
+def sha256_text(text: str) -> str:
+    """Return the SHA-256 hex digest for UTF-8 text."""
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 # --- Layer 1 -----------------------------------------------------------------------
@@ -240,17 +259,13 @@ def _strip_references(text: str) -> tuple[str, int]:
 # --- Layer 2 prompt building -------------------------------------------------------
 
 
-def build_auditor_prompt(
-    paper_id: str,
-    paper_type: str,
-    body: str,
+def fit_pdf_text_for_audit(
     pdf_text: str,
-    rubric_text: str,
     max_pdf_chars: int = 180_000,
-) -> str:
-    """Construct the prompt for the Layer 2 auditor subagent.
+) -> tuple[str, dict]:
+    """Fit extracted PDF text into the Layer 2 audit budget.
 
-    The PDF text is fitted into max_pdf_chars by a two-step process:
+    The text is fitted by a two-step process:
       1. Strip the References/Bibliography section via _strip_references().
       2. If the post-strip text still exceeds max_pdf_chars, apply a
          "sandwich" truncation: keep SANDWICH_HEAD_RATIO of the budget
@@ -268,20 +283,15 @@ def build_auditor_prompt(
     notes empirically), generating PARTIAL verdicts that are verification
     artifacts rather than real drift. The sandwich preserves both ends.
 
-    The prompt is deliberately structured so the subagent's output IS a JSON
-    object — no preamble, no prose wrapper, no fenced block. We re-parse
-    defensively in parse_auditor_response so a non-compliant response doesn't
-    hang the pipeline.
+    Returns (fitted_text, context_metadata). The metadata is persisted in the
+    audit report so a later reviewer can see exactly how much source text the
+    auditor received.
     """
-    # Step 1 — strip references. Always cheap, often dispositive on its own
-    # for medium-length papers (post-strip length now fits the budget).
     stripped, refs_removed = _strip_references(pdf_text)
 
-    # Step 2 — fit to budget. If post-strip already fits, use as-is. Otherwise
-    # apply the sandwich.
     sandwich_head_chars = sandwich_tail_chars = sandwich_middle_dropped = 0
     if len(stripped) <= max_pdf_chars:
-        truncated = stripped
+        fitted = stripped
     else:
         available = max_pdf_chars - SANDWICH_SEPARATOR_RESERVE
         sandwich_head_chars = int(available * SANDWICH_HEAD_RATIO)
@@ -293,11 +303,48 @@ def build_auditor_prompt(
             f"\n\n[... middle of paper truncated "
             f"({sandwich_middle_dropped:,} chars dropped) ...]\n\n"
         )
-        truncated = (
+        fitted = (
             stripped[:sandwich_head_chars]
             + separator
             + stripped[-sandwich_tail_chars:]
         )
+
+    context = {
+        "max_pdf_chars": max_pdf_chars,
+        "original_pdf_chars": len(pdf_text),
+        "post_reference_strip_chars": len(stripped),
+        "references_removed_chars": refs_removed,
+        "fitted_pdf_chars": len(fitted),
+        "sandwich_truncated": sandwich_middle_dropped > 0,
+        "sandwich_head_chars": sandwich_head_chars,
+        "sandwich_tail_chars": sandwich_tail_chars,
+        "sandwich_middle_dropped_chars": sandwich_middle_dropped,
+        "sandwich_head_ratio": SANDWICH_HEAD_RATIO,
+    }
+    return fitted, context
+
+
+def build_auditor_prompt_and_context(
+    paper_id: str,
+    paper_type: str,
+    body: str,
+    pdf_text: str,
+    rubric_text: str,
+    max_pdf_chars: int = 180_000,
+) -> tuple[str, dict]:
+    """Construct the prompt for the Layer 2 auditor subagent.
+
+    The prompt is deliberately structured so the subagent's output IS a JSON
+    object — no preamble, no prose wrapper, no fenced block. We re-parse
+    defensively in parse_auditor_response so a non-compliant response doesn't
+    hang the pipeline.
+    """
+    truncated, context = fit_pdf_text_for_audit(pdf_text, max_pdf_chars=max_pdf_chars)
+    refs_removed = context["references_removed_chars"]
+    sandwich_middle_dropped = context["sandwich_middle_dropped_chars"]
+    sandwich_head_chars = context["sandwich_head_chars"]
+    sandwich_tail_chars = context["sandwich_tail_chars"]
+    stripped_chars = context["post_reference_strip_chars"]
 
     truncated_note = ""
     if refs_removed > 0 or sandwich_middle_dropped > 0:
@@ -311,7 +358,7 @@ def build_auditor_prompt(
             parts.append(
                 f"sandwich-truncated to {sandwich_head_chars:,} head + "
                 f"{sandwich_tail_chars:,} tail chars "
-                f"(post-strip length: {len(stripped):,} chars; "
+                f"(post-strip length: {stripped_chars:,} chars; "
                 f"{sandwich_middle_dropped:,} chars dropped from middle)"
             )
         truncated_note = (
@@ -326,7 +373,7 @@ def build_auditor_prompt(
     #   4. PDF text (the source of truth)
     # Placing the PDF text LAST minimizes the chance that instructions near the
     # top of the prompt get diluted by a giant text blob.
-    return f"""{rubric_text}
+    prompt = f"""{rubric_text}
 
 ---
 
@@ -358,6 +405,27 @@ the JSON.
 
 Emit the JSON object now.
 """
+    return prompt, context
+
+
+def build_auditor_prompt(
+    paper_id: str,
+    paper_type: str,
+    body: str,
+    pdf_text: str,
+    rubric_text: str,
+    max_pdf_chars: int = 180_000,
+) -> str:
+    """Backward-compatible wrapper returning only the Layer 2 prompt."""
+    prompt, _ = build_auditor_prompt_and_context(
+        paper_id=paper_id,
+        paper_type=paper_type,
+        body=body,
+        pdf_text=pdf_text,
+        rubric_text=rubric_text,
+        max_pdf_chars=max_pdf_chars,
+    )
+    return prompt
 
 
 # --- Layer 2 dispatcher ------------------------------------------------------------
@@ -411,7 +479,39 @@ def dispatch_auditor_via_cli(prompt: str, auditor_model: str) -> str:
     return result.stdout
 
 
-def parse_auditor_response(raw: str) -> dict:
+def validate_external_provenance(provenance: object, expected: dict) -> dict:
+    """Validate provenance for externally generated Layer 2 JSON."""
+    if not isinstance(provenance, dict):
+        raise ValueError("external Layer 2 verdict missing top-level 'provenance' object")
+
+    missing = sorted(EXTERNAL_PROVENANCE_REQUIRED_KEYS - set(provenance))
+    if missing:
+        raise ValueError(
+            "external Layer 2 provenance missing required keys: "
+            + ", ".join(missing)
+        )
+
+    for key, expected_value in expected.items():
+        actual = provenance.get(key)
+        if actual != expected_value:
+            raise ValueError(
+                f"external Layer 2 provenance mismatch for {key}: "
+                f"expected {expected_value!r}, got {actual!r}"
+            )
+
+    for key in ("auditor_model", "generated_at", "dispatch_mode"):
+        if not isinstance(provenance.get(key), str) or not provenance[key].strip():
+            raise ValueError(f"external Layer 2 provenance field {key!r} is blank")
+
+    return provenance
+
+
+def parse_auditor_response(
+    raw: str,
+    *,
+    expected_provenance: dict | None = None,
+    require_provenance: bool = False,
+) -> dict:
     """Defensive JSON parser for the subagent's response.
 
     The rubric asks for a bare JSON object, but LLMs sometimes wrap it in prose
@@ -424,9 +524,8 @@ def parse_auditor_response(raw: str) -> dict:
 
     After parsing, we validate the shape: `layer_2.overall` must be pass/fail,
     each prose field must be present with a verdict in VERDICT_ENUM and a
-    confidence in CONFIDENCE_ENUM. Missing fields are filled with a
-    low-confidence SUPPORTED (the conservative default) and surfaced as a
-    warning in the audit log.
+    confidence in CONFIDENCE_ENUM. Missing or malformed required fields fail
+    closed with exit-code 2 at the caller.
     """
     parsed = None
 
@@ -469,11 +568,17 @@ def parse_auditor_response(raw: str) -> dict:
         raise ValueError(
             f"auditor response is not valid JSON. First 200 chars: {raw[:200]!r}"
         )
+    if not isinstance(parsed, dict):
+        raise ValueError(
+            f"auditor response must be a JSON object, got {type(parsed).__name__}"
+        )
+
+    provenance = parsed.get("provenance") if isinstance(parsed, dict) else None
 
     # Shape validation: we expect a top-level "layer_2" key. If the subagent
     # returned the inner structure directly (skipping the wrapper), promote it.
     if "layer_2" not in parsed and "scores" in parsed:
-        parsed = {"layer_2": parsed}
+        parsed = {"layer_2": parsed, "provenance": provenance}
     if "layer_2" not in parsed:
         raise ValueError(
             f"auditor response missing 'layer_2' key. Top-level keys: "
@@ -484,39 +589,31 @@ def parse_auditor_response(raw: str) -> dict:
         raise ValueError("auditor response missing 'layer_2.scores'")
 
     scores = layer_2["scores"]
+    if not isinstance(scores, dict):
+        raise ValueError("auditor response 'layer_2.scores' is not an object")
     warnings: list[str] = []
     for field in LAYER_2_PROSE_FIELDS:
         if field not in scores:
-            warnings.append(
-                f"auditor omitted {field!r}; filling with low-confidence SUPPORTED"
-            )
-            scores[field] = {
-                "verdict": "SUPPORTED",
-                "confidence": "low",
-                "evidence_page_hint": None,
-                "note": "auditor did not provide a verdict for this field",
-            }
-            continue
+            raise ValueError(f"auditor omitted required Layer 2 field {field!r}")
         v = scores[field]
         if not isinstance(v, dict):
-            warnings.append(f"{field!r} verdict is not an object; coercing")
-            scores[field] = {
-                "verdict": "PARTIAL",
-                "confidence": "low",
-                "evidence_page_hint": None,
-                "note": str(v)[:200],
-            }
-            continue
+            raise ValueError(f"auditor verdict for {field!r} is not an object")
         if v.get("verdict") not in VERDICT_ENUM:
-            warnings.append(
-                f"{field!r} has invalid verdict {v.get('verdict')!r}; "
-                f"coerced to PARTIAL"
+            raise ValueError(
+                f"{field!r} has invalid verdict {v.get('verdict')!r}"
             )
-            v["verdict"] = "PARTIAL"
         if v.get("confidence") not in CONFIDENCE_ENUM:
-            v["confidence"] = "low"
+            raise ValueError(
+                f"{field!r} has invalid confidence {v.get('confidence')!r}"
+            )
         v.setdefault("evidence_page_hint", None)
         v.setdefault("note", "")
+
+    if require_provenance:
+        provenance = validate_external_provenance(
+            provenance,
+            expected_provenance or {},
+        )
 
     # Recompute overall from verdicts to defend against an auditor that lies
     # about its own top-level field.
@@ -524,7 +621,11 @@ def parse_auditor_response(raw: str) -> dict:
     has_fail = any(scores[f]["verdict"] in fail_verdicts for f in LAYER_2_PROSE_FIELDS)
     layer_2["overall"] = "fail" if has_fail else "pass"
 
-    return {"layer_2": layer_2, "parse_warnings": warnings}
+    return {
+        "layer_2": layer_2,
+        "parse_warnings": warnings,
+        "provenance": provenance if isinstance(provenance, dict) else None,
+    }
 
 
 # --- audit report assembly ---------------------------------------------------------
@@ -535,7 +636,10 @@ def combine_audit_result(
     layer_1: dict,
     layer_2: dict | None,
     auditor_model: str,
-    rubric_version: str = "v1",
+    rubric_version: str = RUBRIC_VERSION,
+    note_sha256: str | None = None,
+    text_sha256: str | None = None,
+    audit_context: dict | None = None,
 ) -> dict:
     """Merge Layer 1 and Layer 2 results into the canonical audit JSON shape."""
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -575,12 +679,18 @@ def combine_audit_result(
 
     return {
         "paper_id": paper_id,
-        "audit_version": "v1",
+        "audit_version": AUDIT_VERSION,
         "audited_at": now,
         "auditor_model": auditor_model,
         "rubric_version": rubric_version,
+        "input_hashes": {
+            "note_sha256": note_sha256,
+            "text_sha256": text_sha256,
+        },
+        "audit_context": audit_context or {},
         "layer_1": layer_1,
         "layer_2": layer_2_block,
+        "layer_2_provenance": (layer_2 or {}).get("provenance"),
         "overall": overall,
         "flagged_claims": flagged,
         "parse_warnings": (layer_2 or {}).get("parse_warnings", []),
@@ -650,14 +760,19 @@ def main() -> int:
                         help=f"auditor model (default: {DEFAULT_AUDITOR_MODEL})")
     args = parser.parse_args()
 
+    note_path = args.note.resolve()
     try:
-        fm, body, _ = load_note(args.note.resolve())
+        fm, body, _ = load_note(note_path)
+        note_raw = note_path.read_text(encoding="utf-8")
     except Exception as exc:
         print(f"ERROR loading note: {exc}", file=sys.stderr)
         return 2
 
     paper_id = fm.get("id", args.note.stem)
     paper_type = fm.get("paper_type", "")
+    note_digest = sha256_text(note_raw)
+    text_digest: str | None = None
+    audit_context: dict | None = None
 
     # --prompt-only: build the prompt, print it, exit. No Layer 1 run.
     if args.prompt_only:
@@ -682,6 +797,7 @@ def main() -> int:
         print(f"  - other: {err}")
 
     layer_2_result: dict | None = None
+    effective_auditor_model = args.auditor_model
 
     # Short-circuit: skip Layer 2 if Layer 1 failed (unless --force-layer-2)
     if layer_1["overall"] == "fail" and not args.force_layer_2:
@@ -692,8 +808,25 @@ def main() -> int:
         # External verdict path — the calling agent already dispatched the Task
         # tool and wrote the result to disk. We read and validate it.
         try:
+            pdf_text = load_pdf_text(fm)
+            text_digest = sha256_text(pdf_text)
+            _, audit_context = fit_pdf_text_for_audit(pdf_text)
+            expected_provenance = {
+                "paper_id": paper_id,
+                "note_sha256": note_digest,
+                "text_sha256": text_digest,
+                "rubric_version": RUBRIC_VERSION,
+            }
             raw = args.layer_2_json.read_text(encoding="utf-8")
-            layer_2_result = parse_auditor_response(raw)
+            layer_2_result = parse_auditor_response(
+                raw,
+                expected_provenance=expected_provenance,
+                require_provenance=True,
+            )
+            effective_auditor_model = (
+                layer_2_result.get("provenance", {}).get("auditor_model")
+                or args.auditor_model
+            )
             print(f"Layer 2: {layer_2_result['layer_2']['overall']} "
                   f"(external verdict from {args.layer_2_json})")
         except Exception as exc:
@@ -703,8 +836,15 @@ def main() -> int:
         # Default path: shell out to the `claude` CLI for a fresh-context audit.
         try:
             pdf_text = load_pdf_text(fm)
+            text_digest = sha256_text(pdf_text)
             rubric_text = load_rubric()
-            prompt = build_auditor_prompt(paper_id, paper_type, body, pdf_text, rubric_text)
+            prompt, audit_context = build_auditor_prompt_and_context(
+                paper_id,
+                paper_type,
+                body,
+                pdf_text,
+                rubric_text,
+            )
             raw = dispatch_auditor_via_cli(prompt, args.auditor_model)
             layer_2_result = parse_auditor_response(raw)
             print(f"Layer 2: {layer_2_result['layer_2']['overall']}")
@@ -724,7 +864,10 @@ def main() -> int:
         paper_id=paper_id,
         layer_1=layer_1,
         layer_2=layer_2_result,
-        auditor_model=args.auditor_model,
+        auditor_model=effective_auditor_model,
+        note_sha256=note_digest,
+        text_sha256=text_digest,
+        audit_context=audit_context,
     )
 
     if not args.dry_run:

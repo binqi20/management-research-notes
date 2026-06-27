@@ -15,11 +15,11 @@ focuses on what's portable across agents.
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**542 curated notes** on peer-reviewed papers in management and business
+**617 curated notes** on peer-reviewed papers in management and business
 sustainability research. The current main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
-and 270 Academy of Management Journal notes across 25 recent issues
-(vol. 65 no. 1 through vol. 69 no. 1). Every note is a single Markdown
+and 345 Academy of Management Journal notes across 31 recent issues
+(vol. 64 no. 1 through vol. 69 no. 1). Every note is a single Markdown
 file with YAML frontmatter and a structured Markdown body. The repository
 is MIT licensed; individual PDFs are not redistributed.
 
@@ -107,7 +107,26 @@ from [`CLAUDE.md`](CLAUDE.md)):
 4. **Stable paper IDs.** Every paper has a `paper_id` of the form `{source-slug}-{year-month}-{first-author-slug}-{year}`. Once assigned, it never changes.
 5. **Validate before committing.** After producing or editing a note, run the validator (`python tools/validate_note.py notes/<id>.md`). On fail, fix the note or move it to `incoming/_flagged/` with a `.reason.txt` explaining why.
 6. **One paper, one note.** Never split a paper across multiple notes. Never merge two papers into one note.
-7. **Faithfulness is checked, not assumed.** Every v2 note carries an `evidence:` frontmatter block whose quotes are verbatim substrings of the PDF text. A two-layer audit (`python tools/audit_note.py notes/<id>.md`) runs this check mechanically (Layer 1) and then dispatches a fresh cold-context subagent to score the prose fields semantically against the rubric at [`docs/audit-rubric.md`](docs/audit-rubric.md) (Layer 2). Both layers must pass.
+7. **Faithfulness is checked, not assumed.** Every v2 note carries an `evidence:` frontmatter block whose quotes are verbatim substrings of the PDF text. A two-layer audit (`python tools/audit_note.py notes/<id>.md`) runs this check mechanically (Layer 1) and then uses a fresh, independent auditor context to score the prose fields semantically against the rubric at [`docs/audit-rubric.md`](docs/audit-rubric.md) (Layer 2). The auditor must not be the same agent/session that wrote the note. Codex-style external auditors must provide provenance-checked Layer 2 JSON via `--layer-2-json`. Both layers must pass.
+
+---
+
+## 4.1 Parallel agent slot policy
+
+For issue-level ingestion with parallel agents, Synapse uses a conservative
+operating default of **5 active subagents at a time**. This is not a claimed
+universal Codex or platform limit; it is a stability rule for this repository's
+paper-analysis workflow.
+
+Use separate waves for extraction and audit. Extraction agents may write only
+`notes/<paper_id>.md`. Audit agents may write only
+`incoming/_audits/<paper_id>.layer2.json`. The parent session assembles official
+audit reports, handles repairs, and rebuilds SQLite/CSV/BibTeX indexes.
+
+After any worker returns, record its result and close the completed agent thread
+before spawning another. If an active-agent cap prevents spawning, close
+completed agents and retry once; if it still fails, use a wave of 3 or serial
+execution while keeping extraction and audit roles independent.
 
 ---
 
@@ -117,11 +136,11 @@ Every note in this repository has been through a **two-layer faithfulness
 audit**:
 
 - **Layer 1 — Evidence anchors (mechanical).** For v2 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
-- **Layer 2 — Semantic audit (fresh subagent).** A fresh Claude subagent with cold context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
+- **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-06-24):
-542 / 542 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The corpus contains
-88 legacy v1 notes and 454 v2 notes with evidence anchors. `PARTIAL`
+**Current main-branch audit state (2026-06-27):
+617 / 617 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The corpus contains
+88 legacy v1 notes and 529 v2 notes with evidence anchors. `PARTIAL`
 verdicts (stylistic compressions that don't rise to a faithfulness failure)
 are flagged for human review but do not block publication. The library has
 never produced a `CONTRADICTED` verdict — no claim in any note actively
@@ -135,7 +154,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-06-24.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-06-27.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -146,7 +165,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.22.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.23.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
