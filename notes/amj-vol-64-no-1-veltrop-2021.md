@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-1"
 pdf_path: "library/AMJ/vol-64-no-1/pdfs/Veltrop 2021 Too Unsafe to Monitor How Board–CEO Cognitive Conflict and Chair Leadership Shape Outside Director Monitoring.pdf"
 text_path: "library/AMJ/vol-64-no-1/text/Veltrop 2021 Too Unsafe to Monitor How Board–CEO Cognitive Conflict and Chair Leadership Shape Outside Director Monitoring.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

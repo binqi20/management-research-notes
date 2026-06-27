@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-5"
 pdf_path: "library/AMJ/vol-64-no-5/pdfs/Kim 2021 Clustering and Connectedness How Inventor Network Configurations within Incumbent Firms Influence Their Assimilation and Absorption of New Venture Technologies.pdf"
 text_path: "library/AMJ/vol-64-no-5/text/Kim 2021 Clustering and Connectedness How Inventor Network Configurations within Incumbent Firms Influence Their Assimilation and Absorption of New Venture Technologies.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

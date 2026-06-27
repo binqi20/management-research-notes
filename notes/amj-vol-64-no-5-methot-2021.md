@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-5"
 pdf_path: "library/AMJ/vol-64-no-5/pdfs/Methot 2021 Office Chitchat as a Social Ritual The Uplifting Yet Distracting Effects of Daily Small Talk at Work.pdf"
 text_path: "library/AMJ/vol-64-no-5/text/Methot 2021 Office Chitchat as a Social Ritual The Uplifting Yet Distracting Effects of Daily Small Talk at Work.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

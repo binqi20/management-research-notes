@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-6"
 pdf_path: "library/AMJ/vol-64-no-6/pdfs/Mikolon 2021 The Catch-22 of Countering a Moral Occupational Stigma in Employee-Customer Interactions.pdf"
 text_path: "library/AMJ/vol-64-no-6/text/Mikolon 2021 The Catch-22 of Countering a Moral Occupational Stigma in Employee-Customer Interactions.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

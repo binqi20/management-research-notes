@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-4"
 pdf_path: "library/AMJ/vol-64-no-4/pdfs/He 2021 Covering in Cover Letters Gender and Self-Presentation in Job Applications.pdf"
 text_path: "library/AMJ/vol-64-no-4/text/He 2021 Covering in Cover Letters Gender and Self-Presentation in Job Applications.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

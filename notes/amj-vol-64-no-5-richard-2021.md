@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-5"
 pdf_path: "library/AMJ/vol-64-no-5/pdfs/Richard 2021 The Effects of Racial Diversity Congruence between Upper Management and Lower Management on Firm Productivity.pdf"
 text_path: "library/AMJ/vol-64-no-5/text/Richard 2021 The Effects of Racial Diversity Congruence between Upper Management and Lower Management on Firm Productivity.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

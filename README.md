@@ -393,6 +393,22 @@ The full library has been swept across releases:
   false positives or lookup warnings. The public indexes were rebuilt from
   notes: SQLite, CSV, and BibTeX all contain 617 records.
 
+- **v0.23.1 patch (2026-06-27, 617 notes):**
+  Provenance correction for the AMJ volume-64 Codex batch. The 75 AMJ
+  volume-64 notes now record `extraction_model: "gpt-5.5"` instead of the
+  stale bundle value `claude-opus-4-8`. Five audit-identified wording issues
+  were narrowed: Abdurakhmonov et al. (2021) removed an overbroad
+  country-generalization phrase, Jacobs et al. (2021) softened a direct
+  practical prescription to a case-grounded association, Lifshitz-Assaf et al.
+  (2021) removed an unsupported stage-gate reference, Bain et al. (2021)
+  distinguished experimental boundary tests from the Study 3 intervention
+  target, and Ji et al. (2021) removed an unstated national/historical-setting
+  limitation. Abstracts, evidence anchors, bibliographic metadata, and
+  citations are unchanged. The patch also makes GPT-5.5 the
+  current Codex extraction/audit default in the workflow docs and sets
+  issue-level parallelism to a fixed 6-agent cap with fallback to 5, 3, or
+  serial execution if stability degrades.
+
 Run the audit on a single note with:
 
 ```bash
@@ -572,7 +588,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.23.0},
+  version      = {0.23.1},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

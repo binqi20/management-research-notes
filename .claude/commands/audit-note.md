@@ -82,10 +82,18 @@ inspect the first block between the `---` fences). Check:
 python tools/audit_note.py notes/<paper_id>.md
 ```
 
-This is the default path: Layer 1 first, then a fresh Claude subagent
-via `claude --print` for Layer 2. No `--flag` (this command is
-read-only). No `--dry-run` (we want the audit JSON written to disk so
-the user can re-open it later for full detail).
+For the current Codex workflow, run Layer 1 locally and use a fresh independent
+GPT-5.5 auditor to write `incoming/_audits/<paper_id>.layer2.json`; then assemble
+the official report with:
+
+```bash
+python tools/audit_note.py notes/<paper_id>.md \
+  --layer-2-json incoming/_audits/<paper_id>.layer2.json
+```
+
+The old direct Claude CLI path remains available only as a deliberate legacy
+fallback, for example `python tools/audit_note.py notes/<paper_id>.md
+--auditor-model claude-opus-4-6`.
 
 **Expected cost:** ~1–5 minutes wall clock per invocation, dominated by
 the Layer 2 subagent dispatch. If Layer 1 fails, Layer 2 is
@@ -150,7 +158,7 @@ wants non-default behavior, tell them to invoke `audit_note.py` directly:
 | `--dry-run`           | Do not write the audit JSON; just print the verdict   |
 | `--skip-layer-2`      | Layer 1 only; no subagent dispatch (fast)              |
 | `--force-layer-2`     | Run Layer 2 even if Layer 1 failed                     |
-| `--auditor-model <m>` | Override the Layer 2 auditor model                     |
+| `--auditor-model <m>` | Override the Layer 2 auditor model; required for legacy Claude CLI use |
 | `--prompt-only`       | Print the Layer 2 prompt to stdout and exit (debug)    |
 
 ---

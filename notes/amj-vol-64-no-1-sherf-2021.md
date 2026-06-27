@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-1"
 pdf_path: "library/AMJ/vol-64-no-1/pdfs/Sherf 2021 Distinguishing Voice and Silence at Work Unique Relationships with Perceived Impact, Psychological Safety, and Burnout.pdf"
 text_path: "library/AMJ/vol-64-no-1/text/Sherf 2021 Distinguishing Voice and Silence at Work Unique Relationships with Perceived Impact, Psychological Safety, and Burnout.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

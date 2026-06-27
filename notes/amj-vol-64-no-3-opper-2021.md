@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-3"
 pdf_path: "library/AMJ/vol-64-no-3/pdfs/Opper 2021 Social Network and Temporal Myopia.pdf"
 text_path: "library/AMJ/vol-64-no-3/text/Opper 2021 Social Network and Temporal Myopia.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

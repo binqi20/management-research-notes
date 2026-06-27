@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-1"
 pdf_path: "library/AMJ/vol-64-no-1/pdfs/Cappellaro 2021 Maintaining Strategic Ambiguity for Protection Struggles over Opacity, Equivocality, and Absurdity around the Sicilian Mafia.pdf"
 text_path: "library/AMJ/vol-64-no-1/text/Cappellaro 2021 Maintaining Strategic Ambiguity for Protection Struggles over Opacity, Equivocality, and Absurdity around the Sicilian Mafia.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-6"
 pdf_path: "library/AMJ/vol-64-no-6/pdfs/Ji 2021 Guilt and Corporate Philanthropy The Case of the Privatization in China.pdf"
 text_path: "library/AMJ/vol-64-no-6/text/Ji 2021 Guilt and Corporate Philanthropy The Case of the Privatization in China.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"
@@ -67,7 +67,7 @@ The paper contributes to corporate philanthropy research by establishing guilt a
 For firms, the findings suggest that expressing guilt and making restitution can help managers respond to harmed stakeholders and may counter cynical interpretations of philanthropy when the expression is genuine. For the public, the study suggests that appealing to firm leaders' guilt may sometimes complement pressure-based tactics such as condemnation, protest, or boycott in encouraging firms to address social harm.
 
 **Limitations**
-The paper notes that guilt does not automatically arise from every harm-inflicting action; leaders must be aware of harm and feel responsible for it, and these conditions are shaped by severity, proximity, social ties, and values. It also notes that guilt may not always translate into philanthropy because firms' financial condition and leaders' views of corporate responsibility can constrain restitution. The authors test several alternative explanations, including public pressure, renqing, and mianzi, but the evidence still comes from one national context and one historically specific privatization setting.
+The paper notes that guilt does not automatically arise from every harm-inflicting action; leaders must be aware of harm and feel responsible for it, and these conditions are shaped by severity, proximity, social ties, and values. It also notes that guilt may not always translate into philanthropy because firms' financial condition and leaders' views of corporate responsibility can constrain restitution. The authors test several alternative explanations, including public pressure, renqing, and mianzi.
 
 **Future Research**
 Future research could examine other sources of guilt beyond dramatic harm-inflicting actions, including survivor guilt, outdoing guilt, privilege guilt, and trait-based guilt. The authors also call for more systematic research on when guilt is aroused, when it translates into corporate philanthropy, and how long its influence lasts. They further suggest studying whether guilt affects other strategic decisions, such as avoiding or modifying actions that may harm stakeholders.

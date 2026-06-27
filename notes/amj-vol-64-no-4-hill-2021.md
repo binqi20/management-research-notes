@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-4"
 pdf_path: "library/AMJ/vol-64-no-4/pdfs/Hill 2021 Seeing the Glass as Half Full or Half Empty The Role of Affect-Induced Optimistic and Pessimistic States on Justice Perceptions and Outcomes.pdf"
 text_path: "library/AMJ/vol-64-no-4/text/Hill 2021 Seeing the Glass as Half Full or Half Empty The Role of Affect-Induced Optimistic and Pessimistic States on Justice Perceptions and Outcomes.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

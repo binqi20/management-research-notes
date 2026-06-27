@@ -14,7 +14,7 @@ source: "AMJ/vol-64-no-2"
 pdf_path: "library/AMJ/vol-64-no-2/pdfs/Watkins 2021 Workplace Interpersonal Capitalization Employee Reactions to Coworker Positive Event Disclosures.pdf"
 text_path: "library/AMJ/vol-64-no-2/text/Watkins 2021 Workplace Interpersonal Capitalization Employee Reactions to Coworker Positive Event Disclosures.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

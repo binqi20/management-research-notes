@@ -14,7 +14,7 @@ source: "AMJ/vol-64-no-2"
 pdf_path: "library/AMJ/vol-64-no-2/pdfs/Eldor 2021 Leading by Doing Does Leading by Example Impact Productivity and Service Quality.pdf"
 text_path: "library/AMJ/vol-64-no-2/text/Eldor 2021 Leading by Doing Does Leading by Example Impact Productivity and Service Quality.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

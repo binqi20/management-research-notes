@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-4"
 pdf_path: "library/AMJ/vol-64-no-4/pdfs/Berg 2021 Getting the Picture Too Late Handoffs and the Effectiveness of Idea Implementation in Creative Work.pdf"
 text_path: "library/AMJ/vol-64-no-4/text/Berg 2021 Getting the Picture Too Late Handoffs and the Effectiveness of Idea Implementation in Creative Work.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-1"
 pdf_path: "library/AMJ/vol-64-no-1/pdfs/Dlugos 2021 Turned Down and Taking Off Rejection and Turnover in Internal Talent Markets.pdf"
 text_path: "library/AMJ/vol-64-no-1/text/Dlugos 2021 Turned Down and Taking Off Rejection and Turnover in Internal Talent Markets.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

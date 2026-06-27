@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-4"
 pdf_path: "library/AMJ/vol-64-no-4/pdfs/Chin 2021 Unpacking Political Ideology CEO Social and Economic Ideologies, Strategic Decision-Making Processes, and Corporate Entrepreneurship.pdf"
 text_path: "library/AMJ/vol-64-no-4/text/Chin 2021 Unpacking Political Ideology CEO Social and Economic Ideologies, Strategic Decision-Making Processes, and Corporate Entrepreneurship.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

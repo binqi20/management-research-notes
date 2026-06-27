@@ -114,9 +114,10 @@ from [`CLAUDE.md`](CLAUDE.md)):
 ## 4.1 Parallel agent slot policy
 
 For issue-level ingestion with parallel agents, Synapse uses a conservative
-operating default of **5 active subagents at a time**. This is not a claimed
-universal Codex or platform limit; it is a stability rule for this repository's
-paper-analysis workflow.
+Codex operating cap rather than a claimed platform limit. Keep at most **6
+active extraction agents** or **6 active audit agents** per wave. Do not attempt
+larger waves unless the user explicitly changes this policy after a new cap
+test.
 
 Use separate waves for extraction and audit. Extraction agents may write only
 `notes/<paper_id>.md`. Audit agents may write only
@@ -124,9 +125,9 @@ Use separate waves for extraction and audit. Extraction agents may write only
 audit reports, handles repairs, and rebuilds SQLite/CSV/BibTeX indexes.
 
 After any worker returns, record its result and close the completed agent thread
-before spawning another. If an active-agent cap prevents spawning, close
-completed agents and retry once; if it still fails, use a wave of 3 or serial
-execution while keeping extraction and audit roles independent.
+before spawning another. If an active-agent cap, timeout, or coordination
+problem appears even at 6, fall back to 5, then 3, then serial execution while
+keeping extraction and audit roles independent.
 
 ---
 
@@ -165,7 +166,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.23.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.23.1) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

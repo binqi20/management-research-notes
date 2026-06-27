@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-1"
 pdf_path: "library/AMJ/vol-64-no-1/pdfs/Abdurakhmonov 2021 Unpacking Firm External Dependence How Government Contract Dependence Affects Firm Investments and Market Performance.pdf"
 text_path: "library/AMJ/vol-64-no-1/text/Abdurakhmonov 2021 Unpacking Firm External Dependence How Government Contract Dependence Affects Firm Investments and Market Performance.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"
@@ -67,7 +67,7 @@ The paper extends RDT by moving beyond the external management of dependence to 
 The study warns that government contracts can provide stable revenue while also creating investment and market-performance risks when they dominate a firm's revenue base. Managers and investors should assess not only the level of government dependence but also whether the dependence is spread across agencies, supplemented by new contracts, or locked into longer-term arrangements, because these features change how the market and internal investment choices respond.
 
 **Limitations**
-The paper focuses on U.S.-based manufacturing firms and on government contracts as one specific source of external dependence, so the findings may not generalize directly to other industries, countries, or dependence relationships. The authors also note that other contextual factors, such as industry concentration or firms' ability to resist inertial forces, may add further nuance to how government dependence affects investment and market perceptions.
+The paper focuses on U.S.-based manufacturing firms and on government contracts as one specific source of external dependence, so the findings may not generalize directly to other industries or dependence relationships. The authors also note that other contextual factors, such as industry concentration or firms' ability to resist inertial forces, may add further nuance to how government dependence affects investment and market perceptions.
 
 **Future Research**
 Future research should examine government dependence beyond manufacturing, including how industry concentration, political shocks, consumer boycotts, and market position shape the risks attached to contract stability. The authors also call for work on other dependence relationships, such as dependence on major business customers, and on other RDT approaches such as acquisitions and alliances.

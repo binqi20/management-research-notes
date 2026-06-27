@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-3"
 pdf_path: "library/AMJ/vol-64-no-3/pdfs/Huang 2021 Sizing Up Entrepreneurial Potential Gender Differences in Communication and Investor Perceptions of Long-Term Growth and Scalability.pdf"
 text_path: "library/AMJ/vol-64-no-3/text/Huang 2021 Sizing Up Entrepreneurial Potential Gender Differences in Communication and Investor Perceptions of Long-Term Growth and Scalability.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

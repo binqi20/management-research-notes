@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-6"
 pdf_path: "library/AMJ/vol-64-no-6/pdfs/Cunningham 2021 Seeing Oneself as a Valued Contributor Social Worth Affirmation Improves Team Information Sharing.pdf"
 text_path: "library/AMJ/vol-64-no-6/text/Cunningham 2021 Seeing Oneself as a Valued Contributor Social Worth Affirmation Improves Team Information Sharing.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

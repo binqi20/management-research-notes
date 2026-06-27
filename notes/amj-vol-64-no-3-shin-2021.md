@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-3"
 pdf_path: "library/AMJ/vol-64-no-3/pdfs/Shin 2021 When Putting Work Off Pays Off The Curvilinear Relationship between Procrastination and Creativity.pdf"
 text_path: "library/AMJ/vol-64-no-3/text/Shin 2021 When Putting Work Off Pays Off The Curvilinear Relationship between Procrastination and Creativity.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

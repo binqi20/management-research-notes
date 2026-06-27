@@ -19,7 +19,7 @@ source: "AMJ/vol-64-no-2"
 pdf_path: "library/AMJ/vol-64-no-2/pdfs/Alterman 2021 Best Not to Know Pay Secrecy, Employee Voluntary Turnover, and the Conditioning Effect of Distributive Justice.pdf"
 text_path: "library/AMJ/vol-64-no-2/text/Alterman 2021 Best Not to Know Pay Secrecy, Employee Voluntary Turnover, and the Conditioning Effect of Distributive Justice.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

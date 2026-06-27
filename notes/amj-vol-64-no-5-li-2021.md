@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-5"
 pdf_path: "library/AMJ/vol-64-no-5/pdfs/Li 2021 High Risk, Low Return (and Vice Versa) The Effect of Product Innovation on Firm Performance in a Transition Economy.pdf"
 text_path: "library/AMJ/vol-64-no-5/text/Li 2021 High Risk, Low Return (and Vice Versa) The Effect of Product Innovation on Firm Performance in a Transition Economy.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

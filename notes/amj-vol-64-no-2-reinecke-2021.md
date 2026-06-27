@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-2"
 pdf_path: "library/AMJ/vol-64-no-2/pdfs/Reinecke 2021 Microfoundations of Framing The Interactional Production of Collective Action Frames in the Occupy Movement.pdf"
 text_path: "library/AMJ/vol-64-no-2/text/Reinecke 2021 Microfoundations of Framing The Interactional Production of Collective Action Frames in the Occupy Movement.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

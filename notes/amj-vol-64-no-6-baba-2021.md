@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-6"
 pdf_path: "library/AMJ/vol-64-no-6/pdfs/Baba 2021 Increasing Dispositional Legitimacy Progressive Legitimation Dynamics in a Trajectory of Settlements.pdf"
 text_path: "library/AMJ/vol-64-no-6/text/Baba 2021 Increasing Dispositional Legitimacy Progressive Legitimation Dynamics in a Trajectory of Settlements.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

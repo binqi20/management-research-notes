@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-6"
 pdf_path: "library/AMJ/vol-64-no-6/pdfs/Guo 2021 The Impact of Executive Verbal Communication on the Convergence of Investors’ Opinions.pdf"
 text_path: "library/AMJ/vol-64-no-6/text/Guo 2021 The Impact of Executive Verbal Communication on the Convergence of Investors’ Opinions.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

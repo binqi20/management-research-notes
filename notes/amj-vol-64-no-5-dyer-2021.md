@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-5"
 pdf_path: "library/AMJ/vol-64-no-5/pdfs/Dyer 2021 Who Should Become a Business School Associate Dean Individual Performance and Taking on Firm-Specific Roles.pdf"
 text_path: "library/AMJ/vol-64-no-5/text/Dyer 2021 Who Should Become a Business School Associate Dean Individual Performance and Taking on Firm-Specific Roles.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

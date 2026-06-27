@@ -133,28 +133,30 @@ research. Read this file before doing anything in this folder.
    went wrong.
 5. Run the two-layer faithfulness audit with an independent Layer 2 auditor.
    Layer 1 substring-checks the `evidence:` anchors against the PDF text. Layer
-   2 scores the six prose fields against `docs/audit-rubric.md`. If you are
-   using Claude Code's built-in path, run `python tools/audit_note.py
-   notes/{paper_id}.md --flag`. If you are using Codex or another external
-   auditor, have that independent auditor write `incoming/_audits/{paper_id}.layer2.json`
-   with provenance fields, then assemble the official report with
+   2 scores the six prose fields against `docs/audit-rubric.md`. The current
+   Codex path uses GPT-5.5 independent audit agents that write
+   `incoming/_audits/{paper_id}.layer2.json` with provenance fields, then
+   assembles the official report with
    `python tools/audit_note.py notes/{paper_id}.md --layer-2-json
-   incoming/_audits/{paper_id}.layer2.json --flag`.
+   incoming/_audits/{paper_id}.layer2.json --flag`. The old Claude CLI path is
+   a manual fallback only: pass an explicit Claude model such as
+   `--auditor-model claude-opus-4-6` if you deliberately use it.
 6. Run `python tools/build_index.py` to update the SQLite index.
 
 ## Parallel agent slot policy
 
-When ingesting or auditing a paper issue with parallel agents, keep at most 5
-active subagents at a time. This is a Synapse operating default for stability,
-not a universal platform limit. Use separate waves for extraction and Layer 2
+When ingesting or auditing a paper issue with parallel agents, keep at most 6
+active subagents per wave. This is the Synapse operating cap for the current
+Codex workflow; do not attempt larger waves unless the user explicitly changes
+the policy after a new cap test. Use separate waves for extraction and Layer 2
 audit: extraction agents may write only `notes/{paper_id}.md`, audit agents may
 write only `incoming/_audits/{paper_id}.layer2.json`, and the parent session
 assembles official audit reports and rebuilds derived indexes.
 
 After any worker returns, record its result and close the completed agent thread
-before spawning another. If spawning hits an active-agent cap, close completed
-agents and retry once; if it still fails, continue with a wave of 3 or serial
-execution while preserving extraction/audit independence.
+before spawning another. If spawning hits an active-agent cap, timeout, or
+coordination problem even at 6, fall back to 5, then 3, then serial execution
+while preserving extraction/audit independence.
 
 ## Things that should make you stop and ask the user
 

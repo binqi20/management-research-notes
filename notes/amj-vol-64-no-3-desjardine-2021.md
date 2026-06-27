@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-3"
 pdf_path: "library/AMJ/vol-64-no-3/pdfs/DesJardine 2021 Why Activist Hedge Funds Target Socially Responsible Firms The Reaction Costs of Signaling Corporate Social Responsibility.pdf"
 text_path: "library/AMJ/vol-64-no-3/text/DesJardine 2021 Why Activist Hedge Funds Target Socially Responsible Firms The Reaction Costs of Signaling Corporate Social Responsibility.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

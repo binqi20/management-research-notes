@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-3"
 pdf_path: "library/AMJ/vol-64-no-3/pdfs/Lifshitz-Assaf 2021 Minimal and Adaptive Coordination How Hackathons’ Projects Accelerate Innovation without Killing it.pdf"
 text_path: "library/AMJ/vol-64-no-3/text/Lifshitz-Assaf 2021 Minimal and Adaptive Coordination How Hackathons’ Projects Accelerate Innovation without Killing it.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"
@@ -67,7 +67,7 @@ The paper contributes to innovation process theory by showing that acceleration 
 It contributes to coordination theory by identifying adaptive coordination as a distinct mode between full coordination and minimal coordination. Adaptive coordination combines an initially minimal basis for coordination with later swift sensing and adjustment, explaining how ad hoc teams can maintain flexibility without losing integration. It also extends temporality research by showing how actors' enactment of temporal structures affects coordination processes and innovation outcomes.
 
 **Practical Implication**
-For organizations using hackathons, innovation sprints, or crisis-driven accelerated development, the study cautions against simply compressing familiar stage-gate or agile routines into a shorter schedule. Teams may need visible workflows, rapid experimentation, and brief adjustment interactions rather than early closure around a fully specified design.
+For organizations using hackathons, innovation sprints, or crisis-driven accelerated development, the study cautions against simply compressing familiar agile routines into a shorter schedule. Teams may need visible workflows, rapid experimentation, and brief adjustment interactions rather than early closure around a fully specified design.
 
 The findings are especially relevant for urgent health care or assistive technology innovation, where speed matters but premature alignment can prevent adaptation. Managers and organizers should create conditions that let participants see one another's work and adjust quickly without forcing extensive meetings or detailed upfront plans.
 

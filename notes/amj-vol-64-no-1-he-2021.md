@@ -18,7 +18,7 @@ source: "AMJ/vol-64-no-1"
 pdf_path: "library/AMJ/vol-64-no-1/pdfs/He 2021 When Does Pay for Performance Motivate Employee Helping Behavior The Contextual Influence of Performance Subjectivity.pdf"
 text_path: "library/AMJ/vol-64-no-1/text/He 2021 When Does Pay for Performance Motivate Employee Helping Behavior The Contextual Influence of Performance Subjectivity.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

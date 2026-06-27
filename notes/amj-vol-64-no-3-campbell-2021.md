@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-3"
 pdf_path: "library/AMJ/vol-64-no-3/pdfs/Campbell 2021 Employer–Employee Matching and Complementary Assets The Role of Cross-Organization Collaborations.pdf"
 text_path: "library/AMJ/vol-64-no-3/text/Campbell 2021 Employer–Employee Matching and Complementary Assets The Role of Cross-Organization Collaborations.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

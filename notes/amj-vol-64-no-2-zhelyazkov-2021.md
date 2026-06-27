@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-2"
 pdf_path: "library/AMJ/vol-64-no-2/pdfs/Zhelyazkov 2021 Marriage of Unequals Investment Quality Heterogeneity, Market Heat, and the Formation of Status-Asymmetric Ties in the Venture Capital Industry.pdf"
 text_path: "library/AMJ/vol-64-no-2/text/Zhelyazkov 2021 Marriage of Unequals Investment Quality Heterogeneity, Market Heat, and the Formation of Status-Asymmetric Ties in the Venture Capital Industry.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

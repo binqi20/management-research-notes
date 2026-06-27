@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-4"
 pdf_path: "library/AMJ/vol-64-no-4/pdfs/Soda 2021 Networks, Creativity, and Time Staying Creative through Brokerage and Network Rejuvenation.pdf"
 text_path: "library/AMJ/vol-64-no-4/text/Soda 2021 Networks, Creativity, and Time Staying Creative through Brokerage and Network Rejuvenation.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-6"
 pdf_path: "library/AMJ/vol-64-no-6/pdfs/Eklund 2021 Keep Your Eye on the Ball or on the Field Exploring the Performance Implications of Executive Strategic Attention.pdf"
 text_path: "library/AMJ/vol-64-no-6/text/Eklund 2021 Keep Your Eye on the Ball or on the Field Exploring the Performance Implications of Executive Strategic Attention.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

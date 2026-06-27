@@ -18,7 +18,7 @@ source: "AMJ/vol-64-no-6"
 pdf_path: "library/AMJ/vol-64-no-6/pdfs/Schaubroeck 2021 Struggling to Meet the Bar Occupational Progress Failure and Informal Leadership Behavior.pdf"
 text_path: "library/AMJ/vol-64-no-6/text/Schaubroeck 2021 Struggling to Meet the Bar Occupational Progress Failure and Informal Leadership Behavior.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

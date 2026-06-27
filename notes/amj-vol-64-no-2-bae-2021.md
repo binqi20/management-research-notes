@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-2"
 pdf_path: "library/AMJ/vol-64-no-2/pdfs/Bae 2021 How Technological Overlap between Spinouts and Parent Firms Affects Corporate Venture Capital Investments in Spinouts The Role of Competitive Tension.pdf"
 text_path: "library/AMJ/vol-64-no-2/text/Bae 2021 How Technological Overlap between Spinouts and Parent Firms Affects Corporate Venture Capital Investments in Spinouts The Role of Competitive Tension.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

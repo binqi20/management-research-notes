@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-4"
 pdf_path: "library/AMJ/vol-64-no-4/pdfs/DeCelles 2021 From the Editors—Improving the Transparency of Empirical Research Published in AMJ.pdf"
 text_path: "library/AMJ/vol-64-no-4/text/DeCelles 2021 From the Editors—Improving the Transparency of Empirical Research Published in AMJ.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "editorial"

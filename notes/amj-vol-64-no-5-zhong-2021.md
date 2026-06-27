@@ -18,7 +18,7 @@ source: "AMJ/vol-64-no-5"
 pdf_path: "library/AMJ/vol-64-no-5/pdfs/Zhong 2021 Customer Concentration, Executive Attention, and Firm Search Behavior.pdf"
 text_path: "library/AMJ/vol-64-no-5/text/Zhong 2021 Customer Concentration, Executive Attention, and Firm Search Behavior.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

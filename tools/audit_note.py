@@ -12,10 +12,10 @@ audit_note.py — two-layer faithfulness audit for a generated Synapse note.
 
     Layer 2 (semantic, LLM-based)
     -----------------------------
-    A fresh Claude subagent reads the rubric at `docs/audit-rubric.md`, the note
-    body, and the PDF text, and returns a per-prose-field JSON verdict from the
-    set { SUPPORTED, PARTIAL, UNSUPPORTED, CONTRADICTED }. The subagent runs in
-    a cold context so it has no prior commitment to the note's claims.
+    A fresh independent auditor reads the rubric at `docs/audit-rubric.md`, the
+    note body, and the PDF text, and returns a per-prose-field JSON verdict from
+    the set { SUPPORTED, PARTIAL, UNSUPPORTED, CONTRADICTED }. The auditor runs
+    in a cold context so it has no prior commitment to the note's claims.
 
     Two layers run in order. A Layer 1 failure short-circuits Layer 2 unless
     --force-layer-2 is set (you almost never want this — bad anchors mean bad
@@ -40,7 +40,10 @@ Options
                               extracted text, rubric, model, timestamp, and
                               dispatch mode.
     --force-layer-2           Run Layer 2 even if Layer 1 failed (debugging).
-    --auditor-model MODEL     Override the auditor model (default: config value)
+    --auditor-model MODEL     Override the auditor model recorded in reports.
+                              The default is the Codex external-audit model.
+                              The legacy Claude CLI path requires an explicit
+                              Claude model such as claude-opus-4-6.
 
 Exit codes
 ----------
@@ -87,7 +90,7 @@ from validate_note import (  # noqa: E402 — path munging above is intentional
 AUDITS_DIR = SYNAPSE_ROOT / "incoming" / "_audits"
 FLAGGED_DIR = SYNAPSE_ROOT / "incoming" / "_flagged"
 RUBRIC_PATH = SYNAPSE_ROOT / "docs" / "audit-rubric.md"
-DEFAULT_AUDITOR_MODEL = "claude-opus-4-6"
+DEFAULT_AUDITOR_MODEL = "gpt-5.5"
 AUDIT_VERSION = "v1"
 RUBRIC_VERSION = "v1"
 
@@ -450,6 +453,14 @@ def dispatch_auditor_via_cli(prompt: str, auditor_model: str) -> str:
       - stderr is captured separately so we can surface CLI errors to the user
         without polluting the JSON parse.
     """
+    if not auditor_model.startswith("claude-"):
+        raise RuntimeError(
+            "The default Synapse auditor model is now GPT-5.5 and must be run "
+            "through an independent Codex external-audit JSON path. To use the "
+            "legacy Claude CLI dispatcher, pass an explicit Claude model such "
+            "as --auditor-model claude-opus-4-6."
+        )
+
     cmd = ["claude", "--print", "--model", auditor_model]
     try:
         result = subprocess.run(

@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-4"
 pdf_path: "library/AMJ/vol-64-no-4/pdfs/Livne-Tarandach 2021 Swift Sense of Community Resourcing Artifacts for Rapid Community Emergence in a Temporary Organization.pdf"
 text_path: "library/AMJ/vol-64-no-4/text/Livne-Tarandach 2021 Swift Sense of Community Resourcing Artifacts for Rapid Community Emergence in a Temporary Organization.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-3"
 pdf_path: "library/AMJ/vol-64-no-3/pdfs/Jacobs 2021 Political Dynamics in Organizational Identity Breach and Reconstruction Findings from the Crisis in UNICEF Germany.pdf"
 text_path: "library/AMJ/vol-64-no-3/text/Jacobs 2021 Political Dynamics in Organizational Identity Breach and Reconstruction Findings from the Crisis in UNICEF Germany.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"
@@ -65,7 +65,7 @@ The process begins when managerialist actors normalize fundraising- and efficien
 The paper advances organizational identity research by theorizing identity breach and reconstruction as political processes rather than merely cognitive or cultural disruptions. It contributes a four-phase process model linking political strategies to changing power balances and forms of consensus or conflict. It also extends research on hybrid identities by showing how idealist actors can use breach and reconstruction to restore a more favorable balance against managerialist dominance.
 
 **Practical Implication**
-For hybrid organizations, the case shows that hidden identity tensions and distorted power balances can build into a public identity breach. The UNICEF Germany reconstruction suggests that inclusive mission review, open argument over alternative identity constructions, and compromise formation can help restore consensus after a breach.
+For hybrid organizations, the case shows that hidden identity tensions and distorted power balances can build into a public identity breach. The UNICEF Germany reconstruction suggests one pathway through which inclusive mission review, open argument over alternative identity constructions, and compromise formation were associated with restored consensus after a breach.
 
 The study also shows that reconstructed identity settlements require continued enactment and maintenance. Enforced consensus can conceal unresolved tensions again, so the practical lesson is less a one-time communication response than sustained attention to the political work behind organizational identity.
 

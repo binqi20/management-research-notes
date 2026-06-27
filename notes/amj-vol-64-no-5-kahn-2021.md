@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-5"
 pdf_path: "library/AMJ/vol-64-no-5/pdfs/Kahn 2021 Navigating Space for Personal Agency Auxiliary Routines as Adaptations in Toxic Organizations.pdf"
 text_path: "library/AMJ/vol-64-no-5/text/Kahn 2021 Navigating Space for Personal Agency Auxiliary Routines as Adaptations in Toxic Organizations.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

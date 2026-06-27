@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-1"
 pdf_path: "library/AMJ/vol-64-no-1/pdfs/Sutton 2021 Resource Dependence, Uncertainty, and the Allocation of Corporate Political Activity across Multiple Jurisdictions.pdf"
 text_path: "library/AMJ/vol-64-no-1/text/Sutton 2021 Resource Dependence, Uncertainty, and the Allocation of Corporate Political Activity across Multiple Jurisdictions.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-mixed"

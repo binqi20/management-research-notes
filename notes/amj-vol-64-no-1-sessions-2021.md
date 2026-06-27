@@ -18,7 +18,7 @@ source: "AMJ/vol-64-no-1"
 pdf_path: "library/AMJ/vol-64-no-1/pdfs/Sessions 2021 Do the Hustle! Empowerment from Side-Hustles and Its Effects on Full-Time Work Performance.pdf"
 text_path: "library/AMJ/vol-64-no-1/text/Sessions 2021 Do the Hustle! Empowerment from Side-Hustles and Its Effects on Full-Time Work Performance.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

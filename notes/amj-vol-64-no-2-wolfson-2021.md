@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-2"
 pdf_path: "library/AMJ/vol-64-no-2/pdfs/Wolfson 2021 Deploying Human Capital Resources Accentuating Effects of Situational Alignment and Social Capital Resources.pdf"
 text_path: "library/AMJ/vol-64-no-2/text/Wolfson 2021 Deploying Human Capital Resources Accentuating Effects of Situational Alignment and Social Capital Resources.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

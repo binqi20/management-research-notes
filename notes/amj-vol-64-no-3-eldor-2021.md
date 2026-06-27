@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-3"
 pdf_path: "library/AMJ/vol-64-no-3/pdfs/Eldor 2021 The Use of Agency Workers Hurts Business Performance An Integrated Indirect Model.pdf"
 text_path: "library/AMJ/vol-64-no-3/text/Eldor 2021 The Use of Agency Workers Hurts Business Performance An Integrated Indirect Model.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

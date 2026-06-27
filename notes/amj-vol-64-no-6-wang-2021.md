@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-6"
 pdf_path: "library/AMJ/vol-64-no-6/pdfs/Wang 2021 From Grace to Violence Stigmatizing the Medical Profession in China.pdf"
 text_path: "library/AMJ/vol-64-no-6/text/Wang 2021 From Grace to Violence Stigmatizing the Medical Profession in China.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-4"
 pdf_path: "library/AMJ/vol-64-no-4/pdfs/Bain 2021 Amplifying Voice in Organizations.pdf"
 text_path: "library/AMJ/vol-64-no-4/text/Bain 2021 Amplifying Voice in Organizations.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"
@@ -57,7 +57,7 @@ How do peers' responses to employee voice shape observers' evaluations of the vo
 - IV(s): Peer response to voice, especially amplification, compared with staying quiet, self-promotion, or voicing an additional idea; Study 1 also varies promotive versus prohibitive voice, and Study 2 varies voicer and responder gender.
 - DV(s): Perceived quality of the voiced idea, voicer status, responder status, and, in Study 3, team-member status after an amplification intervention.
 - Mediators: Perceived idea quality mediates the relationship between amplification and voicer status.
-- Moderators: Voice type, voicer gender, responder gender, and initially low-status position in work teams.
+- Boundary conditions / intervention target: Voice type, voicer gender, and responder gender are tested in the experiments; initially lower-status employees are the target of the Study 3 field intervention.
 
 The proposed mechanism is social evaluative rather than purely individual: amplification signals that a peer regards the voiced contribution as worth considering, which can raise perceived idea quality and thereby increase the voicer's status. For amplifiers, the mechanism draws on competitive altruism: publicly crediting someone else's contribution appears prosocial and group-oriented, allowing the amplifier to gain status without taking attention away from the voicer. Across studies, the effects held for promotive and prohibitive voice and for both men and women.
 

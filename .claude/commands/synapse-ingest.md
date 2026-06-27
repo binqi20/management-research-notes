@@ -188,16 +188,15 @@ failures to the user** before proceeding.
 ## Step 2 — Extract notes in parallel batches
 
 For every bundle produced in step 1, dispatch one `Agent` subtask to extract
-that paper into a Synapse note. **Synapse agent-slot policy: keep at most 5
-active extraction agents at a time.** This is a local operating default for
-stability and token control, not a claimed universal Codex platform limit.
-Dispatch a wave, wait for workers to return, record each result, close each
-completed agent thread, then spawn the next wave.
+that paper into a Synapse note. **Synapse agent-slot policy: keep at most 6
+active extraction agents per wave.** Do not attempt larger waves unless the user
+explicitly changes this policy after a new cap test. Dispatch a wave, wait for
+workers to return, record each result, close each completed agent thread, then
+spawn the next wave.
 
-If spawning fails with an agent-cap error, first close any completed agents and
-retry once. If the retry still fails, continue with a smaller wave of 3 or
-serial execution. Do not weaken the extraction/audit separation to recover
-speed.
+If spawning hits an agent-cap error, timeout, or coordination problem, fall back
+from 6 to 5, then 3, then serial execution. Do not weaken the extraction/audit
+separation to recover speed.
 
 Extraction agents write notes only. They must not run the semantic Layer 2 audit
 on their own work, and they must not produce the external Layer 2 JSON. The
@@ -264,13 +263,15 @@ Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 
 ## Step 2.5 — Independent Layer 2 audit
 
-After notes validate structurally, dispatch separate auditor agents. **Keep at
-most 5 active auditor agents at a time.** Do not mix extraction and audit waves
-for the same issue. As with extraction, record each returned audit result, close
-the completed auditor thread, then spawn the next wave.
+After notes validate structurally, dispatch separate GPT-5.5 auditor agents.
+**Keep at most 6 active auditor agents per wave.** Do not attempt larger waves
+unless the user explicitly changes this policy after a new cap test. Do not mix
+extraction and audit waves for the same issue. As with extraction, record each
+returned audit result, close the completed auditor thread, then spawn the next
+wave.
 
-If an audit-agent spawn hits the active-agent cap, close completed agents and
-retry once. If it still fails, reduce the wave to 3 or run serially while
+If an audit-agent spawn hits an active-agent cap, timeout, or coordination
+problem even at 6, fall back to 5, then 3, then serial execution while
 preserving auditor independence. Each auditor handles exactly one note and must
 read only:
 

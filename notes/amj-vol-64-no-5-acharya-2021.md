@@ -15,7 +15,7 @@ source: "AMJ/vol-64-no-5"
 pdf_path: "library/AMJ/vol-64-no-5/pdfs/Acharya 2021 Too Many Peas in a Pod How Overlaps in Directors’ Local and Global Status Characteristics Influence Board Turnover in Newly Public Firms.pdf"
 text_path: "library/AMJ/vol-64-no-5/text/Acharya 2021 Too Many Peas in a Pod How Overlaps in Directors’ Local and Global Status Characteristics Influence Board Turnover in Newly Public Firms.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

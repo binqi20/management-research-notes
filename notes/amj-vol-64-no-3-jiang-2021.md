@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-3"
 pdf_path: "library/AMJ/vol-64-no-3/pdfs/Jiang 2021 Who Will Board a Sinking Ship a Firm–Director Interdependence Perspective of Mutual Selection between Declining Firms and Director Candidates.pdf"
 text_path: "library/AMJ/vol-64-no-3/text/Jiang 2021 Who Will Board a Sinking Ship a Firm–Director Interdependence Perspective of Mutual Selection between Declining Firms and Director Candidates.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

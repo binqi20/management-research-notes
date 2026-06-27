@@ -18,7 +18,7 @@ source: "AMJ/vol-64-no-4"
 pdf_path: "library/AMJ/vol-64-no-4/pdfs/Luciano 2021 The Double-Edged Sword of Leadership Task Transitions in Emergency Response Multiteam Systems.pdf"
 text_path: "library/AMJ/vol-64-no-4/text/Luciano 2021 The Double-Edged Sword of Leadership Task Transitions in Emergency Response Multiteam Systems.txt"
 ingested_at: "2026-06-25"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"

@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-2"
 pdf_path: "library/AMJ/vol-64-no-2/pdfs/Paruchuri 2021 Salient Expectations Incongruence across Capability and Integrity Signals and Investor Reactions to Organizational Misconduct.pdf"
 text_path: "library/AMJ/vol-64-no-2/text/Paruchuri 2021 Salient Expectations Incongruence across Capability and Integrity Signals and Investor Reactions to Organizational Misconduct.txt"
 ingested_at: "2026-06-24"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-quantitative"

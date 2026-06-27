@@ -17,7 +17,7 @@ source: "AMJ/vol-64-no-6"
 pdf_path: "library/AMJ/vol-64-no-6/pdfs/Umphress 2021 From the Editors—Publishing Impactful Research in AMJ Winners of the 2020 and 2021 Impact Awards.pdf"
 text_path: "library/AMJ/vol-64-no-6/text/Umphress 2021 From the Editors—Publishing Impactful Research in AMJ Winners of the 2020 and 2021 Impact Awards.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "editorial"

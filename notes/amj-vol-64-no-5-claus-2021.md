@@ -16,7 +16,7 @@ source: "AMJ/vol-64-no-5"
 pdf_path: "library/AMJ/vol-64-no-5/pdfs/Claus 2021 Institutional Translation Gone Wrong The Case of Villages for Africa in Rural Tanzania.pdf"
 text_path: "library/AMJ/vol-64-no-5/text/Claus 2021 Institutional Translation Gone Wrong The Case of Villages for Africa in Rural Tanzania.txt"
 ingested_at: "2026-06-26"
-extraction_model: "claude-opus-4-8"
+extraction_model: "gpt-5.5"
 extraction_version: "v2"
 
 paper_type: "empirical-qualitative"
