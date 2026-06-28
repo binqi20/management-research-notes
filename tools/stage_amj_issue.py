@@ -4,8 +4,10 @@
 Copies an issue's PDFs from <codex-root>/Volume <V> Issue <I>/ into
 library/AMJ/vol-<V>-no-<I>/pdfs/ and converts the Codex manifest.tsv (a
 superset schema with download-QA columns) into the Synapse AMJ manifest
-schema. Leaves volume/issue/pages empty for tools/populate_manifest.py to
-backfill from CrossRef (Tier-3 gate), exactly like the existing AMJ issues.
+schema. Rows explicitly skipped by the downloader and lacking a saved PDF are
+excluded from the Synapse manifest; copied PDF rows are normalized to
+status=downloaded. Leaves volume/issue/pages empty for tools/populate_manifest.py
+to backfill from CrossRef (Tier-3 gate), exactly like the existing AMJ issues.
 
 The Codex manifest already records per-PDF completeness (pdf_complete /
 actual_page_count); rows that look like 1-page stubs are reported so they
@@ -46,6 +48,15 @@ def is_stub(row: dict) -> bool:
     return False
 
 
+def normalize_article_type(row: dict) -> str:
+    """Map downloader-specific labels onto Synapse AMJ manifest labels."""
+    article_type = (row.get("article_type") or "").strip()
+    section = (row.get("section") or "").strip().lower()
+    if article_type == "letter" and section == "from the editors":
+        return "editorial"
+    return article_type
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("volume", type=int)
@@ -67,18 +78,25 @@ def main() -> None:
         (dst / "pdfs").mkdir(parents=True, exist_ok=True)
         (dst / "text").mkdir(parents=True, exist_ok=True)
 
-    out_rows, copied, missing, stubs = [], 0, [], []
+    out_rows, copied, missing, stubs, excluded = [], 0, [], [], []
     for r in rows:
         sf = (r.get("saved_filename") or "").strip()
+        status = (r.get("status") or "").strip().lower()
+        if not sf and status == "skipped":
+            excluded.append((r.get("article_type") or "", r.get("title") or ""))
+            continue
+
         out = {c: (r.get(c) or "").strip() for c in TARGET_COLS}
+        out["article_type"] = normalize_article_type(r)
         out["volume"] = out["issue"] = out["pages"] = ""  # populate_manifest backfills
-        out_rows.append(out)
 
         if not sf:
             missing.append("(blank saved_filename)")
+            out_rows.append(out)
             continue
         spdf = src / sf
         if spdf.exists():
+            out["status"] = "downloaded"
             if not args.dry_run:
                 shutil.copy2(spdf, dst / "pdfs" / sf)
             copied += 1
@@ -86,6 +104,7 @@ def main() -> None:
             missing.append(sf)
         if is_stub(r):
             stubs.append(sf)
+        out_rows.append(out)
 
     if not args.dry_run:
         with (dst / "manifest.tsv").open("w", encoding="utf-8", newline="") as f:
@@ -94,8 +113,16 @@ def main() -> None:
             w.writerows(out_rows)
 
     tag = "[dry-run] " if args.dry_run else ""
-    print(f"{tag}vol-{args.volume}-no-{args.issue}: manifest rows={len(rows)}  pdfs copied={copied}")
+    print(
+        f"{tag}vol-{args.volume}-no-{args.issue}: "
+        f"source rows={len(rows)}  synapse rows={len(out_rows)}  pdfs copied={copied}"
+    )
     print(f"  dst: {dst}")
+    if excluded:
+        print(f"  EXCLUDED skipped no-PDF rows ({len(excluded)}):")
+        for article_type, title in excluded:
+            label = article_type or "unknown-type"
+            print(f"    - {label}: {title}")
     if missing:
         print(f"  MISSING PDFs ({len(missing)}): {missing}")
     if stubs:

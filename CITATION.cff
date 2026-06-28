@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-06-27"
-version: "0.23.1"
+date-released: "2026-06-28"
+version: "0.24.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,17 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.23.1
-  (2026-06-27) is a provenance-focused patch over v0.23.0: the 75 Academy of
+  a published rubric) gates every note into the library. Version 0.24.0
+  (2026-06-28) adds Academy of Management Journal volume 63, issues 1-6:
+  74 peer-reviewed papers with issue counts 13, 12, 12, 12, 12, and 13. This
+  extends AMJ pilot coverage backward to vol. 63 no. 1 through vol. 69 no. 1,
+  and the public SQLite, CSV, and BibTeX indexes now contain 691 records.
+  The release passes the full validation stack: all AMJ volume-63 manifests
+  lint cleanly, all notes validate, CrossRef metadata verification exits 0
+  with no mismatches; remaining notices are documented CrossRef-side false
+  positives or lookup warnings, and the full library has 691/691 PASS,
+  0 UNSUPPORTED, and 0 CONTRADICTED audit verdicts. Earlier, version 0.23.1
+  (2026-06-27) was a provenance-focused patch over v0.23.0: the 75 Academy of
   Management Journal volume-64 notes now record extraction_model "gpt-5.5"
   instead of the stale bundle value "claude-opus-4-8", and five
   audit-identified wording issues were narrowed: Abdurakhmonov et al. (2021)
@@ -119,7 +128,7 @@ abstract: >-
   pilot across vol. 66 no. 1 through vol. 66 no. 6, vol. 67 no. 1
   through vol. 67 no. 6, vol. 68 no. 1 through vol. 68 no. 6, and vol.
   69 no. 1 (vol. 66 no. 1 added in v0.19.0). The full library passes
-  the v0.23.1 audit sweep with 617/617 PASS and zero CONTRADICTED
+  the v0.24.0 audit sweep with 691/691 PASS and zero CONTRADICTED
   verdicts. An AGENTS.md file provides
   a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom

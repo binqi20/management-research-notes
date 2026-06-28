@@ -198,6 +198,16 @@ KNOWN_COMPOUND_SURNAMES: dict[str, dict[str, str]] = {
             "gate-matches CrossRef). Suppressed 2026-06-06."
         ),
     },
+    "10.5465/amj.2018.0335": {
+        "manifest_surname": "Shantz",
+        "crossref_family": "Slade Shantz",
+        "rationale": (
+            "Angelique F. Slade Shantz — compound family name. CrossRef "
+            "stores 'Slade Shantz'; manifest and PDF filename use the "
+            "citation-convention short form 'Shantz'. PDF byline verified "
+            "for AMJ vol. 63 no. 2. Suppressed 2026-06-27."
+        ),
+    },
     "10.1016/j.respol.2025.105408": {
         "manifest_surname": "Silva",
         "crossref_family": "De Silva",
