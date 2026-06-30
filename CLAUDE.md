@@ -40,10 +40,20 @@ research. Read this file before doing anything in this folder.
      `first_author_last` instead of just the family name). v0.13.2 ran this linter
      for the first time and found 6 latent bugs that had been in the library since
      the original NBS-2026-02 ingestion.
-   - **After extraction (Tier 2, mandatory):** run `python tools/verify_metadata.py`
-     to cross-check every note's bibliographic fields (year, title, journal,
-     volume, issue, pages, authors) against CrossRef. This is Step 4.5 of
-     `/synapse-ingest`, the last gating step before commit.
+   - **After extraction (Tier 2, mandatory within the changed scope):** run
+     `python tools/verify_metadata.py --quiet --paper-id <PAPER_ID>` for every
+     changed note to cross-check bibliographic fields (year, title, journal,
+     volume, issue, pages, authors) against CrossRef. For a completed volume
+     release, run the scoped check for every note in that changed volume. This
+     is Step 4.5 of `/synapse-ingest`, the last gating step before commit.
+     Do not treat full-library CrossRef as a ritual; reserve it for global
+     metadata parsing/comparison changes, schema/indexer changes affecting
+     metadata fields, batch migrations or global metadata transformations,
+     suspected systemic metadata drift, stale or unreliable prior validation
+     state, explicit user request, or a major public milestone where the
+     network cost is justified. A narrow known-false-positive registry addition
+     for a newly added paper is a scoped data exception, not a global logic
+     change.
 
    v0.11.1 fixed 48 issue-year mismatches (27% of the library) where the manifest
    had silently stored the *online-first* year — only an external cross-check
@@ -51,7 +61,8 @@ research. Read this file before doing anything in this folder.
    backfilling from CrossRef. v0.12.0 introduced Tier 3 (`populate_manifest.py`)
    so future batches never need this kind of cleanup. v0.13.2 introduced
    `lint_manifests.py` to catch structural manifest bugs that the other gates
-   miss. All three gates must exit 0 before committing new notes. The legacy
+   miss. All three required gates must exit 0 in their appropriate scope before
+   committing new notes. The legacy
    `tools/verify_years.py` is preserved as a year-only alias and is equivalent
    to `verify_metadata.py --field year`.
 2. **Verbatim means verbatim.** When the extraction prompt says "extract the abstract

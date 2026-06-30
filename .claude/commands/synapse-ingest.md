@@ -392,13 +392,13 @@ cautious extra assurance:
 python tools/validate_note.py notes/*.md
 ```
 
-Run this full sweep when the run changes schema, validator behavior,
-parser/indexer behavior, the extraction prompt, many notes by batch edit or
-migration, global metadata, or when prior validation state is stale/unreliable,
-a systemic issue is suspected, a volume/release/milestone is being closed, an
-official research output is being prepared, or the user explicitly asks for it.
-If targeted issue validation already gives equivalent assurance, do not treat
-the full sweep as a ritual.
+Run this full local note-validation sweep when the run changes schema,
+validator behavior, parser/indexer behavior, the extraction prompt, many notes
+by batch edit or migration, global metadata, or when prior validation state is
+stale/unreliable, a systemic issue is suspected, a volume/release/milestone is
+being closed, an official research output is being prepared, or the user
+explicitly asks for it. If targeted issue validation already gives equivalent
+assurance, do not treat the full local validation sweep as a ritual.
 
 ## Step 4.5 — Bibliographic-integrity check (mandatory)
 
@@ -413,10 +413,24 @@ python tools/verify_metadata.py --quiet --paper-id <PAPER_ID>
 The tool checks **seven fields per note** against CrossRef (year, title,
 journal, volume, issue, pages, authors). Exit code 0 if all selected fields
 match for all checked notes; exit code 1 on any mismatch (suitable as a
-pipeline gate). Full-library CrossRef verification is more expensive than local
-note validation, so reserve `python tools/verify_metadata.py --quiet` for
-release/milestone checks, metadata-logic changes, `verify_metadata.py` changes,
-suspected systemic metadata drift, or explicit user request.
+pipeline gate). For a completed volume release, scoped CrossRef over the whole
+changed volume is sufficient when no global metadata code, schema, prompt, or
+indexer change occurred. Full-library CrossRef verification is more expensive
+than local note validation, so do not treat it as a ritual. Reserve
+`python tools/verify_metadata.py --quiet` for real high-risk triggers:
+metadata parsing or comparison logic changed globally, `verify_metadata.py`
+comparison behavior changed globally, schema/indexer changes affect metadata
+fields, a batch migration or global metadata transformation occurred, systemic
+metadata drift is suspected, the prior validation state is stale or unreliable,
+the user explicitly requests it, or a major public milestone justifies the
+network cost.
+
+A narrow `KNOWN_CROSSREF_DATA_ERRORS` addition for a newly added paper does not
+by itself trigger a full-library CrossRef sweep, because it cannot affect
+unrelated notes. Treat that as a scoped data exception and rerun the scoped
+check for the affected issue or volume. A global change to CrossRef parsing,
+normalization, comparison, or field-selection logic is different and should use
+the full-library sweep.
 
 Expected output for a clean scoped check: every changed note matches CrossRef,
 with one possible exception — `MISSING` rows for books / book reviews /
