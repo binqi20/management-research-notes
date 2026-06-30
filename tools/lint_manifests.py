@@ -160,6 +160,17 @@ KNOWN_COMPOUND_SURNAMES: dict[str, dict[str, str]] = {
             "Suppressed 2026-06-23."
         ),
     },
+    "10.5465/amj.2017.0323": {
+        "manifest_surname": "Zhang",
+        "crossref_family": "Man Zhang",
+        "rationale": (
+            "Cyndi Man Zhang — given/middle-name parsing ambiguity. CrossRef "
+            "stores family='Man Zhang', but the PDF byline reads 'CYNDI MAN "
+            "ZHANG' and the running head uses 'Zhang and Greve'; manifest "
+            "uses the citation-convention family name 'Zhang'. Suppressed "
+            "2026-06-28."
+        ),
+    },
     "10.5465/amj.2019.1402": {
         "manifest_surname": "Eleazar",
         "crossref_family": "Welbourne Eleazar",

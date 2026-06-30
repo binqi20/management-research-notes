@@ -198,6 +198,22 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "Suppressed 2026-06-23."
         ),
     },
+    "amj-vol-62-no-1-zhang-2019": {
+        "authors": (
+            "CrossRef parses the first author 'Cyndi Man Zhang' as "
+            "family='Man Zhang'. The PDF byline reads 'CYNDI MAN ZHANG' "
+            "and the running header uses 'Zhang and Greve'; the note matches "
+            "the journal citation convention. Suppressed 2026-06-28."
+        ),
+    },
+    "amj-vol-62-no-1-jia-2019": {
+        "authors": (
+            "CrossRef parses the third author 'Cyndi Man Zhang' as "
+            "family='Man Zhang'. The article running header uses 'Jia, Huang, "
+            "and Zhang' and the author bio reads 'Cyndi Man Zhang'; the note "
+            "matches the journal citation convention. Suppressed 2026-06-28."
+        ),
+    },
     "amj-vol-65-no-4-pamphile-2022": {
         "authors": (
             "CrossRef stores the compound family name 'Deeds Pamphile'; the "
