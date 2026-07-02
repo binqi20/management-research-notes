@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-767-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-860-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-snapshot)
-[![Audit](https://img.shields.io/badge/audit-767%2F767%20PASS-success.svg)](#faithfulness-audit)
+[![Audit](https://img.shields.io/badge/audit-860%2F860%20PASS-success.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -437,6 +437,21 @@ The full library has been swept across releases:
   snapshot. The public indexes were rebuilt from notes: SQLite, CSV, and
   BibTeX all contain 767 records.
 
+- **v0.26.0 sweep (2026-07-02, 860 notes):**
+  Adds **Academy of Management Journal volume 61, issues 1-6** — **93
+  peer-reviewed papers** with issue counts **16, 16, 15, 15, 16, 15**.
+  This extends AMJ pilot coverage backward to vol. 61 no. 1, so the AMJ
+  pilot now spans vol. 61 no. 1 through vol. 69 no. 1. **93 / 93 PASS**
+  the faithfulness audit for the AMJ volume-61 batch; the full library now
+  has **860 / 860 PASS**, 0 `UNSUPPORTED`, and 0 `CONTRADICTED` verdicts.
+  All six AMJ volume-61 manifests lint cleanly, all notes validate, and
+  scoped CrossRef metadata verification for all 93 AMJ volume-61 notes exits
+  0 with no mismatches. The audit sweep has one non-blocking `PARTIAL`
+  verdict (Aristidou 2018 limitations), retained as harmless compression
+  around scope-boundary wording rather than a faithfulness failure. The
+  public indexes were rebuilt from notes: SQLite, CSV, and BibTeX all
+  contain 860 records.
+
 Run the audit on a single note with:
 
 ```bash
@@ -447,7 +462,7 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this snapshot
 
-This main-branch snapshot contains **767 curated notes**:
+This main-branch snapshot contains **860 curated notes**:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
@@ -455,14 +470,16 @@ This main-branch snapshot contains **767 curated notes**:
   recovered and added in v0.3.0.)
 - **NBS 2025-12** — 82 notes from the NBS **December 2025** monthly digest, spanning the *Ecological Economics* biodiversity-and-finance special issue, AMJ, *Business & Society*, *Review of Finance*, *Strategic Management Journal*, and other journals (added in v0.20.0).
 - **NBS 2026-01** — 113 notes from the NBS **January 2026** monthly digest, led by the *Journal of Business Ethics* (40) with *Research Policy* (14), the *Journal of Environmental Economics and Management*, *Organization Science*, *Human Relations*, *The Journal of Finance*, *MIS Quarterly*, and other journals (added in v0.21.0).
-- **AMJ pilot** — 495 notes across 43 consecutive recent issues of
+- **AMJ pilot** — 588 notes across 49 consecutive recent issues of
   the [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 62 no. 1 through vol. 62 no. 6, vol. 63 no. 1 through vol.
+  (vol. 61 no. 1 through vol. 61 no. 6, vol. 62 no. 1 through vol.
+  62 no. 6, vol. 63 no. 1 through vol.
   63 no. 6, vol. 64 no. 1 through vol.
   64 no. 6, vol. 65 no. 1 through vol.
   65 no. 6, vol. 66 no. 1 through vol.
   66 no. 6, vol. 67 no. 1 through vol. 67 no. 6, vol. 68 no. 1
   through vol. 68 no. 6, and vol. 69 no. 1).
+  v0.26.0 added vol. 61 no. 1-6 (93 notes);
   v0.25.0 added vol. 62 no. 1-6 (76 notes);
   v0.24.0 added vol. 63 no. 1-6 (74 notes);
   v0.23.0 added vol. 64 no. 1-6 (75 notes);
@@ -481,17 +498,17 @@ This main-branch snapshot contains **767 curated notes**:
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |   400 |
-| empirical-qualitative  |   184 |
+| empirical-quantitative |   462 |
+| empirical-qualitative  |   199 |
+| empirical-mixed        |    82 |
 | conceptual             |    52 |
-| empirical-mixed        |    72 |
-| editorial              |    44 |
+| editorial              |    50 |
 | review                 |     9 |
 | book-review            |     6 |
-| **Total**              | **767** |
+| **Total**              | **860** |
 
 All notes have passed the semantic audit. The corpus contains 88 legacy v1
-notes and 679 v2 notes; v2 notes carry an `evidence:` anchor block checked by
+notes and 772 v2 notes; v2 notes carry an `evidence:` anchor block checked by
 Layer 1. See [Faithfulness audit](#faithfulness-audit) above.
 
 ## Repository layout
@@ -506,10 +523,10 @@ management-research-notes/
 ├── docs/
 │   ├── extraction-prompt.md           ← the canonical extraction prompt (v2)
 │   └── audit-rubric.md                ← rubric the Layer 2 auditor uses
-├── notes/                             ← 767 curated paper notes (the source of truth)
+├── notes/                             ← 860 curated paper notes (the source of truth)
 │   └── nbs-2026-02-spoor-2026.md
 ├── index/                             ← derived views, all rebuildable
-│   ├── synapse.db                     ← SQLite + FTS5 (~10 MB)
+│   ├── synapse.db                     ← SQLite + FTS5 (~14 MB)
 │   ├── papers.csv                     ← flat tabular export
 │   ├── library.bib                    ← BibTeX, one @article per note
 │   └── topics.json                    ← 14-domain controlled vocabulary
@@ -526,7 +543,7 @@ management-research-notes/
 │   ├── NBS/2026-02/
 │   │   ├── manifest.tsv               ← trusted bibliographic source for the batch
 │   │   └── missing.tsv                ← papers NBS listed but PDFs unavailable
-│   └── AMJ/vol-62-no-1 ... vol-69-no-1/
+│   └── AMJ/vol-61-no-1 ... vol-69-no-1/
 │       └── manifest.tsv               ← per-issue manifests for the AMJ pilot
 │       (pdfs/ and text/ are intentionally NOT published — see Copyright below)
 └── .synapse/
@@ -620,7 +637,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.25.0},
+  version      = {0.26.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

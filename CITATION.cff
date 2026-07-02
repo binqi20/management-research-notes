@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-06-30"
-version: "0.25.0"
+date-released: "2026-07-02"
+version: "0.26.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,16 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.25.0
+  a published rubric) gates every note into the library. Version 0.26.0
+  (2026-07-02) adds Academy of Management Journal volume 61, issues 1-6:
+  93 peer-reviewed papers with issue counts 16, 16, 15, 15, 16, and 15. This
+  extends AMJ pilot coverage backward to vol. 61 no. 1 through vol. 69 no. 1,
+  and the public SQLite, CSV, and BibTeX indexes now contain 860 records.
+  The AMJ volume-61 release passes the volume validation stack: all AMJ
+  volume-61 manifests lint cleanly, all notes validate, scoped CrossRef
+  metadata verification for all 93 AMJ volume-61 notes exits 0 with no
+  mismatches, and the full library has 860/860 PASS, 0 UNSUPPORTED, and
+  0 CONTRADICTED audit verdicts. Earlier, version 0.25.0
   (2026-06-30) adds Academy of Management Journal volume 62, issues 1-6:
   76 peer-reviewed papers with issue counts 12, 12, 13, 13, 12, and 14. This
   extends AMJ pilot coverage backward to vol. 62 no. 1 through vol. 69 no. 1,
@@ -140,7 +149,7 @@ abstract: >-
   pilot across vol. 66 no. 1 through vol. 66 no. 6, vol. 67 no. 1
   through vol. 67 no. 6, vol. 68 no. 1 through vol. 68 no. 6, and vol.
   69 no. 1 (vol. 66 no. 1 added in v0.19.0). The full library passes
-  the v0.25.0 audit sweep with 767/767 PASS and zero CONTRADICTED
+  the v0.26.0 audit sweep with 860/860 PASS and zero CONTRADICTED
   verdicts. An AGENTS.md file provides
   a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom

@@ -214,6 +214,22 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "matches the journal citation convention. Suppressed 2026-06-28."
         ),
     },
+    "amj-vol-61-no-2-titus-2018": {
+        "authors": (
+            "CrossRef parses the first author's family name as 'Titus', "
+            "dropping the 'Jr.' suffix. The PDF byline reads 'VARKEY K. "
+            "TITUS JR.' and the APA citation form is 'Titus, V. K., Jr.'; "
+            "the note preserves the published suffix. Suppressed 2026-07-01."
+        ),
+    },
+    "amj-vol-61-no-4-tepper-2018": {
+        "authors": (
+            "CrossRef parses the sixth author 'Hee Man Park' as "
+            "family='Man Park'. The PDF byline reads 'HEE MAN PARK' and the "
+            "APA citation form is 'Park, H. M.'; the note matches the "
+            "published byline and citation convention. Suppressed 2026-07-01."
+        ),
+    },
     "amj-vol-65-no-4-pamphile-2022": {
         "authors": (
             "CrossRef stores the compound family name 'Deeds Pamphile'; the "
