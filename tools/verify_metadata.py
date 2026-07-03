@@ -214,6 +214,23 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "matches the journal citation convention. Suppressed 2026-06-28."
         ),
     },
+    "amj-vol-60-no-2-greve-2017": {
+        "authors": (
+            "CrossRef parses the second author 'Cyndi Man Zhang' as "
+            "family='Man Zhang'. The PDF byline reads 'CYNDI MAN ZHANG' and "
+            "the note follows APA/journal citation convention with family "
+            "name 'Zhang'. Suppressed 2026-07-03."
+        ),
+    },
+    "amj-vol-60-no-5-giachetti-2017": {
+        "authors": (
+            "CrossRef parses the third author 'Stefano Li Pira' as "
+            "family='Pira', dropping 'Li'. The PDF byline reads 'STEFANO "
+            "LI PIRA' and the running head uses 'Giachetti, Lampel, and "
+            "Li Pira'; the note matches the published byline and citation "
+            "convention. Suppressed 2026-07-03."
+        ),
+    },
     "amj-vol-61-no-2-titus-2018": {
         "authors": (
             "CrossRef parses the first author's family name as 'Titus', "
