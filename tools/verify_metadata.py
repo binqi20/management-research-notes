@@ -231,6 +231,26 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "convention. Suppressed 2026-07-03."
         ),
     },
+    "amj-vol-59-no-1-durand-2016": {
+        "title": (
+            "CrossRef record has malformed inline HTML: title contains "
+            "'Organizational<i>and</i>Individual' with NO spaces around "
+            "the italic tag, so after tag-strip normalization the CrossRef "
+            "value renders as 'OrganizationalandIndividual'. The note title "
+            "matches the PDF and journal published version with proper "
+            "spacing. Suppressed 2026-07-03."
+        ),
+    },
+    "amj-vol-59-no-1-zavyalova-2016": {
+        "title": (
+            "CrossRef record has malformed inline HTML: title contains "
+            "'Benefit<i>and</i>a Burden' with NO spaces around the italic "
+            "tag, so after tag-strip normalization the CrossRef value "
+            "renders as 'Benefitanda Burden'. The note title matches the "
+            "PDF and journal published version with proper spacing. "
+            "Suppressed 2026-07-03."
+        ),
+    },
     "amj-vol-61-no-2-titus-2018": {
         "authors": (
             "CrossRef parses the first author's family name as 'Titus', "
