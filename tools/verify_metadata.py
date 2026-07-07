@@ -251,6 +251,35 @@ KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
             "Suppressed 2026-07-03."
         ),
     },
+    "amj-vol-58-no-1-byron-2015": {
+        "title": (
+            "CrossRef record has malformed inline HTML: title contains "
+            "'Photos, and<i>Tchotchkes</i>as Symbolic' with NO spaces "
+            "around the italic tag, so after tag-strip normalization the "
+            "CrossRef value renders without the spaces around 'Tchotchkes'. "
+            "The note title matches the PDF and journal published version "
+            "with proper spacing. Suppressed 2026-07-05."
+        ),
+    },
+    "amj-vol-58-no-1-little-2015": {
+        "authors": (
+            "CrossRef parses the second author 'Virginia Smith Major' as "
+            "family='Major', dropping 'Smith'. The PDF byline reads "
+            "'VIRGINIA SMITH MAJOR' and the running head uses 'Little, "
+            "Smith Major, Hinojosa, and Nelson'; the note matches the "
+            "journal citation convention. Suppressed 2026-07-05."
+        ),
+    },
+    "amj-vol-58-no-5-joshi-2015-gender-research-overview": {
+        "title": (
+            "CrossRef record includes literal inline HTML around the journal "
+            "name: 'Gender Research in<i>AMJ</i>: ...'. After tag stripping, "
+            "the value renders without the intended spaces around 'AMJ'. The "
+            "PDF title reads 'Gender Research in AMJ: An Overview...' and the "
+            "note matches the PDF/journal published version. Suppressed "
+            "2026-07-06."
+        ),
+    },
     "amj-vol-61-no-2-titus-2018": {
         "authors": (
             "CrossRef parses the first author's family name as 'Titus', "

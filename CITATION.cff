@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-07-05"
-version: "0.28.0"
+date-released: "2026-07-07"
+version: "0.29.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,18 +54,31 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.28.0
-  (2026-07-05) adds Academy of Management Journal volume 59, issues 1-6:
-  95 peer-reviewed papers with issue counts 16, 15, 16, 16, 16, and 16. This
-  extends AMJ pilot coverage backward to vol. 59 no. 1 through vol. 69 no. 1,
-  and the public SQLite, CSV, and BibTeX indexes now contain 1,050 records.
-  The AMJ volume-59 release passes the volume validation stack: all AMJ
-  volume-59 manifests lint cleanly, all notes validate, scoped CrossRef
-  metadata verification for all 95 AMJ volume-59 notes exits 0 with two
-  documented CrossRef-side title false positives in issue 1 (Durand and
-  Zavyalova malformed inline HTML), and the full library has 1,050/1,050
-  PASS, 0 UNSUPPORTED, and 0 CONTRADICTED audit verdicts. The final AMJ
-  volume-59 audit scan has 570/570 prose-field verdicts SUPPORTED. Earlier,
+  a published rubric) gates every note into the library. Version 0.29.0
+  (2026-07-07) adds Academy of Management Journal volume 58, issues 1-6:
+  78 peer-reviewed papers with issue counts 13, 13, 13, 13, 13, and 13. This
+  extends AMJ pilot coverage backward to vol. 58 no. 1 through vol. 69 no. 1,
+  and the public SQLite, CSV, and BibTeX indexes now contain 1,128 records.
+  The AMJ volume-58 release passes the volume validation stack: all AMJ
+  volume-58 manifests lint cleanly, all notes validate, scoped CrossRef
+  metadata verification for all 78 AMJ volume-58 notes exits 0 with three
+  documented CrossRef-side false positives (Byron title inline-HTML spacing,
+  Little / Smith Major author parsing, and Joshi title inline-HTML spacing),
+  and the full library has 1,128/1,128 PASS, 0 UNSUPPORTED, and
+  0 CONTRADICTED audit verdicts. The final AMJ volume-58 audit scan has
+  468/468 prose-field verdicts SUPPORTED after six audit-identified prose
+  fields were narrowed before release. Earlier, version 0.28.0 (2026-07-05)
+  adds Academy of Management Journal volume 59, issues 1-6: 95 peer-reviewed
+  papers with issue counts 16, 15, 16, 16, 16, and 16. This extends AMJ pilot
+  coverage backward to vol. 59 no. 1 through vol. 69 no. 1, and the public
+  SQLite, CSV, and BibTeX indexes now contain 1,050 records. The AMJ
+  volume-59 release passes the volume validation stack: all AMJ volume-59
+  manifests lint cleanly, all notes validate, scoped CrossRef metadata
+  verification for all 95 AMJ volume-59 notes exits 0 with two documented
+  CrossRef-side title false positives in issue 1 (Durand and Zavyalova
+  malformed inline HTML), and the full library has 1,050/1,050 PASS,
+  0 UNSUPPORTED, and 0 CONTRADICTED audit verdicts. The final AMJ volume-59
+  audit scan has 570/570 prose-field verdicts SUPPORTED. Earlier,
   version 0.27.0 (2026-07-03) adds Academy of Management Journal volume 60,
   issues 1-6: 95 peer-reviewed papers with issue counts 16, 16, 16, 17, 15,
   and 15. This extends AMJ pilot coverage backward to vol. 60 no. 1 through
@@ -167,10 +180,10 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.28.0 snapshot contains 1,050 curated
+  perfectly-clean batch. The current v0.29.0 snapshot contains 1,128 curated
   notes: 272 from the Network for Business Sustainability monthly digests
-  and 778 AMJ pilot notes across vol. 59 no. 1 through vol. 69 no. 1. The
-  full library passes the v0.28.0 audit sweep with 1,050/1,050 PASS and zero
+  and 856 AMJ pilot notes across vol. 58 no. 1 through vol. 69 no. 1. The
+  full library passes the v0.29.0 audit sweep with 1,128/1,128 PASS and zero
   CONTRADICTED verdicts. An AGENTS.md file provides
   a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom
