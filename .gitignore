@@ -55,6 +55,9 @@ secrets.*
 !.claude/skills/
 !.claude/skills/**
 
+# Serena MCP per-machine workspace state (created by agent sessions).
+.serena/
+
 # --- macOS / editor cruft ----------------------------------------------------
 .DS_Store
 ._*

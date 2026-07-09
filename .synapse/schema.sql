@@ -21,11 +21,14 @@ CREATE TABLE IF NOT EXISTS papers (
     units                    TEXT,
     n_sample                 TEXT,
     research_question        TEXT,
+    hypotheses               TEXT,   -- v3: stated hypotheses / propositions
     mechanism_summary        TEXT,
     iv                       TEXT,
     dv                       TEXT,
     mediators                TEXT,
     moderators               TEXT,
+    data_measures            TEXT,   -- v3: how focal constructs were operationalized
+    key_findings             TEXT,   -- v3: what the study found (hypothesis support, direction)
     theoretical_contribution TEXT,
     practical_implication    TEXT,
     limitations              TEXT,
@@ -82,7 +85,9 @@ CREATE VIRTUAL TABLE IF NOT EXISTS papers_fts USING fts5(
     title,
     abstract,
     research_question,
+    hypotheses,
     mechanism_summary,
+    key_findings,
     theoretical_contribution,
     practical_implication
 );

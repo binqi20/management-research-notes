@@ -72,6 +72,7 @@ import ssl
 import sys
 import time
 import unicodedata
+import urllib.error
 import urllib.parse
 import urllib.request
 from html import unescape
@@ -431,26 +432,63 @@ def parse_note_frontmatter(note_path: Path) -> dict:
 # CrossRef
 # ---------------------------------------------------------------------------
 
+# CrossRef resilience (added v0.30.0). Every gate (populate_manifest,
+# lint_manifests, verify_metadata) imports fetch_crossref, so retrying transient
+# failures here hardens the whole pipeline: a single HTTPS stall no longer aborts
+# a full-library sweep (cf. the v0.25.0 sweep that a handshake stall interrupted).
+CROSSREF_MAX_ATTEMPTS = 3
+CROSSREF_BACKOFF_BASE_SECONDS = 2.0
+CROSSREF_RETRYABLE_STATUS = {429, 500, 502, 503, 504}
+_NOT_FOUND_SENTINEL = {"__crossref_not_found__": True}
+
+
 def fetch_crossref(doi: str) -> dict | None:
-    """Query CrossRef for a DOI. Returns the `message` object, or None on miss."""
+    """Query CrossRef for a DOI. Returns the `message` object, or None on miss.
+
+    Transient failures (network errors, timeouts, HTTP 5xx, 429 rate-limits) are
+    retried up to CROSSREF_MAX_ATTEMPTS with linear backoff. A genuine 404 (DOI
+    not registered) is permanent and is cached as a negative result so it is not
+    re-fetched on every run; `--no-cache` clears both positive and negative cache
+    entries.
+    """
     cache_key = urllib.parse.quote(doi, safe="")
     cache_path = CACHE_DIR / f"{cache_key}.json"
     if cache_path.exists():
-        return json.loads(cache_path.read_text())
+        cached = json.loads(cache_path.read_text())
+        return None if cached == _NOT_FOUND_SENTINEL else cached
 
     url = f"https://api.crossref.org/works/{doi}"
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    try:
-        with urllib.request.urlopen(req, timeout=20, context=SSL_CONTEXT) as resp:
-            payload = json.loads(resp.read())
-    except Exception as e:
-        print(f"  WARN: CrossRef fetch failed for {doi}: {e}", file=sys.stderr)
-        return None
+    last_err: Exception | None = None
+    for attempt in range(1, CROSSREF_MAX_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=20, context=SSL_CONTEXT) as resp:
+                payload = json.loads(resp.read())
+            msg = payload.get("message", {})
+            cache_path.write_text(json.dumps(msg))
+            time.sleep(RATE_LIMIT_SLEEP_SECONDS)
+            return msg
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                # Permanent: DOI not in CrossRef. Cache the negative result.
+                cache_path.write_text(json.dumps(_NOT_FOUND_SENTINEL))
+                print(f"  WARN: CrossRef has no record for {doi} (404)", file=sys.stderr)
+                return None
+            if e.code not in CROSSREF_RETRYABLE_STATUS:
+                print(f"  WARN: CrossRef fetch failed for {doi}: {e}", file=sys.stderr)
+                return None
+            last_err = e
+        except Exception as e:  # URLError, socket timeout, JSON decode — transient
+            last_err = e
+        if attempt < CROSSREF_MAX_ATTEMPTS:
+            time.sleep(CROSSREF_BACKOFF_BASE_SECONDS * attempt)
 
-    msg = payload.get("message", {})
-    cache_path.write_text(json.dumps(msg))
-    time.sleep(RATE_LIMIT_SLEEP_SECONDS)
-    return msg
+    print(
+        f"  WARN: CrossRef fetch failed for {doi} after "
+        f"{CROSSREF_MAX_ATTEMPTS} attempts: {last_err}",
+        file=sys.stderr,
+    )
+    return None
 
 
 def crossref_year(msg: dict) -> tuple[int | None, str]:

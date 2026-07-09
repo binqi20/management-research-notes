@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-07-07"
-version: "0.29.0"
+date-released: "2026-07-09"
+version: "0.30.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,23 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.29.0
+  a published rubric) gates every note into the library. Version 0.30.0
+  (2026-07-09) is a schema-and-tooling release with no new notes: it
+  introduces extraction v3, which adds three empirical body sections to
+  every future note — Hypotheses / Propositions, Data & Measures, and Key
+  Findings — plus three matching Layer 1 evidence anchors
+  (hypotheses_source, measures_overview, findings_overview) and three new
+  Layer 2 audited prose fields under audit rubric v2 (nine fields for v3
+  notes; a reversed finding direction is CONTRADICTED). The change is
+  applied going-forward only: the validator, auditor, and indexer are
+  version-gated on extraction_version, all 1,128 existing v1/v2 notes
+  revalidate unchanged, and the rebuilt SQLite and CSV indexes carry the
+  three new columns with key_findings and hypotheses now searchable via
+  FTS5. The release also adds docs/pipeline-runbook.md, a vendor-neutral
+  ingest/audit/publish runbook referenced from AGENTS.md, hardens the
+  shared CrossRef client used by all three metadata gates with
+  retry-with-backoff and negative caching, and fixes stale documentation
+  references. Earlier, version 0.29.0
   (2026-07-07) adds Academy of Management Journal volume 58, issues 1-6:
   78 peer-reviewed papers with issue counts 13, 13, 13, 13, 13, and 13. This
   extends AMJ pilot coverage backward to vol. 58 no. 1 through vol. 69 no. 1,
@@ -180,7 +196,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.29.0 snapshot contains 1,128 curated
+  perfectly-clean batch. The current v0.30.0 snapshot contains 1,128 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 856 AMJ pilot notes across vol. 58 no. 1 through vol. 69 no. 1. The
   full library passes the v0.29.0 audit sweep with 1,128/1,128 PASS and zero

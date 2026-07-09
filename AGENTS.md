@@ -42,7 +42,8 @@ this order:
 2. [`CLAUDE.md`](CLAUDE.md) — the 7 hard rules for anyone modifying content (Claude-Code-flavored but content is tool-agnostic).
 3. [`docs/extraction-prompt.md`](docs/extraction-prompt.md) — the canonical prompt used to produce each note, including the required `evidence:` anchor schema.
 4. [`docs/audit-rubric.md`](docs/audit-rubric.md) — the verdict rubric the faithfulness auditor uses.
-5. Any single note, e.g. [`notes/nbs-2026-02-spoor-2026.md`](notes/nbs-2026-02-spoor-2026.md), to see the schema in practice.
+5. [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md) — **if you are ingesting or publishing:** the vendor-neutral step-by-step procedure (gate order, parallel-wave caps, systemic-failure stop conditions, SSH publish).
+6. Any single note, e.g. [`notes/nbs-2026-02-spoor-2026.md`](notes/nbs-2026-02-spoor-2026.md), to see the schema in practice.
 
 ---
 
@@ -56,8 +57,8 @@ can be regenerated with `python tools/build_index.py`.
 - One file per paper, named by stable `paper_id` (e.g. `nbs-2026-02-spoor-2026`).
 - Every `paper_id` is permanent — agents may safely use it as a citation target.
 - Two parts:
-  - **YAML frontmatter:** bibliographic metadata (title, authors, year, journal, DOI, volume, issue, pages), paper type, controlled-vocabulary `topics:`, methods, sample (N, country, industry, time period), three custom analytic fields (`unit_of_analysis`, `level_of_theory`, `dependent_variable_family`), and (on v2 notes) an `evidence:` block of ≤25-word verbatim PDF quotes anchoring each factual claim.
-  - **Markdown body:** verbatim abstract (always a substring of the source PDF), research question, mechanism/process, theoretical contribution, practical implication, limitations, future research, and an APA 7th citation block.
+  - **YAML frontmatter:** bibliographic metadata (title, authors, year, journal, DOI, volume, issue, pages), paper type, controlled-vocabulary `topics:`, methods, sample (N, country, industry, time period), three custom analytic fields (`unit_of_analysis`, `level_of_theory`, `dependent_variable_family`), and (on v2/v3 notes) an `evidence:` block of ≤25-word verbatim PDF quotes anchoring each factual claim.
+  - **Markdown body:** verbatim abstract (always a substring of the source PDF), research question, mechanism/process, theoretical contribution, practical implication, limitations, future research, and an APA 7th citation block. **v3 notes add three empirical sections — hypotheses / propositions, data & measures, and key findings** — so the note records not just what a paper studied but what it found.
 - **Good for:** grep / full-text search, loading into context, human reading.
 - **Example query:** `grep -l "stakeholder theory" notes/*.md`.
 
@@ -136,12 +137,14 @@ keeping extraction and audit roles independent.
 Every note in this repository has been through a **two-layer faithfulness
 audit**:
 
-- **Layer 1 — Evidence anchors (mechanical).** For v2 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
-- **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
+- **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
+- **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
 **Current main-branch audit state (2026-07-07):
 1,128 / 1,128 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The corpus contains
-88 legacy v1 notes and 1,040 v2 notes with evidence anchors. `PARTIAL`
+88 legacy v1 notes and 1,040 v2 notes with evidence anchors; new notes are
+produced at extraction **v3**, which adds hypotheses, data & measures, and key
+findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). `PARTIAL`
 verdicts (stylistic compressions that don't rise to a faithfulness failure)
 are flagged for human review but do not block publication. The library has
 never produced a `CONTRADICTED` verdict — no claim in any note actively
@@ -166,7 +169,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.29.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.30.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

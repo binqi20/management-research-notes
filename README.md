@@ -503,10 +503,36 @@ The full library has been swept across releases:
   0 `UNSUPPORTED`, and 0 `CONTRADICTED`. The public indexes were rebuilt
   from notes: SQLite, CSV, and BibTeX all contain 1,128 records.
 
-Run the audit on a single note with:
+- **v0.30.0 tooling (2026-07-09, 1,128 notes):**
+  Schema-and-tooling release — **no new notes**. Introduces extraction
+  **v3**, which adds three empirical body sections to every future note —
+  **Hypotheses / Propositions**, **Data & Measures**, and **Key
+  Findings** — plus three matching Layer 1 evidence anchors
+  (`hypotheses_source`, `measures_overview`, `findings_overview`) and
+  three new Layer 2 audited prose fields under audit rubric **v2**
+  (nine fields for v3 notes; a reversed finding direction is
+  `CONTRADICTED`, per the sign-reversal rule). Applied going-forward
+  only: the validator, auditor, and indexer are version-gated on
+  `extraction_version`, all 1,128 existing v1/v2 notes revalidate
+  unchanged (**1,128 / 1,128 OK**), and the rebuilt SQLite/CSV indexes
+  carry the three new columns (still 1,128 records; `key_findings` and
+  `hypotheses` are FTS5-searchable). Also adds
+  `docs/pipeline-runbook.md` — a vendor-neutral ingest/audit/publish
+  runbook referenced from `AGENTS.md` — hardens the shared CrossRef
+  client (retry-with-backoff, negative 404 caching) used by all three
+  metadata gates, and fixes stale documentation references
+  (`ingest_batch.py`, the tools list, the audit invocation examples).
+
+Run the audit on a single note. Layer 1 (the mechanical anchor check) runs
+standalone; the full two-layer audit reads an independent auditor's verdict:
 
 ```bash
-python tools/audit_note.py notes/<paper_id>.md
+# Layer 1 only (mechanical evidence-anchor check):
+python tools/audit_note.py notes/<paper_id>.md --skip-layer-2
+
+# Full two-layer audit (Layer 2 verdict supplied by an independent auditor):
+python tools/audit_note.py notes/<paper_id>.md \
+  --layer-2-json incoming/_audits/<paper_id>.layer2.json
 ```
 
 Or, from inside a Claude Code session: `/audit-note <paper_id>`.
@@ -589,10 +615,13 @@ management-research-notes/
 │   └── topics.json                    ← 14-domain controlled vocabulary
 ├── tools/                             ← the Python pipeline
 │   ├── pdf_to_text.py                 ← PDF → plain text (pdftotext + pdfplumber)
+│   ├── populate_manifest.py           ← Tier 3 gate: backfill vol/issue/pages + fix year (CrossRef)
+│   ├── lint_manifests.py              ← structural manifest lint (catches name-capture bugs)
 │   ├── prepare_paper.py               ← bundle a paper for extraction
 │   ├── ingest_batch.py                ← walk a folder of PDFs
 │   ├── validate_note.py               ← verbatim-abstract + bib + taxonomy + anchors
 │   ├── audit_note.py                  ← two-layer faithfulness audit (Layer 1 + Layer 2)
+│   ├── verify_metadata.py             ← Tier 2 gate: cross-check bib fields vs CrossRef (verify_years.py = year-only alias)
 │   ├── build_index.py                 ← rebuild SQLite from notes/
 │   ├── export_csv.py                  ← rebuild papers.csv
 │   └── export_bibtex.py               ← rebuild library.bib
@@ -600,7 +629,7 @@ management-research-notes/
 │   ├── NBS/2026-02/
 │   │   ├── manifest.tsv               ← trusted bibliographic source for the batch
 │   │   └── missing.tsv                ← papers NBS listed but PDFs unavailable
-│   └── AMJ/vol-59-no-1 ... vol-69-no-1/
+│   └── AMJ/vol-58-no-1 ... vol-69-no-1/
 │       └── manifest.tsv               ← per-issue manifests for the AMJ pilot
 │       (pdfs/ and text/ are intentionally NOT published — see Copyright below)
 └── .synapse/
@@ -694,7 +723,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.29.0},
+  version      = {0.30.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

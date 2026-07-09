@@ -19,8 +19,9 @@ folder they want to ingest.
 
 ## Non-negotiable rules (from CLAUDE.md)
 
-Before doing anything else, re-read `CLAUDE.md` in this project. The five hard
-rules there override any instinct to speed through:
+Before doing anything else, re-read `CLAUDE.md` in this project. The seven hard
+rules there override any instinct to speed through (the most load-bearing for
+ingestion are summarized below):
 
 1. **Never invent bibliographic fields.** Use only the manifest or CrossRef
    lookup. `Not reported in paper` is always an acceptable value.
@@ -210,7 +211,7 @@ Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 > back, nothing more.
 >
 > **Inputs** (read in this order):
-> 1. `CLAUDE.md` — the five hard rules at the top of the file. Especially
+> 1. `CLAUDE.md` — the seven hard rules at the top of the file. Especially
 >    "never invent bibliographic fields" and "verbatim means verbatim."
 > 2. `docs/extraction-prompt.md` — the canonical 17-field extraction prompt.
 >    Follow it literally; the structure of the output note is non-negotiable.

@@ -94,7 +94,8 @@ def upsert_note(conn: sqlite3.Connection, note_path: Path) -> None:
         INSERT INTO papers (
             id, title, year, journal, doi, volume, issue, pages,
             paper_type, methods, industry, country, time_period, units, n_sample,
-            research_question, mechanism_summary, iv, dv, mediators, moderators,
+            research_question, hypotheses, mechanism_summary, iv, dv, mediators, moderators,
+            data_measures, key_findings,
             theoretical_contribution, practical_implication, limitations,
             future_research, abstract, apa_citation,
             unit_of_analysis, level_of_theory, dependent_variable_family,
@@ -102,7 +103,8 @@ def upsert_note(conn: sqlite3.Connection, note_path: Path) -> None:
             extraction_model, extraction_version, ingested_at
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?,
                   ?, ?, ?, ?, ?, ?, ?,
-                  ?, ?, ?, ?, ?, ?,
+                  ?, ?, ?, ?, ?, ?, ?,
+                  ?, ?,
                   ?, ?, ?,
                   ?, ?, ?,
                   ?, ?, ?,
@@ -126,11 +128,14 @@ def upsert_note(conn: sqlite3.Connection, note_path: Path) -> None:
             sample.get("units"),
             sample.get("n"),
             sections.get("Research Question"),
+            sections.get("Hypotheses / Propositions"),
             mechanism_summary,
             mech_parts["iv"],
             mech_parts["dv"],
             mech_parts["mediators"],
             mech_parts["moderators"],
+            sections.get("Data & Measures"),
+            sections.get("Key Findings"),
             sections.get("Theoretical Contribution"),
             sections.get("Practical Implication"),
             sections.get("Limitations"),
@@ -174,16 +179,19 @@ def upsert_note(conn: sqlite3.Connection, note_path: Path) -> None:
     conn.execute(
         """
         INSERT INTO papers_fts (
-            id, title, abstract, research_question,
-            mechanism_summary, theoretical_contribution, practical_implication
-        ) VALUES (?, ?, ?, ?, ?, ?, ?)
+            id, title, abstract, research_question, hypotheses,
+            mechanism_summary, key_findings,
+            theoretical_contribution, practical_implication
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             paper_id,
             fm.get("title"),
             sections.get("Abstract"),
             sections.get("Research Question"),
+            sections.get("Hypotheses / Propositions"),
             mechanism_summary,
+            sections.get("Key Findings"),
             sections.get("Theoretical Contribution"),
             sections.get("Practical Implication"),
         ),

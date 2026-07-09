@@ -1,6 +1,6 @@
 # Faithfulness Audit Rubric
 
-**Version:** v1
+**Version:** v2
 **Used by:** Layer 2 of `tools/audit_note.py` — the independent-auditor subagent
 that checks whether a generated Synapse note faithfully represents its source
 PDF.
@@ -27,9 +27,12 @@ claims**. Writing quality, topic choice, and completeness are out of scope.
 
 ## Inputs you receive
 
-1. **Note body** — the Markdown body of a Synapse note, with headings
-   Research Question, Mechanism Process, Theoretical Contribution,
-   Practical Implication, Limitations, Future Research, APA 7th Citation.
+1. **Note body** — the Markdown body of a Synapse note. v1/v2 notes carry the
+   headings Research Question, Mechanism Process, Theoretical Contribution,
+   Practical Implication, Limitations, Future Research, APA 7th Citation. v3 notes
+   add three more — Hypotheses / Propositions, Data & Measures, and Key Findings.
+   **Score only the prose fields the note actually contains** (six for v1/v2, nine
+   for v3); never emit a verdict for a section the note does not have.
 2. **PDF text** — the full extracted plain text of the source article.
 3. **Paper type** — one of `empirical-quantitative`, `empirical-qualitative`,
    `empirical-mixed`, `conceptual`, `review`, `editorial`, `book-review`,
@@ -75,9 +78,10 @@ they affect what you *see*, not what the note *claims*.
 
 ## Verdict definitions
 
-For each of the six prose fields (Research Question, Mechanism Process,
-Theoretical Contribution, Practical Implication, Limitations, Future Research)
-you emit exactly one verdict from the set below.
+For each prose field present in the note you emit exactly one verdict from the set
+below. v1/v2 notes have six such fields (Research Question, Mechanism Process,
+Theoretical Contribution, Practical Implication, Limitations, Future Research); v3
+notes add three more (Hypotheses / Propositions, Data & Measures, Key Findings).
 
 | Verdict | Meaning | When to use |
 |---|---|---|
@@ -156,6 +160,26 @@ This is the loudest possible failure and must be flagged.
 
 ---
 
+## v3 fields — what to watch for
+
+The three v3 fields (Hypotheses / Propositions, Data & Measures, Key Findings) use
+the same verdicts, with these emphases:
+
+- **Key Findings** is the field most exposed to sign/direction reversal — apply
+  Example 4's logic directly. If the note says an effect is positive/supported but
+  the PDF reports it negative/rejected (or vice versa), that is `CONTRADICTED`, not
+  `PARTIAL`. If the note reports a result the PDF never states, that is
+  `UNSUPPORTED`. Getting the direction of the headline result right is the single
+  most important thing this audit protects.
+- **Hypotheses / Propositions** restates the paper's own hypotheses. Mark
+  `CONTRADICTED` if a hypothesis's predicted direction is flipped, `UNSUPPORTED` if
+  a listed hypothesis does not appear in the paper at all.
+- **Data & Measures** should match how the paper operationalized its constructs.
+  Mark `UNSUPPORTED` for an invented measure or data source. A `"Not reported in
+  paper"` value the paper type permits is a conservative pass (SUPPORTED/high).
+
+---
+
 ## Confidence
 
 For each verdict, also emit a confidence level: `high`, `medium`, or `low`.
@@ -186,8 +210,9 @@ is not a strict format; it exists to make human triage fast. Omit the field
 
 You MUST produce exactly one JSON object, with the structure below, and
 nothing else. No prose, no preamble, no `json` fenced block, no commentary.
-The top-level keys and the per-field keys are fixed; extra keys will be
-ignored but may trigger warnings in downstream tooling.
+The top-level keys are fixed; the per-field keys are the prose fields the note
+contains (six for v1/v2, nine for v3 — the last three below are v3-only). Extra
+keys will be ignored but may trigger warnings in downstream tooling.
 
 ```json
 {
@@ -229,6 +254,24 @@ ignored but may trigger warnings in downstream tooling.
         "confidence": "high",
         "evidence_page_hint": "future research §",
         "note": "..."
+      },
+      "hypotheses": {
+        "verdict": "SUPPORTED",
+        "confidence": "high",
+        "evidence_page_hint": "p. 5, H1-H4",
+        "note": "v3 only. The restated hypotheses match the paper."
+      },
+      "data_measures": {
+        "verdict": "SUPPORTED",
+        "confidence": "high",
+        "evidence_page_hint": "methods §",
+        "note": "v3 only. Measures match the paper's operationalization."
+      },
+      "key_findings": {
+        "verdict": "SUPPORTED",
+        "confidence": "high",
+        "evidence_page_hint": "results, Table 3",
+        "note": "v3 only. Support pattern and signs match Table 3."
       }
     }
   }
@@ -244,8 +287,9 @@ ignored but may trigger warnings in downstream tooling.
 
 **Rules for per-field objects:**
 
-- Every field key listed above MUST be present, even if the value is
-  `"Not reported in paper"` in the note. In that case emit
+- Every prose field the note contains MUST have a score entry — six for a v1/v2
+  note, nine for a v3 note. Do not score a section the note lacks. Even when the
+  value is `"Not reported in paper"`, emit
   `{ "verdict": "SUPPORTED", "confidence": "high", "note": "Field is 'Not reported in paper' and paper type permits this." }`
   — a conservative, anti-hallucination pass.
 - `evidence_page_hint` may be `null` but must be present as a key.

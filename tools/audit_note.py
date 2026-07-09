@@ -25,6 +25,11 @@ Usage
 -----
     python tools/audit_note.py notes/<paper_id>.md [options]
 
+    Layer 2 needs an independent verdict: pass --layer-2-json PATH (the Codex
+    default) or --auditor-model claude-<model> (legacy CLI dispatcher). A bare
+    invocation runs Layer 1 then errors on Layer 2 by design; use --skip-layer-2
+    for a Layer-1-only check.
+
 Options
 -------
     --flag                    On fail, write incoming/_flagged/<id>.reason.txt
@@ -92,7 +97,12 @@ FLAGGED_DIR = SYNAPSE_ROOT / "incoming" / "_flagged"
 RUBRIC_PATH = SYNAPSE_ROOT / "docs" / "audit-rubric.md"
 DEFAULT_AUDITOR_MODEL = "gpt-5.5"
 AUDIT_VERSION = "v1"
-RUBRIC_VERSION = "v1"
+# The single canonical rubric doc (docs/audit-rubric.md) is now v2: it scores the
+# original six prose fields plus the three v3 fields (Hypotheses / Propositions,
+# Data & Measures, Key Findings), instructing the auditor to score only the fields
+# a given note actually contains. New audits of any note therefore read rubric v2;
+# historical audit JSONs stamped "v1" remain valid and are not re-checked.
+RUBRIC_VERSION = "v2"
 
 # Prose fields the Layer 2 subagent verdicts against. Must match the keys in
 # the rubric's output-format example — if the rubric changes, this list must
@@ -105,6 +115,30 @@ LAYER_2_PROSE_FIELDS = [
     "limitations",
     "future_research",
 ]
+
+# v3 notes add three empirical prose fields, scored in note-body order. v1/v2
+# notes keep the original six-field contract. The set is chosen per note by
+# extraction_version so the existing corpus audits identically and a v3 audit is
+# *required* to score Key Findings (the field most exposed to sign reversal).
+LAYER_2_PROSE_FIELDS_V3 = [
+    "research_question",
+    "hypotheses",
+    "mechanism_process",
+    "data_measures",
+    "key_findings",
+    "theoretical_contribution",
+    "practical_implication",
+    "limitations",
+    "future_research",
+]
+
+
+def prose_fields_for(extraction_version: str | None) -> list[str]:
+    """Return the Layer 2 prose fields the auditor must verdict for a note."""
+    if extraction_version == "v3":
+        return LAYER_2_PROSE_FIELDS_V3
+    return LAYER_2_PROSE_FIELDS
+
 
 VERDICT_ENUM = {"SUPPORTED", "PARTIAL", "UNSUPPORTED", "CONTRADICTED"}
 CONFIDENCE_ENUM = {"high", "medium", "low"}
@@ -522,6 +556,7 @@ def parse_auditor_response(
     *,
     expected_provenance: dict | None = None,
     require_provenance: bool = False,
+    prose_fields: list[str] | None = None,
 ) -> dict:
     """Defensive JSON parser for the subagent's response.
 
@@ -603,7 +638,8 @@ def parse_auditor_response(
     if not isinstance(scores, dict):
         raise ValueError("auditor response 'layer_2.scores' is not an object")
     warnings: list[str] = []
-    for field in LAYER_2_PROSE_FIELDS:
+    fields = prose_fields or LAYER_2_PROSE_FIELDS
+    for field in fields:
         if field not in scores:
             raise ValueError(f"auditor omitted required Layer 2 field {field!r}")
         v = scores[field]
@@ -629,7 +665,7 @@ def parse_auditor_response(
     # Recompute overall from verdicts to defend against an auditor that lies
     # about its own top-level field.
     fail_verdicts = {"UNSUPPORTED", "CONTRADICTED"}
-    has_fail = any(scores[f]["verdict"] in fail_verdicts for f in LAYER_2_PROSE_FIELDS)
+    has_fail = any(scores[f]["verdict"] in fail_verdicts for f in fields)
     layer_2["overall"] = "fail" if has_fail else "pass"
 
     return {
@@ -781,6 +817,7 @@ def main() -> int:
 
     paper_id = fm.get("id", args.note.stem)
     paper_type = fm.get("paper_type", "")
+    prose_fields = prose_fields_for(fm.get("extraction_version"))
     note_digest = sha256_text(note_raw)
     text_digest: str | None = None
     audit_context: dict | None = None
@@ -833,6 +870,7 @@ def main() -> int:
                 raw,
                 expected_provenance=expected_provenance,
                 require_provenance=True,
+                prose_fields=prose_fields,
             )
             effective_auditor_model = (
                 layer_2_result.get("provenance", {}).get("auditor_model")
@@ -857,7 +895,7 @@ def main() -> int:
                 rubric_text,
             )
             raw = dispatch_auditor_via_cli(prompt, args.auditor_model)
-            layer_2_result = parse_auditor_response(raw)
+            layer_2_result = parse_auditor_response(raw, prose_fields=prose_fields)
             print(f"Layer 2: {layer_2_result['layer_2']['overall']}")
             for field, v in layer_2_result["layer_2"].get("scores", {}).items():
                 marker = "  "

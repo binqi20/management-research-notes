@@ -20,11 +20,11 @@ Checks (in order, with early exit on fatal frontmatter errors):
   9. Prose drift: any backticked kebab-case token in the body that is within
      edit distance 2 of a real topics.json slug but isn't an exact match is
      flagged as a likely typo (e.g., `unehical-behavior` near `unethical-behavior`).
- 10. Evidence anchors (Layer 1 faithfulness audit — v2+ only): each key in the
+ 10. Evidence anchors (Layer 1 faithfulness audit — v2/v3 only): each key in the
      'evidence:' frontmatter block must be a verbatim substring of the extracted
-     PDF text, or the literal string "Not reported in paper". Skipped for notes
-     with extraction_version != "v2" (backward compatibility with the 90 v1 notes
-     already in the corpus).
+     PDF text, or the literal string "Not reported in paper". v3 adds three
+     empirical anchors (hypotheses_source, measures_overview, findings_overview).
+     Skipped for v1 notes (backward compatibility with the legacy corpus).
 
 On failure: prints a list of errors to stderr and exits non-zero. With `--flag`,
 also moves the note (or, if it isn't there yet, writes a stub) to
@@ -87,8 +87,28 @@ REQUIRED_HEADINGS = [
     ("APA 7th Citation",         "apa_citation"),
 ]
 
+# v3 extraction (going-forward) inserts three empirical sections between Research
+# Question and Theoretical Contribution, following an empirical paper's logical
+# flow: question -> hypotheses -> model -> data/measures -> findings ->
+# contribution. Version-gated in check_required_headings so the 88 v1 and 1,040
+# v2 notes keep their original 8-heading contract unchanged.
+REQUIRED_HEADINGS_V3 = [
+    ("Abstract",                  "abstract"),
+    ("Research Question",         "research_question"),
+    ("Hypotheses / Propositions", "hypotheses"),
+    ("Mechanism Process",         "mechanism_process"),
+    ("Data & Measures",           "data_measures"),
+    ("Key Findings",              "key_findings"),
+    ("Theoretical Contribution",  "theoretical_contribution"),
+    ("Practical Implication",     "practical_implication"),
+    ("Limitations",               "limitations"),
+    ("Future Research",           "future_research"),
+    ("APA 7th Citation",          "apa_citation"),
+]
+
 OPTIONAL_FOR_TYPE = {
-    "book-review": {"research_question", "mechanism_process", "sample", "theoretical_contribution"},
+    "book-review": {"research_question", "mechanism_process", "sample", "theoretical_contribution",
+                    "hypotheses", "data_measures", "key_findings"},
     # 'abstract' is optional for editorials because "From the Editors" pieces
     # typically have no formal abstract section. Without this exemption,
     # editorial extractors are forced to pick a sentence fragment as a
@@ -99,9 +119,17 @@ OPTIONAL_FOR_TYPE = {
     # paper" instead. Verbatim fragments still pass too — the verbatim
     # check's existing escape (check_abstract_verbatim line 454) was already
     # in place; this exemption just lets check_required_headings agree.
-    "editorial":   {"research_question", "mechanism_process", "sample", "abstract"},
-    "review":      {"mechanism_process", "sample"},
-    "conceptual":  {"mechanism_process", "sample"},
+    "editorial":   {"research_question", "mechanism_process", "sample", "abstract",
+                    "hypotheses", "data_measures", "key_findings"},
+    "review":      {"mechanism_process", "sample", "hypotheses", "data_measures", "key_findings"},
+    "conceptual":  {"mechanism_process", "sample", "hypotheses", "data_measures", "key_findings"},
+    # v3: qualitative and mixed studies often have no a priori hypotheses (they
+    # surface emergent propositions instead), so their Hypotheses / Propositions
+    # section may be "Not reported in paper". Data & Measures and Key Findings
+    # stay required for every empirical-* type. These keys are inert for v1/v2
+    # notes, which never carry the v3 headings.
+    "empirical-qualitative": {"hypotheses"},
+    "empirical-mixed":       {"hypotheses"},
 }
 
 NOT_REPORTED = "Not reported in paper"
@@ -151,9 +179,49 @@ EVIDENCE_REQUIRED_KEYS_BY_TYPE: dict[str, list[str]] = {
     "other":       [],
 }
 
+# v3 adds three empirical anchors: hypotheses_source (a stated hypothesis /
+# proposition), measures_overview (how a focal construct was operationalized),
+# and findings_overview (a key result). Same <=25-word verbatim-substring rule
+# and "Not reported in paper" escape valve as the original seven.
+EVIDENCE_REQUIRED_KEYS_BY_TYPE_V3: dict[str, list[str]] = {
+    "empirical-quantitative": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+        "hypotheses_source", "measures_overview", "findings_overview",
+    ],
+    "empirical-qualitative": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+        "hypotheses_source", "measures_overview", "findings_overview",
+    ],
+    "empirical-mixed": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+        "hypotheses_source", "measures_overview", "findings_overview",
+    ],
+    # Conceptual / review papers keep every key present (the empirical ones are
+    # written as "Not reported in paper") so the validator can still detect a
+    # missing block rather than a quietly absent one — the same rule v2 applies
+    # to the four sample_* keys.
+    "conceptual": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+        "hypotheses_source", "measures_overview", "findings_overview",
+    ],
+    "review": [
+        "sample_n", "sample_country", "sample_industry", "sample_time_period",
+        "theories_overview", "methods_overview", "keywords_source",
+        "hypotheses_source", "measures_overview", "findings_overview",
+    ],
+    "editorial":   [],
+    "book-review": [],
+    "other":       [],
+}
+
 EVIDENCE_ALL_KNOWN_KEYS = {
     "sample_n", "sample_country", "sample_industry", "sample_time_period",
     "theories_overview", "methods_overview", "keywords_source",
+    "hypotheses_source", "measures_overview", "findings_overview",
 }
 
 EVIDENCE_MAX_WORDS = 25  # warning-tier cap; longer quotes emit a warning but don't fail
@@ -390,8 +458,16 @@ def check_bibliographic_match(fm: dict, errors: list[str]) -> None:
 def check_required_headings(body_sections: dict, fm: dict, errors: list[str]) -> None:
     pt = fm.get("paper_type", "")
     optional = OPTIONAL_FOR_TYPE.get(pt, set())
+    # v3 notes carry three extra empirical sections; v1/v2 notes keep the
+    # original eight. Select the contract by extraction_version so the existing
+    # corpus validates byte-for-byte as before.
+    headings = (
+        REQUIRED_HEADINGS_V3
+        if fm.get("extraction_version") == "v3"
+        else REQUIRED_HEADINGS
+    )
     body_keys = list(body_sections.keys())
-    expected_keys = [heading for heading, _key in REQUIRED_HEADINGS]
+    expected_keys = [heading for heading, _key in headings]
     if body_keys != expected_keys:
         errors.append(
             "body headings out of order or missing:\n"
@@ -399,7 +475,7 @@ def check_required_headings(body_sections: dict, fm: dict, errors: list[str]) ->
             f"  found:    {body_keys}"
         )
         return
-    for heading, key in REQUIRED_HEADINGS:
+    for heading, key in headings:
         content = body_sections.get(heading, "")
         if not content:
             errors.append(f"section {heading!r} is empty")
@@ -506,12 +582,19 @@ def check_evidence_anchors(fm: dict, errors: list[str]) -> None:
         prompt-drift doesn't silently ship a new required key without a validator
         update.
     """
-    # Backward compatibility: only enforce for v2+ notes. The 90 existing notes
-    # carry extraction_version == "v1" and have no evidence block.
-    if fm.get("extraction_version") != "v2":
+    # Backward compatibility: v1 notes predate the evidence-anchor schema and
+    # have no block, so they are exempt. v2 and v3 each have their own
+    # required-key contract (v3 adds hypotheses_source / measures_overview /
+    # findings_overview for empirical papers).
+    version = fm.get("extraction_version")
+    if version == "v2":
+        required_by_type = EVIDENCE_REQUIRED_KEYS_BY_TYPE
+    elif version == "v3":
+        required_by_type = EVIDENCE_REQUIRED_KEYS_BY_TYPE_V3
+    else:
         return
     paper_type = fm.get("paper_type", "")
-    required_keys = EVIDENCE_REQUIRED_KEYS_BY_TYPE.get(paper_type, [])
+    required_keys = required_by_type.get(paper_type, [])
     evidence = fm.get("evidence")
     # Paper types with no required keys (editorial, book-review, other) may
     # omit the block entirely. If they include one, still fall through to the

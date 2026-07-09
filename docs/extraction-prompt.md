@@ -1,6 +1,6 @@
 # Canonical Extraction Prompt
 
-Version: **v2**
+Version: **v3**
 
 This is the prompt that turns a single scholarly article (extracted text + trusted
 bibliographic metadata) into a Synapse note. It is based on the user's original
@@ -23,6 +23,14 @@ extraction prompt with five changes:
    (sample size, country, industry, time period, theoretical lens, methodology,
    keywords). These anchors are checked by `tools/validate_note.py` as a mechanical
    Layer 1 faithfulness audit. See the "Evidence anchors" section below for the schema.
+6. **Empirical outcome fields (new in v3).** Every note now carries three additional
+   body sections — **Hypotheses / Propositions**, **Data & Measures**, and **Key
+   Findings** — so the note records not just *what a paper studied* but *what it
+   found*. Each is backed by a new evidence anchor (`hypotheses_source`,
+   `measures_overview`, `findings_overview`). These are the fields a literature
+   reviewer most needs, and **Key Findings** is the one most exposed to sign-reversal
+   error — so it is audited at Layer 2 under the same `CONTRADICTED` rule as the
+   mechanism. Applied going-forward only: earlier v1/v2 notes are unaffected.
 
 ---
 
@@ -116,11 +124,12 @@ You will be told the `paper_type` from a list of: `empirical-quantitative`,
 
 | Paper type            | Fields that may be `Not reported in paper`                         |
 |-----------------------|--------------------------------------------------------------------|
-| `book-review`         | research_question, mechanism, sample, theoretical_contribution     |
-| `editorial`           | research_question, mechanism, sample, **abstract**                 |
-| `review`              | mechanism, sample                                                  |
-| `conceptual`          | mechanism, sample                                                  |
-| empirical-*           | none — all fields should be present                                |
+| `book-review`         | research_question, mechanism, sample, theoretical_contribution, hypotheses, data_measures, key_findings |
+| `editorial`           | research_question, mechanism, sample, **abstract**, hypotheses, data_measures, key_findings |
+| `review`              | mechanism, sample, hypotheses, data_measures, key_findings         |
+| `conceptual`          | mechanism, sample, hypotheses, data_measures, key_findings         |
+| `empirical-qualitative`, `empirical-mixed` | hypotheses (inductive studies often have none) |
+| `empirical-quantitative` | none — all fields should be present                             |
 
 **Editorial abstract note:** "From the Editors" pieces typically have no formal
 abstract section. If the editorial has one (rare), extract it verbatim as usual.
@@ -168,6 +177,47 @@ central mechanism or process — use "mechanism" for variable-based studies and
 "process" for interpretive studies. Do not force "causal" language on studies
 that do not make causal claims.
 
+### Hypotheses, Data & Measures, and Key Findings (new in v3)
+
+These three sections record what an empirical paper claims, how it measured it,
+and what it found. Follow the paper's own reporting — never infer a hypothesis it
+does not state or a result it does not report.
+
+**Hypotheses / Propositions.**
+- `empirical-quantitative`: list the paper's formal hypotheses (H1, H2, …), one per
+  line, in the paper's wording (lightly condensed), including the predicted
+  sign/direction.
+- `empirical-qualitative`: most inductive studies have no a priori hypotheses —
+  write `Not reported in paper`, or list the paper's emergent research propositions
+  if it states them explicitly.
+- `empirical-mixed`: list hypotheses if the quantitative component tests them;
+  otherwise `Not reported in paper`.
+- `conceptual` / `review`: list the paper's formal propositions if any, else
+  `Not reported in paper`.
+- `editorial` / `book-review`: `Not reported in paper`.
+
+**Data & Measures.** How the focal constructs were operationalized. For quantitative
+work, give the data source and the measure for each key IV / DV / mediator /
+moderator (e.g., "DV: CSR disclosure = CSRHub ESG rating; IV: board diversity =
+% women directors"). For qualitative work, give the data corpus and how constructs
+were coded (e.g., "62 semi-structured interviews; open then axial coding into three
+second-order themes"). Required for every empirical-* type; `Not reported in paper`
+for conceptual / review / editorial / book-review.
+
+**Key Findings.** *The priority field — what the study actually found.*
+- `empirical-quantitative`: which hypotheses were supported vs. rejected, with the
+  direction/sign and — where the paper reports it — the magnitude (e.g., "H1
+  supported (β = .34, p < .01); H2 moderation not supported"). **Report the sign
+  exactly as the paper states it.** A reversed sign here is a Layer-2 `CONTRADICTED`
+  failure, not a stylistic quibble.
+- `empirical-qualitative`: the key emergent findings — the model, process, or
+  mechanism the study surfaces — in the paper's own terms.
+- `empirical-mixed`: the findings from the dominant method, noting convergence or
+  divergence with the secondary method.
+- `conceptual` / `review` / `editorial` / `book-review`: `Not reported in paper`
+  (no empirical findings), unless a review reports meta-analytic results, in which
+  case summarize them.
+
 ### Evidence anchors (new in v2 — mandatory)
 
 Every note must include an `evidence:` frontmatter block containing short verbatim
@@ -188,10 +238,18 @@ the note and move it to `incoming/_flagged/`.
 | `theories_overview`    | required    | required            | optional                |
 | `methods_overview`     | required    | required            | optional                |
 | `keywords_source`      | required    | required            | optional                |
+| `hypotheses_source`    | required\*  | proposition or "Not reported in paper" | optional |
+| `measures_overview`    | required    | "Not reported in paper" | optional            |
+| `findings_overview`    | required    | "Not reported in paper" | optional            |
+
+\* For `empirical-qualitative` and `empirical-mixed` studies with no a priori
+hypotheses, set `hypotheses_source` to `"Not reported in paper"`.
 
 For `editorial` and `book-review` the whole block may be omitted. For `conceptual`
-and `review`, the four `sample_*` keys may be set to the literal string
-`"Not reported in paper"` (exact, case-sensitive).
+and `review`, the four `sample_*` keys plus `measures_overview` and
+`findings_overview` are set to the literal string `"Not reported in paper"` (exact,
+case-sensitive), while `hypotheses_source` quotes a formal proposition if the paper
+states one (else `"Not reported in paper"`).
 
 **Rules for every quote value:**
 
@@ -259,6 +317,14 @@ phrase.
   stakeholder pressure, sustainability"). If you derived the keywords from the
   abstract or theory section, quote one phrase from there that shows at least one
   keyword appearing in the paper's own language.
+- `hypotheses_source` — a passage stating one of the paper's hypotheses or
+  propositions (e.g., "Hypothesis 1. Board gender diversity is positively related to
+  CSR disclosure quality."). One anchor is enough — not one per hypothesis.
+- `measures_overview` — a passage showing how a focal construct was measured (e.g.,
+  "We measure firm performance as return on assets (ROA)."). One measure is enough.
+- `findings_overview` — a passage stating a key result with its direction (e.g.,
+  "Hypothesis 1 was supported (β = .34, p < .01)."). Prefer a results-section or
+  abstract sentence that reports the finding and its sign.
 
 **Worked example (empirical-quantitative):**
 
@@ -271,6 +337,9 @@ evidence:
   theories_overview: "Drawing on stakeholder theory (Freeman, 1984) and legitimacy theory, we theorize that..."
   methods_overview: "We estimate OLS regressions with industry and year fixed effects, clustering standard errors by firm."
   keywords_source: "Keywords: legitimacy, stakeholder pressure, corporate sustainability, institutional theory."
+  hypotheses_source: "Hypothesis 1. Stakeholder pressure is positively associated with corporate sustainability investment."
+  measures_overview: "Corporate sustainability investment is measured as environmental capital expenditure scaled by total assets."
+  findings_overview: "Hypothesis 1 is supported: stakeholder pressure is positively related to sustainability investment (b = 0.21, p < .01)."
 ```
 
 **Worked example (conceptual paper with no sample):**
@@ -284,6 +353,9 @@ evidence:
   theories_overview: "Building on the microfoundations of dynamic capabilities (Teece, 2007), we develop..."
   methods_overview: "This is a conceptual paper; we develop our propositions through theoretical synthesis."
   keywords_source: "Keywords: dynamic capabilities, microfoundations, strategic sensemaking, cognition."
+  hypotheses_source: "Proposition 1: Firms with stronger dynamic capabilities reconfigure resources faster under environmental turbulence."
+  measures_overview: "Not reported in paper"
+  findings_overview: "Not reported in paper"
 ```
 
 The evidence block is placed at the **end** of the YAML frontmatter, immediately
@@ -313,7 +385,7 @@ pdf_path: "{pdf_path}"                  # from trusted metadata
 text_path: "{text_path}"                # from trusted metadata
 ingested_at: "{YYYY-MM-DD}"             # from trusted metadata
 extraction_model: "{model}"             # COPY VERBATIM from the bundle — controlled provenance field; current Codex default is gpt-5.5
-extraction_version: "v2"                # v2 = includes the evidence block below
+extraction_version: "v3"                # v3 = adds Hypotheses / Data & Measures / Key Findings + their anchors
 
 paper_type: "{one of the 8 types}"
 keywords: ["...", "..."]
@@ -330,7 +402,7 @@ sample:
   units: "..."
   n: "..."
 
-# Mandatory evidence anchors (v2 — Layer 1 faithfulness audit).
+# Mandatory evidence anchors (v3 — Layer 1 faithfulness audit).
 # Each value is a <=25-word verbatim quote from the PDF text, or the literal
 # string "Not reported in paper" (case-sensitive). See the Evidence anchors
 # section above for the full schema.
@@ -342,6 +414,9 @@ evidence:
   theories_overview: "..."
   methods_overview: "..."
   keywords_source: "..."
+  hypotheses_source: "..."
+  measures_overview: "..."
+  findings_overview: "..."
 ---
 
 # {title}
@@ -351,6 +426,10 @@ evidence:
 
 **Research Question**
 {1-2 sentences, paper's own terminology, or "Not reported in paper"}
+
+**Hypotheses / Propositions**
+{H1..Hn or formal propositions, one per line, in the paper's wording; or
+ "Not reported in paper" — see the paper-type guidance above}
 
 **Mechanism Process**
 {Structural elements as bullets — format depends on paper type.
@@ -364,6 +443,14 @@ evidence:
  For empirical-mixed, use whichever schema fits the dominant methodology.}
 
 {2-5 sentence mechanism or process summary grounded in the paper's theory}
+
+**Data & Measures**
+{data source + how each focal construct was operationalized; or
+ "Not reported in paper" — see the paper-type guidance above}
+
+**Key Findings**
+{what the study found — hypothesis support, direction/sign, magnitude where the
+ paper reports it; or "Not reported in paper"}
 
 **Theoretical Contribution**
 {2-3 sentences, paper's own terminology}

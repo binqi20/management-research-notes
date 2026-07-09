@@ -31,7 +31,7 @@ COLUMNS = [
     "paper_type", "unit_of_analysis", "level_of_theory", "dependent_variable_family",
     "methods", "industry", "country", "time_period", "units", "n_sample",
     "authors", "theories", "topics", "keywords",
-    "research_question", "mechanism_summary",
+    "research_question", "hypotheses", "mechanism_summary", "data_measures", "key_findings",
     "theoretical_contribution", "practical_implication",
     "limitations", "future_research", "abstract", "apa_citation",
     "source", "pdf_path", "text_path", "note_path",

@@ -69,7 +69,8 @@ research. Read this file before doing anything in this folder.
    verbatim," the text in the note must appear as a contiguous substring of the
    extracted PDF text (modulo whitespace). The validator will check this.
 3. **Notes are the source of truth.** If you need to fix a paper's metadata, re-run
-   `tools/ingest_paper.py` for that paper. Don't edit `synapse.db` directly. Don't edit
+   the ingestion pipeline for that paper (`tools/ingest_batch.py` to rebuild its
+   bundle, then re-extract the note). Don't edit `synapse.db` directly. Don't edit
    a note's frontmatter by hand unless you are also planning to rebuild the index.
 4. **Stable IDs.** Every paper has a `paper_id` like `nbs-2026-02-spoor-2026` that is
    derived from `{source-slug}-{year-month}-{first-author-slug}-{year}`. Once assigned,

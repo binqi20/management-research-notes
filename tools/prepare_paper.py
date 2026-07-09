@@ -2,7 +2,8 @@
 """
 prepare_paper.py — given a PDF inside the canonical library/ layout, look up the
 trusted bibliographic metadata from the source's manifest.tsv and emit an extraction
-bundle that the LLM (Claude inside Claude Code) will read to produce the note.
+bundle that the extraction agent (Codex / GPT-5.5 by default) will read to produce
+the note.
 
 The bundle is a single text file in incoming/_bundles/<paper_id>.bundle.txt and
 contains:
@@ -13,10 +14,10 @@ contains:
 Usage:
   python tools/prepare_paper.py <pdf-path>
 
-After running, the LLM (Claude Code session) is responsible for:
+After running, the extraction agent is responsible for:
   - Reading docs/extraction-prompt.md
   - Reading the bundle
-  - Writing notes/<paper_id>.md via the Write tool
+  - Writing notes/<paper_id>.md
   - Running validate_note.py on the result
 """
 
@@ -40,7 +41,7 @@ NOTES_DIR = SYNAPSE_ROOT / "notes"
 PROMPT_PATH = SYNAPSE_ROOT / "docs" / "extraction-prompt.md"
 
 EXTRACTION_MODEL = "gpt-5.5"
-EXTRACTION_VERSION = "v2"  # v2 = evidence-anchor notes; must match docs/extraction-prompt.md
+EXTRACTION_VERSION = "v3"  # v3 = adds Hypotheses / Data & Measures / Key Findings; must match docs/extraction-prompt.md
 
 
 # --- helpers ----------------------------------------------------------------------
