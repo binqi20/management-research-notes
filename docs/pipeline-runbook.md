@@ -20,9 +20,10 @@ source; three CrossRef gates bracket extraction to catch hand-entry errors.
 
 - **Unit of work = one issue.** Ingest and audit a single
   `library/<source>/<issue>/` at a time.
-- **Unit of release = one volume.** Keep per-issue work local; push and tag a
-  release only when every issue of a volume is complete and verified (AMJ = 6
-  issues per volume).
+- **Unit of release = one issue** (policy updated 2026-07-10; matches the
+  v0.4–v0.19 precedent). When an issue's analysis, audit, and gates are all
+  clean, publish that issue: commit, push, tag, GitHub Release. Publication
+  still requires the user's explicit go-ahead in the conversation that runs it.
 - **Parallel-agent cap = 6.** At most 6 active extraction agents *or* 6 active
   audit agents per wave. Never mix extraction and audit in the same wave. On any
   cap/timeout/coordination trouble, fall back 6 → 5 → 3 → serial. See
@@ -185,34 +186,45 @@ push unless the user explicitly asks.**
 
 ---
 
-## Publishing a completed volume
+## Publishing a completed issue
 
-Only when every issue of the volume is done and Steps 4–4.5 are clean:
+Publish **per issue** (policy updated 2026-07-10): when Steps 0–4.5 are clean for
+the issue and the user has asked for publication —
 
-```
-git add notes/ index/ library/<source>/<vol>/*/manifest.tsv
-git commit -m "Add <SOURCE> volume <N> notes"
-```
+1. **Release hygiene — update from evidence, not memory:**
+   - README: new changelog entry in "Faithfulness audit" (verdict counts, repairs,
+     record totals), snapshot count, AMJ pilot coverage list + issue-history line,
+     paper-type table (from `sqlite3 index/synapse.db "SELECT paper_type, COUNT(*)
+     FROM papers GROUP BY 1"`), version-tier sentence, BibTeX `version`.
+   - `CITATION.cff`: `version`, `date-released`, a new abstract paragraph, and the
+     current-snapshot sentence. Validate with `python3 -c "import yaml;
+     yaml.safe_load(open('CITATION.cff'))"`.
+   - `AGENTS.md`: §1 counts/coverage, §5 audit state (date + verdict totals),
+     §6 citation version.
+2. **Stage public artifacts only** — the issue's `notes/*.md`, its
+   `library/.../manifest.tsv`, the rebuilt `index/` files, and any docs/tooling
+   changes. Never `incoming/`, `pdfs/`, `text/`, or worklogs. Verify:
+   `git diff --cached --name-only | grep -E "incoming/|pdfs/|/text/"` must be empty.
+3. **Commit, push, tag, release:**
+   ```
+   git commit -m "Add <SOURCE> vol-<V>-no-<I> notes"
+   git push origin main
+   git tag -a vX.Y.Z -m "vX.Y.Z — <SOURCE> vol-<V>-no-<I>" && git push origin vX.Y.Z
+   gh release create vX.Y.Z --title "vX.Y.Z — <SOURCE> vol-<V>-no-<I>" --notes "<verification summary>"
+   ```
+4. **Verify on the remote:** `git ls-remote origin main refs/tags/vX.Y.Z` — local
+   HEAD must equal remote main and the tag must be present. Update the issue
+   ledger's `publication_status`.
 
-**Push over SSH** — HTTPS has repeatedly stalled on these large commits (see the
-2026-07-07 worklog). The remote currently still points at HTTPS; switch it **once**,
-only after confirming an SSH key is registered with GitHub:
-```
-# One-time setup — do this only if `ssh -T git@github.com` does NOT greet you by name:
-#   ssh-keygen -t ed25519 -C "you@example.com"   # if you have no key yet
-#   then add ~/.ssh/id_ed25519.pub at https://github.com/settings/keys
-ssh -T git@github.com    # must print: Hi binqi20! You've successfully authenticated...
-git remote set-url origin git@github.com:binqi20/management-research-notes.git
-
-# Every release thereafter:
-git push origin main
-git tag vX.Y.Z && git push origin vX.Y.Z
-```
-**Do not switch the remote while `ssh -T` still returns "Permission denied
-(publickey)"** — a non-working SSH remote is worse than a slow HTTPS one. Fallback
-for a stalled HTTPS push is the GitHub Git database API (upload blobs → tree →
-commit → tag), then realign local `HEAD`/`origin/main`/tag to the verified remote.
-Tagged releases are archived to Zenodo.
+**Transport:** the remote is **SSH**
+(`git@github.com:binqi20/management-research-notes.git`; key registered
+2026-07-10) — pushes are fast and reliable for any git client on this machine,
+Codex included. Setting up a new machine: generate an ed25519 key, add the
+public key at github.com/settings/keys, confirm `ssh -T git@github.com` greets
+by name, then `git remote set-url origin git@github.com:…`. Fallback for a
+broken transport is the GitHub Git database API (blobs → tree → commit → tag),
+then realign local refs to the verified remote. Zenodo archiving of releases is
+currently parked (user decision, 2026-07-10).
 
 ---
 

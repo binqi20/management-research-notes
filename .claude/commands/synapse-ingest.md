@@ -421,9 +421,9 @@ python tools/verify_metadata.py --quiet --paper-id <PAPER_ID>
 The tool checks **seven fields per note** against CrossRef (year, title,
 journal, volume, issue, pages, authors). Exit code 0 if all selected fields
 match for all checked notes; exit code 1 on any mismatch (suitable as a
-pipeline gate). For a completed volume release, scoped CrossRef over the whole
-changed volume is sufficient when no global metadata code, schema, prompt, or
-indexer change occurred. Full-library CrossRef verification is more expensive
+pipeline gate). For an issue release (or a volume-scope sweep), scoped CrossRef
+over the changed notes is sufficient when no global metadata code, schema,
+prompt, or indexer change occurred. Full-library CrossRef verification is more expensive
 than local note validation, so do not treat it as a ritual. Reserve
 `python tools/verify_metadata.py --quiet` for real high-risk triggers:
 metadata parsing or comparison logic changed globally, `verify_metadata.py`

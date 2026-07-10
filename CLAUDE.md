@@ -43,8 +43,8 @@ research. Read this file before doing anything in this folder.
    - **After extraction (Tier 2, mandatory within the changed scope):** run
      `python tools/verify_metadata.py --quiet --paper-id <PAPER_ID>` for every
      changed note to cross-check bibliographic fields (year, title, journal,
-     volume, issue, pages, authors) against CrossRef. For a completed volume
-     release, run the scoped check for every note in that changed volume. This
+     volume, issue, pages, authors) against CrossRef. For an issue or volume
+     release, run the scoped check for every note in the changed scope. This
      is Step 4.5 of `/synapse-ingest`, the last gating step before commit.
      Do not treat full-library CrossRef as a ritual; reserve it for global
      metadata parsing/comparison changes, schema/indexer changes affecting
