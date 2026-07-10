@@ -10,7 +10,7 @@ repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-07-10"
-version: "0.31.0"
+version: "0.32.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,18 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.31.0
+  a published rubric) gates every note into the library. Version 0.32.0
+  (2026-07-10) adds Academy of Management Journal volume 57, issue 2: 13
+  peer-reviewed papers produced under extraction v3 and independently
+  audited under rubric v2. Three audit-identified fields were repaired
+  from PDF evidence before release: Beckman's board-measure timing,
+  Rogan's agency-level robustness qualification, and Wang's
+  patent-count-mediated indirect pathway. Fresh re-audits cleared each
+  repair; the final issue scan has 117/117 prose-field verdicts SUPPORTED
+  with zero PARTIAL, UNSUPPORTED, or CONTRADICTED. All notes validate,
+  the manifest lints cleanly, scoped CrossRef matches every changed note,
+  and the public SQLite, CSV, and BibTeX indexes contain 1,154 records.
+  Earlier, version 0.31.0
   (2026-07-10) adds Academy of Management Journal volume 57, issue 1: 13
   peer-reviewed papers — the first issue produced under extraction v3, so
   every empirical note now records the paper's hypotheses, data and
@@ -211,12 +222,12 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.31.0 snapshot contains 1,141 curated
+  perfectly-clean batch. The current v0.32.0 snapshot contains 1,154 curated
   notes: 272 from the Network for Business Sustainability monthly digests
-  and 869 AMJ pilot notes across vol. 57 no. 1 plus vol. 58 no. 1 through
-  vol. 69 no. 1. The 13 vol-57-no-1 notes pass the v3 audit at 117/117
-  SUPPORTED; the prior 1,128 notes pass the v0.29.0 audit sweep with
-  1,128/1,128 PASS and zero CONTRADICTED verdicts. An AGENTS.md file provides
+  and 882 AMJ pilot notes across vol. 57 no. 1-2 plus vol. 58 no. 1 through
+  vol. 69 no. 1. Both vol-57 v3 issues pass at 117/117 prose-field verdicts
+  SUPPORTED; the full library has 1,154/1,154 PASS and zero UNSUPPORTED or
+  CONTRADICTED verdicts. An AGENTS.md file provides
   a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom
   SDK apps) can discover and consume the data with known faithfulness

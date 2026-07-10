@@ -15,11 +15,11 @@ focuses on what's portable across agents.
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**1,141 curated notes** on peer-reviewed papers in management and business
+**1,154 curated notes** on peer-reviewed papers in management and business
 sustainability research. The current main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
-and 869 Academy of Management Journal pilot notes across 68 recent issues
-(vol. 57 no. 1, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
+and 882 Academy of Management Journal pilot notes across 69 recent issues
+(vol. 57 no. 1-2, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
 file with YAML frontmatter and a structured Markdown body. The repository
 is MIT licensed; individual PDFs are not redistributed.
 
@@ -141,11 +141,11 @@ audit**:
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
 **Current main-branch audit state (2026-07-10):
-1,141 / 1,141 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The 13 new
-vol-57-no-1 notes (the first extraction-v3 issue) audited at 117/117
-prose-field verdicts SUPPORTED under rubric v2; the prior 1,128 notes are
-unchanged from the v0.29.0 audit sweep. The corpus contains 88 legacy v1
-notes, 1,040 v2 notes, and 13 v3 notes with evidence anchors; new notes are
+1,154 / 1,154 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The 13 new
+vol-57-no-2 notes audited at 117/117 prose-field verdicts SUPPORTED under
+rubric v2 after three evidence-based repairs; the prior 1,141 notes are
+unchanged from the v0.31.0 snapshot. The corpus contains 88 legacy v1
+notes, 1,040 v2 notes, and 26 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). `PARTIAL`
 verdicts (stylistic compressions that don't rise to a faithfulness failure)
@@ -161,7 +161,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-07-07.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-07-10.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -172,7 +172,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.31.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.32.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
