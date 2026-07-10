@@ -28,6 +28,32 @@ source; three CrossRef gates bracket extraction to catch hand-entry errors.
   cap/timeout/coordination trouble, fall back 6 → 5 → 3 → serial. See
   [`AGENTS.md` §4.1](../AGENTS.md).
 
+## Runtime modes
+
+Two equivalent ways to run Steps 2–2.5, sharing the same caps, write scopes, and
+independence rules. Pick by runtime; never mix extraction and audit in one wave
+in either mode.
+
+- **Wave mode (Codex).** The operator session dispatches ≤6 extraction workers,
+  waits for all to return, closes them, then dispatches ≤6 audit workers as a
+  separate wave. Repeat per wave until the issue is covered. This is the mode the
+  worked ledgers under `incoming/_ledgers/` record.
+- **Chunked two-phase mode (Claude Code / code-orchestrated runtimes).** Split the
+  issue into chunks of ~4–5 papers. For each chunk: Phase E runs the chunk's
+  extraction agents concurrently **to completion** (barrier), then Phase A runs
+  fresh audit agents for the chunk's validated notes concurrently to completion.
+  Chunk k's audits must finish before chunk k+1's extraction starts (no
+  cross-chunk overlap — a mixed 9–10-agent burst is the historical rate-limit
+  failure). Root-cause tallies accumulate across chunks; ≥3 same-cause failures
+  aborts the run between phases. Extraction agents may self-fix a mechanical
+  validator failure **once** (anchor re-selection, never invented content) and
+  must report the pre-fix cause either way.
+
+In both modes: extraction agents write only `notes/<paper_id>.md`; audit agents
+write only `incoming/_audits/<paper_id>.layer2.json`; the parent session verifies
+expected files **on disk** (never trusting agent self-reports), assembles official
+audits, makes repairs, and rebuilds derived indexes.
+
 ---
 
 ## Preconditions (stop if any fails)
@@ -89,8 +115,14 @@ guidance).
 
 ## Step 2.5 — Independent audit wave (≤6 agents; separate wave)
 
-Dispatch fresh auditor agents that read **only** the rubric + the note + its
-extracted text (never the extraction agent's reasoning). Each writes
+Dispatch fresh auditor agents that never see the extraction agent's reasoning.
+Each auditor's preferred input is the output of
+`python tools/audit_note.py notes/<paper_id>.md --prompt-only` — a single
+self-contained prompt holding the current rubric, the note body, and the
+**anchor-aware fitted PDF text**, so what the auditor reads is exactly what the
+assembled report's `audit_context` records. (Reading the rubric + note + raw
+text file directly is a legacy fallback; on long papers it diverges from the
+recorded fitting metadata.) Each auditor writes
 `incoming/_audits/<paper_id>.layer2.json` with a `provenance` block
 (`paper_id, note_sha256, text_sha256, rubric_version, auditor_model, generated_at,
 dispatch_mode`; `rubric_version` is **v2**). The parent then assembles:
@@ -108,6 +140,20 @@ Log `OK / AUDIT_FAIL / FAIL / STOP` per paper. **Stop and ask the user** if **�
 papers fail validation for the same root cause** or **≥3 fail audit for the same
 reason** — that signals prompt/vocab/rubric drift, not per-note fixes. Individual
 failures: re-extract (cleanest) or narrow the offending prose field, then re-audit.
+
+**Ordering invariant (load-bearing):** assemble the official audit report for
+**every** note (`audit_note.py --layer-2-json … --flag`) **before** making any
+repair edit. Editing a note changes its `note_sha256`, which invalidates its
+existing layer2.json — after a repair, re-assembly is impossible and the note
+needs a **fresh** independent audit, not a re-run of the old one.
+
+**PARTIAL policy:** `PARTIAL` verdicts do not fail the audit, but the release
+standard is to **repair every repairable PARTIAL before publishing** — narrow the
+overstated field to the paper's own scope, revalidate, and re-audit **only the
+changed notes** with fresh auditors. Small drift compounds across a literature
+review; every recent release shipped at 0 PARTIAL. If ≥3 PARTIALs in one issue
+share a root cause, treat it as prompt drift (fix `docs/extraction-prompt.md`),
+not as per-note repair work.
 
 ## Step 4 — Rebuild derived indexes (sequential, not parallel)
 

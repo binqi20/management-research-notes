@@ -66,7 +66,11 @@ from pathlib import Path
 THIS_FILE = Path(__file__).resolve()
 SYNAPSE_ROOT = THIS_FILE.parent.parent
 sys.path.insert(0, str(THIS_FILE.parent))
-from verify_metadata import fetch_crossref, _norm_family_name  # noqa: E402
+from verify_metadata import (  # noqa: E402
+    _norm_family_name,
+    fetch_crossref,
+    load_known_registry,
+)
 
 LIBRARY = SYNAPSE_ROOT / "library"
 
@@ -78,168 +82,26 @@ LIBRARY = SYNAPSE_ROOT / "library"
 # Both are defensible; neither is a bug. Suppress these via DOI-keyed
 # entries so the linter doesn't flag them on every run.
 #
-# Same pattern as KNOWN_CROSSREF_DATA_ERRORS in verify_metadata.py. Add
+# Same pattern as tools/known_crossref_issues.json (verify_metadata.py). Add
 # entries only after manually confirming the case is a legitimate compound-
 # surname citation-convention difference (not a manifest bug). Each entry
 # requires a dated rationale.
 #
-# TODO: migrate to a JSON file (e.g. tools/known_compound_surnames.json)
-# if this list grows past ~10 entries.
-KNOWN_COMPOUND_SURNAMES: dict[str, dict[str, str]] = {
-    "10.5465/amj.2023.4002": {
-        "manifest_surname": "Krogh",
-        "crossref_family": "von Krogh",
-        "rationale": (
-            "Georg von Krogh (ETH Zürich) — Dutch/Swiss compound surname. "
-            "CrossRef stores the formal 'von Krogh'; manifest uses the "
-            "citation-convention short form 'Krogh'. Suppressed 2026-05-12."
-        ),
-    },
-    "10.5465/amj.2018.1258": {
-        "manifest_surname": "Cunningham",
-        "crossref_family": "Lee Cunningham",
-        "rationale": (
-            "Tony Lee Cunningham — compound family name. CrossRef stores "
-            "'Lee Cunningham'; manifest uses the citation-convention short "
-            "form 'Cunningham'. Suppressed 2026-05-12."
-        ),
-    },
-    "10.5465/amj.2018.0790": {
-        "manifest_surname": "Cunningham",
-        "crossref_family": "Lee Cunningham",
-        "rationale": (
-            "Julia Lee Cunningham — compound family name. CrossRef stores "
-            "'Lee Cunningham'; the PDF running head and citation convention "
-            "use the short form 'Cunningham'. Suppressed 2026-06-26."
-        ),
-    },
-    "10.5465/amj.2020.1231": {
-        "manifest_surname": "Wal",
-        "crossref_family": "Ter Wal",
-        "rationale": (
-            "Anne L. J. Ter Wal — Dutch 'Ter Wal' compound prefix. CrossRef "
-            "stores 'Ter Wal'; manifest uses citation-convention short form "
-            "'Wal'. Suppressed 2026-05-12."
-        ),
-    },
-    "10.5465/amj.2020.1623": {
-        "manifest_surname": "Leon",
-        "crossref_family": "de Leon",
-        "rationale": (
-            "Rebecca Ponce de Leon — Spanish compound surname 'Ponce de "
-            "Leon' (the article cites it 17x). CrossRef splits it as "
-            "given='Rebecca Ponce', family='de Leon'; manifest uses the "
-            "citation-convention short form 'Leon'. Suppressed 2026-06-23."
-        ),
-    },
-    "10.5465/amj.2020.1740": {
-        "manifest_surname": "Gomez",
-        "crossref_family": "Munguia Gomez",
-        "rationale": (
-            "David M. Munguia Gomez — compound family name. CrossRef stores "
-            "'Munguia Gomez'; manifest uses the citation-convention short "
-            "form 'Gomez'. Suppressed 2026-06-23."
-        ),
-    },
-    "10.5465/amj.2020.1492": {
-        "manifest_surname": "Rond",
-        "crossref_family": "de Rond",
-        "rationale": (
-            "Mark de Rond (Cambridge) — 'de Rond' compound prefix. CrossRef "
-            "stores 'de Rond'; manifest uses the citation-convention short "
-            "form 'Rond'. Suppressed 2026-06-23."
-        ),
-    },
-    "10.5465/amj.2020.1516": {
-        "manifest_surname": "Tang",
-        "crossref_family": "Man Tang",
-        "rationale": (
-            "Pok Man Tang — Cantonese romanization; CrossRef parses "
-            "family='Man Tang'. The journal running header and the existing "
-            "liao-2024 note use 'Tang'; manifest matches that convention. "
-            "Suppressed 2026-06-23."
-        ),
-    },
-    "10.5465/amj.2017.0323": {
-        "manifest_surname": "Zhang",
-        "crossref_family": "Man Zhang",
-        "rationale": (
-            "Cyndi Man Zhang — given/middle-name parsing ambiguity. CrossRef "
-            "stores family='Man Zhang', but the PDF byline reads 'CYNDI MAN "
-            "ZHANG' and the running head uses 'Zhang and Greve'; manifest "
-            "uses the citation-convention family name 'Zhang'. Suppressed "
-            "2026-06-28."
-        ),
-    },
-    "10.5465/amj.2019.1402": {
-        "manifest_surname": "Eleazar",
-        "crossref_family": "Welbourne Eleazar",
-        "rationale": (
-            "Miranda J. Welbourne Eleazar — compound family name 'Welbourne "
-            "Eleazar' (cited 12x). CrossRef stores 'Welbourne Eleazar'; "
-            "manifest uses the citation-convention short form 'Eleazar'. "
-            "Suppressed 2026-06-23."
-        ),
-    },
-    "10.5465/amj.2019.0616": {
-        "manifest_surname": "Pamphile",
-        "crossref_family": "Deeds Pamphile",
-        "rationale": (
-            "Vontrese Deeds Pamphile — compound family name. CrossRef stores "
-            "'Deeds Pamphile'; manifest and the article's running text use the "
-            "citation-convention short form 'Pamphile'. Suppressed 2026-06-23."
-        ),
-    },
-    "10.5465/amj.2022.1075": {
-        "manifest_surname": "Oever",
-        "crossref_family": "van den Oever",
-        "rationale": (
-            "Koen van den Oever — Dutch 'van den Oever' compound prefix. "
-            "CrossRef stores 'van den Oever'; manifest uses citation-"
-            "convention short form 'Oever'. Suppressed 2026-05-12."
-        ),
-    },
-    "10.1177/01708406251362935": {
-        "manifest_surname": "Shantz",
-        "crossref_family": "Slade Shantz",
-        "rationale": (
-            "Angelique Slade Shantz — compound family name. CrossRef stores "
-            "'Slade Shantz'; manifest (filename-derived) uses the citation "
-            "short form 'Shantz'. NBS 2026-01; DOI verified (title "
-            "gate-matches CrossRef). Suppressed 2026-06-06."
-        ),
-    },
-    "10.5465/amj.2018.0335": {
-        "manifest_surname": "Shantz",
-        "crossref_family": "Slade Shantz",
-        "rationale": (
-            "Angelique F. Slade Shantz — compound family name. CrossRef "
-            "stores 'Slade Shantz'; manifest and PDF filename use the "
-            "citation-convention short form 'Shantz'. PDF byline verified "
-            "for AMJ vol. 63 no. 2. Suppressed 2026-06-27."
-        ),
-    },
-    "10.1016/j.respol.2025.105408": {
-        "manifest_surname": "Silva",
-        "crossref_family": "De Silva",
-        "rationale": (
-            "Muthu De Silva — 'De Silva' compound surname. CrossRef stores "
-            "'De Silva'; manifest (filename-derived) uses the citation short "
-            "form 'Silva'. NBS 2026-01; DOI verified (title gate-matches "
-            "CrossRef). Suppressed 2026-06-06."
-        ),
-    },
-    "10.25300/misq/2025/17970": {
-        "manifest_surname": "Vaujany",
-        "crossref_family": "de Vaujany",
-        "rationale": (
-            "François-Xavier de Vaujany — French 'de Vaujany' nobiliary "
-            "particle. CrossRef stores 'de Vaujany'; manifest (filename-"
-            "derived) uses the citation short form 'Vaujany'. NBS 2026-01; "
-            "DOI verified (title gate-matches CrossRef). Suppressed 2026-06-06."
-        ),
-    },
-}
+# The registry lives in tools/known_compound_surnames.json (migrated out of
+# this file at 16 entries, v0.31.0) so additions are data edits, not source
+# edits. Each entry requires manifest_surname, crossref_family, and a dated
+# rationale; the shared loader in verify_metadata enforces the shape.
+KNOWN_COMPOUND_SURNAMES_PATH = (
+    Path(__file__).resolve().parent / "known_compound_surnames.json"
+)
+
+
+def known_compound_surnames() -> dict[str, dict[str, str]]:
+    """The compound-surname false-positive registry (memoized)."""
+    return load_known_registry(
+        KNOWN_COMPOUND_SURNAMES_PATH,
+        required_entry_keys=("manifest_surname", "crossref_family", "rationale"),
+    )
 
 # ---------------------------------------------------------------------------
 # Heuristic validators
@@ -336,7 +198,7 @@ def check_first_author_vs_crossref(doi: str, manifest_value: str) -> str | None:
 
     Returns None if they match (after accent-fold), if CrossRef can't be
     queried, or if the (doi, manifest_value) pair is in the
-    KNOWN_COMPOUND_SURNAMES allowlist. Returns an error string on
+    known_compound_surnames.json allowlist. Returns an error string on
     real mismatch.
     """
     if not doi or not manifest_value:
@@ -349,7 +211,7 @@ def check_first_author_vs_crossref(doi: str, manifest_value: str) -> str | None:
     if _norm_family_name(manifest_value) == _norm_family_name(cr_family):
         return None
     # Check allowlist for known compound-surname false positives
-    suppress = KNOWN_COMPOUND_SURNAMES.get(doi_clean)
+    suppress = known_compound_surnames().get(doi_clean)
     if suppress and suppress.get("manifest_surname") == manifest_value.strip():
         # Caller can decide whether to surface this; we return None so the
         # row is not flagged. The allowlist itself serves as the audit trail.
@@ -439,6 +301,9 @@ def audit_manifest(
 
 
 def main() -> int:
+    # Fail-early: a broken registry file must surface before any CrossRef work.
+    known_compound_surnames()
+
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--manifest", help="lint a single manifest instead of all")
     ap.add_argument(

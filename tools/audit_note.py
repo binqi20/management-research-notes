@@ -88,6 +88,8 @@ from validate_note import (  # noqa: E402 — path munging above is intentional
     EVIDENCE_REQUIRED_KEYS_BY_TYPE,
     NOT_REPORTED,
     check_evidence_anchors,
+    normalize_for_verbatim,
+    normalize_ws,
     parse_body_sections,
     split_frontmatter,
 )
@@ -170,6 +172,23 @@ SANDWICH_HEAD_RATIO = 0.6
 # Bytes reserved for the "[... middle of paper truncated (NNNNN chars dropped) ...]"
 # marker inside the sandwich. Generous bound — the actual marker is ~75 chars.
 SANDWICH_SEPARATOR_RESERVE = 80
+
+# Audit text budget (v0.31.0: raised from 180K after corpus measurement — raw text
+# sizes run p90=204K / p97=234K / p99=278K chars, so 240K leaves only ~1% of papers
+# truncated). The single module constant is used by every call site; never override
+# per-call, or the prompt-time fitted text and the assembly-time audit_context
+# silently desynchronize.
+MAX_PDF_CHARS = 240_000
+
+# Anchor-aware splicing (v0.31.0). When the sandwich drops the middle of a long
+# paper, any evidence anchor whose only occurrence lies in the dropped region gets
+# a context window spliced back in, so the Layer 2 auditor can always see the
+# passages backing the note's claims. v3 raised the stakes: Key Findings evidence
+# lives mid-paper, and a dropped Results section can turn a faithful Key Findings
+# field into a false UNSUPPORTED — an audit FAIL, not just a PARTIAL.
+SPLICE_WINDOW_CHARS = 1_000        # context kept on each side of a located anchor chunk
+SPLICE_CHUNK_CHARS = 4_000         # scan granularity; >> the longest corpus anchor (~200 chars)
+SPLICE_TOTAL_BUDGET_CHARS = 20_000 # cap on total spliced chars per paper
 
 
 # --- loading helpers ---------------------------------------------------------------
@@ -261,9 +280,11 @@ def _strip_references(text: str) -> tuple[str, int]:
     Returns (stripped_text, chars_removed). If no references heading is found,
     returns the original text unchanged with 0 chars removed.
 
-    Safety guard: only strips if the heading appears in the back half of the
+    Safety guards: only strips if the heading appears in the back half of the
     text (>50% offset), to avoid false positives from a "References" heading
-    that appears early in the introduction.
+    that appears early in the introduction; and a heading followed at prose
+    distance (1-2 spaces) by a lowercase word is rejected as sentence text,
+    not a heading.
     """
     # Common headings, anchored at the start of a line (after a newline).
     # Allow optional leading whitespace (\s*) because two-column PDF
@@ -271,14 +292,25 @@ def _strip_references(text: str) -> tuple[str, int]:
     # Use \b (word boundary) at the end instead of \s*\n — two-column
     # PDF extraction often concatenates the heading with the first
     # reference entry on the same line, so there's no trailing newline.
+    # The prose guard (?![ \t]{1,2}[a-z]) rejects a heading word followed at
+    # prose distance (one or two spaces) by a lowercase word — that's a
+    # sentence, not a heading: "References to how the acts of courage
+    # would..." (AMJ 57(1) Koerner, where this cut the entire Discussion out
+    # of the audit prompt) or the meta-analysis note "References marked with
+    # an asterisk indicate...". Wide space runs (3+) must stay matchable: in
+    # two-column -layout output they are column gaps, where the OTHER
+    # column's lowercase text legitimately shares the heading's physical
+    # line ("REFERENCES          ecological approach to management..."). A
+    # newline straight after the heading also stays matchable.
     # We search for the LAST match in the back half of the text.
+    prose_guard = r"(?![ \t]{1,2}[a-z])"
     patterns = [
-        r"\n\s*References\b",
-        r"\n\s*REFERENCES\b",
-        r"\n\s*Bibliography\b",
-        r"\n\s*BIBLIOGRAPHY\b",
-        r"\n\s*Works Cited\b",
-        r"\n\s*Literature Cited\b",
+        r"\n\s*References\b" + prose_guard,
+        r"\n\s*REFERENCES\b" + prose_guard,
+        r"\n\s*Bibliography\b" + prose_guard,
+        r"\n\s*BIBLIOGRAPHY\b" + prose_guard,
+        r"\n\s*Works Cited\b" + prose_guard,
+        r"\n\s*Literature Cited\b" + prose_guard,
     ]
     last_pos = -1
     for pat in patterns:
@@ -296,68 +328,230 @@ def _strip_references(text: str) -> tuple[str, int]:
 # --- Layer 2 prompt building -------------------------------------------------------
 
 
+def anchor_quotes(fm: dict) -> list[str]:
+    """The note's evidence-anchor quotes (escape-valve entries excluded).
+
+    These are the passages the Layer 2 auditor most needs to see; the
+    anchor-aware sandwich guarantees each one survives truncation.
+    """
+    evidence = fm.get("evidence") or {}
+    if not isinstance(evidence, dict):
+        return []
+    return [
+        v.strip()
+        for v in evidence.values()
+        if isinstance(v, str) and v.strip() and v.strip() != NOT_REPORTED
+    ]
+
+
+def _scan_region_for_anchor(
+    q_ws: str, q_vb: str, region: str, base: int, overlap: int
+) -> tuple[int, int] | None:
+    """Chunk-scan `region` (starting at offset `base` in its parent text) for an
+    anchor. Returns (lo, hi) chunk offsets in the parent text, or None.
+
+    Chunks overlap by `overlap` chars, so any occurrence whose raw span is
+    shorter than the overlap is fully interior to at least one chunk — the
+    normalized substring test then finds it despite offset-shifting artifacts
+    (soft hyphens, line-wrap hyphenation, whitespace runs).
+    """
+    if not region:
+        return None
+    step = max(SPLICE_CHUNK_CHARS - overlap, 1)
+    for s in range(0, max(len(region) - overlap, 1), step):
+        chunk = region[s : s + SPLICE_CHUNK_CHARS]
+        if q_ws in normalize_ws(chunk) or q_vb in normalize_for_verbatim(chunk):
+            return (base + s, base + min(s + SPLICE_CHUNK_CHARS, len(region)))
+    return None
+
+
+def _merge_and_cap_windows(
+    windows: list[tuple[int, int]], budget: int
+) -> tuple[list[tuple[int, int]], int]:
+    """Merge overlapping/adjacent (lo, hi) windows, then cap total size.
+
+    Windows beyond the budget are dropped in ascending offset order
+    (deterministic). Returns (kept_windows, dropped_count).
+    """
+    merged: list[list[int]] = []
+    for lo, hi in sorted(windows):
+        if merged and lo <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], hi)
+        else:
+            merged.append([lo, hi])
+    kept: list[tuple[int, int]] = []
+    total = dropped = 0
+    for lo, hi in merged:
+        if total + (hi - lo) <= budget:
+            kept.append((lo, hi))
+            total += hi - lo
+        else:
+            dropped += 1
+    return kept, dropped
+
+
 def fit_pdf_text_for_audit(
     pdf_text: str,
-    max_pdf_chars: int = 180_000,
+    max_pdf_chars: int = MAX_PDF_CHARS,
+    anchors: list[str] | None = None,
 ) -> tuple[str, dict]:
     """Fit extracted PDF text into the Layer 2 audit budget.
 
-    The text is fitted by a two-step process:
+    Three-step process:
       1. Strip the References/Bibliography section via _strip_references().
-      2. If the post-strip text still exceeds max_pdf_chars, apply a
-         "sandwich" truncation: keep SANDWICH_HEAD_RATIO of the budget
-         from the front of the paper (abstract, intro, theory, methods,
-         early results) and the remainder from the back (discussion,
-         practical implications, limitations, future research). The
-         middle (typically detailed results) is dropped, with a marker
-         inserted so the auditor can see where the gap is.
+      2. If the post-strip text still exceeds max_pdf_chars, apply the
+         "sandwich": keep SANDWICH_HEAD_RATIO of the budget from the front
+         (abstract, intro, theory, methods) and the remainder from the back
+         (discussion, implications, limitations, future research).
+      3. Anchor-aware splicing (v0.31.0): for each evidence anchor from the
+         note, first test membership in the normalized head/tail; anchors
+         found nowhere in the fitted ends get a chunk-scan of the dropped
+         middle (with straddle and stripped-References fallbacks) and a
+         ±SPLICE_WINDOW_CHARS context window spliced back in, budget-capped.
+         This guarantees the auditor sees the passages backing the note's
+         claims — critical for v3, whose Key Findings evidence lives in the
+         Results section that the plain sandwich used to drop.
 
-    Why the sandwich: the six prose fields the auditor verifies live at
-    BOTH ends of the paper — research_question / mechanism_process /
-    theoretical_contribution at the front; practical_implication /
-    limitations / future_research at the back. A naive head-only truncation
-    drops the back-half fields entirely on long papers (~3% of audited
-    notes empirically), generating PARTIAL verdicts that are verification
-    artifacts rather than real drift. The sandwich preserves both ends.
+    With no anchors (or none missing), the over-budget output is byte-identical
+    to the legacy head + separator + tail sandwich.
 
     Returns (fitted_text, context_metadata). The metadata is persisted in the
     audit report so a later reviewer can see exactly how much source text the
-    auditor received.
+    auditor received and which anchors needed splicing.
     """
     stripped, refs_removed = _strip_references(pdf_text)
-
-    sandwich_head_chars = sandwich_tail_chars = sandwich_middle_dropped = 0
-    if len(stripped) <= max_pdf_chars:
-        fitted = stripped
-    else:
-        available = max_pdf_chars - SANDWICH_SEPARATOR_RESERVE
-        sandwich_head_chars = int(available * SANDWICH_HEAD_RATIO)
-        sandwich_tail_chars = available - sandwich_head_chars
-        sandwich_middle_dropped = (
-            len(stripped) - sandwich_head_chars - sandwich_tail_chars
-        )
-        separator = (
-            f"\n\n[... middle of paper truncated "
-            f"({sandwich_middle_dropped:,} chars dropped) ...]\n\n"
-        )
-        fitted = (
-            stripped[:sandwich_head_chars]
-            + separator
-            + stripped[-sandwich_tail_chars:]
-        )
 
     context = {
         "max_pdf_chars": max_pdf_chars,
         "original_pdf_chars": len(pdf_text),
         "post_reference_strip_chars": len(stripped),
         "references_removed_chars": refs_removed,
-        "fitted_pdf_chars": len(fitted),
-        "sandwich_truncated": sandwich_middle_dropped > 0,
-        "sandwich_head_chars": sandwich_head_chars,
-        "sandwich_tail_chars": sandwich_tail_chars,
-        "sandwich_middle_dropped_chars": sandwich_middle_dropped,
+        "fitted_pdf_chars": len(stripped),
+        "sandwich_truncated": False,
+        "sandwich_head_chars": 0,
+        "sandwich_tail_chars": 0,
+        "sandwich_middle_dropped_chars": 0,
         "sandwich_head_ratio": SANDWICH_HEAD_RATIO,
+        "anchors_total": len(anchors) if anchors else 0,
+        "anchors_in_head_tail": 0,
+        "anchors_in_dropped_middle": 0,
+        "anchors_in_stripped_refs": 0,
+        "anchors_not_located": 0,
+        "windows_spliced": 0,
+        "spliced_chars": 0,
+        "windows_dropped_over_budget": 0,
     }
+
+    if len(stripped) <= max_pdf_chars:
+        return stripped, context
+
+    available = max_pdf_chars - SANDWICH_SEPARATOR_RESERVE
+    head_chars = int(available * SANDWICH_HEAD_RATIO)
+    tail_chars = available - head_chars
+    middle_dropped = len(stripped) - head_chars - tail_chars
+    mid_lo, mid_hi = head_chars, len(stripped) - tail_chars
+
+    context.update(
+        sandwich_truncated=True,
+        sandwich_head_chars=head_chars,
+        sandwich_tail_chars=tail_chars,
+        sandwich_middle_dropped_chars=middle_dropped,
+    )
+
+    head = stripped[:head_chars]
+    tail = stripped[mid_hi:]
+
+    mid_windows: list[tuple[int, int]] = []
+    ref_windows: list[tuple[int, int]] = []
+    if anchors:
+        head_ws, head_vb = normalize_ws(head), normalize_for_verbatim(head)
+        tail_ws, tail_vb = normalize_ws(tail), normalize_for_verbatim(tail)
+        # Overlap must exceed any anchor's raw span (raw span > normalized
+        # length because hyphenation/whitespace artifacts collapse under
+        # normalization); anchors are ≤ ~200 chars corpus-wide, and the
+        # 25-word cap is warning-tier only, so scale with the longest.
+        overlap = max(400, 2 * max(len(a) for a in anchors))
+        for quote in anchors:
+            q_ws = normalize_ws(quote)
+            q_vb = normalize_for_verbatim(quote)
+            if (
+                q_ws in head_ws
+                or q_ws in tail_ws
+                or q_vb in head_vb
+                or q_vb in tail_vb
+            ):
+                context["anchors_in_head_tail"] += 1
+                continue
+            # Scan the dropped middle first; fall back to the whole stripped
+            # text (an anchor can straddle the head/middle or middle/tail cut,
+            # where neither membership nor the middle-only scan can see it).
+            hit = _scan_region_for_anchor(
+                q_ws, q_vb, stripped[mid_lo:mid_hi], mid_lo, overlap
+            ) or _scan_region_for_anchor(q_ws, q_vb, stripped, 0, overlap)
+            if hit is not None:
+                context["anchors_in_dropped_middle"] += 1
+                lo = max(hit[0] - SPLICE_WINDOW_CHARS, mid_lo)
+                hi = min(hit[1] + SPLICE_WINDOW_CHARS, mid_hi)
+                if hi > lo:
+                    mid_windows.append((lo, hi))
+                continue
+            # Layer 1 verified anchors against the FULL text, so the only
+            # occurrence may live in the stripped References/appendix tail
+            # (AMJ appendices carry robustness results).
+            if refs_removed:
+                hit = _scan_region_for_anchor(
+                    q_ws, q_vb, pdf_text[len(stripped):], len(stripped), overlap
+                )
+                if hit is not None:
+                    context["anchors_in_stripped_refs"] += 1
+                    lo = max(hit[0] - SPLICE_WINDOW_CHARS, len(stripped))
+                    hi = min(hit[1] + SPLICE_WINDOW_CHARS, len(pdf_text))
+                    ref_windows.append((lo, hi))
+                    continue
+            context["anchors_not_located"] += 1
+
+    mid_windows, dropped_mid = _merge_and_cap_windows(
+        mid_windows, SPLICE_TOTAL_BUDGET_CHARS
+    )
+    ref_budget = SPLICE_TOTAL_BUDGET_CHARS - sum(hi - lo for lo, hi in mid_windows)
+    ref_windows, dropped_ref = _merge_and_cap_windows(ref_windows, max(ref_budget, 0))
+    context["windows_dropped_over_budget"] = dropped_mid + dropped_ref
+    context["windows_spliced"] = len(mid_windows) + len(ref_windows)
+    context["spliced_chars"] = sum(hi - lo for lo, hi in mid_windows + ref_windows)
+
+    # Assemble: head + [gap markers / spliced windows] + tail + refs splices.
+    # Windows touching the head or tail coalesce with no marker interposed —
+    # a marker there would re-break the very anchor the splice preserves.
+    parts = [head]
+    cursor = mid_lo
+    for lo, hi in mid_windows:
+        if lo > cursor:
+            parts.append(
+                f"\n\n[... {lo - cursor:,} chars dropped; resuming at "
+                f"evidence-anchor context ...]\n\n"
+            )
+        parts.append(stripped[lo:hi])
+        cursor = hi
+    if cursor < mid_hi:
+        if mid_windows:
+            parts.append(f"\n\n[... {mid_hi - cursor:,} chars dropped ...]\n\n")
+        else:
+            # Legacy single-separator sandwich — byte-identical to the
+            # pre-splice implementation (regression-pinned in tests).
+            parts.append(
+                f"\n\n[... middle of paper truncated "
+                f"({middle_dropped:,} chars dropped) ...]\n\n"
+            )
+    parts.append(tail)
+    for lo, hi in ref_windows:
+        parts.append(
+            "\n\n[... spliced from the removed references/appendix section "
+            "(evidence-anchor context) ...]\n\n"
+        )
+        parts.append(pdf_text[lo:hi])
+
+    fitted = "".join(parts)
+    context["fitted_pdf_chars"] = len(fitted)
     return fitted, context
 
 
@@ -367,7 +561,8 @@ def build_auditor_prompt_and_context(
     body: str,
     pdf_text: str,
     rubric_text: str,
-    max_pdf_chars: int = 180_000,
+    max_pdf_chars: int = MAX_PDF_CHARS,
+    anchors: list[str] | None = None,
 ) -> tuple[str, dict]:
     """Construct the prompt for the Layer 2 auditor subagent.
 
@@ -376,7 +571,9 @@ def build_auditor_prompt_and_context(
     defensively in parse_auditor_response so a non-compliant response doesn't
     hang the pipeline.
     """
-    truncated, context = fit_pdf_text_for_audit(pdf_text, max_pdf_chars=max_pdf_chars)
+    truncated, context = fit_pdf_text_for_audit(
+        pdf_text, max_pdf_chars=max_pdf_chars, anchors=anchors
+    )
     refs_removed = context["references_removed_chars"]
     sandwich_middle_dropped = context["sandwich_middle_dropped_chars"]
     sandwich_head_chars = context["sandwich_head_chars"]
@@ -451,7 +648,8 @@ def build_auditor_prompt(
     body: str,
     pdf_text: str,
     rubric_text: str,
-    max_pdf_chars: int = 180_000,
+    max_pdf_chars: int = MAX_PDF_CHARS,
+    anchors: list[str] | None = None,
 ) -> str:
     """Backward-compatible wrapper returning only the Layer 2 prompt."""
     prompt, _ = build_auditor_prompt_and_context(
@@ -461,6 +659,7 @@ def build_auditor_prompt(
         pdf_text=pdf_text,
         rubric_text=rubric_text,
         max_pdf_chars=max_pdf_chars,
+        anchors=anchors,
     )
     return prompt
 
@@ -830,7 +1029,16 @@ def main() -> int:
         except Exception as exc:
             print(f"ERROR preparing prompt: {exc}", file=sys.stderr)
             return 2
-        print(build_auditor_prompt(paper_id, paper_type, body, pdf_text, rubric_text))
+        print(
+            build_auditor_prompt(
+                paper_id,
+                paper_type,
+                body,
+                pdf_text,
+                rubric_text,
+                anchors=anchor_quotes(fm),
+            )
+        )
         return 0
 
     # Layer 1.
@@ -858,7 +1066,9 @@ def main() -> int:
         try:
             pdf_text = load_pdf_text(fm)
             text_digest = sha256_text(pdf_text)
-            _, audit_context = fit_pdf_text_for_audit(pdf_text)
+            _, audit_context = fit_pdf_text_for_audit(
+                pdf_text, anchors=anchor_quotes(fm)
+            )
             expected_provenance = {
                 "paper_id": paper_id,
                 "note_sha256": note_digest,
@@ -893,6 +1103,7 @@ def main() -> int:
                 body,
                 pdf_text,
                 rubric_text,
+                anchors=anchor_quotes(fm),
             )
             raw = dispatch_auditor_via_cli(prompt, args.auditor_model)
             layer_2_result = parse_auditor_response(raw, prose_fields=prose_fields)

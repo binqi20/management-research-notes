@@ -77,8 +77,8 @@ python3 tools/canonicalize_titles.py library/NBS/2025-12/manifest.tsv --apply   
 # 4. Structural lint gate. Clean for every DOI row. NOTE: doi-missing rows with a
 #    filename year-typo or a non-Latin name may STAY flagged — that is fine; they
 #    are excluded from the batches and deferred to the DOI-cleanup pass. A real
-#    CrossRef compound-surname mismatch on a DOI row goes in KNOWN_COMPOUND_SURNAMES
-#    (tools/lint_manifests.py) with a dated rationale, then re-lint.
+#    CrossRef compound-surname mismatch on a DOI row goes in
+#    tools/known_compound_surnames.json with a dated rationale, then re-lint.
 python3 tools/lint_manifests.py --manifest library/NBS/2025-12/manifest.tsv
 
 # 5. Bookkeeping: mark DOI-less rows status=doi-missing (excluded from all batches).
@@ -673,8 +673,8 @@ python3 tools/canonicalize_titles.py library/NBS/2026-01/manifest.tsv --apply   
 # 4. Structural lint gate. Clean for every DOI row. NOTE: doi-missing rows with a
 #    filename year-typo or a non-Latin name may STAY flagged — that is fine; they
 #    are excluded from the batches and deferred to the DOI-cleanup pass. A real
-#    CrossRef compound-surname mismatch on a DOI row goes in KNOWN_COMPOUND_SURNAMES
-#    (tools/lint_manifests.py) with a dated rationale, then re-lint.
+#    CrossRef compound-surname mismatch on a DOI row goes in
+#    tools/known_compound_surnames.json with a dated rationale, then re-lint.
 python3 tools/lint_manifests.py --manifest library/NBS/2026-01/manifest.tsv
 
 # 5. Bookkeeping: mark DOI-less rows status=doi-missing (excluded from all batches).

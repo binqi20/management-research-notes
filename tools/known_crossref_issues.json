@@ -1,0 +1,80 @@
+{
+  "_doc": [
+    "Known CrossRef-side data errors — false-positive registry for verify_metadata.py.",
+    "Keyed by paper_id; inner keys are field names (title/authors/...); values are",
+    "dated rationale strings. Add an entry ONLY after manually confirming the",
+    "CrossRef record itself is wrong (check the PDF and the journal page) — never",
+    "to silence a mismatch you have not diagnosed. Every rationale MUST end with a",
+    "'Suppressed YYYY-MM-DD.' date; the loader rejects undated entries. A MISMATCH",
+    "whose (paper_id, field) appears here is reported as KNOWN_FP and does not",
+    "fail the gate. Duplicate keys are rejected at load time."
+  ],
+  "entries": {
+    "nbs-2026-02-reinecke-2026": {
+      "title": "CrossRef record duplicates the title and embeds the author name mid-string ('...PaulKalpita Bhar. Ecophenomenology and the Environmental Crisis in the Sundarbans...'). The note's title matches the PDF correctly. Suppressed 2026-05-09."
+    },
+    "amj-vol-67-no-2-liao-2024": {
+      "authors": "CrossRef stores the last author as family='Man Tang', given='Pok' (Cantonese-romanization compound-surname interpretation). The PDF byline reads 'POK MAN TANG' and the journal's own running header uses 'Tang' as the family name throughout. The note matches the PDF + the journal convention. Suppressed 2026-05-10."
+    },
+    "amj-vol-66-no-6-xu-2023": {
+      "title": "CrossRef record has malformed inline HTML: title contains 'Forest<i>and</i>the Trees' with NO spaces around the italic tag, so even after tag-strip normalization the CrossRef value renders as 'Forestandthe Trees'. The note's title matches the PDF and the journal's published version with proper spacing. Suppressed 2026-05-16."
+    },
+    "amj-vol-64-no-5-claus-2021": {
+      "title": "CrossRef record has malformed inline HTML: title contains 'Case of<i>Villages for Africa</i>in Rural Tanzania' with NO spaces around the italic tag, so even after tag-strip normalization the CrossRef value renders as 'Case ofVillages for Africain Rural Tanzania'. The note's title matches the PDF and the journal's published version with proper spacing. Suppressed 2026-06-26."
+    },
+    "amj-vol-64-no-6-cunningham-2021": {
+      "authors": "CrossRef stores the first author's family name as 'Lee Cunningham'. The PDF byline reads 'JULIA LEE CUNNINGHAM' while the article running head and citation convention use 'Cunningham'. The note matches the PDF citation convention. Suppressed 2026-06-26."
+    },
+    "nbs-2026-01-groutsis-2026": {
+      "authors": "CrossRef truncates the 4th author's compound family name to family='Remedios', dropping 'D'Almada'. The PDF byline reads 'Rose D'Almada Remedios', so 'D'Almada Remedios' is the full compound surname and the note matches the byline. Suppressed 2026-06-20."
+    },
+    "nbs-2026-01-maggio-2026": {
+      "authors": "CrossRef parses the first author 'Marco Di Maggio' as family='Maggio', dropping the 'Di' particle. The PDF byline reads 'MARCO DI MAGGIO', so 'Di Maggio' is the full surname and the note matches the byline. Suppressed 2026-06-20."
+    },
+    "amj-vol-65-no-2-wang-2022": {
+      "authors": "CrossRef truncates the 2nd author's compound surname to family='Pahnke', dropping 'Cox'. The PDF byline reads 'EMILY COX PAHNKE', so 'Cox Pahnke' is the full surname and the note matches the byline. Suppressed 2026-06-23."
+    },
+    "amj-vol-65-no-3-leon-2022": {
+      "authors": "CrossRef truncates the first author's compound surname to family='de Leon', dropping 'Ponce'. The byline and running text read 'Rebecca Ponce de Leon', so 'Ponce de Leon' is the full surname and the note matches it. Suppressed 2026-06-23."
+    },
+    "amj-vol-65-no-3-tang-2022": {
+      "authors": "CrossRef parses the first author 'Pok Man Tang' as family='Man Tang'. The journal running header and the existing liao-2024 note use 'Tang'; the note matches that convention. Suppressed 2026-06-23."
+    },
+    "amj-vol-62-no-1-zhang-2019": {
+      "authors": "CrossRef parses the first author 'Cyndi Man Zhang' as family='Man Zhang'. The PDF byline reads 'CYNDI MAN ZHANG' and the running header uses 'Zhang and Greve'; the note matches the journal citation convention. Suppressed 2026-06-28."
+    },
+    "amj-vol-62-no-1-jia-2019": {
+      "authors": "CrossRef parses the third author 'Cyndi Man Zhang' as family='Man Zhang'. The article running header uses 'Jia, Huang, and Zhang' and the author bio reads 'Cyndi Man Zhang'; the note matches the journal citation convention. Suppressed 2026-06-28."
+    },
+    "amj-vol-60-no-2-greve-2017": {
+      "authors": "CrossRef parses the second author 'Cyndi Man Zhang' as family='Man Zhang'. The PDF byline reads 'CYNDI MAN ZHANG' and the note follows APA/journal citation convention with family name 'Zhang'. Suppressed 2026-07-03."
+    },
+    "amj-vol-60-no-5-giachetti-2017": {
+      "authors": "CrossRef parses the third author 'Stefano Li Pira' as family='Pira', dropping 'Li'. The PDF byline reads 'STEFANO LI PIRA' and the running head uses 'Giachetti, Lampel, and Li Pira'; the note matches the published byline and citation convention. Suppressed 2026-07-03."
+    },
+    "amj-vol-59-no-1-durand-2016": {
+      "title": "CrossRef record has malformed inline HTML: title contains 'Organizational<i>and</i>Individual' with NO spaces around the italic tag, so after tag-strip normalization the CrossRef value renders as 'OrganizationalandIndividual'. The note title matches the PDF and journal published version with proper spacing. Suppressed 2026-07-03."
+    },
+    "amj-vol-59-no-1-zavyalova-2016": {
+      "title": "CrossRef record has malformed inline HTML: title contains 'Benefit<i>and</i>a Burden' with NO spaces around the italic tag, so after tag-strip normalization the CrossRef value renders as 'Benefitanda Burden'. The note title matches the PDF and journal published version with proper spacing. Suppressed 2026-07-03."
+    },
+    "amj-vol-58-no-1-byron-2015": {
+      "title": "CrossRef record has malformed inline HTML: title contains 'Photos, and<i>Tchotchkes</i>as Symbolic' with NO spaces around the italic tag, so after tag-strip normalization the CrossRef value renders without the spaces around 'Tchotchkes'. The note title matches the PDF and journal published version with proper spacing. Suppressed 2026-07-05."
+    },
+    "amj-vol-58-no-1-little-2015": {
+      "authors": "CrossRef parses the second author 'Virginia Smith Major' as family='Major', dropping 'Smith'. The PDF byline reads 'VIRGINIA SMITH MAJOR' and the running head uses 'Little, Smith Major, Hinojosa, and Nelson'; the note matches the journal citation convention. Suppressed 2026-07-05."
+    },
+    "amj-vol-58-no-5-joshi-2015-gender-research-overview": {
+      "title": "CrossRef record includes literal inline HTML around the journal name: 'Gender Research in<i>AMJ</i>: ...'. After tag stripping, the value renders without the intended spaces around 'AMJ'. The PDF title reads 'Gender Research in AMJ: An Overview...' and the note matches the PDF/journal published version. Suppressed 2026-07-06."
+    },
+    "amj-vol-61-no-2-titus-2018": {
+      "authors": "CrossRef parses the first author's family name as 'Titus', dropping the 'Jr.' suffix. The PDF byline reads 'VARKEY K. TITUS JR.' and the APA citation form is 'Titus, V. K., Jr.'; the note preserves the published suffix. Suppressed 2026-07-01."
+    },
+    "amj-vol-61-no-4-tepper-2018": {
+      "authors": "CrossRef parses the sixth author 'Hee Man Park' as family='Man Park'. The PDF byline reads 'HEE MAN PARK' and the APA citation form is 'Park, H. M.'; the note matches the published byline and citation convention. Suppressed 2026-07-01."
+    },
+    "amj-vol-65-no-4-pamphile-2022": {
+      "authors": "CrossRef stores the compound family name 'Deeds Pamphile'; the article's running text cites the first author as 'Pamphile' (18x) and the note matches that citation-convention short form. Suppressed 2026-06-23."
+    }
+  }
+}

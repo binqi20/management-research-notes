@@ -52,6 +52,15 @@ markdown body. The exact format is shown below.
 - For analytic fields (research question, mechanism, contribution, limitations, future
   research, practical implications), **summarize only what is clearly supported by the
   paper's text**. If support is insufficient, write `Not reported in paper`.
+- **Scope discipline (Practical Implication & Future Research).** These two fields are
+  the most common audit-drift site: 9 of 9 recent PARTIAL verdicts were "applied
+  extensions" — implications extended to audiences, applications, or settings the paper
+  never names (e.g., adding "advisors and investors" when the paper addresses only
+  founders, or turning a research-facing implication into governance advice). Stay
+  within the paper's **own stated audience, setting, and scope**. If the paper's
+  implication section is thin, write a thin implication — the independent audit treats
+  added audiences and upgraded prescriptions as drift, and every such addition costs a
+  repair-and-re-audit loop.
 - For the abstract, extract verbatim. Do not paraphrase. Whitespace may be normalized
   (line wraps removed) but the text must otherwise be a contiguous substring of the
   source.
@@ -199,10 +208,14 @@ does not state or a result it does not report.
 **Data & Measures.** How the focal constructs were operationalized. For quantitative
 work, give the data source and the measure for each key IV / DV / mediator /
 moderator (e.g., "DV: CSR disclosure = CSRHub ESG rating; IV: board diversity =
-% women directors"). For qualitative work, give the data corpus and how constructs
-were coded (e.g., "62 semi-structured interviews; open then axial coding into three
-second-order themes"). Required for every empirical-* type; `Not reported in paper`
-for conceptual / review / editorial / book-review.
+% women directors"). When the paper claims causal identification, name the strategy
+in the paper's own terms (fixed effects, instrumental variables, difference-in-
+differences, regression discontinuity, natural experiment, randomized experiment);
+if the design is associational, say so plainly — do not upgrade correlational
+language into causal language. For qualitative work, give the data corpus and how
+constructs were coded (e.g., "62 semi-structured interviews; open then axial coding
+into three second-order themes"). Required for every empirical-* type;
+`Not reported in paper` for conceptual / review / editorial / book-review.
 
 **Key Findings.** *The priority field — what the study actually found.*
 - `empirical-quantitative`: which hypotheses were supported vs. rejected, with the
@@ -456,13 +469,15 @@ evidence:
 {2-3 sentences, paper's own terminology}
 
 **Practical Implication**
-{2-3 sentences, or "Not reported in paper"}
+{2-3 sentences, the paper's own stated audience and scope only — see Scope
+ discipline rule; or "Not reported in paper"}
 
 **Limitations**
 {2-3 sentences, or "Not reported in paper"}
 
 **Future Research**
-{2-3 sentences, or "Not reported in paper"}
+{2-3 sentences, only directions the paper explicitly states — see Scope
+ discipline rule; or "Not reported in paper"}
 
 **APA 7th Citation**
 {Author(s), year. Title in sentence case. *Journal*, volume(issue), pages. https://doi.org/...}

@@ -218,11 +218,29 @@ def derive_paper_id(
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print("usage: prepare_paper.py <pdf>", file=sys.stderr)
+    args = sys.argv[1:]
+    # --model overrides the extraction_model stamped into the bundle. The
+    # default stays the Codex pipeline model; other runtimes (e.g. Claude Code)
+    # pass their actual model so provenance stays truthful — the v0.19.1 /
+    # v0.23.1 releases were both after-the-fact corrections of this exact
+    # field, caused by a hardcoded default disagreeing with the model that ran.
+    model = EXTRACTION_MODEL
+    if "--model" in args:
+        idx = args.index("--model")
+        if idx + 1 >= len(args):
+            print("--model requires a value", file=sys.stderr)
+            return 2
+        model = args[idx + 1].strip()
+        if not model:
+            print("--model requires a non-empty value", file=sys.stderr)
+            return 2
+        del args[idx : idx + 2]
+
+    if len(args) != 1:
+        print("usage: prepare_paper.py <pdf> [--model <extraction-model>]", file=sys.stderr)
         return 2
 
-    pdf = Path(sys.argv[1]).resolve()
+    pdf = Path(args[0]).resolve()
     if not pdf.exists() or pdf.suffix.lower() != ".pdf":
         print(f"not a pdf: {pdf}", file=sys.stderr)
         return 2
@@ -287,7 +305,7 @@ def main() -> int:
             f"pdf_path: {rel_pdf}",
             f"text_path: {rel_text}",
             f"ingested_at: {today}",
-            f"extraction_model: {EXTRACTION_MODEL}",
+            f"extraction_model: {model}",
             f"extraction_version: {EXTRACTION_VERSION}",
         ]
     )

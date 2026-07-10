@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-07-09"
-version: "0.30.0"
+date-released: "2026-07-10"
+version: "0.31.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,22 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.30.0
+  a published rubric) gates every note into the library. Version 0.31.0
+  (2026-07-10) adds Academy of Management Journal volume 57, issue 1: 13
+  peer-reviewed papers — the first issue produced under extraction v3, so
+  every empirical note now records the paper's hypotheses, data and
+  measures, and key findings (hypothesis support and effect direction)
+  with three additional verbatim evidence anchors, audited under rubric
+  v2 across nine prose fields per note. All 13 extractions validated on
+  the first attempt and the final audit scan has 117/117 prose-field
+  verdicts SUPPORTED with zero PARTIAL, UNSUPPORTED, or CONTRADICTED.
+  The release also fixes a references-stripper bug that could truncate
+  audit inputs (with regression tests), raises the audit text budget to
+  240,000 characters with anchor-aware splicing so the auditor always
+  sees the passages backing each claim, migrates the CrossRef
+  false-positive registries to JSON data files, and records truthful
+  per-run extraction-model provenance (this issue: claude-fable-5).
+  Public indexes contain 1,141 records. Earlier, version 0.30.0
   (2026-07-09) is a schema-and-tooling release with no new notes: it
   introduces extraction v3, which adds three empirical body sections to
   every future note — Hypotheses / Propositions, Data & Measures, and Key
@@ -196,11 +211,12 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.30.0 snapshot contains 1,128 curated
+  perfectly-clean batch. The current v0.31.0 snapshot contains 1,141 curated
   notes: 272 from the Network for Business Sustainability monthly digests
-  and 856 AMJ pilot notes across vol. 58 no. 1 through vol. 69 no. 1. The
-  full library passes the v0.29.0 audit sweep with 1,128/1,128 PASS and zero
-  CONTRADICTED verdicts. An AGENTS.md file provides
+  and 869 AMJ pilot notes across vol. 57 no. 1 plus vol. 58 no. 1 through
+  vol. 69 no. 1. The 13 vol-57-no-1 notes pass the v3 audit at 117/117
+  SUPPORTED; the prior 1,128 notes pass the v0.29.0 audit sweep with
+  1,128/1,128 PASS and zero CONTRADICTED verdicts. An AGENTS.md file provides
   a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom
   SDK apps) can discover and consume the data with known faithfulness

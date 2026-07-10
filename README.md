@@ -523,6 +523,32 @@ The full library has been swept across releases:
   metadata gates, and fixes stale documentation references
   (`ingest_batch.py`, the tools list, the audit invocation examples).
 
+- **v0.31.0 sweep (2026-07-10, 1,141 notes):**
+  Adds **Academy of Management Journal volume 57, issue 1** — **13
+  peer-reviewed papers** — the **first live extraction-v3 issue**: every
+  empirical note carries Hypotheses / Propositions, Data & Measures, and
+  Key Findings with three additional verbatim evidence anchors, audited
+  under rubric v2 (nine prose fields per note). All 13 extractions
+  validated on the first attempt; the final audit scan has
+  **117 / 117 prose-field verdicts `SUPPORTED`**, 0 `PARTIAL`,
+  0 `UNSUPPORTED`, and 0 `CONTRADICTED`. Two audit-loop repairs before
+  release: one note narrowing (Marr: per-study status-loss manipulation
+  attribution) and one **tooling fix** — the audit prompt's
+  references-stripper false-matched a line-initial prose sentence
+  ("References to relationships…", Koerner) and cut the Discussion from
+  the audit input; the stripper gained a prose-guard plus regression
+  tests, and Koerner re-audited cleanly against the full text. The
+  release also raises the audit text budget to 240K chars with
+  anchor-aware splicing (every evidence anchor's context is guaranteed
+  visible to the auditor), migrates both CrossRef false-positive
+  registries to JSON data files (`tools/known_crossref_issues.json`,
+  `tools/known_compound_surnames.json`), adds a `--model` provenance
+  flag to the ingest tools (this issue's notes record
+  `claude-fable-5`), and adds anti-overreach scope guidance to the
+  extraction prompt. Manifest lint and scoped CrossRef pass 13/13 with
+  zero new false-positive entries; SQLite, CSV, and BibTeX all contain
+  1,141 records.
+
 Run the audit on a single note. Layer 1 (the mechanical anchor check) runs
 standalone; the full two-layer audit reads an independent auditor's verdict:
 
@@ -539,7 +565,7 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this snapshot
 
-This main-branch snapshot contains **1,128 curated notes**:
+This main-branch snapshot contains **1,141 curated notes**:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
@@ -547,9 +573,9 @@ This main-branch snapshot contains **1,128 curated notes**:
   recovered and added in v0.3.0.)
 - **NBS 2025-12** — 82 notes from the NBS **December 2025** monthly digest, spanning the *Ecological Economics* biodiversity-and-finance special issue, AMJ, *Business & Society*, *Review of Finance*, *Strategic Management Journal*, and other journals (added in v0.20.0).
 - **NBS 2026-01** — 113 notes from the NBS **January 2026** monthly digest, led by the *Journal of Business Ethics* (40) with *Research Policy* (14), the *Journal of Environmental Economics and Management*, *Organization Science*, *Human Relations*, *The Journal of Finance*, *MIS Quarterly*, and other journals (added in v0.21.0).
-- **AMJ pilot** — 856 notes across 67 consecutive recent issues of
+- **AMJ pilot** — 869 notes across 68 recent issues of
   the [Academy of Management Journal](https://journals.aom.org/journal/amj)
-  (vol. 58 no. 1 through vol. 58 no. 6, vol. 59 no. 1 through vol.
+  (vol. 57 no. 1, vol. 58 no. 1 through vol. 58 no. 6, vol. 59 no. 1 through vol.
   59 no. 6, vol. 60 no. 1 through vol.
   60 no. 6, vol. 61 no. 1 through vol.
   61 no. 6, vol. 62 no. 1 through vol.
@@ -559,6 +585,7 @@ This main-branch snapshot contains **1,128 curated notes**:
   65 no. 6, vol. 66 no. 1 through vol.
   66 no. 6, vol. 67 no. 1 through vol. 67 no. 6, vol. 68 no. 1
   through vol. 68 no. 6, and vol. 69 no. 1).
+  v0.31.0 added vol. 57 no. 1 (13 notes, the first extraction-v3 issue);
   v0.29.0 added vol. 58 no. 1-6 (78 notes);
   v0.28.0 added vol. 59 no. 1-6 (95 notes);
   v0.27.0 added vol. 60 no. 1-6 (95 notes);
@@ -581,18 +608,19 @@ This main-branch snapshot contains **1,128 curated notes**:
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |   639 |
-| empirical-qualitative  |   243 |
-| empirical-mixed        |   109 |
-| editorial              |    69 |
+| empirical-quantitative |   648 |
+| empirical-qualitative  |   245 |
+| empirical-mixed        |   110 |
+| editorial              |    70 |
 | conceptual             |    53 |
 | review                 |     9 |
 | book-review            |     6 |
-| **Total**              | **1,128** |
+| **Total**              | **1,141** |
 
 All notes have passed the semantic audit. The corpus contains 88 legacy v1
-notes and 1,040 v2 notes; v2 notes carry an `evidence:` anchor block checked by
-Layer 1. See [Faithfulness audit](#faithfulness-audit) above.
+notes, 1,040 v2 notes, and 13 v3 notes; v2/v3 notes carry an `evidence:` anchor
+block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
+Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
 ## Repository layout
 
@@ -723,7 +751,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.30.0},
+  version      = {0.31.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

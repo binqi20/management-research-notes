@@ -139,10 +139,9 @@ manifest, exit code 0.
   byline, then fix the manifest row to just the family name.
 - **`crossref:` mismatch** → either a D'Amico-class bug (fix the
   manifest) OR a legitimate compound surname where CrossRef has the
-  formal version and the manifest uses the citation short form (add to
-  `KNOWN_COMPOUND_SURNAMES` in `tools/lint_manifests.py` with a dated
-  rationale, same pattern as `verify_metadata.py`'s false-positive
-  registry).
+  formal version and the manifest uses the citation short form (add an
+  entry to `tools/known_compound_surnames.json` with a dated rationale —
+  a data edit, same pattern as `tools/known_crossref_issues.json`).
 - **`saved_filename`: file not found** → either rename the PDF to match
   the manifest, or update the manifest to match the actual PDF on disk.
 
@@ -273,13 +272,18 @@ wave.
 
 If an audit-agent spawn hits an active-agent cap, timeout, or coordination
 problem even at 6, fall back to 5, then 3, then serial execution while
-preserving auditor independence. Each auditor handles exactly one note and must
-read only:
+preserving auditor independence. Each auditor handles exactly one note. The
+preferred input is the self-contained audit prompt:
 
-1. `docs/audit-rubric.md`
-2. `tools/audit_note.py` usage notes for `--layer-2-json`
-3. `notes/<PAPER_ID>.md`
-4. The note's referenced extracted text file under `library/.../text/`
+1. Run `python tools/audit_note.py notes/<PAPER_ID>.md --prompt-only` and read
+   its output — it contains the current rubric, the note body, and the
+   anchor-aware fitted PDF text (so what the auditor sees is exactly what the
+   assembled report's `audit_context` records).
+2. `tools/audit_note.py` usage notes for `--layer-2-json` (provenance shape).
+
+(Reading `docs/audit-rubric.md`, the note, and the raw extracted text directly
+is a legacy fallback — it can diverge from the recorded `audit_context` on
+long papers.)
 
 The auditor must not read the extraction agent's reasoning, drafts, chat
 transcript, or self-evaluation. It emits a JSON file at
@@ -291,7 +295,7 @@ transcript, or self-evaluation. It emits a JSON file at
     "paper_id": "<PAPER_ID>",
     "note_sha256": "<sha256 of current note text>",
     "text_sha256": "<sha256 of current extracted PDF text>",
-    "rubric_version": "v1",
+    "rubric_version": "v2",
     "auditor_model": "<model name>",
     "generated_at": "<UTC ISO timestamp>",
     "dispatch_mode": "codex-independent-agent"
@@ -310,10 +314,13 @@ transcript, or self-evaluation. It emits a JSON file at
 }
 ```
 
-The `scores` object must include all six fields required by
-`docs/audit-rubric.md`: `research_question`, `mechanism_process`,
-`theoretical_contribution`, `practical_implication`, `limitations`, and
-`future_research`. Missing fields are an audit error, not an implied pass.
+The `scores` object must include every prose field the note contains, per
+`docs/audit-rubric.md` (rubric v2): for **v1/v2 notes**, the six fields
+`research_question`, `mechanism_process`, `theoretical_contribution`,
+`practical_implication`, `limitations`, `future_research`; for **v3 notes**,
+those six plus `hypotheses`, `data_measures`, and `key_findings` (nine total).
+Missing fields are an audit error, not an implied pass — assembly rejects the
+JSON. `rubric_version` must be `"v2"`; a `"v1"` stamp is rejected.
 
 The parent operator then assembles the official report:
 
@@ -426,8 +433,8 @@ metadata drift is suspected, the prior validation state is stale or unreliable,
 the user explicitly requests it, or a major public milestone justifies the
 network cost.
 
-A narrow `KNOWN_CROSSREF_DATA_ERRORS` addition for a newly added paper does not
-by itself trigger a full-library CrossRef sweep, because it cannot affect
+A narrow `tools/known_crossref_issues.json` addition for a newly added paper does
+not by itself trigger a full-library CrossRef sweep, because it cannot affect
 unrelated notes. Treat that as a scoped data exception and rerun the scoped
 check for the affected issue or volume. A global change to CrossRef parsing,
 normalization, comparison, or field-selection logic is different and should use

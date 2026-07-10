@@ -11,10 +11,14 @@ docs/extraction-prompt.md, and writes notes/<paper_id>.md.
 Usage:
   python tools/ingest_batch.py library/NBS/2026-02/pdfs
   python tools/ingest_batch.py library/NBS/2026-02/pdfs --skip-text
+  python tools/ingest_batch.py library/AMJ/vol-57-no-1/pdfs --model claude-fable-5
 
 Flags:
-  --skip-text   Skip pdf_to_text.py (useful if text/ is already populated).
-  --only-new    Skip PDFs whose paper_id already has a note in notes/.
+  --skip-text     Skip pdf_to_text.py (useful if text/ is already populated).
+  --only-new      Skip PDFs whose paper_id already has a note in notes/.
+  --model NAME    Extraction model stamped into each bundle (passed through to
+                  prepare_paper.py). Default is the Codex pipeline model; other
+                  runtimes pass their actual model so provenance stays truthful.
 """
 
 from __future__ import annotations
@@ -41,8 +45,19 @@ def existing_note_ids() -> set[str]:
 
 def main() -> int:
     args = sys.argv[1:]
+    model = ""
+    if "--model" in args:
+        idx = args.index("--model")
+        if idx + 1 >= len(args):
+            print("--model requires a value", file=sys.stderr)
+            return 2
+        model = args[idx + 1].strip()
+        del args[idx : idx + 2]
     if not args:
-        print("usage: ingest_batch.py <pdf-folder> [--skip-text] [--only-new]", file=sys.stderr)
+        print(
+            "usage: ingest_batch.py <pdf-folder> [--skip-text] [--only-new] [--model NAME]",
+            file=sys.stderr,
+        )
         return 2
     folder = Path(args[0]).resolve()
     skip_text = "--skip-text" in args
@@ -73,7 +88,10 @@ def main() -> int:
                 continue
             print(f"  [text] {out.strip()}")
 
-        rc, out, err = run([sys.executable, str(TOOLS / "prepare_paper.py"), str(pdf)])
+        prepare_cmd = [sys.executable, str(TOOLS / "prepare_paper.py"), str(pdf)]
+        if model:
+            prepare_cmd += ["--model", model]
+        rc, out, err = run(prepare_cmd)
         if rc != 0:
             print(f"  [bundle] FAIL: {err.strip()}")
             fail += 1

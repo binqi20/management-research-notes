@@ -101,211 +101,90 @@ RATE_LIMIT_SLEEP_SECONDS = 0.025  # 40 req/sec — well under CrossRef's 50/sec 
 # Fields we know how to compare. Order is the report order.
 ALL_FIELDS = ("year", "title", "journal", "volume", "issue", "pages", "authors")
 
-# Known CrossRef-side data errors. Mismatches matching (paper_id, field)
-# entries here are reported as KNOWN_FP rather than MISMATCH, so the gate
-# stays clean. Add entries here only after manually confirming that the
-# CrossRef record itself is wrong (not the note). Each entry must include
-# a dated rationale so future maintainers can re-verify whether the
-# upstream record has since been fixed.
-#
-# TODO: migrate to a JSON file (e.g. tools/known_crossref_issues.json)
-# if this list grows past ~5 entries — at that point the source-code
-# edits feel more like data updates than code changes.
-KNOWN_CROSSREF_DATA_ERRORS: dict[str, dict[str, str]] = {
-    "nbs-2026-02-reinecke-2026": {
-        "title": (
-            "CrossRef record duplicates the title and embeds the author "
-            "name mid-string ('...PaulKalpita Bhar. Ecophenomenology and "
-            "the Environmental Crisis in the Sundarbans...'). The note's "
-            "title matches the PDF correctly. Suppressed 2026-05-09."
-        ),
-    },
-    "amj-vol-67-no-2-liao-2024": {
-        "authors": (
-            "CrossRef stores the last author as family='Man Tang', given='Pok' "
-            "(Cantonese-romanization compound-surname interpretation). The PDF "
-            "byline reads 'POK MAN TANG' and the journal's own running header "
-            "uses 'Tang' as the family name throughout. The note matches the "
-            "PDF + the journal convention. Suppressed 2026-05-10."
-        ),
-    },
-    "amj-vol-66-no-6-xu-2023": {
-        "title": (
-            "CrossRef record has malformed inline HTML: title contains "
-            "'Forest<i>and</i>the Trees' with NO spaces around the italic "
-            "tag, so even after tag-strip normalization the CrossRef value "
-            "renders as 'Forestandthe Trees'. The note's title matches the "
-            "PDF and the journal's published version with proper spacing. "
-            "Suppressed 2026-05-16."
-        ),
-    },
-    "amj-vol-64-no-5-claus-2021": {
-        "title": (
-            "CrossRef record has malformed inline HTML: title contains "
-            "'Case of<i>Villages for Africa</i>in Rural Tanzania' with NO "
-            "spaces around the italic tag, so even after tag-strip "
-            "normalization the CrossRef value renders as 'Case ofVillages "
-            "for Africain Rural Tanzania'. The note's title matches the PDF "
-            "and the journal's published version with proper spacing. "
-            "Suppressed 2026-06-26."
-        ),
-    },
-    "amj-vol-64-no-6-cunningham-2021": {
-        "authors": (
-            "CrossRef stores the first author's family name as 'Lee Cunningham'. "
-            "The PDF byline reads 'JULIA LEE CUNNINGHAM' while the article "
-            "running head and citation convention use 'Cunningham'. The note "
-            "matches the PDF citation convention. Suppressed 2026-06-26."
-        ),
-    },
-    "nbs-2026-01-groutsis-2026": {
-        "authors": (
-            "CrossRef truncates the 4th author's compound family name to "
-            "family='Remedios', dropping 'D'Almada'. The PDF byline reads "
-            "'Rose D'Almada Remedios', so 'D'Almada Remedios' is the full "
-            "compound surname and the note matches the byline. "
-            "Suppressed 2026-06-20."
-        ),
-    },
-    "nbs-2026-01-maggio-2026": {
-        "authors": (
-            "CrossRef parses the first author 'Marco Di Maggio' as "
-            "family='Maggio', dropping the 'Di' particle. The PDF byline "
-            "reads 'MARCO DI MAGGIO', so 'Di Maggio' is the full surname "
-            "and the note matches the byline. Suppressed 2026-06-20."
-        ),
-    },
-    "amj-vol-65-no-2-wang-2022": {
-        "authors": (
-            "CrossRef truncates the 2nd author's compound surname to "
-            "family='Pahnke', dropping 'Cox'. The PDF byline reads 'EMILY "
-            "COX PAHNKE', so 'Cox Pahnke' is the full surname and the note "
-            "matches the byline. Suppressed 2026-06-23."
-        ),
-    },
-    "amj-vol-65-no-3-leon-2022": {
-        "authors": (
-            "CrossRef truncates the first author's compound surname to "
-            "family='de Leon', dropping 'Ponce'. The byline and running text "
-            "read 'Rebecca Ponce de Leon', so 'Ponce de Leon' is the full "
-            "surname and the note matches it. Suppressed 2026-06-23."
-        ),
-    },
-    "amj-vol-65-no-3-tang-2022": {
-        "authors": (
-            "CrossRef parses the first author 'Pok Man Tang' as "
-            "family='Man Tang'. The journal running header and the existing "
-            "liao-2024 note use 'Tang'; the note matches that convention. "
-            "Suppressed 2026-06-23."
-        ),
-    },
-    "amj-vol-62-no-1-zhang-2019": {
-        "authors": (
-            "CrossRef parses the first author 'Cyndi Man Zhang' as "
-            "family='Man Zhang'. The PDF byline reads 'CYNDI MAN ZHANG' "
-            "and the running header uses 'Zhang and Greve'; the note matches "
-            "the journal citation convention. Suppressed 2026-06-28."
-        ),
-    },
-    "amj-vol-62-no-1-jia-2019": {
-        "authors": (
-            "CrossRef parses the third author 'Cyndi Man Zhang' as "
-            "family='Man Zhang'. The article running header uses 'Jia, Huang, "
-            "and Zhang' and the author bio reads 'Cyndi Man Zhang'; the note "
-            "matches the journal citation convention. Suppressed 2026-06-28."
-        ),
-    },
-    "amj-vol-60-no-2-greve-2017": {
-        "authors": (
-            "CrossRef parses the second author 'Cyndi Man Zhang' as "
-            "family='Man Zhang'. The PDF byline reads 'CYNDI MAN ZHANG' and "
-            "the note follows APA/journal citation convention with family "
-            "name 'Zhang'. Suppressed 2026-07-03."
-        ),
-    },
-    "amj-vol-60-no-5-giachetti-2017": {
-        "authors": (
-            "CrossRef parses the third author 'Stefano Li Pira' as "
-            "family='Pira', dropping 'Li'. The PDF byline reads 'STEFANO "
-            "LI PIRA' and the running head uses 'Giachetti, Lampel, and "
-            "Li Pira'; the note matches the published byline and citation "
-            "convention. Suppressed 2026-07-03."
-        ),
-    },
-    "amj-vol-59-no-1-durand-2016": {
-        "title": (
-            "CrossRef record has malformed inline HTML: title contains "
-            "'Organizational<i>and</i>Individual' with NO spaces around "
-            "the italic tag, so after tag-strip normalization the CrossRef "
-            "value renders as 'OrganizationalandIndividual'. The note title "
-            "matches the PDF and journal published version with proper "
-            "spacing. Suppressed 2026-07-03."
-        ),
-    },
-    "amj-vol-59-no-1-zavyalova-2016": {
-        "title": (
-            "CrossRef record has malformed inline HTML: title contains "
-            "'Benefit<i>and</i>a Burden' with NO spaces around the italic "
-            "tag, so after tag-strip normalization the CrossRef value "
-            "renders as 'Benefitanda Burden'. The note title matches the "
-            "PDF and journal published version with proper spacing. "
-            "Suppressed 2026-07-03."
-        ),
-    },
-    "amj-vol-58-no-1-byron-2015": {
-        "title": (
-            "CrossRef record has malformed inline HTML: title contains "
-            "'Photos, and<i>Tchotchkes</i>as Symbolic' with NO spaces "
-            "around the italic tag, so after tag-strip normalization the "
-            "CrossRef value renders without the spaces around 'Tchotchkes'. "
-            "The note title matches the PDF and journal published version "
-            "with proper spacing. Suppressed 2026-07-05."
-        ),
-    },
-    "amj-vol-58-no-1-little-2015": {
-        "authors": (
-            "CrossRef parses the second author 'Virginia Smith Major' as "
-            "family='Major', dropping 'Smith'. The PDF byline reads "
-            "'VIRGINIA SMITH MAJOR' and the running head uses 'Little, "
-            "Smith Major, Hinojosa, and Nelson'; the note matches the "
-            "journal citation convention. Suppressed 2026-07-05."
-        ),
-    },
-    "amj-vol-58-no-5-joshi-2015-gender-research-overview": {
-        "title": (
-            "CrossRef record includes literal inline HTML around the journal "
-            "name: 'Gender Research in<i>AMJ</i>: ...'. After tag stripping, "
-            "the value renders without the intended spaces around 'AMJ'. The "
-            "PDF title reads 'Gender Research in AMJ: An Overview...' and the "
-            "note matches the PDF/journal published version. Suppressed "
-            "2026-07-06."
-        ),
-    },
-    "amj-vol-61-no-2-titus-2018": {
-        "authors": (
-            "CrossRef parses the first author's family name as 'Titus', "
-            "dropping the 'Jr.' suffix. The PDF byline reads 'VARKEY K. "
-            "TITUS JR.' and the APA citation form is 'Titus, V. K., Jr.'; "
-            "the note preserves the published suffix. Suppressed 2026-07-01."
-        ),
-    },
-    "amj-vol-61-no-4-tepper-2018": {
-        "authors": (
-            "CrossRef parses the sixth author 'Hee Man Park' as "
-            "family='Man Park'. The PDF byline reads 'HEE MAN PARK' and the "
-            "APA citation form is 'Park, H. M.'; the note matches the "
-            "published byline and citation convention. Suppressed 2026-07-01."
-        ),
-    },
-    "amj-vol-65-no-4-pamphile-2022": {
-        "authors": (
-            "CrossRef stores the compound family name 'Deeds Pamphile'; the "
-            "article's running text cites the first author as 'Pamphile' "
-            "(18x) and the note matches that citation-convention short form. "
-            "Suppressed 2026-06-23."
-        ),
-    },
-}
+# Known CrossRef-side data errors live in tools/known_crossref_issues.json — a
+# data file, not code, so the per-issue false-positive additions this registry
+# accumulates are data edits rather than source edits (the inline dict was
+# migrated out at 22 entries, v0.31.0). Mismatches matching a (paper_id, field)
+# entry are reported as KNOWN_FP rather than MISMATCH, so the gate stays clean.
+# Add entries only after manually confirming that the CrossRef record itself is
+# wrong (not the note), with a dated rationale ("... Suppressed YYYY-MM-DD.").
+KNOWN_CROSSREF_ISSUES_PATH = Path(__file__).resolve().parent / "known_crossref_issues.json"
+
+_REGISTRY_CACHE: dict[str, dict] = {}
+
+
+def _reject_duplicate_keys(pairs: list) -> dict:
+    """object_pairs_hook that rejects duplicate keys instead of silently
+    keeping the last one — the likeliest hand-edit accident in an append-heavy
+    registry (copy an entry block, forget to change the key, silently clobber
+    an existing suppression)."""
+    out: dict = {}
+    for key, value in pairs:
+        if key in out:
+            raise ValueError(f"duplicate key {key!r}")
+        out[key] = value
+    return out
+
+
+def load_known_registry(
+    path: Path, required_entry_keys: tuple[str, ...] | None = None
+) -> dict:
+    """Load and validate a {"_doc": [...], "entries": {...}} registry file.
+
+    Fails LOUD with an actionable message on a missing file, malformed JSON,
+    duplicate keys, wrong entry shapes, or undated rationales. These registries
+    guard correctness — silent degradation to "no suppressions" is the one
+    failure mode this loader exists to prevent. Memoized per path; call it at
+    the top of main() so a broken file surfaces before any network work.
+    """
+    cache_key = str(path)
+    if cache_key in _REGISTRY_CACHE:
+        return _REGISTRY_CACHE[cache_key]
+    try:
+        raw = path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        raise SystemExit(
+            f"ERROR: registry file missing: {path}\n"
+            f"  Restore it with: git checkout -- {path}"
+        )
+    try:
+        data = json.loads(raw, object_pairs_hook=_reject_duplicate_keys)
+    except json.JSONDecodeError as e:
+        raise SystemExit(
+            f"ERROR: malformed JSON in {path}:{e.lineno}:{e.colno}: {e.msg}"
+        )
+    except ValueError as e:
+        raise SystemExit(f"ERROR: {path}: {e}")
+    entries = data.get("entries") if isinstance(data, dict) else None
+    if not isinstance(entries, dict):
+        raise SystemExit(f"ERROR: {path} must contain a top-level 'entries' object")
+    date_re = re.compile(r"20\d\d-\d\d-\d\d")
+    for key, entry in entries.items():
+        if not isinstance(entry, dict) or not entry:
+            raise SystemExit(f"ERROR: {path}: entry {key!r} must be a non-empty object")
+        if required_entry_keys:
+            missing = sorted(set(required_entry_keys) - set(entry))
+            if missing:
+                raise SystemExit(
+                    f"ERROR: {path}: entry {key!r} missing required keys: "
+                    f"{', '.join(missing)}"
+                )
+            checks = [("rationale", entry.get("rationale"))]
+        else:
+            checks = list(entry.items())
+        for label, rationale in checks:
+            if not isinstance(rationale, str) or not date_re.search(rationale):
+                raise SystemExit(
+                    f"ERROR: {path}: entry {key!r} ({label}) needs a dated rationale "
+                    f"(e.g. 'Suppressed 2026-07-10.')"
+                )
+    _REGISTRY_CACHE[cache_key] = entries
+    return entries
+
+
+def known_crossref_errors() -> dict[str, dict[str, str]]:
+    """The CrossRef false-positive registry (memoized)."""
+    return load_known_registry(KNOWN_CROSSREF_ISSUES_PATH)
 
 
 # ---------------------------------------------------------------------------
@@ -603,6 +482,10 @@ def compare_field(field: str, note_val, cr_msg: dict) -> tuple[str, str, str]:
 # ---------------------------------------------------------------------------
 
 def main():
+    # Fail-early: a broken registry file must surface before the CrossRef
+    # network loop, not midway through a 1,000-note sweep.
+    known_crossref_errors()
+
     ap = argparse.ArgumentParser()
     ap.add_argument(
         "--field",
@@ -673,7 +556,7 @@ def main():
             # registry. This keeps the gate clean while leaving an
             # audit trail in the report (and the TSV's rationale column).
             if status == "MISMATCH":
-                rationale = KNOWN_CROSSREF_DATA_ERRORS.get(
+                rationale = known_crossref_errors().get(
                     fm["paper_id"], {}
                 ).get(field, "")
                 if rationale:
@@ -775,8 +658,7 @@ def main():
         print()
         print(
             "  These do NOT count as mismatches and do NOT fail the "
-            "pipeline gate.\n  To audit, see KNOWN_CROSSREF_DATA_ERRORS "
-            "in tools/verify_metadata.py."
+            "pipeline gate.\n  To audit, see tools/known_crossref_issues.json."
         )
 
     return 1 if mismatches else 0
