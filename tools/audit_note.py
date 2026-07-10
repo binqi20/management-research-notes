@@ -97,7 +97,7 @@ from validate_note import (  # noqa: E402 — path munging above is intentional
 AUDITS_DIR = SYNAPSE_ROOT / "incoming" / "_audits"
 FLAGGED_DIR = SYNAPSE_ROOT / "incoming" / "_flagged"
 RUBRIC_PATH = SYNAPSE_ROOT / "docs" / "audit-rubric.md"
-DEFAULT_AUDITOR_MODEL = "gpt-5.5"
+DEFAULT_AUDITOR_MODEL = "gpt-5.6-sol"
 AUDIT_VERSION = "v1"
 # The single canonical rubric doc (docs/audit-rubric.md) is now v2: it scores the
 # original six prose fields plus the three v3 fields (Hypotheses / Propositions,
@@ -688,7 +688,7 @@ def dispatch_auditor_via_cli(prompt: str, auditor_model: str) -> str:
     """
     if not auditor_model.startswith("claude-"):
         raise RuntimeError(
-            "The default Synapse auditor model is now GPT-5.5 and must be run "
+            "The default Synapse auditor model is now GPT-5.6 Sol and must be run "
             "through an independent Codex external-audit JSON path. To use the "
             "legacy Claude CLI dispatcher, pass an explicit Claude model such "
             "as --auditor-model claude-opus-4-6."

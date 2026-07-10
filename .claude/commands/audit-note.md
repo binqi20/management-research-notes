@@ -83,7 +83,7 @@ python tools/audit_note.py notes/<paper_id>.md
 ```
 
 For the current Codex workflow, run Layer 1 locally and use a fresh independent
-GPT-5.5 auditor to write `incoming/_audits/<paper_id>.layer2.json`; then assemble
+GPT-5.6 Sol auditor to write `incoming/_audits/<paper_id>.layer2.json`; then assemble
 the official report with:
 
 ```bash

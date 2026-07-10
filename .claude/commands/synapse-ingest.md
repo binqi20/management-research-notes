@@ -263,7 +263,7 @@ Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 
 ## Step 2.5 — Independent Layer 2 audit
 
-After notes validate structurally, dispatch separate GPT-5.5 auditor agents.
+After notes validate structurally, dispatch separate GPT-5.6 Sol auditor agents.
 **Keep at most 6 active auditor agents per wave.** Do not attempt larger waves
 unless the user explicitly changes this policy after a new cap test. Do not mix
 extraction and audit waves for the same issue. As with extraction, record each

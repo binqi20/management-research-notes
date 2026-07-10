@@ -2,8 +2,8 @@
 """
 prepare_paper.py — given a PDF inside the canonical library/ layout, look up the
 trusted bibliographic metadata from the source's manifest.tsv and emit an extraction
-bundle that the extraction agent (Codex / GPT-5.5 by default) will read to produce
-the note.
+bundle that the extraction agent (Codex / GPT-5.6 Sol by default) will read to
+produce the note.
 
 The bundle is a single text file in incoming/_bundles/<paper_id>.bundle.txt and
 contains:
@@ -40,7 +40,7 @@ BUNDLES_DIR = SYNAPSE_ROOT / "incoming" / "_bundles"
 NOTES_DIR = SYNAPSE_ROOT / "notes"
 PROMPT_PATH = SYNAPSE_ROOT / "docs" / "extraction-prompt.md"
 
-EXTRACTION_MODEL = "gpt-5.5"
+EXTRACTION_MODEL = "gpt-5.6-sol"  # current Codex model; other runtimes override via --model
 EXTRACTION_VERSION = "v3"  # v3 = adds Hypotheses / Data & Measures / Key Findings; must match docs/extraction-prompt.md
 
 

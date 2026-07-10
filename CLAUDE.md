@@ -146,7 +146,7 @@ research. Read this file before doing anything in this folder.
 5. Run the two-layer faithfulness audit with an independent Layer 2 auditor.
    Layer 1 substring-checks the `evidence:` anchors against the PDF text. Layer
    2 scores the six prose fields against `docs/audit-rubric.md`. The current
-   Codex path uses GPT-5.5 independent audit agents that write
+   Codex path uses GPT-5.6 Sol independent audit agents that write
    `incoming/_audits/{paper_id}.layer2.json` with provenance fields, then
    assembles the official report with
    `python tools/audit_note.py notes/{paper_id}.md --layer-2-json
