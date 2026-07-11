@@ -51,9 +51,11 @@ in either mode.
   must report the pre-fix cause either way.
 
 In both modes: extraction agents write only `notes/<paper_id>.md`; audit agents
-write only `incoming/_audits/<paper_id>.layer2.json`; the parent session verifies
-expected files **on disk** (never trusting agent self-reports), assembles official
-audits, makes repairs, and rebuilds derived indexes.
+write only `incoming/_audits/<paper_id>.layer2.json`; **subagents never run git
+commands** (staging, committing, tagging, and pushing are parent-session actions
+only); the parent session verifies expected files **on disk** (never trusting
+agent self-reports), assembles official audits, makes repairs, and rebuilds
+derived indexes.
 
 ---
 
@@ -276,9 +278,23 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   the three NEW fields (drift there = augmentation-prompt problem). A repeated
   same-cause pattern on OLD fields is expected legacy drift: repair the batch,
   report the tally, continue — do not stop 33 times for a known pattern.
+- **Faithful-note PARTIALs (the li-2025 precedent, batch 02):** when a PARTIAL
+  flags a sentence you can verify is faithful against the RAW extracted text
+  (use a whitespace-tolerant search — two-column interleaving can splice a
+  body sentence word-by-word into the references region, defeating the
+  auditor and line-based grep alike), do NOT edit the note. Accept the
+  residual PARTIAL, record it in the ledger and release notes (the note's
+  overall audit is still pass), and move on. Editing accurate content to
+  appease a verification artifact is a faithfulness violation, not a repair.
+- **Repair convergence bound:** source-verified factual errors are always
+  fixed, regardless of how many rounds it takes (batch-02 preston needed
+  three, each a distinct genuine error). But when a fresh auditor keeps
+  surfacing new *subjective or wording* nuances on legacy fields after two
+  rounds, accept-and-document rather than play whack-a-mole.
 - Batch order: newest-first (69-1+68-6, then 68-5+68-4, … down to 58-1+58-2);
   the 27 v1 notes all sit in 69-1/68-6/68-5, so re-extraction clears in the
-  first two batches. NBS (272 notes: 61 v1 + 211 v2) is a separate later
+  first two batches (done as of batch 02 — batches 03+ are pure
+  augmentation). NBS (272 notes: 61 v1 + 211 v2) is a separate later
   decision.
 
 ## Note version tiers (important for auditing & querying)
