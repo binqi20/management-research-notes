@@ -214,6 +214,37 @@ def derive_paper_id(
     return f"{base}-{suffix}"
 
 
+def find_frozen_paper_id(source: str, issue: str, doi_full: str) -> str | None:
+    """Return an existing note's paper_id for this DOI, if one exists (rule 4).
+
+    Re-ingesting a paper must REPLACE its note at the frozen paper_id, never
+    mint a new one. derive_paper_id embeds the *current* manifest year, but
+    online-first papers carry a frozen id embedding an earlier year (the
+    v0.11.1 year-fix corrected `year:` while freezing ids) — so on re-ingest
+    the derived id can drift from the frozen one. The v3 backfill batch 01
+    hit this on 8 of 16 papers and needed hand surgery on the bundles; this
+    lookup makes id preservation automatic. DOI is the identity key: scan
+    this issue's existing notes for a DOI match and reuse that id verbatim.
+    """
+    if not doi_full:
+        return None
+    want = doi_full.strip().lower().rstrip("/")
+    prefix = f"{slugify(source)}-{issue}-"
+    for note in sorted(NOTES_DIR.glob(f"{prefix}*.md")):
+        note_id = note_doi = None
+        with note.open("r", encoding="utf-8") as f:
+            for line in f:
+                if line.startswith("id:"):
+                    note_id = line.split(":", 1)[1].strip().strip('"')
+                elif line.startswith("doi:"):
+                    note_doi = line.split(":", 1)[1].strip().strip('"')
+                if note_id and note_doi:
+                    break
+        if note_doi and note_doi.strip().lower().rstrip("/") == want and note_id:
+            return note_id
+    return None
+
+
 # --- main -------------------------------------------------------------------------
 
 
@@ -273,6 +304,19 @@ def main() -> int:
         doi_full = f"https://doi.org/{doi_raw}"
     else:
         doi_full = doi_raw or ""
+
+    # Rule 4: if a note already exists for this DOI, its paper_id is frozen —
+    # reuse it so re-ingestion REPLACES the note instead of minting a
+    # year-drifted duplicate (online-first papers embed an earlier year in
+    # their frozen id than the corrected manifest year).
+    frozen_id = find_frozen_paper_id(source, issue, doi_full)
+    if frozen_id and frozen_id != paper_id:
+        print(
+            f"[frozen-id] existing note {frozen_id!r} matches this DOI; "
+            f"reusing it instead of derived {paper_id!r}",
+            file=sys.stderr,
+        )
+        paper_id = frozen_id
 
     rel_pdf = pdf.relative_to(SYNAPSE_ROOT)
     rel_text = text_path.relative_to(SYNAPSE_ROOT)

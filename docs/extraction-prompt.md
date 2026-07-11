@@ -222,7 +222,11 @@ into three second-order themes"). Required for every empirical-* type;
   direction/sign and — where the paper reports it — the magnitude (e.g., "H1
   supported (β = .34, p < .01); H2 moderation not supported"). **Report the sign
   exactly as the paper states it.** A reversed sign here is a Layer-2 `CONTRADICTED`
-  failure, not a stylistic quibble.
+  failure, not a stylistic quibble. **Multi-study papers: when the support pattern
+  is heterogeneous, report it per study** — never write "supported across studies",
+  "consistently", or "reliably" unless every study's test supports the claim;
+  partial support must be stated as partial (the two audit PARTIALs in backfill
+  batch 01 were both this exact overstatement).
 - `empirical-qualitative`: the key emergent findings — the model, process, or
   mechanism the study surfaces — in the paper's own terms.
 - `empirical-mixed`: the findings from the dominant method, noting convergence or

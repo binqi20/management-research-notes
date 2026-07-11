@@ -244,9 +244,18 @@ Propositions, Data & Measures, and Key Findings. Two tiers, two treatments:
   after every augmentation, before the audit.
 - **v1 notes → FULL RE-EXTRACTION** with the standard pipeline (they have no
   anchors to preserve; augmenting them cannot reach v3's 10-anchor bar). Same
-  `paper_id`, note replaced, `ingest_batch.py --model <actual model>`
-  regenerates the bundle. Do NOT pass `--only-new` (it would skip papers that
-  already have notes).
+  `paper_id`, note replaced. Regenerate bundles with
+  `ingest_batch.py <pdfs> --model <actual model> --skip-text` — **`--skip-text`
+  is mandatory in a backfill**: the extracted text already exists and is the
+  baseline every existing anchor, audit hash, and diff-guard comparison rests
+  on; regenerating it could silently shift that baseline. Do NOT pass
+  `--only-new` (it would skip papers that already have notes).
+  `prepare_paper.py` automatically reuses the existing note's **frozen
+  paper_id** when a note matching the row's DOI exists (rule 4 — online-first
+  papers embed an earlier year in their frozen id than the corrected manifest
+  year; batch 01 hit this on 8/16 papers before the automatic lookup existed).
+  Still verify every regenerated bundle's `id:` maps to an existing note file
+  before extracting.
 
 **Per-batch procedure:** preflight (notes + texts exist; tier census; clean
 tree — the diff-guard diffs against HEAD) → augmentation/re-extraction waves
