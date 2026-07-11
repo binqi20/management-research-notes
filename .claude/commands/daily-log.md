@@ -54,8 +54,14 @@ day's hard artifacts:
 #   --since="<DATE> 00:00" --until="<DATE> 23:59" instead of --since=midnight.
 git log --since=midnight --pretty=format:'%h %s'
 
-# Tags / releases, newest first (note any created today)
+# Tags / releases, newest first (note any created today; the project ships
+# per-issue / per-batch releases, so a single day can produce several)
 git tag --sort=-creatordate | head
+gh release list --limit 10
+
+# Per-run ledgers — the densest per-run record on disk (tallies, repairs,
+# audit verdicts, publication_status). Any ledger dated today is a day-anchor.
+ls -lt incoming/_ledgers/*.json | head
 
 # What's changed but uncommitted right now (the end-of-day state)
 git status --short
@@ -70,6 +76,16 @@ Compose the summary from **this conversation** plus the Step 2 anchors. Be
 faithful: record only work that actually happened. Never invent commits,
 results, or decisions — if something is uncertain, say so explicitly. Link
 releases and PRs with full URLs so they stay clickable later.
+
+**Multi-session days:** this project often runs several Claude Code / Codex
+sessions in parallel (issue runs, backfill batches, tooling work), and the
+session writing the log has seen only its own conversation. Work from other
+sessions still belongs in the day's log — but ONLY at the level the evidence
+anchors prove (commits, tags, releases, today's ledgers). Attribute it plainly
+("a batch session published v0.36.0 — 16 augmentations, 144/144 SUPPORTED, per
+its ledger") and never reconstruct another session's reasoning, problems, or
+decisions from imagination — if only the artifact is known, log only the
+artifact.
 
 **If `worklogs/<DATE>.md` does NOT exist**, create it with this template:
 
