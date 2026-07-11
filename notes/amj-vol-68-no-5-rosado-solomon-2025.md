@@ -2,9 +2,9 @@
 id: amj-vol-68-no-5-rosado-solomon-2025
 title: "Navigating Mental Illness at Work Using Disengagement and Engagement Pathways"
 authors:
-  - "Rosado-Solomon, Emily H."
-  - "Thatcher, Sherry M. B."
-  - "Strizver, Sam D."
+  - "Rosado-Solomon, E. H."
+  - "Thatcher, S. M. B."
+  - "Strizver, S. D."
 year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2023.0430"
@@ -15,54 +15,80 @@ pages: "971-999"
 source: "AMJ/vol-68-no-5"
 pdf_path: "library/AMJ/vol-68-no-5/pdfs/Rosado-Solomon 2025 Navigating Mental Illness at Work Using Disengagement and Engagement Pathways.pdf"
 text_path: "library/AMJ/vol-68-no-5/text/Rosado-Solomon 2025 Navigating Mental Illness at Work Using Disengagement and Engagement Pathways.txt"
-ingested_at: "2026-04-14"
-extraction_model: "claude-opus-4-6"
-extraction_version: "v1"
+ingested_at: "2026-07-11"
+extraction_model: "claude-opus-4-8"
+extraction_version: "v3"
 
 paper_type: "empirical-qualitative"
-keywords: ["mental illness at work", "mood disorders", "anxiety disorders", "work engagement", "work disengagement", "physical disengagement", "task disengagement", "social disengagement", "symptom management", "suffering reduction", "image preservation", "distraction", "embodiment", "wellness outcomes"]
-theory: ["work engagement and disengagement theory", "embodiment theory", "stigma and disclosure theory", "inductive grounded theory"]
-topics: ["organizational-behavior-hrm", "diversity-equity-inclusion", "employee-wellbeing", "disability-inclusion"]
+keywords: ["mental illness at work", "disengagement", "engagement", "embodiment", "suffering reduction", "image preservation", "distraction", "employee well-being"]
+theory: ["embodiment (Heaphy & Dutton, 2008)", "work (dis)engagement (Kahn, 1990; Demerouti et al., 2001)", "social identity and stigma (Goffman, 1963)"]
+topics: ["employee-wellbeing", "disability-inclusion", "motivation-engagement"]
 unit_of_analysis: "individual"
 level_of_theory: "micro"
 dependent_variable_family: "social"
-methods: "Inductive qualitative study using grounded theory. Two-phase design: (1) a sensitizing phase analyzing anonymous blog posts from 171 individuals and 1,119 Reddit posts from 781 unique users to refine the interview protocol, and (2) a main phase of 59 semi-structured interviews with 57 participants diagnosed with mood and/or anxiety disorders. Interviews (43-84 minutes; average 61 minutes) were transcribed verbatim and analyzed inductively via open coding, axial coding, and theoretical integration to build a process model of (dis)engagement types, mechanisms, and outcomes."
+methods: "Inductive qualitative study using the Gioia grounded-theory methodology. Two-phase design: a sensitizing phase (171 blog posts; 252 Reddit threads, 1,119 posts) followed by a main phase of 59 semi-structured interviews with 57 employed adults diagnosed with mood and/or anxiety disorders; initial open coding then axial coding into an emergent process model."
 sample:
-  industry: "Diverse occupations including bus driver, chemical engineer, CTO, consultant, graphic designer, IT professional, lawyer, manager, professor, real estate manager, restaurant server, salesperson, teacher, manufacturing tester, touring musician"
+  industry: "Varied occupations (e.g., bus driver, chemical engineer, chief technology officer, consultant, lawyer, professor, teacher, restaurant server, touring musician)"
   country: "United States"
   time_period: "November 2020 to July 2021"
-  units: "Employed adults diagnosed with mood disorders, anxiety disorders, or both prior to March 2020"
-  n: "59 interviews with 57 participants (two interviewed twice); ~37% women; average age 41.5 (SD 11; range 22-66)"
+  units: "Employed adults diagnosed with mood and/or anxiety disorders"
+  n: "59 interviews with 57 participants (two interviewed twice)"
+
+evidence:
+  sample_n: "Based on 59 interviews with participants that have diagnosed mood and anxiety disorders"
+  sample_country: "United States, have been diagnosed with a mental"
+  sample_industry: "held a variety of jobs including bus driver"
+  sample_time_period: "took place between November 2020 and July"
+  theories_overview: "the embodiment, disengagement, and engagement"
+  methods_overview: "The main data collection involved semi-structured"
+  keywords_source: "various types of disengagement (physical, task, social)"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "In the course of identifying themes we engaged in axial coding, in which we"
+  findings_overview: "Our findings show that disengagement is crucial in enabling employees with mental illness to balance symptom management and stable job performance"
 ---
 
 # Navigating Mental Illness at Work Using Disengagement and Engagement Pathways
 
 **Abstract**
-Based on 59 interviews with participants that have diagnosed mood and anxiety disorders, our findings elucidate that employees temporarily alter their work engagement—either by pulling back through various types of disengagement (physical, task, social) or by increasing their engagement in various elements of their work. Our findings show that disengagement is crucial in enabling employees with mental illness to balance symptom management and stable job performance. Our theoretical model specifies types of disengagement and engagement and the mechanisms that explain their relationship to wellness and work outcomes, including suffering reduction, image preservation, and distraction. These findings provide a nuanced view of the ways employees with mental illness navigate their symptoms, with implications for better understanding how mental illness influences affective, cognitive, and embodied experiences at work.
+Nearly 20% of adults in the United States experience mental illness, or chronic conditions that influence the way people think, feel, and act, that may initially seem incompatible with the demands of work. Yet, many employees with mental illness are professionally successful. The present research builds theory about mental illness at work by investigating how employees with mental illness experience their conditions and how they navigate their symptoms vis-a-vis their employment. Based on 59 interviews with participants that have diagnosed mood and anxiety disorders, our findings elucidate that employees temporarily alter their work engagement—either by pulling back through various types of disengagement (physical, task, social) or by increasing their engagement in various elements of their work. Our findings show that disengagement is crucial in enabling employees with mental illness to balance symptom management and stable job performance. Our theoretical model specifies types of disengagement and engagement and the mechanisms that explain their relationship to wellness and work outcomes, including suffering reduction, image preservation, and distraction. These findings provide a nuanced view of the ways employees with mental illness navigate their symptoms, with implications for better understanding how mental illness influences affective, cognitive, and embodied experiences at work.
 
 **Research Question**
-How do employees with mental illness navigate their symptoms vis-a-vis work? Specifically, how do employees manage the symptoms of mood and anxiety disorders alongside their responsibilities at work in ways that support both wellness and work-related outcomes?
+How do employees with mental illness navigate their symptoms vis-a-vis work — that is, how do they experience their conditions and manage their symptoms alongside the demands of paid employment?
+
+**Hypotheses / Propositions**
+Not reported in paper
 
 **Mechanism Process**
-- Triggering condition: Onset of aversive mental illness symptoms at work (e.g., low mood, irritability, panic, lethargy, trouble concentrating) that create tension with job demands.
-- (Dis)engagement actions: Temporary shifts in work involvement, grouped into three disengagement types (physical, task, social) and three engagement types (physical, task, social). Participants often enacted multiple types simultaneously.
-- Linking mechanisms: Three mechanisms connect (dis)engagement actions to outcomes — (1) suffering reduction (curtailing the aversive experience of symptoms), (2) image preservation (maintaining how others perceive them to avoid stigma), and (3) distraction (diverting attention from symptoms).
-- Emergent outcomes: Wellness outcomes (survival; subjective well-being) and work-related outcomes (acceptable task performance; retention).
-- Boundary conditions (not formally tested): Whether a given (dis)engagement type is feasible depends on contextual constraints such as remote vs. in-person work, job autonomy, and workplace norms around disclosure.
+- Triggering condition: Onset of episodic mental illness symptoms arising from an omnipresent chronic condition, which interferes with expected work behaviors
+- (Dis)engagement actions: Disengagement (physical, task, social) and engagement (physical or task, social), enacted by employees who are aware of symptom onset and able to respond
+- Mechanisms: Suffering reduction (an active process curtailing the aversive experience of symptoms), image preservation (avoiding stigma/discovery of one's condition), and distraction (diverting attention from aversive symptoms)
+- Outcomes: Wellness outcomes (survival, subjective well-being) and work-related outcomes (acceptable performance, avoiding discrimination, continued employment)
+- Boundary condition (non-independence): Disengagement and engagement are not opposite ends of a spectrum — some employees disengaged (e.g., physically or from a task) while simultaneously increasing engagement (e.g., socially)
 
-When symptoms arise, employees with mental illness agentically enact temporary shifts in work involvement rather than passively suffering or withdrawing permanently, pulling back through physical, task, or social disengagement or pushing in through increased physical, task, or social engagement. These actions operate through three mechanisms — reducing the suffering of aversive symptoms, preserving a professional image to avoid stigma, and distracting attention away from symptoms — which in turn produce wellness outcomes (survival and subjective well-being) and work-related outcomes (acceptable task performance and retention). The model frames disengagement not as disaffection or burnout but as a deliberate, responsible, short-duration strategy that lets employees navigate both wellness and work demands.
+When employees with mood or anxiety disorders experience a symptom onset, those able to respond temporarily (dis)engage from work rather than passively absorbing a conflict between symptoms and job demands. Distinct types of disengagement (physical, task, social) and engagement (physical/task, social) connect to valued wellness and work outcomes through three explanatory mechanisms — suffering reduction, image preservation, and distraction. Disengagement is especially crucial because it gives employees the time and space to enact symptom-management strategies while still meeting "good enough" performance standards; the two pathways frequently co-occur as employees navigate a fluctuating, embodied condition.
+
+**Data & Measures**
+Data: 59 semi-structured interviews with 57 participants (two interviewed twice; 55 recorded and transcribed verbatim, others documented via notes; interviews 43–84 minutes, average 61), all US adults diagnosed with a mood and/or anxiety disorder prior to March 2020, holding varied occupations. A prior sensitizing phase drew on 171 anonymous blog posts and 252 Reddit threads (1,119 posts from 781 users) to refine the interview protocol. Analysis: inductive grounded-theory coding following the Gioia methodology — initial open coding kept close to participants' own language, followed by axial coding that consolidated open codes into higher-order categories and specified relationships among (dis)engagement types, mechanisms, and outcomes, iterating between coding and extant literature. The design is interpretive/associational; the authors explicitly state their data do not allow causal inferences (e.g., for the distraction-to-work-outcomes link).
+
+**Key Findings**
+- In response to symptom onset, employees temporarily altered their work engagement: most disengaged (physical, task, or social), while others increased engagement (physical/task or social). The two were not mutually exclusive and often co-occurred within the same individual.
+- Disengagement was crucial in enabling employees to balance symptom management with stable, acceptable job performance (frequently framed by participants as "good enough" rather than optimal performance).
+- Three mechanisms linked (dis)engagement to outcomes: suffering reduction (connecting all disengagement types, and social engagement, to wellness outcomes, and physical/task disengagement to work-related outcomes); image preservation (connecting social and physical disengagement to avoiding discrimination); and distraction (connecting physical/task and social engagement to survival).
+- The work-related impact of increased engagement via distraction was not conclusive and is represented by a dashed line in the model.
+- A small minority (n = 5) who could not deploy effective (dis)engagement — due to poor self-awareness, uniquely severe symptoms, or work constraints — generally suffered poor wellness and work outcomes.
+- A few participants experienced symptoms as sometimes adaptive for performance (e.g., mania, anxiety), but this positive impact was excluded from the theoretical model for lack of sufficient data.
 
 **Theoretical Contribution**
-The study augments the literature on mental illness at work — previously criticized for limited theoretical grounding — by articulating a process model in which employees with mental illness are agentic actors who use temporary (dis)engagement to navigate symptoms, rather than passive recipients of stigma or poor performers. Second, it extends embodiment theory by explicitly linking somatic phenomena with the cognitive and affective symptoms of mental illness, bridging a literature that has emphasized the body with one that has emphasized the mind. Third, it extends the (dis)engagement literature by distinguishing physical, task, and social forms and by showing that disengagement can function through suffering reduction and image preservation, not merely as resource replenishment breaks.
+The study augments a mental-illness-at-work literature previously criticized as atheoretical and disclosure-dominated, theorizing how employees actively navigate tensions between symptoms and work obligations rather than merely deciding whether to disclose. It broadens the (dis)engagement literature (Kahn, 1990; Bakker et al., 2008) by showing that distinct types of disengagement and engagement affect wellness and work outcomes through different mechanisms, and that disengagement and engagement can co-occur rather than being opposite, mutually exclusive states. It extends the embodiment literature by articulating that the cognitive, affective, and somatic experiences of mental illness are tightly intertwined and cannot be divorced when studying the body at work.
 
 **Practical Implication**
-Managers should trust that temporary employee disengagement is often an intentional, pro-organizational act by employees with mental illness trying to preserve performance and wellness, and one-size-fits-all accommodation programs are unlikely to work. Managers can support employees by recognizing that informal social engagement (e.g., small talk) may serve as symptom management rather than distraction from work, and by reconsidering blanket employment restrictions on those with mental illness histories, which deter help-seeking and diagnosis.
+Because outcomes differ as a function of symptoms, (dis)engagement actions, and context, one-size-fits-all approaches to employees' mental illness symptoms are unlikely to be effective. The authors' central implication for managers is to trust that when employees temporarily disengage, it is likely done with the best of intentions for the organization. Managers can also support employees by recognizing that social disengagement (via image preservation) and social engagement (via suffering reduction and distraction) are legitimate ways to manage symptoms — for instance, informal small talk can be beneficial for some employees — and managers across industries should reconsider employment restrictions for those with a history of mental illness.
 
 **Limitations**
-The sample is overwhelmingly Caucasian (~80%), limiting the ability to examine how intersectional racial or ethnic backgrounds shape mental illness experiences at work. The authors did not explicitly investigate temporal dynamics, so they cannot determine how (dis)engagement behaviors might differ across short- versus long-term symptom trajectories. They also could not assess whether simultaneous combinations of (dis)engagement types are distinctly beneficial for particular outcomes.
+The sample was overwhelmingly Caucasian (~80%), limiting the ability to examine how intersectional racial or ethnic backgrounds shape experiences of mental illness at work. The study could not determine whether simultaneous combinations of (dis)engagement types were distinctly beneficial for particular outcomes, as this was beyond its scope. The authors also did not explicitly investigate the temporal dynamics of (dis)engagement across short- versus long-term symptom episodes.
 
 **Future Research**
-Future work should take an intersectional perspective on race, ethnicity, culture, and gender in shaping mental illness experiences at work, and examine gender-specific (e.g., male) samples given masculine stereotypes around emotional suppression. Quantitative techniques such as latent profile analysis and longitudinal designs could test how combinations of (dis)engagement types relate to outcomes and how employees learn effective (dis)engagement strategies. The model's mechanisms (image preservation, suffering reduction) should be tested in adjacent populations such as those with chronic physical illness or those experiencing episodic life crises like divorce.
+The authors call for intersectional work on how cultural, racial/ethnic, and gender differences (e.g., men with mental illness and pressure to suppress emotions) shape these experiences. They suggest quantitative studies — such as latent profile analysis — of how different combinations of (dis)engagement types relate to work and well-being outcomes, and longitudinal (qualitative and quantitative) analysis of short- versus long-term symptoms and how employees learn which (dis)engagement behaviors suit their symptoms. They further propose examining whether the model extends to other employees who experience tension between their lived experience and job expectations (e.g., other stigmatized or chronically ill workers, those going through divorce), and delineating the boundary conditions that distinguish mental-illness-specific components from those applying to all employees.
 
 **APA 7th Citation**
-Rosado-Solomon, E. H., Thatcher, S. M. B., & Strizver, S. D. (2025). Navigating mental illness at work using disengagement and engagement pathways. *Academy of Management Journal*, 68(5), 971-999. https://doi.org/10.5465/amj.2023.0430
+Rosado-Solomon, E. H., Thatcher, S. M. B., & Strizver, S. D. (2025). Navigating mental illness at work using disengagement and engagement pathways. *Academy of Management Journal*, 68(5), 971–999. https://doi.org/10.5465/amj.2023.0430

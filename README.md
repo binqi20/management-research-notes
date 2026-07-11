@@ -549,6 +549,22 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.35.0 v3 backfill batch 02 (2026-07-11, 1,167 notes):**
+  Upgrades **AMJ volume 68, issue 5 and issue 4, 19 notes total** to the v3
+  schema (11 legacy v1 notes fully re-extracted, 8 v2 notes augmented in
+  place). The **record total is unchanged at 1,167**; the version-tier census
+  shifts to 61 v1, 1,031 v2, 75 v3, and one re-extracted note (Lazar) was
+  reclassified empirical-mixed → empirical-quantitative. Each touched note
+  passed a fresh full independent 9-field rubric-v2 audit: **170 / 171
+  prose-field verdicts `SUPPORTED`, 0 `UNSUPPORTED`, 0 `CONTRADICTED`**, after
+  five evidence-based repairs (per-study support-pattern and scope corrections
+  on Chung, Dutta, and Preston). One residual `PARTIAL` remains, on the Li
+  note's Limitations: its "30% and 7%" mediation figures are verbatim-faithful
+  to the paper, but two-column typesetting splices that sentence into the
+  reference list, so the independent auditor could not re-verify the 7% — the
+  faithful sentence was left unchanged rather than edited to appease the
+  extraction artifact.
+
 - **v0.34.0 v3 backfill batch 01 (2026-07-11, 1,167 notes):**
   Upgrades the two most recent AMJ issues to the v3 schema — **AMJ volume 69,
   issue 1 and volume 68, issue 6, 17 notes total** (16 legacy v1 notes fully
@@ -651,17 +667,17 @@ This main-branch snapshot contains **1,167 curated notes**:
 
 | Paper type             | Count |
 |------------------------|------:|
-| empirical-quantitative |   667 |
+| empirical-quantitative |   668 |
 | empirical-qualitative  |   247 |
-| empirical-mixed        |   112 |
+| empirical-mixed        |   111 |
 | editorial              |    72 |
 | conceptual             |    54 |
 | review                 |     9 |
 | book-review            |     6 |
 | **Total**              | **1,167** |
 
-All notes have passed the semantic audit. The corpus contains 72 legacy v1
-notes, 1,039 v2 notes, and 56 v3 notes; v2/v3 notes carry an `evidence:` anchor
+All notes have passed the semantic audit. The corpus contains 61 legacy v1
+notes, 1,031 v2 notes, and 75 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -794,7 +810,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.34.0},
+  version      = {0.35.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

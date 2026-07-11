@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-68-no-4/pdfs/Li 2025 The Roles of Learning and Status
 text_path: "library/AMJ/vol-68-no-4/text/Li 2025 The Roles of Learning and Status Attainment in Successful Newcomer Socialization Random Assignments to Complex Projects and Early Career Outcomes.txt"
 ingested_at: "2026-04-18"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-quantitative"
 keywords: ["newcomer socialization", "project complexity", "learning", "status attainment", "prior same-industry experience", "career outcomes", "random assignment"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Drawing on the task complexity"
   methods_overview: "We estimated mixed-effects models"
   keywords_source: "two distinct but complementary mechanisms"
+  hypotheses_source: "Hypothesis 3b. Status partially mediates the positive"
+  measures_overview: "Component complexity was measured by the size"
+  findings_overview: "those assigned to more complex projects obtained more professional certifications, reported higher levels of learning"
 ---
 
 # The Roles of Learning and Status Attainment in Successful Newcomer Socialization: Random Assignments to Complex Projects and Early Career Outcomes
@@ -52,6 +57,18 @@ Newcomers’ early work experiences in an organization can considerably affect t
 **Research Question**
 What features of on-the-job experiences generate early career benefits for newcomers, through what mechanisms do these benefits occur, and who is best positioned to capitalize on these experiences? Specifically, how do project component complexity and coordination complexity influence newcomers’ performance and promotion via learning and status attainment, and how does prior same-industry experience moderate these relationships?
 
+**Hypotheses / Propositions**
+- H1a. Project complexity is positively associated with the employee’s performance.
+- H1b. Project complexity is positively associated with the employee’s promotion rate.
+- H2a. Project complexity is positively associated with the employee’s learning.
+- H2b. Learning partially mediates the positive association between project complexity and performance.
+- H2c. Learning partially mediates the positive association between project complexity and promotion rate.
+- H3a. Project complexity is positively associated with the employee’s status.
+- H3b. Status partially mediates the positive association between project complexity and performance.
+- H3c. Status partially mediates the positive association between project complexity and promotion rate.
+- H4. The positive association between project complexity and learning is stronger when the employee has richer prior same-industry experience.
+- H5. The positive association between project complexity and status is stronger when the employee has richer prior same-industry experience.
+
 **Mechanism Process**
 - IV(s): Project coordination complexity (interconnectedness of actions in the project action network); project component complexity (number of distinct actions in the project action network)
 - DV(s): Performance (quarterly monetary rewards; annual supervisor evaluations); Promotion (advancement in organizational rank)
@@ -59,6 +76,30 @@ What features of on-the-job experiences generate early career benefits for newco
 - Moderator: Prior same-industry experience (years worked in the space industry before joining SpeedTech)
 
 Newcomers assigned to projects with higher coordination and component complexity engage in interrelated, varied actions that drive both intra- and inter-personal learning—building technical mastery and a broad knowledge base—and simultaneously increase visibility and signal commitment, competence, and contribution to colleagues, who then accord higher status. Learning translates into higher performance and faster promotion through accumulated human capital, while status confers privileges, resources, and positive evaluation biases that further accelerate career advancement. Prior same-industry experience strengthens these pathways by providing the absorptive capacity needed to extract learning value from complex assignments and serving as a credibility cue colleagues use when attributing collective success.
+
+**Data & Measures**
+- Data: longitudinal archival personnel and project records from SpeedTech (a private Chinese avionics/space-industry R&D firm), covering 507 newcomers’ monthly project assignments (7,753 assignment records) across their first 24 months (January 2020–December 2022), supplemented by interviews with HR, project leaders, and newsletter editors to validate the measures.
+- Identification: the firm’s own practice of randomly reassigning newcomers to a new project every six months during their first two years; the authors argue this field random assignment permits causal inference beyond typical field studies.
+- IVs (project complexity, from OKR-derived monthly action networks): component complexity = network size (number of distinct actions/nodes); coordination complexity = structural interconnectedness of the action network (Bonchev & Buck, 2005).
+- Mediator (learning): objective certificate count (professional certificates, from 182 recognized types) and subjective self-reported learning (4 items, 5-point Likert scale, Cronbach’s α = .82).
+- Mediator (status): number of monthly appearances in the company’s internal “Song of Youth” newsletter.
+- Moderator: prior same-industry experience, measured as years worked in the space industry before joining SpeedTech.
+- DVs: performance (quarterly monetary rewards; annual supervisor evaluations) and promotion (increase in organizational rank).
+- Estimation: mixed-effects linear regression (person-level random intercepts, standard errors clustered by individual) for performance and mediators; a repeated-events Cox proportional hazards model for promotion; and a parametric bootstrap with Monte Carlo simulation (20,000 replications) for the (moderated) mediation tests.
+
+**Key Findings**
+Support was partial overall, and the two complexity dimensions diverged sharply: coordination complexity was a consistent, strong positive driver, whereas component complexity was weak, mixed, or even reversed.
+
+- H1a (complexity → performance): partially supported. Coordination complexity positively predicted quarterly monetary reward (b = 0.519, p < .001) and annual supervisor evaluation (b = 4.700, p < .05); component complexity was nonsignificant for both.
+- H1b (complexity → promotion): partially supported. Coordination complexity positively predicted promotion (b = 4.131, p < .001), but component complexity significantly *negatively* predicted promotion (b = -0.122, p < .05), opposite to the prediction.
+- H2a (complexity → learning): supported. Both coordination and component complexity positively predicted certificate count and self-reported learning (all p < .001).
+- H2b (learning mediates complexity → performance): partially supported. Mediation held for quarterly monetary reward but was mixed for annual supervisor evaluation.
+- H2c (learning mediates complexity → promotion): partially supported. Only self-reported learning mediated (coordination complexity via self-reported learning, b = 0.223); certificate count did not.
+- H3a (complexity → status): fully supported. Coordination (b = 0.64, p < .001) and component complexity (b = 0.014, p < .05) both positively predicted status.
+- H3b (status mediates complexity → performance): partially supported. Status mediated for quarterly monetary reward but not consistently for annual supervisor evaluation.
+- H3c (status mediates complexity → promotion): not supported. No significant status mediation of promotion.
+- H4 (same-industry experience moderates complexity → learning): partially supported. The interaction held for coordination complexity (certificate count b = 0.061, p < .01; self-reported learning b = 0.086, p < .01) but, for component complexity, only for self-reported learning (b = 0.012, p < .001), not certificate count (b = 0.002, p = .266).
+- H5 (same-industry experience moderates complexity → status): partially supported. The interaction was significant only for component complexity, not coordination complexity.
 
 **Theoretical Contribution**
 The paper makes three contributions to newcomer socialization research. First, it integrates status attainment into the socialization model, expanding the dominant focus on relationship-building to include integration into the informal status hierarchy as a distinct adjustment milestone. Second, it advances a learning perspective on socialization by demonstrating how the development of technical expertise—not just social norms—mediates the link between early experiences and career outcomes. Third, it extends research on newcomer personal capital by showing that prior same-industry experience operates as a boundary condition rather than only a direct predictor, enabling newcomers to translate complex assignments into competence and recognition.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-68-no-4/pdfs/Petriglieri 2025 Uprooting Loneliness A 
 text_path: "library/AMJ/vol-68-no-4/text/Petriglieri 2025 Uprooting Loneliness A Theory of Continuity-Breaking Self-Narrative Change.txt"
 ingested_at: "2026-04-29"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-qualitative"
 keywords: ["self-narratives", "continuity-breaking self-narrative change", "work loneliness", "persistent loneliness", "relational scripts", "attachment theory", "constraining self-narrative", "connecting self-narrative", "emotional threshold", "self-referential insight", "executives", "narrative inquiry"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "we turned to one of the most well"
   methods_overview: "Through an inductive study of executives reporting persistent loneliness at work"
   keywords_source: "Building on these findings, we develop a theory of continuity-breaking"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We coded some informants (28 in total) as"
+  findings_overview: "having shifted from being persistent and painful, to"
 ---
 
 # Uprooting Loneliness: A Theory of Continuity-Breaking Self-Narrative Change
@@ -51,6 +56,9 @@ Through an inductive study of executives reporting persistent loneliness at work
 **Research Question**
 Why and how do people engage in continuity-breaking self-narrative change related to their work? The authors examine this question in the empirical context of executives experiencing persistent work loneliness.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: self-narratives and their central themes; constraining vs. connecting relational scripts ("If I am self-reliant, then I will be less vulnerable to others who could undermine my success" vs. "If I am open, then I will be more connected to others, and this will aid my success"); deprived vs. enriched relational realities; persistent/painful vs. short-lived/unpleasant loneliness.
 - Triggering conditions: an accumulation of distressing loneliness, often catalyzed by a precipitating work event, that pushes informants past an emotional threshold beyond which loneliness becomes intolerable and rhetorical justification and relational compensation can no longer keep it tolerable.
@@ -59,6 +67,20 @@ Why and how do people engage in continuity-breaking self-narrative change relate
 - Emergent outcomes: continuity-breaking self-narrative change creating "disjuncture between past and present selves"; reconstruction of work realities even when little in the work environment has changed; loneliness moves from persistent and painful to short-lived and unpleasant.
 
 The central process is that persistent loneliness becomes "rooted in the self" via constraining relational scripts that yoke success to self-reliance and invulnerability. Continuity-breaking change is triggered by a coalescence of external precipitating events and an internal emotional shift across a threshold; this distress drives a self-referential insight that loneliness is partly self-constructed, which in turn fuels experimentation with connecting scripts that develop in parallel, compete with, and ultimately supplant the original ones as the central themes of the self-narrative — at which point informants update other stories of self and reconstruct their relational realities at work.
+
+**Data & Measures**
+- Data corpus: 61 semi-structured video interviews (90-120 minutes each) with senior executives, conducted over 15 months and preceded by 7 exploratory pilot interviews; all interviews were audio-recorded and professionally transcribed. Informants were recruited from an international business school's alumni population and had confirmed sustained or repeated work loneliness of at least two years' duration.
+- Coding: descriptive first-order codes that closely reflected informants' own terms (Locke, 2001) were grouped into axial codes by similarity and difference, then into three theoretical codes that became the three findings sections; detailed per-informant case summaries (averaging eight single-spaced pages) supplemented the coding.
+- Construct operationalization: relational scripts were coded as if-then contingencies about who informants felt they needed to be to elicit or avoid responses from others; two forms were induced as the central themes of two self-narratives, and informants were coded as holding constraining (28), connecting (24), or in-transition (9) self-narratives.
+- Process analysis: narrative causality (Carton, 2018) was applied to the 33 informants in the midst of, or having completed, the change to map their own attributions of what precipitated what. The design is interpretivist and purposefully subjective; the authors state they cannot claim the changes objectively occurred as informants narrated them.
+
+**Key Findings**
+- Relational scripts — if-then contingencies about relating to others — formed the central theme that connected and unified all other stories in executives' self-narratives. A constraining script ("If I am self-reliant, then I will be less vulnerable to others who could undermine my success") anchored constraining self-narratives; a connecting script ("If I am open, then I will be more connected to others, and this will aid my success") anchored connecting ones.
+- Constraining self-narratives led executives to construct deprived relational realities and to experience persistent, painful loneliness, which they rendered tolerable through self-isolating behavior, rhetorical justification (storying loneliness as the price of success), and relational compensation in nonwork relationships.
+- Continuity-breaking change began when accumulated distress, often catalyzed by a precipitating work event, pushed informants across an emotional threshold past which loneliness became intolerable. This triggered a self-referential insight that their loneliness was partly self-constructed (an agentic construction), which drove experimentation with connecting relational actions.
+- Insight was necessary but not sufficient: some informants who reached the threshold and had the insight could not act, held back by strong fear of others' reactions, and remained at a painful impasse; others oscillated between the competing scripts, and a subset described themselves as still stuck in that oscillation.
+- For those who changed, the connecting script developed in parallel to, competed with, and eventually replaced the constraining one as the central theme; informants then updated their other stories of self and reconstructed enriched relational realities, and their loneliness shifted from persistent and painful to short-lived and unpleasant — even though little in their work environment had changed.
+- Theoretically, the study surfaces that relational scripts change not through gradual revision of an existing script but through the parallel development, competition, and replacement of an alternative script.
 
 **Theoretical Contribution**
 The paper develops a theory of continuity-breaking self-narrative change that complements existing work on narrative continuity by showing how people create disjunctions between past and present selves. It contributes to research on work loneliness by theorizing loneliness as partly an agentic construction in which people psychologically invest, and shifts the field's perspective from a static phenomenon to a dynamic process. It expands attachment theory by mapping how relational scripts — the cognitive elements of attachment systems — change through parallel development, competition, and replacement rather than gradual revision, and it advances a contextualized view of relational scripts as domain-specific (e.g., to work) rather than only global or relationship-specific.

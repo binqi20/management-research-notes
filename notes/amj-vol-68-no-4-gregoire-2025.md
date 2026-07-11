@@ -21,7 +21,9 @@ pdf_path: "library/AMJ/vol-68-no-4/pdfs/Grégoire 2025 Compelling Empirics in Qu
 text_path: "library/AMJ/vol-68-no-4/text/Grégoire 2025 Compelling Empirics in Quantitative Studies.txt"
 ingested_at: "2026-04-18"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "editorial"
 keywords: ["compelling empirics", "quantitative studies", "theory-method alignment", "multi-study designs", "longitudinal studies", "field studies"]
@@ -47,12 +49,21 @@ FROM THE EDITORS COMPELLING EMPIRICS IN QUANTITATIVE STUDIES
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Compelling empirics — data and findings that demand attention and convince readers — play an influential role alongside theoretical contributions in shepherding manuscripts through review and shaping their reception, yet limited guidance exists on how to craft them.
 - Pathways toward compelling empirics: (1) study design and storytelling grounded in deep understanding of real-world phenomena; (2) multi-study designs anchored in clear strategic purposes (triangulation, constructive replication, multilevel designs, experimental mediation); (3) combining data from distant sources; (4) field studies that articulate causal pathways and respect temporal ordering; (5) longitudinal studies with theory-driven measurement timing and analytic strategies; (6) presenting results with completeness, clarity, and credibility (the "three C's").
 - Threats to compelling empirics: theory–method misalignments (untenable proxies, mechanism claims without empirical observation, level mismatches); the limits of large samples (false positives, trivially small effects); over-reliance on crowdsourced data without quality controls; multi-study designs lacking synergistic support across hypotheses.
 
 This editorial does not present a causal mechanism but develops a set of editorial heuristics for what makes quantitative empirics "sing." Building on recent AMJ editorials and exemplar award-winning papers, the authors argue that compelling empirics begin with theory-to-method alignment — designing data collection and measurement to closely correspond with the focal theoretical constructs — and extend through choices about multi-study architecture, data sourcing, temporal design, and results presentation. Throughout, the authors advise authors to ground research designs in a keen understanding of what takes place in the real world, so that data choices serve theory rather than exist for their own sake.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial consolidates editorial guidance for quantitative authors at AMJ by articulating what "compelling empirics" mean and offering pathways and pitfalls. It complements parallel guidance on theoretical contributions and qualitative methods, and reinforces the principle of theory-to-method alignment as a benchmark for evaluating quantitative work submitted to top management journals.

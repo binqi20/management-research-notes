@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-68-no-4/pdfs/Chung 2025 Threading the Needle of Corpo
 text_path: "library/AMJ/vol-68-no-4/text/Chung 2025 Threading the Needle of Corporate Activism How Firms Frame Their Stances on Polarizing Social Issues.txt"
 ingested_at: "2026-04-18"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-quantitative"
 keywords: ["corporate activism", "strategic framing", "collective action frames", "individual action frames", "social arrangements", "issue settlement", "contestation", "LGBTQ rights", "same-sex marriage", "stakeholder alignment", "executive ideology", "advocacy organizations"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "According to upper echelons theory, the belief"
   methods_overview: "selection model (Heckman, 1979) estimated at the"
   keywords_source: "The collective action frame dictionary contains"
+  hypotheses_source: "Following a judicial or legislative settlement of an issue, firms will rely more on collective"
+  measures_overview: "where C is the number of collective action frame"
+  findings_overview: "with all controls included (b 5 0.058, p 5 .004)"
 ---
 
 # Threading the Needle of Corporate Activism: How Firms Frame Their Stances on Polarizing Social Issues
@@ -52,6 +57,13 @@ Corporate activism, or the active involvement of business in contested social an
 **Research Question**
 How do firms strategically frame their stances on polarizing social issues as institutional arrangements evolve from contested to settled, and how is the shift from individual action frames to collective action frames conditioned by the ideological alignment of internal and external stakeholders?
 
+**Hypotheses / Propositions**
+H1. Following a judicial or legislative settlement of an issue, firms will rely more on collective action frames (relative to individual action frames) in communicating their stance on the issue. (Positive main effect.)
+H2. The board of directors' (BOD) and CEO's liberal political ideology will strengthen the relationship between issue settlements and firms' use of collective action frames posited in H1. (Positive moderation.)
+H3. Industry-level conservative political orientation will weaken the relationship between issue settlements and firms' use of collective action frames posited in H1. (Negative moderation.)
+H4. State-level conservative political ideology will weaken the relationship between issue settlements and firms' use of collective action frames posited in H1. (Negative moderation.)
+H5. The presence of issue-aligned advocacy organizations in the firm's headquarter state will strengthen the relationship between issue settlements and firms' use of collective action frames posited in H1. (Positive moderation.)
+
 **Mechanism Process**
 - IV(s): Post-issue settlement — a binary indicator equal to 1 after a judicial or legislative marriage-equality decision in the firm's headquarters state (36 staggered state-level settlements, 2004-2015).
 - DV(s): Firm's relative use of collective action frames vs. individual action frames in LGBTQ-related press releases and tweets, measured as C / (C + I), where C is the count of collective-action keywords and I is the count of individual-action keywords from a dictionary built via human coding plus LDA topic modeling.
@@ -59,6 +71,22 @@ How do firms strategically frame their stances on polarizing social issues as in
 - Moderators: (1) BOD and CEO liberal political ideology (positive interaction, H2); (2) industry-level conservative political ideology (negative interaction, H3); (3) state-level conservative political ideology (negative interaction, H4); (4) presence of two or more issue-aligned advocacy organizations in firm's headquarters state (positive interaction, H5).
 
 Drawing on social movement theory's distinction between collective action frames (diagnostic, prognostic, motivational; injustice and moral outrage) and "individual action frames" (the authors' coinage for business/workplace framings tied to firm-level economic rationales), the paper argues that for-profit firms confronting contested social issues default to lower-risk individual action frames during contestation and only shift to collective action frames after a judicial or legislative settlement legitimizes a position and reduces stakeholder fault lines. Settlements operate by encoding authoritative signals of acceptable conduct and catalyzing attitudinal shifts, lowering the ex post backlash risk of injustice framings. The shift, however, is filtered through ideological alignment with key stakeholders: liberal executives, liberal industries, liberal states, and the presence of LGBTQ-aligned NGOs amplify the post-settlement shift to collective action frames, while conservative executives, industries, or state electorates suppress it.
+
+**Data & Measures**
+- Data corpus: all LGBTQ-related press releases (Business Wire and P.R. Newswire) and corporate Twitter/X posts of Fortune 500 companies, 1999-2019 — 6,461 press releases and 6,450 tweets. The first-stage selection model covers all Fortune 500 firms 1999-2019 (619,047 firm-months), of which 152 spoke out on LGBTQ issues; the main panel has 6,920 firm-month observations.
+- DV (Firm's collective action frames): relative use C / (C + I), where C is the count of collective-action-frame words and I the count of individual-action-frame words in a firm's LGBTQ statements. Frame dictionaries were built by human coding of a subsample (2,143 tweets and 6,441 press-release titles) and refined with latent Dirichlet allocation (LDA) topic modeling.
+- Treatment (Post-issue settlement): indicator equal to 1 once a judicial or legislative marriage-equality decision was enacted in the firm's headquarters state (36 staggered state settlements, 2004-2015).
+- Moderators: (H2) BOD and CEO liberal ideology = directors' and CEO's donations to Democratic candidates divided by total donations (three-year average, five-year lag); (H3) industry-level conservatism = average Bonica (2013) campaign-finance CF scores of PACs at the two-digit SIC level (10-year lag, five-year moving average); (H4) state-level conservatism = average CF score of political candidates in the state; (H5) issue-aligned advocacy organizations = dummy equal to 1 if two or more such organizations operated in the firm's headquarters state.
+- Controls: firm size (logged), ROA, HRC (Corporate Equality Index) rating, logged word count, Tweet channel, CEO-statement dummy, environmental munificence and complexity, state population, state poverty rate, state ethnic heterogeneity, CEO overconfidence, firm elite education, and firm elite network size.
+- Identification: stacked-cohort difference-in-differences with firm, cohort, and month-year fixed effects and standard errors clustered at the firm-cohort level, plus a Heckman (1979) two-stage selection correction (first-stage probit instrumented by industry average elite network size). The design is quasi-experimental, leveraging the staggered timing of state settlements rather than random assignment.
+
+**Key Findings**
+- H1 (supported): following a marriage-equality settlement, treated firms shift toward collective action frames relative to control firms (model 1, p = .032; model 3 with full controls, b = 0.058, p = .004) — roughly a 6% increase, about one-quarter of the sample standard deviation.
+- H2 (supported): BOD/CEO liberal ideology strengthens the post-settlement shift (model 4, p < .001). Very liberal executives (90th percentile) use ~18% more collective action frames than very conservative ones (10th percentile) (~70% of the SD); settlements have no significant effect when executives are conservative.
+- H3 (supported): industry-level conservatism weakens the shift (model 5, p < .001); highly conservative industries (90th percentile) use ~19% fewer collective action frames post-settlement than liberal industries (10th percentile) (~three-quarters of the SD), with no significant settlement effect in conservative industries.
+- H4 (supported): state-level conservatism weakens the shift (p < .001); highly conservative states (90th percentile) use ~18% fewer collective action frames than liberal states (10th percentile) (~70% of the SD).
+- H5 (supported in isolation, attenuated in the full model): in its own model (model 6, p < .001), the presence of two or more issue-aligned advocacy organizations strengthens the shift (~15% more collective action frames, ~59% of the SD). In the full model (model 7), however, the advocacy-organization interaction becomes non-significant (p = .306) as its effect is absorbed by state-level ideology, while executive liberalism, industry conservatism, and state conservatism remain independently significant.
+- Robustness: a negative-binomial count model corroborates H1 (firms in settlement states predicted to use 43 vs. 30 collective action words); results are unchanged when CEO-attributed text is excluded, and the significant shift holds for state-court or legislative settlements but not for federal-court decisions.
 
 **Theoretical Contribution**
 The paper extends institutional theory by showing how firms' rhetorical strategies — not just their structural or practice-level adoptions — reflect and adapt to evolving institutional contestation/settlement cycles, and it advances stakeholder theory by demonstrating that ideological alignment with multiple stakeholder layers (executives, industry peers, state electorates, NGOs) conditions how, not just whether, firms speak out. It also contributes to corporate-activism research by surfacing an irony: "true" activist (collective-action) framing predominantly emerges after social arrangements are already settled, suggesting that "corporate activism" is partly a misnomer — firms tend to enter the fray only after the battle has been won.
@@ -70,7 +98,7 @@ For managers, the findings imply that signaling support during periods of active
 The study is restricted to Fortune 500 firms, so smaller firms — which may employ different niche or product-market framing strategies — are not covered. The empirical setting (U.S. same-sex marriage legalization, 2004-2015) was an unusually clean and progressive trajectory of staggered settlements, raising questions about generalizability to settlements moving in conservative directions or settlements that diverge sharply from public opinion (e.g., Dobbs). Identification rests on settlements in the headquarters state, even though stakeholders (employees, customers) may reside elsewhere; constructs such as the motivational dimension of collective action frames partly overlap with prior issue-selling and symbolic-vs-substantive distinctions in management research.
 
 **Future Research**
-Future work could probe how stakeholder ideology shapes reactions to firms' framing choices and whether mixed framing produces less coherence or broader appeal across heterogeneous audiences. Researchers could examine settlements that go "against the grain" of public opinion, settlements moving in conservative directions, framing choices of small and private firms, and the welfare consequences of corporations' heavy reliance on individual action frames (business-case framings) for the beneficiaries of prosocial corporate initiatives. Cross-national replications and richer measurement of employee ideology and stakeholder networks are also promising avenues.
+Future work could probe how stakeholder ideology shapes reactions to firms' framing choices and whether mixed framing produces less coherence or broader appeal across heterogeneous audiences. Researchers could examine settlements that go "against the grain" of public opinion, settlements moving in conservative directions, framing choices of small and private firms, and the welfare consequences of corporations' heavy reliance on individual action frames (business-case framings) for the beneficiaries of prosocial corporate initiatives.
 
 **APA 7th Citation**
 Chung, S. H. (B.), Odziemkowska, K., & Piazza, A. (2025). Threading the needle of corporate activism: How firms frame their stances on polarizing social issues. *Academy of Management Journal*, 68(4), 680-706. https://doi.org/10.5465/amj.2023.0237
