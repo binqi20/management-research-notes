@@ -278,6 +278,12 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   the three NEW fields (drift there = augmentation-prompt problem). A repeated
   same-cause pattern on OLD fields is expected legacy drift: repair the batch,
   report the tally, continue — do not stop 33 times for a known pattern.
+- **All-augmentation batch signature (batch 03):** `index/library.bib` is a pure
+  projection of bibliographic frontmatter, which augmentation is forbidden to
+  touch — so in a batch with no re-extraction it regenerates **byte-identical**
+  and does not appear in the commit. Only `synapse.db` and `papers.csv` change
+  (they index the new sections and `extraction_version`). Two-of-three index
+  files changing is the *correct* signature, not a failed export.
 - **Faithful-note PARTIALs (the li-2025 precedent, batch 02):** when a PARTIAL
   flags a sentence you can verify is faithful against the RAW extracted text
   (use a whitespace-tolerant search — two-column interleaving can splice a
