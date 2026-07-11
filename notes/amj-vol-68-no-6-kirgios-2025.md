@@ -14,24 +14,36 @@ pages: "1328-1354"
 source: "AMJ/vol-68-no-6"
 pdf_path: "library/AMJ/vol-68-no-6/pdfs/Kirgios 2025 Diversity Incentives Can Increase Women’s Aspirations to Lead.pdf"
 text_path: "library/AMJ/vol-68-no-6/text/Kirgios 2025 Diversity Incentives Can Increase Women’s Aspirations to Lead.txt"
-ingested_at: "2026-04-14"
-extraction_model: "claude-opus-4-6"
-extraction_version: "v1"
+ingested_at: "2026-07-11"
+extraction_model: "claude-opus-4-8"
+extraction_version: "v3"
 
 paper_type: "empirical-quantitative"
-keywords: ["diversity incentives", "leadership aspirations", "women in leadership", "signaling theory", "identity threat", "gender diversity goals", "managerial support", "costly signals", "field experiment"]
-theory: ["signaling theory", "identity threat theory", "social role theory"]
-topics: ["diversity-equity-inclusion", "gender-in-organizations", "inclusive-leadership", "dei-initiatives"]
+keywords: ["diversity incentives", "leadership aspirations", "gender diversity", "costly signaling", "expected managerial support", "identity threat"]
+theory: ["economic signaling theory (Spence, 1973; Connelly et al., 2011)", "identity threat / stereotype threat (Branscombe et al., 1999; Steele et al., 2002)", "social role theory (Eagly & Karau, 2002)"]
+topics: ["gender-in-organizations", "dei-initiatives", "signaling-theory"]
 unit_of_analysis: "individual"
 level_of_theory: "micro"
 dependent_variable_family: "social"
-methods: "Preregistered field experiment (Study 1) with female employees at a global telecommunications and engineering firm, randomly assigning employees (and their managers) to a control, diversity-goal-alone, or diversity-goal-and-incentives condition embedded in annual performance-review emails; outcome was a binary self-reported willingness to manage others, analyzed with linear-probability/OLS regressions (intention-to-treat, with robustness checks). Three preregistered online experiments (Studies 2, 3A, 3B) on Prolific and MTurk using incentive-compatible and Likert-scale leadership-aspiration measures, analyzed with t-tests, regression, and mediation/moderation tests of expected managerial support as the proposed mechanism."
+methods: "Four preregistered experiments: a field experiment (Study 1) analyzed with OLS (linear probability) regressions and cluster-robust standard errors clustered at the manager level; an incentive-compatible online experiment (Study 2) with OLS and robust standard errors; and two online vignette experiments testing mediation via 10,000-sample bootstrapped indirect effects (Study 3A) and moderation via a 2x2 between-subjects design (Study 3B); analyzed in R 4.2.2."
 sample:
-  industry: "Telecommunications and engineering (Study 1); online labor-market participants across occupations (Studies 2, 3A, 3B)"
-  country: "European and Latin American offices of a global firm (Study 1); United States (online studies)"
-  time_period: "Field experiment launched in December 2022 during the firm's annual performance-review cycle"
-  units: "Individual female employees (Study 1); individual women and men recruited online (Studies 2-3B)"
-  n: "Study 1 n=2,035 female employees; Studies 2, 3A, 3B total n=2,495; plus an additional OSF mediation study n=925"
+  industry: "Global telecommunications and engineering company (Study 1 field site); online-panel participants (Studies 2, 3A, 3B)"
+  country: "European and Latin American offices (Study 1 field site); online-panel samples not reported by country (Studies 2, 3A, 3B)"
+  time_period: "December 2022 annual performance-review cycle (Study 1); online-study timing not reported"
+  units: "Individual female employees (Study 1) and individual online participants (Studies 2, 3A, 3B; Study 2 also included men)"
+  n: "2,035 (Study 1 field experiment); 920 (Study 2); 578 (Study 3A); 997 (Study 3B); total online n = 2,495"
+
+evidence:
+  sample_n: "2,035 female employees working in the company's"
+  sample_country: "European and Latin American offices"
+  sample_industry: "engineering company seeking to increase"
+  sample_time_period: "In December 2022, employees received an email"
+  theories_overview: "An economic signaling theory (Spence, 1973)"
+  methods_overview: "(OLS) regression with standard errors clustered at"
+  keywords_source: "We examine how gender diversity incentives affect women's aspirations"
+  hypotheses_source: "Hypothesis 1. Diversity incentives will increase female"
+  measures_overview: "I want to manage/continue managing others"
+  findings_overview: "increases women's aspirations to lead by 11.3% relative to sharing a goal-free"
 ---
 
 # Diversity Incentives Can Increase Women’s Aspirations to Lead
@@ -40,27 +52,47 @@ sample:
 To boost diversity, organizations are increasingly using “diversity incentives,” or payouts for managers or executives dependent on progress toward a specific diversity goal. Diversity incentives can affect both actors—managers incentivized to meet the goal— and targets—marginalized group members who are the focus of the incentivized goal. Whereas the effects of incentives on actors are well documented, it is unclear how targets will be affected. We examine how gender diversity incentives affect women’s aspirations to lead. On one hand, diversity incentives may generate identity threat and concerns about backlash among women; on the other, they may be viewed as costly signals of organizational support for women’s leadership aspirations. A preregistered field experiment (n 5 2,035) shows that communicating the existence of organizational diversity incentives increases women’s aspirations to lead by 11.3% relative to sharing a goal-free diversity statement and by 11.7% relative to communicating diversity goals alone. We replicate these findings across three preregistered experiments (total n 5 2,495) and provide evidence that diversity incentives increase women’s expectations of receiving sponsorship from their managers, thereby increasing their willingness to state leadership aspirations. Our findings contribute to our understanding of the drivers of female leadership aspirations.
 
 **Research Question**
-Will organizational gender diversity incentives increase or decrease female employees' leadership aspirations, and through what mechanism?
+Will gender diversity incentives — payouts to managers or executives conditional on progress toward a diversity goal — increase or decrease the leadership aspirations of the women they target? The paper asks how "targets" (women), not just incentivized "actors" (managers), respond when they learn an organization has tied executive or managerial pay to gender diversity goals.
+
+**Hypotheses / Propositions**
+H1. Diversity incentives will increase female employees' leadership aspirations relative to (a) diversity goals alone or (b) communicating diversity values with no mention of goals or incentives.
+H2. Diversity incentives will increase female employees' leadership aspirations via increased expectations of managerial support.
+H3. Diversity incentives will decrease female employees' leadership aspirations relative to (a) diversity goals alone or (b) communicating diversity values with no mention of goals or incentives.
+H4. Diversity incentives will decrease female employees' leadership aspirations via increased expectations of backlash and stigma.
+(H1/H3 and H2/H4 are competing positive-vs-negative predictions drawn, respectively, from an economic signaling account and the dominant identity-threat account.)
 
 **Mechanism Process**
-- IV(s): Communication of organizational gender diversity incentives (vs. diversity goal alone vs. goal-free diversity statement/control)
-- DV(s): Women's expressed leadership aspirations (willingness to manage others; willingness to apply for leadership roles / express interest in promotion)
-- Mediators: Women's expectations of managerial sponsorship/support for their advancement
-- Moderators: Baseline/historical managerial support for women; manager gender (field-experiment pattern)
+- IV(s): Experimental condition communicated to women — diversity values only (control) vs. diversity goals alone vs. diversity goals + incentives (the focal costly signal). Study 3B additionally manipulates the manager's historical support for women (low vs. high) in a 2x2 design.
+- DV(s): Women's leadership aspirations — Study 1 binary willingness to lead; Study 2 actual decision to apply for a leader role; Studies 3A/3B 7-point willingness to seek promotion.
+- Mediators: Expected managerial support / anticipated sponsorship (tested in Study 3A).
+- Moderators: Manager's historical support for women (Study 3B); manager gender (Study 1 preregistered heterogeneity analysis).
 
-Drawing on economic signaling theory, the authors argue that because diversity incentives are a literally costly organizational commitment, women interpret them as a credible signal that managers will support their advancement. This raises women's expectations of sponsorship, helping them clear the confidence threshold they require before being willing to state leadership aspirations, and thereby increases their willingness to express such aspirations. The effect is stronger when prior signals of managerial support are weak, consistent with the idea that costly positive signals are most informative in environments otherwise read as non-supportive.
+Drawing on an economic signaling perspective, the authors argue that because diversity incentives are literally costly, they act as a credible organizational signal that leaders will support women's advancement. This raises women's expectations that managers will sponsor them (e.g., nominate them as high-potential, assign visible projects), helping women cross a minimum confidence threshold for expressing leadership aspirations. This costly-signal mechanism competes with the dominant identity-threat account, in which incentives imply women cannot succeed on their own and thus trigger stigma, backlash concerns, and lowered aspirations. The four studies adjudicate between these accounts and locate the mediating role of expected support.
+
+**Data & Measures**
+- Study 1 (field experiment, n = 2,035 female employees at a global telecommunications and engineering firm): DV = binary self-evaluation item "I want to manage/continue managing others" (yes = 1/no = 0), embedded in the December 2022 annual performance review; OLS linear-probability regression with cluster-robust standard errors clustered at the manager level; preregistered controls (employee functional-area fixed effects, job stage, tenure, prior-year aspirations, manager gender/tenure/job stage); intention-to-treat (non-responses coded 0), with robustness dropping non-responses (n = 1,549) and coding them as 1.
+- Study 2 (incentive-compatible online experiment, n = 920 after preregistered comprehension-check exclusions; includes men): DV = actual decision to apply to be a "leader" in a Niederle & Vesterlund (2007)-style number-grid task with real bonus consequences; OLS with robust standard errors.
+- Study 3A (mediation vignette, n = 578 women): DV = 7-point willingness to seek a promotion; mediator = expected managerial support (three-item scale adapted from Ragins & McFarlin's 1990 mentor-roles scale, Cronbach's α = .91); 10,000-sample bootstrapped mediation plus Sobel test.
+- Study 3B (moderation vignette, n = 997 women): 2x2 between-subjects (diversity incentives yes/no × manager historical support low/high); DV = 7-point willingness to seek a promotion; preregistered two-sample t tests and an OLS interaction model.
+Randomized assignment supports causal interpretation of the treatment effects (the paper flags that manager gender, being non-randomized, cannot be interpreted causally).
+
+**Key Findings**
+- H1 supported across studies (positive effect of incentives). Study 1: women in the goal + incentives condition were 4.9 percentage points more likely to want to lead than control (regression-estimated +11.3%; 95% CI [0.006, 0.091], p = .025) and 4.8 pp more likely than the goal-alone condition (+11.7%; p = .025); the diversity goal alone did not differ from control (estimated change = 0.001, p = .970). Study 2: women's leadership-application rates were significantly higher in the goal + incentives condition (b = .137, SE = .058, p = .018; +13.7% vs. control, +13.3% vs. goal alone), whereas men showed no significant increase (directionally lower, b = −.099, p = .075); significant condition × gender interaction (b = .236, SE = .080, p = .003). Study 3A: incentives raised willingness to seek promotion (M = 6.031 vs. 5.678, t(576) = 3.745, p < .001).
+- H2 supported. Study 3A: incentives increased expected managerial support (M = 5.435 vs. 4.862, t(575) = 6.788, p < .001); the bootstrapped indirect effect excluded zero (95% CI [0.191, 0.390]; Sobel b = 0.279, p < .001), with expected support accounting for an estimated 79.1% of the total effect. Study 3B: incentives significantly boosted aspirations when managers had low historical support (M = 5.937 vs. 5.412, t(500) = 4.513, p < .001) but not when support was already high (t(493) = 1.560, p = .119); significant incentives × historical-support interaction (b = .371, SE = .152, p = .015).
+- H3 not supported — no evidence that incentives decreased women's aspirations in the field or online. H4 was not empirically tested, because no support for H3 emerged.
+- Exploratory: the aspiration boost carried no measurable "quality cost" (no cross-condition difference in the manager-rated quality of women expressing aspirations); in Study 1, women under female managers were less willing to lead at baseline, and the goal-alone effect was stronger for them (goal-alone × female-manager interaction b = 0.111, p = .012), while the goal + incentives effect was less clearly dependent on manager gender.
 
 **Theoretical Contribution**
-The paper shifts consensus on identity-conscious diversity interventions by showing that, contrary to identity-threat and backlash-focused accounts, communicating diversity incentives can increase—not depress—women's leadership aspirations. It brings an economic signaling perspective (emphasizing signal cost) into the diversity-initiatives literature and contributes to work on gender and leadership by foregrounding women as strategic actors who update their aspirations based on supply-side-relevant organizational signals, and by illuminating anticipated managerial sponsorship as a key mediating mechanism.
+The paper integrates an economic, cost-based signaling perspective into research on the consequences of diversity initiatives, challenging the dominant identity-threat / stereotype-threat view that identity-conscious policies decrease women's aspirations. By showing that "targets" (women), not only incentivized "actors" (managers), respond to diversity incentives — and that a costly positive signal shifts women's beliefs that they will be supported — it bridges demand-side and supply-side explanations of the gender leadership gap and repositions women as strategic actors reading organizational signals. It also extends signaling theory by examining how receivers respond to a costly positive signal in an environment of otherwise negative signals, and when such signals matter most (more when a manager's historical support is low, i.e., when a concordant prior signal is absent).
 
 **Practical Implication**
-Organizations seeking to close gender gaps in leadership attainment can raise women's willingness to express leadership aspirations by instituting and communicating diversity incentives, rather than only trying to change women's self-assessments. The authors caution, however, that organizations should be prepared to follow through on diversity commitments and to have advancement structures in place, since insincere commitments or raising aspirations without real opportunities may harm women's belonging and trust.
+The authors suggest organizations can raise women's aspirations to lead by instituting and communicating gender diversity incentives, rather than trying to change women's self-assessments or beliefs about their own ability. They caution that organizations should be prepared to follow through on such commitments — insincere commitments to diversity can harm marginalized members' sense of belonging, and raising aspirations without real pathways may itself be harmful — so firms should ensure the structures to make good on commitments exist before adopting diversity incentives.
 
 **Limitations**
-The field experiment was conducted in a single, relatively male-dominated engineering firm with low baseline gender diversity, which may amplify the benefits of diversity-incentive signals and limit generalizability to other industries or more gender-balanced firms. The authors did not collect data on actual promotions, so they cannot assess long-run or behavioral outcomes, and they lacked field data on male employees' reactions. They also rely on short-run outcomes and a single operationalization of leadership aspirations.
+Study 1 examined a single, male-dominated engineering firm with relatively low baseline gender diversity, which may inflate the benefit of learning about incentives and limit generalization to other industries or less male-dominated firms; the cooperating field partner may also be anomalous. The field study could not directly test the hypothesized mechanism (the firm collected no expected-support items) and provided no data on actual promotions, leaving long-run and behavioral effects unknown. Study 2's high comprehension-check exclusion rate may select for attentive participants, and its low-contact design may mute identity-threat and backlash concerns. Only short-run effects were studied, H4 (backlash/stigma) was never empirically tested, and manager gender was not randomly assigned, precluding causal claims about manager-gender effects.
 
 **Future Research**
-Future work should examine heterogeneity across field settings to identify when diversity-incentive effects generalize, study long-run and separating-equilibrium dynamics including whether organizations follow through on commitments, test effects on majority-group (male) employees in the field, and explore demand-side consequences such as whether diversity incentives eventually shift managers' evaluations and promotion decisions. Researchers should also probe when diversity goals alone function as costly signals and how manager gender conditions women's responses to diversity initiatives.
+The authors call for field research on heterogeneity that would predict when and whether the effects generalize to other industries and less male-dominated firms; on when diversity goals alone act as effective costly signals (depending on goal ambition, advertising, audience, norms, and organizational history); on how majority-group members (men) respond in the field to incentives targeting minorities; on the demand-side impact of incentives (managers' evaluations and actual promotions) and their longer-term effects; on the "separating equilibrium" dynamics of whether firms adopt incentives without intending to follow through, muddying the signal; and on how manager gender shapes women's leadership aspirations.
 
 **APA 7th Citation**
-Kirgios, E. L., & Chang, E. H. (2025). Diversity incentives can increase women’s aspirations to lead. *Academy of Management Journal*, 68(6), 1328-1354. https://doi.org/10.5465/amj.2024.0691
+Kirgios, E. L., & Chang, E. H. (2025). Diversity incentives can increase women's aspirations to lead. *Academy of Management Journal, 68*(6), 1328–1354. https://doi.org/10.5465/amj.2024.0691

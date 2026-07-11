@@ -13,35 +13,18 @@ pages: "1-5"
 source: "AMJ/vol-69-no-1"
 pdf_path: "library/AMJ/vol-69-no-1/pdfs/Roberson 2026 Stewardship at Scale A New Editorial Term at AMJ.pdf"
 text_path: "library/AMJ/vol-69-no-1/text/Roberson 2026 Stewardship at Scale A New Editorial Term at AMJ.txt"
-ingested_at: "2026-04-14"
-extraction_model: "claude-opus-4-6"
-extraction_version: "v1"
+ingested_at: "2026-07-11"
+extraction_model: "claude-opus-4-8"
+extraction_version: "v3"
 
 paper_type: "editorial"
-keywords:
-  - "editorial stewardship"
-  - "contributive justice"
-  - "inclusion"
-  - "developmental reviewing"
-  - "scale and complexity"
-  - "editorial infrastructure"
-  - "peer review"
-  - "reviewer development"
-  - "knowledge translation"
-  - "generative AI in scholarly publishing"
-theory:
-  - "stewardship theory"
-  - "contributive justice"
-  - "organizational justice"
-topics:
-  - "methods-theory"
-  - "management-education"
-  - "philosophy-of-science"
-  - "dei-initiatives"
-unit_of_analysis: "organization"
-level_of_theory: "meso"
+keywords: ["editorial stewardship", "contributive justice", "inclusion", "developmental reviewing"]
+theory: ["contributive justice", "organizational justice"]
+topics: ["inclusive-leadership", "dei-initiatives"]
+unit_of_analysis: "na"
+level_of_theory: "na"
 dependent_variable_family: "na"
-methods: "Editorial (From the Editor); reflective and programmatic argument that synthesizes prior AMJ editorials and articulates an agenda for the 24th editorial term"
+methods: "Editorial essay ('From the Editor'); first-person statement of editorial vision, no empirical data or analysis"
 sample:
   industry: "Not reported in paper"
   country: "Not reported in paper"
@@ -53,30 +36,34 @@ sample:
 # Stewardship at Scale: A New Editorial Term at AMJ
 
 **Abstract**
-FROM THE EDITOR STEWARDSHIP AT SCALE: A NEW EDITORIAL TERM AT AMJ
+Not reported in paper
 
 **Research Question**
+The editorial's guiding question is how AMJ can sustain its commitments to intellectual pluralism, developmental reviewing, and shared editorial stewardship as scale and expectations continue to rise. It asks how editorial models designed for a smaller, more bounded scholarly community must evolve to support the journal's mission under contemporary conditions of growth, complexity, and global participation.
+
+**Hypotheses / Propositions**
 Not reported in paper
 
 **Mechanism Process**
-- IV(s): Not reported in paper
-- DV(s): Not reported in paper
-- Mediators: Not reported in paper
-- Moderators: Not reported in paper
+Not reported in paper
 
-Roberson advances a normative, programmatic argument rather than a causal model. She contends that AMJ's very success — roughly 2,000 annual submissions, a 13.8 five-year impact factor, and a global author base — has intensified demands on editorial, reviewing, and developmental systems in ways that threaten the journal's core commitments to intellectual pluralism and developmental reviewing. Building on the "stewardship" orientations of prior editors Beyer, Tsui, and Rynes, she argues that sustaining excellence at scale requires editorial infrastructures intentionally oriented toward contributive justice and inclusion: systems that broaden meaningful participation in authorship, reviewing, and editorial roles while preserving the standards that define the journal. The mechanism is institutional rather than individual — values endure only to the extent that the systems enacting them can adapt.
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
-The editorial frames editorial leadership as "inclusive stewardship" and advances contributive justice and inclusion as central editorial principles for the 24th term, extending prior editors' stewardship orientation by explicitly foregrounding individuals' belonging within an institutional context and their access to meaningful opportunities to participate in and be recognized for core scholarly activities. It reframes AMJ not simply as a publication outlet but as a field-shaping developmental institution whose continued excellence depends on the intentional evolution of editorial systems — aligning developmental effort with scholarly value creation, investing in reviewer development as field-building work, and cultivating a more inclusive, globally connected pipeline of contributors.
+The editorial synthesizes the visions of prior AMJ editors (Beyer, Tsui, and Rynes) into a shared philosophy of editorial leadership as stewardship of a scholarly institution rather than a personal agenda—emphasizing continuity with purposeful evolution, developmental reviewing as a core value, and "big-tent" accessibility to diverse ideas and approaches. Building on this lineage, it advances contributive justice and inclusion as central editorial principles for the 24th term, foregrounding the extent to which individuals experience belonging within an institutional context and are afforded meaningful opportunities to participate and have their contributions recognized. It positions AMJ not simply as a publication outlet but as a field-shaping developmental institution whose editorial systems must intentionally evolve to enact enduring values as the journal grows.
 
 **Practical Implication**
-Authors, reviewers, and editors are called to approach submission, review, and editorial service as a collective enterprise. The 24th editorial team will streamline workflows, publish synthesized guidance from prior "From the Editors" essays to support manuscript readiness, run review development workshops and Community Accelerator outreach, expand knowledge-translation efforts (e.g., The Lit Review podcast; an "AMJ Behind the Scenes" feature), and ensure transparent, ethical use of generative AI consistent with AOM's AI policy. Success will be monitored through mixed-methods indicators — including topical and methodological diversity, review timeliness, and qualitative feedback on clarity, developmental value, and perceived fairness — treated as tools for responsible oversight rather than targets.
+For the AMJ editorial community, the term translates into concrete initiatives: streamlining editorial workflows and providing pre-submission guidance (including a resource synthesizing prior "From the Editors" articles on theory building, methods, and manuscript positioning), aligning developmental activities such as PDWs with different scholarly audiences and stages, and investing in reviewer development to broaden access to editorial participation. It also expands knowledge-translation and public-engagement efforts (for example, The Lit Review podcast and a new "AMJ Behind the Scenes" feature) and asks authors, reviewers, and editors to treat submission and review as a collective enterprise and to use generative AI transparently and ethically, consistent with AOM's AI policy.
 
 **Limitations**
 Not reported in paper
 
 **Future Research**
-Roberson sets a forward agenda for the 24th editorial term: developing pre-submission guidance that synthesizes accumulated wisdom from prior "From the Editors" essays; aligning developmental initiatives with AOM Divisions, Interest Groups, and PDWs; investing in reviewer development workshops and Community Accelerator outreach to broaden access to AMJ's editorial processes; and expanding knowledge-translation efforts such as The Lit Review podcast and an "AMJ Behind the Scenes" feature. She also calls for continued, transparent engagement with generative AI in authoring and reviewing, and for mixed-methods monitoring of whether editorial systems enact the journal's pluralistic and developmental commitments at scale.
+Not reported in paper
 
 **APA 7th Citation**
-Roberson, Q. (2026). Stewardship at scale: A new editorial term at AMJ. *Academy of Management Journal*, 69(1), 1-5. https://doi.org/10.5465/amj.2026.4001
+Roberson, Q. (2026). Stewardship at scale: A new editorial term at AMJ. *Academy of Management Journal*, 69(1), 1–5. https://doi.org/10.5465/amj.2026.4001

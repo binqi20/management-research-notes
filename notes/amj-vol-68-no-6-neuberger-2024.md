@@ -2,11 +2,11 @@
 id: amj-vol-68-no-6-neuberger-2024
 title: "Intermediated Legitimation: How Founders Build New Venture Legitimacy among Make-or-Break Audiences"
 authors:
-  - "Neuberger, Isabel"
-  - "Mattioli, Fabio"
-  - "Richards, Harriette"
-  - "Nyilasy, Greg"
-  - "Tracey, Paul"
+  - "Neuberger, I."
+  - "Mattioli, F."
+  - "Richards, H."
+  - "Nyilasy, G."
+  - "Tracey, P."
 year: 2025
 journal: "Academy of Management Journal"
 doi: "https://doi.org/10.5465/amj.2022.1258"
@@ -17,24 +17,40 @@ pages: "1235-1265"
 source: "AMJ/vol-68-no-6"
 pdf_path: "library/AMJ/vol-68-no-6/pdfs/Neuberger 2024 Intermediated Legitimation How Founders Build New Venture Legitimacy among Make-or-Break Audiences.pdf"
 text_path: "library/AMJ/vol-68-no-6/text/Neuberger 2024 Intermediated Legitimation How Founders Build New Venture Legitimacy among Make-or-Break Audiences.txt"
-ingested_at: "2026-04-14"
-extraction_model: "claude-opus-4-6"
-extraction_version: "v1"
+ingested_at: "2026-07-11"
+extraction_model: "claude-opus-4-8"
+extraction_version: "v3"
 
 paper_type: "empirical-qualitative"
-keywords: ["new venture legitimation", "make-or-break audiences", "startup accelerators", "venture work", "social-symbolic work", "prospective achievement emotions", "adaptive venture work", "relational venture work", "obedient path", "pragmatic path", "rebellious path", "founders"]
-theory: ["organizational legitimacy", "social-symbolic work", "symbolic interactionism", "theory of prospective achievement emotions", "entrepreneurial ecosystems"]
-topics: ["strategy-innovation", "organizational-behavior-hrm", "methods-theory"]
-unit_of_analysis: "firm"
-level_of_theory: "meso"
+keywords: ["new venture legitimation", "make-or-break audiences", "venture work", "social-symbolic work", "prospective achievement emotions", "startup accelerators"]
+theory: ["organizational legitimacy / legitimation of new ventures (Suchman, 1995; Deephouse & Suchman, 2008; Suddaby, Bitektine & Haack, 2017)", "social-symbolic work (Lawrence & Phillips, 2019)", "prospective achievement emotions (Pekrun et al., 2023)", "symbolic interactionism (Mead, 1934; Blumer, 1969; Berger & Luckmann, 1966)"]
+topics: ["new-venture-creation", "entrepreneurship", "emotions-at-work"]
+unit_of_analysis: "organization"
+level_of_theory: "cross-level"
 dependent_variable_family: "social"
-methods: "Six-month inductive, comparative, ethnographic case study of three startups in one Australian seed-funded accelerator ('Equilate'); data include 43 semi-structured real-time interviews (approx. 80 hours) with founders, accelerator mentors, staff, and other startup founders, 30 in-situ observations of mentoring sessions, pitching, and social events (approx. 60 hours), and approximately 335 archival items (newsletters, Twitter posts, blog posts, and media articles); grounded, comparative analysis following DiBenigno and Kellogg (2014) with inductive coding of founders' legitimacy concerns, emotional reactions, venture work, and legitimation outcomes, triangulated across interview, observational, and archival sources."
+methods: "Inductive, comparative, six-month ethnographic case study of three ventures in an Australian startup accelerator (Equilate). Data: 43 semi-structured real-time interviews (~80 hours), 30 workspace/event observations (~60 hours), and ~335 archival items. Analysis: grounded, comparative ethnographic coding (constant comparison; abductive theming of the accelerator environment, founder legitimacy concerns, adaptive/relational venture work, and prospective achievement emotions), with member-checking follow-up interviews. Interpretive design; no causal identification claimed."
 sample:
-  industry: "Technology startups (logistics, entertainment, virtual reality) participating in a seed-funded startup accelerator"
+  industry: "Early-stage technology startups in a startup accelerator (logistics platform, entertainment-ticketing platform, and virtual-reality ventures)"
   country: "Australia"
-  time_period: "October 2019 to approximately mid-2020 (six-month program and shortly thereafter)"
-  units: "Three focal startups (LogiPedia, Flix, ImmerseVR) and their founders in the 2019-2020 cohort of the Equilate accelerator, plus accelerator mentors/staff and other cohort founders"
-  n: "3 focal ventures; 43 interviews; 30 observations; 335 archival items"
+  time_period: "Six-month accelerator cohort beginning October 2019 into 2020 (pre-COVID-19 lockdown); archival data 2018-2020"
+  units: "New ventures (startups) and their founders"
+  n: "3 focal ventures (LogiPedia, Flix, ImmerseVR); 43 interviews, 30 observations, ~335 archival items"
+
+# Mandatory evidence anchors (v3 — Layer 1 faithfulness audit).
+# Each value is a <=25-word verbatim quote from the PDF text, or the literal
+# string "Not reported in paper" (case-sensitive). See the Evidence anchors
+# section above for the full schema.
+evidence:
+  sample_n: "study of three ventures that were part of the 2019"
+  sample_country: "Equilate is one of Australia’s first accelerators with"
+  sample_industry: "startup accelerator (see Appendix 1 in Additional"
+  sample_time_period: "Observation took place over six months (from the"
+  theories_overview: "as a form of social-symbolic work"
+  methods_overview: "relied on a comparative and grounded"
+  keywords_source: "conceptualizing “venture work” as a distinct"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "In coding for emotions, we paid attention to both"
+  findings_overview: "jointly shaped by the expectations of the audience, the emotional experiences of founders"
 ---
 
 # Intermediated Legitimation: How Founders Build New Venture Legitimacy among Make-or-Break Audiences
@@ -43,29 +59,40 @@ sample:
 Many new ventures enter relationships with intermediaries, thereby ceding control to an organization that becomes a make-or-break audience for them. These settings foster intense experiences, suggesting that participating founders are likely to face a distinct set of challenges as they seek to build their venture’s legitimacy. Yet we lack a systematic analysis of new venture legitimation processes in the context of this critical audience type. To build new understanding of these important dynamics, we conducted an ethnographic study of three ventures in an Australian accelerator. Our study reveals three distinct legitimation pathways that ventures may follow when seeking legitimacy from a make-or-break audience—the obedient, pragmatic, and rebellious paths. We find that these pathways are jointly shaped by the expectations of the audience, the emotional experiences of founders, and founders’ reactions to these emotions in the context of perceived venture performance. We contribute to organizational scholarship by identifying a novel set of new venture legitimation pathways that incorporate emotion, conceptualizing “venture work” as a distinct type of social-symbolic work designed to legitimate startups and shedding new light on the role of new venture support organizations in entrepreneurial ecosystems.
 
 **Research Question**
-How do founders seek to build legitimacy for their ventures among make-or-break audiences—resource-holding audiences such as startup accelerators that expect a say in the strategic direction of the venture?
+How do founders seek to build legitimacy for their ventures among make-or-break audiences—resource-holding audiences (such as startup accelerators) that hold critical resources and expect a say in the venture's strategic direction?
+
+**Hypotheses / Propositions**
+Not reported in paper
 
 **Mechanism Process**
-- Make-or-break audience environment: the accelerator imposes expedited achievement pressures (valorizing scale, intense competitive culture) and standardized evaluation metrics (reporting requirements, "investor mindset"), producing founder legitimacy concerns.
-- Shared triggering emotion: frustration with Equilate's requirements, experienced by all founders across the three ventures.
-- Adaptive venture work (three types): Type 1 accommodation (acquiescing to accelerator demands), Type 2 selective adherence (complying with demands deemed enhancing, rejecting those deemed undermining), Type 3 assertive resistance (openly dismissing demands and repositioning the venture to founders' own understanding).
-- Dominant prospective achievement emotions: hopelessness (following accommodation and perceived poor performance), assurance (following selective adherence and perceived progress), anticipatory joy (following assertive resistance and perceived success).
-- Relational venture work (three types): Type A symbolic distancing (disassociating the venture from the accelerator's symbolic system), Type B symbolic embedding (leveraging affiliation with the accelerator to build outside relationships), Type C symbolic reuniting (repositioning as compliant after initial rejection).
-- Three legitimation pathways: obedient path (accommodation → hopelessness → symbolic distancing → negative evaluation); pragmatic path (selective adherence → assurance → symbolic embedding → positive evaluation); rebellious path (assertive resistance → anticipatory joy → symbolic reuniting → positive evaluation).
+- Make-or-break audience environment: (1) expedited achievement pressures (valorizing scale, intense/competitive climate) and (2) new evaluation metrics (standardized reporting designed to instill an "investor mindset").
+- Founder legitimacy concerns and emotional reaction: shared frustration at conforming to accelerator demands while running the day-to-day business.
+- Adaptive venture work (positioning toward the accelerator's demands): Type 1 Accommodation, Type 2 Selective adherence, Type 3 Assertive resistance.
+- Dominant prospective achievement emotions (Pekrun et al., 2023): Hopelessness, Assurance, Anticipatory joy.
+- Perceived venture performance: negative (accommodation path) vs. positive (selective-adherence and assertive-resistance paths).
+- Relational venture work (positioning as the venture exits and builds ties to other audiences): Type A Symbolic distancing, Type B Symbolic embedding, Type C Symbolic reuniting.
+- Three legitimation pathways: obedient, pragmatic, rebellious.
+- Legitimacy outcomes: make-or-break audience approval and celebration vs. disapproval and abandonment.
 
-The process unfolds as founders encounter an evaluative environment that generates legitimacy concerns and shared frustration, then enact different types of adaptive venture work to position their ventures vis-a-vis Equilate's demands. These positionings elicit distinct prospective achievement emotions tied to perceived venture performance, which in turn shape subsequent relational venture work through which founders distance from, embed in, or reunite with the audience's symbolic system. Counterintuitively, obedient accommodation spirals toward negative legitimacy evaluation, while selective adherence and assertive resistance more often yield positive evaluations from the make-or-break audience.
+Founder legitimacy concerns arising from the accelerator's expedited achievement pressures and new metrics trigger frustration, which prompts adaptive "venture work" that varies in its conformity to the audience. Each form of adaptive work is accompanied by a distinct prospective achievement emotion that, together with founders' evolving perceptions of venture performance, drives subsequent relational venture work as the venture exits and repositions itself toward the accelerator and other audiences. "Venture work" is theorized as social-symbolic work directed at legitimating the venture (the social-symbolic object). The obedient path (accommodation → hopelessness → symbolic distancing), the pragmatic path (selective adherence → assurance → symbolic embedding), and the rebellious path (assertive resistance → anticipatory joy → symbolic reuniting) thus jointly emerge from audience expectations, founders' emotions, and perceived performance.
+
+**Data & Measures**
+Qualitative ethnographic corpus triangulated across three data types (Table 1): 43 semi-structured "real-time" interviews (~80 hours; 30 with the focal founders), 30 observations of mentoring/pitching sessions and social events (~60 hours), and ~335 archival items (media articles, newsletters, and social-media posts by the accelerator). Constructs were built inductively through comparative, grounded ethnographic coding (DiBenigno & Kellogg, 2014; Glaser & Strauss, 1967): the team first coded the accelerator environment ("expedited achievement pressures," "new evaluation metrics") and resulting "founder legitimacy concerns," then coded founders' affective displays—attending to explicit and implicit emotion cues and emotion-laden language—interpreting them through Pekrun et al.'s (2023) "prospective achievement emotions." Adaptive and relational venture-work types were categorized by contrasting the three cases, and constructs/pathways were member-checked in follow-up interviews. Design is interpretive; no causal identification is claimed.
+
+**Key Findings**
+The three ventures followed three divergent, emotionally shaped legitimation pathways with different outcomes. ImmerseVR (obedient path: accommodation → hopelessness → symbolic distancing) received a negative legitimacy evaluation—Equilate withdrew support and it did not secure the AU$150,000 follow-on funding. LogiPedia (pragmatic path: selective adherence → assurance → symbolic embedding) and Flix (rebellious path: assertive resistance → anticipatory joy → symbolic reuniting) both received positive legitimacy evaluations and secured the AU$150,000 follow-on funding. The central, counterintuitive finding is that initial accommodation of audience demands could backfire and produce a negative evaluation, whereas founders who selectively adhered to or assertively resisted those demands (more agentic venture work) were, paradoxically, more likely to be evaluated positively. The pathways are jointly shaped by audience expectations, founders' prospective achievement emotions, and perceived venture performance; the pairing of negative-then-positive emotions functions as a "moral battery" driving founders' relational (re)alignment with the accelerator.
 
 **Theoretical Contribution**
-The paper theorizes three novel new venture legitimation pathways—obedient, pragmatic, and rebellious—rooted in varying degrees of compliance and resistance, and foregrounds emotions (especially prospective achievement emotions) as central to how these paths unfold, challenging prevailing cognitive-rational accounts of legitimation. It conceptualizes "venture work" as a distinct category of social-symbolic work that spans the self work/organization work divide of Lawrence and Phillips (2019), because the venture is both an organization-in-the-making and inseparable from its founders. It also reframes entrepreneurial ecosystem support organizations: value is created through dialogic interaction rather than unidirectional "coachability," shifting attention from founder deficiencies to the relational and emotional dynamics of intermediated legitimation.
+The paper theorizes three distinct new venture legitimation pathways (obedient, pragmatic, rebellious) rooted in varying degrees of compliance and resistance, and foregrounds emotion—specifically prospective achievement emotions—in legitimation, countering accounts that cast new venture legitimation as a purely rational, strategic endeavor. It conceptualizes "venture work" as a distinct category of social-symbolic work, problematizing the self-work/organization-work distinction (Lawrence & Phillips, 2019) by showing that legitimating a nascent venture spans both. It also reframes new venture support in entrepreneurial ecosystems, locating value in the interactive dynamics between founders and support organizations rather than in founders' "coachability."
 
 **Practical Implication**
-Accelerator participation can be emotionally corrosive for founders, and obedient accommodation of mentor demands may backfire rather than secure approval; founders benefit from questioning advice and maintaining conviction in their own understanding of the venture. For accelerator and other ecosystem support organizations, feedback should be a two-way dialogue, standardized performance metrics should be applied with care, and programs should actively monitor founder wellbeing—providing safe spaces, mental-health retreats, and resilience support to address the emotional strain of continuous prospective evaluation.
+For new venture support organizations (accelerators, incubators, and similar intermediaries), the analysis suggests value is created through robust two-way dialogue with founders rather than one-way transfer of "expert" advice, and that pressing founders toward obedient accommodation can be counterproductive. Because the prospect of evaluation by a resource-holding audience—and standardized performance metrics—can foster acute anxiety, support organizations may need to monitor participants' psychological well-being and emotional resilience (e.g., safe spaces to discuss exhaustion and anxiety, such as mental-health retreats), supporting founders' well-being alongside providing knowledge and capital. For founders, the study implies they benefit from proactively questioning mentors' demands and pushing back where advice does not align with their convictions.
 
 **Limitations**
-The study examines only one accelerator in Australia and three focal ventures, so generalization to other ecosystems (e.g., more mature Silicon Valley programs or emerging Latin American ones) is uncertain. The focal accelerator was new and studying its first cohort, meaning some dynamics may reflect Equilate's own legitimacy-seeking rather than typical accelerator behavior. The three theorized pathways and emotion categories are unlikely to exhaust the space of possible founder responses and emotional experiences.
+The authors note their setting—startup accelerators—is one where emotions are likely especially intense, so aspects of founders' experiences may differ in other settings. The study takes place in a single accelerator in Australia, so the extent to which findings transfer to accelerators in more or less mature ecosystems (e.g., Silicon Valley, Latin America) is unclear. The focal accelerator was new and studied in its first cohort, so some observed dynamics may be linked to Equilate's own novelty. Finally, the three conceptualized pathways were generated from three ventures seeking approval from a single intermediary; other emotional responses and legitimation pathways are likely.
 
 **Future Research**
-Researchers should examine the role of emotions in new venture legitimation outside accelerators—in incubators, science parks, venture capital relationships, and other make-or-break settings—and across diverse ecosystems with different resource endowments. Further work could study more ventures at different stages to uncover additional legitimation pathways and emotional responses, and investigate how the legitimacy of the accelerator itself shapes the legitimacy concerns of participating ventures.
+The authors call for research on the role of emotions in new venture legitimation outside the confines of accelerators, and for closer study of how the legitimacy of accelerators themselves shapes the legitimacy concerns of participating ventures. They suggest studying more ventures at different points in their journeys to reveal additional legitimation paths, and identifying further new venture legitimation pathways among make-or-break audiences and the role of founders' affective experiences in how these paths unfold.
 
 **APA 7th Citation**
-Neuberger, I., Mattioli, F., Richards, H., Nyilasy, G., & Tracey, P. (2025). Intermediated legitimation: How founders build new venture legitimacy among make-or-break audiences. *Academy of Management Journal*, 68(6), 1235-1265. https://doi.org/10.5465/amj.2022.1258
+Neuberger, I., Mattioli, F., Richards, H., Nyilasy, G., & Tracey, P. (2025). Intermediated legitimation: How founders build new venture legitimacy among make-or-break audiences. *Academy of Management Journal, 68*(6), 1235–1265. https://doi.org/10.5465/amj.2022.1258

@@ -549,6 +549,19 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.34.0 v3 backfill batch 01 (2026-07-11, 1,167 notes):**
+  Upgrades the two most recent AMJ issues to the v3 schema — **AMJ volume 69,
+  issue 1 and volume 68, issue 6, 17 notes total** (16 legacy v1 notes fully
+  re-extracted, 1 v2 note augmented in place). This adds Hypotheses /
+  Propositions, Data & Measures, and Key Findings to every note in both issues;
+  the **record total is unchanged at 1,167** (a backfill adds no papers). Each
+  touched note passed a fresh full independent 9-field rubric-v2 audit:
+  **153 / 153 prose-field verdicts `SUPPORTED`**, 0 `PARTIAL`, 0 `UNSUPPORTED`,
+  0 `CONTRADICTED`, after three evidence-based repairs (Peng and Lee
+  key-findings over-generalizations, and the Mahringer note's practical
+  implication narrowed to the paper's own scope). The version-tier census
+  shifts accordingly: 72 v1, 1,039 v2, 56 v3.
+
 - **v0.33.0 sweep (2026-07-11, 1,167 notes):**
   Adds **Academy of Management Journal volume 57, issue 3** — **13
   peer-reviewed papers** produced under extraction v3 and independently
@@ -647,8 +660,8 @@ This main-branch snapshot contains **1,167 curated notes**:
 | book-review            |     6 |
 | **Total**              | **1,167** |
 
-All notes have passed the semantic audit. The corpus contains 88 legacy v1
-notes, 1,040 v2 notes, and 39 v3 notes; v2/v3 notes carry an `evidence:` anchor
+All notes have passed the semantic audit. The corpus contains 72 legacy v1
+notes, 1,039 v2 notes, and 56 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -781,7 +794,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.33.0},
+  version      = {0.34.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

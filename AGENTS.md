@@ -141,11 +141,13 @@ audit**:
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
 **Current main-branch audit state (2026-07-11):
-1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The 13 new
-vol-57-no-3 notes audited at 117/117 prose-field verdicts SUPPORTED under
-rubric v2 after one evidence-based repair; the prior 1,154 notes are
-unchanged from the v0.32.0 snapshot. The corpus contains 88 legacy v1
-notes, 1,040 v2 notes, and 39 v3 notes with evidence anchors; new notes are
+1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
+batch 01 upgraded 17 notes (AMJ vol-69-no-1 + vol-68-no-6: 16 v1
+re-extractions + 1 v2 augmentation) to v3, each passing a fresh full 9-field
+rubric-v2 audit at 153/153 prose-field verdicts SUPPORTED after three
+evidence-based repairs; the batch left the record total unchanged. The corpus
+contains 72 legacy v1 notes, 1,039 v2 notes, and 56 v3 notes with evidence
+anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -179,7 +181,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.33.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.34.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
