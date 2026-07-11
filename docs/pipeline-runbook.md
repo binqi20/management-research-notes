@@ -228,13 +228,60 @@ currently parked (user decision, 2026-07-10).
 
 ---
 
+## Backfill batches (v2→v3 augmentation / v1 re-extraction)
+
+The 2026 v3 backfill (user decision 2026-07-12, superseding "going-forward
+only") upgrades the pre-v3 corpus **two issues per user-triggered batch**,
+newest issue first, so every note eventually carries Hypotheses /
+Propositions, Data & Measures, and Key Findings. Two tiers, two treatments:
+
+- **v2 notes → AUGMENT** per [`docs/augmentation-prompt.md`](augmentation-prompt.md):
+  an agent ADDS the three sections + three anchors + version bump + provenance
+  lines (`augmented_model`, `augmented_at`) and changes nothing else.
+  `extraction_model` keeps recording who wrote the six original fields.
+  **`tools/verify_augmentation.py`** (the diff-guard, Layer 0 of the backfill)
+  mechanically proves the do-not-touch guarantee against the git HEAD version
+  after every augmentation, before the audit.
+- **v1 notes → FULL RE-EXTRACTION** with the standard pipeline (they have no
+  anchors to preserve; augmenting them cannot reach v3's 10-anchor bar). Same
+  `paper_id`, note replaced, `ingest_batch.py --model <actual model>`
+  regenerates the bundle. Do NOT pass `--only-new` (it would skip papers that
+  already have notes).
+
+**Per-batch procedure:** preflight (notes + texts exist; tier census; clean
+tree — the diff-guard diffs against HEAD) → augmentation/re-extraction waves
+(≤5–6 agents, chunked two-phase mode) → per note: `validate_note.py` +
+`verify_augmentation.py` (augmented notes only) → **fresh full 9-field Layer 2
+audits** for every touched note (native machinery, rubric v2 — this is the
+uniform guarantee: every v3 note, native or augmented, passed the full audit)
+→ assemble ALL official audits before any repair → repairs + scoped re-audits
+→ gates → sequential rebuild → ledger → one release per batch.
+
+**Backfill-specific policies:**
+- **Scoped CrossRef is SKIPPED for augmented notes** — their bibliographic
+  frontmatter is diff-guard-proven unchanged, so re-checking CrossRef would be
+  ritual. Re-extracted v1 notes DO get the scoped check (their frontmatter is
+  regenerated from the manifest).
+- **Legacy-PARTIAL policy:** fresh audits re-examine old fields written before
+  current standards. The ≥3-same-cause stop rule applies at full strength to
+  the three NEW fields (drift there = augmentation-prompt problem). A repeated
+  same-cause pattern on OLD fields is expected legacy drift: repair the batch,
+  report the tally, continue — do not stop 33 times for a known pattern.
+- Batch order: newest-first (69-1+68-6, then 68-5+68-4, … down to 58-1+58-2);
+  the 27 v1 notes all sit in 69-1/68-6/68-5, so re-extraction clears in the
+  first two batches. NBS (272 notes: 61 v1 + 211 v2) is a separate later
+  decision.
+
 ## Note version tiers (important for auditing & querying)
 
 The corpus is intentionally heterogeneous; tools branch on `extraction_version`:
 
 - **v1** (legacy) — no evidence anchors; exempt from Layer 1. 6 audited prose fields.
 - **v2** — 7 evidence anchors; 8 body sections; 6 audited prose fields.
-- **v3** (current, going-forward) — 10 evidence anchors; 11 body sections; **9**
-  audited prose fields (adds Hypotheses / Propositions, Data & Measures, Key
-  Findings). New notes are v3; existing v1/v2 notes are **not** backfilled and
-  remain valid unchanged.
+- **v3** — 10 evidence anchors; 11 body sections; **9** audited prose fields
+  (adds Hypotheses / Propositions, Data & Measures, Key Findings). New notes
+  are extracted natively at v3; pre-v3 notes are being upgraded by the
+  backfill above. An **augmented** v3 note carries `augmented_model` /
+  `augmented_at` frontmatter: its six original prose fields were written by
+  `extraction_model`, its three v3 sections by `augmented_model`, and the
+  whole note passed a fresh full 9-field rubric-v2 audit at augmentation time.

@@ -147,7 +147,14 @@ rubric v2 after one evidence-based repair; the prior 1,154 notes are
 unchanged from the v0.32.0 snapshot. The corpus contains 88 legacy v1
 notes, 1,040 v2 notes, and 39 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
-findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). `PARTIAL`
+findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
+backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
+carry `augmented_model` / `augmented_at` frontmatter — the six original prose
+fields were written by `extraction_model`, the three v3 sections by
+`augmented_model`, and the whole note passed a fresh full 9-field rubric-v2
+audit at augmentation time (a mechanical diff-guard,
+`tools/verify_augmentation.py`, proves the original audited content was
+untouched). `PARTIAL`
 verdicts (stylistic compressions that don't rise to a faithfulness failure)
 are flagged for human review but do not block publication. The library has
 never produced a `CONTRADICTED` verdict — no claim in any note actively
