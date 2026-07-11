@@ -13,6 +13,10 @@ library/*/*/_duplicates/
 # must never leave a local machine.
 incoming/_bundles/
 
+# Per-paper Layer-2 audit prompts (tools/audit_note.py --prompt-only output).
+# These embed the full paper text verbatim, same as bundles. Keep local.
+incoming/_audit_prompts/
+
 # Validator-flagged notes — may contain reasons that reference local paths or
 # wrong-PDF debugging context. Keep local.
 incoming/_flagged/
