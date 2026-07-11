@@ -15,11 +15,11 @@ focuses on what's portable across agents.
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**1,154 curated notes** on peer-reviewed papers in management and business
+**1,167 curated notes** on peer-reviewed papers in management and business
 sustainability research. The current main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
-and 882 Academy of Management Journal pilot notes across 69 recent issues
-(vol. 57 no. 1-2, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
+and 895 Academy of Management Journal pilot notes across 70 recent issues
+(vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
 file with YAML frontmatter and a structured Markdown body. The repository
 is MIT licensed; individual PDFs are not redistributed.
 
@@ -140,12 +140,12 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-07-10):
-1,154 / 1,154 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The 13 new
-vol-57-no-2 notes audited at 117/117 prose-field verdicts SUPPORTED under
-rubric v2 after three evidence-based repairs; the prior 1,141 notes are
-unchanged from the v0.31.0 snapshot. The corpus contains 88 legacy v1
-notes, 1,040 v2 notes, and 26 v3 notes with evidence anchors; new notes are
+**Current main-branch audit state (2026-07-11):
+1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The 13 new
+vol-57-no-3 notes audited at 117/117 prose-field verdicts SUPPORTED under
+rubric v2 after one evidence-based repair; the prior 1,154 notes are
+unchanged from the v0.32.0 snapshot. The corpus contains 88 legacy v1
+notes, 1,040 v2 notes, and 39 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). `PARTIAL`
 verdicts (stylistic compressions that don't rise to a faithfulness failure)
@@ -172,7 +172,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.32.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.33.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
