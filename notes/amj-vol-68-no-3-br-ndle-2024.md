@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-68-no-3/pdfs/Brändle 2024 Crossing Technological Bou
 text_path: "library/AMJ/vol-68-no-3/text/Brändle 2024 Crossing Technological Boundaries Brokerage and the Emergence of Innovation Networks.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-mixed"
 keywords: ["brokerage", "tertius iungens", "tertius gaudens", "triadic closure", "multiplex technology closure", "innovation networks", "emergent technology", "incumbent technology", "monoclonal antibodies", "small molecules", "R&D alliances", "stochastic actor-oriented models"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "(i.e., tertius iungens), they might have competitive incentives to prevent such connections (i.e., tertius gaudens)."
   methods_overview: "stochastic actor-oriented modeling by examining the"
   keywords_source: "different technology networks (i.e., multiplex technology closure)."
+  hypotheses_source: "Hypothesis 2. Two firms are more likely to form an emerging technology alliance if they share a common"
+  measures_overview: "In our networks, ties point from the client"
+  findings_overview: "coefficient that is positive and significant (b 5 2.209,"
 ---
 
 # Crossing Technological Boundaries: Brokerage and the Emergence of Innovation Networks
@@ -52,6 +57,11 @@ Firms face elevated levels of uncertainty in collaborations focused on new techn
 **Research Question**
 Under what circumstances do brokers within and across technology networks facilitate or inhibit collaboration between their unconnected partners?
 
+**Hypotheses / Propositions**
+H1. Two firms are more likely to form an emerging (mAbs) technology alliance if they share a common third-party collaborator in the network of emerging technology alliances (within-network uniplex closure; positive).
+H2. Two firms are more likely to form an emerging technology alliance if they share a common third-party collaborator in the network of incumbent (small-molecule) technology alliances (cross-network multiplex closure; positive).
+H3. Two firms are less likely to form an emerging technology alliance if they share a common third-party collaborator in the network of incumbent technology alliances when only one of them has demonstrable expertise in the emergent technology (asymmetric boundary-spanning closure; negative — tertius gaudens dominates).
+
 **Mechanism Process**
 - IV(s): (1) Within-network uniplex closure — operationalized as a geometrically weighted dyad-wise shared partner term (GWDSP) capturing whether two firms share a common third-party collaborator within the emergent (mAbs) technology network; (2) Cross-network multiplex closure — a WW->X RSiena term capturing whether two firms share a common third party in the incumbent (small-molecule) technology network; (3) mAbs-expertise boundary-spanning closure — a "jumpWWClosure" term capturing the same multiplex configuration when the alter (R&D firm) has prior mAbs patents but the focal (client) firm does not.
 - DV(s): Directed tie formation between client and R&D firm in the emergent mAbs alliance network (primary), with simultaneous tie formation in the small-molecule network as a co-dependent network in the multivariate SAOM.
@@ -59,6 +69,24 @@ Under what circumstances do brokers within and across technology networks facili
 - Moderators: Asymmetry in firms' mAbs patent expertise (the boundary-spanning closure term itself functions as an interaction conditioning multiplex closure on knowledge asymmetry); controls for technology similarity, geographic distance, FDA stage 3 alliances, university ties, focal/alter patenting stocks and inventor counts.
 
 The mechanism rests on the tertius iungens vs. tertius gaudens tension. In uniplex emergent-technology triads, brokers' competitive incentives are weak (all parties already operate in the same technology network), so the dominant logic is uncertainty mitigation: brokers introduce their unconnected emergent-technology partners to one another, fostering triadic closure (H1 supported, b=0.153, p<.05). In multiplex triads — where the broker mediates incumbent-technology ties between two firms that may form an emergent-technology tie — brokers in symmetrically informed dyads still favor closure because cross-technology referrals reduce relational and technological uncertainty (H2 supported, b=2.209, p<.05). However, when one alter has unique mAbs expertise and the other does not, the broker occupies a competitively attractive boundary-spanning position; the tertius gaudens logic dominates and brokers actively block the closure that would expose their information advantage (H3 supported, b=-126.659, p<.001). Findings replicate in rare-events logistic regression on 1.18M dyad-years.
+
+**Data & Measures**
+Data source: R&D alliances in cancer therapy from BioSciDB, a peer-reviewed biopharmaceutical alliance database; directed ties run from the client firm (seeking technology) to the R&D firm (providing it). Monoclonal-antibody (emergent) deals were isolated where "monoclonals" appears in the database's technologies field and were independently verified by two life-science scientists; small-molecule (incumbent) deals were identified analogously. Firm attributes were drawn from USPTO patents (Cooperative Patent Classification codes), FDA approvals and Stage-3 trial alliances, and geocoded headquarters. Final sample: 453 firms, 2004-2020 (17 yearly waves).
+- DV: directed tie formation in the emergent mAbs alliance network, modeled jointly with small-molecule (incumbent) tie formation as a simultaneous dependent network in a multivariate stochastic actor-oriented model (SAOM) estimated in RSiena.
+- IV, H1 (Within-Network Uniplex Closure): a geometrically weighted dyad-wise shared-partner (GWDSP) term for a shared third party within the mAbs network.
+- IV, H2 (Cross-Network Multiplex Closure): a "WW->X" term for a shared third party in the incumbent small-molecule network.
+- IV, H3 (mAbs Expertise Boundary-Spanning Closure): a "jumpWWClosure" term equal to multiplex closure conditional on the alter (R&D firm) holding prior mAbs patents while the focal (client) firm does not.
+- Controls: indegree popularity, outdegree activity, alter/focal patents, knowledge quality (forward citations), number of inventors, FDA drug approvals, FDA Stage-3 alliances, university ties, mAbs patents, focal-alter similarity in mAbs, technology similarity (Euclidean distance between patent-class vectors) and its square, great-circle geographic distance, technology age, and small-molecule multiplexity.
+
+Identification is associational network-dynamics modeling, not a causal experiment: SAOMs relax the tie-independence assumption and sienaCompositionChange accommodates firm entry and exit; fit is assessed via sienaGOF (Mahalanobis distance) on indegree, outdegree, and triad-census distributions. Robustness uses rare-events logistic regression (King & Zeng, 2001) on a 1.18-million dyad-year panel. A qualitative supplement of 14 expert interviews (9 informing context and hypotheses; 5 post-results sensemaking) contextualizes the mechanisms.
+
+**Key Findings**
+All three hypotheses are supported in the primary emergent (mAbs) network and replicate in the rare-events logistic-regression robustness models:
+- H1 (within-network uniplex closure) supported: positive and significant in the mAbs network (b = 0.153, p < .05; SAOM Model 2) and replicated in the logit robustness test (b = 6.905, p < .001; Model 5). In the incumbent small-molecule network the same uniplex term was only marginally significant (p = .055).
+- H2 (cross-network multiplex closure) supported: positive and significant in the mAbs network (b = 2.209, p < .05; SAOM Model 3), replicated in the logit (b = 1.121, p < .01; Model 6). The analogous multiplex term did not converge in the small-molecule network (an alternative XW->X term was non-significant), so no multiplex-closure tendency was found for the incumbent network.
+- H3 (mAbs-expertise boundary-spanning closure) supported: negative and highly significant in the mAbs network (b = -126.659, p < .001; SAOM Model 3), replicated in the logit (b = -1.336, p < .001; Model 6) — when only the alter holds mAbs expertise, the broker blocks the emergent-technology tie (tertius gaudens). A parallel negative boundary-spanning effect also held for small-molecule tie formation (b = -14.957, p < .001).
+
+SAOM goodness-of-fit was acceptable (indegree p = .147, outdegree p = .086, triad census p = .158).
 
 **Theoretical Contribution**
 The paper introduces multiplex technology closure — transitive collaborations spanning incumbent and emergent technology networks — as a new triadic concept that resolves the tertius iungens vs. tertius gaudens tension by jointly considering tie multiplexity and nodal expertise asymmetry. It contributes to (1) collaborative innovation theory by showing that the incumbent technology network exerts a paramount influence on the structure of emergent technology networks; (2) network dynamics research by modeling cross-network influences with simultaneously dependent networks; and (3) brokerage and triadic-closure theory by extending Shipilov and Li's (2012) multiplexity framework to triadic structures defined by technology focus and by demonstrating that brokers actively prevent closure to defend unique access to emergent-technology expertise.

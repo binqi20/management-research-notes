@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-68-no-3/pdfs/Rauch 2025 Between War and Peace How Bor
 text_path: "library/AMJ/vol-68-no-3/text/Rauch 2025 Between War and Peace How Boredom Shapes the Enactment of Idealized Futures in Extreme Contexts.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-qualitative"
 keywords: ["existential boredom", "idealized futures", "extreme contexts", "UN peacekeeping", "moral values", "temporal orientation", "future-making", "diaries"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "literature on futures (Augustine et al.,"
   methods_overview: "axial coding, and (3) theoretical coding"
   keywords_source: "the experience of existential boredom"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "analysis unfolded in three stages: (1) open coding,"
+  findings_overview: "Most (41 of 63) peacekeepers embraced boredom as"
 ---
 
 # Between War and Peace: How Boredom Shapes the Enactment of Idealized Futures in Extreme Contexts
@@ -50,6 +55,9 @@ To investigate how workers enact idealized futures in extreme contexts, I analyz
 **Research Question**
 How do workers who are deeply motivated to enact idealized futures experience and respond to boredom at work? Specifically, how does boredom shape workers' enactment of idealized futures in extreme contexts?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: idealized future (peace) vs. mundane realities of peacekeeping work; existential boredom (lack of meaning) vs. situational/task boredom (lack of activity); morals vs. work practices as the locus of questioning; pragmatic vs. absolute idealized futures.
 - Triggering condition: misalignment between peacekeepers' moral aspirations to enact peace and the daily reality of patrolling, waiting, and "standing around," which surfaces existential boredom and prompts workers to question meaning and purpose.
@@ -59,6 +67,12 @@ How do workers who are deeply motivated to enact idealized futures experience an
 - Emergent outcomes: peacekeepers who embrace boredom enact a pragmatic idealized future, reframing misalignment and adopting new work practices (e.g., installing radio stations, veterinary camps, female outreach); peacekeepers who renounce boredom enact an absolute idealized future, intensifying misalignment and thwarting the adoption of new work practices.
 
 The process unfolds when highly motivated workers, drawn to peacekeeping by an idealized vision of peace, encounter the protracted, mundane fieldwork of UN missions. The resulting existential boredom is not simply a void but a generative condition: it forces workers to confront the gap between their moral commitments and their daily tasks. Some recalibrate morals and meaning to fit local realities, generating positive emotional energy and pride; others double down on absolute ideals, with morale eroding into frustration and disengagement.
+
+**Data & Measures**
+Data corpus: 63 unsolicited personal diaries (the primary source) kept voluntarily by UN peacekeeping officers, spanning 31 months to nine years and clustered analytically into five temporal phases (pre-deployment through post-deployment); 69 interviews (62 with diarists plus 7 with other UN personnel such as coordinators and headquarters staff), 68 audio-recorded and professionally transcribed and averaging 78 minutes (89.75 hours total); 397 hours of nonparticipant observation recorded in field notes, including a two-week UNMISS field visit to South Sudan in 2019 alongside pre- and post-deployment briefings and informal gatherings; and 1,896 internal and archival documents (guidelines, mission briefings, incident reports, presentations, peace treaties, and photographs). Nine handwritten diaries were transcribed electronically; all diaries were written in English and fully anonymized. Analysis was inductive and iterative, inspired by grounded theory (Glaser & Strauss, 2008; Strauss & Corbin, 1990; Locke, 2001) and conducted in NVivo across three coding stages — open coding staying close to peacekeepers' own language (e.g., "lack of impact," "standing around"), axial coding that clustered open codes into abstract categories and into two response groups (embracing vs. renouncing boredom), and theoretical coding that fit the categories into a process model while consulting the futures, boredom, and extreme-contexts literatures. Chronological timelines, charts, and cross-phase comparisons (Langley, 1999; Miles & Huberman, 1994) were used to compare individuals, and member checks were performed to strengthen trustworthiness. Interpretive, inductive design; no measurement scales, statistical estimation, or causal-identification strategy is claimed, and the author explicitly performed no quantitative analysis.
+
+**Key Findings**
+The study surfaces a process model (Figure 1) of how UN peacekeepers enact idealized futures amid mundane extreme-context work. Peacekeepers were drawn by an idealized future of peace but confronted a misalignment between that aspiration and the repetitive, low-impact reality of patrolling and "standing around," which generated existential boredom — a lack of meaning and questioning of purpose that the paper distinguishes from situational or task boredom (a lack of activity). Peacekeepers then diverged along two pathways. Most (41 of 63) embraced boredom and followed "boredom-induced adjustments," situationally adjusting their moral values, redefining the meaning of the idealized future, and anchoring their temporal orientation in the present reality; this reframing of misalignment enacted a pragmatic idealized future and facilitated the adoption of new, context-specific work practices (e.g., installing radio stations, running mobile justice courts and free veterinary camps, and conducting female outreach), accompanied by pride and positive emotional energy. The remaining 21 of 63 renounced boredom and followed "boredom-induced adherence," clinging to their morals, maintaining the meaning of the idealized future, and anchoring their temporal orientation in the distant idealized future; this intensified the misalignment, enacted an absolute idealized future, and thwarted the adoption of new work practices, accompanied by frustration, pessimism, and what one UN coordinator called the "slow death of idealism." The author reports suggestive, explicitly non-quantitative retention patterns (higher rates of signing up for additional missions and of continued law-enforcement employment among those who embraced boredom) while cautioning that the sample is not representative and that alternative explanations such as resilience or family obligations are possible; no causal claims are made. The central insight is that existential boredom is a double-edged sword that can catalyze — not merely undermine — meaning-making, and that workers' willingness to situationally adjust their moral values is directly connected to whether they anchor their temporal orientation in the present or in the distant future.
 
 **Theoretical Contribution**
 The paper introduces "idealized futures" — visions of how the world ought to be, grounded in strong moral beliefs — as a distinct construct in the futures literature, shifting attention from imagining or narrating futures to enacting them in mundane work. It shows how morality and meaning underpin future enactment and that workers' temporal orientation (present vs. distant future) is directly tied to their willingness to situationally adjust moral values. For workplace boredom in extreme contexts, the paper distinguishes existential boredom from situational/task boredom and reveals boredom as a double-edged sword that can catalyze, not just undermine, meaning-making and the adoption of new practices.

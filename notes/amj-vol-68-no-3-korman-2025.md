@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-68-no-3/pdfs/Korman 2025 How Political Context Affect
 text_path: "library/AMJ/vol-68-no-3/text/Korman 2025 How Political Context Affects Immigrant Newcomers’ Social Undermining Dynamics and Well-Being at Work.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-quantitative"
 keywords: ["immigrant newcomers", "social undermining", "far-right political support", "well-being", "emotional exhaustion", "job satisfaction", "relational demography", "gestalt characteristics theory", "social identity", "social mobility"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "extending the relational demography literature"
   methods_overview: "we estimated the trajectory"
   keywords_source: "perceived social undermining by coworkers"
+  hypotheses_source: "Hypothesis 1. Far-right political support in the work"
+  measures_overview: "the emotional exhaustion subscale of the Maslach"
+  findings_overview: "we find that immigrants perceive increasing (decreasing) social undermining by"
 ---
 
 # How Political Context Affects Immigrant Newcomers’ Social Undermining Dynamics and Well-Being at Work
@@ -53,6 +58,11 @@ Although the successful labor market integration of immigrants can promote their
 **Research Question**
 When and how does the macro-political context outside the organization — specifically regional far-right voter support — shape immigrant newcomers’ trajectories of perceived social undermining by coworkers over time, and how do these trajectories in turn affect their emotional exhaustion and job satisfaction?
 
+**Hypotheses / Propositions**
+H1. Far-right political support in the work region moderates the link between immigrant status and the perceived social-undermining trajectory, such that immigrants’ perceptions of social undermining by coworkers increase (decrease) over time in regions with higher (lower) far-right support.
+H2. Far-right support moderates the indirect relationship between immigrant status and emotional exhaustion (mediated by the perceived social-undermining trajectory); this indirect relationship is positive (negative) when far-right support is higher (lower).
+H3. Far-right support moderates the indirect relationship between immigrant status and job satisfaction (mediated by the perceived social-undermining trajectory); this indirect relationship is negative (positive) when far-right support is higher (lower).
+
 **Mechanism Process**
 - IV: Immigrant status (T0; non-immigrant = 0, immigrant = 1, operationalized via German citizenship).
 - Moderator: Regional far-right political support (2021 AfD vote share at the electoral-district level).
@@ -61,6 +71,21 @@ When and how does the macro-political context outside the organization — speci
 - Covariates: Days to complete survey, positive/negative affect, age, gender, monthly salary, prior organizational experience, immigrant proportion in work region, immigrant proportion in apprenticeship type.
 
 Drawing relational demography together with gestalt characteristics theory, the authors theorize that immigrants — a low-status outgroup — read their coworkers’ social undermining over time as a "directional arrow" indicating whether a social mobility strategy into the high-status native ingroup is viable. In high-AfD-vote regions, anti-immigrant sentiment seeps into workplaces, so undermining behaviors converge upward and immigrants’ sensitivity to subtle slights grows, producing increasing undermining trajectories that signal blocked status mobility and erode well-being. In low-AfD regions, immigrants are less threatening to natives, undermining decreases as acceptance grows, and a successful social mobility strategy protects well-being. Native newcomers’ trajectories are insensitive to regional far-right support because their high-status group membership reduces identity uncertainty and sensitivity to negative treatment.
+
+**Data & Measures**
+Online multilingual smartphone diary study of German dual-vocational apprentices (immigrant and native newcomers): an intake survey (T0), six biweekly surveys (T1–T6), and a follow-up survey (T7) across the first 13 apprenticeship weeks, matched by company address to 2021 German federal election results at the electoral-district level. The final moderated-mediation sample is 500 apprentices (79 immigrants, 421 natives) in 110 districts; social-undermining slopes were estimated from 2,127 biweekly observations within 776 apprentices across 128 districts.
+- Immigrant status (T0): binary (0 = German citizenship, 1 = no German citizenship).
+- Regional far-right support: AfD percentage vote share in the 2021 German federal election for each apprentice’s work region.
+- Perceived social undermining by coworkers (T1–T6): three adapted items from Kammeyer-Mueller et al. (2013), 5-point Likert (α = .71); its over-time trajectory (slope) estimated via empirical Bayes from a multilevel linear growth model.
+- Emotional exhaustion (T7): three items from the emotional exhaustion subscale of the Maslach Burnout Inventory, 5-point Likert (α = .83).
+- Job satisfaction (T7): single-item measure (“I am satisfied with my apprenticeship”), 5-point Likert.
+Hypotheses were tested with a single-level first-stage moderated-mediation model, with bootstrapped indexes of moderated mediation (Hayes 2015) and Johnson–Neyman probing of conditional effects. The design is observational and longitudinal: predictor, mediator, and outcomes are temporally separated (T0, T1–T6, T7) with no randomization, so the estimates are associational; robustness was probed with an attrition analysis, a restricted-sample replication, and konfound sensitivity analyses.
+
+**Key Findings**
+All three hypotheses were supported within the single sample.
+- H1 supported: the immigrant-status × regional-far-right-support interaction predicted the social-undermining slope (b = .001, SE = .000, p < .001). Immigrants in higher-far-right regions (+1 SD, 13.1% AfD share) reported increasing undermining over time (b = .004, SE = .002, p = .031), whereas immigrants in lower-far-right regions (-1 SD, 4.5%) reported decreasing undermining (b = -.005, SE = .002, p = .010). Native apprentices showed no significant change in higher- (b = -.001, p = .590) or lower-support (b = .000, p = .640) regions. Johnson–Neyman: immigrants’ trajectories are increasing at ≥ 13.0% and decreasing at ≤ 6.0% AfD voter share.
+- The social-undermining slope had a significant direct effect on both outcomes: positive on emotional exhaustion (b = 7.633, p = .032) and negative on job satisfaction (b = -11.031, p < .001).
+- H2 and H3 supported: the index of moderated mediation was significant for emotional exhaustion (b = .009, 95% CI [.001, .031]) and job satisfaction (b = -.013, 95% CI [-.037, -.001]). Conditional indirect effects of immigrant status ran through the undermining trajectory: at lower far-right support (5.0%), toward lower emotional exhaustion (b = -.039, CI [-.131, -.001]) and higher job satisfaction (b = .056, CI [.003, .158]); at higher far-right support (18.0%), toward higher emotional exhaustion (b = .080, CI [.002, .279]) and lower job satisfaction (b = -.116, CI [-.351, -.005]).
 
 **Theoretical Contribution**
 The study contributes to immigrant-workplace, relational-demography, and political-ideology-in-management literatures by (a) integrating gestalt characteristics theory with the social identity approach to give a dynamic, temporally structured account of dissimilar newcomers’ socialization, (b) introducing the macro-political context as a regional moderator that shapes within-organization status hierarchies and the success of immigrants’ social mobility strategies, and (c) demonstrating that political ideology operates not only as an individual-level construct but as a contextual force that defines group permeability and affects underrepresented employees’ well-being.

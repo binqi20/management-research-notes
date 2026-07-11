@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-68-no-2/pdfs/Rouse 2025 Making a Theoretical Contribu
 text_path: "library/AMJ/vol-68-no-2/text/Rouse 2025 Making a Theoretical Contribution with Qualitative Research.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "editorial"
 keywords: ["theoretical contribution", "qualitative research", "theorizing", "induction", "abduction", "retroduction", "process models", "tensions", "rhetoric", "artificial intelligence"]
@@ -46,6 +48,9 @@ FROM THE EDITORS MAKING A THEORETICAL CONTRIBUTION WITH QUALITATIVE RESEARCH
 **Research Question**
 How can qualitative researchers overcome the challenges of articulating a crisp, generalizable theoretical contribution — rather than just illuminating a fascinating context or surfacing empirical patterns — when submitting to AMJ?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: A theoretical contribution requires articulating new theoretical knowledge positioned in relation to existing theory; qualitative studies often fall short by privileging context, patterns, or visualization over explanation.
 - Six pathways:
@@ -57,6 +62,12 @@ How can qualitative researchers overcome the challenges of articulating a crisp,
   - Leverage the Moment — beyond emulating past work: adapt, extend, synthesize, or innovate prior theory for transformational contemporary contexts (AI, new data sources), using AI tools as "co-theorists" rather than substitutes for human interpretation.
 
 The editorial frames theorizing as an iterative, ongoing accomplishment in qualitative research, where contribution emerges from coupling rich empirical stories with theoretical stories that generalize beyond the studied setting through inference, attention to underlying tensions, and rigorous rhetorical craft.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial provides a meta-level typology of six pathways through which qualitative researchers can transcend common pitfalls (descriptive context, unexplained patterns, banal process maps, hyperbolic rhetoric, derivative theorizing) to make compelling theoretical contributions. It elevates retroduction alongside induction and abduction as a distinct inference mode, and reframes the process-versus-variance dichotomy as a productive combination through attention to tensions.

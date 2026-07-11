@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-68-no-2/pdfs/Knight 2024 Sensing the Room The Role of
 text_path: "library/AMJ/vol-68-no-2/text/Knight 2024 Sensing the Room The Role of Atmosphere in Collective Sensemaking.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-qualitative"
 keywords:
@@ -63,6 +65,9 @@ evidence:
   theories_overview: "Slaby theorized atmospheres as intrinsically"
   methods_overview: "We video recorded 12 workshops"
   keywords_source: "the role of atmosphere in collective sensemaking"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We conducted our analysis in four stages"
+  findings_overview: "dissonant moments accumulate and reach an atmospheric tipping point"
 ---
 
 # Sensing the Room: The Role of Atmosphere in Collective Sensemaking
@@ -73,6 +78,9 @@ Drawing on video recordings, interviews, and first-hand observations of a strate
 **Research Question**
 How is atmosphere implicated in processes of collective (immanent) sensemaking, and to what effect(s)? Specifically, how do bodily tonality and interaction in strategy-making workshops coproduce atmospheres that enable and constrain collective sensemaking styles, and how do these atmospheres shift over time?
 
+**Hypotheses / Propositions**
+Not reported in paper. This is an inductive, micro-ethnographic case study with no a priori hypotheses: the authors pursue an exploratory research question and inductively theorize atmosphere as a "possibility space" for collective sensemaking rather than testing predicted relationships.
+
 **Mechanism Process**
 - Key constructs: atmosphere (a "possibility space" of affective intensity in a situational encounter); bodily tonality (collective mood-component: facial, vocal, postural cues); interaction (active inter-corporeal dimension: bodily, verbal, gestural patterns between participants); sensemaking style (combination of tonality–interaction entanglement, language use, and interaction patterns).
 - Four dominant atmospheres / sensemaking styles: (1) relaxed–calm, respectful–affirmative atmosphere with a "consolidating" sensemaking style (clarifying interpretations through affirmative factual language); (2) pensive–serious, tentative–curious atmosphere with a "considering" style (searching tentatively through explorative language); (3) tense–sharp, argumentative–dismissive atmosphere with a "clashing" style (entrenching interpretations through oppositional language); (4) excited–buoyant, enthusiastic–affirmative atmosphere with a "creating" style (building cumulatively through "yes, and" language).
@@ -82,11 +90,25 @@ How is atmosphere implicated in processes of collective (immanent) sensemaking, 
 
 Immanent sensing of collective bodily tonality and interaction operates as an ongoing affective background that "solidifies" a sensemaking style and makes certain interpretations of a strategic issue more likely than others. Rather than affect being a discrete trigger or response, it is a continuously coproduced "possibility space" in which deliberate sensemaking unfolds. Style shifts only when accumulated dissonant moments cross an atmospheric tipping point, after which the entanglement of tonality and interaction reorganizes around a new dominant atmosphere and a new way of framing the issue.
 
+**Data & Measures**
+Inductive, micro-ethnographic single-case study of one strategic project ("Longreach") at an Australian electronic bank ("E-Bank"), drawing on real-time process data collected over an 18-month period (June 2016 to December 2017). Three primary data sources: (1) direct observations and first-hand affective impressions recorded in fieldnotes by the first author, who was physically present in the workshops; (2) video recordings of 12 strategy-making workshops (26 hours), replayed in real time and at half speed; and (3) post-workshop semi-structured interviews (eight serial rounds each with three E-Bank managers and two consultants, plus eight CEO interviews). Supporting corpus: 26 audio-recorded operational meetings (14 hours), 15 design meetings (10 hours), 244 prototype/Trello screenshots, 156 photographs, and 18 handouts.
+
+Constructs were inductively derived rather than pre-specified, and coded in four analytic stages: (1) open coding of the dominant atmosphere(s) in each workshop using multi-nominal labels, with an independent coauthor recoding the videos; (2) thick, second-by-second descriptions of collective "tonality" (facial, vocal, and postural mood indicators adapted from Bartel and Saavedra's 2000 work-group-mood scheme) and "interaction" (active inter-corporeal comportment), plus a description of the participants' broader practice world; (3) linking atmospheres to "sensemaking styles" (combining tonality-interaction entanglement, language use, and interaction patterns); and (4) recoding for "dissonant moments" to trace how styles were sustained or shifted. The design is interpretive and emic; the paper makes no causal-identification or quantitative-measurement claims.
+
+**Key Findings**
+- The study identifies four dominant atmospheres, each closely associated with a distinctive collective sensemaking style: relaxed–calm, respectful–affirmative → "consolidating"; pensive–serious, tentative–curious → "considering"; tense–sharp, argumentative–dismissive → "clashing"; and excited–buoyant, enthusiastic–affirmative → "creating." The prevailing atmosphere shapes not only how but also what sense is made (e.g., considering yields tentative solutions to an agreed problem, whereas clashing entrenches a forced choice between two mutually exclusive interpretations).
+- Atmosphere, co-constituted by bodily tonality and interaction, functions as an affective "possibility space" and background that enables and constrains collective sensemaking, making certain interpretations of an issue more likely than others.
+- Two process patterns recur: (1) a sensemaking style is maintained despite dissonant moments when the atmospheric turbulence is temporarily ignored (e.g., after a surprise deadline announcement the team strains to sustain a relaxed–calm atmosphere and talks itself into "it should be good"); and (2) atmosphere and its associated sensemaking style shift only once dissonant moments accumulate past an atmospheric tipping point.
+- These patterns held across the 12-workshop corpus (Figure 1; Table 5): most workshops exhibited all four dominant atmospheres, and atmosphere rarely shifted unless immediately preceded by a grouping of dissonant moments. Atmospheres and their styles tend to be "sticky," persisting even when the focal issue changes.
+- Practice-world elements — materiality (e.g., the lounge-like workspace), norms of professionalism, and teleoaffectivity (the CEO-imposed deadline) — channel and modulate these atmospheric dynamics.
+
+Findings are emergent and interpretive; the paper reports no hypothesis tests, effect sizes, or significance levels. The fine-grained vignettes are drawn from one paradigmatic workshop (workshop 11) and corroborated across the wider dataset.
+
 **Theoretical Contribution**
 The paper introduces atmosphere as a "possibility space" for collective sensemaking, conceptualizing it as the dynamic entanglement of bodily tonality and interaction that affords distinctive sensemaking styles shaping not only how but also what sense is made. This extends emotions research in sensemaking beyond individually felt corporeal experience and beyond the dualistic positive/negative-valence link to generative/integrative orientations, offering a more nuanced affective phenomenology of collective sensemaking. It contributes to strategy-as-practice by identifying "bodies-in-use" as a previously unrecognized strategy "tool of and for feeling," and extends atmosphere research by drawing attention to the transient affective qualities of materiality and the role of normativity and teleoaffectivity in coproducing atmosphere.
 
 **Practical Implication**
-Strategy-makers and meeting facilitators should attend not only to spatial design but to the moment-to-moment entanglement of bodily tonality and interaction — "sensing the room" — because the resulting atmosphere shapes which interpretations of a strategic issue become thinkable. Monitoring for dissonant moments (subtle shifts in posture, vocal inflection, facial expression, or speech content) offers a leading indicator of impending atmospheric — and therefore sensemaking — shifts. Leaders cannot fully "engineer" productive atmospheres through aesthetic design alone, but can cultivate practice-world norms (professionalism, teleoaffective commitment) that channel atmospheric dynamics toward more generative sensemaking styles.
+Strategy-makers and meeting facilitators should attend not only to spatial design but to the moment-to-moment entanglement of bodily tonality and interaction — "sensing the room" — because the resulting atmosphere shapes which interpretations of a strategic issue become thinkable. In the study's account, dissonant moments (subtle shifts in posture, vocal inflection, facial expression, or speech content) accumulate toward atmospheric tipping points that precede shifts in a group's sensemaking style. Atmospheres cannot be fully "engineered" through aesthetic (spatio-material) design alone; the paper shows that practice-world norms (professionalism, teleoaffective commitment) also shape whether atmospheric dynamics move toward more generative sensemaking styles.
 
 **Limitations**
 The study relies primarily on video data, which cannot capture all dimensions of affect that escape visible bodily display, and the first-author researcher's first-hand affective impressions are necessarily partial given limited time in the field compared to fully participatory ethnographies. The single-team, single-organization design of one Australian electronic bank limits generalizability and leaves open how atmospheric dynamics differ across industries, cultures, or non-strategy practice worlds. Authority and power dynamics that may shape who disproportionately influences collective tonality and interaction were not the focus of analysis.

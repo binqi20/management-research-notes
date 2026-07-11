@@ -549,6 +549,17 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.36.0 v3 backfill batch 03 (2026-07-11, 1,167 notes):**
+  Upgrades **AMJ volume 68, issue 3 and issue 2, 16 notes total** to the v3
+  schema — all v2 augmentations (the AMJ v1 re-extraction tier was cleared in
+  batch 02, so batches 03+ are pure augmentation). The **record total is
+  unchanged at 1,167**; the version-tier census shifts to 61 v1, 1,015 v2, 91
+  v3. Each touched note passed a fresh full independent 9-field rubric-v2
+  audit: **144 / 144 prose-field verdicts `SUPPORTED`**, 0 `PARTIAL`,
+  0 `UNSUPPORTED`, 0 `CONTRADICTED`, after two evidence-based scope repairs
+  (the Fitzsimons and Knight practical implications were narrowed to the
+  paper's own stated audience and claims).
+
 - **v0.35.0 v3 backfill batch 02 (2026-07-11, 1,167 notes):**
   Upgrades **AMJ volume 68, issue 5 and issue 4, 19 notes total** to the v3
   schema (11 legacy v1 notes fully re-extracted, 8 v2 notes augmented in
@@ -677,7 +688,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 1,031 v2 notes, and 75 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 1,015 v2 notes, and 91 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -810,7 +821,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.35.0},
+  version      = {0.36.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

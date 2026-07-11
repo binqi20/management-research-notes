@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-68-no-2/pdfs/Fewer 2024 CEO Political Partisanship an
 text_path: "library/AMJ/vol-68-no-2/text/Fewer 2024 CEO Political Partisanship and Corporate Misconduct.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-quantitative"
 keywords: ["CEO political partisanship", "corporate misconduct", "political ideology", "ideology-as-identity", "ideology-as-values", "moral foundations", "perspective taking", "rationalization", "upper echelons", "Fortune 500"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "ideology-as-identity as a key, understu"
   methods_overview: "we enlist a Poisson regression"
   keywords_source: "CEO political partisanship and corporate misconduct in a sample of Fortune 500 CEOs"
+  hypotheses_source: "Hypothesis 1. CEO political partisanship is positively"
+  measures_overview: "item index of political ideology, which captures the"
+  findings_overview: "We hypothesize and find robust evidence for a positive relationship between"
 ---
 
 # CEO Political Partisanship and Corporate Misconduct
@@ -51,6 +56,11 @@ Are firms led by liberal versus conservative CEOs more likely to engage in corpo
 **Research Question**
 Are firms led by politically partisan CEOs (strongly liberal or strongly conservative) more likely to engage in corporate misconduct than firms led by politically nonpartisan (moderate) CEOs, and does the explanatory power lie in the identity dimension of political ideology rather than its values dimension?
 
+**Hypotheses / Propositions**
+H1. CEO political partisanship is positively associated with corporate misconduct — firms run by partisan (strongly liberal or strongly conservative) CEOs are more likely to engage in misconduct than firms run by politically nonpartisan (moderately liberal or moderately conservative) CEOs.
+
+The study advances a single formal hypothesis, operationalized as a U-shaped effect of CEO political ideology on misconduct, with both ideological tails predicting more misconduct than the political center.
+
 **Mechanism Process**
 - IV(s): CEO political partisanship (squared deviation of Chin et al. 2013 FEC-donations ideology score from the political center); CEO political ideology (linear left-right value)
 - DV(s): Corporate misconduct (count of regulatory enforcement actions from the Good Jobs First Violations Tracker, with one-year and three-year lags)
@@ -58,6 +68,20 @@ Are firms led by politically partisan CEOs (strongly liberal or strongly conserv
 - Moderators / controls: CEO age, gender, narcissism (Chatterjee–Hambrick index), market value of stock, tenure, duality; firm cash, dividends, capital expenditures, debt ratio, market capitalization, net income, share-price performance; board size, board insiders; four-digit SIC industry and year fixed effects
 
 Drawing on the ideology-as-identity perspective, the authors argue that strong identification with a political group—not the content of liberal or conservative values—predisposes CEOs to rationalize corporate misconduct. Partisan CEOs (a) take the perspectives of out-group stakeholders less, narrowing concern for those harmed by wrongdoing, and (b) experience elevated moral foundations that grant them a sense of moral superiority, freeing them from a felt obligation to police firm conduct or framing transgressions as righteous retribution against "immoral" outsiders. The empirical analysis fails to detect a perspective-taking link to misconduct but supports the moral-foundations mechanism: partisan CEOs use more moral language in earnings calls, and elevated moral language is positively associated with misconduct.
+
+**Data & Measures**
+- DV — Corporate misconduct: annual count of all regulatory enforcement actions recorded against the firm in Good Jobs First's Violations Tracker (aggregating 400+ federal, state, and local agencies across competition, consumer-protection, employment, environmental, financial-reporting, government-contracting, and health-and-safety violations), modeled with one-year and three-year lag-leads.
+- IV — CEO political partisanship: the squared term of CEO political ideology (scores centered by subtracting 0.5), capturing deviation from the political center irrespective of left/right direction. CEO political ideology is the Chin et al. (2013) multi-item FEC-donations index (0 = highly conservative, 1 = highly liberal; Cronbach's alpha = .94), built from U.S. Federal Election Commission contribution records; CEOs matched via ExecuComp (Wharton WRDS).
+- Mechanism measures — text analysis of CEO speech in the Q&A portions of 19,715 quarterly earnings-call transcripts (~88% of calls, 2010-2018; Seeking Alpha and Motley Fool). Perspective taking = reverse-coded frequency of first-person singular pronouns; elevated moral foundations = inverse-document-frequency score on the 41-term Graham et al. (2009) moral foundations dictionary.
+- Controls (rationalization/opportunity/pressure): CEO age, gender, narcissism (Chatterjee-Hambrick four-indicator index), tenure, duality, log market value of stock; firm market capitalization, debt ratio, and logged cash, dividends, capital expenditures, and net income; year-over-year share-price performance; board size and board insiders; four-digit SIC industry and year fixed effects.
+- Estimation is associational — Poisson regressions of misconduct counts with standard errors clustered by firm — with difference-in-differences robustness around 498 within-firm CEO turnovers, including an exogenous subsample of CEO deaths and illness, to ease (not eliminate) omitted-variable concerns.
+
+**Key Findings**
+- H1 supported. The squared ideology term (partisanship) is positively and significantly related to misconduct: B = 2.571 (SE = 0.993, p = .010) at the one-year lag (Model 5) and B = 2.564 (SE = 1.122, p = .022) at the three-year lag (Model 6). Firms with a partisan CEO (ideology at the 10% tails) are about 47% more likely to engage in misconduct than firms with a nonpartisan CEO.
+- Political values do not explain misconduct: the linear CEO political ideology term is non-significant at both the one-year (B = -0.542, SE = 0.515, p = .292; Model 3) and three-year (B = -0.449, SE = 0.507, p = .376; Model 4) lags.
+- The U-shape holds at both tails: the slope is negative and significant at high conservative partisanship (5% left tail; B = -2.523, SE = 1.247, p = .043) and positive and significant at high liberal partisanship (5% right tail; B = 2.605, SE = 1.046, p = .013), with a turning point (-0.01) inside the data range.
+- Mechanisms diverge (reported per mechanism, not generalized): the perspective-taking mechanism is not supported — partisanship lowers perspective taking (B = -10.924, SE = 3.484, p = .002), but perspective taking is not significantly related to misconduct (B = -0.010, SE = 0.008, p = .230). The moral-foundations mechanism is supported (the authors term it "anecdotal support"): partisanship raises moral language (B = 2.044, SE = 0.673, p = .002) and elevated moral foundations are positively associated with misconduct (B = 0.162, SE = 0.053, p = .002; Model 6).
+- Robustness: difference-in-differences around CEO turnovers shows firms replacing nonpartisan with partisan CEOs commit more misconduct, and only at higher partisanship (e.g., 0.10 tails B = 0.478, p = .010; 0.05 tails B = 0.681, p = .009); the exogenous death/illness subsample is consistent at the 0.05 tails (t = 2.38, p = .019) but null at the 0.40 tails (t = 0.97, p = .337). Disaggregating the seven misconduct types reveals no significant left-right directional effect on any specific type.
 
 **Theoretical Contribution**
 The paper advances CEO-based theories of corporate misconduct by introducing political ideology as an antecedent and, more pointedly, by isolating the previously understudied identity dimension (partisanship) from the values dimension. It contributes to research on political ideology in organizations by showing that political identity—not liberal vs. conservative values—drives a non-political organizational outcome (regulatory wrongdoing), thereby integrating an "ideology-as-identity" lens into upper echelons research. It also contributes to the political-science/organization-studies nexus by demonstrating moral foundations as the cognitive bridge through which partisan identities translate into harmful firm behavior.

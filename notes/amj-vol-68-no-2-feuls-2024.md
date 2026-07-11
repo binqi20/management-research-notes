@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-68-no-2/pdfs/Feuls 2024 Putting Distant Futures into 
 text_path: "library/AMJ/vol-68-no-2/text/Feuls 2024 Putting Distant Futures into Action How Actors Sustain a Course of Action toward Distant-Future Goals through Path Enactment.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-qualitative"
 keywords: ["distant-future goals", "path enactment", "future making", "imagination", "realizability", "bracketing", "narrating", "calculating", "sustainability strategy", "net-zero", "climate change", "grand challenges"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "extends future-making theory beyond dualistic"
   methods_overview: "an in-depth qualitative study"
   keywords_source: "Advancing the concept of path enactment"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "By bundling similar activities, we aggregated these"
+  findings_overview: "engaged in an iterative three-phase process that we call path"
 ---
 
 # Putting Distant Futures into Action: How Actors Sustain a Course of Action toward Distant-Future Goals through Path Enactment
@@ -52,6 +57,9 @@ One of the most significant challenges of pursuing distant-future goals is susta
 **Research Question**
 How do actors develop a sustained course of action toward distant-future goals — that is, how can organizations balance imagination and realizability so that abstract distant futures (e.g., 2050 climate goals) are translated into ongoing strategic action through solutions that do not yet exist?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs: distant-future goals; existing vs. imagined solutions; paths (multiple interacting paths through time); path enactment as ongoing collective activity.
 - Three iterative phases: (1) Path imagining — actors generate solutions and connect them into tentative paths; (2) Path integration — emerging paths are bundled into configurations and aligned with organizational context; (3) Path stretching — selected path configurations are extended further toward the distant-future goal via intermediate steps.
@@ -60,6 +68,12 @@ How do actors develop a sustained course of action toward distant-future goals �
 - Emergent outcomes: a sustained yet flexible sustainability strategy in which imagined solutions become inscribed as "placeholders" on paths stretched toward 2050 goals.
 
 The process operates as "disciplined imagination": imagination expands the space of future paths during path imagining; path integration narrows that space by selecting realistic configurations aligned with organizational context; and path stretching combines imagination and discipline by extending paths through intermediate steps toward the distant goal. Bracketing forms a basis for narrating broader implications, which in turn enables calculating realizability — so that calculation is not merely numerical but a way of judging the plausibility of complex narratives of the future.
+
+**Data & Measures**
+Data corpus: an in-depth, real-time longitudinal single-case study at Arla Foods (the world's fourth-largest dairy company), following its sustainable packaging workstream as it built a packaging sustainability strategy in response to the March 2019 Green Ambition 2050 climate goals. Primary data: nonparticipatory observation of 31 online strategy meetings across 2020-2021 (37 hours of recordings, 675 transcribed pages), documented via field notes and photographs of PowerPoint presentations and Excel spreadsheets. Supplementary data: 16 semi-structured interviews with 10 informants over 2019-2022 (60-120 minutes each; 268 transcribed pages), four feedback sessions with top and senior managers (8 hours; 62 pages), and archival documents (in-house presentations and strategy documents, press releases, newsletters, and annual/CSR reports). Analysis combined process research (Langley, 1999) with inductive theory building (Gioia method) across four stages: (1) differentiating "existing" from "imagined" solutions; (2) coding activities discussion-by-discussion and bundling them into three mechanisms — bracketing, narrating, and calculating — with paths emerging as a central construct; (3) temporal bracketing of the data into three phases (path imagining, path integration, path stretching) and comparing the mechanisms' roles across phases; and (4) identifying links among the phases and constructing the process model. The design is interpretive and process-oriented; no measurement scales, statistical estimation, or causal-identification strategy is claimed.
+
+**Key Findings**
+The core finding is that actors sustain a course of action toward distant-future goals by engaging in path enactment — an iterative, three-phase process of connecting existing and imagined solutions into "paths." The phases and their outcomes are: (1) path imagining, which generates connected solutions and lets multiple possible paths emerge; (2) path integration, which combines and contrasts emerging paths, aligns them with the changing organizational context, and selects paths; and (3) path stretching, which extends selected paths through intermediate steps toward the 2050 goals and inscribes validated paths into the sustainability strategy. Three mechanisms recur across the phases but shift in character: bracketing (isolating solutions and paths to find common ground), narrating (connecting disparate solutions, actors, materials, and technologies into coherent wholes), and calculating (assessing relative realizability, moving from rough "pseudo-calculations" early on to more robust cost and footprint estimates later). The authors report that path enactment took two forms, illustrated by two product categories: cartons were enacted as a single, clearer plastic-free path culminating in a 100% fiber-based "endgame," whereas cups were enacted as multiple, higher-uncertainty paths kept open for later convergence. Because bracketing forms a basis for narrating, which in turn enables calculating, calculation functions less as precise measurement than as a way to judge the plausibility of complex future narratives — a dynamic the authors characterize as "disciplined imagination," in which imagining expands the space of paths, integration narrows it, and stretching combines imagination with discipline. As imagined solutions become "placeholders" on paths stretched toward the distant future, the temporal gap between present solutions and the 2050 goals narrows, embedding those goals as a sustained yet flexible course of action.
 
 **Theoretical Contribution**
 The paper develops the concept of path enactment to explain how actors sustain a course of action toward distant-future goals, contributing to research on future making by unpacking how the underexplored mechanisms of bracketing, narrating, and calculating dynamically combine across three phases to balance imagination and realizability. It shifts the field's focus from time horizons (short- vs. long-term) to solutions, showing how the same material solutions can recur in different constellations as actors move through time. It also distinguishes path enactment from prior path concepts (path dependence, path creation, path patterning) by emphasizing an effortful, directional, yet emergent and ongoing process toward the future.

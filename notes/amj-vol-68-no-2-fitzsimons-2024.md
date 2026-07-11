@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-68-no-2/pdfs/Fitzsimons 2024 The Fury Beneath the Mor
 text_path: "library/AMJ/vol-68-no-2/text/Fitzsimons 2024 The Fury Beneath the Morphing A Theory of Defensive Organizing.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-qualitative"
 keywords: ["defensive organizing", "social defenses", "overwhelming anxiety", "systems psychodynamics", "leadership", "sensemaking", "enactment", "idealization", "projective identification", "displacement", "scapegoating", "ethnography"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "use of a systems psychodynamic approach"
   methods_overview: "Building on a longitudinal ethnography"
   keywords_source: "is the theory of defensive organizing"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "mostly used in vivo codes"
+  findings_overview: "We document the arc of defensive organizing across four cycles"
 ---
 
 # The Fury Beneath the Morphing: A Theory of Defensive Organizing
@@ -51,6 +56,9 @@ Building on a longitudinal ethnography of a firm whose leaders attempted to orga
 
 **Research Question**
 How does anxiety that leaders cannot consciously regulate shape organizing, and how does organizing affect their anxiety in turn?
+
+**Hypotheses / Propositions**
+Not reported in paper
 
 **Mechanism Process**
 - Triggering condition: Overwhelming anxiety — the conjunction of shared performance anxiety among executives and the absence of any conscious sharing or processing of it — provoked by falling performance vis-a-vis competitors and the threat of being exposed as underperforming as a leader in relation to one's peers.
@@ -62,11 +70,17 @@ How does anxiety that leaders cannot consciously regulate shape organizing, and 
 
 The authors argue that overwhelming anxiety, which leaders cannot consciously acknowledge or work through, is unconsciously regulated by coopting the process of organizing into a series of cycles. In each cycle, a shared defense mechanism informs plausible-but-irrational sensemaking and motivates visible enactments that produce an organized feature serving as a social defense. Each social defense diffuses, deflects, or displaces anxiety while bolstering leaders' power, but creates a constraint that erodes its effectiveness, resurfacing anxiety and compelling the next cycle. The arc traces emergence, expansion, consolidation, and collapse of an evolving social defense — an "arc of defensive organizing."
 
+**Data & Measures**
+Data are a 42-month longitudinal ethnography of one professional services firm ("Recco"), triangulating three sources: 760 hours of nonparticipant observation across 385 Leadership Team meetings, 231 project team meetings, and 144 Change Oversight Group meetings; 214 impromptu real-time interviews and 104 scheduled semi-structured interviews with the CEO, three division VPs, CFO, CHRO, CMO, and senior managers; and firm documents (91 meeting minutes, 58 presentations, 22 corporate communications, 40 project reports, 5 internal surveys). Analysis proceeded in two stages. First, the first two authors synthesized and coded observation notes, interview transcripts, and field notes chronologically, mostly using in vivo codes drawn from informants' language and tracking the ebb and flow of emotional codes (e.g., "performance anxiety") over time. Second, they developed more abstract codes, then condensed axial and interpretive codes into theoretical categories through constant comparison and combined them into a process model. Throughout, they complemented the inductive coding with a clinical (systems psychodynamic) approach — one author proposing an interpretation of a data segment and the others questioning and revising it until the reading closest to the data was chosen (e.g., revising an initial "projection" interpretation to "projective identification").
+
+**Key Findings**
+The study documents four cycles of defensive organizing at Recco that together trace an "arc" — emergence, expansion, consolidation, and collapse — of an evolving social defense. In each cycle, overwhelming anxiety (executives' shared but unspoken fear of being exposed as underperforming leaders) is regulated unconsciously: a common defense mechanism informs plausible-yet-irrational sensemaking, motivates visible enactments, and produces an organized feature that serves as a social defense, which in turn creates a constraint that resurfaces anxiety and compels the next cycle. Cycle 1 (group level): idealization enacted as cautious investment in collaboration, producing the "Leadership Team" as a structure; the defense diffuses anxiety, and its constraint is isolation. Cycle 2 (intergroup level): projective identification enacted as contentious investment in collaboration, producing project management as a process; the defense deflects anxiety, and its constraint is embattlement. Cycle 3 (organizational level): displacement enacted as feigned collaboration, producing a discourse of reciprocal blame (a "substitute problem"); the defense displaces anxiety, and its constraint is alienation. Cycle 4 (back to the group/individual level): scapegoating enacted as disinvestment from collaboration, collapsing the social defense as blame is pushed onto the Change Oversight Group and ultimately the CEO. The authors theorize that defensive organizing consolidates when it can shield leaders and members from anxiety while letting them perform their roles, and collapses when it cannot — as at Recco, where performance kept declining, the firm was divested, and the CEO, CMO, CFO, CHRO, VPC&I, and VPL&B all lost their jobs.
+
 **Theoretical Contribution**
 The paper extends Weick's theory of organizing by showing that when emotions cannot be consciously regulated, organizing can shade into a defensive process that defeats its own adaptive purpose, serving instead to mitigate anxiety and prop up established leaders. To social defense theory, the paper provides the first articulation of a social defense's full life cycle, from emergence through consolidation to collapse, and reframes social defenses as products of ongoing organizing rather than as fixed organizational features. It also reveals the political nature of organizing — power is granted to leaders by the very defensive arrangements they produce, even as those arrangements ultimately bring them down.
 
 **Practical Implication**
-Leaders championing bold visions of change (collaboration, digital transformation, AI deployment) may unwittingly be staving off anxiety about their own incompetence rather than addressing real organizational problems, condemning the change effort to fail. The alternative is to cultivate "negative capability" — the capacity to recognize, contain, and work through anxiety as data — and to access "holding environments" that help leaders process distress collectively rather than enacting it as defensive organizing. Boards and stakeholders should be alert to mood shifts (e.g., from anxiety to enthusiasm) that occur without corresponding changes in performance circumstances.
+Leaders championing bold visions of change (collaboration, digital transformation, AI deployment) may unwittingly be staving off anxiety about their own incompetence rather than addressing real organizational problems, condemning the change effort to fail. The alternative is to cultivate "negative capability" — the capacity to recognize, contain, and work through anxiety as data — and to access "holding environments" that help leaders process distress collectively rather than enacting it as defensive organizing. The paper flags a collective mood shift (e.g., from anxiety to enthusiasm) that occurs without any corresponding change in performance circumstances as a signal that a bold vision may be serving a defensive function rather than addressing real problems.
 
 **Limitations**
 The theory rests on a single 42-month ethnography of one professional services firm, raising standard concerns about generalizability beyond this setting. The interpretive approach precludes counterfactuals: an alternative reading is that Recco's executives were neurotically defensive in general and that their disposition contributed to (rather than was a consequence of) poor performance. The methods do not allow assessment of the mental health or baseline intrapsychic disturbance of the individuals involved.

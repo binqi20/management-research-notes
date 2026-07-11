@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-68-no-3/pdfs/Ploog 2024 Rolling the Dice Resolving De
 text_path: "library/AMJ/vol-68-no-3/text/Ploog 2024 Rolling the Dice Resolving Demand Uncertainty in Markets with Partial Network Effects.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -53,6 +55,9 @@ evidence:
   theories_overview: "literatures on network effects and the diffusion of innovations"
   methods_overview: "endogenous treatment effects model"
   keywords_source: "firms in markets with partial network effects"
+  hypotheses_source: "Hypothesis 3a. Competition intensity negatively affects"
+  measures_overview: "Second, we measure novelty by assessing a board"
+  findings_overview: "The variance of owners for CNGs is 3.10 times"
 ---
 
 # Rolling the Dice: Resolving Demand Uncertainty in Markets with Partial Network Effects
@@ -63,6 +68,13 @@ It is commonly assumed that when markets are characterized by network effects, t
 **Research Question**
 How does demand uncertainty differentially impact the diffusion of network products versus standalone products that compete in the same market? How do strategies to resolve consumers' perceived uncertainty affect the diffusion of network products compared to standalone products?
 
+**Hypotheses / Propositions**
+Baseline hypothesis. The diffusion of network products varies more widely than that of standalone products.
+H1. Novelty negatively affects a product's diffusion, and this effect is more pronounced for network products than standalone products.
+H2. Promoting early adoption positively affects a product's diffusion, and this effect is more pronounced for network products than standalone products.
+H3a. Competition intensity negatively affects a product's diffusion, and this effect is more pronounced for network products than standalone products.
+H3b. Competition from a hit product negatively affects a product's diffusion, and this effect is more pronounced for network products than standalone products.
+
 **Mechanism Process**
 - IV(s): Collectible components (network product dummy); Novelty (cosine distance of gameplay-mechanics vector); Kickstarter success (early-adoption promotion); Competition intensity (count of same-genre games released within +/- 3 months); Hit competition (presence of competitor with >=15% ownership share)
 - DV(s): ln(Owners) two years after release (and variance of owners for baseline hypothesis)
@@ -70,6 +82,12 @@ How does demand uncertainty differentially impact the diffusion of network produ
 - Moderators: Collectible components moderates the effect of novelty, Kickstarter success, competition intensity, and hit competition on diffusion
 
 Network products' value depends on attracting a large user base, generating greater consumer-perceived demand uncertainty than standalone products. The authors theorize that any factor amplifying (alleviating) demand uncertainty will disproportionately harm (help) the diffusion of network products. Empirically, novelty, competition intensity, and hit competition all interact negatively with collectible components on owners; the predicted positive effect of Kickstarter success on network products is reversed, which the authors attribute to a "chasm" between early adopters and mainstream consumers.
+
+**Data & Measures**
+Data are archival, drawn from Board Game Geek (collected September 2020), covering 19,432 board games released 2011-2017 (225 with collectible components / CNGs); Kickstarter backer and funding data were collected from Kaggle.com. Dependent variable: diffusion, measured as the natural log of the number of owners two years after release (for the baseline hypothesis, the variance of owners). Independent variables: collectible components (dummy = 1 if the game is a CNG); novelty (cosine distance between a game's 182-mechanic gameplay vector and the genre-matched market-average vector of games released in the prior five years); Kickstarter success (dummy = 1 if funded via a successful Kickstarter campaign); competition intensity (count of same-genre games released within +/- 3 months of the focal game, divided by its number of genres); hit competition (dummy = 1 if a competitor with >= 15% ownership share was released in the same six-month window). Controls include self-published, publisher experience, and ln(team size), plus publisher-country (77), genre (12), month-of-release (11), and year-of-release (6) fixed effects. Identification uses a linear endogenous treatment regression model to address the nonrandom assignment of collectible components (no natural experiment or exogenous shock is available), with MtG events (logged Magic the Gathering events in the publisher's country two years before launch) in the treatment equation; robustness uses coarsened exact matching (CEM).
+
+**Key Findings**
+The baseline hypothesis is supported: the variance of owners for CNGs is 3.10 times larger than that of standalone board games (p = .00), confirmed by both Levene's test and a heteroskedastic linear regression. H1 is supported: novelty's main effect is negative and significant (b = -0.35, p = .00), and its interaction with collectible components is also negative and significant (b = -0.60, p = .09); a 25% increase in novelty is associated with a 15.34% decline in owners for CNGs versus 7.33% for standalone games. H2 is not supported and in fact reverses: the main effect of Kickstarter success is positive and significant (b = 0.89, p = .00), but its interaction with collectible components is negative and significant (b = -1.17, p = .00) — opposite the predicted positive direction — so a successful Kickstarter campaign is associated with a 24.76% decrease in owners for CNGs while more than doubling owners for standalone games. H3a is supported: competition intensity's main effect (b = -0.0011, p = .00) and its interaction with collectible components (b = -0.0014, p = .01) are both negative and significant; 150 additional same-genre games within six months are associated with a 15.50% decline in owners for CNGs versus 9.65% for standalone games. H3b is supported: hit competition's main effect (b = -0.08, p = .07) and its interaction with collectible components (b = -0.81, p = .02) are both negative and significant; a hit competitor is associated with a 58.85% reduction in owners for CNGs versus 7.48% for standalone games. Results remain consistent under a coarsened-exact-matched, reweighted sample (3,863 observations).
 
 **Theoretical Contribution**
 The paper relaxes the universality assumption in the network effects literature by introducing markets with partial network effects, demonstrating that nonnetwork factors interact with social features to differentially shape diffusion of network versus standalone products. It also flips the diffusion of innovations literature's typical firm-side perspective on demand uncertainty toward the customer's perspective, showing that drivers of perceived uncertainty have disproportionately negative effects on network products' diffusion.

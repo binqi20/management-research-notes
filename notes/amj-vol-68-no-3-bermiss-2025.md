@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-68-no-3/pdfs/Bermiss 2025 Reengaging with the Classic
 text_path: "library/AMJ/vol-68-no-3/text/Bermiss 2025 Reengaging with the Classics.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "editorial"
 keywords: ["management classics", "theory development", "revise", "repurpose", "rediscover", "transformational times", "doctoral education"]
@@ -46,6 +48,9 @@ Classics in management offer a wealth of ideas and knowledge—arguably, wealth 
 **Research Question**
 How can scholars effectively draw on management classics to inform developments in the world of today, particularly amid transformational phenomena such as AI, digital platform consolidation, and geopolitical polarization?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Management classics — widely influential works that have shaped theory and practice — remain valuable but are often subject to "institutional forgetting," typified citation, and selective attention; substantive reengagement (rather than ceremonial citation) generates new theoretical and practical insights for transformational times.
 - Three pathways for reengagement:
@@ -56,6 +61,12 @@ How can scholars effectively draw on management classics to inform developments 
 - Boundary condition / caution: reengagement requires "vigilant reading" that situates classic theory in its political, social, and economic context rather than blindly idealizing or transposing it.
 
 The editorial argues that scholarly progress is cumulative and path-dependent, which causes classic works to be selectively read and "typified" in citation practices; deliberate revising, repurposing, and rediscovering counteract this drift and let foundational theories address new phenomena while clarifying scope conditions.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial offers a typology — revise, repurpose, rediscover — for substantive engagement with management classics, distinguishing it from normative or ceremonial citation. It clarifies how each pathway produces a distinct kind of theoretical contribution (new boundary conditions, novel cross-domain application, recovery of latent claims) and links these pathways to contemporary phenomena (AI, large tech firms, geopolitical leadership) where classics regain explanatory power.

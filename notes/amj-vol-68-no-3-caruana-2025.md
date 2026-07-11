@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-68-no-3/pdfs/Caruana 2025 The Boundaries of Modern Sl
 text_path: "library/AMJ/vol-68-no-3/text/Caruana 2025 The Boundaries of Modern Slavery The Role of Exemplars in New Category Formation.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-11"
 
 paper_type: "empirical-qualitative"
 keywords: ["modern slavery", "category formation", "exemplars", "boundary work", "grand challenges", "discourse analysis"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "exemplar-based theorization of new category formation"
   methods_overview: "systematic analysis of discourse surrounding the formation"
   keywords_source: "three distinct forms of exemplars"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "analysis of key terms in the different iterations of the"
+  findings_overview: "forms of exemplars (typifying, familiarizing, and scoping), and develop a model that"
 ---
 
 # The Boundaries of Modern Slavery: The Role of Exemplars in New Category Formation
@@ -52,6 +57,9 @@ Modern slavery is one of the most prominent grand challenges facing organization
 **Research Question**
 How and why do organizational actors deploy category exemplars in discourse surrounding new categories to establish the social and symbolic boundaries of an incipient category, in the absence of an established prototype, as illustrated by the formation of the legal category of modern slavery?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs: typifying, familiarizing, and scoping exemplars; symbolic vs. social boundaries of categories
 - Triggering conditions: introduction of a new legal category lacking a prototype; competing actor goals (government, NGOs, business, media)
@@ -61,6 +69,12 @@ How and why do organizational actors deploy category exemplars in discourse surr
 - Emergent outcomes: deliberate inclusion of children and overseas domestic workers; exclusion of refugees and regular employers (as perpetrators); restriction of prostitution scope to forced prostitution
 
 The process traces how, absent a prototype, different actors discursively construct provisional category boundaries through three distinct linguistic forms of exemplar that operate dynamically across four phases. Familiarizing exemplars (e.g., organized crime, sex work analogies) initially attract attention but risk overinflating social boundaries; typifying exemplars consolidate central category meaning by listing common attributes; scoping exemplars (used mostly by NGOs) deliberately push the social boundary outward to include otherwise excluded members. The success or failure of any exemplar depends on whether it aligns with the goals of category promoters (the UK Government) and whether stakeholders converge on its appropriateness — a dynamic that explains why children and migrant domestic workers were ultimately incorporated as victims, but refugees were not.
+
+**Data & Measures**
+Data corpus: submissions to consultations on the draft Modern Slavery Bill (21 oral-evidence transcripts, Jan.–Mar. 2014; 102 written submissions, Feb.–Apr. 2014; plus 40 Public Bill Committee written submissions, Jul.–Oct. 2014), all UK media accounts mentioning "modern slavery" surrounding the Act (1,240 substantive articles, 2010–2016, retrieved via Nexis), 13 in-depth key-informant interviews with experts (six secondary preceding seven primary), and secondary documents (19 parliamentary-debate transcripts, Jun. 2014–Mar. 2015; the Joint Committee report and government response; and successive drafts and amendments of the Act). Contributors spanned government, business, NGOs, academics, and individuals. Analysis drew on Fairclough's (1992) three-dimensional theorization of discourse (linguistic, discursive, social) and proceeded inductively across four coding stages: (1) open coding to identify exemplars as textual units combining a subject, a practice, and a context intended to represent the proto-category; (2) linguistic analysis coding each exemplar's properties (metaphor, metonym, simile, hyperbole, clauses, labels) and clustering them into three forms — typifying, familiarizing, and scoping; (3) discursive-processes coding linking each form to specific symbolic and social boundary effects; and (4) social-context-and-temporality coding situating exemplars in their sociopolitical context and building the four-stage timeline. This was complemented by a systematic content analysis of key terms (e.g., "sex," "child(ren)," "domestic worker") across successive iterations of the bill and its amendments (Figure 2). Interpretive, inductive design; no measurement scales, statistical estimation, or causal-identification strategy is claimed.
+
+**Key Findings**
+The study surfaces a dynamic, four-phase model of category formation (pre-initiation, 2010–2012; initiation, 2013; contestation, 2014; formalization, 2015 onward) in which, absent a category prototype, actors deploy three linguistically distinct forms of exemplar to shape the boundaries of the emerging legal category of modern slavery. Typifying exemplars (attribute listing and centering; used mainly by government and media) clarify and sharpen the symbolic boundary and "pull in" the social boundary around central members; familiarizing exemplars (metaphor, simile, analogy, hyperbole; used by government, business, and media) establish or reposition a provisional symbolic boundary by importing meaning from adjacent categories (e.g., organized crime, prostitution) but leave the social boundary ambiguous and prone to over-inflation; scoping exemplars (diagnosis–prognosis–bridging; used mainly by NGOs) contest and "pull out" the social boundary to incorporate otherwise-excluded members. The central explanatory finding is that an exemplar's success depended on two conditions: (1) whether it aligned with the goals of category promoters (chiefly the UK Government), and (2) the degree of stakeholder consensus about the appropriateness of the actors or practices it suggested. These conditions account for a directional pattern of inclusions and exclusions in the final Act (Table 2): organized crime remained a core attribute (high alignment, high consensus); children were deliberately included via a wider range of child victims and offenses (low alignment but low conflict, very high consensus); overseas domestic workers were included as victims, though immigration-control reform was excluded (goal conflict, high consensus); prostitution was restricted to forced prostitution rather than expanded to all sex work (medium–low alignment, very low and polarized consensus); refugees were not included (low alignment, no visible consensus); and regular employers were kept outside the perpetrator boundary, instead entering the category as potential victims and as firms bound by supply-chain transparency reporting (Section 54) (low alignment, high consensus).
 
 **Theoretical Contribution**
 The paper extends the exemplar model of categorization beyond concrete category members by theorizing exemplars as discursively constituted linguistic representations that actively shape new category boundaries. It contributes (1) a typology of three linguistic forms of exemplar (typifying, familiarizing, scoping); (2) a reconceptualization of exemplar salience as contextually determined by goal alignment and stakeholder consensus rather than being a stable attribute; (3) a dynamic four-phase model linking exemplar deployment to specific social and symbolic boundary effects across category formation.
