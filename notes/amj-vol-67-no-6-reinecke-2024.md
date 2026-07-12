@@ -22,7 +22,9 @@ pdf_path: "library/AMJ/vol-67-no-6/pdfs/Reinecke 2024 Advancing Management Theor
 text_path: "library/AMJ/vol-67-no-6/text/Reinecke 2024 Advancing Management Theory through Interdisciplinary Research Challenges and Opportunities.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "editorial"
 keywords:
@@ -60,6 +62,9 @@ FROM THE EDITORS ADVANCING MANAGEMENT THEORY THROUGH INTERDISCIPLINARY RESEARCH:
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Interdisciplinary management research can drive theoretical innovation, methodological advances, and problem-driven scholarship, but only if it goes beyond merely importing concepts from other fields and instead achieves genuine theoretical integration that advances management theory in its own right.
 - Key constructs: interdisciplinarity (vs. multidisciplinarity and transdisciplinarity); theoretical motivation; common language and "translation work"; depth of theorizing; theoretical fidelity; "hybridization" or "synergizing" of knowledge.
@@ -67,6 +72,12 @@ Not reported in paper
 - Recommendations: clearly articulate why existing management theories are inadequate, bridge linguistic gaps through translation work, demonstrate depth via hybridization or synergizing of theories, and maintain theoretical fidelity to the source disciplines.
 
 The editorial argues that successful interdisciplinary research must show how borrowed theories resolve a "double challenge" — establishing both that existing management frameworks are insufficient and that imported lenses provide genuine added value. Rather than illustrative or symbolic borrowing, the authors advocate for creative recombination ("hybridization") in which external concepts become integral components of recipient-discipline theory, ultimately producing theories with greater explanatory power than single-discipline accounts.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial provides a normative framework for evaluating interdisciplinary management scholarship at AMJ, positioning interdisciplinarity on a continuum between multidisciplinarity and transdisciplinarity (drawing on Sieldok & Hibbert, 2014; Klein, 2010) and articulating four common pitfalls along with corresponding recommendations. It clarifies that interdisciplinary contributions must advance management theory in its own right, not merely apply external frameworks, and frames "hybridization" and "synergizing" as the deepest forms of integration achievable in a single article.

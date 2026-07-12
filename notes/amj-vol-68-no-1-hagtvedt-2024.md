@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-68-no-1/pdfs/Hagtvedt 2024 Bright and Dark Imagining 
 text_path: "library/AMJ/vol-68-no-1/text/Hagtvedt 2024 Bright and Dark Imagining How Creators Navigate Moral Consequences of Developing Ideas for Artificial Intelligence.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords:
@@ -64,6 +66,9 @@ evidence:
   theories_overview: "Through an inductive study of 69 professionals"
   methods_overview: "we followed the Gioia"
   keywords_source: "ideas through bright and dark imagining"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "for instances in which creators experienced moral"
+  findings_overview: "bright imagining is associated with disconnecting moral issues from idea development"
 ---
 
 # Bright and Dark Imagining: How Creators Navigate Moral Consequences of Developing Ideas for Artificial Intelligence
@@ -74,6 +79,9 @@ Despite an emerging stream of work on negative behaviors associated with engagin
 **Research Question**
 Whether, when, and how do creators navigate moral issues arising from their ideas during the course of creative work in a context — AI development — where creative advances are happening rapidly and the potential for widespread harm is heightened?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs: imagining (sensemaking projection of an idea's future); bright imagining (positive distal vision, ideas as magical/black-box); dark imagining (negative distal vision, ideas as controllable); moral consequences; surprises as catalysts.
 - Catalyzing conditions: surprises during deep technical work (unexpected algorithm outputs while delving into details) trigger bright imagining; surprises when broadening the context (encountering unanticipated effects on humans, testing with users, conversations with outsiders) trigger dark imagining.
@@ -82,6 +90,12 @@ Whether, when, and how do creators navigate moral issues arising from their idea
 - Emergent outcomes: customized product constraints versus generalized safeguards/regulation; transformation of moral issues into creative challenges that shape the technology itself.
 
 The central process is an imaginative, prospective sensemaking activity in which surprises during creative work prompt creators to project ideas into the future, and those projections in turn reshape both how creators engage with moral issues (distancing vs. internalizing) and how they develop ideas (unconstrained novelty pursuit vs. embedded customized constraints). The two pathways are mutually reinforcing — technical surprises sustain bright imagining and unconstrained discovery, while contextual surprises move harms closer, evoke negative emotions, and turn moral concerns into design constraints that fuel further creativity.
+
+**Data & Measures**
+Data corpus: 69 semi-structured interviews (64 AI creators — software engineers, machine-learning engineers, research scientists, and professors using machine learning — and 5 AI executives), each lasting approximately one hour, recorded with informants' consent and transcribed verbatim, collected across academia and industry in 2018–2019. Preparatory work comprised non-participant observation at a three-day AI conference plus exploratory interviews with three AI creators and five executives from two AI organizations. Participants were recruited by inviting AI organizations and authors of recent AI papers and then through snowball referrals, with informants asked to connect the researchers to colleagues holding different perspectives and working in different domains. Analysis used a bricolaged strategy combining a grounded approach (Strauss & Corbin) with process theorizing (Langley), following the Gioia method of building a data structure. Two authors fresh to the context coded transcripts separately, systematically searching them for instances in which creators experienced moral issues during their creative process: open coding drew on informants' own language, axial coding grouped first-order codes into second-order themes (e.g., "constructing positive or negative images of the future"), and further iteration produced the aggregate dimensions of "bright and dark imagining"; the other two authors acted as sounding boards. Analytical tables and visual artifacts (hand-drawn figures and software-generated models) were then used to compare cases, uncover surprises as catalysts, and relate constructs into a process model, with member checks during the latter interview batches. The design is interpretive and inductive; no measurement scales, statistical estimation, or causal-identification strategy is claimed.
+
+**Key Findings**
+The study surfaces a grounded process model in which creators navigate the potential distal moral consequences of their AI ideas through an imaginative, prospective sensemaking activity — bright and dark imagining — catalyzed by surprises encountered during creative work. Bright imagining is associated with disconnecting moral issues from idea development: catalyzed by surprises during deep technical work, creators make sense of their ideas as magical, not-fully-understandable "black boxes," construct positive images of the future, and emphasize positive distal consequences while bracketing harms; correspondingly they distance harms (attributing risks to users rather than the technology), systematize safeguards external to the idea (calling for field-level regulation and guidelines), orient toward novelty, and develop ideas without constraints, sustained by positive affect. Dark imagining is associated with integrating moral issues into idea development: catalyzed by surprises when broadening the context (user testing, encountering unanticipated human effects, conversations with outsiders), creators make sense of their ideas as controllable, construct negative images of the future, and extrapolate how project-specific harms could unfold; correspondingly they move harms closer, internalize responsibility, orient toward usefulness, and embed customized constraints directly into their ideas — transforming morally motivated constraints into creative challenges — sustained by negative affect (fear, anxiety). Most creators exhibited a dominant orientation yet blended both and could switch: routine technical surprises continued to fuel bright imagining, while salient broader-context surprises could act as a turning point that shifted creators from bright toward dark imagining over time. The pattern was uneven across the sample — about 30% of creators engaged primarily in dark imagining versus about 50% in bright imagining; almost everyone displayed some bright imagining (only one informant did not), whereas nine informants showed no evidence of dark imagining — and creators with more than 10 years of experience were more likely to engage in both approaches. The study does not establish which approach is more effective at reducing harm, and it bounds the model by the degree of an idea's potential harm and the maturity of the industry.
 
 **Theoretical Contribution**
 The study presents a grounded model of how creators engage with potential distal moral consequences of their ideas during the creative process itself, adding moral consequences to the criteria (beyond novelty and usefulness) by which creators project their ideas. It moves beyond prior "dark side" work that attributed unethical behavior to creators' personal characteristics, instead showing that engaging with moral issues is itself a constructive, creative process catalyzed by experiences during creative work. It also unpacks how morally motivated constraints can become a stimulus that shapes the nature of ideas themselves, extending research on constraints and creativity into morally charged domains.
@@ -93,7 +107,7 @@ Managers of AI and other novel-technology development should cultivate awareness
 The study cannot reveal whether one approach (disconnecting or integrating) is more effective at reducing harms, and the focus on individual creators leaves the collective dynamics that may facilitate the process in the background. The qualitative data do not yield definitive insights into the personalities or underlying characteristics that lead creators toward pure scientific discovery versus applied work. Generalizability is bounded by the degree of potential harm of an idea and the maturity of the industry; AI was chosen as an extreme case where standards had not yet emerged.
 
 **Future Research**
-Future work should investigate how creators develop ideas that are simultaneously novel, useful, and minimally harmful, and how other criteria such as sustainability, aesthetic dimensions, or long-term value enter creators' projections. Scholars could explore the relative effectiveness of customized product constraints versus broader regulation, examine how alternative forms of constraint interact within a domain, and study how power imbalances and collective dynamics shape which form of imagining dominates over time.
+Future work should investigate how creators develop ideas that are simultaneously novel, useful, and minimally harmful, and how other criteria such as sustainability, aesthetic dimensions, or long-term value enter creators' projections. Scholars could explore the relative effectiveness of customized product constraints versus broader regulation, examine how alternative forms of constraint interact within a domain, and study how collective dynamics shape which form of imagining dominates over time.
 
 **APA 7th Citation**
 Hagtvedt, L. P., Harvey, S., Demir-Caliskan, O., & Hagtvedt, H. (2025). Bright and dark imagining: How creators navigate moral consequences of developing ideas for artificial intelligence. *Academy of Management Journal*, 68(1), 19-49. https://doi.org/10.5465/amj.2022.0850

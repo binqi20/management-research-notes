@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-68-no-1/pdfs/Jiang 2024 Breaking Free or Locking In H
 text_path: "library/AMJ/vol-68-no-1/text/Jiang 2024 Breaking Free or Locking In How Socially Disadvantaged Individuals Achieve or Reject an Aspired Identity in an Entrepreneurial Context.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords:
@@ -65,6 +67,9 @@ evidence:
   theories_overview: "Adopting the identity network approach as our theoretical lens"
   methods_overview: "We conducted an inductive qualitative study with"
   keywords_source: "Adopting the identity network approach as our theoretical lens, we revealed three paths"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "In the second phase, we performed axial coding"
+  findings_overview: "shaped the paths these women took to achieve or reject the aspired identity"
 ---
 
 # Breaking Free or Locking In: How Socially Disadvantaged Individuals Achieve or Reject an Aspired Identity in an Entrepreneurial Context
@@ -74,6 +79,9 @@ This research examines how individuals achieve or reject an aspired identity whe
 
 **Research Question**
 How do socially disadvantaged individuals navigate the perceived conflict between their existing socially disadvantaged identities and an aspired identity, and why do some successfully acquire the aspired identity to achieve positive self-transformation while others do not?
+
+**Hypotheses / Propositions**
+Not reported in paper. This is an inductive, grounded-theory field study with no a priori hypotheses; the authors build an emergent process model of how individuals achieve or reject an aspired identity amid conflicting existing identities rather than testing predicted relationships.
 
 **Mechanism Process**
 - Triggering condition: An "aspiring event" (BeautyCo's entrepreneurial program) activates the aspired identity (being a business owner / Laoban) and conflicting existing socially disadvantaged identities (rural origin, low education, family obligations as women).
@@ -85,6 +93,16 @@ How do socially disadvantaged individuals navigate the perceived conflict betwee
 - Driving sensemaking factors: retrospective sensemaking of prior failure (less salient / instructive / paralyzing) and interpersonal sensemaking from mentors, employees, and family.
 
 The central process is that aspiring events surface a perceived conflict between existing and aspired identities, generating internal obstacles in the form of negative emotions; whether individuals reach emotional transformation depends on how they regulate emotions and make sense of prior failure and others' reactions, which in turn motivate distinct identity work (suppressing, reframing, or devaluing identities) and inter-identity work (neutralizing or bridging meanings) that either reconstruct identities into compatible or synergistic relations or lock the conflict in place.
+
+**Data & Measures**
+Inductive, grounded-theory qualitative design (Locke, 2001; Strauss & Corbin, 1998). Primary data comprised 102 semi-structured interviews with 61 female BeautyCo employees and prospective or actual salon owners, gathered in four waves: five in-depth exploratory interviews in December 2019, a main round in summer 2020, follow-ups in summer 2022, and targeted re-interviews of 11 participants in February 2023. Interviews were conducted via WeChat audio calls, recorded, and transcribed verbatim in Chinese. Secondary data included interviews with BeautyCo's top management, HR managers, and mentors, plus newsletters, media articles, and virtual attendance at an internal staff meeting. The three authors open-coded transcripts independently (codes were exact copies or close variants of participants' own words) and met weekly to reconcile them; axial coding coalesced these open codes into higher-order categories (e.g., "humble socioeconomic background" and "existing socially disadvantaged identities," "separate felt and displayed emotions," and "share felt emotions"), coding emotions by their specific target and intensity; theoretical coding then abstracted the core process into the model. Trustworthiness rested on theoretical saturation, member checks with five participants, and explicit tests of alternative explanations (business profitability, the objective presence of major prior failure, family support, and prior work experience).
+
+**Key Findings**
+Three emergent paths captured how participants navigated the perceived identity conflict, each a self-reinforcing cycle of emotional reactions, identity work, and inter-identity work:
+- Elevation path (initial emotions more positive than negative, stronger desire than concern): participants separated displayed positive from felt negative emotions, suppressed their disadvantaged identities while strengthening the aspired identity, and neutralized the threatening meanings of the disadvantaged identities, turning the relationship compatible and realizing the aspired identity, but with higher work ambition and worse work-family balance.
+- Experimentation path (positive and negative emotions equally strong): participants regulated emotions by seeking support and taking action, reframed the meanings of their disadvantaged identities, and found bridging meanings, producing a synergistic relationship and a realized aspired identity, with more modest work ambition and better work-family balance.
+- Entrenchment path (negative emotions dominant, stronger concern than desire): lacking effective emotion regulation or transformation, participants devalued the aspired identity and further strengthened the disadvantaged identities and their threatening meanings; the conflict persisted and the aspired identity was rejected, with most returning to their prior employee role feeling less stressed.
+Retrospective sensemaking of prior failure (treated as inconsequential on the elevation path, as instructive lessons on the experimentation path, and as painful and paralyzing on the entrenchment path) and interpersonal sensemaking of others' cues drove which path individuals took; interpersonal sensemaking could also shift paths, moving four participants from entrenchment to elevation and seven from entrenchment to experimentation. The authors ruled out business profitability, the objective presence of major prior failure, family support, and prior work experience as explanations for the observed variance.
 
 **Theoretical Contribution**
 The paper contributes to the identity-formation literature by foregrounding how aspired identities are achieved or rejected amid conflicting existing identities, identifying three paths defined by distinct patterns of emotional reactions, identity work, and inter-identity work, and showing how relationships among identities can shift from conflict into compatible or synergistic ties through emotion-regulation tactics. It also contributes to the entrepreneurship-as-emancipation literature by uncovering the emotional and cognitive identity dynamics that explain why socially disadvantaged individuals receiving similar entrepreneurial opportunities diverge in entrepreneurial entry, achievement, and subjective work-family outcomes.

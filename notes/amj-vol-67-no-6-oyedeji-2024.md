@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-6/pdfs/Oyedeji 2024 Perceived Firm-Specific Hum
 text_path: "library/AMJ/vol-67-no-6/text/Oyedeji 2024 Perceived Firm-Specific Human Capital Mobility Constraint or Enhancer.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -60,6 +62,9 @@ evidence:
   theories_overview: "central to resource-based theory (Barney, 1991)"
   methods_overview: "survival time model (xtstreg)"
   keywords_source: "the relationship between workers’ perceptions of firm-specific human capital (FSHC) and turnover"
+  hypotheses_source: "human-capital is positively associated with mobility."
+  measures_overview: "Mobility is coded as 1 when a respondent changes"
+  findings_overview: "the NLSY79 (OR 5 1.44, p , .001), but no effect in"
 ---
 
 # Perceived Firm-Specific Human Capital: Mobility Constraint or Enhancer?
@@ -70,6 +75,12 @@ We explore the relationship between workers' perceptions of firm-specific human 
 **Research Question**
 Do workers' perceptions of firm-specific human capital (FSHC) constrain mobility as predicted by resource-based and human capital theories, or do such perceptions instead operate as a supply-side driver of turnover through psychological mechanisms of fit, satisfaction, and embeddedness?
 
+**Hypotheses / Propositions**
+H1. Workers' perception of firm-specific human capital is positively associated with mobility (turnover).
+H2a. Job satisfaction negatively mediates the positive effect of perceived FSHC on mobility.
+H2b. Job embeddedness negatively mediates the positive effect of perceived FSHC on mobility.
+H3. Job autonomy importance positively moderates the positive effect of perceived FSHC on mobility (stronger for workers who value autonomy).
+
 **Mechanism Process**
 - IV(s): Perceived firm-specific human capital (perceived FSHC) — workers' views about the extent to which additional human capital gained at the focal firm would be less useful to other employers.
 - DV(s): Worker mobility (turnover) — change to a new employer (binary).
@@ -77,6 +88,12 @@ Do workers' perceptions of firm-specific human capital (FSHC) constrain mobility
 - Moderators: Importance of job autonomy to the worker.
 
 The authors theorize that as workers' perceptions of FSHC increase, they engage in deeper assessment of their fit with the firm because they feel their career opportunities are tied closely to that employer. This triggers negative affect, regret, and counterfactual thinking, eroding job satisfaction and embeddedness, which in turn precipitate turnover. The relationship is amplified for workers who value autonomy because perceived FSHC violates a broader preference for career autonomy and induces uncertainty management behavior. The argument deliberately abandons the demand-side information-efficiency assumption underlying classical FSHC theory and rests on bounded rationality and supply-side mobility logic.
+
+**Data & Measures**
+The theory is tested on four datasets across two countries: two archival panels — KLIPS (South Korea; 18,341 person-year observations from 5,403 full-time individuals, 2002-2007) and NLSY79 (United States; 1,976 individuals, 1994-1996) — and two primary recall surveys collected in 2023, US2023 (n = 1,208) and SK2023 (n = 1,428). The dependent variable, mobility, is coded 1 when a respondent changes employer and 0 otherwise (a change in the prior three months in the 2023 surveys). Perceived FSHC (IV) uses single-item measures in the archival datasets and a newly developed, validated four-item scale in the primary samples (α = .93). Mediators are job satisfaction (a five-item scale modeled on the Brayfield & Rothe [1951] index; a single item in NLSY79) and job embeddedness (an adapted Felps et al. [2009] work-domain short-form scale, available only in US2023/SK2023). The moderator, job autonomy importance, is a dummy coded 1 when a worker ranks autonomy among their top two job attributes (primary samples only). Estimation uses Stata's random-effects parametric survival-time model (xtstreg) for the KLIPS panel and logistic regression for the three cross-sectional samples; mediation is decomposed with the khb method and omitted-variable bias is probed via an impact-threshold-of-a-confounding-variable (ITCV) analysis. The design is associational; no causal identification is claimed.
+
+**Key Findings**
+H1 was supported in three of the four samples: perceived FSHC raised the likelihood of mobility in the NLSY79 (OR = 1.44, p < .001; +44% odds), US2023 (OR = 1.72, p < .001), and SK2023 (OR = 1.24, p < .05), with the overall increase reported as 24%-72%. H1 was not supported in the longitudinal KLIPS sample, where the main effect was null (OR = 1.00) and turned significantly negative once job satisfaction or embeddedness was controlled (HR = 0.92, p < .05). H2a (job satisfaction as a negative mediator) held in all four samples — mediation of 6.51% (NLSY79), 20.85% (US2023), and 39.40% (SK2023); in KLIPS the null-but-positive total effect was suppressed to a negative direct effect. H2b (job embeddedness as a negative mediator) was supported only in the two primary samples that measured embeddedness (18.12% US2023; 63.61% SK2023); KLIPS and NLSY79 had no embeddedness measure. H3 (autonomy moderation) was supported in both primary samples: the FSHC × autonomy-importance interaction was OR = 1.88 (p < .05) in US2023 — raising mobility by 88% for autonomy-valuing workers, over a 60% main effect — and OR = 1.57 (p < .05) in SK2023, over a statistically null 7% main effect; H3 was not testable in the archival samples, which lacked an autonomy measure. The pattern was robust across probit, complementary log-log, restricted-sample, and organizational-commitment checks.
 
 **Theoretical Contribution**
 The study reverses the dominant demand-side prediction in resource-based and human capital theory by showing that perceived FSHC is positively, not negatively, associated with mobility, with effects partially mediated by job satisfaction and embeddedness and amplified by autonomy preference. By integrating bounded rationality and heterogeneous worker preferences with resource-based logic, the paper highlights a multilevel, supply-side pathway through which perceived firm specificity erodes rather than sustains employee retention. This creates a substantial dilemma for resource-based theory: if perceived firm specificity does not hinder mobility, alternative mechanisms must be identified to explain how human-capital-based competitive advantage is sustained.

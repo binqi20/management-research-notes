@@ -549,6 +549,23 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.37.0 v3 backfill batch 04 (2026-07-12, 1,167 notes):**
+  Upgrades **AMJ volume 68, issue 1 and volume 67, issue 6, 18 notes total** to
+  the v3 schema — all v2 augmentations. The **record total is unchanged at
+  1,167**; the version-tier census shifts to 61 v1, 997 v2, 109 v3. Each touched
+  note passed a fresh full independent 9-field rubric-v2 audit: **160 / 162
+  prose-field verdicts `SUPPORTED`, 0 `UNSUPPORTED`, 0 `CONTRADICTED`** (all 18
+  notes overall pass). These two issues' older v2 notes carried an unusual
+  amount of scope drift in their practical-implication and future-research
+  fields, so eighteen evidence-based repairs across two rounds narrowed added
+  audiences, prescriptions, and examples back to the papers' own scope (and
+  fixed three factual slips). Two residual `PARTIAL`s were accepted and
+  documented rather than edited: the Hagtvedt future-research note lightly
+  extends a stated limitation, and the Trzebiatowski data-measures note carries
+  a source-ambiguous turnover lag that is internally consistent with the
+  paper's methods — editing either to appease the auditor would violate the
+  faithful-note rule.
+
 - **v0.36.0 v3 backfill batch 03 (2026-07-11, 1,167 notes):**
   Upgrades **AMJ volume 68, issue 3 and issue 2, 16 notes total** to the v3
   schema — all v2 augmentations (the AMJ v1 re-extraction tier was cleared in
@@ -688,7 +705,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 1,015 v2 notes, and 91 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 997 v2 notes, and 109 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -821,7 +838,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.36.0},
+  version      = {0.37.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

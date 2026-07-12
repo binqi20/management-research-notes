@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-6/pdfs/Koo 2024 Linguistic Inclusiveness in Org
 text_path: "library/AMJ/vol-67-no-6/text/Koo 2024 Linguistic Inclusiveness in Organizations A Russophone Bank in Post-Soviet Kazakhstan.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords:
@@ -63,6 +65,9 @@ evidence:
   theories_overview: "social-symbolic work (Lawrence & Phillips,"
   methods_overview: "four rounds of ethnographic fieldwork in"
   keywords_source: "how linguistic inclusiveness can emerge among tensions"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "semi-structured interviews, including 43 interviews"
+  findings_overview: "became to feel more connected with, and respected"
 ---
 
 # Linguistic Inclusiveness in Organizations: A Russophone Bank in Post-Soviet Kazakhstan
@@ -73,17 +78,33 @@ Organizations increasingly operate in diverse languages to serve external stakeh
 **Research Question**
 How can linguistic inclusiveness emerge among tensions between the demands for multilingual services and the need for a lingua franca in organizations?
 
+**Hypotheses / Propositions**
+Not reported in paper. This is an inductive ethnographic field study with no a priori hypotheses; the authors pursue an exploratory research question and inductively theorize an emergent process model of how linguistic inclusiveness arises through actors' sociolinguistic work, rather than testing predicted relationships or stating numbered propositions.
+
 **Mechanism Process**
 - Key constructs: linguistic inclusiveness; language as both a skill and a source of identity; high-status vs. low-status languages; three actor groups — marginalized (Kazakhophone bilingual language workers), in-between (Russophone receptive bilingual bankers), and dominant (Russophone monolingual bankers); meanings of language as a marketable skill, a source of identity, and a resource for interpersonal relations.
 - Triggering conditions: societal change in post-Soviet Kazakhstan elevating the status of Kazakh; growing demands for multilingual services to clients; bank's hiring of Kazakhophone language workers into boundary positions while maintaining Russian as the internal lingua franca.
 - Behavioral patterns of sociolinguistic work:
-  - Dominant group: delimiting (restricting use of Kazakh internally) and self-delimiting (avoiding Kazakh themselves); later, symbolic code-switching (occasional Kazakh greetings/phrases that signal respect).
+  - Dominant group: delimiting (restricting use of Kazakh internally); later, symbolic code-switching (occasional Kazakh greetings/phrases that signal respect).
   - Marginalized group: buffering (translating/mediating between bank and Kazakhophone external stakeholders); covert code-switching internally; nudging receptive bilinguals to speak Kazakh once Kazakh's societal importance grew.
   - In-between group: initially aligned with dominant Russian-only practices; reinterpreting Kazakh as a resource for interpersonal relations under nudging; engaging in bounded code-switching limited to specific times and informal settings.
 - Emergent outcomes: greater sense of belonging and respect for marginalized language workers; gradual reshaping of internal linguistic dynamics toward inclusiveness without displacing the lingua franca.
 - Boundary conditions: Russian retained dominant status in the financial sector, allowing accommodation to remain symbolic and non-threatening to bankers' professional life; in-between group's relatability (shared ethnic/cultural heritage with marginalized group) crucial to the chain of change.
 
 The process explanation is that linguistic inclusiveness emerges through everyday sociolinguistic work as marginalized, in-between, and dominant groups iteratively reinterpret the meanings of language (as skill, identity, and relational resource) in response to changing societal linguistic dynamics. A marginalized group's nudging is accommodated first by an in-between group whose overlapping characteristics make new practices feel less threatening; their bounded code-switching, alongside continuing societal change, then signals to the dominant group that low-status language use carries interpersonal value, prompting symbolic code-switching that affirms marginalized identities while preserving the lingua franca.
+
+**Data & Measures**
+- Data corpus: 128 semi-structured interviews (43 with KC Bank employees — 18 with 15 bankers and 25 with 21 language workers — plus 39 employees in other organizations, 33 job seekers, six local scholars, and seven other informants), about one month of on-site observations at the head office, and documents (annual reports, marketing and street materials, the 1997 language law and other policy texts, presidential speeches, newspapers, and statistics), gathered across four rounds of fieldwork (December 2013–April 2015).
+- Group classification: informants' Kazakh fluency was self-reported at the start of each interview and triangulated with origin, schooling, and preferred interview language to sort them into Kazakhophone bilingual language workers (marginalized), Russophone receptive bilingual bankers (in-between), and Russophone monolingual bankers (dominant); the first author conducted interviews and translated the data into English, validating translations with native Kazakh and Russian speakers.
+- Analysis: a four-stage iterative process — (1) building a timeline of key societal and organizational events; (2) independent coding and comparison of emergent themes, from which the inclusiveness theme surfaced; (3) reanalyzing the three groups' interactions through social-symbolic work; and (4) reanalyzing the interplay between internal sociolinguistic work and societal linguistic change — using thick description and visual mapping (Langley, 1999) within an interpretivist, contextualized-reasoning stance (Welch et al., 2011; grounded-theory practices, Charmaz, 2006).
+
+**Key Findings**
+As an inductive study, the central finding is a process model rather than hypothesis tests:
+- The study surfaces *sociolinguistic work* — everyday actions shaping which tongue is used within an organization — as the process through which linguistic inclusiveness emerges without displacing the Russian lingua franca, driven by three constructed meanings of language: a useful skill for external operations, a source of identity, and a resource for interpersonal relations.
+- The emergence unfolds sequentially across the three groups: dominant monolingual bankers' delimiting (and receptive bilinguals' self-delimiting) of internal Kazakh use produced language workers' sense of frustration and disrespect; as Kazakh gained societal status, language workers nudged the relatable in-between group, whose bounded code-switching then raised the language workers' sense of belonging; observing this, monolingual bankers took up largely symbolic code-switching, which raised the language workers' sense of respect for their uniqueness.
+- Net directional outcome: over time, the marginalized Kazakhophone language workers "became to feel more connected with, and respected by, others in the organization," shifting internal linguistic dynamics from exclusionary toward more inclusive while Russian remained the formal work language.
+- The in-between group of receptive bilingual bankers is identified as the critical hinge: their shared ethnic and cultural identity (relatability) let the marginalized group's nudging take hold and, in turn, elicited change in the dominant group — the bridging role the authors present as their key theoretical finding.
+- Boundary condition surfaced in the case: Russian's retained dominance in the finance sector kept accommodation symbolic and non-threatening to bankers' professional lives, allowing inclusiveness to grow without a power reversal between the languages.
 
 **Theoretical Contribution**
 The paper conceptualizes language as an underexplored yet consequential dimension of diversity that intersects with ethnicity, culture, and nationality, advancing intersectionality and inclusiveness research beyond gender and race. It theorizes sociolinguistic work — the cognitive underpinnings (language as skill, identity, and interpersonal resource) and behavioral manifestations (delimiting, buffering, nudging, bounded and symbolic code-switching) through which actors reshape an organization's linguistic dynamics — and identifies the critical role of in-between groups whose multiple intersecting identities make them able to accommodate marginalized groups' nudging and elicit changes in dominant-group practices, addressing calls to integrate macro-level societal context into diversity and inclusion theorizing.

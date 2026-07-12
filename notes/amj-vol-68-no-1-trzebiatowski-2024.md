@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-68-no-1/pdfs/Trzebiatowski 2024 A Diversity Signal Se
 text_path: "library/AMJ/vol-68-no-1/text/Trzebiatowski 2024 A Diversity Signal Set Perspective Examining Interactive Effects of Diversity Practices on Women and Racialized Non-Leader and Leader Turnover.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-mixed"
 keywords:
@@ -66,6 +68,9 @@ evidence:
   theories_overview: "Integrating the signal set congruence and incongruence literature with role theory"
   methods_overview: "we used the fractional logit model"
   keywords_source: "diversity practices (resource, non-discrimination, and accountability)"
+  hypotheses_source: "Hypothesis 1. There is a three-way interactive effect"
+  measures_overview: "we standardized and averaged each of the 33"
+  findings_overview: "higher levels of resource practices decreased turnover rates when both safeguarding"
 ---
 
 # A Diversity Signal Set Perspective: Examining Interactive Effects of Diversity Practices on Women and Racialized Non-Leader and Leader Turnover
@@ -75,6 +80,12 @@ While organizations often implement multiple diversity practices, our understand
 
 **Research Question**
 Whether and how three categories of diversity practices — resource, non-discrimination, and accountability — interact to shape the turnover of women and racialized non-leaders and leaders, and what role-based psychological mechanisms (concerns about unfair treatment vs. personal relevance) link these signal-set configurations to turnover intentions.
+
+**Hypotheses / Propositions**
+- H1: There is a three-way interactive effect of resource, non-discrimination, and accountability practices on women and racialized non-leader turnover rate, such that (a) resource practices reduce turnover when non-discrimination and accountability are both high, and (b) the beneficial effects of resource practices are least likely in either incongruent (mixed) condition.
+- H2: Concerns about unfair treatment mediate the three-way interaction effect of the diversity practices on women and racialized non-leaders' turnover intention.
+- H3: There is a three-way interactive effect of resource, non-discrimination, and accountability practices on women and racialized leader turnover rate, such that (a) resource practices reduce turnover when non-discrimination and accountability are both high, and (b) the beneficial effects are least likely in the incongruent condition where accountability is low.
+- H4: Personal relevance mediates the three-way interaction effect of the diversity practices on women and racialized leaders' turnover intention.
 
 **Mechanism Process**
 - IVs (organizational level, Study 1): resource practices; non-discrimination practices; accountability practices (formative composites coded from Vault/MCAA diversity surveys using Leslie's 2019 typology).
@@ -86,6 +97,16 @@ Whether and how three categories of diversity practices — resource, non-discri
 
 The theorized process is that top executives' diversity practices act as signals whose congruence (both safeguarding practices high or both low) lowers uncertainty and triggers heuristic, "more-is-better" processing, while incongruent (mixed) signal sets raise uncertainty and elicit role-based systematic processing. Non-leaders, more removed from signal senders and more vulnerable to "undeserving beneficiary" stereotypes, disproportionately weight mixed signals as negative, so resource practices fail to reduce turnover when the safeguarding set is mixed, with concerns about unfair treatment as the salient micro-level mechanism. Leaders, who hold an implementer role, disproportionately weight low accountability signals as a lack of recognition for their diversity efforts, so resource practices fail to reduce turnover when accountability is low, with personal relevance as the salient micro-level mechanism.
 
+**Data & Measures**
+Study 1 (longitudinal field study). Firm-year archival data from two sources: the publicly available Vault and Minority Corporate Counsel Association (MCAA) Law Firm Diversity Database (women's and racialized groups' representation and turnover) and non-public annual Vault/MCAA diversity-initiative surveys (2,416 surveys from 2010-2019, ~240 firms/year). The first two authors hand-coded survey items into Leslie's (2019) resource, non-discrimination, and accountability categories, with subject-matter-expert accuracy checks. Focal predictors were formative composites (each standardized then averaged): resource practices = 33 items; non-discrimination practices = 4 dummy-coded items; accountability practices = 8 items. DVs = one-year-ahead turnover rate of women and racialized non-leaders (associates) and leaders (partners), each the count who departed during a year divided by the count at that year's start. Controls: firm size (log attorneys), international-operations dummy, leverage ratio (associates-to-partners), and diversity of non-leaders and of leaders (Blau's 1977 index). Estimation: fractional logit (binomial GLM, logit link) with cluster-robust standard errors plus firm and year fixed effects (an associational design in which fixed effects absorb unobserved firm/year heterogeneity); Tobit fixed-effects models as a robustness check.
+
+Study 2 (experiment). Two preregistered 2x2x2 between-person vignette experiments (separate U.S.-employed non-leader and leader samples on Prolific) administered in Qualtrics using a fictional company, "Ascentira," with high/low resource, non-discrimination, and accountability practices manipulated and random assignment to one of eight scenarios. Self-report measures (7-point Likert): concerns about unfair treatment (3 items adapted from Dover et al., 2016; α = .87 non-leaders / .82 leaders); personal relevance (3 items from Ford & Noe, 1987 plus 2 from Ng & Burke, 2005; α = .97 / .96); turnover intention (3 items from Landau & Hammer, 1986; α = .94 / .95). Analysis: manipulation checks, three-factor confirmatory factor analysis, ANOVA, and Mplus path modeling of the mediated three-way interaction with 5,000 bias-corrected bootstrap resamples.
+
+**Key Findings**
+Study 1 (H1, H3 — firm-level turnover rates). The three-way interaction was significant and similar in magnitude for non-leaders (Model 3: b = -0.43, SE = 0.08, p < .001) and leaders (Model 6: b = -0.43, SE = 0.17, p = .012). H1a supported: the resource-practices–turnover slope was significantly negative for non-leaders when both safeguarding practices were high (b = -0.04, SE = 0.02, p = .036). H1b supported: the beneficial effect was least likely in the two mixed conditions (slope differences vs. the high-high baseline of 0.07, p = .011, and 0.10, p = .001). H3a supported: the slope was significantly negative for leaders when both safeguarding practices were high (b = -0.03, SE = 0.01, p = .007). H3b supported: the beneficial effect was least likely in the low-accountability incongruent condition (slope difference 0.08, p = .007). Notably, for leaders the congruent low-low condition also weakened the resource effect (slope difference 0.08, p = .002), underscoring the salience of accountability practices.
+
+Study 2 (H2, H4 — individual-level mechanisms). H2 supported: for non-leaders, concerns about unfair treatment mediated the three-way interaction on turnover intention (indirect effect b = 0.57, 95% CI [0.04, 1.12]), whereas the personal-relevance path did not (b = 0.08, 95% CI [-0.06, 0.25], includes zero). H4 supported: for leaders, personal relevance mediated the effect (indirect effect b = 0.28, 95% CI [0.11, 0.52]), whereas the unfair-treatment path did not (b = 0.55, 95% CI [-0.02, 1.10], includes zero). Support was only partial across studies: the supplementary ANOVA interaction patterns at the individual level did not fully replicate the field-level patterns — for non-leaders the pattern resembled H1a but was "not consistent with Hypothesis 1b," and for leaders personal relevance did not rise when both safeguarding practices were high (unlike the H3a firm-level pattern), though the three-way interaction still significantly predicted personal relevance (F(1, 653) = 9.52, p = .002). The authors characterize the individual-level results as mixed.
+
 **Theoretical Contribution**
 The paper extends diversity-initiative effectiveness research and signaling theory by theorizing and testing three-way interactive effects across multiple categories of diversity practices rather than examining practices in isolation or as additive indices. By marrying a cognitive view of signaling (signal set congruence/incongruence) with role theory, it explains why different configurations of diversity practices produce different outcomes for non-leaders versus leaders within women and racialized employee groups, and identifies role-specific mediators (concerns about unfair treatment vs. personal relevance), thereby offering a more nuanced multilevel account of when and for whom diversity practices reduce turnover.
 
@@ -96,7 +117,7 @@ Investing in resource practices alone is insufficient — and potentially counte
 Study 1's law firm setting limits generalizability because law is among the least diverse U.S. industries and law firms have flatter hierarchies than many organizations. The diversity-practice items, although derived from a comprehensive practitioner-informed survey, may not capture every relevant practice (e.g., name-blinding), and Study 2's vignettes simplified each category to a single example. The two mediators are highly correlated and were measured with common-method designs, and the authors did not measure perceived signal uncertainty directly; signal intent was assumed to be substantive and well-intentioned.
 
 **Future Research**
-Future studies should test the model with field samples of managers and across more hierarchical and demographically diverse industries, expand the set of diversity practices examined (including AI- and VR-enabled vignettes and eye-tracking of attention to signals), and explore additional mechanisms such as other-oriented relevance and exclusion, as well as reactions of dominant-group non-beneficiaries. Time-separated or experimentally manipulated mediator designs could strengthen causal inference about concerns-about-unfair-treatment and personal-relevance pathways, and scholars could relax the substantive-intent assumption to study signal intent alongside signal quality.
+Future studies should test the model with field samples of managers and across more hierarchical and demographically diverse industries, expand the set of diversity practices examined (including video vignettes and eye-tracking of attention to signals), and explore additional mechanisms such as other-oriented relevance and exclusion, as well as reactions of dominant-group non-beneficiaries. Time-separated or experimentally manipulated mediator designs could strengthen causal inference about concerns-about-unfair-treatment and personal-relevance pathways, and scholars could relax the substantive-intent assumption to study signal intent alongside signal quality.
 
 **APA 7th Citation**
 Trzebiatowski, T., Jiang, K., Zhang, Z., Eckardt, R., & Kim, Y. A. (2025). A diversity signal set perspective: Examining interactive effects of diversity practices on women and racialized non-leader and leader turnover. *Academy of Management Journal*, 68(1), 191-220. https://doi.org/10.5465/amj.2020.1838

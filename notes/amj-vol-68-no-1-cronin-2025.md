@@ -24,7 +24,9 @@ pdf_path: "library/AMJ/vol-68-no-1/pdfs/Cronin 2025 From a Portfolio of Journals
 text_path: "library/AMJ/vol-68-no-1/text/Cronin 2025 From a Portfolio of Journals to a System of Knowledge Production.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "editorial"
 keywords:
@@ -64,6 +66,9 @@ For science to have impact, researchers must generate new knowledge and synthesi
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: The seven AOM journals function not as a portfolio but as an integrated knowledge production system organized into a value cycle of generation, synthesis, education, and application.
 - Key constructs: knowledge generation (AMD, AMJ, AMR), knowledge synthesis (AMR, AMC, Annals), education (Annals, AMLE), application (AMP, AMLE).
@@ -72,11 +77,17 @@ Not reported in paper
 
 The essay argues that scientific impact is amplified when authors recognize how their paper's function relates to other quadrants of the cycle — between-journal hand-offs are themselves part of the value chain, with the output of one journal becoming the input to another. A worked example follows the venting construct from a counterintuitive AMD discovery, through AMJ empirical work and AMR theorizing, into AMC curation and Annals integration, and finally into AMLE pedagogy and AMP practitioner translation.
 
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
+
 **Theoretical Contribution**
 Reframes the AOM journal portfolio as an interdependent knowledge production system rather than a collection of independent outlets, articulating the distinct epistemic function of each journal within a generation–synthesis–education–application value cycle. Positions inter-journal linkages — not within-paper rigor alone — as the locus of cumulative scholarly impact, and invites authors to write with explicit awareness of how their work feeds and is fed by adjacent quadrants.
 
 **Practical Implication**
-Authors, reviewers, and editors should locate each paper within the value cycle and clarify what function it serves, who its audience is, and how its findings can be leveraged by papers in other quadrants. This reframing dissolves the false dichotomy between managerial-application impact and citation-based impact: all four quadrants are necessary, and clarity of function makes findings more usable for researchers, educators, students, and practitioners alike.
+Authors and reviewers should locate each paper within the value cycle and clarify what function it serves, who its audience is, and how its findings can be leveraged by papers in other quadrants. This reframing dissolves the false dichotomy between managerial-application impact and citation-based impact: all four quadrants are necessary, and clarity of function makes findings more usable for researchers, educators, students, and practitioners alike.
 
 **Limitations**
 Not reported in paper

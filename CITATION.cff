@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-07-11"
-version: "0.36.0"
+date-released: "2026-07-12"
+version: "0.37.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,18 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.36.0
+  a published rubric) gates every note into the library. Version 0.37.0
+  (2026-07-12) continues the v3 backfill with Academy of Management Journal
+  volume 68 issue 1 and volume 67 issue 6 — 18 notes, all v2 augmentations. A
+  backfill adds no papers, so the record total is unchanged at 1,167; the
+  version-tier census shifts to 61 v1, 997 v2, and 109 v3 notes. Each touched
+  note passed a fresh full independent nine-field rubric-v2 audit at 160/162
+  prose-field verdicts SUPPORTED with zero UNSUPPORTED or CONTRADICTED;
+  eighteen evidence-based repairs across two rounds narrowed unusually heavy
+  legacy scope drift in these issues' practical-implication and future-research
+  fields, and two residual PARTIALs (a lightly-extended stated limitation and a
+  source-ambiguous, internally-consistent turnover lag) were accepted and
+  documented rather than edited. Earlier, version 0.36.0
   (2026-07-11) continues the v3 backfill with Academy of Management Journal
   volume 68 issues 3 and 2 — 16 notes, all v2 augmentations (the AMJ v1
   re-extraction tier was cleared in batch 02, so batches 03+ are pure
@@ -261,7 +272,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.36.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.37.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-6/pdfs/Oever 2024 More than a Feeling How Board
 text_path: "library/AMJ/vol-67-no-6/text/Oever 2024 More than a Feeling How Board Member Displays of Anger and Happiness Influence Strategic Decisions.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -62,6 +64,9 @@ evidence:
   theories_overview: "first theorize how anger can impact focused"
   methods_overview: "we adopted logit modeling"
   keywords_source: "displays of anger and happiness by board members"
+  hypotheses_source: "Hypothesis 3a. Duration of the discussion will attenuate the relationship between peak displayed anger"
+  measures_overview: "To measure diffuse influence, we coded a dummy"
+  findings_overview: "(b 5 1.71, p 5 .05), in support of Hypothesis 2."
 ---
 
 # More than a Feeling: How Board Member Displays of Anger and Happiness Influence Strategic Decisions
@@ -72,6 +77,12 @@ To examine board members' influence in strategic decision-making, we consider th
 **Research Question**
 How are board member displays of anger and happiness associated with influence on strategic decisions, and how does the duration of discussion of an agenda item moderate these emotion-influence relationships during board meetings?
 
+**Hypotheses / Propositions**
+- H1: Peak displayed anger by a board member is associated with a greater likelihood of focused influence (positive).
+- H2: Peak displayed happiness by a board member is associated with a greater likelihood of diffuse influence (positive).
+- H3a: Duration of the discussion attenuates (weakens) the association between peak displayed anger and focused influence (negative moderation).
+- H3b: Duration of the discussion strengthens the association between peak displayed happiness and diffuse influence (positive moderation).
+
 **Mechanism Process**
 - IVs: Director peak displayed anger and director peak displayed happiness (maximum facial-expression intensity per director-agenda item, measured via Microsoft Azure Face API on 145,370 video frames).
 - DVs: Focused influence (top manager makes promise/concession to amend proposed decision in response to a director) and diffuse influence (director-submitted change initiative receives board majority support).
@@ -80,11 +91,27 @@ How are board member displays of anger and happiness associated with influence o
 
 Drawing on the EASI model, the paper argues that displayed emotions function as social information that triggers inferences about the emoter and the situation. Anger displays signal a need for change, convey dominance and determination, and push observers (especially less-powerful top managers) toward concession in dyadic, high-power-differential exchanges (scrutinizing governance), producing focused influence. Happiness displays signal cooperation and elicit appraisals of warmth, competence, and likeability, encouraging peer board members to support a change initiative through majority vote (participative governance), producing diffuse influence. Discussion duration weakens the anger-focused-influence link because additional stimuli crowd out the peak-anger signal as recollection fades and information-processing demands grow.
 
+**Data & Measures**
+Novel observational dataset of 68 complete videotaped in-person board meetings from four Dutch water management organizations (downloaded from the organizations' public webpages), converted into 145,370 individual static facial images. Emotions were coded with the Microsoft Azure Face API (supervised machine learning), which outputs intensity weights from 0 to 1.0 for each of eight facial expressions per image. Analyses are conducted at the director-agenda item level (n = 1,755 focused-influence model; n = 1,666 diffuse-influence model).
+- IVs: Director peak displayed anger and director peak displayed happiness, each measured as the maximum Face API intensity of the respective emotion across a board member's images for an agenda item.
+- DVs: Focused influence, a dummy coded 1 when the top manager responds to the director's statement with a promise or commitment to alter the proposal; diffuse influence, a dummy coded 1 when the director's change initiative receives board majority support.
+- Moderator: Duration of discussion, the sum of the total frames of speaking TMT and board members per agenda item.
+- Controls: board- and TMT-level average and peak displayed anger/happiness (to rule out emotional convergence and contagion), number of speaking board members, number of sponsors, director and board demographics, board size and diversity indices, meeting duration and frequency, tenure, and organization/chairperson dummies.
+- Estimation and identification: logit (logistic) regression; endogeneity addressed with a control-function approach using directors' average displayed anger/happiness as instruments, alongside causal sensitivity analyses (robustness of inference to replacement; tipr). The design is observational and associational, with identification checks probing robustness to endogeneity and unmeasured confounders rather than establishing experimental causation.
+
+**Key Findings**
+- H1 supported (Model 2): director peak displayed anger is positively associated with focused influence (b = 1.43, p = .004); a one-SD increase in peak anger makes the odds of focused influence about 41% higher.
+- H2 supported (Model 5): director peak displayed happiness is positively associated with diffuse influence (b = 1.71, p = .05); a one-SD increase in peak happiness makes the odds of diffuse influence about 94% higher.
+- H3a supported (Model 3): the peak-anger by discussion-duration interaction is negative and significant (b < -0.01, p = .05); the anger-focused-influence association is stronger when the discussion is shorter.
+- H3b not supported (Model 6): the peak-happiness by discussion-duration interaction is nonsignificant (b < 0.01, p = .19).
+
+Discriminant pattern: peak anger did not produce diffuse influence and peak happiness did not produce focused influence; among other negative emotions, only contempt showed marginal focused-influence support (b = 2.21, p = .06). Robustness: effects were strongest for punctuated (peak) displays. With summed emotions, H3a held but H1 and H2 did not; excluding ambiguous influence cases, H1 and H2 held but H3a did not.
+
 **Theoretical Contribution**
 The paper opens the "black box" of boardroom interactions by theorizing two distinct paths to director influence over strategic decisions — focused (direct, dyadic, scrutinizing) and diffuse (board-wide, participative) — and links each to a different discrete emotion (anger vs. happiness) operating through different EASI mechanisms. By bridging behavioral corporate-governance research with social-psychology work on displayed emotions and EASI theory, the paper offers contextualized theory on when and how directors shape strategic decision outcomes, advances research on nonverbal communication in management, and surfaces novel implications for agency and resource-dependence views of board functioning by treating directors as heterogeneous in their persuasive ability.
 
 **Practical Implication**
-A board member can maximize focused influence by displaying peak anger early and keeping discussion short, while top managers seeking to attenuate director influence may strategically lengthen discussions. Boards may benefit from cultivating directors' emotion-regulation skills and recognizing that happiness displays facilitate participative consensus while anger is more effective in pointed dyadic exchanges; nonverbal behavior in the boardroom is a meaningful, potentially manageable lever in strategic decision-making.
+The study shows a director's focused influence is greatest when an anger display is intense and the discussion is short, whereas longer discussions attenuate that influence; happiness displays facilitate participative consensus while anger is more effective in pointed dyadic exchanges. Nonverbal behavior in the boardroom thus emerges as a meaningful, potentially manageable lever in strategic decision-making.
 
 **Limitations**
 The authors could only collect emotional-display data on the speaking director and top manager, not on observers' reactions, so influence as the theorized mechanism is not directly measured. They were unable to capture other forms of power (structural, prestige) or to identify moderating individual characteristics that would enrich the role of power; influence pathways outside the boardroom (coalition formation, committee work) are not observed. The Dutch water-management context, with larger boards and a formal change-initiative procedure, may not generalize to all corporate-board settings, although sensitivity analyses suggest results are robust to plausible unmeasured confounders.

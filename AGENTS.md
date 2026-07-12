@@ -140,15 +140,18 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-07-11):
+**Current main-branch audit state (2026-07-12):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 03 upgraded 16 notes (AMJ vol-68-no-3 + vol-68-no-2, all v2
-augmentations — the AMJ v1 re-extraction tier was cleared in batch 02, so
-batches 03+ are pure augmentation) to v3, each passing a fresh full 9-field
-rubric-v2 audit at 144/144 prose-field verdicts SUPPORTED (0 PARTIAL) after
-two evidence-based scope repairs; the batch left the record total
-unchanged. The corpus contains 61 legacy v1 notes, 1,015 v2 notes, and 91 v3
-notes with evidence anchors; new notes are
+batch 04 upgraded 18 notes (AMJ vol-68-no-1 + vol-67-no-6, all v2
+augmentations) to v3, each passing a fresh full 9-field rubric-v2 audit at
+160/162 prose-field verdicts SUPPORTED after eighteen evidence-based repairs
+across two rounds (these two issues' older v2 notes carried unusual
+practical-implication / future-research scope drift), with two residual
+accepted PARTIALs left unedited per the faithful-note policy (Hagtvedt
+future-research lightly extends a stated limitation; Trzebiatowski
+data-measures carries a source-ambiguous, internally-consistent turnover lag);
+the batch left the record total unchanged. The corpus contains 61 legacy v1
+notes, 997 v2 notes, and 109 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -182,7 +185,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.36.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.37.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

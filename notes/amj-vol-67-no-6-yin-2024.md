@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-67-no-6/pdfs/Yin 2024 The Interactive Effects of Abus
 text_path: "library/AMJ/vol-67-no-6/text/Yin 2024 The Interactive Effects of Abusive CEOs and Philanthropic Corporate Social Responsibility on Organizational Innovation and Performance.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -64,6 +66,9 @@ evidence:
   theories_overview: "Based on upper echelons theory and the related interface perspective"
   methods_overview: "We used a multi-wave survey to test our hypothe"
   keywords_source: "CEOs and TMTs of 308 small and mediumsized enterprises (SMEs) in Study 1"
+  hypotheses_source: "Hypothesis 1. CEO abusive leadership is negatively"
+  measures_overview: "performance was assessed by the percentage of ROA"
+  findings_overview: "(b 5 2.10, p 5 .003), supporting Hypothesis 1."
 ---
 
 # The Interactive Effects of Abusive CEOs and Philanthropic Corporate Social Responsibility on Organizational Innovation and Performance
@@ -74,20 +79,44 @@ We examine how and when chief executive officer (CEO) abusive leadership can und
 **Research Question**
 How and when does CEO abusive leadership undermine organizational innovation and performance through its impact on TMT behavioral integration, and how does CEO engagement with external stakeholders via philanthropic CSR moderate that internal-stakeholder mechanism?
 
+**Hypotheses / Propositions**
+- H1: CEO abusive leadership is negatively related to TMT behavioral integration.
+- H2: Philanthropic CSR moderates the negative relationship between CEO abusive leadership and TMT behavioral integration, such that CEO abusive leadership is more negatively related to TMT behavioral integration when philanthropic CSR is higher than lower.
+- H3a: TMT behavioral integration mediates the relationship between CEO abusive leadership and organizational innovation.
+- H3b: TMT behavioral integration mediates the relationship between CEO abusive leadership and organizational performance.
+- H4a: The indirect effect of CEO abusive leadership on organizational innovation via TMT behavioral integration is moderated by philanthropic CSR, such that the indirect effect is more negative when philanthropic CSR is higher than lower.
+- H4b: The indirect effect of CEO abusive leadership on organizational performance via TMT behavioral integration is moderated by philanthropic CSR, such that the indirect effect is more negative when philanthropic CSR is higher than lower.
+
 **Mechanism Process**
 - IV: CEO abusive leadership (Mitchell & Ambrose, 2007 5-item scale; rated by CMOs in Study 1, by TMT members aggregated to team level in Study 2).
 - Mediator: TMT behavioral integration (Simsek et al., 2005 9-item scale; rated by CEO in Study 1, by TMT members in Study 2).
 - Moderator: Philanthropic CSR (Homburg, Stierl & Bornemann, 2013 4-item scale based on Carroll, 1991; rated by COOs in Study 1, by CEOs in Study 2).
-- DVs: Organizational innovation (percentage of sales from new products) and organizational performance (industry-adjusted ROA), both objective and obtained from an external agency one year (Study 1) or six months (Study 2) later.
+- DVs: Organizational innovation (percentage of sales from new products) and organizational performance (industry-adjusted ROA), both objective, obtained from an external agency one year later in Study 1 and reported by CEOs at Time 3 (six months later) in Study 2.
 - Controls (Study 2): CEO age, sex, tenure, CEO-organization embodiment, CEO dominance power, TMT average age and tenure, organization age and size, prior organizational performance.
 
 CEO abusive leadership undermines TMT behavioral integration by disrupting the alignment of functional roles and degrading interpersonal relationships within the team, eroding information sharing and joint decision-making. Philanthropic CSR amplifies this negative effect because the visible favorable treatment of external stakeholders, coupled with internal mistreatment, is perceived by TMT members as inconsistent treatment and leader hypocrisy — the CEO appears to project a socially responsible image while behaving abusively internally, which intensifies perceptions of injustice and personal targeting, generates uncertainty about the CEO's future actions, and triggers psychological distancing. Diminished TMT behavioral integration in turn weakens the team's capacity for cross-pollination of ideas, joint resource allocation, and collective problem-solving, thereby cascading down into reduced organizational innovation and performance.
+
+**Data & Measures**
+Two survey studies of Chinese SMEs testing the same moderated-mediation model (Study 1: cross-sectional multi-source, n=308; Study 2: preregistered three-wave time-lagged multisource, n=287). The three perceptual constructs were self/other-reported scales; the two objective outcomes were obtained from an external agency in Study 1 and reported by CEOs at Time 3 in Study 2.
+- CEO abusive leadership (IV): Mitchell and Ambrose (2007) 5-item scale (Study 1 α=.95, rated by CMOs; Study 2 α=.97, rated by TMT members aggregated to team level).
+- TMT behavioral integration (mediator): Simsek et al. (2005) 9-item scale (Study 1 α=.91, rated by CEOs; Study 2 α=.96, rated by TMT members).
+- Philanthropic CSR (moderator): Homburg et al. (2013) 4-item scale based on Carroll (1991) (Study 1 α=.88, rated by COOs; Study 2 α=.96, rated by CEOs).
+- Organizational innovation (DV): percentage of sales generated from new products.
+- Organizational performance (DV): ROA (net income divided by total assets; industry-adjusted in Study 1).
+Study 1 used 5-point and Study 2 used 7-point Likert scales. Hypotheses were tested via item-parceled confirmatory factor analysis and path analysis in Mplus 8.3, with grand-mean-centered interaction terms, simple-slope tests at +/-1 SD of philanthropic CSR, and Monte Carlo confidence intervals from 10,000 bootstrapped samples. The authors state the cross-sectional design (even with the time-lagged Study 2) precludes causal inference, so the evidence is associational.
+
+**Key Findings**
+All six hypotheses were supported in both studies.
+- H1 (supported in both): CEO abusive leadership was negatively related to TMT behavioral integration (Study 1 b=-.22, p<.001; Study 2 b=-.10, p=.003).
+- H2 (supported in both): philanthropic CSR moderated that relationship (Study 1 b=-.29, p=.001; Study 2 b=-.13, p<.001); simple slopes were negative and significant at higher CSR (Study 1 b=-.38; Study 2 b=-.25, both p<.001) but nonsignificant at lower CSR (Study 1 b=-.06, p=.424; Study 2 b=.05, p=.159).
+- H3a and H3b (supported in both): CEO abusive leadership had negative indirect effects via TMT behavioral integration on innovation (Study 1 b=-2.68, p=.018; Study 2 b=-.47, p=.039) and performance (Study 1 b=-.54, p=.043; Study 2 b=-.10, p=.032).
+- H4a and H4b (reported as supported in both): the moderated-mediation indices were more negative at higher philanthropic CSR for innovation (Study 1 b=-4.02, p=.063; Study 2 b=-1.44, p=.009) and performance (Study 1 b=-.81, p=.051; Study 2 b=-.32, p=.035); the two Study 1 indices were only marginally significant (p=.063 and p=.051), whereas both Study 2 indices were significant.
 
 **Theoretical Contribution**
 The paper makes three contributions. First, it extends the abusive leadership literature beyond lower-level supervisors and nonmanagerial employees by demonstrating organization-level consequences of CEO abusive leadership operating through TMT processes. Second, it advances the CEO-TMT interface literature, which has predominantly focused on positive CEO leadership styles, by opening the "black box" of how a negative leadership style hinders organizational outcomes via TMT behavioral integration. Third, it extends upper echelons theory by simultaneously modeling CEOs' interfaces with both internal stakeholders (TMT) and external stakeholders (via philanthropic CSR), showing that the interactive effect of differential treatment across these two interfaces — rather than either interface alone — drives organizational innovation and performance.
 
 **Practical Implication**
-Organizations should select and retain CEOs who combine ethical, supportive leadership with a commitment to philanthropic CSR rather than tolerating abusive behavior in exchange for societal engagement. Boards and TMTs should recognize that high-visibility philanthropic CSR is not a buffer against abusive leadership but actually amplifies its damage through perceived hypocrisy and inconsistent stakeholder treatment. CEOs should provide critical feedback respectfully and constructively, and clearly distinguish abusive behavior from dominance or directiveness. Equitable, fair, and consistent treatment of internal and external stakeholders is a critical premise for philanthropic engagement to translate into innovation and performance gains.
+Organizations should select and retain CEOs who combine ethical, supportive leadership with a commitment to philanthropic CSR rather than tolerating abusive behavior in exchange for societal engagement. High-visibility philanthropic CSR is not a buffer against abusive leadership but actually amplifies its damage through perceived hypocrisy and inconsistent stakeholder treatment. CEOs should provide critical feedback respectfully and constructively, and clearly distinguish abusive behavior from dominance or directiveness. Equitable, fair, and consistent treatment of internal and external stakeholders is a critical premise for philanthropic engagement to translate into innovation and performance gains.
 
 **Limitations**
 The authors used shortened versions of established measures to enhance survey response rates. The cross-sectional nature of the design (even with the time-lagged Study 2) precludes causal inference. The relationship between CEO abusive leadership and TMT behavioral integration may also be moderated by CEO abusive leadership differentiation (variance in abusive treatment across TMT members), which the present design did not formally model.

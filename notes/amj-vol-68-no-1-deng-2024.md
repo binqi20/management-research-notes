@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-68-no-1/pdfs/Deng 2024 Socialization as a Political A
 text_path: "library/AMJ/vol-68-no-1/text/Deng 2024 Socialization as a Political Arena A Multi-Agent Interactionist Perspective to Understand Political Skill and Newcomer Socialization Rates.txt"
 ingested_at: "2026-04-30"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -67,6 +69,9 @@ evidence:
   theories_overview: "According to the interactionist perspective"
   methods_overview: "four-wave longitudinal field survey study"
   keywords_source: "Integrating two social-interaction-based perspectives (i.e., vertical vs. horizontal social"
+  hypotheses_source: "Hypothesis 1. Newcomer political skill will positively"
+  measures_overview: "18-item scale to measure newcomer political"
+  findings_overview: "newcomer political skill had positive indirect effects on growth rates of adjustment outcomes via interaction frequency"
 ---
 
 # Socialization as a Political Arena: A Multi-Agent Interactionist Perspective to Understand Political Skill and Newcomer Socialization Rates
@@ -77,6 +82,16 @@ Integrating two social-interaction-based perspectives (i.e., vertical vs. horizo
 **Research Question**
 How and when does newcomers' political skill shape their socialization rates, and through which social-interaction-based mechanism — vertical interactions with one's supervisor versus horizontal interactions with veteran colleagues — does it transmit its effects into different adjustment dynamics (early-entry adjustment states vs. growth rates of role clarity, task mastery, and social integration), conditional on a prosocial climate for newcomers?
 
+**Hypotheses / Propositions**
+H1. Newcomer political skill positively predicts interaction frequency with (a) supervisor and (b) veteran colleagues.
+H2. Interaction frequency with supervisor positively predicts growth rates of (a) role clarity, (b) task mastery, and (c) social integration.
+H3. Interaction frequency with veteran colleagues positively predicts growth rates of (a) role clarity, (b) task mastery, and (c) social integration.
+H4. Newcomer political skill has positive indirect effects on growth rates of (a) role clarity, (b) task mastery, and (c) social integration via interaction frequency with supervisor.
+H5. Newcomer political skill has positive indirect effects on growth rates of (a) role clarity, (b) task mastery, and (c) social integration via interaction frequency with veteran colleagues.
+H6. Prosocial climate for newcomers moderates the positive effects of political skill on interaction frequency with (a) supervisor and (b) veteran colleagues, such that the effects are stronger when prosocial climate is high.
+H7. Prosocial climate for newcomers moderates the positive indirect effects of political skill on growth rates of (a) role clarity, (b) task mastery, and (c) social integration via interaction frequency with supervisor, such that the effects are stronger when prosocial climate is high.
+H8. Prosocial climate for newcomers moderates the positive indirect effects of political skill on growth rates of (a) role clarity, (b) task mastery, and (c) social integration via interaction frequency with veteran colleagues, such that the effects are stronger when prosocial climate is high.
+
 **Mechanism Process**
 - IV: Newcomer political skill (T0, 18-item Ferris et al. 2005 scale).
 - Mediators: Interaction frequency with supervisor (T1) and interaction frequency with veteran colleagues (T1), measured during the first two months after entry.
@@ -85,6 +100,28 @@ How and when does newcomers' political skill shape their socialization rates, an
 - Controls: age, gender, education, Big Five personality, proactive personality, and interaction quality with each agent.
 
 The interactionist perspective holds that interaction frequency is "the primary mechanism through which newcomers are transformed into insiders," and that frequent interactions and rapid socialization arise when newcomer interpersonal characteristics (political skill) and the social environment (insider prosociality) jointly favor adjustment. Politically skilled newcomers can both initiate and prolong interactions with insiders and inspire insiders to interact with them, but vertical and horizontal channels carry different content: supervisor interactions deliver authoritative, structured, holistic information that crystallizes early-entry understanding of roles, tasks, and norms, whereas veteran-colleague interactions supply detailed, diverse, sometimes fragmentary information whose value compounds over time as newcomers integrate it into a sophisticated cognitive schema — producing growth in adjustment rather than immediate states. A prosocial climate amplifies both pathways by making insiders responsive and signaling that interaction returns are high.
+
+**Data & Measures**
+Data come from a four-wave longitudinal field survey of 1,197 newcomers nested in 550 supervisors at a large Chinese IT corporation (2019 campus cohort), with two-month intervals across the first six months after entry. Focal constructs were operationalized as follows:
+- IV — newcomer political skill (T0): Ferris et al.'s (2005) 18-item scale, 7-point Likert (Cronbach's alpha = .91).
+- Mediators — interaction frequency with supervisor and with veteran colleagues (T1): McAllister's (1995) four-item scale, 5-point Likert (alpha = .89 and .87, respectively).
+- Moderator — prosocial climate for newcomers (T1): De Dreu and Nauta's (2009) three-item scale, 5-point Likert (alpha = .96).
+- DVs (supervisor-rated at T1, T2, T3), modeled via latent growth curve modeling as intercepts (early-entry states) and linear slopes (growth rates): role clarity (Rizzo, House, & Lirtzman, 1970), task mastery (Morrison, 1993a), and social integration (Jokisaari & Nurmi, 2009), each three items, 5-point Likert.
+- Controls: age, gender, education, Big Five personality, proactive personality, and interaction quality with each agent.
+
+Moderated-mediation path analysis was estimated in Mplus 8.6 with a sandwich estimator (TYPE = COMPLEX) to handle the newcomer-in-supervisor nesting and FIML for missing data; indirect and conditional indirect effects used Monte Carlo bootstrapping with 20,000 replications. The primary design is longitudinal and associational; two supplemental two-wave cross-lagged studies (n = 200 each) strengthen causal inference, though the authors note causality still cannot be firmly established.
+
+**Key Findings**
+Support was heterogeneous across the two social-interaction pathways, and this differentiation is the paper's headline result:
+- H1a/H1b supported: newcomer political skill positively predicted interaction frequency with supervisor (γ = .12, p < .001) and veteran colleagues (γ = .11, p < .001).
+- H2a–c NOT supported: interaction frequency with supervisor did not significantly predict growth rates (slopes) of role clarity, task mastery, or social integration.
+- H3a–c supported: interaction frequency with veteran colleagues positively predicted growth rates of role clarity (γ = .06), task mastery (γ = .07), and social integration (γ = .05).
+- H4a–c NOT supported: political skill's indirect effects on growth rates via supervisor were non-significant (CIs included zero).
+- H5a–c supported: political skill's indirect effects on growth rates via veteran colleagues were positive and significant (.006, .008, .006).
+- H6a/H6b supported: prosocial climate positively moderated political skill's effect on interaction frequency with supervisor (γ = .10, p < .001) and veteran colleagues (γ = .08, p = .012), with effects stronger when prosocial climate was high.
+- H7a–c NOT supported (moderated mediation of growth rates via supervisor); H8a–c supported (moderated mediation of growth rates via veteran colleagues, significant only at high prosocial climate).
+
+Supplementary analyses showed that interaction frequency with supervisor (but not with veteran colleagues) positively predicted early-entry states (intercepts) of all three adjustment outcomes (role clarity γ = .10; task mastery γ = .13; social integration γ = .12), and these indirect effects were significant and stronger under high prosocial climate. Net pattern: veteran-colleague interactions transmit political skill into growth rates of adjustment, whereas supervisor interactions transmit it into early-entry states — the effect is differentiated by agent, not uniform.
 
 **Theoretical Contribution**
 The paper integrates two previously disconnected social-interaction-based mechanisms in the political skill literature (vertical vs. horizontal) into a single multi-agent interactionist model and shows that they map onto distinct adjustment dynamics — supervisor interactions to early-entry states and veteran-colleague interactions to growth rates — thereby reconciling disparate views about how political skill operates and overcoming the literature's prior treatment of social contacts as undifferentiated. By identifying prosocial climate for newcomers as a moderator, it advances a person-by-situation account in which newcomer adjustment is a joint function of newcomer social skill and insider prosociality, and extends the political skill nomological network into the underexamined newcomer socialization domain.
