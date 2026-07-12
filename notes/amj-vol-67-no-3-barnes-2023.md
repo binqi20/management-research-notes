@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-3/pdfs/Barnes 2023 Becoming a Right-Hand Partne
 text_path: "library/AMJ/vol-67-no-3/text/Barnes 2023 Becoming a Right-Hand Partner How Lower-Power Employees Heedfully Challenge Organizational Leaders.txt"
 ingested_at: "2026-05-07"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords:
@@ -60,6 +62,9 @@ evidence:
   theories_overview: "we rely on Magee and Galinsky's (2008)"
   methods_overview: "We employed a grounded theory methodology to"
   keywords_source: "we develop a process of heedful challenging: the process of presenting alternative perspectives to someone in an individualized manner"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "used axial coding to organize the first-order codes"
+  findings_overview: "utilizes their knowledge of the leader and their understanding of how organizational issues are impacting employees to thoughtfully challenge the leader"
 ---
 
 # Becoming a Right-Hand Partner: How Lower-Power Employees Heedfully Challenge Organizational Leaders
@@ -70,6 +75,9 @@ Powerful leaders need to be challenged and pushed to consider uncontemplated per
 **Research Question**
 How does a lower-power employee become a right-hand partner and influence a high-power organizational leader?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs: heedful challenging; right-hand partner (a lower-power, strategic partner to a powerful leader who possesses inimitable credibility and an ability to discreetly influence the leader); unwavering loyalty; unequal-power relationships
 - Process / phases: Phase 1 — Interpersonal learning (acquiring detailed knowledge about the leader through observing publicly and inquiring privately); Phase 2 — Proxying (serving as a deputy or representative of the leader by extending presence and synthesizing information); Phase 3 — Perspective-broadening (challenging the leader by identifying blind spots and illuminating implications of past or intended behavior, conducted in private settings)
@@ -79,6 +87,20 @@ How does a lower-power employee become a right-hand partner and influence a high
 - Boundary conditions / breakdowns: process can stall at each phase — Phase 1 fails when leaders refuse to invest time; Phase 2 fails when leaders or colleagues resist the COS as a representative; Phase 3 fails when COSs lack confidence or leaders dismiss lower-power input
 
 The process model proposes that right-hand partner emergence unfolds sequentially: lower-power employees first acquire deep knowledge of the leader's intra- and interpersonal processes through observation and probing inquiry, then leverage that knowledge by proxying for the leader in public — gathering ground-level intelligence others would not share with a powerful figure — and finally use the combined understanding of the leader's blind spots and the organization's perspectives to challenge the leader privately, framing critique as perspective-broadening rather than direct attack. Continuous displays of loyalty signal that the challenge is constructive and aligned with the leader's interests, enabling a "yes person" tendency and ingratiation to be replaced by candid, customized, hard-to-deliver feedback that the leader integrates without feeling threatened.
+
+**Data & Measures**
+- Design: inductive grounded theory (Strauss & Corbin, 1998; Gioia, Corley, & Hamilton, 2013) — an interpretive, theory-building study, not a hypothesis-testing or causal design.
+- Data corpus: 74 individuals (61 chiefs of staff and 13 of their matched leaders) gathered across four iterative phases of collection and analysis — 44 one-on-one COS interviews (41 by phone, 3 in person; M = 45 min), 13 matched-leader phone interviews (M = 23 min), and three 90-minute Zoom focus groups with 17 COSs; all interviews and focus groups were recorded and transcribed verbatim.
+- Coding: two authors coded in Dedoose using in vivo open codes from participants' wording, condensed into a nonredundant codebook of nearly 250 open codes; axial coding organized first-order codes into second-order analytical themes, and theoretical coding grouped these into aggregate dimensions (the Figure 1 data structure).
+- Trustworthiness: triangulation through matched-leader interviews and multiple interviewers/coders, theoretical saturation, and member checking with two COSs and one leader who confirmed the model.
+
+**Key Findings**
+- The study induces a process model of right-hand partner emergence through heedful challenging — presenting alternative perspectives to the leader in an individualized manner — unfolding in three sequential phases: (1) interpersonal learning (observing publicly and inquiring privately to acquire detailed knowledge of the leader); (2) proxying (extending the leader's presence and synthesizing on-the-ground information); and (3) perspective-broadening (challenging the leader by identifying blind spots and illuminating the implications of their behavior, conducted in private).
+- Continuous displays of loyalty, communicated before Phase 1 and reinforced throughout, form the relational foundation that licenses candid challenge and defies the prevailing view that unequal-power relationships are transactional and self-interested.
+- Refined conceptualization: a right-hand partner is a lower-power, strategic partner who possesses inimitable credibility and the ability to discreetly influence the leader; the role's defining characteristics are strategic partnership, inimitable credibility, and hidden influence.
+- Drawbacks: the relationship is one-sided (the partner deprioritizes their own career to amplify the leader) and yields limited recognition (success is defined by the leader's success, with no tangible individual output).
+- Breakdowns (from a deliberate search for disconfirming evidence): the process can stall at each phase — Phase 1 fails when leaders will not invest time, Phase 2 fails when leaders or colleagues resist the COS as a representative, and Phase 3 fails when COSs lack confidence or leaders dismiss lower-power input.
+- The model was corroborated by matched leaders' accounts and confirmed through member checking.
 
 **Theoretical Contribution**
 The paper introduces right-hand partners to management scholarship and articulates a process model of their emergence through heedful challenging that addresses three theoretical gaps. First, it extends theory on unequal-power relationships by showing how lower-power employees can wield genuine upward influence without resorting to ingratiation or self-interested issue selling, defying the prevailing view that asymmetric-power dyads are transactional. Second, it operationalizes Galinsky and colleagues' theorizing on the synergistic effects of power and perspective-taking by demonstrating that what is incompatible within a single individual can be realized within a dyad — with the lower-power employee functioning as the perspective-taking catalyst. Third, it advances the dissent-based interacting literature (employee voice, upward influence, issue selling, person-focused feedback) by specifying when, where, and how to deliver hard-to-deliver content (personal critiques, contrarian views) so that it resonates rather than damages the relationship.

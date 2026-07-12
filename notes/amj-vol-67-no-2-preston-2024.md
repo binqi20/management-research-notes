@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-2/pdfs/Preston 2024 Echoes from the Past The Im
 text_path: "library/AMJ/vol-67-no-2/text/Preston 2024 Echoes from the Past The Impact of Racial Transference on Leader Selection during Succession.txt"
 ingested_at: "2026-05-10"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-mixed"
 keywords: ["racial transference", "racial bias", "leader succession", "leader selection", "leader categorization theory", "predecessor performance", "stereotypes", "prototypes", "trait imputation", "Glass Cliff effect", "White Savior effect", "leader transference"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "we introduce racial transference as a bias"
   methods_overview: "an archival study, a preregistered experiment, and three supplementary studies"
   keywords_source: "racial bias during succession is driven by evaluators' tendency to generalize between racially similar predecessors and candidates"
+  hypotheses_source: "Hypothesis 1. Predecessor performance will moderate"
+  measures_overview: "selection, which we coded as 0 for non-Black coach"
+  findings_overview: "evaluators select (reject) candidates who are racially similar to successful (unsuccessful) predecessors"
 ---
 
 # Echoes from the Past: The Impact of Racial Transference on Leader Selection during Succession
@@ -52,6 +57,10 @@ The dominant perspective used to understand racial bias in leader selection deci
 **Research Question**
 How does racial similarity between a predecessor and a leader candidate bias evaluators' selection decisions during succession, and does the dominant framework — leader categorization theory — adequately explain this bias, or is a distinct mechanism (racial transference) at work?
 
+**Hypotheses / Propositions**
+- H1: Predecessor performance will moderate the association between predecessor–candidate racial similarity and leader selection — when the predecessor is a low performer, evaluators will be less likely to select a candidate who is racially similar (versus dissimilar) to the predecessor; when the predecessor is a high performer, evaluators will be more likely to select a racially similar (versus dissimilar) candidate.
+- H2: The role of transference as a mediator between predecessor–candidate racial similarity and leader selection will be moderated by predecessor performance (a moderated-mediation prediction).
+
 **Mechanism Process**
 - IV(s): Predecessor–candidate racial similarity (Study 1: predecessor race coded against successor race; Study 2 and supplementary studies: 2x2 manipulation of racial similarity, yes vs. no).
 - DV(s): Leader selection — Black vs. non-Black coach appointment in Study 1 (binary); willingness to appoint the candidate (1–7 scale) and a 3-item perceived leader-potential scale in Study 2; Asian/Black/White choice-set selection in Supplementary Study 1.
@@ -60,6 +69,16 @@ How does racial similarity between a predecessor and a leader candidate bias eva
 - Ruled-out alternative mechanisms: leader prototyping, racial entitativity, perceived group similarity (Supplementary Study 1).
 
 The mechanism unfolds in two stages. First, racial similarity between a predecessor and candidate triggers trait imputation: because racial similarity is easy to observe and confuses the two leaders in episodic memory, evaluators falsely generalize the predecessor's personality traits to the candidate, even when those traits contradict prevailing racial stereotypes and prototypes. Second, drawing on attribution theory and inference-based approaches to leadership, evaluators infer whether the imputed traits are desirable based on the predecessor's performance — if the predecessor succeeded, the trait is virtuous; if the predecessor failed, the same trait is liability. The conjunction of trait imputation and performance attribution produces a within-race contingent bias: candidates racially similar to high-performing predecessors are favored, while those similar to low-performing predecessors are devalued; candidates racially dissimilar to predecessors are unaffected by predecessor performance.
+
+**Data & Measures**
+Two featured quantitative studies (the dominant method) plus three supplementary experiments.
+- Study 1 (archival): 186 head-coach appointments in major NCAA Division I men's basketball conferences, 2000–2020 (135 White and 51 Black coach appointments). DV = leader selection (0 = non-Black successor, 1 = Black successor); IV = predecessor race (0 = White, 1 = Black); moderator = predecessor performance = the prior coach's win–loss record (objective team winning percentage). Controls: labor-pool percentage of Black coaches, reason for predecessor departure, internal vs. external hire, predecessor tenure, Hall-of-Fame status, and prior Black coach in team history, with team fixed effects. Estimation: binary logistic regression. The design is associational — the predictors temporally precede the outcome, but there is no randomization.
+- Study 2 (preregistered randomized experiment): 491 full-time hiring professionals in a 2 (predecessor–candidate racial similarity: yes/no) × 2 (predecessor performance: low/high) between-subjects design evaluating a fictitious VP-of-Marketing candidate. DV = willingness to appoint (1–7); robustness DV = 3-item leader-potential scale (α = .91). Mediator = transference, a false-alarm score (0–1) on a Ritter & Lord (2007) memory-recognition task. Analysis: two-way ANOVA, simple-effects tests, and Hayes (2013) PROCESS moderated-mediation with 10,000 bootstraps.
+
+**Key Findings**
+- Study 1 (archival): the predecessor race × predecessor performance interaction on selecting a Black successor was significant (b = 0.19, p < .001). Simple slopes were asymmetric — when the predecessor was a low performer, a Black (versus White) predecessor was significantly less likely to be succeeded by a Black coach (b = -4.26, p < .001); when the predecessor was a high performer, the positive slope was non-significant (b = 1.59, p = .15). The interaction is supported, but only the low-performance arm reaches significance in the archival data.
+- Study 2 (experiment): the racial similarity × performance interaction on willingness to appoint was significant, F(1, 487) = 15.50, p < .001. Under low predecessor performance, evaluators were less willing to appoint racially similar (M = 4.38) than dissimilar (M = 4.86) candidates (p = .001); under high performance, they were more willing to appoint racially similar (M = 5.28) than dissimilar (M = 4.93) candidates (p = .02) — both simple effects significant, supporting H1. Moderated mediation via transference supported H2: a negative indirect effect under low performance (-.09, 95% CI [-.20, -.02]) and a positive one under high performance (.09, 95% CI [.03, .17]); index of moderated mediation = .19, 95% CI [.07, .34].
+- Convergence and boundaries: Supplementary Study 1 (n = 684) replicated the pattern with an Asian/Black/White choice set and ruled out leader prototyping and racial entitativity as mechanisms; Supplementary Study 2 (n = 601) found evaluators more familiar with the predecessor (Georgia residents) were more susceptible to transference; Supplementary Study 3 (n = 299) found predecessor–candidate gender similarity is a boundary condition. The archival and experimental evidence converge on the moderated interaction, diverging only in that Study 1's high-performance simple slope is non-significant.
 
 **Theoretical Contribution**
 The paper introduces racial transference as a distinct, episodic-memory-based racial bias that operates in succession contexts and supplants the categorization mechanisms (stereotyping, prototyping) at the heart of leader categorization theory. By integrating theory on leader transference (Ritter & Lord, 2007), attribution theory, and racial categorization, the authors argue that racial similarity is a necessary precondition for leader transference and that evaluators generalize not only personality traits but also performance expectations between racially similar leaders. This recasts canonical findings such as the Glass Cliff and White Savior effects as artifacts of within-race preference shifts rather than between-race preferences, and predicts that — over the long run — racial transference may slowly increase, rather than decrease, the representation of racial minority leaders, raising an ethical quandary because the mechanism of progress is itself a racial bias.

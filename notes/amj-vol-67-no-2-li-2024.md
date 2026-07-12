@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-2/pdfs/Li 2023 Before Birth How Provisional Spa
 text_path: "library/AMJ/vol-67-no-2/text/Li 2023 Before Birth How Provisional Spaces Shape the Localized Emergence of New Organizational Forms.txt"
 ingested_at: "2026-05-10"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -60,6 +62,9 @@ evidence:
   theories_overview: "For example, the density dependence model reveals"
   methods_overview: "of piecewise-exponential hazard rate models of a"
   keywords_source: "theater forms: nickelodeon, movie house, and movie palace. We advance scholarship on"
+  hypotheses_source: "Hypothesis 1. The higher the cumulative number of"
+  measures_overview: "measure the instantaneous rate of a community"
+  findings_overview: "founding of its first nickelodeon increases by 24.7%."
 ---
 
 # Before Birth: How Provisional Spaces Shape the Localized Emergence of New Organizational Forms
@@ -70,6 +75,11 @@ The literature on evolution of organizational forms has remained largely silent 
 **Research Question**
 How do prebirth dynamics — that is, market pioneers' experimentation with an innovation in preexisting "provisional spaces" — affect the emergence patterns of the first organizational instances of a new form across geographic communities? In particular, where and when does the first organization dedicated to exploiting an innovation appear, and which type of new form arises locally?
 
+**Hypotheses / Propositions**
+- H1 (positive): The higher the cumulative number of provisional spaces in a geographic community, the higher the probability that the community founds its first dedicated organization — the first movie theater of any form.
+- H2 (positive / accelerating): The higher the number of provisional spaces that perceptually cluster into a specific proto-form, the sooner the community experiences its first venture founding embodying a form with features similar to that proto-form (highbrow spaces → movie house/palace; lowbrow spaces → nickelodeon).
+- H3 (negative / delaying): The higher the number of provisional spaces that cluster into a specific proto-form, the later the community experiences its first founding embodying a form with features dissimilar from that proto-form (e.g., lowbrow spaces delay the highbrow movie house/palace; highbrow spaces delay the lowbrow nickelodeon).
+
 **Mechanism Process**
 - IV(s): Cumulative number of provisional spaces in a community (all types; highbrow; lowbrow), discounted 25% per year and lagged one year.
 - DV(s): Community-level instantaneous founding rate of (a) the first dedicated movie theater of any form, (b) the first nickelodeon (lowbrow form), and (c) the first movie house or palace (highbrow form), 1896–1927.
@@ -77,6 +87,19 @@ How do prebirth dynamics — that is, market pioneers' experimentation with an i
 - Moderators: The same-type alignment between provisional space (lowbrow vs. highbrow) and the form being founded; the paper predicts that mismatched provisional spaces (e.g., highbrow spaces vis-à-vis nickelodeons) delay rather than accelerate same-community emergence.
 
 The proposed mechanism is that, during the prebirth stage between an innovation's creation and the founding of the first dedicated organization, market pioneers experiment in small-scale, accessible preexisting venues. This experimentation disseminates community-specific knowledge about possible applications and gives rise to a proto-form that potential founders use as a template. Where lowbrow (or highbrow) provisional spaces accumulate, potential founders perceive a corresponding proto-form, accelerating emergence of a same-form dedicated organization (nickelodeon, or movie house/palace) and slowing the dissimilar one. Localized opportunity structure thus arises endogenously from the ecology of provisional spaces within a place.
+
+**Data & Measures**
+- Data: Archival population of 927 movie-showing venues (286 provisional spaces; 641 dedicated movie theaters = 453 nickelodeons, 166 movie houses, 22 movie palaces) across 75 officially designated Chicago community areas, 1896–1927. Venue and cultural-status data come from directories, movie-theater histories, IMDb, and the Chicago Tribune Display Ad section (used to date the earliest movie showings); community demographics come from the Local Community Fact Book, U.S. Census, and Encyclopedia of Chicago. Highbrow vs. lowbrow status was coded with a Theater Historical Society of America archivist from show type, ticket price, architecture, and operating philosophy.
+- DV: Community's instantaneous founding rate (hazard) of its first movie theater, modeled separately for (a) any form (H1), (b) the lowbrow nickelodeon, and (c) the highbrow movie house or palace (H2/H3); communities with no founding by 1927 are right-censored.
+- IV: Community-specific cumulative count of provisional spaces from 1896 to year t — all spaces (H1), highbrow, and lowbrow (H2/H3) — discounted 25% per year and lagged one year to avoid simultaneity.
+- Controls (lagged one year): log human population, normalized community median income, % with at least a high-school degree, % foreign-born, dwelling density, university dummy, % professional workers, recreational-reputation dummy, average movie runtime, number of films released, and neighboring communities' density of the emerging form.
+- Estimation / identification: continuous-time event-history analysis with piecewise-exponential hazard models estimated by maximum likelihood (Stata stpiece) on a split-spell file, with robust Huber–White standard errors clustered by community. The design is associational/archival — the authors describe the relationships as correlational, not causal — and inference is supported by a placebo test (provisional spaces should not predict trade-school emergence) plus robustness checks using alternative discount rates and discrete-time complementary log-log models. No formal mediation is tested; the proto-form is the theorized, unmeasured cognitive mechanism.
+
+**Key Findings**
+- H1 corroborated: the cumulative number of all provisional spaces significantly increases the founding rate of the first movie theater of any form (Model 4.2, b = 0.601, robust SE = 0.248); moving the count from 0 to its mean raises the founding probability by 30.3%.
+- H2 supported in both same-form tests: highbrow provisional spaces significantly increase the first movie house/palace founding rate (Model 4.4, b = 1.085, SE = 0.372; +38.5% at the mean), and lowbrow provisional spaces significantly increase the first nickelodeon founding rate (Model 4.6, b = 1.578, SE = 0.394; +24.7% at the mean).
+- H3 only partially corroborated (asymmetric): as predicted, lowbrow provisional spaces significantly delay the first highbrow movie house/palace (Model 4.4, b = −0.877, SE = 0.323; founding rate −11.6% at the mean), but highbrow provisional spaces have no significant effect on the first lowbrow nickelodeon (Model 4.6, b = 0.385, SE = 0.290, n.s.). The authors state: "Considered together, Hypotheses 1 and 2 are strongly supported. Hypothesis 3 is partially corroborated."
+- Robustness: results hold under alternative discount rates and discrete-time event-history models, and a placebo analysis finds that provisional spaces do not predict the emergence of trade schools.
 
 **Theoretical Contribution**
 The paper develops a predictive theory of provisional spaces that situates the first organizational instantiation of a new form in a concrete spatiotemporal context, displacing the prevailing "genetics view" that treats the first organization as random variation. It introduces the concept of a proto-form to link prebirth experimentation to community-specific categorization processes, and articulates an ecological perspective on spaces that connects place-level form emergence to populations of small accessible settings within a community.

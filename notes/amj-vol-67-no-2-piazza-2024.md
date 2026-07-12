@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-2/pdfs/Piazza 2023 The Publicization of Organiz
 text_path: "library/AMJ/vol-67-no-2/text/Piazza 2023 The Publicization of Organizational Misconduct A Social Structural Approach.txt"
 ingested_at: "2026-05-10"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -58,6 +60,9 @@ evidence:
   theories_overview: "communities have structural features that affect the social cost of making information public as well as its dissemination"
   methods_overview: "random-effects panel ordinary least squares"
   keywords_source: "we develop and test a theory of the publicization of organizational misconduct"
+  hypotheses_source: "Hypothesis 1. Community homogeneity is associated"
+  measures_overview: "We use a Herfindahl–Hirschman Index (HHI)"
+  findings_overview: "is associated with a 30% decrease in misconduct"
 ---
 
 # The Publicization of Organizational Misconduct: A Social Structural Approach
@@ -68,6 +73,11 @@ Scandals are momentous events with far-reaching consequences for organizations a
 **Research Question**
 How do social-structural features of communities — specifically community homogeneity, the local embeddedness of the offending organization, and community social connectedness — shape the likelihood that organizational misconduct will be publicized (i.e., enter the public domain via media coverage), and thereby give rise to scandal?
 
+**Hypotheses / Propositions**
+- H1: Community homogeneity is associated with a lower likelihood of publicization of organizational misconduct (negative).
+- H2: The embeddedness of the offending organization in the community is associated with a lower likelihood of publicization of misconduct (negative).
+- H3: Community social connectedness is associated with a higher likelihood of publicization of organizational misconduct (positive).
+
 **Mechanism Process**
 - IV(s): Community homogeneity (ethnic HHI); Catholic Church embeddedness (Catholic share of diocesan population); Community social connectedness (per-capita density of religious, civic, social, political, professional, recreational organizations).
 - DV(s): Misconduct publicization — logged count of first-time media articles covering newly publicized misconduct cases per diocese-decade; supplementary DV: time elapsed between misconduct occurrence and first publicization at the offender level.
@@ -75,6 +85,23 @@ How do social-structural features of communities — specifically community homo
 - Moderators: Not formally tested; "Post-Spotlight" period, diocese influence, political orientation, and Pulitzer-newspaper density included as controls.
 
 The mechanism operates through two structural channels. First, homogeneous communities and communities where the offending organization is highly embedded raise the social cost of speaking up: closely-knit ties, shared identity, and material/symbolic dependence on the offending organization mean that disclosing misconduct threatens the ingroup with shame, ostracism, and collective scandal-contamination, deterring informants. Second, social connectedness — bridging social capital created by religious, civic, and recreational associations — enables boundary-spanning rumor diffusion across social groups, so misconduct information escapes its narrow social circle, gains credibility through repetition, and reaches journalists who require multi-source corroboration. Heterogeneous, well-connected, weakly-embedded communities therefore publicize misconduct most readily.
+
+**Data & Measures**
+Panel of 176 U.S. Catholic dioceses tracked at four decade points (1980, 1990, 2000, 2010); 704 diocese-decade observations. Misconduct and coverage data were web-scraped from the BishopAccountability watchdog archive; covariates draw on U.S. Census Bureau data, the Association of Religion Data Archives (ARDA), and the County Business Patterns database.
+- DV: Misconduct publicization = logged count of first-time articles reporting a not-previously-known misconduct occurrence within the diocese during the prior decade.
+- IV (H1): Community homogeneity = ethnic Herfindahl-Hirschman Index (HHI) from U.S. Census ethnic-group counts (value of 1 = greatest homogeneity).
+- IV (H2): Catholic Church embeddedness = ratio of Catholics in the diocese (ARDA survey data) to total diocese population (U.S. Census).
+- IV (H3): Community social connectedness = per-capita density of religious, civic, social, political, professional, and recreational associations (County Business Patterns NAICS codes), normalized by diocese population.
+- Controls: Post-Spotlight dummy, logged diocese population, Vote for President: Republican, density of Pulitzer-winning newspapers, diocese influence, cumulative accused priests, cumulative estimated victims.
+- Estimation: random-effects panel OLS at the diocese-decade level; a supplementary cross-sectional negative binomial model for time-to-publicization at the offender level (n = 2,091). The authors state the account is associational, not causal, and address omitted-variable bias through robustness checks, fixed-effects specifications, and a generalized sensitivity analysis rather than a causal-identification design.
+
+**Key Findings**
+All three hypotheses were supported. In the main random-effects panel OLS at the diocese-decade level (Table 3):
+- H1 supported: community homogeneity carried a negative, significant coefficient; in the full model (Model 6) a one-standard-deviation increase was associated with an ~30% decrease in misconduct publicization.
+- H2 supported: Catholic Church embeddedness was negative and significant; a one-standard-deviation increase in the Catholic share of the diocese was associated with an ~11.7% decrease in publicization.
+- H3 supported: community social connectedness was positive and significant; a one-standard-deviation increase was associated with an ~35.8% increase in publicization.
+
+The density of Pulitzer-winning newspapers was non-significant, weighing against the alternative that journalistic talent drives publicization. The supplementary offender-level negative binomial models for time-to-publicization (Table 4) corroborated the pattern: community homogeneity (H1) and Catholic Church embeddedness (H2) were associated with a longer time to publicization, and social connectedness (H3) with a shorter time. The authors characterize the overall pattern as strong support for all hypotheses, while cautioning that the evidence is associational rather than causal.
 
 **Theoretical Contribution**
 The paper conceptualizes scandals and misconduct publicization as socially embedded phenomena rather than products of external shocks, lone whistleblowers, or investigative journalism alone. It extends scholarship on organizational scandals by showing that community-level social structure — homogeneity, organizational embeddedness, and bridging social capital — independently determines whether wrongdoing surfaces, even after controlling for the actual prevalence and severity of misconduct. By reframing whistleblowing as a collective community-level response, the study bridges the organization-community nexus with literatures on scandal, deviance, and social capital.

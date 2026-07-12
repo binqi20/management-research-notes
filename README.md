@@ -549,6 +549,21 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.39.0 v3 backfill batch 06 (2026-07-12, 1,167 notes):**
+  Upgrades **AMJ volume 67, issue 3 and issue 2, 21 notes total** to the v3
+  schema — all v2 augmentations. The **record total is unchanged at 1,167**;
+  the version-tier census shifts to 61 v1, 958 v2, 148 v3. Each touched note
+  passed a fresh full independent 9-field rubric-v2 audit: **189 / 189
+  prose-field verdicts `SUPPORTED`**, 0 `PARTIAL`, 0 `UNSUPPORTED`,
+  0 `CONTRADICTED` (all 21 notes overall pass), after two evidence-based
+  repairs cleared in a single round — one new-field precision fix to Data &
+  Measures (Preston relabeled Study 1's 135/51 White/Black split from
+  "predecessors" to the appointed coaches, matching the paper's own count) and
+  one legacy-limitations fix (Compagni's invented "Steering Committee meetings",
+  a specific absent from the paper text). A fresh re-audit of the two repaired
+  notes returned every field `SUPPORTED`. `library.bib` regenerated
+  byte-identical (the all-augmentation signature — only SQLite and CSV changed).
+
 - **v0.38.0 v3 backfill batch 05 (2026-07-12, 1,167 notes):**
   Upgrades **AMJ volume 67, issue 5 and issue 4, 18 notes total** to the v3
   schema — all v2 augmentations. The **record total is unchanged at 1,167**;
@@ -720,7 +735,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 979 v2 notes, and 127 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 958 v2 notes, and 148 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -853,7 +868,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.38.0},
+  version      = {0.39.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

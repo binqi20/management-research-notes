@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-2/pdfs/Rostain 2024 Vicarious Coding Breaching 
 text_path: "library/AMJ/vol-67-no-2/text/Rostain 2024 Vicarious Coding Breaching Computational Opacity in the Digital Era.txt"
 ingested_at: "2026-05-10"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords: ["computational opacity", "vicarious learning", "practical computational literacy", "representations", "digital work", "machine operators", "programmers", "CNC machining", "digital divide", "ethnography"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Practical computational literacy is learned vicari"
   methods_overview: "Drawing on an ethnography of a machine-shop, we show how operators"
   keywords_source: "develop practical computational literacy skills"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "read and reread these data and coded them, paying"
+  findings_overview: "those without programming capacities may decrease their dependence on programmers"
 ---
 
 # Vicarious Coding: Breaching Computational Opacity in the Digital Era
@@ -51,6 +56,9 @@ Digital representations are ubiquitous in the workplace. Screen displays, foreca
 
 **Research Question**
 How do nonprogrammers — workers who routinely work *from* computationally generated representations rather than write code — breach the computational opacity of those representations and become able to diagnose and fix misalignments between representations and the physical world without depending on programmers?
+
+**Hypotheses / Propositions**
+Not reported in paper
 
 **Mechanism Process**
 - Key constructs: digital representations; computational opacity (closed and unpliable representations); practical computational literacy (a layered, three-skill capacity); vicarious learning across occupational groups; misalignment between representations and the physical world.
@@ -64,6 +72,12 @@ How do nonprogrammers — workers who routinely work *from* computationally gene
 - Emergent outcomes: machine operators autonomously fix and even improve programming scripts, anticipate and avoid problems, gain momentary autonomy and discretion, and acquire informal status as "smart" workers assigned the most complex molds; programmers' scripts are upgraded and reused, generating short- and long-term organizational benefits.
 
 The process Rostain and Huising theorize is one of vicarious accumulation rather than apprenticeship: machine operators are not granted legitimate peripheral participation in programming work, yet by repeatedly observing and listening to programmers solve misalignment problems aloud they collect "tidbits" of computational symbols, syntax, and structure that accrete, over time, into a practical (functional, problem-focused) literacy. The three skills layer cumulatively — visualizing first, then translating, then editing — and each layer relaxes the closure and unpliability of the representation. The result is a shift from working *from* representations (intimate with the physical, distant from the code) toward fleeting, problem-bounded moments of working *within* them, breaching computational opacity at the source rather than working around it.
+
+**Data & Measures**
+Eight-month inductive ethnography of a single CNC machine-shop (Formco), conducted by the first author from February to December 2018, two to four days per week. The data corpus comprises 28 semi-structured interviews (nine machine operators plus seven managers, four top-level managers, two customers, two salespeople, three assistants, and the financial director; lasting 45 minutes to three hours), shadowing across the sales, design, programming, machining, and fitting departments, detailed field notes, collected documentation, photographs, and video recordings. The first author reviewed the production of 90 fully observed molds and sorted them into 57 button-pushing and 33 deviating episodes; of the 33 deviating episodes, 9 were simple execution errors and 24 were more complex problems that required programmer help. The 24 complex cases were compiled, then read, reread, and hand-coded for the source of the problem, the actors involved, and the actions involved in diagnosing and fixing it (open coding), then contrasted and ordered chronologically. Within the 24, the operator observed the programmer fix the problem in 13 cases, diagnosed the problem independently but relied on the programmer for the solution in 5, and independently reconceptualized and reprogrammed the work in 6. Iterating this coding with literatures on representations and vicarious learning produced the three-stage learning model. The design is interpretive and inductive; the paper makes no causal-identification claim.
+
+**Key Findings**
+Machine operators, lacking formal training or legitimate peripheral participation, vicariously acquire "practical computational literacy" by observing and listening to programmers narrate ("fix aloud") the misalignment problems operators bring them. This literacy accumulates as three skills, built one at a time: (1) visualizing the misalignment between the tool sheet's natural language and the physical machine, tool, and mold; (2) translating between the natural language of the tool sheet and the symbols, syntax, and block structure of the programming script (e.g., reading T02 as milling cutter number 2 and M06 as "picking the tool"); and (3) editing the code — deleting and inserting symbols and copying, pasting, and moving blocks of script — to realign the representation with the physical entity. As the skills layer, operators experience the representation as progressively more open and then pliable, breaching computational opacity at the point of production and decreasing their dependence on programmers. Practically literate operators anticipate and avoid problems, fix problems autonomously, and improve programming scripts that programmers later reuse, benefiting the organization; they also gain momentary autonomy and informal status as "smart" workers assigned the most complex molds, though the skill was not formally rewarded with higher pay or job level. The authors identify enabling conditions — misalignment problems that require a computational fix, observation of programmers who narrate their work without protecting their jurisdiction, and access to the programming script — and note that where the transformational technology is less scrutable (e.g., learning algorithms), vicarious coding is "possible but limited."
 
 **Theoretical Contribution**
 The paper foregrounds *computational opacity* — the black-boxing of the coding work that produces representations — as a distinct and increasingly consequential form of organizational opacity, and theorizes *practical computational literacy* (visualize, translate, edit) as a means of breaching it that goes beyond the workaround literature on misalignment between representations and the physical world. By documenting *vicarious coding* — the cross-occupational, observation-based acquisition of programming skill outside legitimate peripheral participation — the paper extends vicarious-learning theory beyond the within-occupation peer setting in which it has typically been studied, and identifies the conditions (misalignment-driven help-seeking, narrated programmer problem-solving, and access to programming scripts) under which a translation-and-experimentation pathway becomes viable for outsiders.

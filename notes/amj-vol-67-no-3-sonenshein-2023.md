@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-3/pdfs/Sonenshein 2023 When the Symphony Does J
 text_path: "library/AMJ/vol-67-no-3/text/Sonenshein 2023 When the Symphony Does Jazz How Resourcefulness Fosters Organizational Resilience during Adversity.txt"
 ingested_at: "2026-05-07"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords: ["organizational resilience", "resourcefulness", "crisis management", "promotive resourcefulness", "preventative resourcefulness", "adversity orientation", "organizational identity", "regulatory focus"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Building on research on resilience, resourcefulness, and crisis management, we induce a process model"
   methods_overview: "Using a grounded theory study of two prominent performing arts organizations during the COVID-19 pandemic"
   keywords_source: "We find that organizations approach adversity using two types of resourcefulness."
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Our data analysis unfolded in five steps."
+  findings_overview: "In contrast, preventative resourcefulness focuses on minimizing worst-case outcomes, which leads to a lost organizational identity and relatively weak adversity adjustment."
 ---
 
 # When the Symphony Does Jazz: How Resourcefulness Fosters Organizational Resilience during Adversity
@@ -51,6 +56,9 @@ Using a grounded theory study of two prominent performing arts organizations dur
 **Research Question**
 How do established organizations use resourcefulness to act resiliently during a crisis?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Triggering conditions: Adversity orientation (provisional vs. categorical) shapes how members perceive uncertainty and time horizons
 - Key constructs / tensions: Promotive resourcefulness (opportunity-focused) vs. preventative resourcefulness (worst-case-focused); crisis agency, trust, hopefulness vs. hopelessness
@@ -60,6 +68,12 @@ How do established organizations use resourcefulness to act resiliently during a
 - Boundary conditions: Established (not entrepreneurial) organizations facing industrywide crisis with similar resource stocks
 
 The process model explains organizational resilience as emerging from how members orient to adversity at its onset. A provisional orientation (embracing uncertainty, short-term acting) empowers crisis agency and promotive resourcefulness, which becomes self-reinforcing through cycles that endogenously generate trust, hopefulness, and additional agency, expanding organizational identity and producing resilient acts. A categorical orientation (needing certainty, long-term planning) collapses crisis agency, channels members into preventative resourcefulness focused on survival, and triggers cycles of low trust and hopelessness that erode identity. Critically, financial, emotional, and operational updating can break the preventative cycle and reorient organizations toward promotive resourcefulness even after a poor initial response.
+
+**Data & Measures**
+Data corpus: 41 semi-structured interviews (22 at Fortis, 19 at Revenite) with management, staff, musicians, and board members; 19.5 hours of meeting observations; and a 1,095-page archive of internal documents, emails, financial records, press releases, and social-media content, collected September 2020 to July 2022. Cases were chosen by maximum-variation and theoretical sampling: Fortis as a deviant case that kept performing versus Revenite, which suspended operations. Following grounded theory (Strauss & Corbin, 1990; Miles & Huberman), analysis unfolded in five steps: contact summaries and an event timeline, first-order codes that stayed close to informants' meaning-making, second-order categories, and aggregate theoretical constructs, organized in Nvivo and triangulated across interviews, observations, and archives (Lincoln & Guba, 1985); theoretical saturation was reached in January 2023. The design is inductive and interpretive rather than causal; coding structures and supporting quotes appear in Tables 2-7.
+
+**Key Findings**
+The study induces a process model built on two qualitatively distinct types of resourcefulness. At Fortis, a provisional adversity orientation (embracing uncertainty, short-term acting) produced high crisis agency and promotive resourcefulness (opportunity-focused repurposing of resources), which became self-sustaining through two ampliative cycles (a generativity cycle that recursively built trust and crisis agency, and a hopefulness cycle), expanding organizational identity and yielding stronger adversity adjustment (moving from a 7.1M USD prepandemic loss to a 2.7M USD profit by 2022 and completing a full season). At Revenite, a categorical adversity orientation (needing certainty, long-term planning) collapsed crisis agency and channeled members into preventative resourcefulness (worst-case, survival-focused austerity), sustained by a preservational cycle that eroded trust and crisis agency and a hopelessness cycle, leading to a lost organizational identity and weaker adversity adjustment (furloughs, employee burnout, and eight musicians resigning). A third pathway shows that financial, emotional, and operational updating can shift preventative to promotive resourcefulness mid-crisis: Revenite turned around in year two (revenue rising to about 28.3M USD in the year ending July 2022), though the authors characterize this later "resiling" as qualitatively weaker than Fortis's trajectory, with unresolved trust issues and an expanded identity that was less robust and not encoded in an updated mission.
 
 **Theoretical Contribution**
 The paper develops a process theory of organizational resilience that integrates resourcefulness and crisis management literatures, distinguishing promotive and preventative resourcefulness as qualitatively different mechanisms tied to regulatory focus theory (Higgins, 1997). It theorizes endogenous resource creation through ampliative cycles and the role of organizational identity expansion as both an outcome and a fueling mechanism of sustained resilient action, moving beyond the static "bouncing back" vs. "bouncing forward" framing.

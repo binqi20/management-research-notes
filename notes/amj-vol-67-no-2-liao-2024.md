@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-67-no-2/pdfs/Liao 2023 The Gendered Liability of Vent
 text_path: "library/AMJ/vol-67-no-2/text/Liao 2023 The Gendered Liability of Venture Novelty.txt"
 ingested_at: "2026-05-10"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-mixed"
 keywords:
@@ -59,6 +61,9 @@ evidence:
   theories_overview: "Integrating insights from third-party bias research with social role theory"
   methods_overview: "OLS regression results testing the proposed"
   keywords_source: "three methodologically complementary studies"
+  hypotheses_source: "Hypothesis 1. Women will be more likely than men"
+  measures_overview: "We measured venture novelty"
+  findings_overview: "Our hypotheses receive support from results of three methodologically complementary studies"
 ---
 
 # The Gendered Liability of Venture Novelty
@@ -69,6 +74,10 @@ To hedge unforeseen risk, investors may prioritize male-led ventures that they a
 **Research Question**
 When are venture capital investors more apt to invoke the anticipated funding preferences of peer investors in ways that disfavor women entrepreneurs, and how do they develop such anticipation? Specifically, does venture novelty activate gendered venture norm violation judgments that translate into unpromising social approval forecasting and reduced funding support for women-led ventures?
 
+**Hypotheses / Propositions**
+- H1: Women (vs. men) are more likely to receive venture norm violation judgments from investors when they propose high-novelty (vs. low-novelty) ventures — a positive gender x venture-novelty interaction on norm violation judgments.
+- H2: Venture norm violation judgments and social approval forecasting serially mediate the gender x venture-novelty interaction on funding support, such that women proposing high- (vs. low-) novelty ventures receive harsher norm violation judgments, then less promising social approval forecasting, and ultimately less funding support (negative moderated serial mediation).
+
 **Mechanism Process**
 - IV(s): Entrepreneur gender (women vs. men).
 - Moderator: Venture novelty (high vs. low); in Study 2B, also venture gender type (male-typed vs. female-typed industry).
@@ -76,6 +85,12 @@ When are venture capital investors more apt to invoke the anticipated funding pr
 - DV(s): Funding support, measured as (a) likelihood of receiving investment / dichotomous deal outcome and (b) financial valuation or funding amount.
 
 Drawing on social role theory and third-party bias, the authors argue that women's gender role violations (being assertive, competitive, self-reliant as entrepreneurs) become particularly salient when paired with venture novelty, because novelty connotes adventurousness and norm-breaking that are at odds with women's prescribed communal role. This intensified perception of gender role violation spills over to harsher venture norm violation judgments, which then signal to investors that other investors will not endorse the venture (low social approval forecasting), ultimately leading investors to withhold funding. The effect is amplified when women lead novel ventures in male-typed industries, where industrial gender typing further exacerbates perceived role incongruity.
+
+**Data & Measures**
+Three studies. Study 1 is an archival, observational analysis of 895 Shark Tank pitches (2009-2019): independent raters coded venture novelty (single item — the extent a shark "commented that the venture was novel," 1-5) and venture norm violation judgments (the extent a shark "questioned whether the venture corresponded with the normative practices of relevant businesses," 1-5); entrepreneur gender = proportion of women in the unit; funding support = a dichotomous deal outcome plus the financial valuation of the deal; estimated via OLS and logistic regression with bootstrapped conditional indirect effects (PROCESS Model 7). Studies 2A and 2B are preregistered randomized experiments supplying causal inference. Study 2A is a 2 (gender) x 2 (venture novelty) between-subjects online crowdfunding experiment (282 Prolific funders): gender manipulated via voice, name ("Emily"/"Greg"), and icon; novelty via two pretested Shark Tank ventures; norm violation judgments and social approval forecasting each measured with three items (the latter adapted from Mueller et al., 2018), plus funding likelihood and funding amount; moderated serial mediation via PROCESS Model 83. Study 2B is a 2 x 2 x 2 between-subjects field experiment (362 private venture funders from a Germany-based investment firm) that adds venture gender type (male- vs. female-typed) as a third factor, using animated pitch videos and the same core measures.
+
+**Key Findings**
+Support for both hypotheses converges across the studies, though the full serial mediation was testable only in the two experiments. Study 1 (archival): H1 supported — the proportion of women entrepreneurs x venture novelty positively predicted norm violation judgments (b = .25, SE = .08, p = .003), with a significant positive simple slope only for high-novelty ventures; norm violation judgments in turn lowered the likelihood of a deal (e^b = .54, p < .001) and the deal valuation (b = -.30, SE = .12, p = .014). Because social approval forecasting was unobservable in the videos, Study 1 did not test the full H2 serial mediation (exploratory verbal coding was consistent with it). Study 2A (online experiment): H1 supported (gender x novelty on norm violation judgments, F[1,278] = 8.39, p = .004) and H2 supported — the negative gender-to-funding indirect path through norm violation judgments then social approval forecasting held for high-novelty ventures only. Study 2B (field experiment): H1 and H2 again supported; additionally, a significant three-way gender x novelty x venture-gender-type interaction (b = -1.17, SE = .44, p = .008) showed norm violation judgments peaked when women proposed male-typed novel ventures — a moderation observed in Study 2B but not in Study 1.
 
 **Theoretical Contribution**
 The paper extends the third-party bias literature by identifying venture novelty as a critical boundary condition that activates third-party gender bias and by showing that decision-makers may use gender as a cue to social legitimacy (not just status or competence) to resolve the third-party inference problem. It contributes to gender-stratification research in entrepreneurial finance by documenting an "entrepreneurial gender dilemma" — the very novelty that drives entrepreneurial success becomes a covert liability for women — and advances venture funding research by showing that beyond economic potential, investors weigh prospective endorsement from peer investors as a social-based criterion in funding decisions.

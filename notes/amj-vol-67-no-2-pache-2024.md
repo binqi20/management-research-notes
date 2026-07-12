@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-2/pdfs/Pache 2024 An Integrative Model of Hybri
 text_path: "library/AMJ/vol-67-no-2/text/Pache 2024 An Integrative Model of Hybrid Governance The Role of Boards in Helping Sustain Organizational Hybridity.txt"
 ingested_at: "2026-05-10"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords: ["hybrid organizations", "board governance", "organizational attention", "institutional logics", "work integration social enterprises", "faultlines", "relational leadership"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Hybrid organizations must sustainably attend to multiple goals embedded in different institutional spheres."
   methods_overview: "comparative case study (Eisenhardt, 1989) in the"
   keywords_source: "an integrative model of hybrid governance consisting of a protective board structure and relational leadership processes"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "based on their professional training and experience"
+  findings_overview: "cognitive and emotional conflicts and foster attentional engagement of both the board"
 ---
 
 # An Integrative Model of Hybrid Governance: The Role of Boards in Helping Sustain Organizational Hybridity
@@ -51,6 +56,9 @@ Hybrid organizations must sustainably attend to multiple goals embedded in diffe
 
 **Research Question**
 How can institutionally diverse boards of hybrid organizations effectively help these organizations sustain the pursuit of their multiple goals?
+
+**Hypotheses / Propositions**
+Not reported in paper
 
 **Mechanism Process**
 - Key constructs: protective board structure, relational leadership processes, enculturation processes, bridging processes, attentional engagement, faultlines, cognitive and emotional conflicts
@@ -62,6 +70,19 @@ How can institutionally diverse boards of hybrid organizations effectively help 
 - Emergent outcome: when protective structure combines with both relational processes, decision-makers attain dual-focus attentional engagement to multiple goals without distracting conflicts
 
 The integrative model of hybrid governance shows that institutionally diverse boards can sustain hybrid organizations' attention to multiple goals only when a protective board structure (which makes both logics available by enshrining their representation) is combined with relational leadership processes performed by a hybrid leader. Enculturation processes make logics cognitively accessible and emotionally salient to board members, while bridging processes activate both logics during decision-making by tying the board to senior managers' experience and translating board decisions back to the organization. Together, these mechanisms prevent the cognitive and emotional conflicts that arise from board faultlines and enable boards to fulfill their guardrail role.
+
+**Data & Measures**
+Inductive, interpretive comparative case design; patterns are identified across cases rather than estimated, and no causal identification is claimed.
+- Data corpus: 81 taped semi-structured interviews (30-180 minutes, conducted 2007-2008) with board members, senior managers, executive directors, and founders across the five focal WISEs (drawn from eight originally studied), plus 14 field-expert interviews; archival data (bylaws, board minutes, board packs, annual reports, roughly 300-900 pages per case); on-site observations over two-to-five-day site visits; and follow-up interviews in 2018, 2021, and 2022.
+- Attentional engagement: coded from "traces" of decision-makers' attention following established practice (Rerup, 2009), assessing how far board and senior-manager conversations focused on both social and commercial goals over 10-to-22-year windows; two patterns (oscillating vs. dual-focus) emerged inductively.
+- Logic representation: board members and senior managers were coded as representing the social logic, the commercial logic, or "hybrid" (building on DiMaggio & Powell, 1983), based on their professional training and experience, then triangulated with interview and observational data.
+- Reliability and analysis: two independent coders performed the power/logics coding to reduce coder bias, with disagreements resolved by consensus; within-case analysis preceded cross-case comparison (Eisenhardt, 1989).
+
+**Key Findings**
+- Two patterns of attentional engagement emerged. Three WISEs (RECYCLE, FORWORK, NOWASTE) showed "oscillating attentional engagement": decision-makers attended predominantly to one goal for one-to-six-year periods before switching, punctuated by severe cognitive and emotional conflicts and distracting attentional lapses. Two WISEs (TEMPO, RECRUIT) showed a previously undocumented "dual-focus attentional engagement": sustained simultaneous attention to both social and commercial goals without such lapses or intense conflict.
+- Dual-focus engagement co-occurred with the combination of a protective board structure (enshrined composition rules, typically via share ownership, that fix the balance of logics and prevent unintended power shifts) and relational leadership processes enacted by a hybrid leader: enculturation (cognitive and emotional interventions that reduce the gap between diverse board members) and bridging (aligning the board with senior managers in decision-making).
+- A protective board structure was necessary but not sufficient: NOWASTE had an enshrined, ownership-based board structure yet still suffered a severe distracting conflict because it lacked relational leadership processes; conversely, RECYCLE displayed enculturation and bridging but, absent a protective structure, still succumbed to paralyzing political conflict.
+- Interpretively, the structure makes both logics available, enculturation makes them accessible, and bridging activates them during decisions. The authors observed no case with only one of the two relational processes, so they do not claim to establish whether enculturation and bridging are each individually necessary.
 
 **Theoretical Contribution**
 The paper develops an integrative model of hybrid governance that uncovers how institutionally diverse boards can effectively serve as guardrails of organizational hybridity. It extends research on hybrids by identifying a previously undocumented "dual-focus attentional engagement" pattern alongside the more familiar "oscillating" pattern, shows how the interplay between board structure and relational leadership processes mitigates cognitive and emotional faultline conflicts, and contributes to organizational attention theory by mapping how governance structures and processes shape the availability, accessibility, and activation of multiple institutional logics — including emotion-management as a key, previously underemphasized lever.

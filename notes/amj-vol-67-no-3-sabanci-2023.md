@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-3/pdfs/Sabanci 2023 The Outcomes of Cross-Categ
 text_path: "library/AMJ/vol-67-no-3/text/Sabanci 2023 The Outcomes of Cross-Category Career Moves How Cross-Industry Mobility and Industry Prestige Jointly Impact Executive Compensation.txt"
 ingested_at: "2026-05-07"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -57,6 +59,9 @@ evidence:
   theories_overview: "Identifying executives’ industry affiliation with categorical membership"
   methods_overview: "one (k2k) coarsened exact matching (CEM) (Iacus,"
   keywords_source: "incorporating the influence of industry prestige on"
+  hypotheses_source: "Hypothesis 1. All else being equal, for executives who"
+  measures_overview: "Total annual pay in thousands of dollars (Source: ExecuComp data item TDC1)"
+  findings_overview: "industry-changing executives realize lower compensation than closely matched within-industry movers"
 ---
 
 # The Outcomes of Cross-Category Career Moves: How Cross-Industry Mobility and Industry Prestige Jointly Impact Executive Compensation
@@ -67,6 +72,10 @@ Identifying executives’ industry affiliation with categorical membership, this
 **Research Question**
 How does a change in industry impact compensation in executives’ voluntary job mobility, and how do status differences between origin and destination industries jointly moderate the demand- and supply-side mechanisms that govern the cross-category compensation discount?
 
+**Hypotheses / Propositions**
+- H1: All else being equal, for executives who change jobs, cross-industry movements are associated with *lower* compensation than are within-industry movements (negative direct effect).
+- H2: Industry status moderates the compensation difference between cross- and within-industry movers, such that the compressing (negative) effect of changing industry is *stronger* if the executive moves to a higher-status industry (status-leap) and *weaker* if the executive moves to a lower-status industry (status-leak).
+
 **Mechanism Process**
 - IV(s): Industry-changer (NAICS 2-digit cross-industry move = 1) interacted with post-job-change indicator; status-leap (move to higher-status industry) and status-leak (move to lower-status industry) dummies based on Gallup prestige rankings.
 - DV(s): Log of total executive compensation (ExecuComp TDC1, winsorized at top/bottom 1%).
@@ -75,6 +84,19 @@ How does a change in industry impact compensation in executives’ voluntary job
 - Controls: Executive age, gender, tenure, CEO indicator, prior pay rank, prior compensation, firm ROA, sales, debt, capital expenditures, profit margin, sales growth, board size, board independence, CEO duality, board directorship, network size, and gender/industry diversity; industry-relatedness (Hoberg-Phillips) in alternative-explanation tests.
 
 Demand-side audiences (hiring firms and search intermediaries) discount industry-changers because cross-category moves trigger ambiguity about how an executive’s attributes transfer to a new domain and raise future-commitment concerns about flight risk. Supply-side candidates accept smaller monetary premiums because they ascribe value to acquiring experience in a new industry, expanding networks, and capturing nonpecuniary rewards such as prestige. Industry-status differentials condition both mechanisms: leaks (moves down the status hierarchy) attenuate audience ambiguity/commitment penalties and dampen candidate willingness to accept lower pay, while leaps (moves up the status hierarchy) amplify audience scrutiny and candidate willingness to trade compensation for prestige.
+
+**Data & Measures**
+- Data sources: S&P 1500 executives who voluntarily changed jobs 1999–2014; compensation and individual data from ExecuComp, firm financials from Compustat, governance from BoardEx, and industry prestige from Gallup’s annual U.S. business-sector opinion rankings. M&A-driven and involuntary moves were filtered out using Thomson Reuters SDC, Factiva, and the Gentry et al. (2021), Ewens et al. (2018), and Phillips & Zhdanov (2013) datasets.
+- DV: log of total executive compensation (ExecuComp TDC1, winsorized at the top/bottom 1%); base salary and bonus are analyzed separately as a mechanism check.
+- IV: industry-changer dummy (= 1 if the destination firm has a different two-digit NAICS sector) interacted with a post-job-change dummy.
+- Moderators: status-leaper and status-leaker dummies, coded from whether the destination industry’s Gallup net-prestige score is higher or lower than the origin industry’s; continuous status-difference measures are used in robustness tests.
+- Controls: executive gender/tenure/age, CEO-transition indicators, origin- and destination-firm size/debt/capital expenditures/sales/cash/profit margin/sales growth/acquisitions, average industry pay, one-year-lagged compensation, board size/duality/independence/directorship/network size/gender and industry diversity, plus industry and year dummies.
+- Identification: matched-sample quasi-experiment using one-to-one (k2k) coarsened exact matching (CEM) on individual- and firm-level covariates, with the effect captured by the post × industry-changer (and post × status-leap/leak) interaction over a ±3-year window; parallel pre-trends are verified with dynamic event-study models, and robustness comes from propensity-score matching, the full unmatched voluntary-mover panel, executive fixed effects, and Hoberg-Phillips text-based industry-relatedness controls. Standard errors are clustered at the executive level. The authors caution that mobility is endogenous and lacks an exogenous shock, so the design is associational rather than strictly causal.
+
+**Key Findings**
+- H1 supported: the post-job-change × industry-changer coefficient is negative and significant (b1 = −0.09, p < .01 across all observations; b1 = −0.09, p < .05 in the ±3-year window) and holds with executive fixed effects. Industry-changers earn on average roughly 380,490 USD less than closely matched within-industry movers after the move (more than 10% of average compensation).
+- H2 supported: the discount is concentrated in status-leaps. Status-leaper × post is negative and significant (l1 = −0.13, p < .01; −0.15 in the windowed and fixed-effects models), whereas status-leaker × post is small and non-significant (l2 = −0.05); a Wald test confirms the leaper–leaker difference is significant (p < .05). Executives moving to higher-status industries absorb the steepest discounts, while those moving to lower-status industries fare like within-industry movers.
+- Mechanism corroboration: the divergence appears in base salary (b1 = −0.08, p < .05) but not in bonus, and the post × industry-relatedness interaction is insignificant — consistent with social-evaluation (ambiguity and commitment) mechanisms rather than performance or skill-transferability explanations. Results hold separately for CEOs and non-CEOs.
 
 **Theoretical Contribution**
 The paper introduces categorical status as a new contingency in the categorical-affiliation–labor-market-outcomes relationship, joining the vertical (status) and horizontal (category) dimensions of social evaluation. It separates industry-changing from generalist/specialist profiles and unpacks both demand- and supply-side mechanisms behind cross-category career discounts. By conceptualizing industry status as a novel reward form that can substitute for monetary compensation, it advances status-attainment research beyond firm-level status comparisons within a single industry and offers an integrative framework linking category dynamics, status hierarchies, and executive mobility outcomes.

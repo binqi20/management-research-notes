@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-3/pdfs/Compagni 2023 Responding to Professional
 text_path: "library/AMJ/vol-67-no-3/text/Compagni 2023 Responding to Professional Knowledge Disruptions of Unmitigable Uncertainty The Role of Emotions, Practices, and Moral Duty among COVID-19 Physicians.txt"
 ingested_at: "2026-05-07"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords: ["knowledge disruptions", "unmitigable uncertainty", "epistemic emotions", "moral emotions", "service-oriented practices", "moral duty", "professions", "COVID-19", "collegial work", "humanistic work"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "lack enough knowledge to understand"
   methods_overview: "embedded case study design"
   keywords_source: "service-oriented practices of collegial"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "systematically coded for emotions in our data"
+  findings_overview: "professionals experience a trail of negative epistemic emotions"
 ---
 
 # Responding to Professional Knowledge Disruptions of Unmitigable Uncertainty: The Role of Emotions, Practices, and Moral Duty among COVID-19 Physicians
@@ -51,6 +56,9 @@ Drawing on an in-depth study of physicians facing the Covid-19 pandemic in Italy
 
 **Research Question**
 When the knowledge base of an entire profession is made uncertain, how do professionals respond, in their workplace setting, to such knowledge disruption? When specialized knowledge fails, what else can professionals rely upon to face such uncertainty?
+
+**Hypotheses / Propositions**
+Not reported in paper
 
 **Mechanism Process**
 - Key constructs: knowledge disruption of unmitigable uncertainty; negative epistemic emotions (confusion, fear of the unknown, hopelessness, anguish); positive moral emotions (relief, elevation); professional sense of moral duty (to act, to do good, to do well); service-oriented practices of collegial and humanistic work; failed knowledge-based strategies
@@ -62,6 +70,12 @@ When the knowledge base of an entire profession is made uncertain, how do profes
 
 The process model proposes that when uncertainty disrupts every step of the inferential process and cannot be redressed through knowledge-based means or by adapting an alternative body of knowledge, professionals experience a sequence of negative epistemic emotions while a heightened professional sense of moral duty motivates them to engage in service-oriented practices of collegial and humanistic work. These practices, undertaken for the benefit of others rather than to expand or defend specialized knowledge, generate positive moral emotions (relief, elevation) that compensate for negative epistemic emotions and reinforce continued engagement. Repeated positive moral reinforcement leads professionals to consolidate and embed collegial and humanistic practices in their professional work, marking a shift away from a purely cognitive-rational, knowledge-centric model of professionalism toward one in which service orientation is treated as core.
 
+**Data & Measures**
+Inductive embedded single-case study of one academic medical center; no causal identification is claimed. The data corpus is 81 semi-structured interviews (74 physicians, about 80% of those active in the first outbreak, plus 7 managers; roughly 1,100 and 98 pages of transcript, conducted in Italian), triangulated with 195 internal-communication and organizational archival items, 273 Covid-19 scientific publications authored by C-Hospital physicians, and 15 conference video presentations. Analysis followed an iterative four-step approach of gradual abstraction (Miles & Huberman, 1994): open and axial coding aggregated first-order codes into second-order constructs, and temporal bracketing (Langley, 1999) partitioned the account into three phases by the inferential step (diagnosis, prognosis, treatment) most impacted by uncertainty. Emotions were systematically coded from highly emotive keywords and expressions, cross-checked against the Italian LIWC dictionary and then contextualized, and classified as negative epistemic emotions (confusion, fear of the unknown, hopelessness, anguish) or positive moral emotions (relief, elevation). Physicians' actions were coded into failed knowledge-based strategies and service-oriented practices of collegial and humanistic work, and moral duties (to act, to do good, to do well) were aggregated into a professional sense of moral duty.
+
+**Key Findings**
+The study induces a phase-based process model of professional response to a knowledge disruption of unmitigable uncertainty. Covid-19 rendered physicians' specialized knowledge inadequate and progressively impaired every step of the medical inferential process (diagnosis, prognosis, treatment), and repeated knowledge-based attempts to mitigate the uncertainty failed. This failure produced a trail of negative epistemic emotions that evolved across three phases: confusion turning into fear of the unknown (Phase I, diagnosis), hopelessness (Phase II, prognosis), and anguish (Phase III, treatment). Within each phase a heightened professional sense of moral duty (to act in Phase I, to do good in Phase II, to do well in Phase III) motivated physicians first to initiate, then to prioritize, and finally to consolidate service-oriented practices of collegial and humanistic work that departed from their usual knowledge-centric practices. Performing these practices generated positive moral emotions, relief in Phase I and elevation in Phase II, that partially compensated for the negative epistemic emotions and positively reinforced continued engagement. Through this repeated moral reinforcement, service-oriented practices were ultimately consolidated and embedded in physicians' everyday professional work, persisting after the first outbreak and marking a shift away from a purely knowledge-centric model of professionalism.
+
 **Theoretical Contribution**
 The study theorizes a distinctive category of "knowledge disruptions of unmitigable uncertainty" — characterized by uncertainty that progressively impairs all steps of the professional inferential process and cannot be repaired through traditional knowledge-based strategies, even though no alternative body of knowledge has emerged to threaten jurisdiction. It introduces epistemic emotions (confusion, fear of the unknown, hopelessness, anguish) as a collectively shared dynamic that constitutes such disruptions, and theorizes service-oriented practices of collegial and humanistic work — motivated by professional moral duty and reinforced by positive moral emotions — as a viable alternative response that diverges from the cognitive-calculative responses of knowledge expansion and jurisdictional politics emphasized in prior literature on professions.
 
@@ -69,7 +83,7 @@ The study theorizes a distinctive category of "knowledge disruptions of unmitiga
 For professionals facing complex societal challenges that overwhelm their specialized knowledge, sustaining engagement and producing a viable response may depend less on knowledge expansion or jurisdictional defense than on activating the profession's normative commitments to service. Hospitals and other professional organizations should make space for, and legitimate, collegial cross-specialty collaboration and humanistic patient relations as central rather than ancillary practices, recognizing that they can generate positive moral feedback that helps professionals persist amid uncertainty. The findings imply that effective coordinated responses to grand challenges may emerge when professionals weaken knowledge-based status boundaries and reorient around shared moral duties.
 
 **Limitations**
-The setting is highly professionalized — Italian academic-medicine physicians with strong knowledge identification, a codified Hippocratic oath, and immediate visibility of failure (lives lost) — so the strength and specific form of the negative epistemic emotions and the salience of moral duty may not generalize to less professionalized occupations or to professions whose work failures are less visible. Field-access restrictions during the pandemic forced reliance on retrospective interviews rather than direct observation of Steering Committee meetings or wards, raising the possibility of hindsight bias even though the authors argue that interviews offered a uniquely reflective space. The observation period was limited to the first wave, so the durability of consolidated service-oriented practices over time was not directly verified.
+The setting is highly professionalized — Italian academic-medicine physicians with strong knowledge identification, a codified Hippocratic oath, and immediate visibility of failure (lives lost) — so the strength and specific form of the negative epistemic emotions and the salience of moral duty may not generalize to less professionalized occupations or to professions whose work failures are less visible. Field-access restrictions during the pandemic forced reliance on retrospective interviews rather than direct observation, raising the possibility of hindsight bias even though the authors argue that interviews offered a uniquely reflective space. The observation period was limited to the first wave, so the durability of consolidated service-oriented practices over time was not directly verified.
 
 **Future Research**
 Future work could systematically explore professionals' role in producing responses to societal challenges and the conditions under which knowledge disruptions of unmitigable uncertainty are central features of those challenges. Comparative research in less professionalized occupations (e.g., animal-shelter workers, journalists) and in occupational groups for whom collegial and humanistic work is closer to baseline (e.g., nurses, social workers, teachers) could illuminate how epistemic emotions interact with or are displaced by other emotions such as compassion and empathy. Longitudinal studies should examine whether consolidated service-oriented practices persist over time and whether moving away from a knowledge-focused professionalism erodes or reshapes professional status vis-a-vis other groups.

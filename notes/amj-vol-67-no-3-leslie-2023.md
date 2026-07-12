@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-67-no-3/pdfs/Leslie 2023 Happy Talk Is Common Diversi
 text_path: "library/AMJ/vol-67-no-3/text/Leslie 2023 Happy Talk Is Common Diversity Rhetoric Effective Diversity Rhetoric.txt"
 ingested_at: "2026-05-07"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords: ["diversity rhetoric", "contingent-diversity rhetoric", "value-in-diversity rhetoric", "diversity effort", "fear of appearing prejudiced", "goal-setting theory", "argument strength", "happy talk"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "goal-setting theory provides a basis"
   methods_overview: "in an archival study (Study 1)"
   keywords_source: "rhetoric—defined as how leaders talk about diversity"
+  hypotheses_source: "Hypothesis 1a. Leaders are less likely to use"
+  measures_overview: "measured diversity goal difficulty with seven items"
+  findings_overview: "contingent-diversity rhetoric is descriptively less common, but prescriptively more effective, than value-in-diversity rhetoric"
 ---
 
 # Happy Talk: Is Common Diversity Rhetoric Effective Diversity Rhetoric?
@@ -53,6 +58,17 @@ Despite their prevalence, diversity initiatives do not necessarily motivate empl
 **Research Question**
 Does the diversity rhetoric leaders use most commonly (value-in-diversity rhetoric) actually motivate the highest levels of employee diversity effort, or does a less common rhetoric type that acknowledges diversity's challenges (contingent-diversity rhetoric) prove more effective—and what psychological mechanisms explain any such descriptive-prescriptive paradox?
 
+**Hypotheses / Propositions**
+- H1a: Leaders are less likely to use contingent-diversity rhetoric than value-in-diversity rhetoric.
+- H1b: The lower likelihood of using contingent (vs. value) rhetoric is mediated by fear of appearing prejudiced (negative indirect effect).
+- H2a: Contingent rhetoric, relative to no rhetoric, has a positive effect on employees' diversity effort.
+- H2b: That positive effect of contingent rhetoric on diversity effort is mediated by perceived argument strength.
+- H2c: That positive effect of contingent rhetoric on diversity effort is mediated by perceived goal difficulty.
+- H3a: Value rhetoric, relative to no rhetoric, has a positive effect on employees' diversity effort.
+- H3b: That positive effect of value rhetoric on diversity effort is mediated by perceived argument strength.
+- H4a: Contingent rhetoric, relative to value rhetoric, has a positive effect on employees' diversity effort.
+- H4b: The positive effect of contingent (vs. value) rhetoric on diversity effort is mediated by perceived goal difficulty.
+
 **Mechanism Process**
 - IV(s): Diversity rhetoric type (contingent-diversity rhetoric vs. value-in-diversity rhetoric vs. no rhetoric vs. challenge rhetoric)
 - DV(s): (a) Likelihood of leaders using each rhetoric type; (b) Employee diversity effort (behavioral measures including idea generation and self-reported effort to foster diversity and inclusion)
@@ -60,6 +76,25 @@ Does the diversity rhetoric leaders use most commonly (value-in-diversity rhetor
 - Moderators: Personal contingent beliefs (only consistent moderator: contingent rhetoric increases perceived goal difficulty among employees with low contingent beliefs); leader level and demographics tested but did not consistently moderate
 
 Drawing on the psychology of the self, leaders fear contingent rhetoric will make them appear prejudiced because it includes subtly negative diversity content, leading them to default to uniformly positive value rhetoric ("happy talk"). Drawing on goal-setting theory, contingent rhetoric uniquely raises perceived diversity-goal difficulty, which signals to employees that personal effort, attention, and persistence are required to achieve a difficult collective goal—counteracting social loafing. Both rhetoric types boost diversity effort via perceived argument strength, but only contingent rhetoric activates the goal-difficulty pathway, producing higher overall effort.
+
+**Data & Measures**
+- Study 1 (archival, correlational): corporate diversity webpages of the 2019 Fortune 100. Rhetoric hand-coded on benefits and challenges dimensions—contingent = benefits and challenges (n = 22), value = benefits only (n = 63); interrater agreement κ = .82, cross-validated with LIWC dictionaries. Diversity effort proxied by Forbes' 2020 ranking of the 500 best companies for diversity (dichotomous). Controls: log revenue, number of diversity webpages, diversity word count. Logistic regression.
+- Studies 2-3 (randomized online experiments): leader rhetoric manipulated in messages/emails (Study 2: contingent vs. value within-subject; Study 3: contingent, value, challenge, and no-rhetoric control). Fear of appearing prejudiced (3 items, α = .96; Study 2); argument strength (4 items, α = .97) and goal difficulty (7 items, α = .88; Study 3). DV = behavioral message choice and likelihood-of-use (Study 2) and number of relevant diversity ideas generated (Study 3). Bootstrapped parallel mediation (20,000 bias-corrected CIs).
+- Study 4 (two-wave, time-separated survey; correlational): 893 employees self-report leader contingent (α = .92) and value (α = .98) rhetoric, argument strength (α = .97), and goal difficulty (α = .94) at time 1, and diversity effort via a 10-item adapted work-effort scale (α = .98) at time 2. Regression-based mediation controlling for rhetoric amount, gender, and race.
+
+Identification: the authors frame Studies 2 and 3 as randomized experiments providing causal evidence on rhetoric use and effectiveness; Study 1 (archival) and Study 4 (rhetoric and mechanisms measured at the same wave) are correlational and not interpreted as causal.
+
+**Key Findings**
+- H1a supported in every test: contingent rhetoric was less common than value rhetoric on webpages (22% vs. 63%; χ²[1] = 19.78, p < .001; Study 1), in leaders' message choice (37.5% vs. 62.5%; χ² = 8.50, p = .004; Study 2), and in employee reports (M = 4.67 vs. 5.37; t = 17.57, p < .001; Study 4).
+- H1b supported (Study 2): contingent vs. value rhetoric raised fear of appearing prejudiced (b = 0.61, p < .001), which lowered likelihood of use (b = -0.16, p = .017); negative indirect effect b = -0.10, 95% CI [-0.18, -0.01].
+- H2a supported (Study 1): contingent vs. no rhetoric increased the odds of a top-diversity ranking, robust to controls (B = 2.27, p = .010).
+- H3a partially supported (Study 1): value vs. no rhetoric increased the odds without controls (B = 1.74, p = .012) but not with controls (B = 1.45, p = .055).
+- H4a partial support (Study 1): the contingent effect (not the value effect) survived controls, but the direct contingent-vs.-value comparison was nonsignificant (B = 0.87, p = .126).
+- H2b (argument-strength mediation of contingent's overall effect): NOT supported in Study 3 (argument strength unrelated to effort, b = -0.08, p = .311) but supported in Study 4 (indirect b = 0.04, 95% CI [0.02, 0.07]).
+- H2c (goal-difficulty mediation of contingent's overall effect): supported in both Study 3 (indirect b = 0.11, 95% CI [0.03, 0.25]) and Study 4 (indirect b = 0.02, 95% CI [0.01, 0.04]).
+- H3b (argument-strength mediation of value's overall effect): NOT supported in Study 3 (indirect nonsignificant) but supported in Study 4 (indirect b = 0.06, 95% CI [0.04, 0.10]).
+- H4b (goal-difficulty mediation of contingent's advantage over value): supported in Study 3 (indirect b = 0.16, 95% CI [0.04, 0.34]) and Study 4 (indirect difference b = 0.03, 95% CI [0.01, 0.06]).
+- Overall, the descriptive-prescriptive paradox held: contingent rhetoric's total effect on diversity effort exceeded value rhetoric's (Study 4: b = 0.22 vs. 0.04; b_diff = 0.18, 95% CI [0.08, 0.28]). Among alternative mechanisms (perceived message effectiveness/commonness, leader prejudice), only value rhetoric raising minority-group fairness perceptions was significant, which in turn reduced diversity effort (Study 4).
 
 **Theoretical Contribution**
 The paper introduces the new construct of contingent-diversity rhetoric and demonstrates a descriptive-prescriptive paradox: the most common diversity rhetoric is not the most effective. It advances diversity theory by identifying self-presentation concerns (fear of appearing prejudiced) as the mechanism explaining leaders' rhetoric choices, and identifies argument strength and perceived goal difficulty as the dual mechanisms explaining when and why diversity rhetoric motivates employees. Secondary contributions extend self-presentation theory by showing happy talk applies to subtly negative content, and extend goal-setting theory to collective organizational diversity goals.

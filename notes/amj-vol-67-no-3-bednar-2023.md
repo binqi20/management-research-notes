@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-3/pdfs/Bednar 2023 Organizational Ghosts How �
 text_path: "library/AMJ/vol-67-no-3/text/Bednar 2023 Organizational Ghosts How “Ghostly Encounters” Enable Former Leaders to Influence Current Organizational Members.txt"
 ingested_at: "2026-05-07"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords:
@@ -55,6 +57,9 @@ evidence:
   theories_overview: "Building on the social identity theory of leadership"
   methods_overview: "we utilized an inductive"
   keywords_source: "embodied prototype of the organization"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We collected three types of data for this study."
+  findings_overview: "After organizational exit, they became organizational ghosts, institutionalized by associative learning, perpetuated practices, and physical memory work."
 ---
 
 # Organizational Ghosts: How “Ghostly Encounters” Enable Former Leaders to Influence Current Organizational Members
@@ -65,6 +70,9 @@ Leadership research has assumed that leader group prototypicality enhances leade
 **Research Question**
 How do specific leaders become embodied group prototypes whose influence endures after their organizational exit, and through what cognitive mechanisms do these "organizational ghosts" continue to shape current leaders and members?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: organizational ghosts (former members who become the ideal prototype of an organization's values and identity); leader group prototypicality; "ghostly encounters" (remembered or imagined cognitive engagements with departed leaders).
 - Triggering conditions for becoming a ghost: extensive exposure (long tenure, visible roles) and admiration/adoration grounded in social judgments of extraordinary competence and warmth, leading to the leader being seen as the creator of the organization's values and identity.
@@ -74,6 +82,12 @@ How do specific leaders become embodied group prototypes whose influence endures
 - Boundary conditions: ghosts can "die" if institutionalization weakens or activation ceases; persistence depends on a loyal group of followers willing to keep the ghost alive.
 
 The process unfolds as exceptionally exposed leaders, judged extraordinarily competent and warm, come to embody an organization's prototype. After exit, associative learning, perpetuated practices, and physical memory work institutionalize them so they can be cognitively activated. The resulting remembered or imagined encounters become comparators that current members use to evaluate themselves and others, thereby extending former leaders' influence across the organization.
+
+**Data & Measures**
+Inductive, interpretivist design with no variables or statistical measures; constructs were built from qualitative data rather than operationalized a priori. The corpus spanned three data types across the two merging book printers: eight months of nonparticipant observation (21 days onsite; field notes on people, places, and artifacts such as portraits, plaques, and timelines); archival material (corporate anniversary histories, media announcements, and company newsletters); and 43 semi-structured interviews using timeline elicitation (20 current Edwards Brothers employees, 20 current Malloy employees, two with former Malloy CEO Herb Upton, and one with Malloy's first employee). Each informant worked from a blank organizational timeline anchored at "Time 0," naming defining characters and explaining how each was remembered and continued to influence them. Analysis proceeded through line-by-line open coding, then focused coding (which surfaced informants' "ghost" language), then theoretical coding linking accounts to the literature, with iterative model-building to theoretical saturation.
+
+**Key Findings**
+Two nonfounder former CEOs (Herb Upton at Malloy and Martin "Marty" Edwards at Edwards Brothers) became the ideal group prototype of their organization's values and identity. Two factors drove this: extensive exposure from long tenure and role visibility, and admiration and adoration rooted in perceived extraordinary competence and warmth, with each leader seen as the creator of organizational success, thereby supplanting the actual founders. After exit, these prototypes were institutionalized as "organizational ghosts" through associative learning, perpetuated practices, and physical memory work (preserved offices, portraits, glass timelines, "Herb Posters"). Institutionalized ghosts were then activated cognitively, either deliberately via "summoning" or organically via "appearances," generating remembered or imagined "ghostly encounters" that members used as comparators. The authors surface three encounter types: safeguarding encounters that foster accountability and stewardship; comforting encounters that lend legitimacy, ease fears, and provide security (notably in reconciling members to the merger); and devaluing encounters that disparage rival leaders and value systems. Ghosts are not guaranteed to endure: they can "die" if institutionalization weakens or activation ceases, so persistence depends on a loyal group of followers willing to keep the ghost alive.
 
 **Theoretical Contribution**
 The paper introduces "organizational ghosts" and "ghostly encounters" as concepts that bridge the social identity theory of leadership and the literature on the legacy motive. It moves leader group prototypicality from an abstract, ahistorical construct to a historically embedded one, explains how nonfounders can supplant founders as prototypes, and addresses the "problem of reception" by focusing on legatees rather than legators. It also extends Gergen's "social ghosts" by showing how organizational ghosts come to embody the framework for defining morality, making decisions, and navigating change.

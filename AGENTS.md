@@ -142,14 +142,15 @@ audit**:
 
 **Current main-branch audit state (2026-07-12):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 05 upgraded 18 notes (AMJ vol-67-no-5 + vol-67-no-4, all v2
+batch 06 upgraded 21 notes (AMJ vol-67-no-3 + vol-67-no-2, all v2
 augmentations) to v3, each passing a fresh full 9-field rubric-v2 audit at
-162/162 prose-field verdicts SUPPORTED (0 PARTIAL) after four evidence-based
-repairs cleared in a single round (two Data & Measures precision fixes on
-Hallila and Marti, two future-research scope trims on Bliese and Madsen), with
-a fresh re-audit of the four repaired notes returning every field SUPPORTED;
-the batch left the record total unchanged. The corpus contains 61 legacy v1
-notes, 979 v2 notes, and 127 v3 notes with evidence anchors; new notes are
+189/189 prose-field verdicts SUPPORTED (0 PARTIAL) after two evidence-based
+repairs cleared in a single round (one Data & Measures precision fix on
+Preston's predecessor/successor count, one legacy-limitations fix removing an
+invented specific from Compagni), with a fresh re-audit of the two repaired
+notes returning every field SUPPORTED; the batch left the record total
+unchanged. The corpus contains 61 legacy v1
+notes, 958 v2 notes, and 148 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -183,7 +184,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.38.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.39.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-67-no-2/pdfs/Grégoire 2024 Mobilizing New Sources of
 text_path: "library/AMJ/vol-67-no-2/text/Grégoire 2024 Mobilizing New Sources of Data Opportunities and Recommendations.txt"
 ingested_at: "2026-05-10"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "editorial"
 keywords: ["new data sources", "big data", "machine learning", "digital traces", "research methods", "data context", "data transparency", "theory-method alignment"]
@@ -56,6 +58,9 @@ FROM THE EDITORS MOBILIZING NEW SOURCES OF DATA: OPPORTUNITIES AND RECOMMENDATIO
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: New data sources (wearables, sensors, digital traces, big data, AI/ML outputs) offer untapped opportunities for management research, but mobilizing them requires deliberate attention to context, transparency, and theory–method alignment.
 - Key constructs: New data sources; new methods of analysis; data context; data transparency and ethics; theory–method alignment.
@@ -65,6 +70,12 @@ Not reported in paper
 - Boundary conditions: Recommendations apply across micro and macro, qualitative and quantitative submissions; intensity of concern depends on the type of new data being used.
 
 The editorial argues that the digitization of work and society, the falling cost of field experiments, and the proliferation of digital footprints and AI/blockchain platforms create three converging trends that expand the data palette available to management scholars. Yet "opportunities for mobilizing and interpreting these new data are arising faster than guidance about best practices can be developed," raising the risk that apparent advances rest on "feet of clay." The editors therefore urge authors to make a compelling case for how new data advance theory and to address three recurring failure modes — insufficient data-context description, weak transparency/ethics around access and ML training inputs, and loose alignment between algorithmically derived measures and theorized constructs.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new theory but stakes out an editorial position for AMJ on how to evaluate and improve manuscripts that mobilize novel data sources. It contributes a tripartite framework (data context, transparency/ethics, theory–method alignment) that authors and reviewers can use as evaluative criteria, and it documents the relatively stable distribution of data sources in AMJ from 2017–2023 (43% archival, 21% survey, 18% interview, 14% experimental) as a baseline against which the editors argue substantial untapped potential exists for new-data submissions.

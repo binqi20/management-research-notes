@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-67-no-3/pdfs/Ravasi 2024 What Makes Research Collabor
 text_path: "library/AMJ/vol-67-no-3/text/Ravasi 2024 What Makes Research Collaborations Successful Advice from AMJ Authors.txt"
 ingested_at: "2026-05-07"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "editorial"
 keywords: ["research collaboration", "co-authorship", "international collaboration", "AMJ authors", "research teams", "authorship order", "scholarly partnerships", "team science"]
@@ -45,6 +47,9 @@ FROM THE EDITORS WHAT MAKES RESEARCH COLLABORATIONS SUCCESSFUL? ADVICE FROM AMJ 
 **Research Question**
 What enables collaborative projects published in AMJ to overcome the challenges of research collaboration, and what lessons learned from recent AMJ authors can help prospective co-authors take full advantage of the benefits of joint projects while mitigating their risks?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - People matter (more than project or location): Get to know potential partners first; work with people you trust and get along well with; ensure work styles and ethics fit; choose people equally motivated to complete the project; reflect on your own unique value proposition.
 - Set clear expectations early on: Clarify expected outcomes, roles and contributions, leadership and authorship order, and working style/timelines/constraints/availabilities.
@@ -54,6 +59,12 @@ What enables collaborative projects published in AMJ to overcome the challenges 
 - Manage strategically your portfolio of collaborations: Focus efforts on big ideas; search for synergies among projects; balance senior and same-stage co-authors.
 
 The editorial draws on responses from a survey of 60 AMJ authors (drawn from 1,084 authors of 364 articles accepted between January 2019 and May 2024) to articulate six bundles of practices that distinguish successful collaborations. Descriptive analysis shows 53% of manuscripts resulted from cross-country collaborations and 41% from cross-continent collaborations, with COVID-19 producing a delayed and lasting decline in international collaborations. The advice synthesizes practitioner wisdom rather than testing a causal model.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial offers a practitioner-oriented synthesis of what makes research collaborations successful in management scholarship, organizing AMJ author wisdom into six interrelated practice bundles spanning partner selection, expectation setting, process management, data accountability, openness to differences, and portfolio strategy. It also documents empirical patterns in AMJ co-authorship over 2019–2024, including the disproportionate and persistent impact of COVID-19 on international collaborations despite the rise of remote-work technologies.
