@@ -77,6 +77,16 @@ faithful: record only work that actually happened. Never invent commits,
 results, or decisions — if something is uncertain, say so explicitly. Link
 releases and PRs with full URLs so they stay clickable later.
 
+**Formatting for portability (Notion import etc.):** write each paragraph,
+list item, and blockquote line as ONE long line — never hard-wrap prose at
+72/80 columns. Spec-compliant renderers soft-wrap long lines for you, but
+Notion's Markdown importer (and several others) turn every newline inside a
+paragraph into a real line break, shattering hard-wrapped sentences into
+fragments. Blank lines separate blocks; only structural elements (headings,
+table rows, `---` rules, code fences) get their own lines. (The 07-10 …
+07-12 logs were hard-wrapped and broke on Notion import; the long-line logs
+imported cleanly.)
+
 **Multi-session days:** this project often runs several Claude Code / Codex
 sessions in parallel (issue runs, backfill batches, tooling work), and the
 session writing the log has seen only its own conversation. Work from other
