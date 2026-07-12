@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-4/pdfs/Wu 2023 The Social Structure of Insiders
 text_path: "library/AMJ/vol-67-no-4/text/Wu 2023 The Social Structure of Insiders and Outsiders Toward a Network Community Perspective on Firm Performance.txt"
 ingested_at: "2026-05-06"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords: ["network communities", "interorganizational relationships", "insiders and outsiders", "venture capital", "syndication networks", "institutional development", "clique percolation method"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "integrating social network and institutional perspectives"
   methods_overview: "The clique percolation method (CPM) is a recent"
   keywords_source: "network communities (membership in cohesive network structures)"
+  hypotheses_source: "Hypothesis 1. VC firms that are community insiders"
+  measures_overview: "a dummy variable set to 1 if a VC firm is affiliated"
+  findings_overview: "a positive effect on Exit rate (b 5 11.676, p 5 0.000)."
 ---
 
 # The Social Structure of Insiders and Outsiders: Toward a Network Community Perspective on Firm Performance
@@ -52,6 +57,12 @@ Management literature on how interorganizational relationships influence firm pe
 **Research Question**
 How do a focal firm's network community affiliations enhance firm performance, and what factors might accentuate or diminish the benefits of those affiliations? In particular, the paper asks whether community insiders outperform outsiders, whether multiple insiders face diseconomies, and how institutional development moderates these relationships.
 
+**Hypotheses / Propositions**
+- H1: VC firms that are community insiders will have better performance than community outsiders (insider status positively related to performance).
+- H2: There will be an inverted U-shaped relationship between the number of community affiliations of a VC firm and its performance.
+- H3: Institutional development moderates the H1 relationship, such that the performance advantage of community insiders (relative to outsiders) is diminished when institutions are relatively more developed (negative moderation).
+- H4: Institutional development moderates the H2 relationship, such that the apex of the inverted U is at a lower (higher) number of community affiliations when institutions are relatively more (less) developed.
+
 **Mechanism Process**
 - IV(s): Insider status (dummy = 1 if affiliated with at least one network community); Community affiliations (count of network communities a VC firm is affiliated with) and its squared term; Marketization index (institutional development at provincial level)
 - DV(s): Exit rate (proportion of a VC's portfolio companies exiting via IPO or M&A); IPO rate as alternative
@@ -59,6 +70,23 @@ How do a focal firm's network community affiliations enhance firm performance, a
 - Controls: Degree centrality, betweenness centrality, eigenvector centrality, Burt's network constraint, prior experience (cumulative invested capital), prior success (cumulative successful exits); firm and year fixed effects
 
 The mechanism rests on the argument that network communities — overlapping clusters of densely interconnected firms detected via the clique percolation method — provide insiders with information-acquisition and resource-exchange advantages, especially through indirect connections (partners' partners) that supply third-party referrals, trust, and reciprocity. Multiple insiders enjoy familiar access to diverse resource bases but face attentional and inertial costs of maintaining many community affiliations, producing an inverted U-shape between community count and performance. Well-developed institutions substitute for community-based exchange by providing market intermediaries, dampening insider advantages and shifting the inverted-U apex to fewer affiliations. Mechanism tests reveal that the benefit comes from indirect rather than direct community ties.
+
+**Data & Measures**
+- Data: VC firm-year panel from Zero2IPO (China's VC industry); investments span 2003-2016 with portfolio-company exits tracked through 2018; analysis at the parent-firm level. The final data set contains 15,767 firm-year observations from 8,245 domestic VC firms (10,609 firm-years from 3,087 firms enter the firm-fixed-effects models).
+- DV: Exit rate = proportion of a VC's portfolio companies that exit via IPOs or M&A transactions; IPO rate (proportion exiting via an IPO) used as an alternative DV.
+- IV: Insider = dummy = 1 if the VC firm is affiliated with at least one network community in a given period, 0 otherwise; Community affiliations = continuous count of the network communities a firm is affiliated with, entered with a squared term to test the inverted U.
+- Moderator: Marketization = provincial general marketization index (National Economic Research Institute) capturing local institutional development.
+- Network communities detected with the clique percolation method (CPM, k = 4) over one-year (n = 1) and three-year (n = 3) trailing-window syndication networks.
+- Controls: degree, betweenness, and eigenvector centrality; Burt's (1992) network constraint; Prior experience (log cumulative invested capital); Prior success (log cumulative successful exits); firm and year fixed effects.
+- Estimation/identification: OLS with firm and year fixed effects and standard errors clustered at the firm level; the inverted U is tested following Haans, Pieters, and He (2016). The paper frames its estimates as associations (controlling for unobserved firm heterogeneity via fixed effects), not as causal experimental identification.
+
+**Key Findings**
+All four hypotheses are supported.
+- H1 supported: being an insider has a positive effect on Exit rate (b = 11.676, p = .000 baseline; b = 5.531, p = .000 with firm fixed effects; b = 4.928, p = .000 for n = 3).
+- H2 supported: the linear Community affiliations term is positive (b = 6.261, p = .000 for n = 1; b = 4.198, p = .000 for n = 3) and the squared term is negative (b = -1.867, p = .000 for n = 1; b = -1.269, p = .000 for n = 3); the turning point (1.677 for n = 1; 1.654 for n = 3) lies within the data range with steep slopes at both ends.
+- H3 supported: Insider is positive (b = 17.648, p = .002) and the Insider x Marketization interaction is negative (b = -1.384, p = .030), consistent for n = 3.
+- H4 supported: the apex of the inverted U is at a lower number of community affiliations under more-developed institutions (1.315 for n = 1; 1.245 for n = 3) than under less-developed institutions (2.030 for n = 1; 1.923 for n = 3); the difference is negative (b = -0.715, p = .016 for n = 1; b = -0.678, p = .074 for n = 3).
+- Mechanism: additional analyses indicate the value of community affiliations comes from indirect connections (partners' partners) within network communities rather than direct ties.
 
 **Theoretical Contribution**
 The paper introduces a network community perspective on firm performance that complements existing connection, position, and clique perspectives by capturing intermediate-level cohesive structures with overlapping membership. It shows that connections and centrality alone are insufficient — being part of a community is what generates performance advantages — and that the benefits of network communities operate through indirect ties rather than direct syndication partners. By integrating social network and institutional perspectives, the study reveals a substitutive relationship between network communities and institutional development, identifying boundary conditions under which network-based advantages diminish.

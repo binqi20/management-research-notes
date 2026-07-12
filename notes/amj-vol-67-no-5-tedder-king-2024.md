@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-5/pdfs/Tedder-King 2024 Fairness Judgments in t
 text_path: "library/AMJ/vol-67-no-5/text/Tedder-King 2024 Fairness Judgments in the Context of Structural Sexism The Role of Beliefs in Individual and Structural Causes of Success.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords: ["fairness judgments", "structural sexism", "meritocracy", "equity", "beliefs in causes of success", "performance indicators", "diversity equity inclusion", "social justice"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Fairness scholars often equate distributive fairness"
   methods_overview: "We conducted 12 studies (10 preregistered) to test"
   keywords_source: "Due to structural sexism, women frequently encounter barriers"
+  hypotheses_source: "Hypothesis 4. Observers’ fairness judgments of a"
+  measures_overview: "what amount would you recommend the junior"
+  findings_overview: "positively related to manager performance (g 5 50.43, p , .001)"
 ---
 
 # Fairness Judgments in the Context of Structural Sexism: The Role of Beliefs in Individual and Structural Causes of Success
@@ -51,6 +56,13 @@ Due to structural sexism, women frequently encounter barriers that result in low
 **Research Question**
 When and how do observers' beliefs in the individual versus structural causes of success shape their fairness judgments of managerial allocations that adjust (vs. fail to adjust) raw performance indicators in light of evidence of structural sexism?
 
+**Hypotheses / Propositions**
+- H1: When observers' beliefs in individual causes of success are stronger (weaker), they judge managers who adjust allocations to address structural sexism as less (more) fair than managers who allocate based on raw performance. (Predicted: stronger individual beliefs → adjusting judged less fair.)
+- H2: When observers' beliefs in structural causes of success are stronger (weaker), they judge managers who adjust allocations to address structural sexism as more (less) fair than managers who allocate based on raw performance. (Predicted: stronger structural beliefs → adjusting judged more fair.)
+- H3: The effects of beliefs in causes of success on fairness judgments (i.e., Hypotheses 1 and 2) emerge only when information about structural sexism in a key performance indicator (KPI) is available in the context of the decision.
+- H4: Observers' fairness judgments of a manager are positively related to that manager's performance evaluations.
+- H5: Fairness judgments mediate the effect of allocation (raw performance vs. adjusting for structural sexism) on the manager's performance evaluations, and the indirect effect is moderated by observers' beliefs in individual and structural causes of success.
+
 **Mechanism Process**
 - IV(s): Allocation condition (raw performance = "0" vs. adjusting for structural sexism = "1")
 - DV(s): Fairness judgments of the junior manager's decision; manager performance evaluations (e.g., recommended bonus)
@@ -59,6 +71,23 @@ When and how do observers' beliefs in the individual versus structural causes of
 - Controls: Participant gender; luck (random) beliefs
 
 Drawing on equity theory and the meritocratic ideal, the authors argue that "equity" entails causal judgments about which contributions count, and that observers vary in how they interpret causally ambiguous structural barriers. When information about gender-based structural barriers in a key performance indicator is salient in the decision context, observers with stronger structural beliefs (rigged worldview) view raw indicators as misrepresenting women's contributions and thus judge adjustments as fairer; observers with stronger individual beliefs (rewarding worldview) treat raw indicators as merit-aligned and judge adjustments as less fair. When information about structural barriers is absent, or when barriers are not gender-based, beliefs lose their moderating power. Fairness judgments in turn drive performance evaluations of the allocator.
+
+**Data & Measures**
+- Data source: 12 vignette experiments (10 preregistered), run online via MTurk, Prolific, and Connect plus one lab study; focal Studies 1-4 used U.S. adult observers (N = 330 within-person, 1,067, 366, 672) who role-played a senior manager evaluating a junior manager's allocation decision (bonus, employee-of-the-year award, management-training program, or firefighter promotion).
+- IV — allocation condition: dummy-coded (raw performance = 0; adjusting for structural sexism = 1), randomly assigned.
+- Mediator / DV — fairness judgments: three-item scale from Colquitt, Long, Rodell, and Halvorsen-Ganepola (2015) (sample item "To what extent did the junior manager act fairly?"), rated 1-7.
+- DV — manager performance evaluation: recommended bonus out of $500 (participants told the average bonus was $250).
+- Moderators — beliefs in causes of success: causal-attributions-of-financial-uncertainty scale (Krijnen et al., 2022) with the stem adapted to job success; individual beliefs = three-item "Rewarding" factor, structural beliefs = three-item "Rigged" factor, rated 1-7. Presence/absence of the KPI-disparity report (Study 2), gender-based vs. non-gender-based barriers (Study 3), and subjective vs. objective barriers (Study 4) were experimentally manipulated moderators.
+- Controls: participant gender and luck ("Random" factor) beliefs.
+- Identification: random assignment to the allocation (and information/barrier) conditions provides experimental identification of allocation effects, but success beliefs were measured, not manipulated, so their moderating role is correlational rather than causally identified. Estimation used OLS regression in R (multilevel / random-coefficient modeling for the within-person Study 1) with Johnson-Neyman simple-slope tests; H5 mediated moderation used regression-based path analysis with 5,000 bootstraps in Mplus 8.10; an internal meta-analysis (psychmeta) pooled the common-procedure conditions (k = 11, N = 3,748).
+
+**Key Findings**
+- H1 (stronger individual beliefs → adjusting judged less fair) received heterogeneous support: supported in Study 1 (within-person) but not supported in Studies 2, 3, or 4, where the predicted slope reversal did not obtain (e.g., Study 3 allocation × individual-beliefs interaction b = −0.05, p = .750, n.s.).
+- H2 (stronger structural beliefs → adjusting judged more fair) was supported in all four focal studies: allocation × structural-beliefs interaction γ = 0.62 (Study 1), b = 0.47 (Study 2), and b = 0.51 (Study 4), all p < .001, plus support in Study 3's gender-based-barrier condition. Observers with stronger structural beliefs judged adjusting as fairer; those with weaker structural beliefs judged it less fair.
+- H3 (belief effects emerge only when KPI structural-sexism information is present) was supported in Study 2 (report present vs. absent) and Study 3 (three-way allocation × information × structural-beliefs interaction b = 0.75, p = .008).
+- H4 (fairness judgments positively related to manager performance evaluations) was supported in every study that tested it (Study 1 γ = 50.43; Study 2 b = 41.27; Study 4 b = 44.87; all p < .001).
+- H5 (fairness judgments mediate allocation → performance evaluation, moderated by beliefs) received partial support: the moderated indirect effect held for structural beliefs but was weaker or absent for individual beliefs (Study 1 partially supported for individual, supported for structural; Study 4 not supported for individual, partially supported for structural).
+- Overall, structural beliefs moderated fairness judgments more consistently than individual beliefs, and only when contextual information about gender-based structural barriers was made salient.
 
 **Theoretical Contribution**
 The paper broadens the equity principle by showing that fairness judgments of equitable allocations depend on observers' beliefs in the causes of success and on contextualized information about structural barriers, rather than being a fixed weighting of raw performance indicators. It theoretically separates two related-but-distinct manifestations of meritocratic ideals (individual vs. structural causes of success) and demonstrates that structural beliefs play a more consistent moderating role than individual beliefs once contextual information is made salient — bridging organizational fairness research with social-justice and meritocracy scholarship.

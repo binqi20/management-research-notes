@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-4/pdfs/Shi 2024 Bricks without Straw Overcoming
 text_path: "library/AMJ/vol-67-no-4/text/Shi 2024 Bricks without Straw Overcoming Resource Limitations to Architect Ecosystem Leadership.txt"
 ingested_at: "2026-05-06"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords: ["ecosystem leadership", "complementor strategy", "resource-disadvantaged firms", "foothold resource", "demand-side strategy", "identity movement", "emancipatory vision", "pioneering vision", "orchestrator vision"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "integrating the traditional supply-side view"
   methods_overview: "Xiaomi as a \"revelatory case\""
   keywords_source: "fueling an \"identity movement\" among underserved users centered around a pivotal"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We analyzed data through inductive coding"
+  findings_overview: "We identified three main phases in Xiaomi"
 ---
 
 # Bricks without Straw: Overcoming Resource Limitations to Architect Ecosystem Leadership
@@ -52,6 +57,9 @@ While scholars have explored how focal firms harness demand-side value through e
 **Research Question**
 How does a resource-disadvantaged complementor architect ecosystem leadership? Specifically, how can peripheral complementors lacking critical supply-side resources establish themselves as ecosystem leaders by orchestrating demand-side mobilization and supply-side resource coalescence over time?
 
+**Hypotheses / Propositions**
+Not reported in paper. This is an inductive, nine-year longitudinal single-case study of Xiaomi analyzed with the Gioia methodology (Gioia, Corley, & Hamilton, 2013; Langley, 1999); the authors develop an emergent process model of how a resource-disadvantaged complementor architects ecosystem leadership rather than testing a priori hypotheses, and state no numbered formal propositions.
+
 **Mechanism Process**
 - Key constructs: foothold resource, identity movement, emancipatory vision, pioneering vision, orchestrator vision, second-tier complementor, first-tier complementor, focal orchestrator, dyadic vs. triadic microprocesses
 - Process / phases: Phase I — Building a demand-side community by leveraging mundane resources (challenge: high entry barriers; opportunity: underserved user niche; role R1: second-tier complementor); Phase II — Building supply-side legitimacy without a track record (challenge: difficulty forming dyadic supplier relationships; opportunity: high growth potential; role R2: first-tier complementor); Phase III — Creating a derivative ecosystem by orchestrating value creation (challenge: diminishing advantage from supply-side homogeneity; opportunity: supply- and demand-side diversification; role R3: focal orchestrator while remaining a first-tier complementor)
@@ -60,6 +68,16 @@ How does a resource-disadvantaged complementor architect ecosystem leadership? S
 - Emergent outcomes: structural transformation of ecosystem, ascent from peripheral complementor to focal orchestrator, derivative ecosystem creation
 
 The process unfolds through three sequential phases in which Xiaomi progressively reframes its vision and role in the Android ecosystem. A resource-disadvantaged firm begins by identifying a "foothold resource" (a customizable user interface) that channels the energies of underserved users into an identity movement, generating affective bonds and a fan community. It then leverages this engaged demand-side community as triadic "material proof" of demand-pull to persuade reluctant suppliers to provide critical supply-side resources, gaining supply-side legitimacy. Finally, the firm orchestrates a derivative ecosystem by incubating fledgling firms and combining supply- and demand-side synergies, transforming itself from peripheral complementor to focal orchestrator without disrupting the primary ecosystem—a mutualistic "rising tide lifts all boats" approach.
+
+**Data & Measures**
+A nine-year (2014-2023) longitudinal qualitative case study of Xiaomi, chosen through theoretical sampling as a "revelatory case" (Eisenhardt & Graebner, 2007) for its unusual entry into and transformation of Google's Android ecosystem. The data corpus (Table 1) combined three sources: (1) 112 semi-structured interviews—90 with Xiaomi managers and employees (n = 40) and other Android ecosystem players, including consumers (n = 11), suppliers (n = 16), OEMs (n = 8), complementors (n = 12), and industry analysts (n = 3), plus 22 follow-up interviews with Xiaomi departments—conducted in Chinese, recorded, transcribed verbatim, and translated into English, with respondents selected via theoretical and snowball sampling; (2) participant observations across 18 visits to Xiaomi headquarters, its head R&D office, customer experience stores, and the MIUI Beijing club plus 8 visits to competitors and partners (Huawei, Foxconn, Tencent, Oppo), product-launch events attended incognito as "Mi fans," and six focus groups with academics and practitioners; and (3) 2,179 secondary items (news articles, industry reports, case studies, journal articles, monographs), 1,476 pages of internal archives, and Xiaomi annual reports (2018-2022). Analysis followed a four-step inductive procedure (Gioia, Corley, & Hamilton, 2013; Langley, 1999): (1) developing three event chronologies (the Chinese mobile-phone industry, Android in China, and Xiaomi's development); (2) identifying three temporal phases through temporal bracketing (Langley, 1999) and mapping Xiaomi's dyadic and triadic interactions with ecosystem constituents following Simmel's (1950) typology; (3) inductive open coding that revealed over 100 codes, plus axial coding situating Xiaomi's enrollment of key constituents against each phase's challenges and opportunities; and (4) aggregating categories into theoretical themes and a process model (Figure 5), with alternative-path comparisons to other firms used to identify boundary conditions. The design is interpretive and inductive; no measurement scales, statistical estimation, or causal-identification strategy is claimed.
+
+**Key Findings**
+The study develops an emergent process model (Figure 5) of how a resource-disadvantaged complementor progresses through three phases to architect ecosystem leadership, each phase driven by a distinct persuasion mechanism that couples a compelling vision with substantive "material proof":
+- Phase I—Building a demand-side community by leveraging mundane resources (challenge: high entry barriers; opportunity: underserved user niche): entering as a second-tier complementor (R1), Xiaomi crafts an emancipatory vision around a "foothold resource" (the customizable MIUI interface) through dyadic microprocesses of cultivating a user community to democratize innovation and evoking emotions to generate affiliation, fueling an identity movement that turns users into dedicated "fans."
+- Phase II—Building supply-side legitimacy without a track record (challenge: difficulty forming dyadic supplier relationships; opportunity: high growth potential): becoming a first-tier complementor (R2), Xiaomi crafts a pioneering vision around material and social proof through triadic microprocesses of leveraging demand-side support to paint a promising future and providing social proof from high-status connections, using its large user base as leverage to enroll reluctant suppliers.
+- Phase III—Creating a derivative ecosystem by orchestrating value creation (challenge: diminishing advantage from supply-side homogeneity; opportunity: supply- and demand-side diversification): becoming a focal orchestrator while remaining a first-tier complementor (R3), Xiaomi crafts an orchestrator vision by incubating fledgling firms, evoking emotions to create resonance with second-tier complementors, and combining supply- and demand-side synergies.
+Across the three phases, Xiaomi ascended from "a trivial UI provider on the edge of Android ecosystem" to an orchestrator of its own derivative ecosystem, gaining architectural control without undermining the primary ecosystem. The authors emphasize that this structural advantage was achieved not through a disruptive approach that extracts value from others but through a mutualistic "rising tide lifts all boats" approach in which all ecosystem members benefit from shared growth.
 
 **Theoretical Contribution**
 The paper integrates the supply-side resource-based view with the demand-side perspective in strategy by showing how peripheral firms create value through mundane "foothold resources" that catalyze identity movements among underserved users. It introduces a sociological model of how resource-disadvantaged complementors—not just resource-endowed "star" complementors—can reshape ecosystem structure by combining emotionally evocative visions with substantive material proof. It extends ecosystem theory from a structural to a sociological understanding of how peripheral firms transform ecosystem structure through compelling visions and dedicated user communities, advancing a mutualistic rather than disruptive logic of ecosystem leadership.

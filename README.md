@@ -549,6 +549,21 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.38.0 v3 backfill batch 05 (2026-07-12, 1,167 notes):**
+  Upgrades **AMJ volume 67, issue 5 and issue 4, 18 notes total** to the v3
+  schema — all v2 augmentations. The **record total is unchanged at 1,167**;
+  the version-tier census shifts to 61 v1, 979 v2, 127 v3. Each touched note
+  passed a fresh full independent 9-field rubric-v2 audit: **162 / 162
+  prose-field verdicts `SUPPORTED`**, 0 `PARTIAL`, 0 `UNSUPPORTED`,
+  0 `CONTRADICTED` (all 18 notes overall pass), after four evidence-based
+  repairs cleared in a single round — two new-field precision fixes to Data &
+  Measures (the Hallila fixed-effect-set list and the Marti 260-statement
+  attribution) and two legacy future-research scope trims (Bliese's invented
+  method-pairing examples and Madsen's measurement call, which the paper frames
+  as a limitation, not a stated direction). A fresh re-audit of the four
+  repaired notes returned every field `SUPPORTED`. `library.bib` regenerated
+  byte-identical (the all-augmentation signature — only SQLite and CSV changed).
+
 - **v0.37.0 v3 backfill batch 04 (2026-07-12, 1,167 notes):**
   Upgrades **AMJ volume 68, issue 1 and volume 67, issue 6, 18 notes total** to
   the v3 schema — all v2 augmentations. The **record total is unchanged at
@@ -705,7 +720,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 997 v2 notes, and 109 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 979 v2 notes, and 127 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -838,7 +853,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.37.0},
+  version      = {0.38.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

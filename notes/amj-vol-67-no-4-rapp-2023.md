@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-4/pdfs/Rapp 2023 Dirty Heroes Healthcare Worker
 text_path: "library/AMJ/vol-67-no-4/text/Rapp 2023 Dirty Heroes Healthcare Workers’ Experience of Mixed Social Evaluations during the Pandemic.txt"
 ingested_at: "2026-05-06"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-qualitative"
 keywords: ["mixed social evaluations", "dirty heroes", "stigma", "dirty work", "hero-washing", "healthcare workers", "COVID-19 pandemic", "social evaluation events"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "three evaluative dimensions of work"
   methods_overview: "a grounded theory methodology"
   keywords_source: "workers are celebrated and stigmatized"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "utilizing a two-step coding system"
+  findings_overview: "typically had a null or negative effect on"
 ---
 
 # Dirty Heroes? Healthcare Workers’ Experience of Mixed Social Evaluations during the Pandemic
@@ -52,6 +57,9 @@ The sudden onset of the COVID-19 pandemic ushered in an unprecedented era of pub
 **Research Question**
 How do stigmatized workers experience, evaluate, and respond to mixed social evaluations (e.g., being treated like a "dirty hero")?
 
+**Hypotheses / Propositions**
+Not reported in paper. This is an inductive/abductive grounded theory study (Corbin & Strauss, 2008; Glaser & Strauss, 1967); the authors develop an emergent model of how healthcare workers experience, evaluate, and respond to mixed social evaluations rather than testing a priori hypotheses, and they state no numbered formal propositions.
+
 **Mechanism Process**
 - Triggering condition: Social evaluation event (the COVID-19 pandemic) disrupts existing social consensus and provokes widespread reappraisal of healthcare work.
 - Evaluative dimensions of work (context-specific): physical (taint via bodily fluids/disease), social (courtesy stigma from contact with infected patients), and moral (lionization as heroes vs. stigmatization as pandemic "coconspirators").
@@ -61,6 +69,12 @@ How do stigmatized workers experience, evaluate, and respond to mixed social eva
 - Cumulative process: repeated mixed evaluations increase scrutiny, surfacing "hero-washing" when public celebration coexists with private neglect (insufficient PPE, staffing, compensation).
 
 The grounded model shows that healthcare workers were not passive recipients of stigma or praise; they actively interrogated the proximity, informedness, and authenticity of their evaluators, producing internalization outcomes — including discounting supporters and condoning condemners — that prior dirty-work theory had not anticipated. Mixed evaluations operating across three dirty-work dimensions intensified internal-external identity dissonance, and this dissonance, rather than canceling out, compounded the disruption to workers' social selves.
+
+**Data & Measures**
+Data corpus: an inductive/abductive grounded theory study (Corbin & Strauss, 2008; Glaser & Strauss, 1967) built on 98 semi-structured interviews with healthcare workers (nurses and nurse administrators, 45; physicians and physician assistants, 18; healthcare administrators, 25; and other clinicians, 10), conducted remotely (primarily via Zoom) and generally lasting 60 to 90 minutes; 73 participants had cared for confirmed or suspected COVID-19 patients and 55 held supervisory or management duties. Much of the interview data was shared with a separate project (Rapp et al., 2021), but the protocol was bifurcated early to prevent data overlap, and several additional interviews plus a short anonymous survey questionnaire were collected for this article. Interviews were conducted and analyzed in small waves so that emerging abstract themes could be validated and probed for greater depth in later interviews. Analysis used a two-step coding system (Kreiner, 2015): at least two authors (always including the interviewer) independently coded each interview and then met to compare, find agreement, and build off one another, placing new codes in a working and evolving dictionary and documenting emerging trends in theoretical memos (Charmaz, 2014; Saldaña, 2009). The team iterated among the coding dictionary, protocol, previously coded interviews, and existing literature, adding codes such as physical stigma, social stigma, duality of treatment, inconsistent, and reject hero treatment (with child and grandchild subcodes such as reject hero treatment-disingenuous and reject hero treatment-uninformed) presented in Tables 2–4; initial evidence of theoretical saturation appeared after coding 58 interviews. The insider–outsider research team (the first two authors had prior hospital and nursing-home work experience; the third author had none) also conducted member checking through calls and written communication with 20 respondents in late 2021 and early 2022, none of whom objected to the paper's story. The design is interpretive: the first third of the grounded model uses a more abductive approach to theorizing and the latter two-thirds a more traditional inductive, social constructivist approach, with no measurement scales, statistical estimation, or causal-identification strategy claimed.
+
+**Key Findings**
+The study surfaces a grounded, dynamic process model (Figure 1) of how workers experience, evaluate, and respond to mixed—and even contradictory—social evaluations, comprising three sections: evaluation formation and transmission, then evaluation perception, consideration, and internalization. (1) The pandemic is theorized as a "social evaluation event" that disrupts the existing social consensus and provokes the widespread reappraisal of an occupation; unlike stigma, moralization, or valorization events, such events need not produce evaluations of uniform valence. (2) Mixed evaluations formed along three dimensions of work traditionally studied in dirty work—physical (taint from bodily fluids and transmissible disease), social (Goffman's "courtesy stigma" from proximity to infected patients), and moral (lionization as heroes versus, as the pandemic progressed, moral tainting as pandemic "coconspirators")—yielding the concept of "dirty heroes," occupations simultaneously stigmatized and celebrated along one or more of these dimensions. (3) Rather than passively absorbing evaluations, workers appraised each evaluation's validity by three criteria—the proximity, informedness, and authenticity of the source—and, contrary to prior theory holding that targets simply support their supporters and condemn their condemners, they could condone condemners (acceptance) and discount or condemn supporters (rejection). (4) The authors document "hero-washing," whereby workers were publicly lauded and idealized at a distance yet insufficiently supported with vital resources such as adequate staffing, PPE, and compensation. The central directional finding runs counter to the authors' initial expectation of greater professional pride: the "healthcare heroes" campaign typically had a null or negative effect on healthcare workers' attitudes, esteem, and morale, and in the main workers did not positively internalize the hero narrative.
 
 **Theoretical Contribution**
 The paper contributes to dirty work and stigma scholarship by introducing "dirty heroes" — occupational members simultaneously stigmatized and celebrated along distinct evaluative dimensions of work — and by theorizing "hero-washing," whereby publicly bestowed honorifics substitute for material support. It advances stigma research by specifying how targets evaluate their evaluators (proximity, informedness, authenticity), demonstrating that stigmatized workers are active agents who can condone condemners and discount supporters. It also introduces "social evaluation events" as an umbrella concept distinct from stigma, moralization, or valorization events because they need not produce evaluations of uniform valence.

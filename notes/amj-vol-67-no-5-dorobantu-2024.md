@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-67-no-5/pdfs/Dorobantu 2024 The AMJ Management Resear
 text_path: "library/AMJ/vol-67-no-5/text/Dorobantu 2024 The AMJ Management Research Canvas A Tool for Conducting and Reporting Empirical Research.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "editorial"
 keywords: ["research canvas", "empirical research", "research design", "puzzle", "research question", "theoretical constructs", "research setting", "boundary conditions", "contributions"]
@@ -44,6 +46,9 @@ For more information see: Dorobantu, S., Gruber, M., Ravasi, D., & Wellman, N., 
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: All successful empirical management research projects share nine core elements that must "fit" together for the project to be cohesive — the puzzle, the audience and prior research, the research question, the theoretical constructs and relationships, the research setting, the research design and analysis, the empirical findings, the contributions, and the boundary conditions and limitations.
 - The nucleus: The "puzzle" — a broad theoretical or phenomenological conundrum that preoccupies a community of management scholars — anchors every other element of the canvas.
@@ -51,6 +56,12 @@ Not reported in paper
 - Boundary conditions: The canvas is not a rigid template; ontological and epistemological assumptions influence which elements are emphasized (e.g., setting matters more for qualitative studies than for controlled experiments). Iteration across elements is encouraged rather than linear progression.
 
 The editorial argues that although the nine core elements are generally well-known, they are not always explicitly considered during research design and manuscript preparation, leading to submissions that fail to meet AMJ's publication bar. The canvas serves as a "checklist" and a visual mapping tool to help authors — especially less experienced ones — conceptualize, develop, and revise empirical research projects systematically. It complements earlier AMJ editorials (e.g., Colquitt & George, 2011) by integrating their guidance into a single framework.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The paper contributes a synthesizing framework — the AMJ Management Research Canvas — that aggregates and operationalizes prior AMJ editorial guidance into a nine-element template applicable across micro/macro and qualitative/quantitative research traditions. By offering a list of guiding questions for each element (Table 1), the canvas provides scholars with a systematic tool for moving from initial research idea to fully developed research project, while preserving flexibility for different methodological approaches.

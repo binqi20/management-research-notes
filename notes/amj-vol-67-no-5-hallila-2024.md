@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-5/pdfs/Hallila 2024 Revving Up or Backing Down 
 text_path: "library/AMJ/vol-67-no-5/text/Hallila 2024 Revving Up or Backing Down Cross-Level Effects of Firm-Level Tournaments on Employees’ Competitive Actions.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords: ["tournament theory", "competitive actions", "career concerns", "reputational incentives", "common-enemy effects", "cross-level effects", "MotoGP"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "We propose a theory of individual reputational incentives"
   methods_overview: "we estimated all models using a robust Poisson"
   keywords_source: "We propose a theory of individual reputational incentives"
+  hypotheses_source: "Hypothesis 1a. An increase in a firm’s competitive"
+  measures_overview: "We use overtakes to measure a rider’s competitive"
+  findings_overview: "Consistent with Hypothesis 2b, it has a positive"
 ---
 
 # Revving Up or Backing Down? Cross-Level Effects of Firm-Level Tournaments on Employees’ Competitive Actions
@@ -52,6 +57,16 @@ The tournament literature has typically traced employees’ competitive actions 
 **Research Question**
 How do a firm’s competitive threats and opportunities in a firm-level tournament affect the internal and external competitive actions of its employees, who themselves strive for career-related rewards in a nested individual-level tournament?
 
+**Hypotheses / Propositions**
+H1a. An increase in a firm’s competitive threats decreases the rate at which an employee engages in internal competitive actions.
+H1b. An increase in a firm’s competitive threats increases the rate at which an employee engages in external competitive actions.
+H2a. An increase in a firm’s competitive opportunities increases the rate at which an employee engages in internal competitive actions.
+H2b. An increase in a firm’s competitive opportunities increases the rate at which an employee engages in external competitive actions.
+H3a. A firm’s competitive threats decrease the rate at which an employee engages in internal competitive actions more if the firms supplying such threats have relatively inferior (rather than similar or superior) resource endowments.
+H3b. A firm’s competitive threats increase the rate at which an employee engages in external competitive actions more if the firms supplying such threats have relatively inferior (rather than similar or superior) resource endowments.
+H4a. A firm’s competitive opportunities increase the rate at which an employee engages in internal competitive actions more if the firms supplying such opportunities have relatively superior (rather than similar or inferior) resource endowments.
+H4b. A firm’s competitive opportunities increase the rate at which an employee engages in external competitive actions more if the firms supplying such opportunities have relatively superior (rather than similar or inferior) resource endowments.
+
 **Mechanism Process**
 - IV(s): Firm-level competitive threat (number of lower-ranked teams within striking distance); Firm-level competitive opportunity (number of higher-ranked teams within striking distance); both partitioned by relative resource endowments (inferior, similar, superior) of the focal vs. competing teams.
 - DV(s): Internal competitive actions (overtakes against teammates per lap); External competitive actions (overtakes against riders from other teams per lap).
@@ -59,6 +74,12 @@ How do a firm’s competitive threats and opportunities in a firm-level tourname
 - Moderators: Relative resource endowments of competing firms (factory vs. satellite teams); contractual conditions (permanent, contract-up, replacement, voluntary notice, involuntary notice) explored in post hoc analyses.
 
 The proposed mechanism centers on individual reputational incentives: employees anticipate that (prospective) employers' assessments of their ability incorporate the firm's tournament standing, so employees modulate their behavior to dissociate from potential losses and associate with potential gains. Under firm-level competitive threat, internal competitive actions become reputationally costly (employees risk being seen as blameworthy if the firm loses standing) whereas external competitive actions help fend off the threat. Under firm-level competitive opportunities, both internal and external competitive actions help the employee claim credit for the firm's improved standing. These effects intensify when potential movements are unexpected — when threats come from resource-disadvantaged underdogs or opportunities arise against resource-advantaged favorites.
+
+**Data & Measures**
+Data are an original rider-lap panel data set covering the population of MotoGP races from 2004 to 2020, collected from motogp.com (MotoGP’s official database), which provides lap-by-lap, sector-level data for all races plus rider and team characteristics; the final sample is 104,606 rider-lap observations involving 125 distinct riders. The two dependent variables are count measures of competitive actions: Internal overtakes (the number of times a rider overtakes teammates during a focal lap) and External overtakes (the number of times a rider overtakes other teams’ riders during a focal lap), identified from sector-level position changes. Independent variables: Competitive threat is the number of teams that can pass the focal team in the competition ranking during a race, and Competitive opportunity is the number of teams the focal team can pass, firm-level analogues of Bothner et al.’s (2007) “crowding from below” and “crowding from above,” updated lap to lap. The resource-endowment moderator partitions each of Competitive threat and Competitive opportunity into inferior-, similar-, and superior-resource components, defined by whether the teams supplying the threats or opportunities are satellite (relatively inferior) or factory (relatively superior) teams. Individual reputational incentives, the theorized mediator, are not directly measured. Controls include previous internal/external overtakes (race and season), rider-level threat/opportunity exposure, risk-taking, experience, wet weather, and season stage, alongside six sets of fixed effects (rider rank, team rank, lap, teams, racetrack, and year), with conditional rider-level fixed effects. Estimation uses a robust Poisson quasi-maximum likelihood (QML) estimator with conditional rider fixed effects; the authors address simultaneity and reverse causality by predicting overtakes during a lap from competitive threat and opportunity measured at the start of that lap, and report coarsened exact matching and OLS linear-probability analyses of individual overtake opportunities as robustness checks. The design is a panel fixed-effects one rather than an experimental or quasi-experimental identification strategy.
+
+**Key Findings**
+H1a is supported: in the main lap-level analysis Competitive threat has a negative and significant coefficient on internal overtakes (b = -0.0355, p < .05), implying roughly a 9% decrease in internal overtakes per one-standard-deviation increase. H1b is supported: Competitive threat has a positive and marginally significant coefficient on external overtakes (b = 0.0102, p < .10). H2a is not supported in the main analysis, where the coefficient of Competitive opportunity on internal overtakes is positive but fails to reach significance (the authors report insufficient evidence to support Hypothesis 2a), though it finds some support in the supplementary overtake-opportunity analysis. H2b is supported: Competitive opportunity is positively and significantly related to external overtakes (b = 0.0253, p < .01). For the resource-endowment moderation, H3a is partially supported: CT (inferior resources) has a negative and significant coefficient on internal overtakes (b = -0.0582, p < .01) that differs statistically from CT (superior resources) but not from CT (similar resources). H4a is fully supported: CO (superior resources) has a positive and significant coefficient on internal overtakes (b = 0.0861, p < .01) that is statistically larger than the CO (similar) and CO (inferior) coefficients. H3b is not strictly supported in the partial model, whose coefficients are directionally consistent, though the full specification is more consistent with it, indicating external overtakes rise more when threats derive from inferior-resource teams. H4b is supported in the main analysis (external overtakes increase more when opportunities arise against superior-resource teams) but receives no support in the supplementary overtake-opportunity analysis.
 
 **Theoretical Contribution**
 The paper advances tournament theory by demonstrating that the locus and intensity of employees' competitive actions respond not only to the individual-level career tournament (the prevailing focus of the literature) but also to the dynamics of the firm-level tournament in which it is nested. It also extends the common-enemy literature by introducing vertical differentiation among competing firms (threats from below vs. opportunities against above) and by accounting for individual career concerns that allow employees to engage in both internal and external competitive actions simultaneously.

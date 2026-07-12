@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-4/pdfs/Dwivedi 2023 Tick Off the Gender Diversi
 text_path: "library/AMJ/vol-67-no-4/text/Dwivedi 2023 Tick Off the Gender Diversity Box Examining the Cross-Level Effects of Women’s Representation in Senior Management.txt"
 ingested_at: "2026-05-06"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords: ["gender diversity", "women in senior management", "internal diversity practices", "cross-level spillover", "attention-based view", "diversity and hiring committees", "law firms"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "attention-based view of the firm"
   methods_overview: "averaged negative binomial regression model"
   keywords_source: "an attention-based perspective on gender diversity"
+  hypotheses_source: "peers will extend fewer job offers to junior women."
+  measures_overview: "Women on diversity and hiring committees is measured as the proportion of women"
+  findings_overview: "Supporting our first and second hypotheses, we"
 ---
 
 # Tick Off the Gender Diversity Box: Examining the Cross-Level Effects of Women’s Representation in Senior Management
@@ -51,6 +56,13 @@ In male-dominated industries, organizations face considerable pressure to enhanc
 **Research Question**
 What impact does greater gender diversity at the top have on junior women’s career opportunities, and how does the higher representation of women in senior management impact employment outcomes for women in lower ranks in male-dominated industries?
 
+**Hypotheses / Propositions**
+- H1: Firms with a relatively higher representation of women in senior management compared to peers will have lower engagement with internal diversity practices. (negative)
+- H2: Firms with a relatively higher representation of women in senior management compared to peers will extend fewer job offers to junior women. (negative)
+- H3: Engagement with internal diversity practices mediates the negative relationship between the representation of women in senior management and the number of jobs offered to junior women. (negative indirect effect)
+- H4: The negative relationship between the representation of women in senior management and engagement with internal diversity practices will be weaker in firms with a substantially higher representation of women on the diversity and hiring committees. (attenuating moderation)
+- H5: The negative indirect effect of a firm's representation of women in senior management on the number of jobs offered to junior women (via engagement with internal diversity practices) will be weaker in firms with a substantially higher representation of women on the diversity and hiring committees. (attenuating moderated mediation)
+
 **Mechanism Process**
 - IV(s): Women's representation in senior management (proportion of women partners, lagged one year)
 - DV(s): Number of full-time job offers extended to women candidates for entry-level associate positions
@@ -59,6 +71,22 @@ What impact does greater gender diversity at the top have on junior women’s ca
 - Controls: Firm prestige, firm size, geographic location (Southern states), associate-partner ratio, women associates who left, formal partnership policy, total job offers made, year dummies
 
 The authors theorize that firms with comparatively higher proportions of senior women than industry peers paradoxically reduce attention to internal diversity practices for three reasons: (1) men perceive an "illusion of progress" and satisficing behavior dampens further effort, (2) firms prioritize externally rewarding diversity targets at the top (e.g., lateral hiring) over uncertain internal practices, and (3) senior women face structural barriers (lack of critical mass, stereotype threat, extra-role costs) that constrain their collective ability to influence diversity practices. This reduced attentional engagement degrades targeted recruitment and bias-mitigating selection processes, leading to fewer job offers to junior women. Substantive women's representation on diversity and hiring committees mitigates this spillover by granting formal authority and creating supportive coalitions.
+
+**Data & Measures**
+- Data source: Panel data on the largest U.S. law firms drawn from the Vault/MCCA Survey, 2007-2015 (193 firms, 1,202 firm-year observations).
+- DV: Number of full-time job offers extended to women candidates for entry-level associate positions.
+- IV: Women's representation in senior management = proportion of women partners in the firm in the previous year (lagged one year).
+- Mediator: Engagement with internal diversity practices = average score (0-3) across six internally oriented diversity practices coded from the Vault/MCCA survey (0 = not implemented / not a priority, up to 3 = already completed and sustained).
+- Moderator: Substantive representation of women on diversity and hiring committees = proportion of women across the two committees.
+- Identification: The design is associational. The authors estimate population-averaged mixed models using generalized estimating equations with a negative binomial regression (overdispersed count DV), test mediation with the conservative Sobel/Aroian/Goodman statistics, confirm moderated mediation via the sequential procedure of Muller, Judd, and Yzerbyt (2005), and probe omitted-variable bias with an impact threshold of a confounding variable (ITCV) sensitivity analysis. They note the survey-based archival data preclude definitive causal claims.
+
+**Key Findings**
+All five hypotheses were supported.
+- H1 supported: women's representation in senior management was negatively related to engagement with internal diversity practices (b = -0.55, p = .008; Table 3, model 2).
+- H2 supported: women's representation in senior management was negatively related to the job offers extended to junior women (b = -1.19, p = .002; Table 2, model 2).
+- H3 supported: engagement with internal diversity practices mediated the negative relationship; the conservative Sobel mediation statistic was significant (t = -2.02, p = .044).
+- H4 supported: the interaction between women's senior representation and women's substantive committee representation was positive and significant (b = 5.09, p = .009; Table 3, model 4), so the negative relationship was weaker - and reversed at gender parity on the committees - as women's committee representation rose.
+- H5 supported: the negative moderated indirect effect on job offers weakened and turned positive when women's representation on the diversity and hiring committees was one standard deviation above the mean.
 
 **Theoretical Contribution**
 The study extends the attention-based view of the firm by adopting a practice lens (Feldman & Orlikowski, 2011), showing how demographic composition in senior management shapes attentional engagement with diversity through interrelated practices. It contributes to the literature on unintended consequences of diversity initiatives by demonstrating cross-level spillovers from senior gender diversity all the way to entry-level women, and offers a remedy by showing that women's substantive representation on diversity and hiring committees disrupts the negative spillover.

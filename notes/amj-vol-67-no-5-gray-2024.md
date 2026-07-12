@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-67-no-5/pdfs/Gray 2024 Credentials or Chemistry Entre
 text_path: "library/AMJ/vol-67-no-5/text/Gray 2024 Credentials or Chemistry Entrepreneur Gender and Cofounder Selection.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -61,6 +63,9 @@ evidence:
   theories_overview: "we draw upon the concept of interdependent self-construal because it has consistently"
   methods_overview: "We relied on two-limit Tobit models"
   keywords_source: "How, when, and why do women differ from men in how they choose cofounders?"
+  hypotheses_source: "Hypothesis 1. Compared to men entrepreneurs,"
+  measures_overview: "To measure interdependent self-construal, we"
+  findings_overview: "Thus, Hypothesis 3a was supported."
 ---
 
 # Credentials or Chemistry? Entrepreneur Gender and Cofounder Selection
@@ -71,6 +76,15 @@ Research on entrepreneurial networking suggests that women may be more likely th
 **Research Question**
 How, when, and why do women entrepreneurs differ from men entrepreneurs in how they choose cofounders?
 
+**Hypotheses / Propositions**
+- H1: Compared to men entrepreneurs, women entrepreneurs are more likely to exhibit higher interdependent self-construals (positive: woman -> higher interdependent self-construal).
+- H2a: Entrepreneurs with higher interdependent self-construals are more likely to prioritize interpersonal attraction when selecting cofounders (positive).
+- H2b: Entrepreneurs with higher interdependent self-construals are less likely to prioritize resource seeking when selecting cofounders (negative).
+- H3a: Compared to men entrepreneurs, women entrepreneurs are more likely to prioritize interpersonal attraction via the mediating effect of interdependent self-construal (positive indirect effect).
+- H3b: Compared to men entrepreneurs, women entrepreneurs are less likely to prioritize resource seeking via the mediating effect of interdependent self-construal (negative indirect effect).
+- H4a: Legitimacy moderates the interdependent self-construal -> interpersonal attraction relationship, such that when legitimacy is low the positive relationship is weakened.
+- H4b: Legitimacy moderates the interdependent self-construal -> resource-seeking relationship, such that when legitimacy is low the negative relationship is weakened (i.e., becomes less negative).
+
 **Mechanism Process**
 - IV(s): Entrepreneur gender (woman = 1, man = 0)
 - DV(s): Interpersonal attraction selection strategy; resource-seeking selection strategy
@@ -78,6 +92,24 @@ How, when, and why do women entrepreneurs differ from men entrepreneurs in how t
 - Moderator: Legitimacy (the extent to which a venture and founder are deemed appropriate by external evaluators), operationalized via founder-related signals (top-ranked university, terminal degree, "big five" tech experience, prior entrepreneurial experience) in Study 1, randomly assigned high/low conditions in Study 2, and a composite of organizational achievements plus years of entrepreneurial experience in Study 3.
 
 The mechanism the authors propose is a person-situation interactionist model: socialization into communal-versus-agentic gender roles produces, on average, higher interdependent self-construals in women than in men; higher interdependent self-construal heightens the value placed on relational cues (similarity, liking, familiarity) and dampens preference for instrumental, resource-bearing ties, channeling women toward an interpersonal attraction selection strategy and away from resource seeking. However, because individuals with high interdependent self-construals are also more attuned to external expectations and more responsive to mismatches with situational norms, they recalibrate when legitimacy is low — increasing resource seeking and decreasing interpersonal attraction to meet investors' expectations. This makes women's networking adaptable across high- and low-legitimacy contexts, while men's resource-seeking orientation remains relatively constant.
+
+**Data & Measures**
+- IV — Entrepreneur gender: coded woman = 1, man = 0 in all three studies (Study 1 from Y Combinator profile self-report; Studies 2-3 from respondent self-identification).
+- Mediator — Interdependent self-construal: Studies 1 and 3 via a purpose-built 172-word LIWC dictionary applied, respectively, to scraped YC profile text and to transcribed incubator pitch audio; Study 2 via established self-construal scale items (Cross et al., 2000).
+- DVs — Interpersonal attraction and resource-seeking selection strategies: Study 1 via two LIWC dictionaries scoring the proportion of interpersonal-attraction vs. resource-seeking words in each profile; Study 2 via a 12-task choice-based conjoint (four cofounder attributes) yielding attribute-importance scores; Study 3 via dyadic composite measures across the 242 formed ties.
+- Moderator — Legitimacy: Study 1 as a 0-4 discrete ordinal index of founder signals (top-ranked university, terminal degree, "big five" tech experience, prior entrepreneurial experience); Study 2 as a randomly assigned high/low legitimacy manipulation; Study 3 as a standardized composite of organizational achievements and years of entrepreneurial experience.
+
+In the authors' own terms, Study 1 estimates two-limit Tobit models with country and functional-responsibility fixed effects and tests the indirect effects by bootstrapping 10,000 draws; the authors describe Study 1 as a correlational design. Study 2 is a pre-registered randomized experiment that manipulates legitimacy and estimates conjoint attribute importance via hierarchical Bayesian multinomial logit with OLS moderation tests, which the authors position as providing causal evidence for the proposed relationships. Study 3 uses mixed-effects regressions with entrepreneur and cofounder random effects plus function and industry fixed effects on field dyadic data.
+
+**Key Findings**
+Support was broad but heterogeneous; the paper reports each hypothesis per study, and two hypotheses failed in Study 3.
+- H1 (woman -> higher interdependent self-construal) supported in all three studies (Study 1 B = 0.569, p = .004; Study 2 B = 0.167, p = .0099; Study 3 B = 0.437, p = .037).
+- H2a (interdependent self-construal -> interpersonal attraction, positive) supported in all three studies (Study 1 B = 0.017, p = .010; Study 2 B = 0.131, p < .001; Study 3 B = 0.219, p = .048).
+- H2b (interdependent self-construal -> resource seeking, negative) supported in Study 1 (B = -0.052, p < .001) and Study 2, but NOT supported in Study 3 (B = -0.075, p = .474).
+- H3a (gender -> interpersonal attraction via interdependent self-construal, positive indirect) only marginally/partially supported in Study 1 (Est. = .002, p = .067) but supported in Study 2 (Est. = .023, p = .011) and Study 3 (Est. = .093, p = .007).
+- H3b (gender -> resource seeking via interdependent self-construal, negative indirect) only marginally/partially supported in Study 1 (Est. = -.006, p = .059) and supported in Study 2, but NOT supported in Study 3 (no significant gender -> resource-seeking indirect effect).
+- H4a (legitimacy weakens the interdependent self-construal -> interpersonal attraction link when low) supported in all three studies (Study 1 interaction B = 0.020, p = .009; Study 2 interaction B = 0.166, p = .0102; Study 3 positive under high legitimacy, Est. = .363, p < .001, and null under low legitimacy, Est. = .056, p = .629).
+- H4b (legitimacy weakens the interdependent self-construal -> resource-seeking link when low) supported in all three studies (Study 1 interaction B = -0.014, p = .048; Study 2 supported; Study 3 interaction B = -0.326, p = .019), with the negative relationship becoming less negative under low legitimacy.
 
 **Theoretical Contribution**
 The paper reconciles competing predictions from the entrepreneurial networking literature (women should resource-seek to counter investor bias) and the gender in networking literature (women should prioritize interpersonal attraction for relational stability) by introducing a person-situation interactionist model in which interdependent self-construal mediates gender's effect on cofounder selection and legitimacy moderates this mediated relationship. It empirically validates a mechanism — interdependent self-construal — that prior reviews (Brands et al., 2022) had flagged as a promising but underused explanation for gender differences in tie formation, and reframes interdependent self-construal as a source of behavioral adaptability rather than only relational motivation.

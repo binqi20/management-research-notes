@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-5/pdfs/Zhang 2024 Screening Theory and Its Boun
 text_path: "library/AMJ/vol-67-no-5/text/Zhang 2024 Screening Theory and Its Boundaries Investigation of Screen Credibility, Necessity, and Salience in the Context of Corporate Venture Capital.txt"
 ingested_at: "2026-05-05"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -61,6 +63,9 @@ evidence:
   theories_overview: "Screening theory is a theory of decision-making"
   methods_overview: "risks analysis with partial likelihood estimation"
   keywords_source: "screen credibility, screen necessity, and screen salience to the screener as boundary conditions that determine screen efficacy"
+  hypotheses_source: "Hypothesis 3. The negative relationship between QS"
+  measures_overview: "To identify QSs, we followed Bushee (1998) by"
+  findings_overview: "(b 5 20.263, p , .001), which supports Hypothesis"
 ---
 
 # Screening Theory and Its Boundaries: Investigation of Screen Credibility, Necessity, and Salience in the Context of Corporate Venture Capital
@@ -70,6 +75,12 @@ Screening theory explains how decision-makers search for and use external cues t
 
 **Research Question**
 When and under what boundary conditions do corporate venture capital (CVC) decision-makers use the industry shareholdings of their firm's quality shareholders as an informational screen to inform CVC funding-termination decisions in industries where the firm does not yet compete?
+
+**Hypotheses / Propositions**
+- H1 (fundamental screen): Investment in an industry by a firm's quality shareholders (QSs) is *negatively* associated with the firm's termination of CVC funding in that industry.
+- H2 (screen credibility): The negative H1 relationship is amplified (i.e., negatively moderated) by the concentration of QS shareholdings; the relationship is stronger for highly concentrated QSs than for less concentrated (dispersed) QSs.
+- H3 (screen necessity): The negative H1 relationship is attenuated (i.e., positively moderated) by market heat; in hot markets the relationship is less negative.
+- H4 (screen salience to the screener): The negative H1 relationship is amplified (i.e., negatively moderated) by the firm's industry-specific knowledge; when the firm is highly familiar with an industry, the relationship is more negative.
 
 **Mechanism Process**
 - IV: Quality-shareholder (QS) industry holdings (weighted sum of QS shareholdings concentrated within the venture's industry).
@@ -81,6 +92,23 @@ When and under what boundary conditions do corporate venture capital (CVC) decis
 - Mediators: None hypothesized; the framework is moderated-direct-effect rather than mediated.
 
 The mechanism is informational: under uncertainty about diversifying-CVC industries, decision-makers scan secondary cues and use their own QSs' concentrated shareholdings as an "industry quality" screen because QSs face costly screening equilibria and possess deep industry expertise. The screen's efficacy is conditioned by three systems-perspective boundaries — whether the screen is credible (concentrated QSs are more dependable signalers than dispersed ones), whether it is necessary (cold markets demand the screen; hot markets substitute for it), and whether it is salient to the screener (high industry-specific knowledge complements the external cue, allowing decision-makers to absorb and act on it).
+
+**Data & Measures**
+- Data sources: CVC deals from VentureXpert; institutional ownership from Thomson Reuters 13F; financials from Compustat; boards from BoardEx; patents from USPTO; acquisitions from SDC M&A; customer-supplier links from FactSet. Sample: diversifying CVC by U.S. public firms (financial services excluded), ventures receiving initial funding 2000-2014 and tracked through 2019.
+- DV — CVC funding termination: coded as terminated if the CVC firm did not invest in any subsequent funding round (following Guler, 2007; Ma, 2020; Zheng & Xia, 2018).
+- IV — QS industry holdings: the weighted sum of a firm's quality shareholders' shareholdings in the venture's industry; QSs identified following Bushee (1998) by portfolio turnover and holding concentration.
+- Moderator (screen credibility) — QS industry concentration: concentrated vs. dispersed QS industry holdings from a Herfindahl-Hirschman-index median split, orthonormalized via the modified Gram-Schmidt procedure.
+- Moderator (screen necessity) — market heat: natural log of the number of successful exit events (IPOs/acquisitions) in the venture's industry in the prior year.
+- Moderator (screen salience) — industry-specific knowledge: supply-chain industry experience, the ratio of the CVC firm's customers/suppliers in the venture's industry to those in its other (non-competing) CVC-funded industries, from FactSet.
+- Estimation: competing-risks survival model with partial likelihood estimation and time-varying covariates (sub-hazard of funding termination), robust standard errors clustered by firm. Endogeneity is addressed with a Heckman two-stage selection correction (multinomial first stage; exclusion restriction = industry diversifying CVC intensity), a difference-in-differences design using institutional-investor mergers as a shock, and ITCV/RIR omitted-variable checks; the authors frame these as alleviating endogeneity rather than establishing strictly exogenous identification. Study 2: a policy-capturing scenario study of 41 experienced CVC decision-makers (orthogonal fractional factorial design) analyzed with hierarchical linear modeling.
+
+**Key Findings**
+- Main study (competing-risks model; 17,825 firm-venture-year observations, 627 terminations): all four hypotheses supported.
+  - H1 supported: QS industry holdings is negatively related to CVC funding termination (b = -0.263, p < .001); a one-SD increase lowers termination likelihood by about 23%.
+  - H2 supported: concentrated QS industry holdings is negatively associated with termination (b = -0.739, p < .01), dispersed QS holdings is not significant (b = -0.101, ns), and the two coefficients differ (z = 2.04, p < .05).
+  - H3 supported: the market heat × QS industry holdings interaction is positive (b = 0.061, p < .01) — hot markets attenuate the negative relationship.
+  - H4 supported: the industry-specific knowledge × QS industry holdings interaction is negative (b = -0.127, p < .05) — internal industry knowledge amplifies the negative relationship.
+- Study 2 (policy-capturing, n = 41) corroborates the main effect and H2-H3: negative QS main effect (p < .001), negatively moderated by QS concentration (p < .001), positively moderated by market heat (p < .01); the industry-specific-knowledge moderation (H4) was negative but only marginally significant (p = .065).
 
 **Theoretical Contribution**
 The paper extends screening theory by introducing a systems-level set of boundary conditions — screen credibility, screen necessity, and screen salience to the screener — that specify when a screen is activated within the decision-making process, addressing the long-standing critique that screening theory lacks conceptual precision and is often conflated with signaling theory. The framework provides scholars with screen-specific constructs (rather than only context-specific moderators) to apply screening theory rigorously across new domains and clarifies that screening focuses on receivers' differential reliance on cues, whereas signaling focuses on senders' decisions to send cues. The study also contributes to the CVC literature by uncovering quality shareholders as a previously unrecognized class of informational influencers on CVC funding-termination decisions.

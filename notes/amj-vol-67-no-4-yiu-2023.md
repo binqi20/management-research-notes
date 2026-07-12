@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-67-no-4/pdfs/Yiu 2023 A Theory of Host Country Sentim
 text_path: "library/AMJ/vol-67-no-4/text/Yiu 2023 A Theory of Host Country Sentiments An Illustration in Cross-Border Acquisitions.txt"
 ingested_at: "2026-05-06"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-12"
 
 paper_type: "empirical-quantitative"
 keywords: ["host country sentiments", "cross-border acquisitions", "sentiment dynamics", "sentiment analysis", "legitimacy", "emerging market firms"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Synthesizing ritual interactionist"
   methods_overview: "we used logit regression analysis to test our"
   keywords_source: "We advocate the concept of \"host country"
+  hypotheses_source: "Hypothesis 1. Host country sentiments toward (a) the"
+  measures_overview: "country sentiments were measured as the polarity"
+  findings_overview: "acquirer in Model 4 is positive and significant"
 ---
 
 # A Theory of Host Country Sentiments: An Illustration in Cross-Border Acquisitions
@@ -53,6 +58,13 @@ Capitalizing on massive sentiment diffusion and mobilization aided by mass media
 **Research Question**
 How do host country sentiments — socially constructed and collectively shared attitudes and emotional dispositions among host country stakeholders toward foreign entities — and their dynamics (volatility, wavelength, augmentation) influence the likelihood of cross-border acquisition deal completion?
 
+**Hypotheses / Propositions**
+- H1. Host country sentiments toward (a) the deal, (b) the acquirer, and (c) the inward investments from the home country are positively related to the likelihood of acquisition completion.
+- H2. The higher the volatility of host country social sentiment toward (a) the deal, (b) the acquirer, and (c) the inward investments from the home country, the lower the likelihood of acquisition completion.
+- H3. The shorter the wavelength of host country social sentiment toward (a) the deal, (b) the acquirer, and (c) the inward investments from the home country, the higher the likelihood of acquisition completion (wavelength predicted to be negatively related to completion).
+- H4a. The sentiment augmentation effect between the acquirer and the deal is positively related to the likelihood of acquisition completion.
+- H4b. The sentiment augmentation effect between the inward investments from the home country and the deal is positively related to the likelihood of acquisition completion.
+
 **Mechanism Process**
 - IV(s): Host country sentiments toward (a) deal, (b) acquirer, (c) inward investments from home country (China); sentiment dynamics (volatility, wavelength, augmentation) for each sentiment type
 - DV(s): Acquisition completion (binary)
@@ -60,6 +72,28 @@ How do host country sentiments — socially constructed and collectively shared 
 - Controls: Acquirer characteristics (size, public status, diversification, SOE status, acquisition experience, name with U.S. identity, subsidiary acquirer); target characteristics (public status, subsidiary); deal characteristics (same industry, minority ownership, financial acquisition); country-level variables (public opinion about China, political animosity toward China, frequency of inward acquisitions); year and industry dummies
 
 The theory posits a three-stage mechanism: (1) sentiment arousal — a foreign entity's contentious strategic action in a value-laden host country stimulates stakeholders' sentiments and engagement in discourse; (2) sentiment competence — host country sentiments are mobilized via systems of discourses (mass and social media) underpinning rhythmic entrainment that gives rise to collective conscience; (3) sentiment resonance — host country stakeholders impose social judgment legitimizing or de-legitimizing the foreign entity's action. Sentiment dynamics (volatility, wavelength, augmentation) capture granular temporal patterns that exert heterogeneous effects on legitimation outcomes.
+
+**Data & Measures**
+- Data sources: Acquisition data from Thomson's SDC Platinum database (all attempts by Chinese acquirers targeting U.S. firms, 2013-2016). Host country sentiments were derived from three textual corpora scraped from news portals and platforms (e.g., Factiva, Bloomberg, Yahoo Finance, ThomsonONE, Seeking Alpha): deal (9,533 documents), acquirer (30,120 documents), and inward investments from China (9,741 documents).
+- DV - Acquisition completion: binary, coded 1 if the deal was completed and 0 otherwise (66.4% of deals completed).
+- IVs - Host country sentiments toward the deal, the acquirer, and inward investments from China: polarity scores (-1 to 1) from sentiment analysis using Stanford CoreNLP (lexicon-based Loughran-McDonald dictionary for the deal; machine-learning classifier for the acquirer and inward investments).
+- Sentiment dynamics: volatility = standard deviation of differences in average sentiment values between adjoining time periods; wavelength = mean time distance between adjoining sentiment peaks; augmentation = cross-lag correlation between two sentiment types across adjoining periods.
+- Controls: acquirer, target, deal, and country-level variables plus year and industry dummies (see Mechanism Process).
+- Identification (in the paper's terms): logit regression on the dichotomous DV, with a Heckman two-stage selection model as a sample-selection check (the inverse Mills ratio was insignificant, so it was excluded from the main models) and a robustness-of-inference-to-replacement test for omitted-variable bias. The design is cross-sectional and associational rather than causal.
+
+**Key Findings**
+Support was heterogeneous across the eleven hypothesized effects (coefficients from the full model, Model 4; signs as reported by the paper).
+- H1a supported: sentiments toward the deal positive and significant (b = 2.19, p < .05; average marginal effect 0.30, p < .05).
+- H1b supported: sentiments toward the acquirer positive and significant (b = 6.06, p < .05).
+- H1c supported: sentiments toward inward investments from China positive and significant (b = 6.35, p < .01).
+- H2a NOT supported: contrary to the prediction, sentiment volatility toward the deal was positive and significant (b = 2.76, p < .01).
+- H2b supported: sentiment volatility toward the acquirer negative and significant (b = -3.69, p < .05).
+- H2c supported: sentiment volatility toward inward investments from China negative and significant (b = -22.09, p < .01).
+- H3a supported: sentiment wavelength toward the deal negative and significant (b = -0.03, p < .01).
+- H3b NOT supported: sentiment wavelength toward the acquirer insignificant.
+- H3c supported: sentiment wavelength toward inward investments from China negative and significant (b = -0.40, p < .05).
+- H4a NOT supported: sentiment augmentation between the acquirer and the deal positive but not significant.
+- H4b supported: sentiment augmentation between inward investments from China and the deal positive and significant (b = 1.34, p < .01).
 
 **Theoretical Contribution**
 The paper introduces a novel general theory of host country sentiments that elevates sentiment-based social institutions in international and strategic management research. It synthesizes ritual interactionist, social constructionist, sense-making, and institutional perspectives by integrating situational, interactional, motivational, and cognitive elements of social sentiments. The conceptual differentiation of sentiment structures (deal, acquirer, inward investments) and sentiment dynamics (volatility, wavelength, augmentation) advances understanding of granular, time-dynamic effects of social sentiments on MNE legitimation outcomes.
