@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-67-no-1/pdfs/Gruber 2024 Expanding AMJ’S Manuscript
 text_path: "library/AMJ/vol-67-no-1/text/Gruber 2024 Expanding AMJ’S Manuscript Portfolio Research Methods Articles Designed to Advance Theory and Span Boundaries.txt"
 ingested_at: "2026-05-12"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "editorial"
 keywords: ["research methods", "theory development", "methodological articles", "boundary spanning", "AMJ editorial policy"]
@@ -55,6 +57,9 @@ FROM THE EDITORS EXPANDING AMJ’S MANUSCRIPT PORTFOLIO: RESEARCH METHODS ARTICL
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: AMJ is, as of January 1, 2024, expanding its manuscript portfolio to include feature-length methodological articles, on the premise that methods provide foundational grounding for theory development rather than playing a strictly secondary role.
 - Two acceptable approaches: (1) manuscripts that illustrate how methodological advances established elsewhere can be applied to advance theory in management topic areas; (2) "best practice" manuscripts that make a compelling case for novel theoretical advancement (the bar for the latter is explicitly set "quite high").
@@ -63,6 +68,12 @@ Not reported in paper
 - Editorial team additions to handle methods manuscripts: Paul Bliese (deputy editor, research methods), Trevis Certo (quantitative-macro), Anne Smith (qualitative), and Mo Wang (quantitative-micro).
 
 The editorial reframes the role of methods within AMJ from a vehicle for testing theory to a generative source of theoretical advancement. Methodological articles will be evaluated less on technical novelty in isolation and more on the theoretical shortcomings they help address and the breadth of the audience that can use them — explicitly inverting the typical structure of a methods article from "what problem is being solved" to "what theoretical shortcomings can be addressed by the method."
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial repositions methodology as a primary engine of theory development at AMJ rather than an instrumental adjunct, articulating evaluative criteria that privilege theoretical payoff, boundary-spanning audience reach, and accessibility. It builds on AMJ's prior history of publishing influential methods articles in the 1990s (e.g., Edwards & Parry, 1993; Miller, Cardinal & Glick, 1997) and seeks to host the next generation of cornerstone methodological contributions.

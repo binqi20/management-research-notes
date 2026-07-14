@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Rahman 2023 The Experimental Hand How Pl
 text_path: "library/AMJ/vol-66-no-6/text/Rahman 2023 The Experimental Hand How Platform-Based Experimentation Reconfigures Worker Autonomy.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-qualitative"
 keywords: ["platform-based experimentation", "worker autonomy", "digital labor platforms", "experimental hand", "explicit experimentation regime", "concealed experimentation regime", "unbounded experimentation regime", "voice efficacy", "normalization", "less powerful workers"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Our study used qualitative, longitudinal data to"
   methods_overview: "We used an inductive approach to analyze our"
   keywords_source: "research question: “How does platform-based experi"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "autonomy along two dimensions: (1) the extent"
+  findings_overview: "workers first experienced increased autonomy, followed by diminished"
 ---
 
 # The Experimental Hand: How Platform-Based Experimentation Reconfigures Worker Autonomy
@@ -53,6 +58,9 @@ We examine how and when platform-based experimentation influences worker autonom
 **Research Question**
 How does platform-based experimentation affect the autonomy of less powerful workers, especially when those workers lack the relational opportunities that workers in conventional bureaucratic organizations have traditionally relied on to preserve their autonomy?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: worker autonomy decomposed into (1) extent of control over work activities and (2) voice efficacy; less powerful workers vs. platform; relational opportunities curtailed by digital, distributed work.
 - Process / phases: three successive experimentation regimes — Explicit (2007-2013: voluntary participation, episodic frequency, narrow scope) -> Concealed (2014-2016: assigned, episodic, narrow) -> Unbounded (2017-2020: assigned, continuous, expansive).
@@ -61,6 +69,16 @@ How does platform-based experimentation affect the autonomy of less powerful wor
 - Boundary conditions: applies to less powerful workers in digital platform settings with limited social organization; may differ where unions, coalitions, or higher worker collective action exist (e.g., ride-hailing).
 
 The process operates as an "experimental hand": initial explicit, opt-in experimentation elicits worker consent and sets baseline expectations that experimentation is participatory and beneficial; the platform then leverages that consent to deploy concealed experiments without notification, producing fragmented experiences that inhibit collective pushback; finally, unbounded continuous experiments normalize autonomy loss as workers come to expect and accept it as "business as usual." Successive regime shifts thus reconfigure workers' autonomy and produce consent to its own erosion without provoking exit or collective resistance.
+
+**Data & Measures**
+Longitudinal, multi-source qualitative data on one of the world's largest digital labor platforms (QuickHire, a pseudonym): extensive primary-source archives (2004-2020) plus firsthand observational data (2014-2020) gathered by the first author as a registered worker and client, together with the platform's Terms of Service, announcements, help articles, and blog posts. Discussion-board data comprised all QuickHire announcements posted between 2004 and 2020 and every topic carrying the search labels "experiment" and "test" (678 topics), validated against a random sample of over 300 discussion-board topics. Analysis was inductive (Corbin & Strauss, 2014; Grodal et al., 2021): data were organized chronologically, open-coded source by source with descriptive memos and "thick" descriptions, then temporally bracketed (Langley, 1999) into three experimentation regimes distinguished by worker participation (voluntary vs. assigned), testing frequency (episodic vs. continuous), and testing scope (narrow vs. expansive). Workers' degree of autonomy was analytically categorized along two second-order dimensions—the extent of control over work activities (Mazmanian et al., 2013) and voice efficacy—with the "regime" construct adapted from Acker's (2006) inequality regimes.
+
+**Key Findings**
+- Explicit regime (2007-2013; voluntary, episodic, narrow scope): worker autonomy increased—the extent of workers' control over platform activities rose and voice efficacy was high—and workers' active involvement elicited their initial consent to experimentation as a participatory, beneficial practice.
+- Concealed regime (2014-2016; assigned, episodic, narrow scope): autonomy diminished—control was reduced and voice efficacy was low—as workers were algorithmically sorted into treatment and control groups without consent; fragmented experiences inhibited collective sensemaking and pushback.
+- Unbounded regime (2017-2020; assigned, continuous, expansive scope): workers normalized their diminished autonomy, responding with resigned acceptance (describing themselves as "guinea pigs" and "lab rats") rather than collective exit or resistance.
+
+Synthesizing these findings, the authors inductively theorize the "experimental hand": successive changes in experimentation regimes reconfigure workers' degree of autonomy by first increasing it, then diminishing it, and finally normalizing its diminishment, producing worker consent to autonomy erosion without provoking collective exit or pushback. Even the most successful, high-status, long-tenured workers could not prevent this accretive autonomy loss, because platforms do not endow them with stable positions in an organizational hierarchy.
 
 **Theoretical Contribution**
 The paper develops the "experimental hand" as a new theoretical construct that captures how successive changes in platform-based experimentation regimes reconfigure worker autonomy over time and normalize its diminishment. It extends scholarship on worker autonomy beyond conventional bureaucratic organizations by showing that even high-status, high-tenure platform workers cannot prevent accretive autonomy loss because platforms do not endow them with stable positions in an organizational hierarchy. The study also advances the literature on the organizational management of experimentation by foregrounding the "social effects of experimentation" — the experiences and consequences faced by experimental subjects — rather than the design and efficacy concerns of organizations.

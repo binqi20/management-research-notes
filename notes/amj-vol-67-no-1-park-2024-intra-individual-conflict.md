@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-67-no-1/pdfs/Park 2024 Intra-Individual Conflict and 
 text_path: "library/AMJ/vol-67-no-1/text/Park 2024 Intra-Individual Conflict and Task Performance in a Multiteam Context Examining the Structural Elements of Conflict Experience.txt"
 ingested_at: "2026-05-12"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -64,6 +66,9 @@ evidence:
   theories_overview: "regulatory process of attentional focus (Beal et al.,"
   methods_overview: "random coefficient modeling analysis using the"
   keywords_source: "intra-individual microfoundations of conflict in a multiteam context"
+  hypotheses_source: "Hypothesis 2b. Receiving between-team conflict"
+  measures_overview: "the average quality rating of the paramedic"
+  findings_overview: "receiving between-team conflict related positively with task performance, whereas receiving within-team conflict related negatively to task performance"
 ---
 
 # Intra-Individual Conflict and Task Performance in a Multiteam Context: Examining the Structural Elements of Conflict Experience
@@ -74,6 +79,14 @@ In this article, we advance a novel intra-individual conflict cognitive process 
 **Research Question**
 How and why do the structural elements of an individual's conflict experiences—the direction of conflict (sending vs. receiving) and the team boundary in which it occurs (within team vs. between team)—shape that individual's task performance in a multiteam context, and what self-regulatory attentional-focus mechanisms account for these differential effects?
 
+**Hypotheses / Propositions**
+- H1a. Sending within-team conflict experiences will be positively related to task performance.
+- H1b. Sending between-team conflict experiences will be negatively related to task performance.
+- H2a. Receiving within-team conflict experiences will be negatively related to task performance.
+- H2b. Receiving between-team conflict experiences will be positively related to task performance.
+- H3. Compared to sending between-team conflict, sending within-team conflict experiences will be positively related to task engagement via on-task attentional pull.
+- H4. Compared to receiving between-team conflict, receiving within-team conflict experiences will be negatively related to task engagement via off-task attentional demands.
+
 **Mechanism Process**
 - IVs: Intra-individual conflict experiences classified along two structural dimensions: (a) direction — sending vs. receiving conflict; (b) team boundary — within-team vs. between-team conflict, yielding four conditions (sending within-team, sending between-team, receiving within-team, receiving between-team).
 - DVs: Study 1 — task performance, indexed by averaged technical and interpersonal quality ratings of patient care (1–7 Likert) per 15-second temporal unit. Study 2 — task engagement (composite of point-allocation between focal task and conflict plus two Crawford et al. items).
@@ -82,6 +95,22 @@ How and why do the structural elements of an individual's conflict experiences�
 - Controls/covariates (Study 1): scenario time, team time, scenario type, team membership dummies, team size, task difficulty, patient priority, cumulative individual conflict (sending and receiving), and collective intra-team and inter-team conflict.
 
 The dual-path attentional-focus mechanism is as follows. The direction of conflict governs which self-regulatory path is engaged: sending conflict mobilizes on-task attentional pull (a sense of control that re-anchors attention on the focal task), while receiving conflict raises off-task attentional demands (a competing pull to address the conflict issue). Team boundaries then modulate the magnitudes of these paths because in-group conflict is perceived as more legitimate and high-priority — strengthening senders' on-task pull within-team but also amplifying receivers' off-task demands within-team. Consequently, sending within-team and receiving between-team conflict are predicted to benefit task performance, whereas receiving within-team conflict is predicted to harm it.
+
+**Data & Measures**
+- Study 1 data: continuous audio/video streams of six live-actor mass-casualty response exercises coded into 391 conflict behaviors and 817 patient-care incidents, parsed into 3,036 15-second temporal units cross-nested in 110 patients, 13 paramedics, and 6 scenarios.
+- Study 1 DV — task performance: two emergency-medicine experts rated each patient-care incident's technical and interpersonal quality on a 1 (absolutely inappropriate) to 7 (absolutely appropriate) scale (interrater r > .90), averaged into the quality rating of the paramedic's patient care per temporal unit.
+- Study 1 IVs — the four direction x boundary conflict categories: weighted sum of the content specificity of coded conflict behaviors (high = "2," low = "1") in the three minutes preceding each temporal unit; eight methodological controls and four conflict-related covariates included.
+- Study 1 analysis: three-level hierarchical cross-classified mixed modeling (lme4 R package) on a time-lagged structure that establishes temporal precedence but remains observational/associational, not a manipulated causal design.
+- Study 2 data: 400 currently employed, team-experienced US workers recruited via Qualtrics; pre-registered mixed-factorial software-development vignette (between-subject sending vs. receiving x within-subject within- vs. between-team; 800 observations).
+- Study 2 mediators: on-task attentional pull (single item adapted from Lee, Ashford, & Bobko, 1990) and off-task attentional demands (single item adapted from Lanctot & Duxbury, 2022), each on a 5-point scale.
+- Study 2 DV — task engagement: 100-point allocation between focal task and conflict issue (rescaled) plus two Crawford, LePine, & Buckman (2013) items, combined as averaged z-scores (α = .76).
+- Study 2 analysis: random coefficient modeling (nlme R package) with bootstrapped average causal mediation effects (ACME).
+
+**Key Findings**
+- Study 1 (direct effects on task performance): H1a supported, sending within-team conflict positively related to task performance (b = .07, SE = 0.02, p < .01); H1b not supported, sending between-team conflict nonsignificant (b = −.02, SE = 0.02, ns); H2a supported, receiving within-team conflict negatively related (b = −.05, SE = 0.02, p < .01); H2b supported, receiving between-team conflict positively related (b = .04, SE = 0.02, p < .05). The hypothesized model explained 44.9% of the variance in task performance.
+- Study 1 robustness (Model 4, dropping the four conflict covariates): sending within-team remained positive (b = .05, p < .05) and receiving within-team strengthened (b = −.12, p < .001), but the receiving between-team effect became nonsignificant (b = .03, ns).
+- Study 2 (mediation of task engagement): H3 supported, sending within-team (vs. between-team) conflict raised on-task attentional pull (b = .21, SE = 0.07, p < .01), which raised task engagement (b = .13, p < .01); positive indirect effect ACME = .03, 95% CI [.01, .06]. H4 supported, receiving within-team (vs. between-team) conflict raised off-task attentional demands (b = .24, SE = 0.07, p < .001), which lowered task engagement (b = −.23, p < .001); negative indirect effect ACME = −.06, 95% CI [−.10, −.02].
+- Cross-study caveat: within-team occurrence also carried a negative direct effect on task engagement for both sending and receiving conditions, and the positive Study 1 receiving between-team–task-performance effect was not fully reproduced in Study 2.
 
 **Theoretical Contribution**
 The paper advances a novel intra-individual conflict cognitive process framework that resolves long-standing mixed findings in the conflict literature by aligning the level of theory, phenomenon, and method at the intra-individual level. By introducing two structural elements of conflict experiences—directions (sending vs. receiving) and boundaries (within team vs. between team)—and showing that they trigger distinct self-regulatory attentional pathways (on-task pull for senders; off-task demands for receivers), the framework explains when and why conflict helps or hurts individual performance and elevates conflict as a substantive concern in multiteam-systems theory.

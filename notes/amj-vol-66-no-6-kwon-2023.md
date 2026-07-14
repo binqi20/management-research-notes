@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Kwon 2023 Discerning Saints Moralization
 text_path: "library/AMJ/vol-66-no-6/text/Kwon 2023 Discerning Saints Moralization of Intrinsic Motivation and Selective Prosociality at Work.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-mixed"
 keywords: ["intrinsic motivation", "moralization", "moralization of intrinsic motivation (MOIM)", "prosocial behavior", "organizational citizenship behavior (OCB-I)", "selective prosociality", "teammates", "moral judgment", "pride and elevation"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Based on moralization theory, we"
   methods_overview: "We used multilevel regression analyses to test"
   keywords_source: "develop a measure of the moralization of intrinsic motivation and provide both causal"
+  hypotheses_source: "Hypothesis 2. Teammates’ intrinsic motivation moderates the relationship between employees’ MOIM"
+  measures_overview: "intrinsic motivation scale from Grant (2008)"
+  findings_overview: "positive for both OCB-I (b 5 .09, SE 5 .02, p , .001)"
 ---
 
 # Discerning Saints: Moralization of Intrinsic Motivation and Selective Prosociality at Work
@@ -53,6 +58,12 @@ Intrinsic motivation has received widespread attention as a predictor of positiv
 **Research Question**
 Does employees’ own intrinsic motivation lead them to moralize intrinsic motivation — that is, to associate it with superior morality — and, if so, does this moralization produce selectivity in whom they help, such that more intrinsically motivated employees direct more citizenship behavior toward teammates they perceive as also being intrinsically motivated and less toward those they perceive as not?
 
+**Hypotheses / Propositions**
+- H1: Employees’ intrinsic motivation is positively associated with their moralization of intrinsic motivation (MOIM).
+- H2: Teammates’ intrinsic motivation moderates the relationship between employees’ MOIM and their citizenship behavior toward those teammates, such that employees who moralize intrinsic motivation help teammates more when the teammates’ intrinsic motivation is perceived to be higher.
+
+The paper’s full theoretical model is a second-stage moderated mediation in which MOIM mediates the link between employees’ intrinsic motivation and their citizenship behavior, moderated by teammates’ intrinsic motivation.
+
 **Mechanism Process**
 - IV(s): Employees’ own intrinsic motivation (4-item measure adapted from Grant, 2008).
 - DV(s): Citizenship behavior toward teammates (OCB-I, adapted from Williams & Anderson, 1991), measured both via self-report items and a behavioral willingness-to-help indicator (binary and continuous).
@@ -61,6 +72,12 @@ Does employees’ own intrinsic motivation lead them to moralize intrinsic motiv
 - Controls: Extrinsic motivation, prosocial motivation, team size, dispersion of teammates’ intrinsic motivation, age, gender, tenure (field study); extrinsic motivation, expected reciprocity (Study 2c).
 
 Drawing on moralization theory and social projection theory, the authors argue that intrinsically motivated employees experience positive moral emotions (pride and elevation) that amplify intrinsic motivation into a moral attribute. As MOIM rises, employees project this moral standard onto coworkers and use teammates’ intrinsic motivation as a cue for moral worth, helping more those they perceive as more intrinsically motivated (and therefore more moral) and withdrawing help from those they perceive as less intrinsically motivated. The moderated-mediation pattern is replicated across naturally occurring (Study 1) and experimentally manipulated (Study 2c) variations in teammate intrinsic motivation and across self-reported and behavioral helping measures.
+
+**Data & Measures**
+Data came from one field study and three online studies. Study 1 surveyed 784 employees nested in 185 teams at a large Latin American financial institution (from 1,268 respondents; 80.71% response rate). Studies 2a and 2b used online MTurk/CloudResearch samples to develop and validate the MOIM scale through exploratory and confirmatory factor analysis. Study 2c was a preregistered online experiment (n = 1,245, MTurk via CloudResearch) that manipulated teammates’ intrinsic motivation between subjects using two simulated teammate voice profiles (one high, one low in intrinsic motivation). Intrinsic motivation was measured with Grant’s (2008) 4-item scale on a 7-point response format. MOIM was measured with the 8-item scale (two subfactors: positive valuation of intrinsic motivation and negative valuation of extrinsic motivation), averaged into a composite. Citizenship behavior (OCB-I) used the first two items of Williams and Anderson’s (1991) scale in Study 1 and all seven items plus binary and continuous behavioral willingness-to-help measures in Study 2c. Teammates’ intrinsic motivation was the team-average level (excluding the focal employee) in Study 1 and the experimental manipulation in Study 2c. Controls included extrinsic motivation (SIMS; Guay et al., 2000), prosocial motivation (Grant, 2008), team size, dispersion of teammates’ intrinsic motivation, age, gender, and tenure (Study 1), and extrinsic motivation and expected reciprocity (Study 2c). Study 1 was analyzed with multilevel (mixed) regression in STATA and is correlational; Study 2c tested a moderated-mediation model (Hayes Model 14, 10,000 bootstrap samples) and, through random assignment, provides causal evidence.
+
+**Key Findings**
+Across the field study and the experiment, more intrinsically motivated employees engaged in more citizenship behavior toward more intrinsically motivated teammates. In Study 1, employees’ own intrinsic motivation was positively associated with OCB-I (b = .20, p < .001), while teammates’ average intrinsic motivation had no main effect (b = .03, p = .734); the intrinsic motivation × teammates’ intrinsic motivation interaction was significant (b = .15, p = .004), supporting H2, with the intrinsic-motivation-to-helping slope stronger when teammates’ intrinsic motivation was high (b = .30, p < .001) than low (b = .10, p = .060). Study 1 is correlational and could not test the MOIM mechanism. Studies 2a–2b developed and validated the MOIM measure. In the preregistered experiment (Study 2c), participants’ intrinsic motivation was positively and significantly correlated with MOIM (r = .30, p < .001), supporting H1, and the intrinsic motivation × teammate-condition interaction replicated Study 1, being positive and significant for OCB-I (b = .09, p < .001) and for both behavioral-helping measures. The overall index of moderated mediation was significant for OCB-I (.027, 95% CI [.006, .048]) and for continuous behavioral helping (.034, 95% CI [.006, .065]) — the indirect effect of intrinsic motivation on helping through MOIM was positive and significant toward high-intrinsic-motivation teammates and non-significant toward low-intrinsic-motivation teammates — but the moderated-mediation index for the binary (dummy) behavioral-helping measure was not significant (.006, 95% CI [−.002, .015]). The moderation thus converged across the field and experimental studies and across self-reported and behavioral helping, whereas the full moderated mediation held for OCB-I and continuous helping but not for the binary helping measure.
 
 **Theoretical Contribution**
 The paper extends work-motivation research by distinguishing the experience of intrinsic motivation from its valuation, introducing and validating MOIM as a novel construct and measure. It applies a moralization lens to organizational behavior, arguing that intrinsic motivation can be imbued with moral significance and thereby become a source of interpersonal moral judgment. By taking a dyadic, interpersonal perspective on intrinsic motivation and showing that moralization functions as an exclusionary mechanism in helping decisions, it complicates the prevailing view of intrinsically motivated employees as uniformly good organizational citizens and surfaces a potential source of inequality for employees who lack intrinsic motivation.

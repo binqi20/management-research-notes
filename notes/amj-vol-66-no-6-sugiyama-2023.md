@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Sugiyama 2023 Calling Oneself and Others
 text_path: "library/AMJ/vol-66-no-6/text/Sugiyama 2023 Calling Oneself and Others In Brokering Identities in Diversity Training.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-qualitative"
 keywords: ["diversity training", "identity work", "cultural brokerage", "brokering identities", "social justice-oriented training", "brokering self-efficacy", "calling in"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "a form of identity work diversity trainers engage in that involves their deliberate efforts to call themselves"
   methods_overview: "used a combination of inductive, qualitative meth"
   keywords_source: "as a process of bridging"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "open coding common and broad themes that stayed"
+  findings_overview: "develop a grounded model that illustrates the process of brokering identities"
 ---
 
 # Calling Oneself and Others In: Brokering Identities in Diversity Training
@@ -52,6 +57,9 @@ Diversity training is a common initiative in organizations, yet also the focus o
 **Research Question**
 How do trainers draw from their own identities to bridge across differences in demographic and cultural identities within social justice-oriented training contexts?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs: trainer identity awareness, brokering identities, diversity repertoire, brokering self-efficacy
 - Process phases: (1) Calling oneself in — marshaling identity resources and managing personal risks; (2) Modeling identity work — exemplifying brokering for trainees; (3) Calling others in — accommodating others' identities and encouraging perspective-taking
@@ -60,6 +68,12 @@ How do trainers draw from their own identities to bridge across differences in d
 - Boundary conditions: trainers' own privileged/marginalized identities shape personal risks managed; intersectional identities differentially expose trainers
 
 Trainers approach diversity training as cultural brokers who deliberately deploy their own privileged and marginalized identities to bridge across differences. The process is reciprocal and recursive: calling oneself in (drawing on personal stories while regulating triggers and vulnerabilities) is mirrored by calling others in (accommodating trainees' starting points and inviting perspective-taking), with modeling identity work as the connective tissue. Repeated practice builds a stockpile of stories and tactics (diversity repertoire) that strengthens brokering self-efficacy, which feeds back into sharpened identity awareness — explaining why trainers persist despite emotional costs and continue brokering beyond the training room.
+
+**Data & Measures**
+Data come from three primary sources gathered over roughly 18 months (three training cycles, 2016–2018) at the ICT diversity-training program: approximately 75 hours of ethnographic observation (including the first author's own experience as an active trainer), trainer documentation (training guides, presentation slides, and handouts), and 41 semi-structured interviews spanning 36 participants — experienced, beginner, and student peer trainers plus ICT staff and the external consultant, with key informants interviewed twice. Constructs were built inductively: open coding staying close to interviewees' expressions, then focused coding to synthesize and narrow the data dictionary to core codes, with the other authors and a second coder conducting axial coding to clarify relationships among codes and categories. Theoretical sampling deepened emerging themes, and credibility was checked through member checks (with the ICT, trainers, and the advisory committee) and peer debriefing.
+
+**Key Findings**
+The study surfaces a grounded model of brokering identities — the process by which diversity trainers bridge across demographic and cultural differences by working on their own and others' identities. A trainer's initial identity awareness (their perception of their own identities relative to others') informs two reciprocal components: calling oneself in (marshaling identity resources and managing personal risks) and calling others in (accommodating others' identities and encouraging perspective-taking), linked by modeling identity work, through which trainers exemplify brokering for trainees. Through ongoing practice, trainers build a diversity repertoire that enhances their brokering self-efficacy (their belief in their ability to bridge differences), which in turn feeds back to refine identity awareness and often extends the brokering process beyond the training program. The authors argue that this gained self-efficacy and sharpened identity awareness explain why trainers persist in the emotionally exhausting work despite the challenges and controversies they face.
 
 **Theoretical Contribution**
 The paper reframes diversity trainers as cultural brokers whose identity work — not just their static identity characteristics — drives the training process, contributing to diversity training research that has previously treated trainer identities as categorical inputs to which trainees react. It elaborates identity work theory by showing that identities can be intentionally used to create identity-implicating experiences for others (not only to repair or secure one's own self-concept), and extends cultural brokerage by foregrounding what brokers themselves gain: brokering self-efficacy and refined identity awareness that sustain effort across cycles.

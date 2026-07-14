@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Keller 2023 Advance ’Em to Attract ’
 text_path: "library/AMJ/vol-66-no-6/text/Keller 2023 Advance ’Em to Attract ’Em How Promotions Influence Applications in Internal Talent Markets.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-mixed"
 keywords:
@@ -54,6 +56,9 @@ evidence:
   theories_overview: "facilitate (and hinder) mobility within these markets. We integrate signaling theory to"
   methods_overview: "In negative binomial regression models, the coefficient estimates can be interpreted as a semi-elasticity"
   keywords_source: "apply and be hired into open internal jobs. We draw on the career sponsorship and talent"
+  hypotheses_source: "Hypothesis 1. The frequency with which a manager’s"
+  measures_overview: "count variable indicating the total number of internal"
+  findings_overview: "whose subordinates are more frequently promoted subsequently attract more, better"
 ---
 
 # Advance ’Em to Attract ’Em: How Promotions Influence Applications in Internal Talent Markets
@@ -64,6 +69,11 @@ Organizations increasingly turn to internal talent markets to facilitate employe
 **Research Question**
 Do signals about a manager’s willingness to support subordinates’ career advancement — operationalized as the manager’s recent out-group promotion rate — shape the quantity, quality (high-performer share), and functional diversity of internal applications submitted to that manager’s open jobs in an internal talent market?
 
+**Hypotheses / Propositions**
+- H1: The frequency with which a manager’s subordinates receive out-group promotions is positively related to the subsequent number of internal applications submitted to an open job posted by the manager.
+- H2: The frequency with which a manager’s subordinates receive out-group promotions is positively related to the subsequent number of applications submitted by high-performing employees to that manager’s open job.
+- H3: The frequency with which a manager’s subordinates receive out-group promotions is positively related to the subsequent number of applications submitted by employees working in different functional areas to that manager’s open job.
+
 **Mechanism Process**
 - IV(s): Manager out-group promotion rate (prior year; robustness with prior two years; supplementary binary "any out-group promotion" specification; comparisons with in-group promotion rate and lateral-move rate)
 - DV(s): Number of internal applications; number of high-performer applications; number of cross-function applications submitted to each job posting
@@ -71,6 +81,19 @@ Do signals about a manager’s willingness to support subordinates’ career adv
 - Moderators: Applicant type — high performers and prospective cross-function movers theorized to be more attentive to advancement signals (tested as separate DVs in H2 and H3); robustness moderator: whether the manager stayed in or moved to a new managerial job
 
 Drawing on signaling theory, the authors argue that prospective internal applicants face incomplete information about whether an open job will position them for future advancement, so they rely on observable signals — chiefly the manager’s track record of getting subordinates promoted out to other parts of the firm. Career sponsorship and talent hoarding produce variation across managers in subordinates’ advancement; out-group promotions become a public, credible signal of a manager’s willingness to support subordinates, which raises the perceived attractiveness of the manager’s open jobs and thus the quantity, quality, and functional diversity of inbound applications.
+
+**Data & Measures**
+- Data: Job application and personnel records from HealthCo, a large U.S.-based health services firm, spanning 2013–2017 (application data 2014–2017); 96,712 internal applications to 9,896 job postings by 3,431 hiring managers, aggregated to the job-posting level.
+- Independent variable: Manager out-group promotion rate — a manager’s direct reports who moved to a higher-level job reporting to a new manager, divided by the manager’s total subordinates that year (prior year; a two-year rate is used for robustness). A promotion is defined as a move to a higher hierarchical level.
+- Dependent variables: Three count variables — number of internal applications (quantity), number of applications from employees with the top “exceptional” performance rating (quality), and number of applications from employees working in a different function than the open job (functional diversity).
+- Controls and estimation: Manager, incumbent-coworker, job, and labor-market controls with fixed effects for job type, business unit, U.S. region, and year; negative binomial regression to handle overdispersed count outcomes.
+- Qualitative component: 30 semi-structured interviews with managers at HealthCo and three other firms (a U.S. vehicle manufacturer, a global beauty-products firm, and a European manufacturing firm), iteratively coded for sponsorship and hoarding behaviors, promotion visibility, and managerial reputations.
+
+**Key Findings**
+- All three hypotheses were supported. A manager’s prior-year out-group promotion rate was positively and significantly related to the number of internal applications (H1: β = .52, p < .001), applications from high performers (H2: β = .64, p < .001), and cross-function applications (H3: β = .64, p < .001); a one-standard-deviation (13%) increase in the rate corresponded to roughly 8.91%, 11.58%, and 11.64% more applications, respectively.
+- Robustness: The two-year out-group promotion rate reproduced the same positive, significant pattern for all three outcomes, as did a binary “any out-group promotion” specification and models that decomposed the ratio into its numerator and denominator.
+- Specificity of the signal: In-group promotion rate had no significant effect on the number of internal or high-performer applications (a positive effect appeared only for cross-function applications at the one-year rate), and managers’ lateral-move rates produced weaker, less consistent effects — supporting the argument that out-group promotions are the distinctive advancement signal.
+- Qualitative convergence: The interviews corroborated the proposed mechanism; unprompted, all 30 respondents described sponsorship behaviors and 28 described talent hoarding, managers were reported to develop visible reputations as “sponsors” or “hoarders,” and high performers were described as more selective — consistent with the quantitative results.
 
 **Theoretical Contribution**
 The paper integrates the career sponsorship and talent hoarding literatures into research on internal talent markets and applies signaling theory to a within-firm recruiting context, showing that managers are not only "exporters" but also "importers" of internal talent — their behavior toward current subordinates shapes whom they can attract next. It extends the recruiting literature, which has largely neglected internal applications, by identifying a manager-level signal (subordinate promotion track record) that influences applicant pool size, quality, and functional diversity.

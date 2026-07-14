@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-67-no-1/pdfs/Jia 2024 When and How Artificial Intelli
 text_path: "library/AMJ/vol-67-no-1/text/Jia 2024 When and How Artificial Intelligence Augments Employee Creativity.txt"
 ingested_at: "2026-05-12"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-mixed"
 keywords: ["artificial intelligence", "AI-augmented employee creativity", "AI–human collaboration", "sequential division of labor", "job design", "skill-biased technology", "employee creativity"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Drawing on research on AI–human collaboration, job design, and employee creativity,"
   methods_overview: "We employed a mixed-methods empirical approach."
   keywords_source: "this desirable outcome is skill-biased by favoring experts with greater job skills."
+  hypotheses_source: "Hypothesis 1. In an organizational task with a"
+  measures_overview: "the ratio of untrained questions successfully resolved"
+  findings_overview: "this effect is much more pronounced for higher-skilled employees"
 ---
 
 # When and How Artificial Intelligence Augments Employee Creativity
@@ -53,6 +58,11 @@ Can artificial intelligence (AI) assist human employees in increasing employee c
 **Research Question**
 Can AI technology increase the creativity of human employees — thus generating "AI-augmented employee creativity" — when AI and humans collaborate via a sequential division of labor, and under what conditions does this effect hold?
 
+**Hypotheses / Propositions**
+Hypothesis 1: In an organizational task with a sequential division of labor between AI and human employees, AI assistance with the initial well-codified, repetitive portion of the task is more likely to increase employees' creativity in solving subsequent higher-level problems when these employees have higher job skills.
+Hypothesis 2: If AI assistance increases employees' creativity in solving subsequent higher-level problems of the task, then increased employee creativity is a path for AI assistance to increase employees' performance.
+Hypothesis 3: The positive effect of AI assistance on customer purchase (performance) is mediated by employees' increased creativity in solving outside-knowledge-bank questions.
+
 **Mechanism Process**
 - IV(s): AI assistance (AI–human hybrid vs. agent alone); employee job skills (top vs. bottom agents); their interaction
 - DV(s): Employee creativity, operationalized as the proportion of out-of-knowledge-bank ("untrained") customer questions successfully answered during sales persuasion; customer purchase as the downstream performance outcome
@@ -61,6 +71,12 @@ Can AI technology increase the creativity of human employees — thus generating
 
 A sequential division of labor in which AI handles well-codified lead generation and humans handle higher-level sales persuasion changes the job design of employees by removing repetitive tasks while intensifying exposure to serious, challenging customers. For higher-skilled agents, conserved cognitive resources and increased task complexity translate into new scripts, better moods, higher morale, and a stronger sense of freedom that produce creative outcomes; for lower-skilled agents, the same change raises workload pressure and triggers negative emotions, so creative gains fail to materialize. Causal mediation analysis confirms that the creativity gain is the path through which AI assistance lifts customer purchases.
 
+**Data & Measures**
+Data sources: (1) a randomized field experiment at a large Asian telemarketing firm launching a credit-card sales line, with 3,144 customers doubly randomized across four groups and 40 sales agents split into top and bottom terciles by prior sales volume (20 each); and (2) 28 semi-structured interviews with participating agents (Study 2). AI–Human Hybrid is an indicator equal to 1 for the two groups in which the AI conversational bot generated leads and 0 otherwise; Top Agents is an indicator equal to 1 for top-tercile agents and 0 for bottom-tercile agents. Employee creativity (the mediator and focal outcome) is measured as Solving Outside-Knowledge-Bank Questions, the ratio of untrained (out-of-knowledge-bank) questions the agent successfully resolved to all questions the focal customer asked, with untrained questions flagged by an AI voice-recognition and natural-language-processing algorithm applied to call audio and success judged by an experienced manager and confirmed by an expert panel. Employee performance is measured as Customer Purchase, a binary indicator of whether the customer opened a credit card within 24 hours of the call. Estimation uses OLS with standard errors clustered at the agent level plus a causal mediation analysis for randomized experimental data (Imai, Keele, & Tingley, 2010) with 1,000 bootstrap replications; multilevel models serve as a robustness check and randomization checks confirm balance on customer covariates. Study 2 follows an inductive Gioia grounded-theory approach, coding interview transcripts from first-order codes to second-order themes to aggregate theoretical dimensions.
+
+**Key Findings**
+Dominant method (Study 1 field experiment): Hypothesis 1 was supported. On average, AI-assisted agents were 2.33 times as successful in answering untrained questions as agents without AI (p < .05), and this creativity gain was much more pronounced for top agents, at 2.81 times that of bottom agents (p < .01), with a positive interaction between AI assistance and top-agent status; AI-augmented creativity is therefore skill-biased. Hypotheses 2 and 3 were supported: a causal mediation analysis with 1,000 bootstrap replications showed that AI assistance raised solving of outside-knowledge-bank questions (creativity), which in turn increased customer purchase, and AI-assisted customers were almost twice as likely to purchase as those served by agents alone (p < .05). Secondary method (28 inductive interviews) converges with and enriches these results: agents confirmed that AI assistance changed job design by intensifying interactions with more serious customers; higher-skilled agents developed innovative scripts, improved cognitive skills, and positive emotions (better mood, higher morale, greater sense of freedom) conducive to creativity, whereas lower-skilled agents made limited script improvements and reported negative emotions (greater stress, lower morale), reproducing the same skill-biased pattern, while all agents converged in expressing greater organizational support and commitment following AI adoption.
+
 **Theoretical Contribution**
 The paper develops the construct of "AI-augmented employee creativity" and identifies job skills as the critical scope condition, showing that the benefits of AI–human sequential division of labor are skill-biased rather than uniform. It bridges AI–human collaboration, job design, and employee-creativity literatures by demonstrating that AI's effect on creativity operates through both cognitive (resource conservation, increased complexity) and psychological (positive emotions, organizational support) channels, and that domain expertise is required to convert these channels into new scripts.
 
@@ -68,7 +84,7 @@ The paper develops the construct of "AI-augmented employee creativity" and ident
 Organizations deploying AI to handle routine work should not assume creativity gains will accrue equally across the workforce — they accrue mainly to higher-skilled employees. To prevent a "double loss" for lower-skilled workers, managers should pair AI adoption with complementary investments such as extra training, knowledge-sharing incentives, and team-oriented culture so that lower-skilled employees can also benefit.
 
 **Limitations**
-The field experiment is conducted at a single anonymous telemarketing firm in Asia, which constrains generalizability across industries and national contexts. The authors restricted the AI bot to common protocols rather than dynamic personalization, making the estimates conservative. The qualitative interviews capture employees' subjective accounts and cannot establish causality.
+The authors restricted the AI bot to common protocols rather than dynamic personalization, making the estimates conservative. The qualitative interviews capture employees' subjective accounts and cannot establish causality.
 
 **Future Research**
 The authors call for studying more sophisticated forms of AI–human collaboration in which humans and AI directly use or modify each other's work, and for unpacking whether domain knowledge or psychology is the more critical lever for productive AI adoption. They also urge research on managerial and policy designs — training, incentives, culture — that curb the dark side of AI augmentation for lower-skilled employees.

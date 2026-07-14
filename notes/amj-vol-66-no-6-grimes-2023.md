@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Grimes 2023 From Scarcity to Abundance S
 text_path: "library/AMJ/vol-66-no-6/text/Grimes 2023 From Scarcity to Abundance Scholars and Scholarship in an Age of Generative Artificial Intelligence.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "editorial"
 keywords: ["generative AI", "large language models", "scholarship", "knowledge production", "systems transparency", "societal regulation", "scenario planning"]
@@ -54,6 +56,9 @@ FROM THE EDITORS FROM SCARCITY TO ABUNDANCE: SCHOLARS AND SCHOLARSHIP IN AN AGE 
 **Research Question**
 The editorial poses three questions about generative AI in management scholarship: how might it be used to increase the quality and quantity of interesting scholarship; why should we caution its usage; and what does it mean to be a "scholar" and to be a journal that publishes "scholarship" when the field is flooded with manuscripts meeting the highest human-mediated standards for practical importance, theoretical intrigue, and methodological rigor.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Generative AI shifts management scholarship from a regime of scarce knowledge production to one of potential abundance, with implications across the full value chain of scholarship.
 - Key constructs: knowledge synthesis, knowledge development, knowledge evaluation, and knowledge translation as the four stages of the scholarly process that generative AI can both augment and threaten.
@@ -62,6 +67,12 @@ The editorial poses three questions about generative AI in management scholarshi
 - Scenario 2x2: combinations of low/high systems transparency and low/high societal regulation yield four futures for the academic profession — ranging from wide adoption with questionable credibility (Scenario 1) to inspectable AI with strict controls reshaping the reward system toward verification and impact (Scenario 4).
 
 The editors argue that the academic profession is currently structured around the presumed scarcity of rigorous scholarly knowledge production — journals derive status from exclusivity, and tenure-track careers depend on signaling scarce "know-what" and "know-how." Generative AI threatens to lower the barriers to that "know-what" and "know-how," which would compress the gap between top and bottom performers and flood journals with manuscripts that meet baseline rigor. The profession's response will be conditioned by two exogenous uncertainties — how transparent the underlying systems become and how strongly societies regulate them — and the editors trace four scenarios that follow from those uncertainties.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial reframes the impact of generative AI on the management profession as a transition from scarcity to abundance, and articulates a scenario-planning framework along two uncertainty dimensions (systems transparency and societal regulation) for thinking about that transition. In doing so, it problematizes the exclusivity-based status hierarchy of management journals and suggests that the long-run distinctive value of the profession may lie in knowledge verification, oversight, and translation rather than in production alone.

@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-1/pdfs/Cao 2024 Performance Shortfalls, Respons
 text_path: "library/AMJ/vol-67-no-1/text/Cao 2024 Performance Shortfalls, Response Directions, and Belief in the Effectiveness of Responses.txt"
 ingested_at: "2026-05-12"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -55,6 +57,9 @@ evidence:
   theories_overview: "behavioral theory of the firm (BTOF) (Cyert & March,"
   methods_overview: "fixed-effects panel estimation"
   keywords_source: "Problemistic search literature has long"
+  hypotheses_source: "effectiveness of R&D negatively moderates the relationship between performance shortfalls and philanthropic donation intensity"
+  measures_overview: "we measured R&D intensity as the ratio of"
+  findings_overview: "relationship between performance shortfalls and R&D intensity strengthens"
 ---
 
 # Performance Shortfalls, Response Directions, and Belief in the Effectiveness of Responses
@@ -65,6 +70,18 @@ Problemistic search literature has long sought to understand which responses fir
 **Research Question**
 Which specific responses do firms adopt when addressing performance shortfalls, once we relax the implicit assumption that all considered responses are equally workable, and how do decision-makers' shared beliefs in the effectiveness of those responses—and the evidence supporting those beliefs—shape the direction of problemistic search?
 
+**Hypotheses / Propositions**
+The paper develops three propositions and derives six testable hypotheses (an R&D and a CSR variant of each), reporting the predicted sign for each.
+Proposition 1. Shared belief in the effectiveness of a particular response positively moderates the relationship between performance shortfalls and the intensity of that response.
+Proposition 2. Shared belief in the effectiveness of a particular response negatively moderates the relationship between performance shortfalls and the intensity of other responses.
+Proposition 3. Shared belief and the evidence supporting it jointly shape the shortfall–response-intensity relationship, which is strongest when the shared belief is supported by strong evidence.
+H1a. Decision-makers' shared belief in the effectiveness of R&D positively moderates the relationship between performance shortfalls and R&D intensity.
+H1b. Decision-makers' shared belief in the effectiveness of CSR positively moderates the relationship between performance shortfalls and philanthropic donation intensity.
+H2a. Decision-makers' shared belief in the effectiveness of R&D negatively moderates the relationship between performance shortfalls and philanthropic donation intensity.
+H2b. Decision-makers' shared belief in the effectiveness of CSR negatively moderates the relationship between performance shortfalls and R&D intensity.
+H3a. In the presence of strong R&D–performance correlations, the relationship between performance shortfalls and R&D intensity is stronger in firms with a stronger shared belief in the effectiveness of R&D.
+H3b. In the presence of strong CSR–performance correlations, the relationship between performance shortfalls and philanthropic donation intensity is stronger in firms with a stronger shared belief in the effectiveness of CSR.
+
 **Mechanism Process**
 - IV(s): Performance shortfalls, operationalized as the absolute value of (ROA – Aspiration Level) when ROA is at or below aspirations (weighted blend of historical and social aspirations following Kuusela et al., 2017)
 - DV(s): R&D intensity (R&D expenditures / sales) and philanthropic donation intensity (philanthropic expenses / sales, rescaled ×100)
@@ -72,6 +89,25 @@ Which specific responses do firms adopt when addressing performance shortfalls, 
 - Moderators: Shared belief in the effectiveness of R&D and shared belief in the effectiveness of CSR (sentence-count of causal statements linking R&D/CSR to performance in firm MD&A documents, identified via a causal-mapping plus NLP procedure); evidence of those beliefs, measured as three-year rolling R&D–performance and CSR–performance correlations based on the firm's own history ("hist.") and on a matched five-firm industry peer group ("soc."); two- and three-way interactions of shortfalls with shared beliefs and evidence
 
 When a firm falls below its aspiration level, decision-makers do not simply apply a single decision rule (proximity, time-horizon, risk-taking) to a set of equally workable responses; rather, they assess whether a particular response is believed to improve performance. A dominant shared belief in R&D effectiveness steepens the positive performance-shortfall–R&D-intensity slope, while a dominant shared belief in CSR effectiveness flattens the otherwise negative performance-shortfall–donation-intensity slope. These shared-belief effects are strongest when accompanied by supportive correlational evidence linking the response to firm performance, because such evidence persuades non-supporters and consolidates the dominant belief. The process thus combines behavioral search with a social-cognitive mechanism in which action–outcome linkages, not just abstract response characteristics, direct search.
+
+**Data & Measures**
+- Data: unbalanced firm-year panel of publicly listed Chinese firms, 2009–2018 (financial firms and specially treated firms excluded), assembled from the China Stock Market and Accounting Research (CSMAR) database (firm and board data), Rankins CSR Ratings (RKS, CSR–performance data), management discussion and analysis (MD&A) filings from cninfo.com.cn (shared-belief text), and the China Statistical Yearbook (province variables).
+- IV — Performance shortfalls: absolute value of (ROA − aspiration level) when ROA is at or below aspirations, else zero; aspiration level is a weighted blend of historical and social aspirations (weights a1 = 0.70, a2 = 0.75 from a grid search; social aspiration = average ROA of a five-firm, Mahalanobis-matched industry peer group).
+- DVs — R&D intensity = R&D expenditures / sales; philanthropic donation intensity = philanthropic expenses / sales, rescaled ×100.
+- Firm performance — return on assets (ROA) = net income / total assets.
+- Moderators (shared belief) — logged sentence-count of causal statements linking R&D (CSR) to performance in each MD&A document, identified via a causal-mapping procedure plus an NLP/heuristic classifier.
+- Moderators (evidence of belief) — three-year rolling correlations between R&D (CSR) and next-year ROA, computed from the firm's own history ("hist.") and from the matched peer group ("soc.").
+- Controls: board-level (CEO duality, board size, independent/returnee/female director proportions, average age, R&D and CSR experience), firm-level (performance above aspirations, absorbed and unabsorbed slack, firm size, state ownership, debt ratio), province GDP per capita, and year dummies.
+- Estimation: firm-level fixed-effects panel regressions with standard errors clustered by firm; independent, moderating, and control variables lagged one year to reduce reverse causality. The design is associational (two- and three-way moderation/interaction tests), supported by Granger-causality, Heckman-selection, confounding-impact-threshold, and AR(1) xtregar robustness checks rather than a causal-identification strategy.
+
+**Key Findings**
+- H1a supported: shared belief in R&D positively and significantly moderates the performance-shortfall–R&D-intensity relationship (interaction b = 0.033, p = .046); the marginal effect of shortfalls on R&D intensity is larger under strong belief (0.060, p < .001) than weak belief (0.018, p = .269), so the positive relationship strengthens.
+- H1b partial support: the shortfall × shared-belief-in-CSR interaction on donation intensity is positive but only marginally significant (b = 0.296, p = .077); the negative shortfall–donation relationship weakens (effectively disappears) when belief in CSR is strong. The authors flag this as partial support (significant only when controlling for the direct effect of shared belief in R&D), and the word-count robustness measure did not support H1b.
+- H2a supported: shared belief in R&D negatively and significantly moderates the shortfall–donation-intensity relationship (b = −0.214, p = .004).
+- H2b not supported: shared belief in CSR does not significantly moderate the shortfall–R&D-intensity relationship (b = 0.002, p = .957).
+- H3a supported: the three-way interaction (shortfalls × shared belief in R&D × R&D–performance correlation) is positive and significant for both historical (b = 0.061, p = .017) and peer-based/social (b = 0.130, p = .004) correlations; the positive shortfall–R&D relationship is strongest when strong belief is backed by strong evidence.
+- H3b partially supported: the three-way interaction is positive and significant for historical CSR–performance correlations (b = 0.850, p = .036) but nonsignificant for social correlations (b = 0.233, p = .669) — supported for historical evidence only.
+- Baseline direction: on average, performance shortfalls relate positively to R&D intensity but negatively to donation intensity; Granger tests indicate performance shortfalls Granger-cause R&D and donation intensity, but not the reverse.
 
 **Theoretical Contribution**
 The paper extends the behavioral theory of the firm by introducing decision-makers' shared beliefs in the effectiveness of specific responses as a determinant of problemistic search directions, complementing the established decision-rule approach that focuses on abstract response characteristics. It enriches managerial-cognition research in strategy by showing that supportive evidence (here, response–performance correlations) can substitute for political maneuvering or power-based coalition-building in producing a dominant shared belief among decision-maker subgroups. It also contributes a behavioral perspective to the CSR literature by explaining when firms expand or contract philanthropic donation intensity in response to performance shortfalls.

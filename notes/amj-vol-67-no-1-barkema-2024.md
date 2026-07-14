@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-1/pdfs/Barkema 2024 How Do Fieldworkers in Pove
 text_path: "library/AMJ/vol-67-no-1/text/Barkema 2024 How Do Fieldworkers in Poverty Craft Meaningful Roles to Achieve Social Impact Female Teachers in Slums in India.txt"
 ingested_at: "2026-05-12"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-mixed"
 keywords: ["job crafting", "relational job crafting", "meaningful work", "fieldworkers", "poverty", "female teachers", "community identification", "moral duty", "social impact", "sustainable development goals"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Prior research has adopted a job-crafting perspective to explain why employees attempt"
   methods_overview: "Unstandardized Estimates (Standard Error) of the Moderated Mediation Path Model"
   keywords_source: "India. We use a mixed-methods approach—first qualitative research, then quantitative"
+  hypotheses_source: "Hypothesis 1. Relational job crafting is positively"
+  measures_overview: "Relational job crafting. We adapted seven items"
+  findings_overview: "positively associated with social impact (b 5 .10,"
 ---
 
 # How Do Fieldworkers in Poverty Craft Meaningful Roles to Achieve Social Impact? Female Teachers in Slums in India
@@ -53,6 +58,12 @@ Prior research has adopted a job-crafting perspective to explain why employees a
 **Research Question**
 Do fieldworkers in social organizations operating in poverty settings (e.g., female para-teachers in Indian slums) engage in job crafting and, if so, what poverty- and gender-related challenges constrain them and what enablers (e.g., identification with the local community) support them in crafting meaningful work that translates into social impact for users?
 
+**Hypotheses / Propositions**
+Study 1 was inductive and generated the model; Study 2 then developed and tested three formal hypotheses in a moderated-mediation path model:
+- H1: Relational job crafting is positively related to social impact.
+- H2: Community identification moderates the negative relationship between (a) perceived organizational dependence or (b) lack of family support and relational job crafting, such that the relationship is weaker (less negative) when community identification is high.
+- H3: An organization's perceived contribution to the cause moderates the relationship between teachers' moral duty and relational job crafting, such that the relationship is stronger when perceived organizational contribution to the cause is high.
+
 **Mechanism Process**
 - Key constructs / tensions: poverty- and gender-related background stressors (organizational dependence, lack of family support) vs. moral duty and community identification as enabling resources; relational job crafting as the discretionary behavior; user-centered social impact as the ultimate outcome.
 - Process / phases: Study 1 inductively surfaces challenges and enablers in context (four rounds of fieldwork, grounded-theory coding); Study 2 operationalizes the emergent constructs and tests a moderated-mediation model with three time-lagged waves.
@@ -62,6 +73,18 @@ Do fieldworkers in social organizations operating in poverty settings (e.g., fem
 - Emergent outcomes: relational job crafting mediates the path to social impact, measured along independent decision-making, ambition, confidence, and social-relationship dimensions valued by users (a Sen/Nussbaum capability-based construction).
 
 The central process is that female fieldworkers in poverty are not simply depleted by their circumstances: although poverty- and gender-related stressors deplete energetic and resource reserves and constrain relational crafting, teachers' identification with the local community in which they live and work supplies a counterbalancing resource that enables them to expand the frequency, quality, and intensity of their social interactions with students and parents. This relational crafting, reinforced by a sense of moral duty that resonates with the organization's perceived contribution to the cause, translates fieldworkers' meaningful work into measurable social impact in terms of what users (school children) have reason to value to be and to do in life.
+
+**Data & Measures**
+Study 2 uses a three-wave, time-lagged survey at Gyan Shala's Ahmedabad site: teachers reported the predictors at Time 1 (moral duty, community identification, perceived organizational obligations/contribution to the cause) and Time 2 (organizational dependence, lack of family support), while supervisors rated relational job crafting at Time 2 and social impact at Time 3, giving complete data for 175 teachers rated by 33 supervisors. All substantive items used 1-5 Likert scales translated and back-translated into Gujarati, with factor structure validated by CFA on an independent Uttar Pradesh sample (n=176) and EFA on a Bihar sample (n=259). Focal operationalizations: relational job crafting (mediator) = 7 supervisor-rated items adapted from Slemp and Vella-Brodrick (2013), Bindl et al. (2019), and Bruning and Campion (2018) (α = .72); social impact (outcome) = a supervisor-rated 12-item, four-dimension capability scale (independent decision-making, ambition, confidence, social relationships) developed from Sen (1992, 1999) and Nussbaum (2000) (α = .77); organizational dependence = 4 items adapted from Meyer and Allen's (1984) continuance-commitment scale (α = .71); lack of family support = a reverse-scored single item (Fisher et al., 2016); moral duty = 4 items adapted from Bunderson and Thompson (2009) (α = .67); community identification = Mael and Ashforth's (1992) 6-item identification scale re-anchored to the community plus three value-sharing items from Sunshine and Tyler (2003) (α = .72); and perceived organizational contribution to the cause = 5 items adapted from Bingham (2005) (α = .82). Hypotheses were estimated with a design-based moderated-mediation path model in Mplus (TYPE=COMPLEX, MLR) that adjusts standard errors for the nesting of teachers within supervisors, with bootstrapped conditional indirect effects; the design is associational (time-lagged, multi-source), not experimental.
+
+**Key Findings**
+Quantitative Study 2 tested and largely corroborated the inductive Study 1 model; hypothesis tests are reported with the paper's unstandardized path coefficients (b):
+- H1 supported: relational job crafting was positively associated with social impact (b = .10, p < .05).
+- H2a supported: the organizational dependence × community identification interaction on relational job crafting was significant (b = .16, p < .01) — organizational dependence was negatively related to relational job crafting when community identification was low (simple slope = -.25, p < .01) but nonsignificant when it was high.
+- H2b only weakly supported: the lack-of-family-support × community identification interaction was marginal (b = .22, p = .08).
+- H3 supported: the moral duty × perceived organizational contribution interaction was significant (b = .37, p < .01) — moral duty was positively related to relational job crafting when perceived organizational contribution was high (simple slope = .38, p < .01) but nonsignificant when it was low.
+- Conditional indirect effects (bootstrapped): organizational dependence had a negative, significant indirect effect on social impact via relational job crafting only when community identification was low; moral duty had a positive, significant indirect effect only when perceived organizational contribution was high; lack of family support's indirect effects were nonsignificant at both levels.
+- Convergence: the quantitative results confirm the Study 1 inductive insight that community identification and moral duty act as enablers buffering poverty- and gender-related stressors on relational job crafting, which in turn increases social impact.
 
 **Theoretical Contribution**
 The paper extends job-crafting theory into the extreme, under-studied context of female fieldworkers in poverty and shows that much relational crafting takes place in the local community rather than the formal workplace — broadening the empirical and theoretical scope of where and how crafting happens. It develops and corroborates community identification as a novel enabler that buffers the depleting effects of poverty- and gender-related background stressors, and theorizes moral duty (amplified by perceived organizational contribution) as a distinct driver of relational crafting. The paper also establishes job-crafting theory as a new lens for understanding how social organizations attain SDG-related social impact through their fieldworkers, and offers a user-centered, capability-based measurement approach to social impact in context.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Shulist 2023 “Can I Sell You Avocadoes
 text_path: "library/AMJ/vol-66-no-6/text/Shulist 2023 “Can I Sell You Avocadoes and Talk to You About Contraception” “Well, It Depends Which Comes First” Anchor Roles and Asymmetric Boundaries.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-qualitative"
 keywords: ["role theory", "interrole boundaries", "anchor role", "asymmetric boundaries", "role contrasts", "work-community roles", "Global South", "multirole interactions", "peer education agents", "Tanzania"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "literature on role theory and boundary-setting"
   methods_overview: "53 interviews and 10 focus groups"
   keywords_source: "Role theory generally predicts that when the demands and norms"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "coded flexibility as high, moderate, or low"
+  findings_overview: "the boundaries we observed were neither uniformly strong nor weak, but rather of asymmetric strength"
 ---
 
 # “Can I Sell You Avocadoes and Talk to You About Contraception?” “Well, It Depends Which Comes First”: Anchor Roles and Asymmetric Boundaries
@@ -54,6 +59,9 @@ Role theory generally predicts that when the demands and norms of two roles are 
 **Research Question**
 What type of interrole boundary do individuals in the Global South construct between contrasting work and community roles, given that role contrasts predict strong boundaries while the dense networks and poverty of Global South contexts predict weak ones?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Role contrasts (script leeway, knowledge intensity, other- vs. self-interested orientation); boundary strength (permeability and flexibility); the novel concept of "anchor role" — the role that initially sets the stage for a specific social interaction.
 - Triggering conditions: A multirole interaction is triggered when role holders have both the ability (dense, overlapping social networks; co-located work and community roles) and the motivation (poverty, time scarcity, care for the community role) to bring two roles together with the same person.
@@ -62,6 +70,12 @@ What type of interrole boundary do individuals in the Global South construct bet
 - Boundary conditions: Asymmetry emerges when (a) role holders have ability and motivation for multirole interactions and (b) role contrasts produce divergent rather than symmetric (in)compatibility between the two roles.
 
 The process logic departs from existing boundary theory by showing that highly contrasted roles need not be uniformly incompatible. A socioeconomic backdrop of poverty, time scarcity, and dense overlapping networks creates a constant integrative pressure to combine roles, but whether that pressure yields a weak boundary depends on the anchor role: when the anchor role's expectations are relatively simple and self-interested (work), bringing in the other-interested community role creates limited expectation violation; when the anchor role is highly scripted, knowledge-intensive, and other-interested (the PEA role), bringing in work-related behaviors triggers norm violations, confusion, and doubt, leading to a strong boundary.
+
+**Data & Measures**
+Design: inductive, grounded-theory qualitative study of 73 focal Tanzanian participants who simultaneously held a self-employment work role (petty trading, subsistence farming) and a peer education agent (PEA) community role providing family planning counseling for an INGO (HealthOrg). Data were collected across four waves (2016-2021): in the first two waves, 40 participants took part in 10 group interviews; from wave three onward the authors switched to 53 one-on-one semi-structured interviews of 42 participants (11 followed up for a second interview, and nine also appeared in group interviews, yielding 73 total). Interviews were conducted in Kiswahili and translated into English by a bilingual native-speaking coauthor. Supplementary data included on-site observations at ventures, clinics, and community events; interviews with six clinic staff; 17 meetings with HealthOrg staff; 29 internal documents (over 1,200 pages); and informal community conversations recorded in field notes. Analysis followed the Gioia methodology (Gioia, Corley, & Hamilton, 2013), aggregating first-order categories into second-order themes and theoretical dimensions, supported by memo-writing, regular team discussions, and "devil's advocate" challenges. To probe the emergent asymmetry, the authors isolated the 216 occurrences of participants speaking about interrole boundaries and, for 24 participants, coded the anchor role (PEA or self-employment) and boundary strength along its two dimensions—permeability and flexibility—each rated high, moderate, or low (Table 3), then applied axial coding (Corbin & Strauss, 2015) to relate role contrasts to boundary outcomes. The design is interpretive rather than causal-identifying; no statistical estimation is claimed.
+
+**Key Findings**
+Boundaries between the work and community roles were "asymmetric" rather than uniformly strong or weak: they were strong when a social interaction was anchored in the community (PEA) role but weak when anchored in the self-employment (work) role, where the "anchor role" is the role that initially sets the stage for a given interaction (and can change from interaction to interaction, even with the same person). Anchored in self-employment, participants displayed high permeability and high flexibility, freely surfacing PEA counseling while trading or farming; anchored in the PEA role (e.g., at the clinic), they displayed mixed/low permeability and low flexibility, largely refraining from work behaviors. Table 3 shows the pattern held for nearly all 24 coded participants—most had stronger boundaries when PEA-anchored, and none had a weaker overall boundary when PEA-anchored. Two interdependent factors produced the asymmetry. First, the socioeconomic features of the Global South—overlapping community networks (the ability) plus poverty, time scarcity, and the importance of family planning (the motivation)—created a constant background pressure to integrate roles; this was a necessary boundary condition that acted the same regardless of anchor role and so did not itself drive the asymmetry. Second, three role contrasts—contrasting script leeway, contrasting knowledge intensity, and contrasting orientation—drove the asymmetry by producing divergent (in)compatibility: integrating work behaviors when anchored in the PEA role created significant potential for norm violations, confusion, and doubt in motives (yielding a strong boundary), whereas integrating PEA behaviors when anchored in self-employment created only limited such potential (yielding a weak boundary). The study thus introduces the "anchor role" and "relationally embedded asymmetric boundaries," showing that highly contrasted roles need not be mutually or symmetrically incompatible.
 
 **Theoretical Contribution**
 The paper contributes to role theory and boundary-setting by (1) showing that role contrasts do not always render two roles mutually incompatible — contrasts can produce *asymmetric* (in)compatibility; (2) introducing the construct of the "anchor role" and showing that it has a direct, substantial influence on whether an interaction stays single-role or becomes multirole; and (3) theorizing that relationally embedded asymmetric boundaries are not unique to the Global South but extend to work-family (especially family business), work-work (e.g., nurse-manager), and friendship-coworker pairings whenever ability, motivation, and divergent role contrasts coexist.

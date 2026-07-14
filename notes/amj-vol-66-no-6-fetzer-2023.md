@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Fetzer 2023 Navigating the Paradox of Pr
 text_path: "library/AMJ/vol-66-no-6/text/Fetzer 2023 Navigating the Paradox of Promise through the Construction of Meaningful Career Narratives.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-qualitative"
 keywords: ["paradox of promise", "career narratives", "prominent mentor", "imprinting", "reprinting", "values-dominant imprint", "skills-dominant imprint", "meaningful work", "career meaningfulness", "belongingness", "self-expression", "achievement"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "we selected an imprinting lens"
   methods_overview: "methodological bricolage approach"
   keywords_source: "Through a qualitative study of former employees at the Eames Office"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "then created axial codes, comparing the emergent"
+  findings_overview: "individuals narrate their formative experience as imprints, but with two distinct emphases"
 ---
 
 # Navigating the Paradox of Promise through the Construction of Meaningful Career Narratives
@@ -53,6 +58,9 @@ Working with a prominent mentor can offer many benefits to one’s career: mento
 **Research Question**
 How do individuals who experience the paradox of promise construct a meaningful career narrative? That is, how do people who began their career with a prominent mentor retrospectively make sense of their association with that mentor while still authoring an agentic, personally meaningful career story?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Paradox of promise — the tension between association with and differentiation from a prominent mentor as individuals retrospectively craft career narratives.
 - Imprints (Early Career): Two narrative emphases of the same formative experience — (a) values-dominant imprints (the "know-why," guiding beliefs absorbed from Eames) and (b) skills-dominant imprints (the "know-how," concrete techniques and prestige).
@@ -61,6 +69,12 @@ How do individuals who experience the paradox of promise construct a meaningful 
 - Boundary conditions: Equifinality (multiple narrative routes to meaningfulness) but with coherence constraints — the imprint shapes which reprinting practices yield a plausible story; each meaningfulness path is also circumscribed (trade-offs in belonging vs. individuality, freedom vs. economic viability, etc.).
 
 The process explains how individuals navigate the paradox of promise as an intrapersonal narrative accomplishment: a formative experience with a prominent mentor produces an imprint with a particular emphasis, and individuals use reprinting practices to weave later career episodes into a coherent overarching narrative that yields one of three sources of career meaningfulness. Imprinting is reframed as an interpretive — not merely structural — phenomenon: imprints can be (re)authored, edited, and expressed over time, and meaningfulness is constructed across the whole sweep of a career rather than only in transcendent moments.
+
+**Data & Measures**
+Inductive, interpretive qualitative study using a methodological bricolage; no causal claims are made. The data corpus is 33 semi-structured, retrospective career-narrative interviews with former Eames Office employees (identified from 188 Eames timesheets archived at the Library of Congress), supplemented by 7 interviews given by filmmakers for an Eames documentary with employees the authors could not reach, some deceased. Interviews adapted McAdams's "life story interview," averaged 75 minutes, were conducted by phone or Skype, and were transcribed verbatim; informants also supplied CVs or resumes and self-drawn "career maps" graphing self-assessed creativity over the career, triangulated with archival data from books, magazines, and documentaries about Eames. Analysis combined grounded-theory moves (iterative open coding into in vivo codes, constant comparison) with narrative analysis emphasizing sequence and narrative causality. Open coding surfaced initial themes and categories; axial coding then compared and integrated the emergent open codes into higher-order categories; narrative analysis ordered codes temporally within each informant's whole narrative. Constructs were coded into two imprints (values-dominant vs. skills-dominant), three reprinting practices (embracing, contrasting, and supplanting values), and three composite sources of career meaningfulness (belongingness, self-expression, and achievement).
+
+**Key Findings**
+The study induces a theory of imprints and reprinting. All informants shared the same formative Eames experience but narrated it as one of two imprints: values-dominant imprints (the "know-why," the guiding beliefs and values absorbed from Eames) or skills-dominant imprints (the "know-how," concrete techniques and a prestigious name, with the "know-why" more muted). Individuals then used three reprinting practices to interpret later career experiences in relation to the imprint: (a) embracing values, (b) contrasting values, and (c) supplanting values. Particular imprint–reprinting fits, which the authors found provided the strongest narrative coherence, yielded three composite sources of career meaningfulness: belongingness (values-dominant imprint plus embracing values), emphasizing association, collaboration, and contribution with others; self-expression (skills-dominant imprint plus contrasting values), emphasizing authenticity and freedom; and achievement (skills-dominant imprint plus supplanting values), emphasizing expertise and accomplishment. The authors stress equifinality (multiple narrative routes to meaningfulness), but each source of meaningfulness is circumscribed by trade-offs, such as belonging versus individuality or self-expression versus economic viability.
 
 **Theoretical Contribution**
 The paper offers three contributions. First, it introduces the paradox of promise and shows that promising starting points create both upsides (basking in reflected glory) and downsides (being overshadowed), and that individuals can find meaningfulness in three patterns (belongingness, self-expression, achievement) — not just optimal distinctiveness. Second, it brings a novel interpretive perspective to imprinting by introducing reprinting: imprints are not just stable social facts inferred from the environment but narrative accomplishments that individuals (re)interpret to extract meaning over time. Third, it extends theories of meaningful work by showing how small career episodes are aggregated through narrative into an overall sense of career meaningfulness over the whole sweep of a career.

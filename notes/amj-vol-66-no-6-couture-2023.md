@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Couture 2023 Triggers, Traps, and Discon
 text_path: "library/AMJ/vol-66-no-6/text/Couture 2023 Triggers, Traps, and Disconnect How Governance Obstacles Hinder Progress on Grand Challenges.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-qualitative"
 keywords: ["multistakeholder governance", "grand challenges", "governance obstacles", "governance traps", "path dependence", "collective response", "broadening practices", "containing practices", "water health"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "In this paper, we adopt a multistakeholder governance perspective to study how people"
   methods_overview: "Our interpretive analysis unfolded over three"
   keywords_source: "how efforts to manage multistakeholder governance obstacles can generate governance traps that shape participants’ ability to collectively respond"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we collated the data in an ATLAS.ti database"
+  findings_overview: "actors set off a cumulative self-reinforcing process, driving them to consolidate rather than critically reflect on"
 ---
 
 # Triggers, Traps, and Disconnect: How Governance Obstacles Hinder Progress on Grand Challenges
@@ -53,6 +58,9 @@ In this paper, we adopt a multistakeholder governance perspective to study how p
 **Research Question**
 How are multistakeholder governance obstacles addressed in practice? What are the implications of this for the collective’s ability to mitigate grand challenges?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Triggering conditions: Socioenvironmental triggers (e.g., contamination events, fish deaths, coral bleaching, regulatory debates) that shift the salience of the grand challenge and surface interpretive, structural, and relational governance obstacles.
 - Key practices: Broadening practices (stretching the scope by including new activities to incorporate shifting interpretations) and Containing practices (counteracting broadening by limiting scope and keeping focus on agreed activities).
@@ -61,6 +69,12 @@ How are multistakeholder governance obstacles addressed in practice? What are th
 - Boundary conditions: Tool-centric collective responses (e.g., the report card) and tightly coupled multistakeholder initiatives in shifting, evaluative grand challenges.
 
 The process model explains how repeated cycles of trigger → obstacle → broadening/containing practice → narrowed remit produce a cumulative, self-reinforcing path-dependent dynamic. As actors become increasingly skilled at taming governance obstacles to keep the group cohesive, they progressively decouple the collective response from the grand challenge it was intended to mitigate — even external shocks that ought to break the path end up reinforcing it.
+
+**Data & Measures**
+Data corpus: a single longitudinal interpretive case study of WaterHealthOrg drawing on the qualitative "big three" — over 500 hours of ethnographic observation (an intensive three-month colocation at the partnership's headquarters plus seven punctuated visits in 2018), 30 hour-long semi-structured interviews with partners, science panel members, staff, and proximal third parties, and 495 archival documents (meeting minutes, internal working papers, report cards, media reports, strategy documents, and scientific studies). Contextualized retrospective data covered the historical context (2008-2011) and WaterHealthOrg's first five years (2012-2017), complemented by real-time fieldwork (2018). Coding: interpretive analysis unfolded over three steps — collating and coding data in an ATLAS.ti database to surface two central practice clusters (broadening and containing); temporal bracketing to link triggers, governance obstacles, and practices over time; and visual mapping to reconstruct the cyclical process and abstract the governance-trap dynamic. Five focal constructs were defined in a coding table: triggers, governance obstacles, broadening practices, containing practices, and governance traps.
+
+**Key Findings**
+The study surfaces a conceptual process model of how working through multistakeholder governance obstacles erodes a collective's ability to mitigate a grand challenge. Socioenvironmental triggers (contamination events, mass fish deaths, coral bleaching, regulatory debate) raise the grand challenge's salience and surface interpretive, structural, and relational governance obstacles; to avoid group paralysis or dissolution, participants deploy broadening and containing practices that narrow the group's remit while generating positive feedback. Across three cycles — developing (2008-2012), protecting (2013-2016), and leveraging (2016-2018) a collective response — members grew increasingly skilled at taming obstacles and consolidating their response (the water-health report card), producing cumulative, self-reinforcing governance traps. The central finding is directional: increasing the ability to respond collectively simultaneously decreases the ability to mitigate the grand challenge, generating a progressive disconnect between the report card and actual water-health improvement. Contrary to path-dependence accounts, external shocks that could have broken the response path instead reinforced it, as each new trigger was interpreted as one more governance obstacle to be tamed.
 
 **Theoretical Contribution**
 The paper introduces the concept of governance traps to explain why multistakeholder initiatives addressing grand challenges so often produce unintended consequences, and theorizes the cumulative, self-reinforcing nature of these traps by connecting them to path-dependence theory. It extends path-dependence work by showing that exogenous shocks, rather than breaking a response path, can reinforce it in interorganizational settings, and nuances optimistic accounts of multistakeholder governance as a panacea for wicked problems.

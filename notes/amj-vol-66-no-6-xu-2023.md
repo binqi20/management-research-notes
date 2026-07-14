@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Xu 2023 Seeing the Forest and the Trees 
 text_path: "library/AMJ/vol-66-no-6/text/Xu 2023 Seeing the Forest and the Trees Exploring the Impact of Inter- and Intra-Entrepreneurial Ecosystem Embeddedness on New Venture Creation.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-quantitative"
 keywords: ["entrepreneurial ecosystems", "structural embeddedness", "cultural embeddedness", "double embeddedness", "new venture creation", "inter-EE network", "intra-EE", "corporate density", "religiosity", "venture capital mobility"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "adopt a double embeddedness lens"
   methods_overview: "Stata 14.2 command reghdfe"
   keywords_source: "inter-EE (i.e., structural"
+  hypotheses_source: "Hypothesis 1. An inverted U-shaped relationship"
+  measures_overview: "A MSA’s ego network density at time t 2 1"
+  findings_overview: "related to new venture creation (b 5 0.75, p 5 .000)"
 ---
 
 # Seeing the Forest and the Trees: Exploring the Impact of Inter- and Intra-Entrepreneurial Ecosystem Embeddedness on New Venture Creation
@@ -55,6 +60,11 @@ Research on entrepreneurial ecosystems (EEs) has tended to focus on the role tha
 **Research Question**
 Whether, how, and why does an entrepreneurial ecosystem’s position within the larger network of EEs — together with its internal cultural features — shape EE-level new venture creation? Specifically, how do inter-EE structural embeddedness and intra-EE cultural embeddedness (corporate density, religiosity) jointly determine regional new venture creation?
 
+**Hypotheses / Propositions**
+- H1: An inverted U-shaped relationship exists between structural embeddedness and new venture creation.
+- H2: The sociocognitive forces resulting from corporate density moderate the relationship between structural embeddedness and new venture creation such that the inverted U-shaped curve steepens as corporate density increases.
+- H3: The social interaction due to religiosity moderates the relationship between structural embeddedness and new venture creation such that the inverted U-shaped curve flattens out as the level of religiosity increases.
+
 **Mechanism Process**
 - IV(s): Structural embeddedness (directional in-degree ego network density of VC investment ties among adjacent MSAs); squared structural embeddedness term to capture nonlinearity.
 - DV(s): New venture creation (log of the total number of new business establishments in an MSA at time t).
@@ -62,6 +72,20 @@ Whether, how, and why does an entrepreneurial ecosystem’s position within the 
 - Controls: Network size, elite and second-tier universities, regional unemployment rate, regional income per capita, region heat (VC-backed IPOs), state and year fixed effects.
 
 The central mechanism is double embeddedness. As an EE becomes more structurally embedded in the inter-EE network, it gains access to valuable, tacit inflowing resources (knowledge, referrals, business models), increasing new venture creation up to an optimal point; beyond that point, inflows become redundant and competition rises, depressing new venture creation — yielding an inverted-U relationship. Corporate density steepens this curve because public companies act as resource integrators that magnify the value of inflowing resources via spawning and spillovers, then constrain novelty at high embeddedness. Religiosity flattens the curve because intra-EE social interaction creates localized trust and access to private (faith-based) resources, reducing reliance on inflowing resources at both low and high levels of structural embeddedness.
+
+**Data & Measures**
+Longitudinal MSA-year panel of 5,016 observations (1994-2016; 272 MSAs). Inter-EE ties are built from independent U.S. venture capital firm investments (VentureXpert / SDC Thomson Financial, 1990-2016, five-year moving window); intra-EE and control data are drawn from Compustat, the U.S. Bureau of Labor Statistics, the U.S. Bureau of Economic Analysis, the U.S. Census Bureau, the U.S. Religion Census, and the Academic Ranking of World Universities.
+- DV: New venture creation = total number of new business establishments in each MSA at time t, natural-log transformed (U.S. Census Bureau).
+- IV: Structural embeddedness = directional in-degree ego network density of inter-MSA VC investment ties (mean-centered), with a squared term to model nonlinearity.
+- Moderators: Corporate density = number of publicly traded companies per 100,000 population (Compustat); Religiosity = total congregational membership per 10,000 population (U.S. Religion Census); both mean-centered.
+- Estimation: linear model with multiple-way (state and year) fixed effects via Stata reghdfe with robust standard errors; moderation tested through interactions with the squared IV term (Haans et al., 2016).
+- Identification: primarily associational; a 2SLS specification instruments structural embeddedness and its square with prior-year media coverage as a robustness check for endogeneity, though the authors note reverse causality cannot be entirely ruled out. Further robustness comes from fixed-effect Poisson, multilevel modeling, five alternative embeddedness measures, and sample splits at the inflection point.
+
+**Key Findings**
+- H1 supported: structural embeddedness is positively related to new venture creation (b = 0.75, p < .001) and its squared term is negatively related (b = -1.65, p < .001), confirming an inverted U; the curve peaks at 57.8% ego-network density (about 86,387 new ventures).
+- H2 supported: the interaction of the squared structural-embeddedness term with corporate density is negative (b = -0.22, p < .001), steepening the inverted U as corporate density rises (apex increases from 75,782 at the 25th percentile to 90,811 at the 75th).
+- H3 supported: the interaction of the squared structural-embeddedness term with religiosity is positive (b = 0.11, p < .001), flattening the inverted U as religiosity rises (apex falls from 128,285 at the 25th percentile to 65,097 at the 75th).
+- All three hypotheses received strong support, and results held across fixed-effect Poisson, multilevel modeling, 2SLS, five alternative embeddedness measures, and inflection-point sample splits.
 
 **Theoretical Contribution**
 First, the paper applies a double embeddedness framework to EE research, showing that EE-level new venture creation depends not only on internal EE characteristics but also on the inter-EE network of ties — directly answering Wurth et al.’s (2022) call to study the “forest” alongside the “trees.” Second, it advances embeddedness theory by modeling a nonmonotonic, inverted-U effect of structural embeddedness moderated by two dimensions of cultural embeddedness, integrating prior linear/independent treatments into a unified contingent model and identifying a “Goldilocks” zone of inter-EE ties. Third, by integrating network and entrepreneurship literatures it provides a contextualized network view that scholars can apply to other regional-level entrepreneurial outcomes.

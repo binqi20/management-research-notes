@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-1/pdfs/To 2024 How Much Inequity Do You See Str
 text_path: "library/AMJ/vol-67-no-1/text/To 2024 How Much Inequity Do You See Structural Power, Perceptions of Gender and Racial Inequity, and Support for Diversity Initiatives.txt"
 ingested_at: "2026-05-12"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-quantitative"
 keywords: ["structural power", "organizational identification", "perceptions of inequity", "diversity initiatives", "gender inequity", "racial inequity", "managers", "diversity, equity, and inclusion"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Drawing on theories of structural power (Tost &"
   methods_overview: "Analytic methods. We use ordinary least squares"
   keywords_source: "Seven archival studies of government employees (Studies 1a–1 g) and three surveys of working adults (Studies"
+  hypotheses_source: "Hypothesis 1. Structural power and perceptions of"
+  measures_overview: "percentage allocated to the diversity task force as our"
+  findings_overview: "those higher in structural power perceive less inequity in their workplace due to higher organizational identification"
 ---
 
 # How Much Inequity Do You See? Structural Power, Perceptions of Gender and Racial Inequity, and Support for Diversity Initiatives
@@ -52,6 +57,13 @@ The success of diversity initiatives depends on the support of those in position
 **Research Question**
 Why do managers—who occupy positions of structural power on which the success of diversity initiatives depends—often fail to support those initiatives, and under what conditions can their resistance be overcome?
 
+**Hypotheses / Propositions**
+- Hypothesis 1. Structural power and perceptions of workplace inequity are negatively associated.
+- Hypothesis 2. The negative association between structural power and perceptions of workplace inequity is mediated by organizational identification.
+- Hypothesis 3. Structural power and support for diversity initiatives are negatively associated.
+- Hypothesis 4. The negative association between structural power and support for diversity initiatives is serially mediated by organizational identification and perceptions of workplace inequity.
+- Hypothesis 5. The negative association between structural power and support for diversity initiatives is attenuated when inequity in one's organization is deliberately processed.
+
 **Mechanism Process**
 - IV(s): Structural power (asymmetric control over others, operationalized as supervisory status / managerial role).
 - DV(s): Perceptions of gender and racial workplace inequity (Studies 1a–1g, 2a, 2b, 3); support for diversity initiatives (Studies 3, 4), measured as percentage of a $50,000 budget surplus allocated to a diversity taskforce among six competing taskforces.
@@ -59,6 +71,22 @@ Why do managers—who occupy positions of structural power on which the success 
 - Moderators: Target of inequity (own workplace vs. other workplaces, Study 2b); deliberate-processing intervention (recalling a specific instance of inequity in one's own workplace vs. recalling a typical day, Study 4).
 
 Structural power induces a heightened sense of organizational identification because controlling others' resources and outcomes makes the role central to self-concept; identification then motivates managers to view their organization positively, including as more equitable than it is. This identification-induced "motivated blindness" suppresses perceptions of workplace inequity—a precursor that, when absent, removes the impetus to support diversity initiatives. Asking managers to deliberately recall concrete inequity in their own workplace disrupts the heuristic positive view, restores perceptions of inequity, and eliminates the negative association between structural power and support for diversity initiatives.
+
+**Data & Measures**
+- Data sources: Seven archival Merit Systems Protection Board surveys of U.S. federal employees (Career Development, Career Advancement, and Merit Principles Surveys, 1993–2016; 66,523 usable responses across 24+ agencies; Studies 1a–1g), plus four primary samples of U.S. full-time working adults — MTurk (Study 2a, N = 947), Prolific (Study 2b, N = 761; Study 4, N = 726), and a university community pool (Study 3, N = 381).
+- Structural power (IV): archival studies use self-reported supervisory status (non-supervisor through executive), treated as a linear variable; Studies 2a–4 use the four-item Tost and Johnson (2019) scale plus a managerial-responsibility item (α ≈ .92–.93).
+- Perceptions of workplace inequity (DV / mediator): beliefs that gender and racial groups face inequity in treatment, evaluation, hiring, or retention (archival items validated against the Hideg and Wilson (2020) scale, r = .66); Studies 2a–4 use three Hideg and Wilson (2020) items, reverse-coded so higher scores indicate more perceived inequity.
+- Organizational identification (mediator): six-item collective-identification scale adapted from Packer and Chasteen (2010) and retargeted to one's organization (α ≈ .94–.95).
+- Support for diversity initiatives (DV; Studies 3–4): percentage of a $50,000 budget surplus allocated to a diversity taskforce among six competing taskforces.
+- Manipulations: target of inequity — one's own vs. other workplaces (Study 2b); deliberate processing — recall a workplace-inequity incident (treatment) vs. a typical workday (control) (Study 4).
+- Identification strategy: OLS regressions with organization-level fixed effects plus a Schmidt–Hunter random-effects meta-analysis (Studies 1a–1g); bootstrapped (serial) mediation tests (Studies 2a, 2b, 3); and a moderation-by-process experiment (Study 4). The archival and survey mediation evidence is associational; the authors manipulate deliberate processing (Study 4) and the identification target (Study 2b) but not the structural-power-to-identification link, and state they cannot establish the causal order between power and identification.
+
+**Key Findings**
+- H1 (supported overall, heterogeneous across the archival studies): structural power was negatively and significantly related to perceptions of inequity in six of the seven federal datasets (Study 1a b = -.088; 1c b = -.231; 1d b = -.052; 1e b = -.086; 1f b = -.099; 1g b = -.111), but negative and non-significant in Study 1b (b = -.017, p = .143); the random-effects meta-analysis supports H1 (r = -.097, 95% CI [-.154, -.039]). It replicated in Study 2a (b = -.10, p < .001) and Study 3 (b = -.11, p = .034).
+- H2 (supported): organizational identification mediated the power-to-inequity link. Study 2a — structural power → identification b = .35 (p < .001), identification → inequity b = -.33 (p < .001), indirect 95% CI [-.148, -.091]; Study 2b moderated mediation held for one's own organization (indirect CI [-.122, -.048]) but not for other organizations; Study 3 mediation CI [-.129, -.048].
+- H3 (supported): structural power was negatively related to support for diversity initiatives in Study 3 (b = -1.17, p = .023).
+- H4 (supported): the power-to-support relationship was serially mediated by organizational identification and then perceptions of inequity (Study 3 serial indirect 95% CI [-.414, -.097]).
+- H5 (supported): in Study 4 the deliberate-processing intervention attenuated the effect (structural power × condition b = 1.48, p = .016); structural power was negatively related to support in the control condition (t = -2.34, p = .019) but non-significant in the treatment condition (t = 0.96, p = .336).
 
 **Theoretical Contribution**
 The paper shifts the explanation of managerial resistance to diversity initiatives away from demographics or ideology toward the structural-power position itself, identifying organizational identification as the proximal psychological barrier. It contributes to structural-power theory by showing that prosocial power effects can fail to emerge not because the powerful are unwilling to act but because they fail to perceive the problem, and contributes to the "dark side" of organizational identification literature by demonstrating a perception-blunting mechanism distinct from the deliberate-rule-bending mechanism previously documented.

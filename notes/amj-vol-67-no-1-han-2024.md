@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-67-no-1/pdfs/Han 2024 Now You See Me How Status and C
 text_path: "library/AMJ/vol-67-no-1/text/Han 2024 Now You See Me How Status and Categorical Proximity Shape Misconduct Scandalization.txt"
 ingested_at: "2026-05-12"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-quantitative"
 keywords: ["status", "misconduct", "scandalization", "media routines", "categorical proximity", "data breaches", "newsworthiness"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "media routines perspective to theorize how the status of past transgressors inside and"
   methods_overview: "scandalized), we used ordered probit regressions to"
   keywords_source: "are “established practices shared across members of"
+  hypotheses_source: "Hypothesis 1. High-status firms are more likely than"
+  measures_overview: "we created an ordered variable coded 0 if"
+  findings_overview: "firm status are positive and significant at p # .001"
 ---
 
 # Now You See Me: How Status and Categorical Proximity Shape Misconduct Scandalization
@@ -52,6 +57,11 @@ Despite the formidable consequences for firms of having their misconduct publici
 **Research Question**
 Why do only some instances of firm misconduct become scandals, and how do the status and industry category of past transgressors shape whether the focal high-status firm's misconduct is scandalized by the media?
 
+**Hypotheses / Propositions**
+- H1: High-status firms are more likely than non-high-status firms to have their misconduct scandalized by the media (positive main effect of firm status).
+- H2: The prevalence of high-status insiders' (same-industry) past misconduct strengthens the positive relationship between the focal firm's high status and the likelihood its misconduct is scandalized (positive moderation / amplification).
+- H3: The prevalence of high-status outsiders' (other-industry) past misconduct weakens the positive relationship between the focal firm's high status and the likelihood its misconduct is scandalized (negative moderation / attenuation).
+
 **Mechanism Process**
 - IV(s): Firm status (analyst-coverage-weighted measure following Dewan & Jensen, 2020; Wang & Jensen, 2019)
 - DV(s): Misconduct publicity, coded as an ordered three-category variable: no media coverage (0), moderate coverage (1, below 95th percentile of article counts), scandalized (2, above the 95th percentile = 40+ articles within two weeks)
@@ -59,6 +69,21 @@ Why do only some instances of firm misconduct become scandals, and how do the st
 - Moderators: Prevalence of high-status insider breaches (same 3-digit SIC industry) and high-status outsider breaches (different industries) in the prior 365 days
 
 The mechanism rests on a media-routines logic: journalists face deadline pressures, limited attention, and reward structures that favor "scoops" with industry-based narrative arcs. High-status focal firms are inherently newsworthy because their data breaches violate normative expectations and carry social significance. When prior high-status transgressors share the focal firm's industry, journalists infer an industry-wide pattern, draw on richer industry-based narratives, and intensify scrutiny—amplifying the status–scandalization link (scrutiny-in-numbers). When prior high-status transgressors are scattered across other industries, no coherent industry storyline emerges, journalists redirect attention outside the focal industry, and the focal firm's status loses its salience (safety-in-numbers), attenuating scandalization.
+
+**Data & Measures**
+- Data: 224 corporate data breaches disclosed 2015-2018 involving 157 publicly traded U.S. firms; breaches identified via the Privacy Rights Clearinghouse database; breach articles collected from Factiva-registered English-language outlets within the two weeks after each disclosure.
+- DV (misconduct publicity / breach media coverage): ordered three-category variable coded 0 = no coverage (140 breaches), 1 = moderate coverage below the sample's 95th percentile of article counts (40 articles; 71 breaches), 2 = scandalized at or above the 95th percentile (13 breaches).
+- IV (firm status; also past transgressors' status): analyst-coverage-weighted measure from Dewan and Jensen (2020) and Wang and Jensen (2019), weighting analyst coverage by each analyst's industry expertise (conceptually equivalent to eigenvector centrality); firms with no analyst coverage coded 0.
+- Moderators: high-status insider breaches = count of high-status-firm breaches within the focal firm's 3-digit SIC industry over the prior 365 days; high-status outsider breaches = the same count outside the focal industry. High status = 90th-percentile status score; past incidents weekly-discounted by recency.
+- Controls: industry-adjusted firm size and ROA, firm media visibility (entered as regression residuals), firm breach frequency, hacker attack, breach severity, sensitive information breached, concurrent breaches, non-high-status insider/outsider breaches, issue salience, media scrutiny, and year plus Fama-French 12 industry dummies.
+- Estimation / identification: ordered probit regression with standard errors clustered by firm, interpreted via marginal-effects and interaction plots. The design is archival and observational (associational, not causal); the authors probe endogeneity with a robustness-of-inference-to-replacement (RIR) analysis rather than a formal identification strategy.
+
+**Key Findings**
+All three hypotheses were supported in this single sample.
+- H1 (supported): firm status is positively and significantly related to scandalization - the firm-status coefficient is positive and significant at p <= .001 in every model. At low high-status insider prevalence, a 1 SD rise in firm status lowers the probability of no coverage and raises the probabilities of moderate coverage and scandalization.
+- H2 (supported): the firm status x high-status insider breaches interaction is positive and significant (b = 0.196, p = .000 in Model 3; b = 0.161, p = .004 in Model 5), so same-industry high-status prevalence amplifies the status-scandalization link (scrutiny in numbers).
+- H3 (supported): the firm status x high-status outsider breaches interaction is negative and significant (b = -0.074, p = .000 in Model 4; b = -0.061, p = .005 in Model 5), so other-industry high-status prevalence attenuates the status effect, rendering firm status nonsignificant at high outsider prevalence (safety in numbers).
+Results held under alternative scandal cutoffs, continuous coverage measures, alternative status operationalizations, and the RIR endogeneity check.
 
 **Theoretical Contribution**
 The paper contributes to the scandalization literature by identifying past transgressors' status and categorical proximity as previously overlooked contextual boundary conditions on the well-established status–scandalization relationship, showing that context can amplify or even nullify the effect of focal-firm status. It also extends status theory by demonstrating that status is relational not only through status leakage but through how other high-status actors—inside and outside the focal category—create evaluative contexts that shape audiences' interpretations, theorizing the intersection of vertical (status) and horizontal (category) dimensions of social evaluation.

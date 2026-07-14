@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-66-no-6/pdfs/Zhang 2023 The Effects of Between-Group 
 text_path: "library/AMJ/vol-66-no-6/text/Zhang 2023 The Effects of Between-Group Pay Dispersion.txt"
 ingested_at: "2026-05-16"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-4-8"
+augmented_at: "2026-07-14"
 
 paper_type: "empirical-mixed"
 keywords: ["between-group pay dispersion", "within-group pay dispersion", "horizontal pay dispersion", "distributive justice climate", "intergroup helping", "voluntary turnover", "organizational performance", "multiple social comparison", "social identity"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "Building on the multiple social comparison literature, we propose that"
   methods_overview: "Table 2 shows the multilevel path analysis results."
   keywords_source: "between-group pay dispersion (BGPD). Building on the multiple social comparison literature"
+  hypotheses_source: "Hypothesis 1. The relationship between BGPD and"
+  measures_overview: "coefficient of variation to measure each store’s WGPD."
+  findings_overview: "Together, these findings support Hypothesis 1."
 ---
 
 # The Effects of Between-Group Pay Dispersion
@@ -55,6 +60,11 @@ Although allocating resources (e.g., pay) between different job groups is a crit
 **Research Question**
 When and how does between-group pay dispersion (BGPD) — pay-level differences between employees at the same job level but in different functional job groups — affect employees' shared distributive justice perceptions and, ultimately, organizational performance? Specifically, how does the size of explained within-group pay dispersion (WGPD) moderate the relationship between BGPD and the distributive justice climate, and how is this interaction transmitted through intergroup helping and voluntary turnover rates?
 
+**Hypotheses / Propositions**
+H1. The relationship between BGPD and distributive justice climate is moderated by WGPD, such that the relationship is positive when WGPD is high and negative when WGPD is low.
+H2. The BGPD × WGPD interaction on distributive justice climate is extended to organizational performance via intergroup helping, such that the indirect relationship between BGPD and organizational performance (through distributive justice climate and intergroup helping) is positive when WGPD is high and negative when WGPD is low.
+H3. The BGPD × WGPD interaction on distributive justice climate is extended to organizational performance via voluntary turnover rates, such that the indirect relationship between BGPD and organizational performance (through distributive justice climate and voluntary turnover rates) is positive when WGPD is high and negative when WGPD is low.
+
 **Mechanism Process**
 - IV(s): Between-Group Pay Dispersion (BGPD); Within-Group Pay Dispersion (WGPD); their interaction.
 - DV(s): Distributive justice climate (proximal); organizational performance (distal, measured both objectively as goal completion and subjectively via store-manager ratings); voluntary turnover rates.
@@ -62,6 +72,17 @@ When and how does between-group pay dispersion (BGPD) — pay-level differences 
 - Moderators: WGPD (interacting with BGPD on distributive justice climate); in Study 2, employees' between-group pay comparison tendency further moderates the BGPD × WGPD interaction (three-way interaction).
 
 The process draws on multiple social comparison and self-categorization theories: employees compare both within-group (proximal in-group referents) and between-group (out-group referents) pay. Because BGPD reflects ambiguous job-value differences, employees use the legitimacy of explained WGPD as an external cue when judging BGPD's fairness. When BGPD and explained WGPD align (both large signal meritocracy/differentiation; both small signal harmony/collaboration), a "strong situation" emerges and a high distributive justice climate forms. That climate then increases intergroup helping and reduces voluntary turnover, lifting organizational performance.
+
+**Data & Measures**
+- Study 1 (205 retail stores): objective monthly pay and voluntary-turnover data from company archives combined with multisource surveys of employees, group leaders, and store managers. BGPD = coefficient of variation of the groups' average pay levels within a store; WGPD = the store average of each group's within-group pay coefficient of variation, treated as a proxy for "explained WGPD." Distributive justice climate = four-item Colquitt (2001) scale aggregated to store level; intergroup helping = two items from Farh et al.'s altruism scale rated by group leaders; voluntary turnover rate = departing over total employees (archival); organizational performance = objective first-half-year goal completion (archive) plus a subjective seven-item Sparrowe et al. (2001) rating by store managers.
+- Study 2 (123 bank branches): two-wave perceptual survey; BGPD and WGPD measured with newly developed three-item perceived-dispersion scales contrasting service versus marketing groups; distributive justice climate = four-item scale (Trevor & Wazeter, 2006); controls add pay-system communication, pay secrecy, interactional justice climate, and within- versus between-group pay-comparison tendencies.
+- Qualitative study: 34 face-to-face interviews across seven stores, thematically coded into two umbrella constructs (legitimacy of pay-dispersion bases; collective-level pay-comparison processes).
+- Both quantitative studies estimate associational path-analytic models (Mplus, MLR/ML); no causal-identification strategy is claimed, and the authors note Study 1's cross-sectional design cannot establish the justice-to-performance causal direction.
+
+**Key Findings**
+- Study 1: the BGPD × WGPD interaction on distributive justice climate was significant (B = 6.62, p < .01); the BGPD slope was positive and significant at high WGPD (simple slope = .60, p < .001) and negative but nonsignificant at low WGPD (simple slope = −.19, ns) — H1 supported. H2 was supported: the indirect BGPD-to-performance effect via distributive justice climate and intergroup helping was positive and significant at high WGPD for both subjective and objective performance. H3 was supported only for the objective performance measure (indirect effect via distributive justice climate and voluntary turnover positive at high WGPD) and was nonsignificant for subjective performance. The BGPD main effect on distributive justice climate was nonsignificant.
+- Study 2 (bank branches) replicated the significant BGPD × WGPD interaction (B = 0.57, p < .01) and supported H1, but the significant conditional slope fell in the opposite tail: negative and significant at low WGPD (simple slope = −.46, p < .01) while positive but nonsignificant at high WGPD (simple slope = .10, ns). A three-way BGPD × WGPD × between-group-pay-comparison interaction was significant (B = 0.84, p < .01). Study 2 did not test the performance-outcome hypotheses (H2, H3).
+- Convergence with the qualitative study: interviews confirmed that WGPD rested on normatively acceptable bases (individual performance, tenure, human capital) and that employees engage in between-group pay comparison and use WGPD's legitimacy as a frame of reference when judging BGPD fairness, supporting the model's premises.
 
 **Theoretical Contribution**
 The paper refines horizontal pay dispersion theory by decomposing it into a job-based (BGPD) and a person-based (WGPD) form, and shows that the desirable effects of "explained" WGPD spill over to make BGPD perceived as fair when the two are aligned. It extends multiple social comparison and self-categorization theories from the individual level to a collective, group-to-group comparison process and validates a nested pay-comparison mechanism in which in-group (WGPD) cues frame the interpretation of out-group (BGPD) cues. It also contributes to strategic HRM and compensation literature by clarifying that workforce differentiation (large BGPD) and workforce harmony (small BGPD) can each be desirable when consistently aligned with WGPD and the organization's strategic intent.
