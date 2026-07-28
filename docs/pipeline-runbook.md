@@ -285,13 +285,19 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   (they index the new sections and `extraction_version`). Two-of-three index
   files changing is the *correct* signature, not a failed export.
 - **Faithful-note PARTIALs (the li-2025 precedent, batch 02):** when a PARTIAL
-  flags a sentence you can verify is faithful against the RAW extracted text
-  (use a whitespace-tolerant search — two-column interleaving can splice a
-  body sentence word-by-word into the references region, defeating the
-  auditor and line-based grep alike), do NOT edit the note. Accept the
-  residual PARTIAL, record it in the ledger and release notes (the note's
-  overall audit is still pass), and move on. Editing accurate content to
-  appease a verification artifact is a faithfulness violation, not a repair.
+  flags a sentence you can verify is faithful against the RAW extracted text,
+  do NOT edit the note. Accept the residual PARTIAL, record it in the ledger
+  and release notes (the note's overall audit is still pass), and move on.
+  Editing accurate content to appease a verification artifact is a
+  faithfulness violation, not a repair.
+  **Verification requires BOTH search modes (batch-08 banerjee lesson):**
+  two-column interleaving can splice a body sentence word-by-word into the
+  references region (defeating raw line-based grep, the li-2025 case) AND can
+  inject column-2 content mid-phrase (defeating whitespace-tolerant search —
+  banerjee's "opposite directionality than predicted" sat around an injected
+  "Robustness Model 1…" run). Search the raw text line-based on SHORT
+  fragments *and* whitespace-tolerant on longer ones; a 0-hit search is never
+  by itself proof a claim is absent from the paper.
 - **Repair convergence bound:** source-verified factual errors are always
   fixed, regardless of how many rounds it takes (batch-02 preston needed
   three, each a distinct genuine error). But when a fresh auditor keeps
