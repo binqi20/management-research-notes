@@ -142,19 +142,27 @@ audit**:
 
 **Current main-branch audit state (2026-07-28):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 08 upgraded 23 notes (AMJ vol-66-no-5 + vol-66-no-4, all v2
+batch 09 upgraded 24 notes (AMJ vol-66-no-3 + vol-66-no-2, all v2
 augmentations) to v3, each passing a fresh full 9-field rubric-v2 audit at
-207/207 prose-field verdicts SUPPORTED (0 PARTIAL) after ten evidence-based
-repairs across eight notes. Nine of the ten fell on legacy prose fields written
+214/216 prose-field verdicts SUPPORTED after fourteen evidence-based repairs
+across eight notes. Twelve of the fourteen fell on legacy prose fields written
 before the v3 standard, three of them the same pattern — a Mechanism Process
-presenting an empirical outcome as the paper's ex ante theory (Banerjee, Lander,
-Kim) — and only one touched a new v3 field (an unstated country on Kundro's Data
-& Measures). Nine repairs cleared in one round; Hussain needed a second for an
-added-audience scope drift. Fresh re-audits of every changed note returned all
-nine fields SUPPORTED; the batch left the record total unchanged. This batch ran
-on `claude-opus-5` (batches 01–07 recorded `claude-opus-4-8`), so its notes carry
+misstating how the paper's own model is *wired* (a mediator attributed to the
+wrong measurement technique in Ingram, an above-aspiration effect inverted in
+Lee 66-2, a dependent variable listed as a mediator in Zhang). Two repairs
+touched new v3 fields (a wrongly cited case in Toivonen's Key Findings, a
+cross-study coverage error in Cunningham's Data & Measures), and a second round
+caught two further Data & Measures slips (Bianchi, Zhang), all repaired; a third
+round returned all eighteen fields SUPPORTED. **Two `PARTIAL` verdicts survive
+by design and are documented rather than edited:** Hersel's Data & Measures is
+faithful — its word-list details sit in the paper's Appendix A, which the audit
+tooling trims to fit its context budget — and Toivonen's Practical Implication
+draws anchored components from a paper with no practical-implications section,
+accepted under the repair convergence bound. The batch left the record total
+unchanged. It ran on `claude-opus-5`, as batch 08 did (batches 01–07 recorded
+`claude-opus-4-8`), so its notes carry
 `augmented_model: "claude-opus-5"`. The corpus contains 61 legacy v1
-notes, 911 v2 notes, and 195 v3 notes with evidence anchors; new notes are
+notes, 887 v2 notes, and 219 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -188,7 +196,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.41.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.42.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

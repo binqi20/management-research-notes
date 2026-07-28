@@ -10,7 +10,7 @@ repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-07-28"
-version: "0.41.0"
+version: "0.42.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,9 +54,31 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.41.0
+  a published rubric) gates every note into the library. Version 0.42.0
   (2026-07-28) continues the v3 backfill with Academy of Management Journal
-  volume 66 issue 5 and issue 4 — 23 notes, all v2 augmentations. A backfill
+  volume 66 issue 3 and issue 2 — 24 notes, all v2 augmentations. A backfill
+  adds no papers, so the record total is unchanged at 1,167; the version-tier
+  census shifts to 61 v1, 887 v2, and 219 v3 notes. Each touched note passed a
+  fresh full independent nine-field rubric-v2 audit at 214/216 prose-field
+  verdicts SUPPORTED with zero UNSUPPORTED or CONTRADICTED, after fourteen
+  evidence-based repairs across eight notes. Twelve of the fourteen fell on
+  legacy prose fields written before the v3 standard, three of them a single
+  recurring pattern in which a Mechanism Process misstated how the paper's own
+  model is wired — a mediator attributed to the wrong measurement technique
+  (Ingram), an above-aspiration effect inverted (Lee), and a dependent variable
+  listed as a mediator (Zhang). Two repairs touched new v3 fields, a wrongly
+  cited case in Toivonen's Key Findings and a cross-study coverage error in
+  Cunningham's Data and Measures; a second round caught two further Data and
+  Measures slips, and a third round returned all eighteen affected fields
+  SUPPORTED. Two PARTIAL verdicts are accepted and documented rather than
+  edited, because editing accurate content to satisfy a verification artifact
+  would itself be a faithfulness failure: Hersel's Data and Measures is faithful
+  to an appendix the audit tooling trims for context budget, and Toivonen's
+  Practical Implication draws anchored components from a paper that states no
+  practical implications. This batch ran on claude-opus-5. Earlier, version
+  0.41.0 (2026-07-28) continued the v3 backfill with Academy of Management
+  Journal volume 66 issue 5 and issue 4 — 23 notes, all v2 augmentations. A
+  backfill
   adds no papers, so the record total is unchanged at 1,167; the version-tier
   census shifts to 61 v1, 911 v2, and 195 v3 notes. Each touched note passed a
   fresh full independent nine-field rubric-v2 audit at 207/207 prose-field

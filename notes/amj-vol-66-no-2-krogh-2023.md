@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-66-no-2/pdfs/Krogh 2023 Recognizing and Utilizing Nov
 text_path: "library/AMJ/vol-66-no-2/text/Krogh 2023 Recognizing and Utilizing Novel Research Opportunities with Artificial Intelligence.txt"
 ingested_at: "2026-05-23"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-28"
 
 paper_type: "editorial"
 keywords: ["artificial intelligence", "machine learning", "predictions", "build and test theory", "research opportunities"]
@@ -52,6 +54,9 @@ AI should not ossify a creative mind but instead
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: As a subset of AI, machine learning offers management scholars new research opportunities by enlarging their methodological toolbox to leverage vast and varied data, with both benefits (statistical flexibility) and challenges (access, bias, cost).
 - Key constructs: The editorial advances "a typology for conducting ML research in ways that build and test theory," distinguishing strategies by the continuity of the phenomenon investigated and its theoretical coherence.
@@ -59,6 +64,12 @@ Not reported in paper
 - Recent advancements: federated learning, transfer learning, explainable AI, and AutoML are reviewed as tools that help scholars deal with access, bias, and cost challenges.
 
 The editorial argues that machine learning has become a powerful means of discovering patterns in massive amounts of data and making predictions, and that its value to management scholarship is realized only when ML strategies are matched to the state of theorizing about a phenomenon. The four-cell typology guides authors in selecting an ML strategy whose epistemic purpose — predicting, refining, discovering, or bounding theory — fits the phenomenon's data continuity and theoretical coherence, consistent with AMJ's mission to test, extend, or build management theory.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The piece offers a typology of four machine-learning research strategies (predictive selection, predictive refinement, formative discovery, reductive discovery) for building and testing theory, mapping each onto a 2x2 of phenomenon continuity and theoretical coherence. It reframes ML not as a mere predictive tool but as a means of advancing scholarly understanding of management phenomena.

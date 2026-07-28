@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-66-no-3/pdfs/Langley 2023 Opening Up AMJ’s Research
 text_path: "library/AMJ/vol-66-no-3/text/Langley 2023 Opening Up AMJ’s Research Methods Repertoire.txt"
 ingested_at: "2026-05-23"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-28"
 
 paper_type: "editorial"
 keywords: ["visual methods", "microethnography", "multilevel theorizing", "researching forward"]
@@ -55,6 +57,9 @@ open up the journal’s methods repertoire, both to
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: AMJ's mission welcomes all empirical methods, yet some valuable methodologies remain underrepresented in its pages; the 23rd editorial team signals openness by adding methods experts and inviting innovative submissions.
 - Visual methods: moving beyond words and numbers to study visible, material features of organization through images, video, object interviewing, photo-elicitation, semiotics, and quantitative content analysis.
@@ -64,6 +69,12 @@ Not reported in paper
 - Researching forward: engaged, real-time, forward-looking inquiry (field experiments, action research, collaborative and inside-out research) that helps practitioners "live forward" rather than only explaining the past.
 
 These five illustrations are a "selected sampling of possibilities." Underpinning them is a performative view of method: what we know cannot be separated from how we come to know it, so widening the variety of methods we draw on enriches the knowledge and theory the field can generate.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial advances a performative understanding of research methods—rejecting the conventional assumption that method choice merely flows from a fixed ontological and epistemological stance, and instead positing that methods help constitute reality. On this view, broadening AMJ's methods repertoire is itself a route to richer organizational knowledge and theory.
