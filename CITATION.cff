@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-07-14"
-version: "0.40.0"
+date-released: "2026-07-28"
+version: "0.41.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,23 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.40.0
-  (2026-07-14) continues the v3 backfill with Academy of Management Journal
+  a published rubric) gates every note into the library. Version 0.41.0
+  (2026-07-28) continues the v3 backfill with Academy of Management Journal
+  volume 66 issue 5 and issue 4 — 23 notes, all v2 augmentations. A backfill
+  adds no papers, so the record total is unchanged at 1,167; the version-tier
+  census shifts to 61 v1, 911 v2, and 195 v3 notes. Each touched note passed a
+  fresh full independent nine-field rubric-v2 audit at 207/207 prose-field
+  verdicts SUPPORTED with zero PARTIAL, UNSUPPORTED, or CONTRADICTED, after ten
+  evidence-based repairs across eight notes. Nine of the ten fell on legacy
+  prose fields written before the v3 standard, three of them a single recurring
+  pattern in which a Mechanism Process presented an empirical outcome as the
+  paper's ex ante theory (Banerjee, Lander, Kim); the tenth corrected an
+  unstated study country in a new v3 Data and Measures field (Kundro). Nine
+  cleared in one repair round and Hussain needed a second for an added-audience
+  scope drift, with fresh independent re-audits of every changed note returning
+  all nine fields SUPPORTED. This batch ran on claude-opus-5, where backfill
+  batches 01 through 07 recorded claude-opus-4-8. Earlier, version 0.40.0
+  (2026-07-14) continued the v3 backfill with Academy of Management Journal
   volume 67 issue 1 and volume 66 issue 6 — 24 notes, all v2 augmentations. A
   backfill adds no papers, so the record total is unchanged at 1,167; the
   version-tier census shifts to 61 v1, 934 v2, and 172 v3 notes. Each touched

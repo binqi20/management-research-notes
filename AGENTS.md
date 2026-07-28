@@ -140,18 +140,21 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-07-14):
+**Current main-branch audit state (2026-07-28):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 07 upgraded 24 notes (AMJ vol-67-no-1 + vol-66-no-6, all v2
+batch 08 upgraded 23 notes (AMJ vol-66-no-5 + vol-66-no-4, all v2
 augmentations) to v3, each passing a fresh full 9-field rubric-v2 audit at
-216/216 prose-field verdicts SUPPORTED (0 PARTIAL) after three evidence-based
-repairs cleared in a single round (all three on legacy prose fields written
-before the v3 standard — a practical implication, a future-research field, and
-a limitation, each an applied-extension scope-drift narrowed back to the
-paper's own scope: Soublière, Park coevolutionary lock-in, and Jia), with a
-fresh re-audit of the three repaired notes returning every field SUPPORTED; the
-batch left the record total unchanged. The corpus contains 61 legacy v1
-notes, 934 v2 notes, and 172 v3 notes with evidence anchors; new notes are
+207/207 prose-field verdicts SUPPORTED (0 PARTIAL) after ten evidence-based
+repairs across eight notes. Nine of the ten fell on legacy prose fields written
+before the v3 standard, three of them the same pattern — a Mechanism Process
+presenting an empirical outcome as the paper's ex ante theory (Banerjee, Lander,
+Kim) — and only one touched a new v3 field (an unstated country on Kundro's Data
+& Measures). Nine repairs cleared in one round; Hussain needed a second for an
+added-audience scope drift. Fresh re-audits of every changed note returned all
+nine fields SUPPORTED; the batch left the record total unchanged. This batch ran
+on `claude-opus-5` (batches 01–07 recorded `claude-opus-4-8`), so its notes carry
+`augmented_model: "claude-opus-5"`. The corpus contains 61 legacy v1
+notes, 911 v2 notes, and 195 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -174,7 +177,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-07-14.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-07-28.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -185,7 +188,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.40.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.41.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

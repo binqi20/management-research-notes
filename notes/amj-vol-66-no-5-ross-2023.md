@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-66-no-5/pdfs/Ross 2023 Resource Idling and Capability
 text_path: "library/AMJ/vol-66-no-5/text/Ross 2023 Resource Idling and Capability Erosion.txt"
 ingested_at: "2026-05-20"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-28"
 
 paper_type: "empirical-quantitative"
 keywords: ["resource idling", "capability erosion", "demand uncertainty", "sunk costs", "real options", "human capital", "automation"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Building on the resource-based view and real options theory, we argue that resource"
   methods_overview: "We estimate using the logit"
   keywords_source: "and a greater reliance on human capital as opposed"
+  hypotheses_source: "Hypothesis 2. Demand uncertainty has a negative"
+  measures_overview: "the driller “stacks” a given rig in month t by suspending its drilling operations"
+  findings_overview: "greater proportion of rigs is associated with a decline"
 ---
 
 # Resource Idling and Capability Erosion
@@ -53,6 +58,12 @@ Why would some firms persist with continued operations when facing unfavorable e
 **Research Question**
 Why would some firms persist with continued operations when facing unfavorable economic conditions? Specifically, how does anticipated capability erosion from temporarily idling resources function as a sunk cost that shapes firms' decisions to idle versus continue operations under demand uncertainty?
 
+**Hypotheses / Propositions**
+- H1: The extent of resource idling has a negative effect on a firm's capabilities (i.e., capability erosion).
+- H2: Demand uncertainty has a negative impact on the likelihood of resource idling.
+- H3: The negative impact of demand uncertainty on the likelihood of resource idling will be magnified for firms with superior capabilities.
+- H4: The negative impact of demand uncertainty on the likelihood of resource idling will be magnified for resources with greater reliance on human capital (as opposed to automation).
+
 **Mechanism Process**
 - IV(s): Extent of resource idling (proportion of a driller's rigs "stacked" relative to its fleet); demand uncertainty (oil-price-driven exogenous volatility)
 - DV(s): Firm capabilities / capability erosion (residual intrinsic drilling speed, firm-year level, H1); likelihood of resource idling (rig-month level, H2-H4)
@@ -60,6 +71,12 @@ Why would some firms persist with continued operations when facing unfavorable e
 - Moderators: Firm capabilities (H3); reliance on human capital vs. automation (H4)
 
 The paper integrates the resource-based view with real options theory to argue that temporarily idling resources erodes existing capabilities through reduced utilization, organizational forgetting, layoffs, and the breaking of coordinated routines. Because this erosion is a sunk cost that cannot be costlessly reversed upon reactivation, forward-looking firms treat idling like outright exit and rationally persist ("hysteresis") under demand uncertainty rather than idle. The dissuading effect of uncertainty on idling is amplified for firms with superior capabilities (which face larger strategic sunk costs) and for firms reliant on human capital rather than automation (whose capabilities are more vulnerable to erosion). All four hypotheses receive empirical support.
+
+**Data & Measures**
+Archival panel data on Texas oil drilling assembled from Drillinginfo, RigData, the Texas Railroad Commission, and the U.S. Energy Information Administration, covering 102 drillers and 1,396 rigs from 2001 to 2018; the capability erosion analysis is at the firm-year level (n = 1,836) and the idling analysis at the rig-month level (n = 301,536). A driller's capabilities are measured as its intrinsic speed capability in drilling: a first-stage project-level OLS regresses the drilling rate for a given well (total well depth divided by drilling days) on well type, project size, contract type, field oil demand, and field and year dummies, and the residuals are standardized within each field-year subgroup and averaged to the firm-year. Extent of idling is the proportion of a driller's total rigs that are "stacked" relative to its fleet in year t; the rig-level dependent variable is a binary indicator equal to 1 if the driller stacks a given rig in month t by suspending its drilling operations and releasing the associated crew, and 0 otherwise. Demand uncertainty is the market forecast error from a GARCH model estimated on monthly U.S. oil demand for 2001-2018, that is, the absolute percentage difference between predicted and observed industry output; human capital reliance is a dummy equal to 1 if the focal rig is the traditional fully human-operated type and 0 if automated. Controls are grouped at the firm, environment, and rig levels (Table 1). H1 is estimated with firm fixed-effects regression, which the authors call identification by adjustment, with idling in year t lagged relative to capabilities in t + 1, and is complemented by treatment effect analysis, which they call identification by balancing, using propensity score matching, inverse probability weighting, and doubly robust estimation with drillers matched on size, age, number of clients, resource heterogeneity, technological sophistication, and human capital reliance. H2 to H4 are estimated with firm fixed-effects logit models of the binary idling decision, with standard errors clustered by firm. The authors note that idling decisions are not randomly assigned across firms, so identification rests on fixed effects, the lag structure, and balancing on observed covariates rather than on random or exogenous assignment.
+
+**Key Findings**
+All four hypotheses are supported. H1 is supported: the extent of resource idling in year t is negatively related to a driller's capabilities in year t + 1 (b = -10.122, p = .005; firm fixed effects, n = 1,836 firm-years), and the treatment effects analysis corroborates this, with drillers that idled at least one rig in year t showing lower capabilities in t + 1 than drillers that idled none (treatment-control differences of -1.619 under propensity score matching, -1.502 under inverse probability weighting, and -0.992 under doubly robust estimation; all p values below .02), a pattern that also holds using capabilities at t + 2. H2 is supported: demand uncertainty has a significant negative effect on the likelihood of idling a rig (b = -6.581, p = .008; rig-month logit, n = 301,536). H3 is supported: the interaction between demand uncertainty and firm capabilities is negative and significant (b = -0.002, p = .026), and the marginal effects plot shows the negative effect of uncertainty on idling is more pronounced for high-capability drillers. H4 is supported: the interaction between demand uncertainty and human capital reliance is negative and significant (b = -0.812, p = .039), with the negative effect of uncertainty on idling more pronounced for rigs relying on human capital than for automated rigs. Supplemental analyses find negative and significant coefficients for both partial ("warm stacking") and complete ("cold stacking") idling, with the larger coefficient and economic magnitude for complete idling, and an ordinal logit in which uncertainty reduces the degree of idling, an effect strengthened both by superior capabilities and by greater reliance on human capital.
 
 **Theoretical Contribution**
 The study introduces capability erosion as a previously unacknowledged form of sunk cost relevant to firms' investment decisions under uncertainty, thereby extending the resource-based view's attention from capability building toward the maturity stage of the capability lifecycle. By explicating how capability erosion operates as a sunk cost within a real options framework, it demonstrates a theoretical synergy between the resource-based view and real options theory and identifies a new, internally generated source of hysteresis. It also contributes to the resource reconfiguration literature by introducing temporary contraction as a reversible deviation from a current configuration.

@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-66-no-4/pdfs/Wellman 2023 Publishing Multimethod Rese
 text_path: "library/AMJ/vol-66-no-4/text/Wellman 2023 Publishing Multimethod Research in AMJ A Review and Best-Practice Recommendations.txt"
 ingested_at: "2026-05-20"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-28"
 
 paper_type: "editorial"
 keywords: ["multimethod research", "deductive reasoning", "inductive reasoning", "methodological triangulation", "methodological fit", "theoretical contribution"]
@@ -56,6 +58,9 @@ methods rarely conform exclusively to the precepts
 **Research Question**
 How can authors capitalize on the benefits of multimethod research—the use of more than one methodology in a single research project—while surmounting its limitations and meeting AMJ's publishing standards? The editorial asks what archetypes of multimethod work currently appear in AMJ, what pitfalls undermine such submissions, and how authors can enhance the boldness and rigor of multimethod designs.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Building blocks: two forms of scientific reasoning, deduction (applying established principles via syllogistic argument to derive testable conclusions) and induction (moving from empirical experience toward theory), which methods orient toward but rarely conform to exclusively.
 - Five archetypes (from a review of 60 multimethod papers): methodological triangulation for hypothesis testing (45/60, 75%), methodological triangulation for theory development (2/60, 3%), test and explore (5/60, 8%), explore and test (5/60, 8%), and full research cycle (3/60, 5%).
@@ -63,6 +68,12 @@ How can authors capitalize on the benefits of multimethod research—the use of 
 - Recommendations: employ less common archetypes, explain why and how methods are combined, ensure theoretical and operational alignment, and use appendices/online supplements thoughtfully.
 
 The editorial argues that more methods are not inherently better: value arises only when multiple methods are integrated so the end product exceeds the sum of its qualitative and quantitative parts. Because the field is heavily skewed toward triangulation for hypothesis testing, the authors contend that groundbreaking theoretical contributions are more likely to emerge from the rarer inductive–deductive combinations (test and explore, explore and test, full research cycle), and that fit between method and theory maturity governs whether a multimethod design pays off.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial provides a field-level taxonomy of five multimethod design archetypes in AMJ and reframes the value of multimethod work around theoretical contribution rather than methodological multiplicity. It positions "methodological fit" and "theoretical complementarity" as the conditions under which combining methods generates new theory, rather than redundant or fishing-expedition findings.

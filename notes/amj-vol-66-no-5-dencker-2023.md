@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-66-no-5/pdfs/Dencker 2023 Positioning Research on Nov
 text_path: "library/AMJ/vol-66-no-5/text/Dencker 2023 Positioning Research on Novel Phenomena The Winding Road From Periphery to Core.txt"
 ingested_at: "2026-05-20"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-28"
 
 paper_type: "editorial"
 keywords: ["novel phenomena", "core-periphery structure", "positioning research", "legitimacy", "novelty", "incremental novelty", "method alignment", "theory elaboration", "radical novelty"]
@@ -56,6 +58,9 @@ FROM THE EDITORS POSITIONING RESEARCH ON NOVEL PHENOMENA: THE WINDING ROAD FROM 
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: A key priority of the 2023–2025 AMJ editorial term is to publish research on novel phenomena — "regularities that are unexpected, that challenge existing knowledge ... and that are relevant to scientific discourse" — yet such research is risky because all novelty starts at the periphery and must be connected to, and legitimized through, a field's core conventional knowledge.
 - Key constructs: Core vs. periphery of a field's knowledge structure; novelty and legitimacy; positioning; the review process as a legitimacy-conferring interaction between authors, reviewers, and editors.
@@ -67,6 +72,12 @@ Not reported in paper
 - Boundary conditions: Complexity and risk rise as more elements move to the periphery; radical novelty is the most rewarding but the riskiest, and a single article may be unable to communicate all novel elements parsimoniously.
 
 The editorial advances a normative, programmatic argument grounded in core–periphery knowledge structures: a field's core represents conventional, legitimate knowledge while the periphery is unconventional and only partly legitimate, and "all novel phenomena are peripheral, yet not all peripheral phenomena are novel." Because the core "defines what is feasible" and supplies selection criteria, authors must anchor novel elements to it, since "the core can serve as a legitimacy anchor" that is comprehensible and acceptable to the field. Positioning therefore involves striking a balance between the novel and the conventional and persuading reviewers and editors — who confer legitimacy through the review process — that the novelty makes an important, well-connected contribution.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not test a theory but stakes out an editorial position and a generative framework: it situates research on novel phenomena within a core–periphery structure and derives a four-scenario typology (incremental novelty, method alignment, theory elaboration, radical novelty) with scenario-specific positioning strategies. Its central idea is that novel phenomena are peripheral ideas that must be connected to a core conventional knowledge set and legitimized through interactions between authors, reviewers, and editors, offering authors and gatekeepers a shared vocabulary for diagnosing where a study's novelty lies and how to legitimize it.

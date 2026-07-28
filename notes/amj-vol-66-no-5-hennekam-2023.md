@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-66-no-5/pdfs/Hennekam 2023 Free to Be Me Evolving Gen
 text_path: "library/AMJ/vol-66-no-5/text/Hennekam 2023 Free to Be Me Evolving Gender Expression and the Dynamic Interplay between Authenticity and the Desire to Be Accepted at Work.txt"
 ingested_at: "2026-05-20"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-28"
 
 paper_type: "empirical-qualitative"
 keywords: ["authenticity", "gender expression", "identity transitions", "transgender employees", "tempered gender expression", "gender performativity"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Contributing to the literature on authenticity and identity"
   methods_overview: "We employed a narrative approach to build theory"
   keywords_source: "introducing the notion of a"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Where do you feel you are in your transition?"
+  findings_overview: "we position authenticity as a continuum, as individuals may temper their gender expression to elicit acceptance"
 ---
 
 # Free to Be Me? Evolving Gender Expression and the Dynamic Interplay between Authenticity and the Desire to Be Accepted at Work
@@ -51,6 +56,9 @@ This study examines how the gender expression of transgender individuals evolves
 **Research Question**
 "How does authenticity evolve over time during a gender identity transition within a work context?" The study asks how transgender employees express, revise, and stabilize an authentic gender at work as they undergo a gender transition.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: a dynamic interplay between the desire to express a gender that feels authentic and the desire to feel accepted by others at work; "tempered gender expression" (softening typical masculine/feminine manifestations to balance acceptance with feeling "authentic enough").
 - Process / phases: an evolving, nonlinear identity-transition journey in which psychological, physical, relational, and behavioral movements progress and regress at different speeds.
@@ -58,6 +66,24 @@ This study examines how the gender expression of transgender individuals evolves
 - Emergent outcomes: an "authentic enough" gender expression treated as a compromise rather than a stable endpoint; authenticity reconceived as an ongoing continuum.
 
 Authenticity is theorized not as alignment with an ex ante core self but as a relational, socially constructed process activated through feedback from workplace interactions. Transgender employees temper their gender expression in response to perceived gender norms, learning iteratively which expressions feel authentic and elicit acceptance, so that even after gaining acceptance the process of self-evaluation continues.
+
+**Data & Measures**
+Data: 100 semi-structured narrative interviews with 25 transgender employees in the Netherlands, conducted at four points in time at six-month intervals over a two-year period. Thirty-one individuals participated in the first wave, 27 in the second, and 25 completed all four interviews. Participants were recruited through purposive and snowball sampling via moderators of online forums for the transgender community, received no compensation, and remained with the same employer throughout the study. Interviews averaged 75 minutes (range 45 to 140 minutes); 66 of the 100 were conducted via Skype and the rest face to face. All interviews were conducted in Dutch by one author and translated verbatim into English by two native English-Dutch speakers, and the interviewing author kept a research diary recording contextual cues such as tone and facial expressions.
+
+Operationalization: transition stage was classified from each participant's own answer to the question asked at the beginning of every interview, "Where do you feel you are in your transition?" Answers such as "I'm only starting" were categorized as initiating, "somewhere in the middle" as performing, and "I feel I'm done for now" as continuing. Participants' self-described gender categories and pronouns (eight transwomen, seven transmen, eight genderqueer, two agender) were used as each participant described them rather than assigned by the researchers.
+
+Analysis: Riessman's five-step approach to narrative inquiry (attending, telling, transcribing, analyzing, reading), woven with elements of grounded theory in which the authors iterated back and forth between common themes and the literature. Each participant's narrative was first reconstructed in short form across the four interviews; each author then independently open-coded a subset of 16 transcripts (the same four participants across four time periods), coding "narrative segments" that captured key turning points rather than each line of text, with disagreements resolved by returning to the transcripts. Second-order coding refined common themes by iterating between literature and data until no additional insights emerged, and the reading stage involved checking the initial interpretation back with each participant. The design is inductive and interpretive; the study builds theory from participants' narratives and claims no causal identification strategy.
+
+**Key Findings**
+The model traces gender expression and authenticity across three transition stages. In the initiating stage, participants expressed a provisional, imagined authentic gender at work, driven by three turning points: a sense of readiness gained by trialing possible selves in personal spheres, the realization that they needed to express their imagined authentic gender identity at work, and the desire to be seen by others at work as they saw themselves. All participants felt they needed to express what they envisioned as their authentic gender, and prioritized this even though they anticipated negative reactions and career repercussions.
+
+In the performing stage two narratives emerged with opposite perceived reactions. Participants who identified within the gender binary "did gender" by expressing themselves in stereotypically conforming ways, which elicited positive reactions in the form of perceived understanding and support from coworkers. Some were accepted so warmly that they reinforced the display into "overdoing gender," and over time reported a lost sense of self, feeling they were playing a character that did not accurately reflect their gender identity. Participants who identified as nonbinary (genderqueer, gender fluid, or agender) "undid gender," and their nonconforming expression was met with perceived resistance: being actively ignored or excluded, denied access to gendered spaces such as bathrooms, and confronted with confusion and discomfort. The two paths then converged. Conforming participants began experimenting with less-conforming displays, felt more positive about themselves, but perceived others' reactions shifting from acceptance to social resistance, so both groups adopted a trial-and-error approach driven by two mechanisms: the subjectivities of authenticity and the perceived reactions of others reflecting prevailing gender norms.
+
+As a consequence of perceived negative reactions from colleagues, many participants shifted from prioritizing their own desire for authentic gender expression ("What do I want?") to taking others' perceptions into account ("How does that make others feel?"), and tempered their gender expression by softening typical masculine or feminine manifestations. They perceived that this tempering elicited greater levels of social acceptance at work.
+
+In the continuing stage, most participants settled on an "authentic enough" gender expression, a middle ground or compromise balancing feeling authentic with feeling accepted; they considered their transition successful when they felt "authentic enough" while feeling accepted, and many were unsure whether a clear endpoint existed at all. Some re-evaluated options, with several who had planned a medical transition no longer feeling the need for one while others who had opted only for a social transition began considering a medical one. A small subset instead exercised "self-authorship," adhering firmly to their internal identity regardless of gender norms and perceived negative reactions, and did not engage in trial and error.
+
+Overall, the transition process is nonlinear: psychological, physical, behavioral, and relational movements do not necessarily move in the same direction or at the same speed. Participants progressed in their transition when they perceived others' reactions as positive and regressed when those reactions were perceived as resistant. Contrary to prior work suggesting that individuals disengage from relationships in which they feel misunderstood, participants did not withdraw from colleagues who did not see them as they saw themselves, but instead adapted their gender expression so that it became acceptable to others.
 
 **Theoretical Contribution**
 The paper makes three contributions to the authenticity and identity-transition literatures: (1) it introduces "tempered gender expression," challenging the assumption that individuals always strive for full authentic self-expression; (2) it positions authenticity as an ongoing trial-and-error continuum rather than a binary state with a clear endpoint; and (3) it shows that identity transitions evolve in a less linear fashion than prior research suggests, with interrelated movements that advance and set back.
