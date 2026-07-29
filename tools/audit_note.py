@@ -325,6 +325,56 @@ def _strip_references(text: str) -> tuple[str, int]:
     return text, 0
 
 
+# Appendix retention (v0.44.0, batches 09–10 evidence: hersel, lauriano,
+# xu-2022). AMJ papers place appendices AFTER the references, so the plain
+# reference strip used to drop them — and any note faithfully citing
+# appendix-sourced details (robustness tables, scale items, sample specifics)
+# drew a PARTIAL from an auditor who never saw the appendix. Three such
+# verified-faithful accepted PARTIALs in two consecutive batches made the
+# class systematic, so the fitter now re-appends the appendix region after
+# stripping the references block between.
+#
+# _strip_references() itself stays prefix-pure — fit_pdf_text_for_audit's
+# offset math (dropped-region scans, ref-window extraction) requires
+# `stripped` to be a byte prefix of the original text, so the retention is
+# assembled downstream, never inside the stripper.
+APPENDIX_RETAIN_CAP = 40_000
+
+_APPENDIX_PATTERNS = [
+    # Line-initial, matching the REFERENCES heading conventions above.
+    # Title-case "Appendix" requires an A–Z/0–9 designator so prose like
+    # "Appendix materials are available..." can never start retention;
+    # a false positive fails OPEN (keeps extra reference lines), never
+    # drops content.
+    r"\n\s*APPENDIX\b",
+    r"\n\s*APPENDICES\b",
+    r"\n\s*ONLINE APPENDIX\b",
+    r"\n\s*Appendix\s+[A-Z0-9]\b",
+    r"\n\s*TABLE\s+A\d+\b",
+]
+
+
+def _find_appendix_start(text: str, search_from: int) -> int | None:
+    """Absolute offset of the first appendix marker at/after search_from."""
+    region = text[search_from:]
+    best: int | None = None
+    for pat in _APPENDIX_PATTERNS:
+        m = re.search(pat, region)
+        if m is not None and (best is None or m.start() < best):
+            best = m.start()
+    return None if best is None else search_from + best
+
+
+def _appendix_seam(removed_chars: int, truncated_chars: int) -> str:
+    msg = (
+        f"\n\n[... references section removed ({removed_chars:,} chars); "
+        f"appendix retained below"
+    )
+    if truncated_chars:
+        msg += f" (appendix tail truncated: {truncated_chars:,} chars dropped)"
+    return msg + " ...]\n\n"
+
+
 # --- Layer 2 prompt building -------------------------------------------------------
 
 
@@ -421,11 +471,37 @@ def fit_pdf_text_for_audit(
     """
     stripped, refs_removed = _strip_references(pdf_text)
 
+    # Appendix retention: locate the first appendix marker inside the
+    # stripped region and carry that tail forward (capped), so the auditor
+    # sees appendix-sourced evidence the plain strip used to drop.
+    appendix_abs: int | None = None
+    appendix_kept = ""
+    appendix_truncated = 0
+    refs_block_chars = refs_removed
+    if refs_removed:
+        appendix_abs = _find_appendix_start(pdf_text, len(stripped))
+        if appendix_abs is not None:
+            # Never let the appendix eat the body's budget: cap at the
+            # module constant or a quarter of the total budget, whichever
+            # is smaller (the latter only bites at small test budgets).
+            effective_cap = min(APPENDIX_RETAIN_CAP, max_pdf_chars // 4)
+            appendix_full = pdf_text[appendix_abs:].rstrip()
+            appendix_kept = appendix_full[:effective_cap]
+            appendix_truncated = len(appendix_full) - len(appendix_kept)
+            refs_block_chars = appendix_abs - len(stripped)
+    seam = (
+        _appendix_seam(refs_block_chars, appendix_truncated)
+        if appendix_kept
+        else ""
+    )
+
     context = {
         "max_pdf_chars": max_pdf_chars,
         "original_pdf_chars": len(pdf_text),
         "post_reference_strip_chars": len(stripped),
-        "references_removed_chars": refs_removed,
+        "references_removed_chars": refs_block_chars,
+        "appendix_retained_chars": len(appendix_kept),
+        "appendix_truncated_chars": appendix_truncated,
         "fitted_pdf_chars": len(stripped),
         "sandwich_truncated": False,
         "sandwich_head_chars": 0,
@@ -434,6 +510,7 @@ def fit_pdf_text_for_audit(
         "sandwich_head_ratio": SANDWICH_HEAD_RATIO,
         "anchors_total": len(anchors) if anchors else 0,
         "anchors_in_head_tail": 0,
+        "anchors_in_retained_appendix": 0,
         "anchors_in_dropped_middle": 0,
         "anchors_in_stripped_refs": 0,
         "anchors_not_located": 0,
@@ -442,10 +519,15 @@ def fit_pdf_text_for_audit(
         "windows_dropped_over_budget": 0,
     }
 
-    if len(stripped) <= max_pdf_chars:
+    if len(stripped) + len(seam) + len(appendix_kept) <= max_pdf_chars:
+        if appendix_kept:
+            fitted = stripped + seam + appendix_kept
+            context["fitted_pdf_chars"] = len(fitted)
+            return fitted, context
         return stripped, context
 
-    available = max_pdf_chars - SANDWICH_SEPARATOR_RESERVE
+    body_budget = max_pdf_chars - len(seam) - len(appendix_kept)
+    available = body_budget - SANDWICH_SEPARATOR_RESERVE
     head_chars = int(available * SANDWICH_HEAD_RATIO)
     tail_chars = available - head_chars
     middle_dropped = len(stripped) - head_chars - tail_chars
@@ -466,6 +548,8 @@ def fit_pdf_text_for_audit(
     if anchors:
         head_ws, head_vb = normalize_ws(head), normalize_for_verbatim(head)
         tail_ws, tail_vb = normalize_ws(tail), normalize_for_verbatim(tail)
+        app_ws = normalize_ws(appendix_kept) if appendix_kept else ""
+        app_vb = normalize_for_verbatim(appendix_kept) if appendix_kept else ""
         # Overlap must exceed any anchor's raw span (raw span > normalized
         # length because hyphenation/whitespace artifacts collapse under
         # normalization); anchors are ≤ ~200 chars corpus-wide, and the
@@ -481,6 +565,11 @@ def fit_pdf_text_for_audit(
                 or q_vb in tail_vb
             ):
                 context["anchors_in_head_tail"] += 1
+                continue
+            if appendix_kept and (q_ws in app_ws or q_vb in app_vb):
+                # The retained appendix ships with the fitted text, so the
+                # anchor is already visible to the auditor — no splice needed.
+                context["anchors_in_retained_appendix"] += 1
                 continue
             # Scan the dropped middle first; fall back to the whole stripped
             # text (an anchor can straddle the head/middle or middle/tail cut,
@@ -499,13 +588,23 @@ def fit_pdf_text_for_audit(
             # occurrence may live in the stripped References/appendix tail
             # (AMJ appendices carry robustness results).
             if refs_removed:
+                # With an appendix retained, the removed region ends where
+                # the appendix begins — never splice from text the fitted
+                # output already carries.
+                region_end = (
+                    appendix_abs if appendix_abs is not None else len(pdf_text)
+                )
                 hit = _scan_region_for_anchor(
-                    q_ws, q_vb, pdf_text[len(stripped):], len(stripped), overlap
+                    q_ws,
+                    q_vb,
+                    pdf_text[len(stripped) : region_end],
+                    len(stripped),
+                    overlap,
                 )
                 if hit is not None:
                     context["anchors_in_stripped_refs"] += 1
                     lo = max(hit[0] - SPLICE_WINDOW_CHARS, len(stripped))
-                    hi = min(hit[1] + SPLICE_WINDOW_CHARS, len(pdf_text))
+                    hi = min(hit[1] + SPLICE_WINDOW_CHARS, region_end)
                     ref_windows.append((lo, hi))
                     continue
             context["anchors_not_located"] += 1
@@ -549,6 +648,9 @@ def fit_pdf_text_for_audit(
             "(evidence-anchor context) ...]\n\n"
         )
         parts.append(pdf_text[lo:hi])
+    if appendix_kept:
+        parts.append(seam)
+        parts.append(appendix_kept)
 
     fitted = "".join(parts)
     context["fitted_pdf_chars"] = len(fitted)
@@ -587,6 +689,12 @@ def build_auditor_prompt_and_context(
             parts.append(
                 f"References/bibliography section stripped "
                 f"({refs_removed:,} chars)"
+            )
+        if context.get("appendix_retained_chars"):
+            parts.append(
+                f"the paper's appendix IS included, retained at the very end "
+                f"of the text ({context['appendix_retained_chars']:,} chars) — "
+                f"check there before judging appendix-sourced claims"
             )
         if sandwich_middle_dropped > 0:
             parts.append(

@@ -257,6 +257,66 @@ def test_determinism_and_prompt_path_context_equality():
 # ---- runner ------------------------------------------------------------------------
 
 
+def test_appendix_retained_under_budget():
+    # Batches 09-10 (hersel, lauriano, xu-2022): appendix-sourced claims drew
+    # PARTIALs because the reference strip dropped the appendix. The fitter
+    # must now re-append it after the removed references block.
+    body = filler(10_000)
+    refs = filler(6_000, seed="r")
+    app = "SENTINEL appendix robustness content " + filler(1_000, seed="a")
+    text = body + "\nREFERENCES\n" + refs + "\nAPPENDIX A\n" + app
+    fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert "SENTINEL appendix robustness content" in fitted
+    assert "appendix retained below" in fitted
+    assert "r100 " not in fitted, "references block must still be stripped"
+    assert ctx["appendix_retained_chars"] > 0
+    assert 0 < ctx["references_removed_chars"] <= len(refs) + 40
+    assert ctx["sandwich_truncated"] is False
+
+
+def test_appendix_retained_over_budget():
+    body = filler(50_000)
+    refs = filler(4_000, seed="r")
+    app = "APPSENT robustness beta " + filler(2_000, seed="b")
+    text = body + "\nREFERENCES\n" + refs + "\nAPPENDIX B\n" + app
+    fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert ctx["sandwich_truncated"] is True
+    assert "APPSENT robustness beta" in fitted
+    assert "appendix retained below" in fitted
+    assert "[... middle of paper truncated" in fitted
+    assert len(fitted) <= MAX, "appendix retention must not blow the budget"
+    assert ctx["appendix_retained_chars"] > 0
+
+
+def test_table_a_marker_starts_appendix():
+    # AMJ appendices that are bare tables open with "TABLE A1", no APPENDIX
+    # heading (the lauriano case).
+    body = filler(12_000)
+    refs = filler(4_000, seed="r")
+    app = "TASENT tabled robustness " + filler(500, seed="t")
+    text = body + "\nREFERENCES\n" + refs + "\nTABLE A1  Robustness checks\n" + app
+    fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert "TASENT tabled robustness" in fitted
+    assert ctx["appendix_retained_chars"] > 0
+
+
+def test_prose_appendix_mention_not_marker():
+    # A reference-section prose line mentioning an appendix must not start
+    # retention: title-case "Appendix" requires an A-Z/0-9 designator.
+    body = filler(12_000)
+    text = (
+        body
+        + "\nREFERENCES\n"
+        + filler(2_000, seed="r")
+        + "\nAppendix materials are available from the authors upon request\n"
+        + filler(2_000, seed="s")
+    )
+    fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert ctx["appendix_retained_chars"] == 0
+    assert "materials are available" not in fitted
+    assert fitted == body.rstrip(), "no retention -> plain stripped body"
+
+
 def main() -> int:
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_")]
     failures = 0

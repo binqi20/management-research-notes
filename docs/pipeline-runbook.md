@@ -298,11 +298,26 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   "Robustness Model 1…" run). Search the raw text line-based on SHORT
   fragments *and* whitespace-tolerant on longer ones; a 0-hit search is never
   by itself proof a claim is absent from the paper.
+- **Appendix-trim PARTIALs are fixed in-tool (batches 09–10: hersel,
+  lauriano, xu-2022):** `audit_note.py` now strips only the references block
+  and RE-APPENDS the appendix (capped at 40K chars, seam-marked, announced in
+  the auditor preamble), so a note faithfully citing appendix-sourced details
+  no longer draws a PARTIAL from an auditor who never saw the appendix. A
+  corpus scan found 113 papers (~10%) carry a retainable appendix. For audit
+  reports produced before this change, or if a claim sits beyond the 40K cap
+  (3 papers corpus-wide), the acceptance path above applies: verify in the
+  RAW text, accept-and-document.
 - **Repair convergence bound:** source-verified factual errors are always
   fixed, regardless of how many rounds it takes (batch-02 preston needed
   three, each a distinct genuine error). But when a fresh auditor keeps
   surfacing new *subjective or wording* nuances on legacy fields after two
   rounds, accept-and-document rather than play whack-a-mole.
+- **Premise repairs touch sibling fields (batch-10 dwertmann):** when a
+  repair corrects a *premise* rather than a sentence (e.g., "single-country
+  sample ⇒ limited generalizability" where the paper argues the opposite),
+  check the adjacent prose fields for the same premise in the same pass — a
+  legacy misreading absorbed once tends to surface in both Limitations and
+  Future Research, and repairing only one costs an extra audit round.
 - Batch order: newest-first (69-1+68-6, then 68-5+68-4, … down to 58-1+58-2);
   the 27 v1 notes all sit in 69-1/68-6/68-5, so re-extraction clears in the
   first two batches (done as of batch 02 — batches 03+ are pure
