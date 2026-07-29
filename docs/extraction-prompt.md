@@ -212,7 +212,15 @@ moderator (e.g., "DV: CSR disclosure = CSRHub ESG rating; IV: board diversity =
 in the paper's own terms (fixed effects, instrumental variables, difference-in-
 differences, regression discontinuity, natural experiment, randomized experiment);
 if the design is associational, say so plainly — do not upgrade correlational
-language into causal language. For qualitative work, give the data corpus and how
+language into causal language. **Multi-study papers: keep per-study fidelity**,
+the same discipline Key Findings mandates — attribute each sample, site, and
+population to its own study and never merge distinct study populations into one
+description (backfill batch 09: one note called Study 1 "the only study testing
+all six hypotheses" when Study 4 tested them too; another folded a study's
+job-seeking mentees into other studies' "working professionals"). Take every
+count, N, and range from the table or passage that reports it for that specific
+analysis — adjacent tables often report different quantities (models vs.
+observations). For qualitative work, give the data corpus and how
 constructs were coded (e.g., "62 semi-structured interviews; open then axial coding
 into three second-order themes"). Required for every empirical-* type;
 `Not reported in paper` for conceptual / review / editorial / book-review.
