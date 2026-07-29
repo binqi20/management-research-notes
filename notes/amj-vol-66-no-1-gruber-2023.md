@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-66-no-1/pdfs/Gruber 2023 From the Editors—An Innova
 text_path: "library/AMJ/vol-66-no-1/text/Gruber 2023 From the Editors—An Innovative Journal during Transformational Times Embarking on the 23rd Editorial Term.txt"
 ingested_at: "2026-05-27"
 extraction_model: "claude-opus-4-7"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-29"
 
 paper_type: "editorial"
 keywords: ["transformational times", "editorial agenda", "sustainability", "DEI", "artificial intelligence", "methodological innovation"]
@@ -50,6 +52,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Strategic priority 1: Encourage management research that increases our understanding of transformational times (technological, societal, ecological change).
 - Strategic priority 2: Embrace new data sources and key methodological advances at AMJ (including AI, machine learning, natural language processing).
@@ -57,6 +62,12 @@ Not reported in paper
 - Structural changes: third deputy editor position added (micro, macro, qualitative); newly created panel of Consulting Methodological Experts; annual DEI award; expanded digital outreach.
 
 The editorial lays out a three-part agenda for AMJ's 23rd editorial term (2023-2025) under editor-in-chief Marc Gruber. It frames the contemporary context as transformational — driven by AI, hybrid work, sustainability imperatives, and DEI commitments — and positions AMJ to publish cornerstone studies on these emerging realities while preserving rigor. The piece also describes the editorial team's composition (22 members from eight countries, balanced micro/macro/qualitative, gender-balanced) and the revised manuscript workflow.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial argues that "transformational times" call for management scholars to revisit boundary conditions and causal mechanisms rather than anchor on past theories — citing George (2016) on the field's tendency to default to inherited frameworks. It positions AMJ as a venue where new seminal studies can recast existing theories and, where necessary, develop entirely new ones to explain rapidly evolving organizational realities (AI, sustainability transitions, DEI, hybrid work).

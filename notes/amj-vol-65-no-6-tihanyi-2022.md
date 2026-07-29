@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-65-no-6/pdfs/Tihanyi 2022 From the Editors—Publishi
 text_path: "library/AMJ/vol-65-no-6/text/Tihanyi 2022 From the Editors—Publishing Relevant and Trustworthy Empirical Research in AMJ The 22nd Editorial Term during the COVID-19 Pandemic.txt"
 ingested_at: "2026-06-24"
 extraction_model: "claude-opus-4-8"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-29"
 
 paper_type: "editorial"
 keywords: ["editorial term", "empirical research", "research relevance", "research credibility", "research transparency", "global and inclusive journal", "COVID-19 pandemic", "peer review"]
@@ -51,6 +53,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: The 22nd AMJ editorial team pursued two strategic priorities during its term — (1) increasing AMJ's relevance and credibility in publishing empirical research, and (2) positioning the journal as a global and inclusive outlet.
 - Editing and initiatives: Handled around 5,400 original submissions; averaged 55-day decision times and a 33% desk-reject rate; launched a Special Research Forum on societal conversations, an AMJ Impact Award, transparency-focused decision-letter language, and thematic/From-the-Editors essays.
@@ -59,6 +64,12 @@ Not reported in paper
 - COVID-19 service: Granted extensions, reassigned manuscripts to accommodate individuals' situations and shifting pandemic severity across countries, and moved meetings/workshops online while keeping issues on schedule.
 
 This is a retrospective From-the-Editors essay in which outgoing editor-in-chief Laszlo Tihanyi summarizes the initiatives of the 22nd AMJ editorial team, reviews its service record over three years, and thanks the team and supporters. The editorial frames the term's work around enhancing the relevance, credibility, and transparency of empirical management research while broadening AMJ's global reach and inclusiveness, all under the disruptive conditions of the COVID-19 pandemic that began shortly after the team took over in 2020.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 As a From-the-Editors essay rather than a theory paper, its contribution is to document and codify an editorial stance for AMJ on publishing relevant and trustworthy empirical management research. It records the 22nd team's two-pillar agenda — strengthening empirical relevance/credibility and making the journal more global and inclusive — and the concrete editorial mechanisms (data-familiarity confirmations, transparency language, preregistration encouragement, an Impact Award, diversity initiatives) that operationalize it, providing a reference point for the field's norms and for subsequent editorial teams.

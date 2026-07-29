@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-07-28"
-version: "0.42.0"
+date-released: "2026-07-29"
+version: "0.43.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,35 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.42.0
-  (2026-07-28) continues the v3 backfill with Academy of Management Journal
+  a published rubric) gates every note into the library. Version 0.43.0
+  (2026-07-29) continues the v3 backfill with Academy of Management Journal
+  volume 66 issue 1 and volume 65 issue 6 — 26 notes, all v2 augmentations and
+  the largest batch of the backfill so far. A backfill adds no papers, so the
+  record total is unchanged at 1,167; the version-tier census shifts to 61 v1,
+  861 v2, and 245 v3 notes. Each touched note passed a fresh full independent
+  nine-field rubric-v2 audit at 228/234 prose-field verdicts SUPPORTED with
+  zero UNSUPPORTED or CONTRADICTED, after thirteen evidence-based repairs
+  across eight notes in three repair rounds. Twelve of the thirteen fell on
+  legacy prose fields written before the v3 standard, and this is the first
+  batch in which both documented Mechanism Process failure classes appeared
+  together: three notes misstated what the paper predicted — a disconfirmed
+  conditionality narrated as theory (Dimotakis), an explicitly unhypothesized
+  claim presented as a prediction (Ong), and a downturn called partially borne
+  out that occurred in neither study (Xu) — while two misstated how a model is
+  wired (Chan's value-moderating practices, Dwertmann's causal reasoning and
+  motive moderation). One repair touched a new v3 field, where recruited-sample
+  demographics had been attached to post-exclusion analysed Ns across three
+  experiments (Kundro). A second round caught a generalizability caveat the
+  paper itself rejects, and a third round found the same premise had propagated
+  to an adjacent prose field — a new pattern, since repairing one field left
+  the other wrong. Six PARTIAL verdicts are accepted and documented rather than
+  edited, because editing accurate content to satisfy a verification artifact
+  would itself be a faithfulness failure: three rest on appendices the audit
+  tooling trims for context budget, one draws anchored components from a paper
+  that states no practical implications, and two are re-scorings of nuances
+  that two earlier independent audit rounds had noted and passed. This batch
+  ran on claude-opus-5. Earlier, version 0.42.0
+  (2026-07-28) continued the v3 backfill with Academy of Management Journal
   volume 66 issue 3 and issue 2 — 24 notes, all v2 augmentations. A backfill
   adds no papers, so the record total is unchanged at 1,167; the version-tier
   census shifts to 61 v1, 887 v2, and 219 v3 notes. Each touched note passed a
