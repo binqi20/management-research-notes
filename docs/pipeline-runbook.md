@@ -328,6 +328,19 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   notes are faithful and unchanged, so post-fix fresh audits should convert
   them to SUPPORTED and clear the public record). Until then: detector +
   accept-and-document, no cut-point edits.
+- **Model outages during dispatch (batch 12, API 529 storm):** subagent
+  waves can die at zero tokens while the parent session keeps working — a
+  capacity outage, not a concurrency problem. Never substitute a different
+  model for the specified M: extractor/auditor provenance is load-bearing,
+  and silently downgrading the faithfulness gate would weaken a published
+  guarantee (batch-08 precedent: model divergence is stop-and-ask). Back
+  off and walk the wave ladder (6 → 5 → 3 → serial), check
+  status.claude.com to distinguish capacity from concurrency, and if the
+  outage is sustained, stop and report — the audit phase is read-only
+  until layer2 assembly, so an interrupted batch resumes later with zero
+  rework. Dispatch scripts must fail FAST on a dead wave: `parallel()`
+  resolves dead agents to null and never rejects, so check for an all-null
+  wave and abort instead of marching through the remaining waves.
 - **Repair convergence bound:** source-verified factual errors are always
   fixed, regardless of how many rounds it takes (batch-02 preston needed
   three, each a distinct genuine error). But when a fresh auditor keeps
