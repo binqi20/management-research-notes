@@ -321,7 +321,13 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   the RAW text with both search modes; faithful-in-stripped-region →
   accepted PARTIAL (ferns/pamphile precedent). The cut-point logic itself is
   deliberately NOT fixed mid-backfill — it is global regex behavior under
-  the corpus-sweep policy, queued for a dedicated scoped session.
+  the corpus-sweep policy, and by user decision (2026-07-30) the fix is
+  scheduled AFTER the AMJ backfill completes (all 67 issues at v3), in a
+  dedicated scoped session alongside the cleanup pass. That session should
+  also re-audit the strip-loss accepted PARTIALs accumulated by then (the
+  notes are faithful and unchanged, so post-fix fresh audits should convert
+  them to SUPPORTED and clear the public record). Until then: detector +
+  accept-and-document, no cut-point edits.
 - **Repair convergence bound:** source-verified factual errors are always
   fixed, regardless of how many rounds it takes (batch-02 preston needed
   three, each a distinct genuine error). But when a fresh auditor keeps
