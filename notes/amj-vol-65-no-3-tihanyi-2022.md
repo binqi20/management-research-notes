@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-65-no-3/pdfs/Tihanyi 2022 From the Editors—Joining 
 text_path: "library/AMJ/vol-65-no-3/text/Tihanyi 2022 From the Editors—Joining Societal Conversations on Management and Organizations.txt"
 ingested_at: "2026-06-23"
 extraction_model: "claude-opus-4-8"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-30"
 
 paper_type: "editorial"
 keywords: ["societal conversations", "Special Research Forum", "relevance", "theory-driven research", "business schools", "social issues", "impact"]
@@ -53,6 +55,9 @@ Not reported in paper
 **Research Question**
 How can AMJ and management scholars more fully join ongoing conversations in broader society about management and organizations—publishing high-quality empirical research on socially important, often-neglected problems—without abandoning the journal's emphasis on theory-driven contributions?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Management departments are well-positioned to connect business schools to social issues because the discipline is problem- and practice-driven and draws on diverse disciplinary foundations; a Special Research Forum (SRF) can channel rigorous empirical work toward pressing societal debates.
 - Diagnosis: Societally relevant topics (socioeconomic status and class, diversity and inclusion, community impact, cross-border workforce movement, national conflicts) have historically been hard to publish in leading management journals due to an emphasis on novelty and theory-driven contributions.
@@ -60,6 +65,12 @@ How can AMJ and management scholars more fully join ongoing conversations in bro
 - Process / mechanism: A call for papers (issued end of 2019, deadline November 30, 2020) yielded 144 submissions; 129 were fully reviewed by the editorial board and team (with 172 board members volunteering during the Covid-19 pandemic), resulting in 12 articles introduced by their assigned editors.
 
 This editorial advances the position that AMJ can increase its relevance and credibility by inviting authors to join societal conversations while preserving rigorous, theory-driven empirical standards. The editors reason that dominant management theories born decades ago increasingly struggle to explain contemporary social complexity, so new theory developed around socially important problems can enrich cross-disciplinary conversations and "move societies forward." The SRF operationalizes this by showcasing empirical studies on neglected, high-stakes topics and having assigned editors narrate each article's contribution and societal relevance.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The piece is an editorial statement of position rather than a theory-building contribution. Its contribution is programmatic: it argues that joining societal conversations and developing or testing theory are complementary, not competing, goals for AMJ, and it reframes the journal's mission to legitimize rigorous empirical research on socially significant, previously underrepresented problems—while reaffirming that phenomenon-driven work should still advance theory.

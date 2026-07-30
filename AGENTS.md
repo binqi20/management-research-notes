@@ -142,40 +142,38 @@ audit**:
 
 **Current main-branch audit state (2026-07-30):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 11 upgraded 25 notes (AMJ vol-65-no-5 + vol-65-no-4, all v2
+batch 12 upgraded 26 notes (AMJ vol-65-no-3 + vol-65-no-2, all v2
 augmentations) to v3, each passing a fresh full 9-field rubric-v2 audit at
-218/225 prose-field verdicts SUPPORTED after fifteen evidence-based repairs
-across thirteen notes in two repair rounds. The upgrade phase was the cleanest
-of the backfill so far — all 25 augmentations passed the validator and the
-diff-guard on the first attempt, with no self-fix cycles. Thirteen of the
-fifteen repairs fell on legacy prose fields written before the v3 standard, and
-both documented Mechanism Process failure classes appeared again: Matusik
-misstated what the paper *predicted* (H5 predicted the coordination gap would
-increase; the note narrated the disconfirmed "persists" result as the theory),
-while Solomon and Zhang misstated how a model is *wired* (a self-regulatory
-cascade said not to fire when only its final step is blocked; a moderation
-claimed "supported across three studies" when Study 1 never measured the
-moderator, alongside a cross-lagged design said to rule out reverse causation
-that itself reports a significant reverse path). Raffaelli transposed two
-names. **Scope drift on Practical Implication was the dominant legacy pattern
-at four instances** (Koppman, Shepherd, Williams, Mannucci), each addressing
-prescriptions to audiences the paper never names. Two repairs touched new v3
-fields, with unrelated causes: Eleazar's Data & Measures misattributed three
-control variables' data source, and Doyle's Key Findings carried a scope word
-falsified by the paper's own footnote. **Seven `PARTIAL` verdicts survive by
-design and are documented rather than edited:** three are verification
-artifacts caused by a newly identified truncation class in which a two-column
-REFERENCES heading sits atop column 2 while column 1 still carries Discussion
-prose, so the strip discards the interleaved tail (Ferns' Limitations and
-Future Research, Pamphile's Future Research — all three verify verbatim in the
-raw text); Lazar's Data & Measures faithfully reproduces sample statements
-whose internal discrepancy is the paper's own; and the remaining three are
-framing nuances on legacy fields, two of them re-scorings of fields a prior
-independent round passed — all accepted under the repair convergence bound.
+232/234 prose-field verdicts SUPPORTED after nine evidence-based repairs
+across seven notes in three repair rounds. The upgrade phase matched batch 11's
+clean run — all 26 augmentations passed the validator and the diff-guard on the
+first attempt, with no self-fix cycles — and vol-65-no-2 was the cleanest issue
+of the backfill to date at 116/117 SUPPORTED with one flagged field. Seven of
+the nine repairs fell on legacy prose fields written before the v3 standard.
+Two documented failure classes recurred, both as multi-study support-pattern
+overstatement: Tewfik's Mechanism Process said an indirect effect "held across
+all four studies" where Study 1 "did not measure the hypothesized mediator",
+and Semadeni's said GEE models "support all six hypotheses" where the paper's
+Results describe Hypothesis 5 as receiving "partial support". Gibson inverted
+the batch-10 premise class, listing its Indigenous Australian setting as a
+limitation where the paper's Transferability section argues broad applicability;
+Hein attributed a "constrains generalizability" framing to a paper containing no
+form of the word; Lucas extrapolated a measurement call; and Tewfik's
+Limitations needed a third round for an over-attribution the paper confines to
+"ultimate interpersonal evaluations". Two repairs touched new v3 fields, with
+unrelated causes: Fang's Data & Measures called a longitudinal cohort study
+cross-sectional, and Martin's sourced pretest chi-squares to a within-study
+check. **Two `PARTIAL` verdicts survive by design and are documented rather
+than edited:** both are on Fang and both are the interleaved-references
+truncation class identified in batch 11 — its REFERENCES heading sits atop
+column 2 at 77.9% while column 1 still carries Limitations and Future Research
+prose, so the strip discarded 22% of the paper, and every flagged claim
+verifies verbatim in the raw text. Batch 11's signal held: wherever a legacy
+field and a new v3 section covered the same fact, the new section was right.
 The batch left the record total unchanged. It ran on `claude-opus-5`, as
-batches 08 through 10 did (batches 01–07 recorded `claude-opus-4-8`), so its
+batches 08 through 11 did (batches 01–07 recorded `claude-opus-4-8`), so its
 notes carry `augmented_model: "claude-opus-5"`. The corpus contains 61 legacy v1
-notes, 836 v2 notes, and 270 v3 notes with evidence anchors; new notes are
+notes, 810 v2 notes, and 296 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -198,7 +196,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-07-28.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-07-30.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -209,7 +207,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.44.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.45.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

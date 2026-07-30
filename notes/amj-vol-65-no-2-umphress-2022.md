@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-65-no-2/pdfs/Umphress 2022 From the Editors—Insight
 text_path: "library/AMJ/vol-65-no-2/text/Umphress 2022 From the Editors—Insights on How We Try to Show Empathy, Respect, and Inclusion in AMJ.txt"
 ingested_at: "2026-06-23"
 extraction_model: "claude-opus-4-8"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-30"
 
 paper_type: "editorial"
 keywords: ["empathy", "respect", "inclusion", "belongingness", "uniqueness", "peer review", "sample preference", "language barriers"]
@@ -54,6 +56,9 @@ Not reported in paper
 **Research Question**
 How can the AMJ community—reviewers, associate editors, and authors—demonstrate empathy, respect, and inclusion throughout the manuscript review process in order to maintain and develop an open, inclusive academic community, especially in the wake of disruptive worldwide events?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Feeling included rests on satisfying both belongingness and uniqueness; treating colleagues with empathy and respect during review interactions helps establish an inclusive environment and can enhance the inclusion of ideas and scholars.
 - Key constructs: Empathy (other-oriented feelings congruent with another's perceived welfare); respect (regard for the feelings, wishes, and unique qualities of others); inclusion (balancing belongingness and uniqueness).
@@ -62,6 +67,12 @@ How can the AMJ community—reviewers, associate editors, and authors—demonstr
 - Author considerations: Respecting human-research-participant rights and institutional review processes; referring to prior scholarship respectfully; granting reviewers and editors the benefit of the doubt.
 
 The editors argue that small, everyday acts of empathy and respect—not only large-scale structural change—can enhance inclusion within the scholarly community. Drawing on the belongingness/uniqueness account of inclusion, they reason that socially supported and respected scholars reciprocate by treating others with empathy, which builds trust, affirms unique strengths, and creates a more open academic community. They apply this logic concretely to the reviewer, associate-editor, and author roles, surfacing recurring inclusion tensions (sample bias, language, differential resources, decision framing) and recommending empathetic, developmental practices to mitigate them.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The essay is not a theory-building piece; it stakes out an editorial position for AMJ, translating research on belongingness, uniqueness, empathy, respect, and organizational justice into a set of inclusion-oriented norms for the peer-review process. Its contribution is normative and practical: it makes visible the often-implicit ways empathy, respect, and inclusion (or their absence) operate across review roles and frames small interpersonal acts as a complement to larger structural reform in building an inclusive scholarly community.
