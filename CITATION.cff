@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-07-29"
-version: "0.43.0"
+date-released: "2026-07-30"
+version: "0.44.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,34 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.43.0
-  (2026-07-29) continues the v3 backfill with Academy of Management Journal
+  a published rubric) gates every note into the library. Version 0.44.0
+  (2026-07-30) continues the v3 backfill with Academy of Management Journal
+  volume 65 issues 5 and 4 — 25 notes, all v2 augmentations. A backfill adds
+  no papers, so the record total is unchanged at 1,167; the version-tier
+  census shifts to 61 v1, 836 v2, and 270 v3 notes. The upgrade phase was the
+  cleanest of the backfill so far, with all 25 augmentations passing the
+  validator and the mechanical diff-guard on the first attempt and no self-fix
+  cycles. Each touched note passed a fresh full independent nine-field
+  rubric-v2 audit at 218/225 prose-field verdicts SUPPORTED with zero
+  UNSUPPORTED or CONTRADICTED, after fifteen evidence-based repairs across
+  thirteen notes in two repair rounds. Thirteen of the fifteen fell on legacy
+  prose fields written before the v3 standard. Both documented Mechanism
+  Process failure classes appeared again — one note narrated a disconfirmed
+  hypothesis as the paper's prediction (Matusik), and two misstated how a
+  model is wired (Solomon, Zhang) — while scope drift on Practical
+  Implication was the dominant legacy pattern at four instances, each
+  addressing prescriptions to audiences the paper never names. Two repairs
+  touched new v3 fields, with unrelated causes. Seven residual PARTIAL
+  verdicts are documented rather than edited: three are verification
+  artifacts from a newly identified truncation class in which a two-column
+  REFERENCES heading sits above continuing Discussion prose, so the strip
+  discards the interleaved tail; one reproduces a paper's own internal
+  discrepancy faithfully; and three are framing nuances on legacy fields
+  accepted under the repair convergence bound. In every case where a legacy
+  field and a newly written v3 section covered the same fact, the new section
+  was correct and the legacy field wrong, so the backfill is also functioning
+  as a corpus audit of pre-v3 prose. Version 0.43.0
+  (2026-07-29) continued the v3 backfill with Academy of Management Journal
   volume 66 issue 1 and volume 65 issue 6 — 26 notes, all v2 augmentations and
   the largest batch of the backfill so far. A backfill adds no papers, so the
   record total is unchanged at 1,167; the version-tier census shifts to 61 v1,

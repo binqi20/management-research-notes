@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-65-no-5/pdfs/Howard-Grenville 2022 From the Editors�
 text_path: "library/AMJ/vol-65-no-5/text/Howard-Grenville 2022 From the Editors—That’s Important, Interesting, and Generative Winners of the AMJ 2021 Best Paper Award and 2022 Research Impact Award.txt"
 ingested_at: "2026-06-24"
 extraction_model: "claude-opus-4-8"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-30"
 
 paper_type: "editorial"
 keywords: ["important research", "interesting research", "generative research", "grand challenges", "societal relevance"]
@@ -52,6 +54,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 
 - Core argument: Important and interesting research need not be trade-offs; problem- or phenomenon-driven curiosity can motivate and sustain research that is both societally relevant and theoretically rigorous.
@@ -61,6 +66,12 @@ Not reported in paper
 - Generativity: Publication is the beginning, not the end, of a generative, cocreated line of inquiry sustained by authors, audiences, editors, and reviewers.
 
 The editorial distills, in the authors' own words, how curiosity about important yet understudied phenomena, combined with global data and methodological transparency, can produce research that is generative of further impact and study.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 As a From-the-Editors essay, the piece does not advance a formal theory but articulates a programmatic stance for AMJ: that "phenomenon-driven, theoretically novel, rigorous, and societally important" research can connect management to grand challenges and societal conversations without sacrificing theoretical and empirical rigor.
