@@ -317,6 +317,41 @@ def test_prose_appendix_mention_not_marker():
     assert fitted == body.rstrip(), "no retention -> plain stripped body"
 
 
+def test_suspicious_strip_flagged():
+    # Batch 11 (ferns/pamphile): a real REFERENCES heading atop column 2 can
+    # leave column-1 Discussion prose inside the stripped region. The fitter
+    # can't yet fix the cut, but it must flag a strip that removes an
+    # unusually large share of the paper.
+    body = filler(36_000)
+    refs = filler(24_000, seed="r")  # 40% of the text — far past the threshold
+    text = body + "\nREFERENCES\n" + refs
+    _fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert ctx["references_strip_suspicious"] is True
+    assert ctx["references_strip_ratio"] > 0.35
+
+
+def test_normal_strip_not_suspicious():
+    body = filler(50_000)
+    refs = filler(5_000, seed="r")  # ~9% — a normal reference list
+    text = body + "\nREFERENCES\n" + refs
+    _fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert ctx["references_strip_suspicious"] is False
+    assert 0 < ctx["references_strip_ratio"] < 0.15
+
+
+def test_suspicious_strip_warns_auditor():
+    body = filler(36_000)
+    refs = filler(24_000, seed="r")
+    text = body + "\nREFERENCES\n" + refs
+    prompt, ctx = build_auditor_prompt_and_context(
+        "test-paper", "empirical-quantitative", "note body", text, "rubric text", MAX
+    )
+    assert ctx["references_strip_suspicious"] is True
+    assert "suspected strip loss" in prompt, (
+        "auditor preamble must carry the suspicious-strip caution"
+    )
+
+
 def main() -> int:
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_")]
     failures = 0

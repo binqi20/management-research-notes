@@ -340,6 +340,19 @@ def _strip_references(text: str) -> tuple[str, int]:
 # assembled downstream, never inside the stripper.
 APPENDIX_RETAIN_CAP = 40_000
 
+# Suspicious-strip detector (batch 11: ferns lost 25% of the paper, pamphile
+# 18.5%). In two-column output a REAL "REFERENCES" heading can sit atop
+# column 2 while column 1 still carries Discussion prose — the strip then
+# discards interleaved body text. The cut-point fix is deferred (global regex
+# logic requires a corpus-wide sweep per project policy); until then any
+# strip that removes more than this share of the paper is flagged in
+# audit_context and called out in the auditor preamble, so a claim missing
+# from the fitted text is treated as suspected strip loss, not fabrication.
+# Threshold 0.15: the two known victims measured 25% (ferns) and 18.5%
+# (pamphile), so 0.20 would miss the second; corpus median is 6.5% and the
+# false-positive cost is one caution sentence in the preamble.
+SUSPICIOUS_STRIP_RATIO = 0.15
+
 _APPENDIX_PATTERNS = [
     # Line-initial, matching the REFERENCES heading conventions above.
     # Title-case "Appendix" requires an A–Z/0–9 designator so prose like
@@ -500,6 +513,10 @@ def fit_pdf_text_for_audit(
         "original_pdf_chars": len(pdf_text),
         "post_reference_strip_chars": len(stripped),
         "references_removed_chars": refs_block_chars,
+        "references_strip_ratio": round(refs_block_chars / max(len(pdf_text), 1), 4),
+        "references_strip_suspicious": (
+            refs_block_chars / max(len(pdf_text), 1) > SUSPICIOUS_STRIP_RATIO
+        ),
         "appendix_retained_chars": len(appendix_kept),
         "appendix_truncated_chars": appendix_truncated,
         "fitted_pdf_chars": len(stripped),
@@ -695,6 +712,17 @@ def build_auditor_prompt_and_context(
                 f"the paper's appendix IS included, retained at the very end "
                 f"of the text ({context['appendix_retained_chars']:,} chars) — "
                 f"check there before judging appendix-sourced claims"
+            )
+        if context.get("references_strip_suspicious"):
+            parts.append(
+                f"CAUTION: the reference strip removed an unusually large "
+                f"share of this paper ({refs_removed:,} chars, "
+                f"{context.get('references_strip_ratio', 0):.0%}). Two-column "
+                f"extraction can interleave body prose into the references "
+                f"region, so Discussion/Limitations/Future-Research content "
+                f"may sit in the removed tail. If a note claim cannot be "
+                f"found, score it PARTIAL and state suspected strip loss — "
+                f"never treat absence alone as fabrication"
             )
         if sandwich_middle_dropped > 0:
             parts.append(

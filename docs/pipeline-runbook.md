@@ -307,6 +307,21 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   reports produced before this change, or if a claim sits beyond the 40K cap
   (3 papers corpus-wide), the acceptance path above applies: verify in the
   RAW text, accept-and-document.
+- **Interleaved-references truncation (batch 11: ferns 25%, pamphile 18.5%
+  of paper lost — class still OPEN):** in two-column output a *real*
+  REFERENCES heading can sit atop column 2 while column 1 still carries
+  Discussion prose, so the strip discards interleaved body text and faithful
+  claims in that region draw PARTIALs. The fitter now records
+  `references_strip_ratio` and sets `references_strip_suspicious` above 15%
+  (calibrated: the known victims measured 25% and 18.5%; ~25% of the corpus
+  flags, mostly legitimate long bibliographies — the flag is a caution, not
+  a diagnosis), and the auditor preamble on flagged papers warns to score an
+  unfindable claim as PARTIAL with suspected strip loss, never as
+  fabrication. Parent handling: verify truncation-shaped PARTIALs against
+  the RAW text with both search modes; faithful-in-stripped-region →
+  accepted PARTIAL (ferns/pamphile precedent). The cut-point logic itself is
+  deliberately NOT fixed mid-backfill — it is global regex behavior under
+  the corpus-sweep policy, queued for a dedicated scoped session.
 - **Repair convergence bound:** source-verified factual errors are always
   fixed, regardless of how many rounds it takes (batch-02 preston needed
   three, each a distinct genuine error). But when a fresh auditor keeps
