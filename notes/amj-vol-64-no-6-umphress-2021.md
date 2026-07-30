@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-64-no-6/pdfs/Umphress 2021 From the Editors—Publish
 text_path: "library/AMJ/vol-64-no-6/text/Umphress 2021 From the Editors—Publishing Impactful Research in AMJ Winners of the 2020 and 2021 Impact Awards.txt"
 ingested_at: "2026-06-26"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-30"
 
 paper_type: "editorial"
 keywords: ["impactful research", "practical impact", "theoretical contribution", "Impact Award", "qualitative methods", "overlooked people and organizations"]
@@ -53,6 +55,9 @@ Not reported in paper
 **Research Question**
 The editorial asks what makes management research important beyond meeting standards for theoretical contribution and methodological rigor. It focuses on how AMJ authors can produce work that changes management practice in ways that better organizations and society.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core premise: Important research should combine significant theoretical contribution with practical value for organizations and society.
 - Editorial device: AMJ's Impact Award highlights articles that exemplify the harmony of theoretical and practical contribution.
@@ -61,6 +66,12 @@ The editorial asks what makes management research important beyond meeting stand
 - Lesson 2: Authors should approach, rather than avoid, overlooked and underrepresented people and organizations.
 
 The editorial's process logic is developmental rather than causal. It argues that practical impact is more likely when research is grounded in societally important phenomena, engages the people affected by those phenomena, and brings overlooked experiences into management theory and research. Qualitative inquiry is presented as especially useful for vividly depicting lived experience, but the editorial does not claim that only qualitative research can be impactful.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new formal theory. Its contribution is to clarify AMJ's understanding of impactful research as work in which theoretical and practical contributions reinforce one another, rather than treating theory novelty and societal usefulness as competing goals. It also positions attention to marginalized or overlooked workers as a route to making management theory more relevant to the full range of work experiences.

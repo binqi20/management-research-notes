@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-65-no-1/pdfs/Cowen 2022 Applying Coleman’s Boat in 
 text_path: "library/AMJ/vol-65-no-1/text/Cowen 2022 Applying Coleman’s Boat in Management Research Opportunities and Challenges in Bridging Macro and Micro Theory.txt"
 ingested_at: "2026-06-23"
 extraction_model: "claude-opus-4-8"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-30"
 
 paper_type: "editorial"
 keywords: ["Coleman’s boat", "macro–micro bridging", "microfoundations", "situational mechanisms", "transformational mechanisms", "aggregation", "multilevel theory"]
@@ -54,6 +56,9 @@ Not reported in paper
 **Research Question**
 What recurrent theoretical challenges prevent management researchers from successfully bridging the macro and micro domains, and how can Coleman's (1990) "boat" framework help authors specify the situational, action-formation, and transformational mechanisms that connect levels of analysis?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Coleman's boat organizes macro–micro linkages into four arrows — macro-level associations (Arrow 4), situational mechanisms (Arrow 1, macro-to-micro), action-formation mechanisms (Arrow 2, within micro), and transformational mechanisms (Arrow 3, micro-to-macro) — and sound cross-level theory must engage the situational and transformational arrows rather than rely on multilevel methods alone.
 - Pitfall 1 — Multilevel methods versus multilevel theory: using a mix of macro and micro variables (or clustered errors/fixed effects) as the only "bridge" between levels without theorizing why the methods are needed.
@@ -62,6 +67,12 @@ What recurrent theoretical challenges prevent management researchers from succes
 - Pitfall 4 — Neglect of aggregation mechanisms: failing to specify the micro-to-macro aggregation logic (Arrow 3), despite equifinality and the non-additive nature of how individual behavior "sums up" to macro outcomes.
 
 The essay's central process claim is that empirically combining macro and micro variables is insufficient: authors must theoretically articulate the situational mechanisms by which macro context shapes individual affect, behavior, choices, and cognition, and the transformational/aggregation mechanisms by which micro-level dynamics produce macro-level outcomes. Using Coleman's boat as an organizing device, the editors argue that explicating these mechanisms — and treating aggregation as an integral, equifinality-aware part of theorizing — is what turns boundary-spanning empirics into robust, integrated cross-level theory.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The essay extends the use of Coleman's (1990) boat beyond merely motivating microfoundations research, showing it can guide bidirectional bridging (using macro perspectives to contextualize micro processes, and modeling how micro phenomena aggregate to macro outcomes) and can diagnose the specific theoretical elements — situational and transformational mechanisms — needed to connect levels. It synthesizes recurring cross-level pitfalls editors observe at AMJ into an actionable framework for building integrated macro–micro theory.

@@ -10,7 +10,7 @@ repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-07-30"
-version: "0.45.0"
+version: "0.46.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,37 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.45.0
+  a published rubric) gates every note into the library. Version 0.46.0
   (2026-07-30) continues the v3 backfill with Academy of Management Journal
+  volume 65 issue 1 and volume 64 issue 6 — 26 notes, all v2 augmentations.
+  A backfill adds no papers, so the record total is unchanged at 1,167; the
+  version-tier census shifts to 61 v1, 784 v2, and 322 v3 notes. The upgrade
+  phase was the third consecutive clean one, with all 26 augmentations passing
+  the validator and the mechanical diff-guard on the first attempt and no
+  self-fix cycles, and each touched note passed a fresh full independent
+  nine-field rubric-v2 audit at 229/234 prose-field verdicts SUPPORTED with
+  zero UNSUPPORTED or CONTRADICTED, after twenty-one evidence-based repairs
+  across sixteen notes in three repair rounds — the heaviest repair load of the
+  backfill to date. Fifteen of the twenty-one repairs fell on legacy prose
+  fields written before the v3 standard, and practical-implication scope drift
+  was the dominant class with six instances, three of them on papers whose text
+  contains no practical-implications section at all and none of the audiences
+  the notes addressed. The multi-study support-pattern class recurred for a
+  third consecutive batch, and one note inverted a premise outright, resting
+  causal inference on an instrumental-variable model the paper concludes is
+  unnecessary. Six repairs touched new v3 fields, five of them Data & Measures
+  with five distinct causes, none a repeated defect. Five residual PARTIAL
+  verdicts are documented rather than edited: two are the interleaved-references
+  truncation class, in which a two-column REFERENCES heading sits above
+  continuing Future Research prose so the strip discards it and the flagged
+  claims verify verbatim in the raw text; two rest on an auditor locality error
+  and a framing nuance whose content the auditor conceded is true; and one sits
+  atop a self-contradictory figure description, where the note follows the
+  paper's five separate statements of the effect's direction rather than the
+  ambiguous caption. The backfill continued to function as a corpus audit of
+  pre-v3 prose: in every case where a legacy field and a newly written v3
+  section covered the same fact, the new section was right. Version 0.45.0
+  (2026-07-30) continued the v3 backfill with Academy of Management Journal
   volume 65 issues 3 and 2 — 26 notes, all v2 augmentations. A backfill adds
   no papers, so the record total is unchanged at 1,167; the version-tier
   census shifts to 61 v1, 810 v2, and 296 v3 notes. All 26 augmentations
@@ -417,7 +446,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.45.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.46.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

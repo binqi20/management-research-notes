@@ -549,6 +549,60 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.46.0 v3 backfill batch 13 (2026-07-30, 1,167 notes):**
+  Upgrades **AMJ volume 65, issue 1 and volume 64, issue 6, 26 notes total** to the
+  v3 schema — all v2 augmentations. The **record total is unchanged at 1,167**;
+  the version-tier census shifts to 61 v1, 784 v2, 322 v3. The upgrade phase was
+  the third consecutive clean one: all 26 augmentations passed `validate_note.py`
+  and the `verify_augmentation.py` diff-guard on the first attempt, with no
+  self-fix cycles. Each touched note then passed a fresh full independent 9-field
+  rubric-v2 audit: **229 / 234 prose-field verdicts `SUPPORTED`**, 5 `PARTIAL`,
+  0 `UNSUPPORTED`, 0 `CONTRADICTED` (all 26 notes overall pass), after
+  twenty-one evidence-based repairs across sixteen notes in three repair rounds —
+  the heaviest repair load of the backfill to date. Fifteen of the twenty-one
+  repairs fall on legacy prose fields written before the v3 standard.
+  Practical-implication scope drift was the dominant legacy class, with six
+  instances, three of them on papers that have no practical-implications section
+  at all: Lee prescribed that "executives and directors should treat CSR-oriented
+  unrest as strongly informative" for a paper in which the phrase "practical
+  implication" never appears, Guo advised executives and investor-relations teams
+  for a paper that names IR teams only as the authors of the script, and Yu
+  addressed "managers and policymakers" and "alliance partners" where neither
+  phrase occurs. Post re-attributed to CEOs and boards an instruction the paper
+  gives to "female executives invited to join an all-male TMT"; Baba addressed
+  "governments and other central actors" where the paper's three crucial points
+  address "peripheral actors such as the Crees"; and Wang credited professional
+  associations with a broadening of blame the paper attributes to the government.
+  The multi-study support-pattern class recurred for the third batch running, in
+  Burgess's Mechanism Process ("converge on these linkages" for a design in which
+  only Study 1 tested all six hypotheses), and Lee's Limitations inverted a
+  premise outright, claiming causal inference rested on 2SLS where the paper
+  concludes its tests make "the 2SLS regression unnecessary". Six repairs touched
+  new v3 fields, five of them Data & Measures with five distinct causes —
+  Dushnitsky mis-explained a sample-size drop that Table 3 attributes to an
+  interaction rather than a control present in all six models, Post reversed two
+  dictionary credits across a column break under a "respectively", Vuori
+  mislabelled Table 1's interview counts as informant counts, Mikolon added an
+  unstated temporal-separation inference, and Schaubroeck overlooked the paper's
+  explicit "Except for ..." clause on variable overlap. **Five residual
+  `PARTIAL`s are accepted and documented rather than edited.** Two are Guo's, and
+  are the interleaved-references truncation class: its REFERENCES heading sits
+  atop column 2 at line 1357 while column 1 still runs Future Research prose,
+  so the strip discarded 16.8% of the paper, and both flagged claims — the
+  data-availability constraint and the verbal/nonverbal delivery-attribute list —
+  verify verbatim in the raw text. Two are Wang's, one a framing nuance whose
+  content the auditor conceded is true, the other an auditor locality error: the
+  paper does discuss "the accounting profession in the U.S. and the U.K." in the
+  same future-research thread the note compresses. The fifth is Dushnitsky's Key
+  Findings, where the paper's own Figure 3B description contradicts itself and
+  the note follows the paper's five separate statements that the effect is
+  stronger for younger startups. Batch 11's signal held for the third consecutive
+  batch and more strongly: in every case where a legacy field and a newly written
+  v3 section covered the same fact — Burgess, Kuhnel, Frey and Lee — the new
+  section was right and the legacy field wrong. `library.bib` regenerated
+  byte-identical (the all-augmentation signature — only SQLite and CSV changed).
+  This batch ran on `claude-opus-5`, as batches 08 through 12 did.
+
 - **v0.45.0 v3 backfill batch 12 (2026-07-30, 1,167 notes):**
   Upgrades **AMJ volume 65, issue 3 and issue 2, 26 notes total** to the v3
   schema — all v2 augmentations. The **record total is unchanged at 1,167**;
@@ -977,7 +1031,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 810 v2 notes, and 296 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 784 v2 notes, and 322 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -1110,7 +1164,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.45.0},
+  version      = {0.46.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

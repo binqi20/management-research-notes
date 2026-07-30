@@ -142,38 +142,43 @@ audit**:
 
 **Current main-branch audit state (2026-07-30):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 12 upgraded 26 notes (AMJ vol-65-no-3 + vol-65-no-2, all v2
+batch 13 upgraded 26 notes (AMJ vol-65-no-1 + vol-64-no-6, all v2
 augmentations) to v3, each passing a fresh full 9-field rubric-v2 audit at
-232/234 prose-field verdicts SUPPORTED after nine evidence-based repairs
-across seven notes in three repair rounds. The upgrade phase matched batch 11's
-clean run — all 26 augmentations passed the validator and the diff-guard on the
-first attempt, with no self-fix cycles — and vol-65-no-2 was the cleanest issue
-of the backfill to date at 116/117 SUPPORTED with one flagged field. Seven of
-the nine repairs fell on legacy prose fields written before the v3 standard.
-Two documented failure classes recurred, both as multi-study support-pattern
-overstatement: Tewfik's Mechanism Process said an indirect effect "held across
-all four studies" where Study 1 "did not measure the hypothesized mediator",
-and Semadeni's said GEE models "support all six hypotheses" where the paper's
-Results describe Hypothesis 5 as receiving "partial support". Gibson inverted
-the batch-10 premise class, listing its Indigenous Australian setting as a
-limitation where the paper's Transferability section argues broad applicability;
-Hein attributed a "constrains generalizability" framing to a paper containing no
-form of the word; Lucas extrapolated a measurement call; and Tewfik's
-Limitations needed a third round for an over-attribution the paper confines to
-"ultimate interpersonal evaluations". Two repairs touched new v3 fields, with
-unrelated causes: Fang's Data & Measures called a longitudinal cohort study
-cross-sectional, and Martin's sourced pretest chi-squares to a within-study
-check. **Two `PARTIAL` verdicts survive by design and are documented rather
-than edited:** both are on Fang and both are the interleaved-references
-truncation class identified in batch 11 — its REFERENCES heading sits atop
-column 2 at 77.9% while column 1 still carries Limitations and Future Research
-prose, so the strip discarded 22% of the paper, and every flagged claim
-verifies verbatim in the raw text. Batch 11's signal held: wherever a legacy
-field and a new v3 section covered the same fact, the new section was right.
-The batch left the record total unchanged. It ran on `claude-opus-5`, as
-batches 08 through 11 did (batches 01–07 recorded `claude-opus-4-8`), so its
+229/234 prose-field verdicts SUPPORTED after twenty-one evidence-based repairs
+across sixteen notes in three repair rounds — the heaviest repair load of the
+backfill to date. The upgrade phase was the third consecutive clean one: all 26
+augmentations passed the validator and the diff-guard on the first attempt, with
+no self-fix cycles. Fifteen of the twenty-one repairs fell on legacy prose fields
+written before the v3 standard, and practical-implication scope drift was the
+dominant class with six instances — three of them (Lee, Guo, Yu) on papers whose
+text contains no practical-implications section and no mention of the audiences
+the notes addressed. Post re-attributed to CEOs and boards an instruction the
+paper gives to "female executives invited to join an all-male TMT"; Baba
+addressed governments where the paper addresses "peripheral actors such as the
+Crees"; Wang credited professional associations with a broadening of blame the
+paper attributes to the government. The multi-study support-pattern class
+recurred for a third batch in Burgess's Mechanism Process, and Lee's Limitations
+inverted a premise outright, resting causal inference on 2SLS where the paper
+concludes its own tests make "the 2SLS regression unnecessary". Six repairs
+touched new v3 fields, five of them Data & Measures with five distinct causes
+(a mis-explained sample-size drop, two dictionary credits reversed across a
+column break, interview counts mislabelled as informants, an unstated
+temporal-separation inference, and an overlooked "Except for" clause). **Five
+`PARTIAL` verdicts survive by design and are documented rather than edited:**
+two on Guo are the interleaved-references truncation class identified in batch 11
+— its REFERENCES heading sits atop column 2 while column 1 still carries Future
+Research prose, so the strip discarded 16.8% of the paper, and both flagged
+claims verify verbatim in the raw text; two on Wang are a framing nuance whose
+content the auditor conceded is true and an auditor locality error over a claim
+the paper does make two paragraphs away; and one on Dushnitsky sits atop a
+self-contradictory figure description, where the note follows the paper's five
+separate statements of the effect's direction. Batch 11's signal held for a third
+consecutive batch and more strongly: in every case where a legacy field and a new
+v3 section covered the same fact — Burgess, Kuhnel, Frey, Lee — the new section
+was right. The batch left the record total unchanged. It ran on `claude-opus-5`,
+as batches 08 through 12 did (batches 01–07 recorded `claude-opus-4-8`), so its
 notes carry `augmented_model: "claude-opus-5"`. The corpus contains 61 legacy v1
-notes, 810 v2 notes, and 296 v3 notes with evidence anchors; new notes are
+notes, 784 v2 notes, and 322 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -207,7 +212,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.45.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.46.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
