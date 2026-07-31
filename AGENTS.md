@@ -140,45 +140,51 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-07-30):
+**Current main-branch audit state (2026-07-31):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 13 upgraded 26 notes (AMJ vol-65-no-1 + vol-64-no-6, all v2
+batch 14 upgraded 25 notes (AMJ vol-64-no-5 + vol-64-no-4, all v2
 augmentations) to v3, each passing a fresh full 9-field rubric-v2 audit at
-229/234 prose-field verdicts SUPPORTED after twenty-one evidence-based repairs
-across sixteen notes in three repair rounds — the heaviest repair load of the
-backfill to date. The upgrade phase was the third consecutive clean one: all 26
-augmentations passed the validator and the diff-guard on the first attempt, with
-no self-fix cycles. Fifteen of the twenty-one repairs fell on legacy prose fields
-written before the v3 standard, and practical-implication scope drift was the
-dominant class with six instances — three of them (Lee, Guo, Yu) on papers whose
-text contains no practical-implications section and no mention of the audiences
-the notes addressed. Post re-attributed to CEOs and boards an instruction the
-paper gives to "female executives invited to join an all-male TMT"; Baba
-addressed governments where the paper addresses "peripheral actors such as the
-Crees"; Wang credited professional associations with a broadening of blame the
-paper attributes to the government. The multi-study support-pattern class
-recurred for a third batch in Burgess's Mechanism Process, and Lee's Limitations
-inverted a premise outright, resting causal inference on 2SLS where the paper
-concludes its own tests make "the 2SLS regression unnecessary". Six repairs
-touched new v3 fields, five of them Data & Measures with five distinct causes
-(a mis-explained sample-size drop, two dictionary credits reversed across a
-column break, interview counts mislabelled as informants, an unstated
-temporal-separation inference, and an overlooked "Except for" clause). **Five
-`PARTIAL` verdicts survive by design and are documented rather than edited:**
-two on Guo are the interleaved-references truncation class identified in batch 11
-— its REFERENCES heading sits atop column 2 while column 1 still carries Future
-Research prose, so the strip discarded 16.8% of the paper, and both flagged
-claims verify verbatim in the raw text; two on Wang are a framing nuance whose
-content the auditor conceded is true and an auditor locality error over a claim
-the paper does make two paragraphs away; and one on Dushnitsky sits atop a
-self-contradictory figure description, where the note follows the paper's five
-separate statements of the effect's direction. Batch 11's signal held for a third
-consecutive batch and more strongly: in every case where a legacy field and a new
-v3 section covered the same fact — Burgess, Kuhnel, Frey, Lee — the new section
-was right. The batch left the record total unchanged. It ran on `claude-opus-5`,
-as batches 08 through 12 did (batches 01–07 recorded `claude-opus-4-8`), so its
+224/225 prose-field verdicts SUPPORTED after seven evidence-based repairs
+across six notes in three repair rounds. The upgrade phase was the fourth
+consecutive clean one: 24 of 25 augmentations passed the validator and the
+diff-guard on the first attempt, the single self-fix being a cosmetic
+Cronbach-alpha symbol alignment inside Hill's own newly inserted Data & Measures
+text. **All six round-1 `PARTIAL`s fell on legacy prose fields and none on the
+three new v3 sections — the cleanest new-field result of the backfill so far.**
+Tang's Practical Implication prescribed what "firms should" and "managers seeking
+ambidextrous strategy should" do for a paper in which none of "practical
+implication", "implications for practice", "managers should" or "firms should"
+occurs even once; Methot's Future Research recast the paper's cross-cultural and
+expatriate *practice* contribution as a research agenda; Dyer's Theoretical
+Contribution credited exploratory salary-band and equity evidence with producing
+a "zone of misaligned incentives" the paper explicitly calls an untested "logical
+conclusion from the theory"; Ruebottom's Limitations inverted a premise,
+cautioning against generalizing to "all stigmatized industries" where the paper
+states "we expect that all stigmatized industries will have opportunities within
+them"; and Bettinazzi's Mechanism Process both labelled four variables
+"moderators" for a design that estimates no interaction terms at all — it
+compares coefficients across paired models with Wald tests — and attributed to
+selloff cost an argument the paper runs on the cost of resolving conflicts
+internally. The seventh repair did not come from the audit: Bain's augmentation
+agent flagged, under the flag-don't-fix contract, that "Across studies, the
+effects held for promotive and prohibitive voice and for both men and women"
+over-reached, and although the auditor had scored that field `SUPPORTED`, source
+verification upheld the agent — voice type appears eleven times in Study 1 and
+not once in Studies 2 or 3. The two channels are not redundant: an upgrade agent
+reads a paper in order to *write* three sections and notices scope facts a
+verdict-oriented auditor does not. **One `PARTIAL` verdict survives by design and
+is documented rather than edited:** Sitzmann's Future Research is the
+interleaved-references truncation class identified in batch 11 — its REFERENCES
+heading sits atop column 2 at line 1340 while column 1 still carries Future
+Research prose, so the strip discarded 24.6% of the paper, and the flagged call
+for research on how "pornography consumption and rape affect the gender wage gap"
+verifies almost verbatim in the raw text. Batch 11's signal held for a fifth
+consecutive batch: in every case where a legacy field and a new v3 section
+covered the same fact — Dyer and Bettinazzi — the new section was right. The
+batch left the record total unchanged. It ran on `claude-opus-5`,
+as batches 08 through 13 did (batches 01–07 recorded `claude-opus-4-8`), so its
 notes carry `augmented_model: "claude-opus-5"`. The corpus contains 61 legacy v1
-notes, 784 v2 notes, and 322 v3 notes with evidence anchors; new notes are
+notes, 759 v2 notes, and 347 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -212,7 +218,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.46.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.47.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

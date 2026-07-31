@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-64-no-5/pdfs/Howard-Grenville 2021 From the Editorsâ€
 text_path: "library/AMJ/vol-64-no-5/text/Howard-Grenville 2021 From the Editorsâ€”Achieving Fit and Avoiding Misfit in Qualitative Research.txt"
 ingested_at: "2026-06-26"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-31"
 
 paper_type: "editorial"
 keywords: ["qualitative research", "fit", "internal coherence", "research question", "data collection", "data analysis", "theory development"]
@@ -53,6 +55,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how authors of qualitative research can achieve fit understood as internal coherence in AMJ manuscripts. It focuses on how research question and motivation, data collection, data analysis, findings, and theory development should align with one another and with the assumptions of the research approach.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core concern: Qualitative manuscripts are often rejected when the research project or written paper lacks internal coherence.
 - Research question and motivation: Authors should ensure that the question can be addressed by the data and connects to a theoretical conversation with appropriate scope.
@@ -61,6 +66,12 @@ The editorial asks how authors of qualitative research can achieve fit understoo
 - Contribution and practical relevance: The discussion should return to the motivating question and show implications for theory, practice, and understanding organizations.
 
 The editorial's process logic is developmental rather than causal. It argues that qualitative papers become stronger when authors repeatedly test the fit among the major elements of a research project and manuscript, especially as inductive work evolves through data collection, analysis, writing, and revision. Internal coherence is presented as a way to preserve methodological variety and authenticity while still giving readers confidence in the paper's authority, transparency, and trustworthiness.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes to management-methods discourse by reframing fit in qualitative research as internal coherence rather than compliance with a single methodological template. It clarifies that good qualitative research depends on alignment among research questions, data, analysis, findings, and theoretical contribution, while still allowing different paradigmatic stances and analytical approaches.

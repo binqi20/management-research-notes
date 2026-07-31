@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-64-no-4/pdfs/DeCelles 2021 From the Editors—Improvi
 text_path: "library/AMJ/vol-64-no-4/text/DeCelles 2021 From the Editors—Improving the Transparency of Empirical Research Published in AMJ.txt"
 ingested_at: "2026-06-25"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-07-31"
 
 paper_type: "editorial"
 keywords: ["research transparency", "trustworthiness", "reproducibility", "open science", "preregistration", "qualitative transparency"]
@@ -52,6 +54,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Contribution and transparency are mutually reinforcing because empirical claims are meaningful only when readers and reviewers can evaluate how the research was conducted, analyzed, and reported.
 - Quantitative transparency: Authors can strengthen trust through multiple studies, preregistration, open or reviewer-accessible data, shared materials, code, output, detailed sample-selection explanations, and supplementary robustness checks.
@@ -60,6 +65,12 @@ Not reported in paper
 - Boundary conditions: Transparency should preserve human-subject protections, confidentiality, double-blind review, and the distinct constraints of proprietary organizational data and international research settings.
 
 The editorial argues that AMJ's contribution standard depends on transparent research processes, not polished or perfect results. It positions transparency as a field-wide practice involving authors, reviewers, editors, and readers, with different appropriate forms for quantitative, qualitative, and mixed-methods studies. Its process logic is pragmatic rather than causal: more visible research choices improve trust, enable correction of the scientific record, and support stronger theoretical conversations.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes to management-methods discourse by decoupling transparency from any single template and emphasizing fit between transparency practices, methodology, and epistemological assumptions. It argues that transparency supports both trustworthiness and theoretical impact by helping readers inspect evidence, understand research journeys, and build on published work responsibly.
