@@ -347,7 +347,16 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   parameter (that flag belongs to the Agent tool); workflows always run
   in the background and notify on completion — sequence the two issues by
   waiting for the notification, never by forcing a synchronous run
-  (batch-13 InputValidationError).
+  (batch-13 InputValidationError). Two further dispatch-hygiene rules
+  (batch 14): read agent returns from the workflow JOURNAL — the
+  authoritative record of each agent's raw return — never from the
+  background task's `.output` file, which can be a truncated preview that
+  parses into the wrong shape (batch 14: a 13-agent result parsed as 7
+  string keys and threw; a quieter truncation would silently drop
+  concerns). And once a mutation workflow is in flight, take any census
+  or baseline from **git HEAD**, not the working tree — agents land
+  mid-flight, so the tree is no longer a fixed reference frame (batch
+  14's one-note census wobble).
 - **Regenerate audit prompts LAST, immediately before dispatch (batch
   13):** `--prompt-only` snapshots the note into a file, so the prompt and
   the note silently diverge the moment any repair lands after generation.
@@ -356,6 +365,27 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   before any verdict was recorded (the layer2 note-hash would have flagged
   it at assembly, but only after burning the auditor runs). Rule: repairs
   first, then regenerate, then dispatch — never the other order.
+- **Section attribution needs the column view, never offsets (batch 14,
+  methot + bain):** in two-column pdftotext output, a heading's character
+  offset does NOT bound the preceding section — column 1 can still be
+  running the prior section's prose while column 2 has already started
+  the next, so an `index('STUDY 3')`-style boundary silently mis-attributes
+  content. Batch 14 diagnosed exactly this on methot, then repeated it on
+  bain an hour later, writing a repair that credited a Study 2 result to
+  Study 3 and costing an extra audit round. When attributing a claim to a
+  study or section during verification or repair, read the line-level
+  column geometry around the boundary; never conclude from offsets.
+- **Two-channel adjudication (batch-14 bain):** "the audit adjudicates"
+  is the default disposition for augmentation-agent concerns, not a
+  ceiling on parent verification. A concern alleging a source-verifiable
+  FACTUAL error — study scope, direction, attribution — that the audit
+  scores SUPPORTED must still be parent-verified against the raw text
+  before closeout; if it verifies, it is an always-fix repair regardless
+  of the verdict (bain: the auditor checked model structure, the flag was
+  about multi-study scope, and "voice type" had zero hits outside
+  Study 1). The two channels see different things — a writer who just
+  read the whole paper catches scope; a verdict-oriented auditor catches
+  structure.
 - **Repair convergence bound:** source-verified factual errors are always
   fixed, regardless of how many rounds it takes (batch-02 preston needed
   three, each a distinct genuine error). But when a fresh auditor keeps
