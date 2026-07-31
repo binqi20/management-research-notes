@@ -220,7 +220,14 @@ all six hypotheses" when Study 4 tested them too; another folded a study's
 job-seeking mentees into other studies' "working professionals"). Take every
 count, N, and range from the table or passage that reports it for that specific
 analysis — adjacent tables often report different quantities (models vs.
-observations). For qualitative work, give the data corpus and how
+observations). Two further precision rules (backfill batch 13, five
+data_measures errors): **never explain a discrepancy the paper itself does not
+explain** — if sample sizes, models, or timing structures differ across tables
+or studies, report the difference as the paper reports it and do not supply a
+cause (one note invented a variable-addition explanation for an n delta; another
+added an unstated temporal-separation design inference); and **when the paper
+pairs lists with "respectively", keep the paper's own list order** — reordering
+the constructs while keeping the citation order silently swaps every pairing. For qualitative work, give the data corpus and how
 constructs were coded (e.g., "62 semi-structured interviews; open then axial coding
 into three second-order themes"). Required for every empirical-* type;
 `Not reported in paper` for conceptual / review / editorial / book-review.

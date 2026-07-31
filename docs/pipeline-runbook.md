@@ -340,7 +340,22 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   until layer2 assembly, so an interrupted batch resumes later with zero
   rework. Dispatch scripts must fail FAST on a dead wave: `parallel()`
   resolves dead agents to null and never rejects, so check for an all-null
-  wave and abort instead of marching through the remaining waves.
+  wave and abort instead of marching through the remaining waves. A
+  PARTIAL wave — most agents return, one dies on a connection error — is
+  NOT an outage: re-dispatch just the dead agent (batch-13 guo). And a
+  Claude Code note: the Workflow tool has no `run_in_background`
+  parameter (that flag belongs to the Agent tool); workflows always run
+  in the background and notify on completion — sequence the two issues by
+  waiting for the notification, never by forcing a synchronous run
+  (batch-13 InputValidationError).
+- **Regenerate audit prompts LAST, immediately before dispatch (batch
+  13):** `--prompt-only` snapshots the note into a file, so the prompt and
+  the note silently diverge the moment any repair lands after generation.
+  Batch 13 regenerated prompts, then applied two round-3 repairs, and
+  dispatched auditors against stale snapshots — caught and re-dispatched
+  before any verdict was recorded (the layer2 note-hash would have flagged
+  it at assembly, but only after burning the auditor runs). Rule: repairs
+  first, then regenerate, then dispatch — never the other order.
 - **Repair convergence bound:** source-verified factual errors are always
   fixed, regardless of how many rounds it takes (batch-02 preston needed
   three, each a distinct genuine error). But when a fresh auditor keeps
