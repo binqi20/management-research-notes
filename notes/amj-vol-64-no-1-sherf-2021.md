@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/Sherf 2021 Distinguishing Voice and Sile
 text_path: "library/AMJ/vol-64-no-1/text/Sherf 2021 Distinguishing Voice and Silence at Work Unique Relationships with Perceived Impact, Psychological Safety, and Burnout.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["voice", "silence", "perceived impact", "psychological safety", "employee burnout", "behavioral activation system", "behavioral inhibition system"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "behavioral inhibition systems perspective"
   methods_overview: "interval-contingent panel study across six months"
   keywords_source: "voice and silence are opposites or distinct constructs"
+  hypotheses_source: "Hypothesis 1. The correlation between voice and silence"
+  measures_overview: "Spreitzer’s (1995) three-item measure to capture"
+  findings_overview: "burnout was associated more strongly with silence"
 ---
 
 # Distinguishing Voice and Silence at Work: Unique Relationships with Perceived Impact, Psychological Safety, and Burnout
@@ -52,6 +57,12 @@ Scholars continue to debate whether voice and silence are opposites or distinct 
 **Research Question**
 The paper asks whether employee voice and silence are best understood as opposite behavioral choices or as distinct constructs with different antecedents and consequences. It further asks whether perceived impact is more closely tied to voice, psychological safety is more closely tied to silence, and silence has a stronger relationship with burnout than voice.
 
+**Hypotheses / Propositions**
+- H1: The correlation between voice and silence is less than |.50|.
+- H2: Controlling for psychological safety, perceived impact is more strongly related to voice than to silence.
+- H3: Controlling for perceived impact, psychological safety is more strongly related to silence than to voice.
+- H4: In absolute terms, the positive relationship between silence and burnout is stronger than the negative relationship between voice and burnout.
+
 **Mechanism Process**
 - IV(s): Perceived impact and psychological safety as predictors of voice and silence; voice and silence as predictors of burnout or withdrawal.
 - DV(s): Employee voice, employee silence, burnout in Study 1, and withdrawal as the Study 2 burnout indicator.
@@ -59,6 +70,16 @@ The paper asks whether employee voice and silence are best understood as opposit
 - Moderators: Study 1 examines operationalization and methodological moderators, including voice and silence facets, burnout operationalizations, measurement source, time separation, publication status, agreement versus frequency scales, and voice intention versus behavior measures.
 
 The mechanism is grounded in the distinction between behavioral activation and behavioral inhibition. Voice is theorized as an activation-oriented behavior aimed at improvement, opportunity, and reward, making perceived impact the more relevant environmental cue. Silence is theorized as an inhibition-oriented behavior aimed at avoiding interpersonal risk or harm, making psychological safety the more relevant cue. Because repeated silence involves suppression, vigilance, and tension, the authors argue that it should relate more strongly to burnout than voice relates to reduced burnout.
+
+**Data & Measures**
+Study 1 meta-analyzes 162 papers (123 published and 39 unpublished). It codes behavioral measures of voice and silence; perceived impact measures spanning influence, control, empowerment, environmental responsiveness, organizational-based self-esteem, and reverse-coded futility; direct and indirect psychological safety measures; and burnout measures spanning emotional exhaustion, withdrawal, strain, stress, depletion, depersonalization, and reduced personal accomplishment. The analyses correct correlations for sampling error and unreliability under a random-effects model, then use Mplus path models and relative weight analysis to compare effects.
+
+Study 2 follows 405 full-time U.S. workers across six monthly surveys, yielding 1,620 lagged observations. Perceived impact uses Spreitzer’s three-item scale; psychological safety uses Edmondson’s seven-item scale; voice uses three promotive and three prohibitive items from Liang et al.; silence uses three adapted items from Detert and Edmondson and Tangirala and Ramanujam; and withdrawal uses three adapted Lehman and Simpson items. Multilevel CFA and hierarchical linear models in R/lme4 estimate person-level and one-month-lagged monthly relationships.
+
+**Key Findings**
+Study 1 supports all four hypotheses. Voice and silence correlate at −.15 (95% CI [−.29, −.01]); perceived impact relates more strongly to voice (b = .28) than silence (b = −.03); psychological safety relates more strongly to silence (b = −.44) than voice (b = .14); and silence relates more strongly to burnout (Mr = .32) than voice does (Mr = −.11).
+
+Study 2 constructively replicates the pattern. Voice and silence correlate below |.50| at the monthly (r = −.16) and person (r = −.33) levels. The person-level relative-strength tests support H2–H4; the one-month-lagged monthly coefficients follow the predicted pattern, but the corresponding difference tests are weaker (H2 p = .07, H3 p = .12, H4 p = .08). Silence predicts withdrawal at both levels, whereas voice does not.
 
 **Theoretical Contribution**
 The article shifts the voice-silence debate from whether the constructs are distinct to how and why they differ. By grounding voice in BAS regulation and silence in BIS regulation, it explains why the two behaviors can coexist at the person level and why low voice should not be treated automatically as high silence.

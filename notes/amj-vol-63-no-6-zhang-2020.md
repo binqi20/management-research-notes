@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Zhang 2020 Playing It Safe for My Family
 text_path: "library/AMJ/vol-63-no-6/text/Zhang 2020 Playing It Safe for My Family Exploring the Dual Effects of Family Motivation on Employee Productivity and Creativity.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-mixed"
 keywords: ["family motivation", "employee productivity", "employee creativity", "self-determination theory", "job instrumentality", "family financial pressure", "gender"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "self-determination theory and the “hard work versus smart work” framework"
   methods_overview: "modeling (SEM) (Kline, 2015)"
   keywords_source: "family motivation is a double-edged sword"
+  hypotheses_source: "Hypothesis 4. Family motivation is positively associated with employee job instrumentality."
+  measures_overview: "collected supervisors’ ratings of worker creativity"
+  findings_overview: "employee creativity was negative and significant"
 ---
 
 # Playing It Safe for My Family: Exploring the Dual Effects of Family Motivation on Employee Productivity and Creativity
@@ -53,6 +58,16 @@ Research has shown that family motivation exerts an energizing effect on employe
 **Research Question**
 When does family motivation energize employee performance, and when does it undermine creativity? The paper asks whether family motivation is associated with productivity through work effort, with lower creativity through job instrumentality, and whether family financial pressure and gender help explain when family motivation is activated.
 
+**Hypotheses / Propositions**
+H1: Family motivation is positively associated with employee work effort.
+H2: Employee work effort is positively associated with employee productivity.
+H3: Employee work effort mediates the relationship between family motivation and employee productivity.
+H4: Family motivation is positively associated with employee job instrumentality.
+H5: Employee job instrumentality is negatively associated with employee creativity.
+H6: Employee job instrumentality mediates the negative relationship between family motivation and employee creativity.
+H7: Family financial pressure is positively associated with family motivation.
+H8: Gender moderates the relationship between family financial pressure and family motivation, such that the relationship is stronger for women than for men.
+
 **Mechanism Process**
 - IV(s): Family motivation and family financial pressure.
 - DV(s): Employee productivity, employee creativity, and family motivation as an antecedent-side outcome.
@@ -60,6 +75,16 @@ When does family motivation energize employee performance, and when does it unde
 - Moderators: Gender moderates the relationship between family financial pressure and family motivation.
 
 The mechanism is a double-edged motivational process. Drawing on self-determination theory, the authors argue that family motivation can make employees work harder because work helps them support family members, producing higher productivity through work effort. At the same time, family motivation can make employees see work mainly as a financial instrument, which heightens job instrumentality and is associated with lower creativity because creative work is uncertain and may not yield immediate economic returns. The qualitative study extends this account by describing meaningfulness detachment, uncertainty avoidance, short-term orientation, conformity, conservative career choices, and possible unethical behavior as related processes.
+
+**Data & Measures**
+- Quantitative Sample 1: The authors surveyed 187 low-wage blue-collar workers in three Chinese textile factories in 2015. At Time 1, workers reported family financial pressure, family motivation, job instrumentality, and work effort; three months later, supervisors rated creativity and company records supplied productivity. Family motivation used Menges et al.'s scale; job instrumentality used a new six-item scale; work effort used four items; productivity was total product work value between waves; creativity used Zhou and George's 13-item supervisor scale; and family financial pressure used a seven-item subjective scale. The authors estimated single-indicator SEM with reliability correction and bootstrap confidence intervals.
+- Quantitative Sample 2: In 2017, 439 white-collar employees nested in 84 teams in Shanghai reported family motivation, job instrumentality, and family financial pressure. The main pressure proxy was unpaid apartment mortgage, with a subjective housing-pressure measure used in supplementary analyses. Coworkers supplied 2,198 creativity ratings using a four-item scale, which were aggregated by employee. The authors used multilevel SEM with a sandwich estimator and Monte Carlo confidence intervals.
+- Qualitative study: In 2018, the authors recruited 40 mostly high-income employees from varied Chinese organizations by snowball sampling beginning with a professional MBA program. Interviews averaged about 47 minutes. Thematic analysis generated 12 categories under four umbrella constructs covering family motivation, job perceptions, behavioral tendencies, and work outcomes.
+
+**Key Findings**
+All eight hypotheses were supported, with the study-specific pattern preserved. In Sample 1, family motivation positively predicted work effort, work effort positively predicted productivity, and their indirect effect was positive, supporting H1-H3. In both quantitative samples, family motivation positively predicted job instrumentality; job instrumentality negatively predicted creativity; and the indirect effect of family motivation on creativity through job instrumentality was negative, supporting H4-H6. Family financial pressure positively predicted family motivation in both samples, and this relationship was stronger for women than men; in Sample 2 it was significant for women but not men, supporting H7-H8.
+
+The qualitative study substantiated the proposed controlled-motivation process: family motivation shifted job perceptions toward income, increased effort on routine work, and reduced creativity through uncertainty avoidance, short-term orientation, and conformity. It also qualified the quantitative pattern by showing that family motivation could encourage creativity when employees perceived a direct link between creative work and financial rewards, and surfaced conservative career choices and possible unethical behavior as additional outcomes.
 
 **Theoretical Contribution**
 The paper contributes to family motivation theory by challenging the view that family motivation primarily energizes employees and by showing that its effects differ across performance criteria. It links self-determination theory with the hard work versus smart work framework to explain why the same motive can support productivity while reducing creativity. It also extends the nomological network of family motivation by identifying family financial pressure as an antecedent and gender as a boundary condition.

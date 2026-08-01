@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/Sutton 2021 Resource Dependence, Uncerta
 text_path: "library/AMJ/vol-64-no-1/text/Sutton 2021 Resource Dependence, Uncertainty, and the Allocation of Corporate Political Activity across Multiple Jurisdictions.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-mixed"
 keywords: ["resource dependence theory", "corporate political activity", "state uncertainty", "response uncertainty", "political contributions", "environmentally intensive industries"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "resource dependence theory and corporate political activity literatures"
   methods_overview: "Firm, state, and year fixed effects are included in all models."
   keywords_source: "resource dependence theory and corporate political activity literatures"
+  hypotheses_source: "to manage their dependence becomes less clear), weakening the relationship between"
+  measures_overview: "we used the Janis–Fadner coefficient of imbalance"
+  findings_overview: "turnover weakens the effect of dependence on CPA."
 ---
 
 # Resource Dependence, Uncertainty, and the Allocation of Corporate Political Activity across Multiple Jurisdictions
@@ -53,6 +58,13 @@ This paper contributes to the resource dependence theory and corporate political
 **Research Question**
 The paper asks how different types and sources of uncertainty affect firms' allocation of corporate political activity across multiple government jurisdictions on which they depend. It focuses on whether state uncertainty and response uncertainty strengthen or weaken the relationship between jurisdictional dependence and political contributions.
 
+**Hypotheses / Propositions**
+- H1a: Negative national media tenor strengthens the positive relationship between a firm's dependence on a jurisdiction and its corporate political activity there.
+- H1b: Negative local media tenor strengthens the positive relationship between a firm's dependence on a jurisdiction and its corporate political activity there.
+- H2: Increased oppositional social movement organization resources in a jurisdiction strengthen the positive dependence–corporate political activity relationship.
+- H3: Increased top management team turnover weakens the positive dependence–corporate political activity relationship.
+- H4: Increased politician turnover in a jurisdiction weakens the positive dependence–corporate political activity relationship.
+
 **Mechanism Process**
 - IV(s): Firm dependence on a state jurisdiction, with state uncertainty sources including national media tenor and oppositional SMO resources, and response uncertainty sources including TMT turnover and politician turnover.
 - DV(s): Corporate political activity in a jurisdiction, measured as political contributions to state candidates or parties.
@@ -60,6 +72,14 @@ The paper asks how different types and sources of uncertainty affect firms' allo
 - Moderators: National media tenor, local media tenor, SMO resources, TMT turnover, and politician turnover.
 
 The mechanism is that dependence makes a jurisdiction consequential for the firm, but uncertainty shapes whether and how managers act on that dependence. State uncertainty makes government behavior less predictable and therefore strengthens the dependence-CPA relationship when negative national media coverage or oppositional SMO resources heighten concern about policy backlash. Response uncertainty disrupts managers' confidence about how to influence politicians, so TMT turnover and politician turnover weaken the dependence-CPA relationship. Local media tenor was hypothesized to strengthen the relationship but was not supported empirically.
+
+**Data & Measures**
+The quantitative analysis uses 5,990 annual firm–state observations from 2009–2016 for the 65 largest publicly traded U.S. firms required to report chemical releases, covering every state in which each firm had an environmentally intensive presence. Corporate political activity is total firm and PAC donations to state candidates or parties; dependence is the firm's toxic-release pounds in a state divided by its releases across all states. National media tenor is a reverse-coded Janis–Fadner coefficient from LIWC-coded *Wall Street Journal* coverage, and local tenor uses the same procedure with a major newspaper in each state. SMO resources are environmental-nonprofit income scaled by state population; TMT turnover is executive departures divided by beginning-of-year TMT size; politician turnover averages gubernatorial and legislative turnover. Linear regressions include firm, state, and time fixed effects and robust standard errors, with the paper's stated lag structure.
+
+The qualitative component comprises 16 interviews: eight senior executives in highly regulated firms, six political consultants, and two current or former government officials. Interviewees were asked about sources and monitoring of state uncertainty and about how TMT and politician turnover affected response uncertainty and political activity; the interviews were used to illustrate the hypothesized relationships.
+
+**Key Findings**
+Dependence was positively associated with corporate political activity. H1a was supported: the marginal effect of dependence on political activity was 70% higher when negative national media tenor was high rather than low. H1b was not supported because the local-media interactions were nonsignificant. H2 was supported: the marginal dependence effect was 102% larger when oppositional SMO resources were high rather than at their mean. H3 and H4 were supported: the marginal dependence effect was 71% lower under high rather than low TMT turnover and 63% lower under high rather than low politician turnover, respectively. The interviews illustrated these patterns: respondents described negative media coverage and SMOs as uncertainty requiring action in dependent states, while TMT and politician turnover disrupted political engagement.
 
 **Theoretical Contribution**
 The paper extends resource dependence theory by restoring the distinction between dependence and uncertainty and by integrating Milliken's distinction between state uncertainty and response uncertainty. It shows that uncertainty does not uniformly increase dependence management: state uncertainty strengthens political action in dependent jurisdictions, whereas response uncertainty weakens it. It also contributes to corporate political activity research by modeling state-level political contributions across multiple jurisdictions rather than treating political activity as only a national-level strategy.

@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/Taeuscher 2021 Gaining Legitimacy by Bei
 text_path: "library/AMJ/vol-64-no-1/text/Taeuscher 2021 Gaining Legitimacy by Being Different Optimal Distinctiveness in Crowdfunding Platforms.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["optimal distinctiveness", "crowdfunding platforms", "organizational legitimacy", "normative legitimacy", "cognitive legitimacy", "resource acquisition", "contribution claims", "market category familiarity", "entrepreneurial stories"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "cultural entrepreneurship research has highlighted an “optimal distinctiveness” trade-off"
   methods_overview: "ran ordinary least squares (OLS) regression models"
   keywords_source: "three contingencies for the “optimal distinctiveness” trade-off"
+  hypotheses_source: "Hypothesis 1. Distinctiveness has a positive effect on"
+  measures_overview: "Our dependent variable is the number of backers"
+  findings_overview: "has a significant and positive effect on backers"
 ---
 
 # Gaining Legitimacy by Being Different: Optimal Distinctiveness in Crowdfunding Platforms
@@ -52,6 +57,12 @@ How do new ventures gain legitimacy and attract critical resources? An increasin
 **Research Question**
 How do new ventures gain legitimacy and attract critical resources when their entrepreneurial stories need both distinctiveness and legitimacy? The paper asks whether distinctiveness in crowdfunding narratives supports resource acquisition from crowdfunders, and whether contribution claims and market category familiarity condition that relationship.
 
+**Hypotheses / Propositions**
+H1: Distinctiveness has a positive effect on new ventures’ resource acquisition from crowdfunders.
+H2: Contribution claims have a positive effect on new ventures’ resource acquisition from crowdfunders.
+H3: Contribution claims negatively moderate the positive relationship between distinctiveness and new ventures’ resource acquisition from crowdfunders.
+H4: Market category familiarity positively moderates the relationship between distinctiveness and new ventures’ resource acquisition from crowdfunders.
+
 **Mechanism Process**
 - IV(s): Entrepreneurial story distinctiveness; contribution claims; market category familiarity/category coverage; interactions between distinctiveness and contribution claims, and between distinctiveness and category coverage.
 - DV(s): Number of backers during the crowdfunding campaign; pledged funding is used as an alternative dependent variable in robustness tests.
@@ -59,6 +70,12 @@ How do new ventures gain legitimacy and attract critical resources when their en
 - Moderators: Contribution claims are predicted and found to weaken the positive distinctiveness-resource acquisition relationship; market category familiarity is predicted and found to strengthen it.
 
 The theoretical mechanism is that crowdfunders are a novelty-expecting audience, so distinctive entrepreneurial stories can signal novelty and normative appropriateness while also differentiating a venture in a crowded platform market. In this context, the authors argue that the normative and competitive benefits of distinctiveness exceed its cognitive liabilities, making the expected relationship positive rather than inverted U-shaped. Contribution claims and unfamiliar market-category membership provide alternative sources of normative legitimacy, so the marginal benefit of distinctiveness is lower when those alternatives are present. The regression evidence is consistent with this account: distinctiveness is positively associated with backers and funding, the interaction with contribution claims is negative, and the interaction with category coverage is positive.
+
+**Data & Measures**
+The authors used Kickstarter API data and web-crawled narratives from 28,425 U.S.-based campaigns across 39 market categories launched between May 2009 and September 2017. The dependent variable is the logged number of backers; logged pledged funding is an alternative dependent variable. Entrepreneurial story distinctiveness is the sum of absolute deviations between a campaign’s LDA topic weights and its market category’s average weights across 100 topics. Contribution claims are measured with a validated 57-word computer-aided text analysis dictionary, and market category familiarity is the logged cumulative volume of category coverage in *The New York Times* and *The Washington Post* through the campaign’s ending month. The main models are OLS regressions with robust standard errors and controls at the campaign, creator, location, market-category, and platform levels.
+
+**Key Findings**
+All four hypotheses are supported in the main models (p < .001). Distinctiveness and contribution claims each have positive associations with the number of backers (H1–H2); contribution claims negatively moderate the distinctiveness–backers relationship (H3), whereas market category familiarity positively moderates it (H4). The predicted benefit of distinctiveness is therefore weaker when contribution claims are numerous and stronger in more familiar categories. The results retain their predicted directions when pledged funding is used as the alternative outcome. A one-standard-deviation increase in distinctiveness raises predicted logged backers by 6.7%, and high rather than low distinctiveness corresponds to 32% more backers and 47% more pledged funding.
 
 **Theoretical Contribution**
 The paper challenges the common assumption in optimal distinctiveness research that distinctiveness necessarily undermines legitimacy. It separates cognitive legitimacy from normative legitimacy and argues that distinctiveness can reduce comprehensibility while increasing normative fit for audiences that expect novelty.
@@ -71,9 +88,7 @@ For crowdfunding-seeking entrepreneurs, the findings suggest that strongly diffe
 The findings further imply that category positioning matters. Ventures in familiar categories may need stronger narrative distinctiveness to be seen as novel, while ventures in unfamiliar categories may already receive some legitimacy from category-level novelty.
 
 **Limitations**
-The study does not directly measure normative or cognitive legitimacy, so legitimacy remains a theorized latent mechanism rather than an observed mediator. The empirical context is limited to U.S.-based Kickstarter campaigns in selected technology, art, food, and theater categories, which constrains generalization to other funding settings, countries, and audiences.
-
-The measures also depend on text-analytic operationalizations: LDA captures narrative distinctiveness, CATA captures contribution claims, and newspaper coverage proxies market category familiarity. These measures are appropriate for large-scale platform data, but they remain proxies rather than direct measures of how audiences interpret legitimacy.
+The study's context and methodological approach do not allow direct measures of legitimacy, so normative and cognitive legitimacy remain latent mechanisms rather than observed mediators. The authors note that media-based legitimacy proxies are poorly suited to nascent crowdfunding ventures and call for tests in contexts with observable legitimacy proxies or for experimental tests of the proposed mechanisms.
 
 **Future Research**
 Future research could test the proposed legitimacy mechanisms more directly in settings with observable proxies for normative and cognitive legitimacy or through experiments. Such work could examine whether audiences actually perceive distinctive ventures as more novel, more normatively appropriate, and still sufficiently comprehensible.

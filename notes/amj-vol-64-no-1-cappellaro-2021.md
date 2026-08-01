@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/Cappellaro 2021 Maintaining Strategic Am
 text_path: "library/AMJ/vol-64-no-1/text/Cappellaro 2021 Maintaining Strategic Ambiguity for Protection Struggles over Opacity, Equivocality, and Absurdity around the Sicilian Mafia.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-qualitative"
 keywords: ["strategic ambiguity", "strategic ambiguity maintenance", "public scrutiny", "clandestine organizations", "opacity", "equivocality", "absurdity", "silence", "silencing", "secrecy"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "strategic ambiguity in particular"
   methods_overview: "We adopted a historical process perspective"
   keywords_source: "opacity, equivocality, and absurdity"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We performed hand coding on this"
+  findings_overview: "ambiguity as opacity, equivocality, and absurdity"
 ---
 
 # Maintaining Strategic Ambiguity for Protection: Struggles over Opacity, Equivocality, and Absurdity around the Sicilian Mafia
@@ -52,6 +57,9 @@ In spite of an increasing interest in ambiguity, our knowledge of how organizati
 **Research Question**
 How do organizations that need to protect themselves from outside scrutiny maintain strategic ambiguity? The paper also asks how such organizations interact with external audiences and change their strategies over time.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / ambiguity types: strategic ambiguity as opacity, equivocality, and absurdity; opacity means lack of a conceptual schema, equivocality means multiple possible interpretations, and absurdity means unreasonable or paradoxical interpretations.
 - Organizational strategies: protective silence, targeted silencing, one-sided disclosing, obfuscating, untargeted silencing, hyperbolic disclosing, stereotyping, and renewed protective silence.
@@ -61,17 +69,23 @@ How do organizations that need to protect themselves from outside scrutiny maint
 
 The process model treats strategic ambiguity maintenance as an antagonistic, relational struggle between an organization seeking protection and external audiences seeking to reduce ambiguity. The Mafia first withholds cues through silence, then offers multiple and conflicting cues through one-sided disclosure and obfuscation, and finally overwhelms audiences with paradoxical interpretations while returning to concealment. Each shift occurs after state representatives partially dissipate the previous form of ambiguity, which prompts the organization to move toward a harder-to-dissolve form.
 
+**Data & Measures**
+The study uses more than 25,000 pages of sources covering 1963-2018: oral sources, judicial documents, parliamentary reports, laws and parliamentary debates, letters and diaries, media material, and DIA and DNA annual reports. The authors hand-coded handwritten or poorly typewritten material; all texts except books were organized by year, document type, and related event in Atlas.ti, which was also used for first-order coding. Their iterative historical process analysis comprised historical reconstruction, line-by-line analysis of strategic ambiguity, identification and aggregation of Mafia strategies and state responses, bracketing three struggles over ambiguity, and development of the process model.
+
+**Key Findings**
+The findings identify three interlinked struggles over progressively harder-to-dissolve ambiguity: opacity (1963-1983), equivocality (1984-1993), and absurdity (1994-2018). Progress by state representatives in dissipating one type triggered the Mafia to change strategies and move to another: protective silence and targeted silencing; then one-sided disclosing, obfuscating, and untargeted silencing; then hyperbolic disclosing, stereotyping, and renewed protective silence. The corresponding state responses—elaborating a tentative interpretation, prioritizing one interpretation, and merging paradoxical interpretations—ultimately failed to dissipate absurdity, producing paralyzing confusion and maintaining ambiguity.
+
 **Theoretical Contribution**
 The paper advances strategic ambiguity research by theorizing maintenance, rather than one-time creation, of ambiguity as a long-term process of interlinked struggles between organizations and external audiences. It introduces opacity, equivocality, and absurdity as progressively harder-to-dissolve types of ambiguity and shows how discursive and nondiscursive strategies, especially silence, silencing, and hyperbolic disclosing, shape these struggles. It also extends research on clandestine organizations by linking secrecy and ambiguity as mutually reinforcing conditions.
 
 **Practical Implication**
-For state representatives and other audiences trying to scrutinize clandestine or controversial organizations, the study implies that ambiguity reduction is not a one-shot interpretive task: progress can trigger new organizational strategies that reintroduce confusion. It also warns that insider disclosures may help audiences build an interpretation, but those disclosures can be one-sided, hyperbolic, or strategically confusing, so audiences should attend to how such disclosures shift the ongoing struggle over ambiguity.
+The study shows that attempts by state representatives to dissipate ambiguity can prompt a clandestine organization to change strategies, shifting the struggle toward progressively harder-to-dissolve forms of ambiguity and ultimately neutralizing audiences' efforts. The authors bound this process model to organizations that maintain ambiguity for protective purposes in antagonistic relationships; they state that it is unlikely to apply where ambiguity instead mobilizes stakeholder support.
 
 **Limitations**
 The authors identify the Sicilian Mafia as an extreme and revealing case, so the model should not be automatically generalized to all organizations. The findings apply most directly to organizations that maintain ambiguity for protective purposes in antagonistic relationships with external audiences, especially when survival or control is at stake; they may apply less to organizations using ambiguity to mobilize stakeholder support. The study is also limited by the secrecy of clandestine organizations and by its focus on speech produced for external audiences rather than informal day-to-day conversations among Mafia members.
 
 **Future Research**
-Future research could compare this case with organizations and institutional settings that vary in secrecy, stakes, and the availability of illicit strategies such as violence or intimidation. Scholars could also examine contexts where external audiences are less powerful than the state, or respond through disapproval rather than criminalization. The authors further suggest insider-oriented studies of clandestine organizations, using discourse analysis or ethnography, to examine how strategies are chosen and how they affect internal organizational life.
+Future research could compare the Sicilian Mafia with institutional and organizational settings that have varying degrees of secrecy but still need protection from public scrutiny. The authors also call for research on the legitimacy and relative power of external actors, including contexts without authorities as powerful as the state, and for insider-oriented studies using discourse analysis or ethnography to examine strategy choice and internal repercussions.
 
 **APA 7th Citation**
 Cappellaro, G., Compagni, A., & Vaara, E. (2021). Maintaining strategic ambiguity for protection: Struggles over opacity, equivocality, and absurdity around the Sicilian Mafia. *Academy of Management Journal*, 64(1), 1-37. https://doi.org/10.5465/amj.2017.1086

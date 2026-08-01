@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Chattopadhyay 2020 Geographical Dissimil
 text_path: "library/AMJ/vol-63-no-6/text/Chattopadhyay 2020 Geographical Dissimilarity and Team Member Influence Do Emotions Experienced in the Initial Team Meeting Matter.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["geographical dissimilarity", "perceived influence", "emotions", "initial team meeting", "social identity theory", "self-categorization theory", "MBA project teams"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "social identity theory"
   methods_overview: "PROC MIXED"
   keywords_source: "geographical dissimilarity and emotions"
+  hypotheses_source: "meetings moderate the effect of geographical dissimilarity on their perceived influence"
+  measures_overview: "the influence they exerted on team decisions and"
+  findings_overview: "for individuals experiencing pleasant high-activation emotions, their geographic dissimilarity was more positively related with perceived influence in the initial stage"
 ---
 
 # Geographical Dissimilarity and Team Member Influence: Do Emotions Experienced in the Initial Team Meeting Matter?
@@ -53,6 +58,12 @@ It is both important and challenging to gain influence within geographically div
 **Research Question**
 How does a team member's geographical dissimilarity from teammates shape perceived influence in team decisions over time, and do emotions experienced in the initial team meeting determine whether the relationship is positive or negative? The paper asks this question by contrasting social identity theory arguments about out-group categorization with self-categorization theory arguments about the value of dissimilar members' skills and perspectives.
 
+**Hypotheses / Propositions**
+- H1: Geographical dissimilarity is more positively related to perceived influence early in a project when initial pleasant high-activation emotions are higher rather than lower.
+- H2a: Geographical dissimilarity is more positively related to perceived influence early in a project when initial unpleasant high-activation emotions are higher rather than lower.
+- H2b: Geographical dissimilarity is more negatively related to perceived influence later in a project when initial unpleasant high-activation emotions are higher rather than lower.
+- H3: Geographical dissimilarity is more positively related to perceived influence later in a project when initial unpleasant low-activation emotions are higher rather than lower.
+
 **Mechanism Process**
 - IV(s): Individual team member geographical dissimilarity from teammates, measured as international dissimilarity in Study 1 and intranational state dissimilarity in Study 2.
 - DV(s): Peer-rated perceived influence over team decisions and contribution to team effectiveness at later project time points.
@@ -60,6 +71,12 @@ How does a team member's geographical dissimilarity from teammates shape perceiv
 - Moderators: Pleasant high-activation emotions, unpleasant high-activation emotions, and unpleasant low-activation emotions experienced in the initial team meeting.
 
 The mechanism is a moderation process in which initial emotions shape how geographically dissimilar teammates are categorized and how they interact with the team over time. Pleasant high-activation emotions are theorized to promote inclusiveness, cognitive flexibility, social engagement, and creativity, making dissimilar members more influential early in the project. Unpleasant low-activation emotions are theorized to encourage systematic and persistent problem solving, so their positive influence effect develops later. Unpleasant high-activation emotions are theorized to create early social engagement and creativity but also later abrasiveness and cognitive depletion, making the authors' evidence for this category more tentative.
+
+**Data & Measures**
+Study 1 analyzed 192 MBA students nested in 48 Hong Kong teams. International dissimilarity was each member's proportion of teammates with a different nationality; emotions were measured after the initial meeting with Seo and Barrett's 15-item, 7-point core-affect measure; and perceived influence at T1 and T2 averaged teammates' ratings of influence over decisions and contribution to team effectiveness. Study 2 analyzed 338 MBA students nested in 75 Indian teams, replaced nationality with the proportion of teammates from different states, used the same emotion and peer-rated influence measures at T2 and T3, and added trait-emotion controls. Both studies estimated the three dissimilarity-by-emotion interactions simultaneously in multilevel PROC MIXED models.
+
+**Key Findings**
+In Study 1, H1 was supported: international dissimilarity had a more positive relationship with early influence at higher pleasant high-activation emotion (b = 2.06, p < .01). H2a was supported (b = 2.25, p < .05), but H2b was not (b = 0.27, n.s.); H3 was supported at T2 (b = 2.10, p < .05). In Study 2, H1 was supported at T2 (b = 1.21, p < .05); H2a could not be tested, whereas H2b was supported by negative interactions at T2 (b = -1.78, p < .01) and T3 controlling T2 (b = -1.80, p < .05). H3 was supported at T2 (b = 1.67, p < .05) and was marginal at T3 controlling T2 (b = 1.22, p < .10).
 
 **Theoretical Contribution**
 The paper contributes to relational demography research by showing that geographical dissimilarity need not have a uniformly negative relationship with individual influence in teams. It uses emotions experienced in the initial team meeting to reconcile social identity theory's negative prediction about dissimilarity with self-categorization theory's positive prediction about valued dissimilarity. It also adds an affective mechanism to a literature that the authors argue has emphasized cognitive categorization processes.

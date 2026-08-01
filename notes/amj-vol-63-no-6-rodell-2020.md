@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Rodell 2020 “Tapping” into Goodwill 
 text_path: "library/AMJ/vol-63-no-6/text/Rodell 2020 “Tapping” into Goodwill Enhancing Corporate Reputation through Customer Volunteering.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-mixed"
 keywords: ["customer volunteering", "corporate community engagement", "corporate reputation", "sensemaking", "emotional contagion", "customer patronage", "product purchases"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "sensemaking processes—with emotional contagion"
   methods_overview: "used structural equation modeling in Mplus 7"
   keywords_source: "customer volunteering"
+  hypotheses_source: "be indirectly positively related to the customers’ (a)"
+  measures_overview: "of the brewery’s reputation using four items from"
+  findings_overview: "engagement in such initiatives is related to positive views of the organization"
 ---
 
 # “Tapping” into Goodwill: Enhancing Corporate Reputation through Customer Volunteering
@@ -52,6 +57,14 @@ Companies often engage in prosocial initiatives—such as employee volunteering 
 **Research Question**
 How do customers perceive corporate volunteering initiatives that invite their own participation, and what are the implications for customer attitudes and behaviors toward the company? The paper refines this into two Study 2 questions: what impact volunteering engagement has on stakeholder attitudes and behaviors toward the company, and how customers' volunteering experiences and attitudes spread to others.
 
+**Hypotheses / Propositions**
+Study 1 was inductive and did not state a priori hypotheses. Study 2 tested five hypotheses:
+- H1: Customer volunteer engagement is positively related to perceptions of corporate reputation.
+- H2: Customer volunteer engagement is indirectly positively related to customers' (a) patronage and (b) product purchases through corporate reputation.
+- H3: Customer volunteer engagement is positively related to a friend's emotional contagion.
+- H4: Customer volunteer engagement is indirectly positively related to a friend's corporate reputation through emotional contagion.
+- H5: Customer volunteer engagement has a serial indirect positive relationship with a friend's (a) patronage and (b) product purchases through emotional contagion and corporate reputation.
+
 **Mechanism Process**
 - IV(s): Customer volunteer engagement in the company's volunteering activity.
 - DV(s): Customer perceptions of company reputation, customer company patronage, customer product purchases, friends' perceptions of company reputation, friends' company patronage, and friends' product purchases.
@@ -59,6 +72,12 @@ How do customers perceive corporate volunteering initiatives that invite their o
 - Moderators: Not reported in paper.
 
 The authors first use qualitative data to identify customer engagement, enriching experience, enhanced company reputation, customer loyalty, and contagion as central themes. In Study 2, they theorize a sensemaking process in which engaged customer volunteering provides reputation-relevant information that customers attach to the company. They also theorize an emotional contagion process in which customers' positive reactions to volunteering spread through conversations with friends, shaping friends' evaluations and support behaviors. The quantitative results support positive indirect relationships for customer patronage and purchases through corporate reputation, support an indirect relationship to friends' reputation perceptions through emotional contagion, and support the serial indirect relationship for friends' product purchases but not friends' patronage.
+
+**Data & Measures**
+Study 1 combined weekly nonparticipant observation across the five-month program with 30 informal interviews and 48 formal semi-structured customer interviews. The authors analyzed interview transcripts, post-interview memos, observation notes, and informal-interview notes in Dedoose, moving from open coding to axial and selective coding. Study 2 measured customer volunteer engagement at Time 1 with four task-absorption items adapted from Schaufeli et al. (2002), customer perceptions of corporate reputation at Time 2 with four items adapted from Hochwarter et al. (2007), and customer patronage and product purchases at Time 3 with two self-reported frequency items each. Friends reported emotional contagion with three ad hoc items and corporate reputation with the same four reputation items at Time 2, then patronage and purchases with parallel two-item frequency measures at Time 3. The authors tested the structural model in Mplus with bias-corrected bootstrapping and FIML.
+
+**Key Findings**
+Study 1 found four themes—enriching experience, enhanced company reputation, customer loyalty, and contagion—alongside substantial variation in customer engagement. In Study 2, H1, H2a, H2b, H3, and H4 were supported: engagement was positively related to customer reputation; its indirect relationships with customer patronage and purchases through reputation were positive; and the friend pathway through emotional contagion to reputation was positive. H5 received partial support: the serial indirect relationship was positive and significant for friends' product purchases (b = .04, p < .05) but was not supported for friends' patronage (b = -.02, n.s.).
 
 **Theoretical Contribution**
 The paper extends corporate volunteering research beyond employee volunteers by examining customers as participating stakeholders. It introduces corporate reputation and emotional contagion as mechanisms through which customer volunteering can be associated with goodwill toward a firm, including among people who did not directly attend the event. It also contributes to reputation research by showing how reputation can be shaped through micro-level, first-hand and second-hand stakeholder experiences rather than only through macro-level media or analyst channels.

@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/He 2021 When Does Pay for Performance Mo
 text_path: "library/AMJ/vol-64-no-1/text/He 2021 When Does Pay for Performance Motivate Employee Helping Behavior The Contextual Influence of Performance Subjectivity.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["pay for performance", "performance subjectivity", "employee helping behavior", "helping-performance expectancy", "expectancy theory", "heuristic processing"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "Drawing upon expectancy theory (Vroom, 1964) and the heuristic"
   methods_overview: "We conducted three studies to test the hypotheses"
   keywords_source: "conditional positive effect (i.e., in the context of high performance subjectivity) on employee helping behavior"
+  hypotheses_source: "Hypothesis 2. Performance subjectivity positively"
+  measures_overview: "We used one item to evaluate the intensity of PFP"
+  findings_overview: "has a conditional positive effect (i.e., in the context of high performance subjectivity) on employee helping behavior"
 ---
 
 # When Does Pay for Performance Motivate Employee Helping Behavior? The Contextual Influence of Performance Subjectivity
@@ -54,6 +59,11 @@ An extensive body of literature has demonstrated the incentive effect by which p
 **Research Question**
 When does pay for performance motivate, rather than undermine, employee helping behavior, and why does performance subjectivity change that relationship? The paper asks whether subjective performance appraisal makes employees perceive helping as connected to performance evaluation and thus as instrumentally valuable under PFP.
 
+**Hypotheses / Propositions**
+H1: Performance subjectivity interacts with PFP to predict employee helping behavior, such that PFP's effect on helping is more positive when performance subjectivity is high rather than low.
+H2: Performance subjectivity positively predicts employee perceived helping-performance expectancy.
+H3: Helping-performance expectancy interacts with PFP to predict employee helping behavior, such that PFP's effect on helping is more positive when helping-performance expectancy is high rather than low.
+
 **Mechanism Process**
 - IV(s): Individual pay-for-performance intensity, operationalized as the proportion of performance-based variable pay in total pay or experimentally manipulated as low, moderate, and high PFP.
 - DV(s): Employee helping behavior, measured through leader ratings, self-reports, teammate ratings, and objective helping cards across the three studies.
@@ -61,6 +71,18 @@ When does pay for performance motivate, rather than undermine, employee helping 
 - Moderators: Performance subjectivity moderates the PFP-helping relationship; helping-performance expectancy also conditions whether PFP predicts helping.
 
 The central mechanism is expectancy-based. When performance criteria are subjective, employees have fewer clear objective signals about what will be rewarded and are more likely to infer heuristically that helping coworkers can improve performance evaluations. Under higher PFP intensity, that perceived helping-performance link makes helping behavior more instrumentally valuable, producing a conditional positive PFP effect on helping rather than the conventional crowding-out or tradeoff prediction.
+
+**Data & Measures**
+Study 1 used multisource data from 323 matched leader-employee dyads in nine Chinese firms. Employees reported PFP intensity as the proportion of performance-based variable pay in total pay; performance subjectivity was represented by job-category objective-versus-subjective appraisal and, in a robustness analysis, HR-manager ratings; leaders rated helping with a seven-item scale.
+
+Study 2 used two online survey waves, separated by two weeks, from 176 employees in six other Chinese firms. Time 1 measured monthly individual PFP intensity, three-item perceived performance subjectivity, and two-item helping-performance expectancy; Time 2 measured helping with the seven-item self-report scale.
+
+Study 3 was a 3 (PFP intensity: 20%, 50%, or 80%) by 2 (objective versus subjective performance evaluation) laboratory experiment with 140 participants. Helping-performance expectancy used the same two-item scale; helping was measured both by teammates' ratings and by the number of helping cards each participant used.
+
+**Key Findings**
+Study 1 supported H1: PFP was positively related to leader-rated helping when performance was subjectively evaluated, but not when it was objectively evaluated. Study 2 supported H1-H3: performance subjectivity positively predicted helping-performance expectancy, and both performance subjectivity and helping-performance expectancy positively conditioned the PFP-helping relationship.
+
+Study 3 supported H1 and H3 for objective helping-card behavior, but not for teammate-rated helping, and supported H2. Under subjective evaluation, objective helping was higher under high PFP than under low or moderate PFP; when helping-performance expectancy was high, objective helping under high PFP was significantly higher than under moderate PFP and marginally higher than under low PFP.
 
 **Theoretical Contribution**
 The paper challenges the simple claim that PFP undermines extra-role behavior by showing that PFP can increase helping when performance is subjectively evaluated. It shifts PFP theory from the "pay" component alone to the "performance" component, especially the appraisal context, and extends expectancy theory by showing how domain-specific expectancy perceptions can shape the direction, not only the amount, of individual effort.

@@ -10,7 +10,7 @@ repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-08-01"
-version: "0.48.0"
+version: "0.49.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,20 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.48.0
+  a published rubric) gates every note into the library. Version 0.49.0
+  (2026-08-01) continues the v3 backfill with Academy of Management Journal
+  volume 64 issue 1 and volume 63 issue 6 — 25 notes, all v2 augmentations.
+  A backfill adds no papers, so the record total remains 1,167; the version-tier
+  census shifts to 61 v1, 709 v2, and 397 v3 notes. All 25 augmentation deltas
+  passed the validator and mechanical diff-guard on the first attempt. Each
+  touched note passed a fresh full independent 9-field rubric-v2 audit, with a
+  final 225 of 225 prose-field verdicts SUPPORTED and no residual PARTIAL,
+  after five evidence-based legacy-field repairs across four notes in two
+  repair rounds and three audit rounds. This is the first backfill batch run
+  end-to-end on gpt-5.6-sol for both augmentation and audit; batches 01–07
+  recorded claude-opus-4-8 and batches 08–15 recorded claude-opus-5. A
+  cross-family spot-audit follows at workshop review.
+  Version 0.48.0
   (2026-08-01) continues the v3 backfill with Academy of Management Journal
   volume 64 issue 3 and volume 64 issue 2 — 25 notes, all v2 augmentations.
   A backfill adds no papers, so the record total is unchanged at 1,167; the

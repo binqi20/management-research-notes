@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Ertug 2020 Kin Ties and the Performance 
 text_path: "library/AMJ/vol-63-no-6/text/Ertug 2020 Kin Ties and the Performance of New Firms A Structural Approach.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["kin ties", "new firms", "performance", "horizontal employee kin ties", "vertical founder-employee kin ties", "structural contingency approach"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "structural contingency model"
   methods_overview: "We used Cox regression"
   keywords_source: "Kin ties are all but ubiquitous in new firms."
+  hypotheses_source: "Horizontal employee kin (Hypothesis 1a: positive)"
+  measures_overview: "was the ratio of kin to the relevant set or subset of"
+  findings_overview: "Horizontal employee kin . Vertical founder–employee kin                     p 5 .01 (supported)                          p 5 .01 (supported)"
 ---
 
 # Kin Ties and the Performance of New Firms: A Structural Approach
@@ -52,6 +57,13 @@ Kin ties are all but ubiquitous in new firms. However, their effects on performa
 **Research Question**
 How do kin ties influence the performance of new firms when those ties occupy different structural locations in the organization? The paper asks whether kin ties between founders, between founders and employees, or between employees have different implications for survival and sales.
 
+**Hypotheses / Propositions**
+- H1a: Greater prevalence of horizontal employee kin ties is associated with better new-firm performance.
+- H1b: Greater prevalence of vertical founder–employee kin ties is associated with worse new-firm performance.
+- H2a: Horizontal employee kin ties are associated with better performance than vertical founder–employee kin ties.
+- H2b: Horizontal employee kin ties are associated with better performance than horizontal founder kin ties.
+- H2c: Horizontal founder kin ties are associated with better performance than vertical founder–employee kin ties.
+
 **Mechanism Process**
 - IV(s): Prevalence of horizontal employee kin ties, vertical founder-employee kin ties, and horizontal founder kin ties among initial members.
 - DV(s): New firm performance, measured primarily through survival/failure risk and additionally through log sales.
@@ -59,6 +71,12 @@ How do kin ties influence the performance of new firms when those ties occupy di
 - Moderators: Structural location of kin ties in the firm's hierarchy; number of employees is examined as a boundary-condition moderator in additional analyses.
 
 The mechanism is a structural contingency argument. Kin ties can improve coordination, cooperation, and private information about member capabilities, but they can also reduce information diversity and trigger nepotism concerns. The paper predicts that horizontal employee kin ties should be performance-enhancing because they provide coordination benefits without strong founder-level nepotism concerns, while vertical founder-employee kin ties should be detrimental because they make favoritism concerns more salient. Horizontal founder kin ties are treated as theoretically ambiguous because positive and negative mechanisms may offset one another.
+
+**Data & Measures**
+Statistics Sweden registry data cover 4,967 new firms founded in greater Stockholm during 1998–2003 and their first-year founders and salaried employees. Each focal kin-structure measure is a continuous ratio: vertical founder–employee kin to all initial members, horizontal employee kin to employees, and horizontal founder kin to founders. Performance is measured through survival/failure, with successful exits distinguished using founders' post-exit income and wealth, and the natural logarithm of total sales over the observation window. The authors estimate competing-risk Cox survival models and linear sales models with two-stage residual-inclusion correction, using the count of founders' or their spouses' siblings as the instrument for kin-tie prevalence.
+
+**Key Findings**
+H1a is supported for both survival (hazard ratio = 0.53, p < .01) and sales (b = 0.51, p < .05): greater horizontal employee kin is associated with a lower failure rate and higher sales. H1b is only partially supported: vertical founder–employee kin is associated with lower sales (b = -1.17, p < .01) but not with survival (hazard ratio = 1.21, p = .47). The comparative tests support H2a and H2c for both outcomes; H2b is supported for sales but only marginally for survival (p = .07). Horizontal founder kin itself is not significantly related to sales or survival.
 
 **Theoretical Contribution**
 The paper contributes to entrepreneurship research by moving beyond whether kin ties are good or bad for new firms and specifying when different kin-tie structures are likely to enhance, impair, or have no clear relation to performance. It adds granularity to the family-embedded perspective on entrepreneurship by showing that the family effect depends on where family members are located in the new firm's hierarchy. It also contributes to contingency/configuration research by showing how multiple mechanisms can be amplified or suppressed by structural conditions.

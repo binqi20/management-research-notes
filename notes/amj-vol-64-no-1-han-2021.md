@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/Han 2021 The Two Towers (or Somewhere in
 text_path: "library/AMJ/vol-64-no-1/text/Han 2021 The Two Towers (or Somewhere in Between) The Behavioral Consequences of Positional Inconsistency across Status Hierarchies.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["status inconsistency", "multiple status hierarchies", "status hierarchy prestige", "artistic status", "commercial status", "embeddedness"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "cognitive dissonance and stress"
   methods_overview: "we used two-stage models that predicted"
   keywords_source: "status inconsistencies across multiple status hierarchies"
+  hypotheses_source: "While status inconsistency, in general, increases the likelihood that actors will pursue"
+  measures_overview: "using a Herfindahl index of the unweighted version"
+  findings_overview: "films that could boost their lagging status in the commercial hierarchy when they possessed relatively higher artistic than commercial status."
 ---
 
 # The Two Towers (or Somewhere in Between): The Behavioral Consequences of Positional Inconsistency across Status Hierarchies
@@ -51,6 +56,14 @@ We examine how actors react to status inconsistencies across multiple status hie
 **Research Question**
 How do actors respond to status inconsistencies across multiple status hierarchies, and how do hierarchy prestige, high primary status, and embedded professional networks condition attempts to improve lagging status? The paper examines this question in Hollywood, where performers can occupy different positions in artistic and commercial status hierarchies.
 
+**Hypotheses / Propositions**
+- H1a: Status inconsistency increases the likelihood that an actor will try to enhance status in the secondary status hierarchy.
+- H1b: This positive effect is greater when the actor's primary status hierarchy is more prestigious than the secondary hierarchy.
+- H2a: High status in the primary hierarchy weakens the positive effect of status inconsistency on attempts to increase secondary status.
+- H2b: This negative interaction is greater when the primary hierarchy is more prestigious than the secondary hierarchy.
+- H3a: Embeddedness in social interactions weakens the positive effect of status inconsistency on attempts to increase secondary status.
+- H3b: This negative interaction is greater when the primary hierarchy is less prestigious than the secondary hierarchy.
+
 **Mechanism Process**
 - IV(s): Directional status inconsistency between artistic and commercial status, operationalized as artistic status greater than commercial status and commercial status greater than artistic status.
 - DV(s): Secondary status enhancement, measured as appearing in films whose directors' and writers' status profiles could enhance the performer's lagging status hierarchy.
@@ -58,6 +71,12 @@ How do actors respond to status inconsistencies across multiple status hierarchi
 - Moderators: Primary hierarchy prestige, high status in the primary hierarchy, and embeddedness in prior collaboration networks.
 
 The paper argues that pluralistic value systems create multiple status hierarchies, and that actors experience dissonance when their standing is inconsistent across those hierarchies. In Hollywood, artistic status is treated as more prestigious than commercial status, so performers with higher artistic than commercial status are more likely to pursue commercial-status-enhancing films. Performers with higher commercial than artistic status are less likely to pursue artistic-status-enhancing films, suggesting that hierarchy-level prestige changes both motivation and perceived feasibility. High artistic status dampens secondary-status pursuit, while embeddedness strengthens pursuit for artistic-primary performers but further constrains commercial-primary performers.
+
+**Data & Measures**
+The study combines IMDb data on U.S. films released during 1990-2015 with U.S. box-office and film-award records; its second-stage sample contains 9,229 performer-film observations from 1996-2015. Artistic and commercial status are degree-centrality scores from five-year, one-year-lagged collaboration networks among performers, directors, and writers, weighted by awards and nominations or relative box-office performance. Status inconsistency is measured with directional artistic-greater-than-commercial and commercial-greater-than-artistic splines; high primary status is a top-50 indicator, embeddedness is a Herfindahl index of collaboration concentration, and secondary status enhancement is a binary indicator based on whether a film's director-writer crew could enhance the performer's lagging status. The authors estimate two-stage Heckman probit models in STATA 15 and cluster standard errors by performer.
+
+**Key Findings**
+H1a was partially supported: greater artistic-than-commercial status increased the likelihood of commercial-status enhancement by about 0.35% per unit (p = .000), whereas greater commercial-than-artistic status decreased artistic-status enhancement by about 0.17% (p = .012). H1b was supported because the former effect was significantly more positive. H2a was partially supported: high artistic status weakened the positive artistic-primary relationship, but high commercial status instead weakened the negative commercial-primary relationship; H2b was supported because the high-status moderation was more negative for the more prestigious artistic-primary hierarchy. H3a was partially supported: embeddedness strengthened the positive artistic-primary relationship, contrary to prediction, but amplified the negative commercial-primary relationship; H3b was supported because embeddedness had the greater dampening effect when commercial status was primary and artistic status secondary.
 
 **Theoretical Contribution**
 The paper reconnects contemporary status research with the older status inconsistency tradition by showing that actors' positions across multiple hierarchies can shape behavior. It theorizes value systems as a generalizable basis for multiple status hierarchies and introduces the idea that hierarchies themselves can be ranked by prestige. It also clarifies how high primary status and embeddedness act as boundary conditions whose effects depend on whether the actor's primary hierarchy is more or less prestigious.

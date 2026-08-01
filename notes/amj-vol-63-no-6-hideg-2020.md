@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Hideg 2020 From the Editors Publishing P
 text_path: "library/AMJ/vol-63-no-6/text/Hideg 2020 From the Editors Publishing Practical and Responsible Research in AMJ.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "editorial"
 keywords: ["practical implications", "responsible research", "methodological rigor", "counterintuitive findings", "open science", "diversity of scholars"]
@@ -52,6 +54,9 @@ Not reported in paper
 **Research Question**
 How should AMJ authors, reviewers, editors, and readers produce and evaluate management research so that its practical implications are rigorous, ethical, and socially responsible rather than harmful or easily misused?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Management research should help make organizations and society better, so practical implications need to be treated as an essential part of the manuscript rather than as a final technical hurdle.
 - Harm-risk focus: Research on sensitive topics can unintentionally reinforce victim blaming, stereotypes, insensitive practices, or harmful organizational decisions if its implications are shallow, sensationalized, or ethically underdeveloped.
@@ -60,6 +65,12 @@ How should AMJ authors, reviewers, editors, and readers produce and evaluate man
 - Field-development practices: The editorial recommends presenting work to diverse and interdisciplinary audiences and integrating responsible-management-research discussions into doctoral seminars.
 
 The process logic is normative rather than causal: practical responsibility begins when researchers formulate questions, continues through methodological design and interpretation, and extends into review, publication, and wider communication. Hideg, DeCelles, and Tihanyi argue that sensitive or counterintuitive findings can create social harm when methodological limits and ethical implications are not made explicit. They therefore call for a field-wide practice of coupling theoretical contribution with credible evidence, careful language, and attention to the consequences of research for organizational members and external stakeholders.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The essay is not a theory-building article; it contributes editorial guidance about how AMJ should understand the relation between theoretical contribution, practical implication, and responsible scholarship. It reframes practical implications as ethically consequential claims that must be supported by rigorous methods and careful interpretation, especially when research concerns vulnerable groups, sensitive workplace issues, CSR, discrimination, corruption, harassment, or other socially consequential topics.

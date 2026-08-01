@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Golden-Biddle 2020 Discovery as an Abduc
 text_path: "library/AMJ/vol-63-no-6/text/Golden-Biddle 2020 Discovery as an Abductive Mechanism for Reorienting Habits within Organizational Change.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-qualitative"
 keywords: ["discovery", "abduction sequences", "surprise", "doubt", "inquiry", "organizational change", "reorienting habits", "pragmatism"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "abduction from pragmatism and organizational studies"
   methods_overview: "As is typical of qualitative field research"
   keywords_source: "discovery as an abductive mechanism that"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "open and subsequent coding"
+  findings_overview: "surprises and discoveries, and constructively oriented responses to them, occurred continuously throughout organizational change"
 ---
 
 # Discovery as an Abductive Mechanism for Reorienting Habits within Organizational Change
@@ -50,6 +55,9 @@ Process studies of organizational and strategic change have drawn attention to t
 **Research Question**
 How did discovery unfold within the organizational change process? The paper studies how DeltaCare participants reoriented prevailing habits of belief and action while creating a new inpatient care delivery model.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Indeterminate situation: Participants first encountered surprising difficulty mapping and walking care flows, which exposed fragmented care delivery and patient hardship.
 - Abduction sequences: Discovery unfolded through five interdependent sequences: engaging the indeterminate situation, deepening its significance, constructing an imagined configuration, trying on new habits, and negotiating new habits.
@@ -58,6 +66,12 @@ How did discovery unfold within the organizational change process? The paper stu
 - Habit reorientation: Discovery helped participants move away from independent professional habits toward collaborative bedside care and negotiated interdependence.
 
 The process is abductive rather than a linear implementation mechanism. Surprises disrupted settled beliefs about care delivery; doubt made those beliefs problematic; inquiry enabled participants to imagine, test, and negotiate new ways of working. Across the five sequences, discovery operated continuously through organizational change rather than only at the outset.
+
+**Data & Measures**
+The qualitative corpus combined formal and conversational interviews, occasional follow-up emails or telephone calls, field observations and notes, and internal and external archival materials gathered around DeltaCare's care-model change. It included 25 in-depth semistructured formal interviews, five follow-up interviews, approximately 900 pages of interview transcripts, 100 pages of field notes, 275 pages of internal documents, and 150 pages of external documents; data collection ran for 30 months in 2007–2009, with telephone updates through 2011 and document collection through 2013. Analysis paired induction with abduction through iterative open and subsequent coding, cross-interview theme development, an inventory of consequential events retained when corroborated across disciplines or by archival materials, and data-rich vignettes used to articulate abduction sequences.
+
+**Key Findings**
+Discovery occurred continuously throughout organizational change, rather than only at its outset, through five interdependent abduction sequences: engaging the indeterminate situation, deepening its significance, constructing an imagined configuration, trying on new habits, and negotiating new habits. These sequences were joint, creative social activity comprising belief, surprise, doubt, and inquiry, along with attendant feelings and constructively oriented responses. The first two sequences helped participants move away from prevailing habits by developing new understanding and significance, while the final three moved them toward new habits by imagining, trying, and negotiating fundamentally new ways of working.
 
 **Theoretical Contribution**
 The paper contributes to organizational change theory by explaining discovery as an abductive mechanism through which participants reorient prevailing habits of belief and action. It theorizes abduction sequences as loosely connected and overlapping episodes of creative social activity driven by surprise, doubt, and inquiry. It also contributes a methodology for future process research by proposing abduction sequences as an analytic means for examining discovery in change, innovation, learning, and other inquiry processes.

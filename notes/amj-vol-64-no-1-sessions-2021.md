@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/Sessions 2021 Do the Hustle! Empowerment
 text_path: "library/AMJ/vol-64-no-1/text/Sessions 2021 Do the Hustle! Empowerment from Side-Hustles and Its Effects on Full-Time Work Performance.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["side-hustles", "psychological empowerment", "side-hustle complexity", "role enrichment", "side-hustle engagement", "positive affect", "attention residue", "affective shift"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "role enrichment theory"
   methods_overview: "using ordinary least squares (OLS) regression"
   keywords_source: "Side-hustles, income-generating work performed alongside full-time jobs"
+  hypotheses_source: "Hypothesis 4. Daily side-hustle empowerment positively relates to daily full-time work performance"
+  measures_overview: "three-item measure of task performance from Griffin,"
+  findings_overview: "2a, 2b, and 2d were supported, and Hypothesis 2c"
 ---
 
 # Do the Hustle! Empowerment from Side-Hustles and Its Effects on Full-Time Work Performance
@@ -54,6 +59,15 @@ Side-hustles, income-generating work performed alongside full-time jobs, are inc
 **Research Question**
 What makes side-hustles psychologically empowering, and how does empowerment from side-hustles spill over into full-time work performance? The paper asks whether side-hustle complexity and side-hustle motives shape empowerment, and whether daily empowerment enriches or conflicts with full-time work through affective and cognitive pathways.
 
+**Hypotheses / Propositions**
+- H1: Side-hustle complexity positively relates to side-hustle empowerment.
+- H2: The positive relationship between side-hustle complexity and side-hustle empowerment is stronger when workers have high (a) self-enhancement, (b) self-transcendence, (c) openness-to-change, and (d) conservation motives.
+- H3: Daily side-hustle empowerment positively relates to daily side-hustle engagement.
+- H4: Daily side-hustle empowerment positively relates to daily full-time work performance through daily side-hustle engagement and daily positive affect within full-time work.
+- H5: Daily side-hustle empowerment negatively relates to daily full-time work performance through daily side-hustle engagement and daily attention residue within full-time work.
+- H6: Negative affect within full-time work earlier in the day strengthens the positive relationship between daily side-hustle empowerment and daily side-hustle engagement.
+- H7: Negative affect within full-time work earlier in the day strengthens (a) the positive serial indirect effect of daily side-hustle empowerment on full-time work performance through engagement and positive affect and (b) the negative serial indirect effect through engagement and attention residue.
+
 **Mechanism Process**
 - IV(s): Study 1: side-hustle complexity and side-hustle motives. Study 2: daily side-hustle empowerment and full-time work negative affect.
 - DV(s): Study 1: side-hustle empowerment. Study 2: daily full-time work performance, with side-hustle engagement, positive affect, and attention residue modeled as intermediate outcomes.
@@ -61,6 +75,16 @@ What makes side-hustles psychologically empowering, and how does empowerment fro
 - Moderators: Study 1: self-enhancement, self-transcendence, openness to change, and conservation motives were theorized, but only self-enhancement, self-transcendence, and conservation significantly moderated the side-hustle complexity-empowerment relationship. Study 2: negative affect within full-time work earlier in the day.
 
 The mechanism combines enrichment and conflict. More complex side-hustles give workers opportunities for autonomy, skill use, task identity, significance, and feedback, which are expected to support psychological empowerment, especially when some motives make workers more responsive to those opportunities. Daily empowerment then increases side-hustle engagement; the affective component spills into full-time work as positive affect and improves performance, while the cognitive component produces attention residue that can distract from full-time work. The authors find that both pathways operate, but the positive affect pathway is stronger overall, and negative affect from full-time work strengthens later side-hustle engagement through affective shift.
+
+**Data & Measures**
+Study 1 surveyed 337 full-time employees with side-hustles across three waves separated by three weeks. Side-hustle complexity combined task autonomy, task identity, task feedback, task significance, and skill variety scales from Morgeson and Humphrey (2006). Four six-item motive measures were adapted from Cable and Edwards (2004) and Schwartz (1992), and side-hustle empowerment combined self-determination, impact, competence, and meaning from Spreitzer's (1995) 12-item measure. OLS regressions tested H1 and H2.
+
+Study 2 used a 10-day experience-sampling design with 80 employee-coworker dyads and 507 complete dyad-day observations. Employee surveys measured daily side-hustle empowerment with the same 12-item measure, side-hustle engagement with six items, positive and negative affect within full-time work with the shortened 10-item PANAS, and attention residue with three adapted items; coworkers rated full-time work performance with three task-performance items. Multilevel CFA and within-person path models in Mplus clustered observations by dyad, group-mean centered the predictors, allowed random intercepts, controlled previous-day outcomes, and used Monte Carlo confidence intervals for the serial indirect effects. Both studies are observational rather than randomized causal designs.
+
+**Key Findings**
+Study 1 supported H1: side-hustle complexity was positively related to empowerment (b = .43, SE = .05, p < .01). The self-enhancement (b = .15, p < .05), self-transcendence (b = .11, p < .01), and conservation (b = .14, p < .01) interactions were significant, supporting H2a, H2b, and H2d; the openness-to-change interaction was not significant (b = .00), so H2c was not supported.
+
+Study 2 supported H3 (daily empowerment to engagement: γ = .65, p < .01), H4 (positive serial indirect effect through engagement and positive affect: IND = .02, 95% CI [.008, .030]), and H5 (negative serial indirect effect through engagement and attention residue: IND = -.01, 95% CI [-.011, -.001]). H6 was supported: negative affect strengthened the empowerment-engagement relationship (γ = .70, p < .01; simple slopes = .31 at low and .99 at high negative affect). H7a and H7b were also supported: negative affect strengthened both the positive indirect path (DIFF = .02, 95% CI [.003, .041]) and the negative indirect path (DIFF = -.01, 95% CI [-.022, -.004]). A supplementary comparison found the positive-affect pathway significantly stronger than the attention-residue pathway, yielding a net positive performance effect.
 
 **Theoretical Contribution**
 The paper shifts side-hustle research away from the assumption that side work mainly drains resources and harms full-time work. It uses role enrichment theory to show that side-hustle empowerment can generate resources that carry into full-time work, while still modeling attention residue as a conflicting pathway.

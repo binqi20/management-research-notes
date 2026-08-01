@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Dorobantu 2020 Political Risk and Allian
 text_path: "library/AMJ/vol-63-no-6/text/Dorobantu 2020 Political Risk and Alliance Diversity A Two-Stage Model of Partner Selection in Multipartner Alliances.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["political risk", "partner selection", "multipartner alliances", "alliance diversity", "country knowledge", "political influence", "project finance"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Institutional theory (Kostova, Roth, & Dacin, 2008"
   methods_overview: "Estimation method is hierarchical GLM with logistic link function"
   keywords_source: "political risk influences partner selection in multipartner alliances"
+  hypotheses_source: "Hypothesis 2b. A lead firm is more likely to select a"
+  measures_overview: "We measure a bank’s country knowledge"
+  findings_overview: "offering no support for Hypothesis 2b."
 ---
 
 # Political Risk and Alliance Diversity: A Two-Stage Model of Partner Selection in Multipartner Alliances
@@ -52,6 +57,13 @@ We examine how political risk influences partner selection in multipartner allia
 **Research Question**
 How does political risk in the project country influence partner selection in multipartner alliances, and how does that selection process shape alliance diversity? The paper asks this at two levels: which firm is selected as the lead firm, and which group of other partners the lead firm selects.
 
+**Hypotheses / Propositions**
+- H1a: A firm with country knowledge is more likely to lead a multipartner alliance in a country with high rather than low political risk.
+- H1b: A firm with political influence in a country is more likely to lead a multipartner alliance there when political risk is high rather than low.
+- H2a: A lead firm is more likely to select a group with extensive country knowledge when alliance operations are in a country with high rather than low political risk.
+- H2b: A lead firm is more likely to select a group with political influence in the country when alliance operations are in a country with high rather than low political risk.
+- H3 (corollary): A lead firm is more likely to form a more diverse multipartner alliance when alliance operations are in a country with high rather than low political risk.
+
 **Mechanism Process**
 - IV(s): Host-country political risk; lead-firm country knowledge; lead-firm political influence; syndicate country knowledge; syndicate political influence; syndicate diversity.
 - DV(s): Lead-firm selection; realized syndicate selection versus counterfactual alternatives; syndicate diversity.
@@ -59,6 +71,12 @@ How does political risk in the project country influence partner selection in mu
 - Moderators: Host-country political risk moderates the value of lead-firm country knowledge, lead-firm political influence, syndicate country knowledge, and syndicate diversity; the hypothesized moderation for syndicate political influence was not supported in the main second-stage model.
 
 The mechanism is a two-stage partner-selection process shaped by institutional context. In politically risky countries, project sponsors are more likely to select lead firms with host-country knowledge and political influence, and those lead firms are more likely to select partner groups with extensive host-country knowledge; the paper did not find the same supported political-risk interaction for syndicate political influence. Because politically useful knowledge may be distributed across dissimilar banks, the search for country knowledge leads lead firms to accept more diverse multipartner alliances despite higher coordination costs.
+
+**Data & Measures**
+Project and lending-syndicate data come from Dealogic Projectware and Thomson SDC Platinum. In the first stage, the authors compare 96,521 potential lead-firm observations using hierarchical binomial multivariable regression with a logistic link and project fixed effects. Lead-firm country knowledge is the count of a bank's prior projects in the host country; political influence is bilateral trade between the bank's home country and the host country as a share of the host country's total trade; and political risk is measured as 1 minus POLCON. In the second stage, the authors compare 1,044 realized syndicates with 33,460 simulated counterfactual syndicates. Syndicate country knowledge and political influence sum the corresponding bank-level measures, excluding the lead firm, and syndicate diversity aggregates within-syndicate differences in bank size, ownership type, home-country political risk, and project-finance experience.
+
+**Key Findings**
+H1a and H1b were supported: political risk positively strengthened the effects of lead-firm country knowledge and political influence on lead-firm selection (full-model interactions = 0.44, p < .001, and 0.02, p < .001, respectively). H2a was supported (interaction = 1.23, p < .001), but H2b was not (interaction = 0.02, not significant): political risk reinforced the value of syndicate country knowledge but not syndicate political influence beyond its general relevance. H3 was supported (interaction = 1.48, p < .01): although lead firms generally preferred lower-diversity syndicates, that preference weakened as political risk increased, making a diverse alliance more likely to form in a high-risk country.
 
 **Theoretical Contribution**
 The paper contributes to multipartner alliance research by theorizing partner selection as a sequential process: first a lead firm is selected, then the lead firm selects a group of other partners. It also links alliance research to institutional context by showing that host-country political risk changes how firms weigh context-specific resources against coordination costs. Finally, it reframes alliance diversity as a by-product of resource search under political risk rather than as a goal in itself.

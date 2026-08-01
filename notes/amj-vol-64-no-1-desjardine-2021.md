@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/DesJardine 2021 How Temporal Focus Shape
 text_path: "library/AMJ/vol-64-no-1/text/DesJardine 2021 How Temporal Focus Shapes the Influence of Executive Compensation on Risk Taking.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["behavioral agency model", "temporal focus", "executive compensation", "risk taking", "merger and acquisition investment"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "The behavioral agency model (BAM) posits"
   methods_overview: "For our main models, we used firm fixed-effects"
   keywords_source: "the relationship between wealth type and risk taking hinges on CEOs’ temporal focus."
+  hypotheses_source: "strengthens the negative effect of current option"
+  measures_overview: "measured acquisition spending as the natural logarithm of a firm’s"
+  findings_overview: "wealth 3 present focus is positive and statistically"
 ---
 
 # How Temporal Focus Shapes the Influence of Executive Compensation on Risk Taking
@@ -51,6 +56,12 @@ The behavioral agency model (BAM) posits that executives endow current wealth, b
 **Research Question**
 The paper asks how CEOs' present and future temporal focus shape the relationship between current/prospective option wealth and strategic risk taking. It tests this question in the context of M&A investment, where CEOs' compensation incentives and temporal attention jointly condition acquisition spending.
 
+**Hypotheses / Propositions**
+H1a. A CEO’s present temporal focus strengthens the negative effect of current option wealth on M&A investment.
+H1b. A CEO’s present temporal focus strengthens the positive effect of prospective option wealth on M&A investment.
+H2a. A CEO’s future temporal focus weakens the negative effect of current option wealth on M&A investment.
+H2b. A CEO’s future temporal focus weakens the positive effect of prospective option wealth on M&A investment.
+
 **Mechanism Process**
 - IV(s): Current option wealth; prospective option wealth; CEO present temporal focus; CEO future temporal focus.
 - DV(s): M&A investment, measured as acquisition spending.
@@ -58,6 +69,12 @@ The paper asks how CEOs' present and future temporal focus shape the relationshi
 - Moderators: CEO present temporal focus and CEO future temporal focus.
 
 The BAM predicts that CEOs endow current option wealth and therefore become risk averse with it, while prospective option wealth is not endowed and therefore encourages risk taking. DesJardine and Shi argue that present-focused CEOs intensify this pattern because attention to the here-and-now strengthens endowment of current wealth and weakens attachment to prospective wealth. Future-focused CEOs reverse the pattern because attention to future outcomes makes prospective wealth psychologically endowed and shifts attention away from current wealth.
+
+**Data & Measures**
+The study uses a 2003–2016 panel of 7,700 CEO-firm-year observations from 1,961 firms, combining earnings-call transcripts with compensation, executive, firm financial, and M&A data. Acquisition spending is the natural logarithm of a firm's total annual acquisition expenditures. Current option wealth is the number of in-the-money options in each grant multiplied by the grant's spread; prospective option wealth combines the number of options held, estimated time to expiry, stock price, and the study-period average annual Dow Jones Industrial Average increase. Present and future temporal focus are measured from CEOs' speech in quarterly earnings calls using the corresponding LIWC 2015 dictionaries. The hypotheses are tested with firm fixed-effects models, year dummies, and standardized interaction terms.
+
+**Key Findings**
+The results align with all four hypotheses. Present focus strengthens both the negative current-wealth effect (H1a: b = -0.05, p < .01) and the positive prospective-wealth effect (H1b: b = 0.08, p < .05) on acquisition spending. Future focus weakens and reverses these relationships: the current wealth interaction is positive (H2a: b = 0.06, p < .05), while the prospective wealth interaction is negative and marginally significant on a two-tailed test (H2b: b = -0.07, p < .10). At strong future focus, a one-standard-deviation increase in current wealth increases acquisition spending by 6.1%, whereas the same increase in prospective wealth decreases it by 4.5%.
 
 **Theoretical Contribution**
 The paper extends the behavioral agency model by making its implicit temporal assumption explicit: option wealth affects risk taking differently depending on where CEOs direct temporal attention. It shows that present focus strengthens the BAM's predicted current-wealth/risk and prospective-wealth/risk relationships, while future focus weakens or reverses them. The study also contributes to temporal focus research by showing that temporal focus does not have a uniform relationship with risk taking; its implication depends on whether the relevant incentive is current or prospective wealth.

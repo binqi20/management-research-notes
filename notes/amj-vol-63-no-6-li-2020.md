@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Li 2020 A Dual-Agency Model of Firm CSR 
 text_path: "library/AMJ/vol-63-no-6/text/Li 2020 A Dual-Agency Model of Firm CSR in Response to Institutional Pressure Evidence from Chinese Publicly Listed Firms.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["corporate social responsibility", "institutional pressure", "dual-agency model", "public CSR agents", "private CSR agents", "Twelfth Five-Year Plan", "Chinese listed firms", "legitimacy concerns"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "institutional theory is a powerful lens"
   methods_overview: "fixed-effect ordinary least squares (OLS) model"
   keywords_source: "dual-agency model"
+  hypotheses_source: "Hypothesis 4. Chinese firms are less likely to respond"
+  measures_overview: "The final RKS score is a weighted average of"
+  findings_overview: "positively to the plan by increasing their CSR performance, but their response varied"
 ---
 
 # A Dual-Agency Model of Firm CSR in Response to Institutional Pressure: Evidence from Chinese Publicly Listed Firms
@@ -51,6 +56,12 @@ Findings from prior studies regarding the relationship between government corpor
 **Research Question**
 How do political institutions and human agents jointly influence firms' CSR performance? The paper asks when Chinese firms respond to a national CSR initiative, the Twelfth Five-Year Plan, by increasing CSR, and how that response varies with provincial officials' promotion incentives and CEOs' legitimacy concerns.
 
+**Hypotheses / Propositions**
+H1: Chinese firms are more likely to respond to the Twelfth Five-Year Plan with increased CSR performance when provincial officials have greater political contestability.
+H2: Chinese firms are more likely to respond to the plan with increased CSR performance when provincial officials have moderate career horizons.
+H3: Chinese firms are more likely to respond to the plan with increased CSR performance when their CEOs have more political connections with the central government.
+H4: Chinese firms are less likely to respond to the plan with increased CSR performance when their CEOs have longer tenure.
+
 **Mechanism Process**
 - IV(s): The Twelfth Five-Year Plan, measured as a post-policy-period indicator for 2011-2014 versus 2009-2010.
 - DV(s): Firm CSR performance, measured with Rankins CSR Ratings (RKS) for Chinese listed firms' CSR reports.
@@ -58,6 +69,12 @@ How do political institutions and human agents jointly influence firms' CSR perf
 - Moderators: Provincial officials' political contestability, provincial officials' career horizon, CEO political connections to the central government, and CEO tenure.
 
 The mechanism is a dual-agency process in which institutional pressure is expected to affect firm CSR only when relevant public and private agents have incentives to act on that pressure. Public CSR agents, namely provincial officials, are theorized to press firms toward CSR when CSR helps their promotion prospects, especially when they are politically contestable or have moderate career horizons. Private CSR agents, namely CEOs, are theorized to increase CSR when they need legitimacy, especially when they are politically connected to the central government or are early enough in their tenure to face stronger legitimacy concerns. The estimates show a positive post-plan CSR shift and stronger responses under those public- and private-agent conditions.
+
+**Data & Measures**
+The study merges CSR ratings, firm financial and governance data, provincial statistics, provincial-official biographies, and manually matched CEO political ties for 746 listed firms from 2009 to 2014. Firm CSR performance is the RKS weighted score across 70 indicators (0-100), and the Twelfth Five-Year Plan is coded 1 for 2011-2014 and 0 for 2009-2010. Political contestability is officials' prior provincial appointments; career horizon is their average years until retirement and enters the moderation test as a squared term; CEO political connections count current or prior senior central-level political appointments; and CEO tenure is years in the position. The authors estimate firm fixed-effect OLS models with robust standard errors clustered by province.
+
+**Key Findings**
+Following the Twelfth Five-Year Plan, firms' RKS scores increased by 2.11 points (p < .05). H1 was supported: officials' political contestability strengthened the plan's positive association with CSR (interaction = 1.28, p < .10). H2 was supported in the baseline model through a positive squared-career-horizon interaction (0.01, p < .10), although the self-selection robustness check did not yield consistent results for H2. H3 was supported: CEOs' central-government political ties strengthened the association (3.75, p < .05). H4 was supported: CEO tenure weakened it (-0.57, p < .05).
 
 **Theoretical Contribution**
 The paper contributes to CSR research by explaining why a homogeneous national CSR initiative can produce heterogeneous firm responses. It extends institutional theory by bringing individual agents back into the institution-CSR relationship and by distinguishing public agents' career concerns from private agents' legitimacy concerns. It also provides a cross-level account of CSR implementation in which national policy, provincial officials, CEOs, and firms jointly shape CSR performance.

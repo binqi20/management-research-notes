@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Toubiana 2020 Once in Orange Always in O
 text_path: "library/AMJ/vol-63-no-6/text/Toubiana 2020 Once in Orange Always in Orange Identity Paralysis and the Enduring Influence of Institutional Logics on Identity.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-qualitative"
 keywords: ["identity paralysis", "de-identification", "institutional logics", "identity material", "total institutions", "Canadian corrections"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "institutional logics"
   methods_overview: "qualitative design"
   keywords_source: "identity paralysis"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "I used an open coding process that enabled codes to"
+  findings_overview: "remain stuck in their identifications and experience identity paralysis"
 ---
 
 # Once in Orange Always in Orange? Identity Paralysis and the Enduring Influence of Institutional Logics on Identity
@@ -50,6 +55,9 @@ We know that individuals' identities can become intertwined with institutions th
 **Research Question**
 How and why can individuals' efforts to de-identify with institutional logics fail during transition out of a total institution? The paper examines previously incarcerated men's efforts to disentangle themselves from prison-associated logics as they move back into society.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Institutional logics in prison: Public safety, jailhouse, and rehabilitative logics provide rules, identity prescriptions, and narratives for understanding self and action.
 - Identity paralysis pattern: Some men remain identified with prison logics after release when they lack identity targets and material, feel labeled, resign themselves to existing identifications, and rely on jailhouse or rehabilitative narratives to justify self.
@@ -57,6 +65,12 @@ How and why can individuals' efforts to de-identify with institutional logics fa
 - Process outcome: Identity paralysis is the freezing of identification with an undesirable or no longer appropriate target.
 
 The process is not a simple switch from one cognitively accessible logic to another. De-identification breaks down when men are aware of alternatives but cannot materially claim them and simultaneously experience negative social evaluations. Under those conditions, the content of jailhouse and rehabilitative logics remains useful for explaining the self, but that usefulness can keep men attached to identities they want to leave behind.
+
+**Data & Measures**
+The study combined more than 4,000 pages of archival documents from Canadian corrections with interviews with field actors to identify the corrections logics; its primary transition data were 43 open interviews with previously incarcerated men. The author used qualitative content and thematic pattern-inducing analysis for the archival material, then iteratively coded the interview transcripts for logic awareness, enactment, identification, and de-identification. Open coding and negative-case analysis compared unsuccessful and successful de-identification and developed first-level and higher-level categories.
+
+**Key Findings**
+The analysis identified 20 men whose de-identification was unsuccessful and 23 who de-identified. In the identity-paralysis pattern, lack of new identity targets and material together with labeling led to resignation, continued identification with prison logics, and reliance on jailhouse or rehabilitative narratives. In successful de-identification, family or religious logics supplied alternative identities; accessible identity material, turning points that made new logic content meaningful, and emotion work enabled men to place prison identities in the past.
 
 **Theoretical Contribution**
 The paper contributes to institutional logics theory by showing that logics are not merely cognitive toolkits that actors can switch among when a new logic becomes accessible. Identity material and the content of logics shape whether a logic can become a viable source of identification or de-identification. It also contributes to identity-transition research by theorizing identity paralysis as failed de-identification driven by resignation, material constraint, labeling, and reliance on existing logic narratives rather than by a simple desire to hold on to a lost identity.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/Veltrop 2021 Too Unsafe to Monitor How B
 text_path: "library/AMJ/vol-64-no-1/text/Veltrop 2021 Too Unsafe to Monitor How Board–CEO Cognitive Conflict and Chair Leadership Shape Outside Director Monitoring.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-mixed"
 keywords: ["outside directors", "director monitoring", "board–CEO cognitive conflict", "chair participative leadership", "board psychological safety", "boardroom dynamics", "corporate governance"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Fama & Jensen, 1983"
   methods_overview: "suggested employing a mixed-methods approach"
   keywords_source: "board psychological safety as an important element shaping director monitoring"
+  hypotheses_source: "Proposition 1. Chair participative leadership moderates the relationship between board–CEO cognitive"
+  measures_overview: "The chair listens to directors’ ideas and suggestions"
+  findings_overview: "was positive and significant (b 5 .43; p , .05)."
 ---
 
 # Too Unsafe to Monitor? How Board–CEO Cognitive Conflict and Chair Leadership Shape Outside Director Monitoring
@@ -53,6 +58,11 @@ Research into boards of directors has provided mixed support for the view that o
 **Research Question**
 How and why does board–CEO cognitive conflict affect outside directors’ engagement in monitoring, and what role does the board chair play in shaping that relationship? The paper also asks whether board psychological safety explains why participative chair leadership helps boards handle cognitive conflict more constructively.
 
+**Hypotheses / Propositions**
+- Proposition 1: Chair participative leadership moderates the relationship between board–CEO cognitive conflict and directors’ engagement in monitoring, such that the relationship is less negative at higher levels of chair participative leadership.
+- Proposition 2: Chair participative leadership moderates the relationship between board–CEO cognitive conflict and board psychological safety climate, such that the relationship is less negative at higher levels of chair participative leadership.
+- Proposition 3: Chair participative leadership moderates the indirect effect of board–CEO cognitive conflict on directors’ engagement in monitoring through board psychological safety climate, such that this indirect effect is less negative when chair participative leadership is high.
+
 **Mechanism Process**
 - Focal tension: Outside directors are expected to monitor the CEO partly because their outsider status brings divergent views, but those same divergent views can create board–CEO cognitive conflict.
 - Study 1 process: In observed disagreement episodes, low participative chair leadership was associated with directors withdrawing, talking over one another, or failing to seek further information from the CEO; more participative chairs solicited views, structured discussion, and helped directors remain engaged.
@@ -60,6 +70,12 @@ How and why does board–CEO cognitive conflict affect outside directors’ enga
 - Mechanism: Participative chairs signal that divergent views will be heard and respected, which helps preserve psychological safety during conflict and supports continued director monitoring.
 
 The central process is not that cognitive conflict automatically improves monitoring. The paper argues that cognitive conflict can undermine monitoring when a psychologically unsafe board climate leads directors to reject one another’s views or detach from the monitoring process. Chair participative leadership attenuates this negative relationship by creating conditions in which outside directors continue to challenge, seek information, and deliberate with the CEO.
+
+**Data & Measures**
+Study 1 used seven videotaped board meetings totaling over 17 hours across five Australian financial institutions, semi-structured interviews with 39 outside directors, four CEOs, and one CFO, and inductive open coding and pattern matching of 16 substantial board–CEO disagreement episodes. Study 2 used multisource web surveys from 310 outside directors across 64 Dutch organizations: directors rated board–CEO cognitive conflict with two items, chair participative leadership with six items, and board psychological safety with five adapted items, while CEOs rated each director’s monitoring with three items. The board-level predictor, mediator, and moderator were aggregated from director ratings, whereas director monitoring remained at the individual level; the authors estimated a multilevel 2–2–1 first-stage moderated-mediation model in Stata 15 with 10,000 bootstrap replications.
+
+**Key Findings**
+Study 1 found that board–CEO disagreement could undermine directors’ information seeking, especially when chair participative leadership was low; participative chairs helped directors remain engaged, and the interviews identified board psychological safety as the mechanism linking chair leadership to monitoring during conflict. Study 2 supported all three propositions: the chair-leadership interaction was positive for director monitoring (Proposition 1: b = 1.25, p < .01), with the negative conflict–monitoring relationship attenuated at higher chair participative leadership; the interaction was also positive for board psychological safety (Proposition 2: b = .59, p < .01), with conflict negatively related to safety at low but not high chair participative leadership; and the conditional indirect effect through psychological safety was positive and significant (Proposition 3: b = .43, p < .05, 95% CI [.01, .86]), making the negative indirect effect less pronounced when chair participative leadership was high.
 
 **Theoretical Contribution**
 The paper refines agency-based corporate governance theory by showing that two standard prescriptions, appointing outside directors and using an independent chair, are insufficient unless boardroom dynamics allow directors to monitor effectively. It shifts attention from the chair mainly as a counterweight or resource for the CEO to the chair as leader of the board itself.

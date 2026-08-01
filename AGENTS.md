@@ -142,47 +142,22 @@ audit**:
 
 **Current main-branch audit state (2026-08-01):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 15 upgraded 25 notes (AMJ vol-64-no-3 + vol-64-no-2, all v2
-augmentations) to v3, and is the **first batch of the backfill to finish
-spotless — 225/225 prose-field verdicts SUPPORTED, with no residual `PARTIAL`
-accepted** — after nineteen evidence-based repairs across ten notes in three
-repair rounds and four audit rounds. The upgrade phase was the cleanest yet:
-**all 25 augmentations passed the validator and the diff-guard on the first
-attempt, with zero self-fix cycles.** Six of the thirteen round-1 `PARTIAL`s
-were the no-practice-section scope drift this 2021 cohort keeps producing — a
-pre-scan run before the audits found that **14 of the 25 papers contain no
-practical-implication marker at all**, and five of those six drifted fields sat
-on flagged papers. Jacobs, Jiang, Naumovska, Reinecke and Zhelyazkov each
-prescribed advice to audiences their papers never address; Myers listed
-"clients" as an external learning source when the paper's own five are faculty,
-industry experts, other teams, second-year MBA students and personal network
-contacts — clients being the project sponsors who *rate* team performance. Three
-`PARTIAL`s landed on the new v3 sections, each with a distinct cause: Liu
-credited the China Stock Market and Accounting Research database with ownership
-information when the paper searched it for an alternative political-linkage
-robustness measure; Opper described M8–M12 as uniformly adding planning dummies
-and their interactions when the paper builds them stepwise ("In M8, we only
-included the continuous measure of network constraint"); and Reinecke
-misreported two of the paper's three "revealing case" reasons, which a page
-break had split across columns. Wolfson presented HR information systems as a
-practice tool when the paper raises them only as a future-research archive, and
-Zipay grouped moral identity under antecedents of leniency when the paper names
-it as a personality trait moderating *reactions* to leniency.
-
-Two process findings are worth carrying forward. **Three of round 2's five
-remaining `PARTIAL`s were introduced by the repairs themselves** — a factual
-error, an over-correction, and a misclassification — and were caught only
-because every repaired note is re-audited; this is the strongest case yet for
-the assemble-then-repair-then-re-audit ordering. And **a truncated view of a
-matched line is a distinct failure mode from a zero-hit search**: the parent
-twice read a 130-character preview of a two-column line and drew the wrong
-conclusion, once nearly deleting a supported claim and once writing a repair
-that asserted the opposite of what the line said. A matched line that drives a
-factual claim must be printed untruncated. The batch left the record total
-unchanged. It ran on `claude-opus-5`, as batches 08 through 14 did (batches
-01–07 recorded `claude-opus-4-8`), so its notes carry
-`augmented_model: "claude-opus-5"`. The corpus contains 61 legacy v1
-notes, 734 v2 notes, and 372 v3 notes with evidence anchors; new notes are
+batch 16 upgraded 25 notes (AMJ vol-64-no-1 + vol-63-no-6, all v2
+augmentations) to v3. The final batch audit is **225/225 prose-field verdicts
+SUPPORTED, with no residual `PARTIAL` accepted**, after five evidence-based
+legacy-field repairs across four notes in two repair rounds and three audit
+rounds. All 25 augmentation deltas passed the validator and diff-guard on the
+first attempt with zero self-fix cycles. The first audit round found four
+legacy-field `PARTIAL`s: inferred practitioner directives in Abdurakhmonov,
+Cappellaro, and Pierce, plus Taeuscher limitations not stated by the paper. A
+fresh auditor then identified one new nuance in Cappellaro's Future Research;
+the source-narrowed repair cleared in round 3. All 75 verdicts on the three new
+v3 fields were `SUPPORTED`, so the repeated-new-field stop rule was not
+triggered. This is the first backfill batch run end-to-end on `gpt-5.6-sol`
+for both augmentation and audit; batches 01–07 recorded `claude-opus-4-8` and
+batches 08–15 recorded `claude-opus-5`. A cross-family spot-audit follows at
+the workshop review. The corpus contains 61 legacy v1
+notes, 709 v2 notes, and 397 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -191,7 +166,7 @@ fields were written by `extraction_model`, the three v3 sections by
 `augmented_model`, and the whole note passed a fresh full 9-field rubric-v2
 audit at augmentation time (a mechanical diff-guard,
 `tools/verify_augmentation.py`, proves the original audited content was
-untouched). `PARTIAL`
+untouched before any explicitly documented audit repair). `PARTIAL`
 verdicts (stylistic compressions that don't rise to a faithfulness failure)
 are flagged for human review but do not block publication. The library has
 never produced a `CONTRADICTED` verdict — no claim in any note actively
@@ -216,7 +191,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.48.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.49.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

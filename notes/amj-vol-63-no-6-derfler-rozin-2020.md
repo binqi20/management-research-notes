@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Derfler-Rozin 2020 Motivation Purity Bia
 text_path: "library/AMJ/vol-63-no-6/text/Derfler-Rozin 2020 Motivation Purity Bias Expression of Extrinsic Motivation Undermines Perceived Intrinsic Motivation and Engenders Bias in Selection Decisions.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["motivation purity bias", "extrinsic motivation", "intrinsic motivation", "selection decisions", "hiring managers", "management myths"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Drawing on popular management myths as our overarching framework"
   methods_overview: "studies in the paper we used logistic regression for"
   keywords_source: "We term this effect motivation purity bias"
+  hypotheses_source: "the candidate is less intrinsically motivated, in turn engendering bias against such candidates."
+  measures_overview: "candidate (“yes,” coded as 1, or “no,” coded as 0) and"
+  findings_overview: "Extrinsic motivation had a negative indirect effect via"
 ---
 
 # Motivation Purity Bias: Expression of Extrinsic Motivation Undermines Perceived Intrinsic Motivation and Engenders Bias in Selection Decisions
@@ -51,6 +56,10 @@ Organizational selection decisions often involve an exchange of information betw
 **Research Question**
 The paper asks whether decision makers penalize job candidates who express extrinsic motivation because they infer that such candidates are less intrinsically motivated. It focuses on whether this "motivation purity bias" affects selection decisions even though the authors argue that expressed extrinsic motivation should not be treated as a negative signal in salaried employment contexts.
 
+**Hypotheses / Propositions**
+H1: Expression of extrinsic motivation negatively affects perceived intrinsic motivation.
+H2: Expression of extrinsic motivation negatively affects selection outcomes by reducing perceived intrinsic motivation.
+
 **Mechanism Process**
 - IV(s): Candidates' expressed extrinsic motivation in cover letters, interview scripts, videos, or transcripts; expressed intrinsic motivation is manipulated or measured as a comparison/control.
 - DV(s): Perceived intrinsic motivation, binary selection decisions, and continuous candidate ratings.
@@ -58,6 +67,16 @@ The paper asks whether decision makers penalize job candidates who express extri
 - Moderators: Expressed intrinsic motivation and decision-maker work experience are examined, but the paper reports that the bias generally persists regardless of candidates' expressed intrinsic motivation and is no less pronounced among more experienced decision makers.
 
 The mechanism is that decision makers draw on a management myth that treats extrinsic and intrinsic motivation as antagonistic. When a candidate signals interest in salary, benefits, flexibility, or similar extrinsic job features, decision makers infer lower intrinsic motivation, and lower perceived intrinsic motivation then reduces candidate evaluations and selection likelihood. The paper tests this process across naturally written cover letters, experimental interview scripts, and hiring-manager evaluations of video or transcript stimuli.
+
+**Data & Measures**
+Study 1 used 256 business-school students' naturally written cover letters, a separate 496-student sample to code expressed intrinsic or extrinsic motivation, and 310 business-school students as decision makers. Study 2 used 302 online participants in a within-subject 2 × 2 design; each evaluated four interview transcripts that manipulated average versus high expressed intrinsic and extrinsic motivation, with scripts separately piloted by 376 online participants. Study 3a used a between-subject 2 × 2 video-interview experiment with 239 regularly hiring managers recruited through ROI Rocket; Study 3b used a separate 247-manager sample and interview transcripts with identical motivation wording across the crossed conditions. Across studies, perceived intrinsic and extrinsic motivation were measured with multi-item scales adapted from the Work Extrinsic and Intrinsic Motivation Scale, and selection outcomes were a binary hire/no-hire decision and a 0–100 candidate rating. Analyses used logistic and OLS regressions, clustered standard errors where observations were repeated, bootstrapped indirect effects, and a random-effects internal meta-analysis.
+
+**Key Findings**
+- Study 1 supported H1: coded extrinsic-motivation expression predicted lower perceived intrinsic motivation (b = −0.18, p = .001). It supported H2 through negative indirect effects on binary selection (b = −0.21, 95% CI [−0.33, −0.09]) and candidate ratings (b = −1.73, 95% CI [−2.80, −0.68]).
+- Study 2 supported H1 (b = −0.29, p < .001) and H2 through negative indirect effects on binary selection (b = −0.47, 95% CI [−0.64, −0.32]) and ratings (b = −4.26, 95% CI [−5.74, −2.95]). Only in this study was the H1 effect stronger when expressed intrinsic motivation was high.
+- Study 3a supported H1 with controls (b = −0.22, p = .047; p = .056 without controls) and H2 through negative indirect effects on binary selection (b = −0.26, 95% CI [−0.61, −0.002]) and ratings (b = −1.61, 95% CI [−3.75, −0.09]).
+- Study 3b supported H1 with controls (b = −0.22, p = .048; p = .091 without controls) and H2 through negative indirect effects on binary selection (b = −0.35, 95% CI [−0.87, −0.006]) and ratings (b = −1.74, 95% CI [−3.71, −0.25]); without controls, the indirect effects were significant only at the 90% confidence level.
+- The random-effects meta-analysis supported H1 (b = −0.24, 95% CI [−0.30, −0.18]) and H2 for both binary selection (indirect b = −0.34, 95% CI [−0.46, −0.22]) and continuous ratings (indirect b = −2.77, 95% CI [−4.08, −1.45]). The expressed-intrinsic-motivation interaction was not significant across studies.
 
 **Theoretical Contribution**
 The paper introduces motivation purity bias as a selection-bias mechanism rooted in naive beliefs about motivation rather than stereotypes about social categories. It integrates motivation research with organizational decision-making bias research by showing that decision makers' beliefs about candidates' motives can shape consequential hiring judgments. It also contributes to research on the science-practice gap by arguing that outdated or simplified management ideas can persist in managerial judgment even when later evidence points in a different direction.

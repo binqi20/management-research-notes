@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/Dlugos 2021 Turned Down and Taking Off R
 text_path: "library/AMJ/vol-64-no-1/text/Dlugos 2021 Turned Down and Taking Off Rejection and Turnover in Internal Talent Markets.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -54,6 +56,9 @@ evidence:
   theories_overview: "Drawing on the extant intraorganizational mobility literature"
   methods_overview: "We used logistic regression to examine"
   keywords_source: "Internal talent markets—created when firms post open jobs"
+  hypotheses_source: "of another internal candidate is less likely to voluntarily exit the firm, compared to an internal candidate"
+  measures_overview: "internal (“1”) or external candidate (“0”) filled each"
+  findings_overview: "significantly less likely to exit when they are interviewed by the hiring manager (compared to being rejected earlier)"
 ---
 
 # Turned Down and Taking Off? Rejection and Turnover in Internal Talent Markets
@@ -64,6 +69,10 @@ Internal talent markets—created when firms post open jobs and invite current e
 **Research Question**
 When are internal job applicants who are rejected more or less likely to leave the firm voluntarily, and how do hiring-manager interview decisions and internal-versus-external selection outcomes inform rejected candidates' perceptions of future internal advancement?
 
+**Hypotheses / Propositions**
+H1: An internal candidate rejected after interviewing with the hiring manager is less likely to voluntarily exit than one rejected without such an interview.
+H2: An internal candidate rejected in favor of another internal candidate is less likely to voluntarily exit than one rejected in favor of an external candidate.
+
 **Mechanism Process**
 - IV(s): Rejection after a hiring manager interview versus rejection earlier in the hiring process; rejection in favor of an internal candidate versus an external candidate.
 - DV(s): Voluntary exit from HealthCo within six months of the focal rejection; 12-month exit used as a robustness check.
@@ -71,6 +80,12 @@ When are internal job applicants who are rejected more or less likely to leave t
 - Moderators: None formally modeled in the main hypotheses; supplementary analyses examine reapplication to similar jobs, similarity to the internal winner, and the number/percentage of external interviewees as mechanism-consistent probes.
 
 Drawing on intraorganizational mobility research, the paper argues that rejection is not only a closed opportunity but also an informational event. Being interviewed by the hiring manager signals that the candidate met many criteria for the job and may meet criteria for similar jobs later; being rejected in favor of another internal candidate signals that similar future jobs may still be filled internally. The main logistic models support both predictions: rejected candidates were 1.43 times less likely to exit after a hiring-manager interview and 1.23 times less likely to exit when the winner was internal. Supplementary analyses are consistent with the proposed mechanism, showing that these rejection contexts are also associated with greater reapplication to similar jobs and that external interview-pool composition is associated with higher exit.
+
+**Data & Measures**
+HealthCo provided internal job-application data paired with annual personnel records on employee demographics, pay, performance, and voluntary exit. The main sample contains 9,355 unsuccessful applications from 8,160 employees. Voluntary exit was coded dichotomously for exit within six months after the focal rejection. Hiring-manager interview was coded 1 for rejection after such an interview and 0 for rejection without one; internal winner was coded 1 when an internal candidate filled the job and 0 when an external candidate did. Logistic regressions reported odds ratios and clustered errors by individual.
+
+**Key Findings**
+Both hypotheses were supported. Candidates rejected after a hiring-manager interview were 1.43 times less likely to exit voluntarily than those rejected without such an interview (OR = 0.70, p < .001). Candidates rejected in favor of an internal winner were 1.23 times less likely to exit voluntarily than those rejected in favor of an external winner (OR = 0.81, p = .006). Results were consistent when voluntary exit was measured within 12 months.
 
 **Theoretical Contribution**
 The paper adds a rejection-side boundary condition to job-matching accounts of internal talent markets, which typically emphasize the value created by successful internal matches. It extends rejection research by showing that internal rejection is not uniformly negative: the evaluation and selection context supplies information about future internal opportunities. It also updates intraorganizational mobility theory by showing how employees in contemporary, market-based internal labor systems learn about advancement prospects through participation in internal job markets rather than only through formal bureaucratic rules.

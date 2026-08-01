@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-64-no-1/pdfs/Baer 2021 Undertrusted, Overtrusted, or 
 text_path: "library/AMJ/vol-64-no-1/text/Baer 2021 Undertrusted, Overtrusted, or Just Right The Fairness of (In)Congruence between Trust Wanted and Trust Received.txt"
 ingested_at: "2026-06-24"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["feeling trusted", "trust wanted", "trust received", "overall fairness", "need rule", "task performance", "citizenship behavior"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "seminal theorizing on fairness"
   methods_overview: "multisource, three-wave field"
   keywords_source: "trust wanted and trust received"
+  hypotheses_source: "Hypothesis 2. Perceptions of overall fairness will be"
+  measures_overview: "overall fairness (a 5 .97) at Time 2 using"
+  findings_overview: "Hypothesis 1 was supported."
 ---
 
 # Undertrusted, Overtrusted, or Just Right? The Fairness of (In)Congruence between Trust Wanted and Trust Received
@@ -54,6 +59,12 @@ The nascent literature on feeling trusted has focused on the notion that it is a
 **Research Question**
 When employees receive more or less supervisor trusting behavior than they want, do they judge the supervisor as less fair, and do those fairness perceptions explain downstream task performance and citizenship behavior? The paper also asks whether congruent high wanted/high received trust is perceived as fairer than congruent low wanted/low received trust.
 
+**Hypotheses / Propositions**
+- H1: Incongruence between trust wanted and trust received will be negatively related to overall fairness; fairness will be lower under deficient or excess trust received.
+- H2: Overall fairness will be higher when trust wanted and trust received are both high than when both are low.
+- H3: Trust wanted and trust received will have an indirect effect on task performance through overall fairness.
+- H4: Trust wanted and trust received will have an indirect effect on citizenship behavior through overall fairness.
+
 **Mechanism Process**
 - IV(s): Congruence and incongruence between trust wanted and trust received; deficient trust, excess trust, high-high fit, and low-low fit.
 - DV(s): Overall fairness and need consideration; downstream task performance and citizenship behavior in Study 1.
@@ -61,6 +72,14 @@ When employees receive more or less supervisor trusting behavior than they want,
 - Moderators: None formally tested; the high-high versus low-low comparison is tested as a response-surface feature rather than as a separate moderator.
 
 The mechanism is a need-rule fairness process. Trusting behaviors are treated as socioemotional resources that vary in how much employees want them, so deficiency and excess both signal that the supervisor is not sufficiently mindful of the employee's needs. Congruence between wanted and received trust increases perceived overall fairness, with high-high fit judged especially fair because it requires more active supervisor effort. Those fairness perceptions then support higher supervisor-rated task performance and citizenship behavior through the social-exchange logic linking fair treatment to reciprocation.
+
+**Data & Measures**
+- Study 1 was an associational, multisource three-wave field study. Employees reported trust wanted and trust received at Time 1 with parallel five-item Behavioral Trust Inventory measures on seven-point scales; they reported overall fairness at Time 2 with a three-item five-point scale, alongside a three-item need-consideration measure. Supervisors rated task performance and citizenship behavior at Time 3 with separate three-item five-point scales. Polynomial regression and response-surface tests assessed H1-H2, while a block-variable approach with 20,000 Monte Carlo samples tested the indirect effects in H3-H4.
+- Study 2 randomly assigned 225 employed U.S. adults to a 2 x 2 scenario crossing high versus low trust wanted with high versus low trust received. Participants rated overall fairness, need consideration, and manipulation checks on five-point scales using the Study 1 measures; Sidak-adjusted post hoc comparisons tested H1-H2, with additional measures used to examine alternative mechanisms.
+
+**Key Findings**
+- Study 1 supported H1: the incongruence-line curvature for overall fairness was negative and significant (-.11, p < .05), indicating lower fairness under both deficient and excess trust. H2 was supported by a positive congruence-line slope (.14, p < .05), indicating higher fairness at high-high than low-low fit. H3 and H4 were also supported: indirect effects through overall fairness were .03 for task performance (95% CI [.005, .06]) and .04 for citizenship behavior (95% CI [.01, .08]); the parallel need-consideration indirect effects were .04 and .07, respectively.
+- Study 2 supported H1 and H2 for both overall fairness and need consideration. Congruent high-high and low-low conditions exceeded deficiency and excess conditions, and high-high exceeded low-low; the overall-fairness means were 4.24, 3.56, 2.25, and 2.36, respectively, while need-consideration means were 4.16, 3.45, 1.91, and 2.01. None of the tested alternative mechanisms reproduced the full congruence pattern.
 
 **Theoretical Contribution**
 The paper challenges the prevailing assumption in the feeling-trusted literature that more supervisor trust is uniformly beneficial for employees. It introduces overtrust and undertrust as meaningful forms of trust misfit, showing that low received trust can be fair when low trust is wanted and that excess trust can be unfair when it violates the employee's needs.

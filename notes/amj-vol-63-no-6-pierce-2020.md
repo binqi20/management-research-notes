@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Pierce 2020 Historical Origins of Firm O
 text_path: "library/AMJ/vol-63-no-6/text/Pierce 2020 Historical Origins of Firm Ownership Structure The Persistent Effects of the African Slave Trade.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["historical African slave trade", "firm ownership structure", "institutions", "social capital", "traumatic shocks", "concentrated ownership"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "theory linking modern firm ownership structure to institutions and social capital"
   methods_overview: "Our linear probability models"
   keywords_source: "historical African slave trade to extend prior"
+  hypotheses_source: "history will be associated with higher ownership"
+  measures_overview: "Slave exports / land area is measured as slaves exported per million km2."
+  findings_overview: "historical slave extraction are today more likely to have concentrated ownership."
 ---
 
 # Historical Origins of Firm Ownership Structure: The Persistent Effects of the African Slave Trade
@@ -51,6 +56,10 @@ This paper uses evidence from the historical African slave trade to extend prior
 **Research Question**
 How do historical traumatic shocks help explain present-day firm ownership structure? The paper asks whether African countries more exposed to the historical slave trade have higher modern ownership concentration, and whether weakened institutions and low social capital partly explain that relationship.
 
+**Hypotheses / Propositions**
+- H1: Higher exposure to traumatic shocks in history will be associated with higher ownership concentration in modern firms.
+- H2: The positive relationship between historical traumatic shocks and modern ownership concentration is partly explained by inhibited institutional development and low social capital.
+
 **Mechanism Process**
 - IV(s): Country-level historical slave exports adjusted by geographic area; cross-industry interaction between slave exports and manufacturing sector.
 - DV(s): Firm-level ownership concentration, measured as sole proprietorship and majority ownership; additional robustness outcomes include corporate ownership structure, business group membership, foreign ownership, and number of employees.
@@ -59,11 +68,17 @@ How do historical traumatic shocks help explain present-day firm ownership struc
 
 The mechanism is a historical-persistence argument. The authors theorize that severe traumatic shocks can weaken institutions and social capital, and that these weakened conditions persist long enough to restrict modern firms' access to diffuse ownership. In countries with higher historical slave extraction, firms are therefore more likely to remain sole proprietorships or majority-owned firms, especially in manufacturing where capital needs make diffuse ownership more valuable. The paper is careful that its IV and 2SLS evidence raises confidence and supports plausible channels, but does not definitively establish a causal path from the slave trade through institutions and social capital to ownership concentration.
 
+**Data & Measures**
+The study combines Nunn's country-level estimates of slaves exported between A.D. 1400 and 1900 with 2006–2016 World Bank Enterprise Survey data for approximately 30,000 firms in 41 African countries. The key explanatory variable is log slave exports per million square kilometers; the dichotomous outcomes are sole proprietorship (30,004 firm observations) and majority ownership (29,754). The cross-industry test interacts slave exports with a manufacturing indicator. Historical mechanisms are precolonial government centralization and the first available 1945–1970 ethnic-fractionalization observation; modern mechanisms are the 2013 ethnic-fractionalization measure and the 2015 Corruption Perceptions Index. Firm-level linear probability models include year, sector, size, colonizer, geography, cultural, and natural-resource controls with standard errors clustered by country; multilevel, logit/probit, distance-to-slave-market IV, and 2SLS specifications provide robustness and mechanism evidence.
+
+**Key Findings**
+H1 is strongly supported: greater slave exports are positively related to sole proprietorship and majority ownership across specifications; the base model implies 67% versus 46% sole proprietorship above versus below median slave exports and a 43-percentage-point difference between the lowest and highest export countries, while majority ownership is 89% versus 80%. The manufacturing interaction is positive: manufacturing firms are 13 percentage points less likely to be solely owned below the median but 1 percentage point more likely above it. H2 receives modest support: historical and modern institutional and ethnic-fractionalization measures yield 2SLS patterns consistent with partial channels, but the authors treat the evidence as suggestive and cannot isolate causal mediation. The distance instruments and controls reduce endogeneity concerns but do not definitively establish a causal slave-trade effect.
+
 **Theoretical Contribution**
 The paper extends management and strategy research on ownership structure by moving the explanation for weak institutions and low social capital backward into history. It recasts institutions and social capital not only as predictors of ownership concentration but also as historically persistent mechanisms through which traumatic shocks can shape modern firms. It also contributes to calls for more historically grounded management research and more research on African firms by using the African slave trade as a quantifiable historical origin of firm structure.
 
 **Practical Implication**
-The findings imply that managers, investors, and policy actors in high slave-trade African countries may face ownership-concentration patterns rooted partly in historically persistent contracting and trust constraints. Efforts to expand firms' access to equity-based capital therefore need to address institutional weakness and social-capital deficits rather than treating concentrated ownership only as a contemporary owner preference. The manufacturing results suggest that these constraints may be especially consequential where capital investment is central to productivity and scale.
+The study says its evidence is consistent with broad contracting problems in high-slave-trade countries that limit credit access and have major implications for firms' access to important resources and equity-based capital for investment and growth. Together with prior evidence of constrained credit, the authors describe a grim picture for access to capital, especially for manufacturing firms, which are comparatively more concentrated in high-slave-trade countries despite relying heavily on capital for production efficiency and scale. More broadly, they state that African managers and business owners face obstacles to growth in equity markets.
 
 **Limitations**
 The authors caution that, like most studies of shocks from centuries past, the paper cannot strongly establish the causal link between the slave trade and modern ownership concentration. They also state that the mechanisms cannot be definitively isolated because history is complex, country-level mechanism measures leave only 35-41 observations, and SEM mediation assumptions are violated in this cross-national setting. The World Bank Enterprise Survey also lacks detailed ethnicity, trust, and network measures that would allow more direct tests of social capital mechanisms.

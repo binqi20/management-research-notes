@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-6/pdfs/Shi 2020 Portfolio Spillover of Institut
 text_path: "library/AMJ/vol-63-no-6/text/Shi 2020 Portfolio Spillover of Institutional Investor Activism An Awareness–Motivation–Capability Perspective.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-01"
 
 paper_type: "empirical-quantitative"
 keywords: ["portfolio spillover", "institutional investor activism", "shareholder activism", "awareness–motivation–capability framework", "corporate restructuring", "growth activity", "constitutional constraints", "transactional ownership"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "awareness–motivation–capability"
   methods_overview: "firm fixed-effects Poisson"
   keywords_source: "portfolio spillover"
+  hypotheses_source: "negatively associated with the firm’s growth activity."
+  measures_overview: "the ratio of shares held by activist investors to"
+  findings_overview: "we find that firms restructure and reduce growth in response to portfolio"
 ---
 
 # Portfolio Spillover of Institutional Investor Activism: An Awareness–Motivation–Capability Perspective
@@ -53,6 +58,14 @@ Scholars have investigated how shareholder activism by institutional investors�
 **Research Question**
 Do institutional investors' activist campaigns spill over to firms in the same investors' portfolios that have not been targeted for activism? The paper asks whether non-targeted firms restructure more and reduce growth activity when activist investors own larger stakes, and whether those responses depend on activist capability and focal-firm motivation.
 
+**Hypotheses / Propositions**
+H1. Ownership by activist investors who have not yet targeted a firm for activism is positively associated with the firm's restructuring activities.
+H2. Ownership by activist investors who have not yet targeted a firm for activism is negatively associated with the firm's growth activity.
+H3a. Constitutional limits on shareholder control moderate the positive relationship between activist ownership and restructuring; the relationship is stronger when constitutional limits are weak.
+H3b. Constitutional limits on shareholder control moderate the negative relationship between activist ownership and growth; the relationship is stronger when constitutional limits are weak.
+H4a. Transactional investor ownership moderates the positive relationship between activist ownership and restructuring; the relationship is stronger when transactional ownership is high.
+H4b. Transactional investor ownership moderates the negative relationship between activist ownership and growth; the relationship is stronger when transactional ownership is high.
+
 **Mechanism Process**
 - IV(s): Ownership by activist investors who have not yet targeted the focal firm for activism.
 - DV(s): Number of corporate restructuring actions and number of growth actions.
@@ -60,6 +73,12 @@ Do institutional investors' activist campaigns spill over to firms in the same i
 - Moderators: Constitutional limits on shareholder control and transactional institutional ownership.
 
 The mechanism is an awareness–motivation–capability argument applied to corporate governance rather than competitive dynamics. As activist ownership rises, executives of non-targeted firms become more aware that activists may target them next, which makes preemptive restructuring more likely and growth initiatives less likely. The response is stronger when activists have more capability to launch a credible campaign and when firms have more motivation to respond, reflected in weaker constitutional constraints and higher transactional ownership.
+
+**Data & Measures**
+The longitudinal 2000–2013 data cover S&P 1500 firms. Shareholder activism came from Audit Analytics; financial and accounting data from S&P Compustat; institutional ownership from Thomson Reuters 13(F); corporate actions from Capital IQ Key Development; and governance data from BoardEx and Institutional Shareholder Services. Activist ownership was the ratio of shares held by investors that had filed a qualifying Schedule 13D or 13D/A within the past year to total shares outstanding. The dependent variables were annual counts of restructuring announcements (divestitures, spin-offs or split-offs, discontinued operations or downsizings, and reorganizations) and growth announcements (mergers and acquisitions, new products, business expansions, and strategic alliances). Constitutional limits were the sum of four provisions (0–4); transactional ownership was transactional-investor shareholdings divided by total shares outstanding after institutions were classified by ownership stability and stake size. Main tests used firm fixed-effects Poisson models with Heckman selection controls; supplementary analyses used activist-investor closures as a quasi-natural experiment.
+
+**Key Findings**
+All six hypotheses were supported. Activist ownership was positively related to restructuring (H1: b = 1.533, p < .05; a 7.9% increase from zero to the mean plus one standard deviation) and negatively related to growth (H2: b = -1.042, p < .01; a 5.0% decrease). Both relationships were stronger under weak constitutional limits: activist ownership predicted restructuring in the low-constraint subgroup (b = 1.801, p < .05) but not the high-constraint subgroup (b = 0.743, ns), supporting H3a; it predicted less growth in the low-constraint subgroup (b = -1.188, p < .01) but not the high-constraint subgroup (b = -0.437, ns), consistent with H3b. Transactional ownership strengthened the positive restructuring relationship (H4a: interaction b = 10.266, p < .01) and the negative growth relationship (H4b: interaction b = -3.275, p < .05), with the latter difference significant when activist ownership was high.
 
 **Theoretical Contribution**
 The paper extends the awareness–motivation–capability framework from competitive threats to governance threats, showing how firms may respond to an implicit rather than explicit external threat. It develops the concept of portfolio spillover to explain how activism aimed at one portfolio firm can shape strategic actions at other firms owned by the same activist investors. It also contributes to corporate governance research by showing that activist influence depends not only on how much activists own but also on governance protections and the presence of transactional investors.
