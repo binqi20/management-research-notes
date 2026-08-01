@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-07-31"
-version: "0.47.0"
+date-released: "2026-08-01"
+version: "0.48.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,25 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.47.0
-  (2026-07-31) continues the v3 backfill with Academy of Management Journal
+  a published rubric) gates every note into the library. Version 0.48.0
+  (2026-08-01) continues the v3 backfill with Academy of Management Journal
+  volume 64 issue 3 and volume 64 issue 2 — 25 notes, all v2 augmentations.
+  A backfill adds no papers, so the record total is unchanged at 1,167; the
+  version-tier census shifts to 61 v1, 734 v2, and 372 v3 notes. The upgrade
+  phase was the cleanest of the backfill so far: all 25 augmentations passed
+  the validator and the mechanical diff-guard on the first attempt, with zero
+  self-fix cycles. Each touched note passed a fresh full independent 9-field
+  rubric-v2 audit, and this is the first batch of the backfill to finish
+  spotless — 225 of 225 prose-field verdicts SUPPORTED, with no residual PARTIAL
+  accepted — after nineteen evidence-based repairs across ten notes in three
+  repair rounds and four audit rounds. Six of the thirteen round-1 PARTIALs were
+  the no-practice-section scope drift characteristic of this 2021 cohort, in
+  which 14 of the 25 papers contain no practical-implication marker at all.
+  Three of the five PARTIALs surviving into round 2 were introduced by the
+  repairs themselves and were caught only because every repaired note is
+  re-audited.
+  Version 0.47.0
+  (2026-07-31) continued the v3 backfill with Academy of Management Journal
   volume 64 issue 5 and volume 64 issue 4 — 25 notes, all v2 augmentations.
   A backfill adds no papers, so the record total is unchanged at 1,167; the
   version-tier census shifts to 61 v1, 759 v2, and 347 v3 notes. The upgrade

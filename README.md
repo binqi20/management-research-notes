@@ -549,6 +549,43 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.48.0 v3 backfill batch 15 (2026-08-01, 1,167 notes):**
+  Upgrades **AMJ volume 64, issue 3 and volume 64, issue 2, 25 notes total** to the
+  v3 schema — all v2 augmentations. The **record total is unchanged at 1,167**;
+  the version-tier census shifts to 61 v1, 734 v2, 372 v3. The upgrade phase was
+  the cleanest of the backfill so far: **all 25 augmentations passed
+  `validate_note.py` and the `verify_augmentation.py` diff-guard on the first
+  attempt, with zero self-fix cycles.** Each touched note then passed a fresh full
+  independent 9-field rubric-v2 audit, and this batch is the **first of the
+  backfill to finish spotless — 225 / 225 prose-field verdicts `SUPPORTED`**, 0
+  `PARTIAL`, 0 `UNSUPPORTED`, 0 `CONTRADICTED` (all 25 notes overall pass), after
+  nineteen evidence-based repairs across ten notes in three repair rounds and four
+  audit rounds. No residual `PARTIAL` had to be accepted and documented; every one
+  of the thirteen found in round 1 was cleared by repair. Six of those thirteen
+  were the recurring no-practice-section scope drift this 2021 cohort keeps
+  producing — a pre-scan run before the audits found that **14 of the 25 papers
+  contain no practical-implication marker at all**, and five of the six drifted
+  fields sat on flagged papers. Jacobs, Jiang, Naumovska, Reinecke and Zhelyazkov
+  each prescribed advice to audiences their papers never address; Myers listed
+  "clients" as an external learning source when the paper's own five are faculty,
+  industry experts, other teams, second-year MBA students and personal network
+  contacts, clients being the project sponsors who *rate* team performance. Three
+  landed on the new v3 sections and each had a distinct cause: Liu credited the
+  China Stock Market and Accounting Research database with ownership information
+  when the paper searched it for an alternative political-linkage robustness
+  measure; Opper described M8–M12 as uniformly adding planning dummies and their
+  interactions when the paper builds them stepwise; and Reinecke misreported two of
+  the paper's three "revealing case" reasons, which a page break had split across
+  columns. Wolfson presented HR information systems as a practice tool when the
+  paper raises them only as a future-research archive, and Zipay grouped moral
+  identity under antecedents of leniency when the paper names it as a personality
+  trait moderating *reactions* to leniency. Three of round 2's five remaining
+  `PARTIAL`s were introduced by the repairs themselves and were caught only because
+  every repaired note is re-audited — the strongest case yet for the
+  assemble-then-repair-then-re-audit ordering. `library.bib` regenerated
+  byte-identical (the all-augmentation signature — only SQLite and CSV changed).
+  This batch ran on `claude-opus-5`, as batches 08 through 14 did.
+
 - **v0.47.0 v3 backfill batch 14 (2026-07-31, 1,167 notes):**
   Upgrades **AMJ volume 64, issue 5 and volume 64, issue 4, 25 notes total** to the
   v3 schema — all v2 augmentations. The **record total is unchanged at 1,167**;
@@ -1076,7 +1113,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 759 v2 notes, and 347 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 734 v2 notes, and 372 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 

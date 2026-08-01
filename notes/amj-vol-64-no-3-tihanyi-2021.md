@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-64-no-3/pdfs/Tihanyi 2021 Publishing Original Researc
 text_path: "library/AMJ/vol-64-no-3/text/Tihanyi 2021 Publishing Original Research in AMJ Advice to Prospective Authors.txt"
 ingested_at: "2026-06-25"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-01"
 
 paper_type: "editorial"
 keywords: ["original research", "original data", "conceptual core", "original text", "data overlap", "salami slicing"]
@@ -52,6 +54,9 @@ Not reported in paper
 **Research Question**
 The editorial asks when a submission is considered original by AMJ. It focuses on how editors and reviewers evaluate originality in relation to data reuse, the manuscript's conceptual core, and overlap in text.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: AMJ seeks original empirical research that adds value to management knowledge, and originality is judged across data, conceptual contribution, and text.
 - Original data: Original data are important but neither sufficient nor necessary; authors must transparently disclose related papers, overlapping data, shared variables, and concurrent submissions.
@@ -60,6 +65,12 @@ The editorial asks when a submission is considered original by AMJ. It focuses o
 - Submission strategy: Authors are advised to put forward their strongest integrated paper rather than fragmenting data sets into minimally publishable pieces.
 
 The process logic is editorial rather than causal: transparency helps editors assess overlap fairly, a new conceptual core distinguishes original submissions from repackaged work, and original writing protects the integrity of scholarly contribution. The essay links these standards to AMJ's goals of fairness, inclusivity, and reliable accumulation of knowledge.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new theory. Its contribution is to clarify AMJ's evaluative standard for originality, especially the idea that publishable originality requires more than different data cuts, added variables, or revised analyses; it requires a substantively distinct conceptual core.
