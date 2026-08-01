@@ -356,7 +356,13 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   concerns). And once a mutation workflow is in flight, take any census
   or baseline from **git HEAD**, not the working tree — agents land
   mid-flight, so the tree is no longer a fixed reference frame (batch
-  14's one-note census wobble).
+  14's one-note census wobble). And when invoking the Workflow tool with
+  `args`, pass arrays/objects as ACTUAL JSON values — never a
+  JSON-encoded string; a stringified `args` reaches the script as one
+  string, so `args.ids`/`args.chunks` are undefined and the wave dies at
+  zero agents (batch-15 `CHUNKS.length`, 0 tokens). Scripts that read
+  `args` should open with
+  `const A = typeof args === 'string' ? JSON.parse(args) : args`.
 - **Regenerate audit prompts LAST, immediately before dispatch (batch
   13):** `--prompt-only` snapshots the note into a file, so the prompt and
   the note silently diverge the moment any repair lands after generation.
@@ -375,6 +381,17 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   Study 3 and costing an extra audit round. When attributing a claim to a
   study or section during verification or repair, read the line-level
   column geometry around the boundary; never conclude from offsets.
+- **Full-line rule (batch 15, zipay + opper):** a width-truncated preview
+  of a matched line is the sibling failure of the 0-hit search. Batch 15
+  nearly deleted a supported claim and DID ship a wrong repair from a
+  130-character preview whose full line said the opposite ("M2 and M3 are
+  ordinary least squares…" hidden past the cut). When verifying a flagged
+  claim or drafting a repair, print the complete matched line(s)
+  untruncated (repr-style, no width cap) and read the surrounding
+  raw-text paragraph before writing a word. Treat repairs as first
+  drafts: three of batch 15's round-2 PARTIALs were introduced by its own
+  round-1 repairs and caught only by the mandatory re-audit — never skip
+  the re-audit of a repaired note, however trivial the edit looks.
 - **Two-channel adjudication (batch-14 bain):** "the audit adjudicates"
   is the default disposition for augmentation-agent concerns, not a
   ceiling on parent verification. A concern alleging a source-verifiable
