@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/McDonnell 2020 Take a Stand or Keep Your
 text_path: "library/AMJ/vol-63-no-4/text/McDonnell 2020 Take a Stand or Keep Your Seat Board Turnover after Social Movement Boycotts.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["corporate social responsibility", "social movement boycotts", "board turnover", "director ideology", "contentious crises", "values alignment"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "self-determination theory (Deci & Ryan, 2000; Gagné"
   methods_overview: "employed a logit model, clustering standard errors"
   keywords_source: "social movement boycotts that challenge a firm’s social responsibility affect board turnover"
+  hypotheses_source: "Hypothesis 1. The extent of alignment between a"
+  measures_overview: "coded “1” if a director left their post at the expiration"
+  findings_overview: "more likely to leave after liberal challenges and conservatives are more likely to leave"
 ---
 
 # Take a Stand or Keep Your Seat: Board Turnover after Social Movement Boycotts
@@ -51,6 +56,11 @@ While prior work has shown that a firm’s market performance affects the loyalt
 **Research Question**
 How do directors' personal values affect their decision to exit the board or remain loyal amid contentious crises? The paper examines this question by studying whether ideological alignment between directors and social movement activists predicts director turnover after boycotts.
 
+**Hypotheses / Propositions**
+- H1: Greater alignment between a director’s ideology and that of activist challengers will positively predict exit after a boycott.
+- H2: An ideologically opposed boycott will reduce exit more strongly for conservative directors than for liberal directors.
+- H3: Ideological alignment will be a stronger predictor of exit when the boycott produces a more negative stock market reaction.
+
 **Mechanism Process**
 - IV(s): Ideological alignment between a director's political ideology and the ideology of activist challengers; boycott ideology; director ideology; market reaction to the boycott.
 - DV(s): Director departure from the board at term expiration; firm-level board turnover in the validation analysis.
@@ -58,6 +68,14 @@ How do directors' personal values affect their decision to exit the board or rem
 - Moderators: Director conservatism versus liberalism, ideological opposition versus alignment, and cumulative abnormal returns around the boycott announcement.
 
 The paper argues that boycotts operate as contentious cues of corporate character. When directors are ideologically aligned with activist challengers, activists' claims reveal a conflict between the firm's perceived values and the directors' own values, producing identity threat and making exit more likely. When directors are ideologically opposed to the challengers, the same boycott can strengthen identification with the firm and reduce exit, especially for conservative directors. The market reaction matters because a more negative stock response increases the salience of the boycott for directors.
+
+**Data & Measures**
+The hand-constructed boycott data cover 120 firm-boycott observations from 2000–2014, matched to Compustat and ISS/RiskMetrics. The validation analysis measures post-boycott turnover as the proportion of directors serving at the boycott who were gone three years later and pre-boycott turnover analogously for the prior three years; fractional-logit difference-in-differences models compare targeted firms with the full RiskMetrics sample and a 1:2 propensity-score-matched sample (37,309 and 656 observations, respectively, in Table 3).
+
+The director-level tests use 1,137 observations across 102 firm-boycott events after missing controls, with departure at term expiration coded as a binary outcome and 44 identified involuntary departures excluded. Director ideology is (Republican contribution dollars minus Democratic contribution dollars) divided by total federal-candidate contributions over the prior three election cycles (−1 liberal to 1 conservative); expert-coded boycott ideology ranges from −1 liberal through 0 unclassifiable to 1 conservative, and their interaction measures alignment. Market response is the five-day cumulative abnormal return around the boycott announcement. A first-stage boycott-selection model supplies an inverse Mills ratio for second-stage logit models with standard errors clustered by boycott.
+
+**Key Findings**
+The validation analysis found that average three-year board turnover rose from .22 before boycotts to .29 afterward—about a 30% increase over the base rate—and the difference-in-differences estimator was positive and significant. H1 was supported: director–activist ideological alignment positively predicted exit (b = .56, p < .01), with liberal directors more likely to exit after liberal boycotts and conservative directors more likely to exit after conservative boycotts. H2 was supported: conservatives were significantly more prone than liberals to remain after ideologically opposed challenges (Wald test, p < .05). H3 was supported: alignment predicted exit more strongly when boycotts produced negative stock-market reactions (three-way interaction b = −11.84, p < .05); significant ideological exit differences emerged only under a negative market response.
 
 **Theoretical Contribution**
 The paper extends board-turnover research by showing that directors' loyalty during crises is shaped not only by performance or reputational risk, but also by perceived values alignment. It contributes to CSR and member-motivation research by showing that social performance is not interpreted uniformly: the same boycott can increase exit among sympathetic directors while entrenching directors who oppose the activists. It also adds to social movement research by showing that contentious activism can alter the loyalty of corporate insiders, not only external stakeholders.

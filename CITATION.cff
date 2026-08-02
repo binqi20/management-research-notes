@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-08-01"
-version: "0.49.0"
+date-released: "2026-08-02"
+version: "0.50.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,20 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.49.0
+  a published rubric) gates every note into the library. Version 0.50.0
+  (2026-08-02) continues the v3 backfill with Academy of Management Journal
+  volume 63 issues 5 and 4 — 24 notes, all v2 augmentations. A backfill adds
+  no papers, so the record total remains 1,167; the version-tier census shifts
+  to 61 v1, 685 v2, and 421 v3 notes. All 24 augmentations passed the validator
+  and initial mechanical diff-guard without a gate failure. Each touched note
+  passed a fresh full independent 9-field rubric-v2 audit, with a final 216 of
+  216 prose-field verdicts SUPPORTED and no residual PARTIAL, after seven
+  evidence-based legacy-field repairs across four notes in one repair round
+  and two audit rounds. This is the second consecutive backfill batch run
+  end-to-end on gpt-5.6-sol for both augmentation and audit. The recurring
+  workshop cross-family spot-audit applies; batch 16's review scored 27 of 27
+  agreement.
+  Version 0.49.0
   (2026-08-01) continues the v3 backfill with Academy of Management Journal
   volume 64 issue 1 and volume 63 issue 6 — 25 notes, all v2 augmentations.
   A backfill adds no papers, so the record total remains 1,167; the version-tier

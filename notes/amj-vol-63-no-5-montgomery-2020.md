@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Montgomery 2020 Water Wars in Detroit Cu
 text_path: "library/AMJ/vol-63-no-5/text/Montgomery 2020 Water Wars in Detroit Custodianship and the Work of Institutional Renewal.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["custodianship", "institutional renewal", "public water services", "institutional entropy", "institutional custodians", "water crisis", "resource access", "affordability", "grand challenges"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "institutional custodians—actors who maintain and enhance institutionalized practices"
   methods_overview: "Using an in-depth longitudinal qualitative study"
   keywords_source: "the role of custodianship in the renewal"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "interview data were coded"
+  findings_overview: "custodianship is both distributed and heterogeneous"
 ---
 
 # Water Wars in Detroit: Custodianship and the Work of Institutional Renewal
@@ -51,6 +56,9 @@ We examine the role of custodianship in the renewal of the institution of public
 **Research Question**
 Who are institutional custodians, and what evokes custodianship when a neglected societal institution faces entropy? The paper examines this question through Detroiters' defense and renewal of public water services before, during, and after the 2014 water shutoffs.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Context / institutional problem: public water services in Detroit had become taken for granted and neglected, creating institutional entropy around access, affordability, infrastructure, and public ownership.
 - Custodian forms: operatives, warriors, converts, and agnostics emerged at different moments with different social positions, motivations, and understandings of institutional rules.
@@ -60,6 +68,12 @@ Who are institutional custodians, and what evokes custodianship when a neglected
 - Renewal outcome: custodianship was distributed and heterogeneous; different actors renewed different dimensions of the institution rather than acting as one homogeneous group.
 
 The paper develops a process account rather than a variable-based causal model. As different aspects of public water services became threatened, different custodians were catalyzed to act, and their framing and roles sometimes intersected across public ownership, rights, and health-and-safety concerns. Institutional renewal occurs through the restoration of energy and resources to a neglected institution, but the authors do not claim that renewal guarantees long-term institutional stability.
+
+**Data & Measures**
+This longitudinal qualitative case study of Detroit public water services combines 42 formal semi-structured interviews (2013–2015; average 88 minutes), 48 informal interviews (2012–2016; 10–30 minutes), more than 120 hours of observation at 32 events (2013–2017), weekly insider e-mail journals, an investigator journal, meeting minutes, media and documentary material, government, NGO, and consulting reports, and proprietary water-system data. Deliberate, emergent, snowball, and theoretical sampling identified custodians across corporate, government, water-expert, community, union, and activist sectors. The authors analyzed data iteratively during and after collection, beginning with open coding using participants' in vivo terms, then recoding for custodial characteristics, motivations, activities, sequence, roles, and intersections; code comparison, triangulation, member checking, and Atlas.ti code co-occurrence supported convergence on four custodian forms.
+
+**Key Findings**
+The analysis identifies four heterogeneous custodian forms—operatives, warriors, converts, and agnostics—that emerged at different times with distinct catalysts, objectives, social positions, and interpretations of institutional rules. Custodianship was distributed across different energizing roles (defender, reinforcer, and reifier) and resourcing roles (replenisher, retooler, and exalter); custodians worked independently and collectively, and intersections around public ownership, the human right to water, and clean water access helped catalyze later custodians. The resulting model depicts institutional renewal as restoring energy and resources to a neglected institution, but the Detroit outcomes were mixed and renewal did not guarantee long-term stability.
 
 **Theoretical Contribution**
 The paper contributes to institutional theory by showing that custodians are not only homogeneous insiders with formal roles; they can be heterogeneous, distributed, morally motivated, and variably connected to the institution. It extends institutional work and custodianship research by identifying four forms of custodians, their energizing and resourcing roles, and the intersections through which their actions can renew a neglected institution. It also conceptualizes institutional renewal as a necessary response to institutional entropy, distinct from routine maintenance and from outright institutional entrepreneurship.

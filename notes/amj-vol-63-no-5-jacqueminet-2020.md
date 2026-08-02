@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Jacqueminet 2020 Ups and Downs The Role 
 text_path: "library/AMJ/vol-63-no-5/text/Jacqueminet 2020 Ups and Downs The Role of Legitimacy Judgment Cues in Practice Implementation.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["validity and propriety cues", "legitimacy judgments", "practice implementation", "corporate social responsibility practices", "set-theoretic approach", "organizational conformity and decoupling", "institutional demands"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "One of the core tenets of institutional theory"
   methods_overview: "Adopting a set-theoretic approach"
   keywords_source: "validity and propriety cues contribute to legitimacy judgments"
+  hypotheses_source: "sufficiency analysis, we did not make directional"
+  measures_overview: "We measured implementation using a 7-point Likert"
+  findings_overview: "while dissonance between them can favor implementation decrease"
 ---
 
 # Ups and Downs: The Role of Legitimacy Judgment Cues in Practice Implementation
@@ -51,6 +56,9 @@ We explore the way validity and propriety cues contribute to legitimacy judgment
 **Research Question**
 The paper asks what sets of validity cues and propriety conditions lead organizational subunits to increase or decrease their implementation of a practice over time. It studies this question in the context of three CSR practices implemented by subunits of a multinational enterprise.
 
+**Hypotheses / Propositions**
+The paper states no formal hypotheses. Its sufficiency analysis is exploratory and uses no directional assumptions for the five legitimacy cues; only initial implementation receives a directional assumption—absent in configurations for increases and present in configurations for decreases.
+
 **Mechanism Process**
 - IV(s): Industry-level endorsement, country-level endorsement, parent firm authorization, strategic importance, value compatibility, and initial implementation level.
 - DV(s): Increased or decreased implementation extent of health and safety, gender diversity in management, and biodiversity practices from 2012 to 2014.
@@ -58,6 +66,12 @@ The paper asks what sets of validity cues and propriety conditions lead organiza
 - Moderators: Not modeled as conventional moderators; the paper analyzes configurational combinations of validity cues, propriety conditions, and initial implementation.
 
 The mechanism is configurational rather than additive. Subunits form legitimacy judgments by weighing validity cues from industry peers, country peers, and the parent firm alongside propriety evaluations of strategic importance and value compatibility. Consonant high propriety and some validity support implementation increases, while inconsistent validity cues or dissonance between strategic importance and value compatibility can make implementation fragile and lead subunits to scale practices down.
+
+**Data & Measures**
+Data comprise 195 subunit–practice observations (65 ENERGREEN subunits × three CSR practices) from two manager surveys in 2012 and 2014; 490 distinct respondents supplied usable data across waves. The outcome is the 2014–2012 change in implementation extent, with practice-specific scores formed from nine biodiversity items, eight occupational-health-and-safety items, and eight gender-diversity-in-management items on a seven-point scale. Industry- and country-level endorsement use 2011 Thomson Reuters ASSET4 practice scores; parent authorization counts 2009–2013 internal-magazine issues mentioning each practice; strategic importance is one 2012 survey item, value compatibility averages two survey items, and initial implementation is the 2012 score. The authors calibrate fuzzy sets using the thresholds in Table 3 and estimate necessity and sufficiency configurations with fs/QCA 2.5.
+
+**Key Findings**
+No single condition was necessary for either outcome. Five configurations explained increased implementation (overall coverage .67; consistency .85), and four explained decreased implementation (coverage .70; consistency .78). Increases usually combined consonant strategic importance and value compatibility with at least one validity cue, while decreases arose either from inconsistent validity despite high propriety or from dissonant propriety with low validity. Country endorsement had a distinctive role; parent authorization mattered most at the beginning, whereas external endorsement became more important after implementation.
 
 **Theoretical Contribution**
 The paper contributes to institutional theory by explaining within-firm practice implementation as a dynamic legitimacy judgment process rather than as direct conformity to external pressure. It specifies how validity cues and propriety evaluations combine in nonsymmetrical configurations that explain both increases and decreases in implementation. It also extends work on conformity and decoupling by showing that authorization from the parent firm may help initiate implementation, whereas country and industry endorsement become more important for durable or high implementation.

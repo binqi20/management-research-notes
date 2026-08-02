@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Schinoff 2020 Virtually (In)separable Th
 text_path: "library/AMJ/vol-63-no-5/text/Schinoff 2020 Virtually (In)separable The Centrality of Relational Cadence in the Formation of Virtual Multiplex Relationships.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["virtual work", "coworker multiplex relationships", "relational cadence", "work-related cadence", "friendship-related cadence", "coworker friendship", "grounded theory"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "convergent patterns of interaction—relational cadence—"
   methods_overview: "NVivo 10 to code the data."
   keywords_source: "coworker multiplex relationships"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We then used NVivo 10 to code the data."
+  findings_overview: "differentiates work-related from friendship-related cadence, stresses the symbiosis of"
 ---
 
 # Virtually (In)separable: The Centrality of Relational Cadence in the Formation of Virtual Multiplex Relationships
@@ -52,6 +57,9 @@ The increasing use of technology and rise of virtual work has fundamentally chan
 **Research Question**
 How do virtual coworkers become friends and thus form multiplex relationships? The paper asks how employees who interact primarily through communication technologies establish coworker friendships when geographic proximity and routine face-to-face shared experiences are weakened.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Virtual work barrier: Remote work makes coworkers' availability, responsiveness, and social context harder to read, creating a breakdown in cadence.
 - Work-related cadence: Coworkers assess accessibility, skill relevance, rapport, and instrumentality, then cultivate cadence through scheduled contact, medium choice, face-to-face contact when possible, imagining coworkers, self-disclosure, and alternative information sources.
@@ -60,6 +68,12 @@ How do virtual coworkers become friends and thus form multiplex relationships? T
 - Contextual support: Managerial stage setting can create conditions for work-related and friendship-related cadence, while its absence can stunt friendship-related cadence.
 
 The process is interpretive rather than variable-based. Virtual coworkers first evaluate whether interaction patterns can converge around temporal rhythm and relational particulars. When convergence seems possible, they intentionally cultivate work-related and friendship-related cadence; when both cadences reinforce one another, the relationship can become multiplex.
+
+**Data & Measures**
+The study used 64 Cloudly employees: a longitudinal sample of 28 transitioning informants followed across three planned interview waves and a cross-sectional sample of 36 experienced hires interviewed once. The corpus comprised 114 open-ended semistructured interviews, more than 75 hours of observation, and archival materials. The authors constructed memos and coded the data in NVivo 10 using open, focused, and axial coding, constant comparison, and theoretical sampling until theoretical saturation.
+
+**Key Findings**
+Virtuality disrupted cadence by making temporal rhythm and relational particulars harder to establish. The emergent model identifies relational cadence—perceived convergence in interaction patterns—as the mechanism by which virtual coworkers establish and grow friendships: workers assess cadence potential and deliberately cultivate work-related and friendship-related cadence. These cadences are distinct but codependent; when held together they form multiplex cadence, while managerial stage-setting can facilitate their development. Imagining coworkers helps fill missing social cues but can also create inaccurate personas.
 
 **Theoretical Contribution**
 The paper contributes a cadence-based theory of virtual coworker multiplex relationships by identifying relational cadence as a mechanism through which virtual employees establish and grow coworker friendships. It extends coworker friendship and multiplexity research by showing that work-related and friendship-related cadences are deeply intertwined in virtual settings rather than separable relationship streams. It also theorizes virtual friendship formation as more intentional and potentially more laborious than collocated friendship formation because employees must deliberately create temporal rhythm and relational familiarity.

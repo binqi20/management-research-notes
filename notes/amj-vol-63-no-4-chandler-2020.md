@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Chandler 2020 When is it Good to be Bad 
 text_path: "library/AMJ/vol-63-no-4/text/Chandler 2020 When is it Good to be Bad Contrasting Effects of Multiple Reputations for Bad Behavior on Media Coverage of Serious Organizational Errors.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["organizational reputation", "bad behavior", "media coverage", "serious organizational errors", "oil spills"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "organizational reputation is complex"
   methods_overview: "we used the cross-sectional probit specification"
   keywords_source: "reputations for bad behavior on the media coverage of a serious error by a firm"
+  hypotheses_source: "supplement a firm’s general character reputation, but will likely ignore errors that are"
+  measures_overview: "the cumulative number of oil spills it had"
+  findings_overview: "magnitude is negative and significant (b 5 20.142,"
 ---
 
 # When is it Good to be Bad? Contrasting Effects of Multiple Reputations for Bad Behavior on Media Coverage of Serious Organizational Errors
@@ -52,6 +57,12 @@ We have long known that organizational reputation is consequential. While highli
 **Research Question**
 When does a firm's reputation for bad behavior increase or decrease media coverage of a subsequent serious organizational error? The paper asks whether character reputation and capability reputation for bad behavior have contrasting effects on the likelihood that the media covers major oil spills.
 
+**Hypotheses / Propositions**
+- H1: The greater a firm's character reputation for bad behavior, the more likely the media is to cover a subsequent error by the firm.
+- H2: The greater a firm's capability reputation for bad behavior, the less likely the media is to cover a subsequent error by the firm.
+- H3: The greater the magnitude of a firm's error, the stronger the positive effect of character reputation for bad behavior on the likelihood of media coverage.
+- H4: The greater the magnitude of a firm's error, the stronger the negative effect of capability reputation for bad behavior on the likelihood of media coverage.
+
 **Mechanism Process**
 - IV(s): Character reputation for bad behavior, measured as EPA fines in the three years before the focal spill; capability reputation for bad behavior, measured as cumulative prior oil spills since 1985; and error magnitude, measured as logged total oil spilled.
 - DV(s): Media coverage, coded as whether a major oil spill received any Factiva newspaper coverage within three months.
@@ -59,6 +70,12 @@ When does a firm's reputation for bad behavior increase or decrease media covera
 - Moderators: Error magnitude moderates the effects of character reputation and capability reputation.
 
 The mechanism rests on the media's need for news to be new under uncertainty about a serious error's severity and culpability. A character reputation for bad behavior makes a subsequent oil spill seem like new corroborating evidence of a broader pattern, increasing newsworthiness. A capability reputation for bad behavior makes a subsequent oil spill seem redundant, reducing newsworthiness; larger spills strengthen both effects, so repeat offenders with larger spills can be even less likely to receive coverage.
+
+**Data & Measures**
+The event-level sample links NOAA IncidentNews records for 113 major U.S. oil spills by 23 publicly traded oil and gas firms from 1985 to 2016 to Factiva newspaper coverage, EPA ECHO and Facility Registry Service enforcement data, and World Bank WTI oil prices. The binary dependent variable equals 1 when a spill received any Factiva newspaper coverage within three months. Character reputation is the log of one plus the average EPA fines received in the three years before the focal spill; capability reputation is the log of one plus cumulative prior oil spills since 1985, measured in the year before the focal spill; and error magnitude is logged NOAA-recorded gallons spilled. The associational analysis uses cross-sectional probit models with standard errors clustered by firm and controls for EPA noncomplier status, facilities, assets, firm media coverage, nearby spills, spill location and refinery status, oil price, and the post-Exxon Valdez and post-Deepwater Horizon periods.
+
+**Key Findings**
+All four hypotheses were supported in the full model. Character reputation was positively associated with coverage (H1: b = 0.067, p = .047), whereas capability reputation was negatively associated with coverage (H2: b = -1.266, p < .001). Error magnitude strengthened the positive character-reputation effect (H3: b = 0.020, p = .041) and the negative capability-reputation effect (H4: b = -0.142, p = .029). Marginal-effects analyses showed that coverage probability decreased by 20.4% when capability reputation increased one standard deviation but increased by 2.4% when character reputation increased one standard deviation; alternative model, dependent-variable, and outlier specifications preserved the result pattern.
 
 **Theoretical Contribution**
 The paper contributes to organizational reputation research by showing that reputations for bad behavior are not uniformly liabilities and that character and capability reputations can have opposing consequences. It extends work on serious organizational errors by showing that media response is not proportional only to error magnitude or culpability, but is shaped by firm-specific reputational cues. It also contributes to research on organizational misconduct by showing how media coverage helps socially construct which harmful actions become public misconduct.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Vanacker 2020 Signal Strength, Media Att
 text_path: "library/AMJ/vol-63-no-4/text/Vanacker 2020 Signal Strength, Media Attention, and Resource Mobilization Evidence from New Private Equity Firms.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["resource mobilization", "signaling theory", "signal strength", "media attention", "unrealized performance", "realized performance", "private equity firms", "follow-on fund"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "resource mobilization challenge is signaling theory"
   methods_overview: "We estimate linear probability models"
   keywords_source: "signals of different strengths"
+  hypotheses_source: "Hypothesis 1. Higher unrealized performance"
+  measures_overview: "We define media attention as the number of citations"
+  findings_overview: "Overall, we find supporting evidence for Hypothesis 1."
 ---
 
 # Signal Strength, Media Attention, and Resource Mobilization: Evidence from New Private Equity Firms
@@ -53,6 +58,12 @@ Past research has shown that new firms can facilitate resource mobilization by s
 **Research Question**
 How do multiple simultaneous signals of different strengths influence resource provision decisions for new firms, and when does media attention alter the effectiveness of weak versus strong signals? The paper examines whether unrealized performance and realized performance help first-time private equity firms raise follow-on funds, and whether media attention strengthens these relationships differently.
 
+**Hypotheses / Propositions**
+H1: Higher unrealized performance of first-time funds will increase the likelihood of raising a follow-on fund.
+H2: The impact of higher unrealized performance on the likelihood of raising a follow-on fund will be weaker than the impact of higher realized performance.
+H3: Media attention will positively moderate the relationship between higher unrealized performance and the likelihood of raising a follow-on fund.
+H4: Media attention will more positively moderate the relationship between higher unrealized performance and the likelihood of raising a follow-on fund than the corresponding relationship for realized performance.
+
 **Mechanism Process**
 - IV(s): Unrealized performance of first-time PE funds; realized performance of first-time PE funds.
 - DV(s): Likelihood of raising a follow-on fund.
@@ -61,6 +72,12 @@ How do multiple simultaneous signals of different strengths influence resource p
 - Controls: Fund age, fund age squared, called capital, S&P 500 return, PE raised on GDP, calendar-year dummies, and PE firm fixed effects; descriptive and robustness models also account for fund size, stage focus, geography, GP location, industry focus, and vintage year.
 
 The mechanism combines signaling theory with a sociocognitive account of attention and evaluation. Unrealized performance is a weaker signal because it is based on estimated, not yet exited portfolio value, but it can still draw prospective capital providers into considering a new PE firm and can anchor their evaluation. Realized performance is a stronger signal because it reflects realized distributions from exits. Media attention makes weak performance signals more observable and may legitimize the signal source, so it strengthens the fundraising effect of unrealized performance more than the effect of realized performance.
+
+**Data & Measures**
+The longitudinal panel combines Preqin fundraising and performance data with ProQuest Global Newsstream media data for 205 new PE firms and 1,057 firm-year observations. The binary DV equals 1 when a PE firm raises a follow-on fund in year t. Unrealized performance is the valuation of unrealized investments as a percentage of called capital, and realized performance is distributions to limited partners as a percentage of called capital; both measures are log-transformed. Media attention is the log-transformed number of ProQuest citations to the PE firm in t − 1. The linear probability models include PE-firm fixed effects, calendar-year dummies, time-varying controls, and heteroskedasticity-consistent standard errors clustered by PE firm.
+
+**Key Findings**
+H1 was supported: unrealized performance was positively associated with raising a follow-on fund (Model 2: b = 0.022, p < .01), and moving from one standard deviation below to one above its mean raised the predicted probability from 4.4% to 10.4%. H2 was not supported: realized performance was positive (b = 0.035, p < .01), but the difference between the unrealized- and realized-performance coefficients was not statistically significant (p = .286). H3 was supported: media attention positively moderated the unrealized-performance relationship (Model 3: b = 0.011, p < .01). H4 was supported: the unrealized-performance interaction was stronger than the realized-performance interaction (difference test p = .005); the latter was negative and nonsignificant in Model 4 (b = −0.005, p > .10).
 
 **Theoretical Contribution**
 The paper advances signaling theory by showing that new firms can convey multiple performance signals that differ in strength, and that a weak signal can still mobilize resources. It also integrates signaling theory with a sociocognitive perspective by showing that signal effectiveness depends on the information environment, specifically media attention as an information intermediary. The study contributes empirical evidence that realized performance is more strongly correlated with eventual realized returns than unrealized performance, while also showing that media attention makes the weaker signal more effective for fundraising.

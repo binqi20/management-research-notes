@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Raynard 2020 Reinventing the State-Owned
 text_path: "library/AMJ/vol-63-no-4/text/Raynard 2020 Reinventing the State-Owned Enterprise Negotiating Change during Profound Environmental Upheaval.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["organizational change", "values work", "state-owned enterprise", "institutional upheaval", "transition economies", "reconditioning", "negotiated obsolescence", "mitigating risks of nonconformity"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Organizational Values and Change"
   methods_overview: "Drawing upon multiple data sources"
   keywords_source: "the role of “values work”"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "and coding, we organized all our data sources using"
+  findings_overview: "Our findings draw attention to the role of “values work” in facilitating and mitigating the risks of"
 ---
 
 # Reinventing the State-Owned Enterprise? Negotiating Change during Profound Environmental Upheaval
@@ -52,6 +57,9 @@ This study builds theory on organizational change through a qualitative study in
 **Research Question**
 How can an organization purposefully encode practices and structures that appear antithetical to its underpinning values during profound environmental upheaval? The paper examines this question through Turbo Company, a Chinese state-owned enterprise that had to reconcile market-oriented change with socialist roots, employee welfare commitments, and state-enterprise expectations.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Organizational values and change; values work; archetypal socialist organizing template; institutional upheaval; value system discrepancies; appropriateness; continuity and radical change.
 - Context / triggering condition: China's transition away from a centrally planned economy eroded the relevance of Turbo's prior organizing template and created pressure to adopt market-oriented structures, incentives, and governance arrangements.
@@ -60,6 +68,12 @@ How can an organization purposefully encode practices and structures that appear
 - Boundary conditions: The model is developed from a single, highly embedded state-owned enterprise in China's transition economy, where government mandates, Party authority, employee welfare expectations, and risks of nonconformity were especially salient.
 
 The process starts when environmental upheaval makes the old organizing template less useful but does not automatically dissolve the organization's inherited values. Turbo's leaders first anchored change narratives to legitimate state mandates, then used values work to make controversial changes implementable: they reconditioned members toward market-oriented commitments, negotiated replacements for valued socialist-era arrangements, and continually aligned scope, timing, and pressure with external policy shifts and internal acceptability. The mechanism is therefore not a clean break from the past, but a negotiated reconfiguration in which continuity in implementation helps make value-incongruent change more acceptable.
+
+**Data & Measures**
+Longitudinal single-case data combine more than 300 official government documents; more than 770 Turbo archival documents spanning 1966–2016; 31 semi-structured interviews (six in 2011 and 25 in 2012–2016); and field notes from 11 executive meetings observed from 2001–2015. The authors organized the corpus in MAXQDA, mapped the changing institutional landscape and Turbo's archetypal template, reconstructed change events and case reports for the 1979–1987 and 1998–2006 discontinuities, and inductively coded responses through gradual abstraction from empirical themes to conceptual categories and aggregate dimensions. They triangulated across archival, interview, and observational sources and used member checks and follow-up correspondence.
+
+**Key Findings**
+The analysis surfaces a process of transformational change through values work. When the old organizing template's relevance eroded, Turbo primed members for change, introduced new value commitments through reconditioning (coercive embedding, targeted persuasion, and normalizing paradoxes), removed elements tied to old commitments through negotiated obsolescence (indifferent substitution and objectifying and replacing), and mitigated nonconformity risks through external entrainment, grassroots monitoring and feedback, and signifying consent. Rather than breaking from the past, these values-work strategies reconfigured the socialist organizing template through incremental changes that preserved procedural continuity while enabling market-oriented transformation.
 
 **Theoretical Contribution**
 The paper contributes to organizational change research by showing that values do not only channel what change options are considered or get upended during radical change. In Turbo's case, values regulated how change was implemented, providing procedural continuity while the organization altered its mission, structures, incentives, and employee-enterprise relationships.

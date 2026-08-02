@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Wellman 2020 Beyond the Pyramid Alternat
 text_path: "library/AMJ/vol-63-no-4/text/Wellman 2020 Beyond the Pyramid Alternative Formal Hierarchical Structures and Team Performance.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["formal hierarchical differentiation", "formal hierarchy skewness", "team performance", "perspective-taking motivation", "perspective-taking accuracy", "social identification", "task variety", "agent-based computational model", "clinical nursing shifts", "patient care"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "power imbalances created by formal hierarchies"
   methods_overview: "using archival data and two online surveys"
   keywords_source: "Formal hierarchical differentiation is a cornerstone"
+  hypotheses_source: "Hypothesis 1. Task variety moderates the association"
+  measures_overview: "using five items adapted from the SERVQUAL"
+  findings_overview: "variety is high, formal hierarchy skewness is negatively associated with patient care"
 ---
 
 # Beyond the Pyramid: Alternative Formal Hierarchical Structures and Team Performance
@@ -53,6 +58,12 @@ Formal hierarchical differentiation is a cornerstone of the organizing process. 
 **Research Question**
 How do alternative formal hierarchical structures beyond the pyramid and leaderless team affect team performance? The paper asks how formal hierarchy shape and skewness influence team members' perspective-taking motivation, social identification, team-optimal behavior, and performance under different levels of perspective-taking accuracy.
 
+**Hypotheses / Propositions**
+- Proposition 1: Formal hierarchical differentiation affects members' perspective-taking motivation: members consider others at or above their authority level, not those below, and weight their own preferences more as their authority increases.
+- Proposition 2: Formal hierarchical differentiation heightens power sensitivity, so team decisions more strongly affect members' social identification and subsequent perspective-taking motivation.
+- Proposition 3: The effects of formal hierarchical differentiation depend on task-driven differences in members' perspective-taking accuracy.
+- Hypothesis 1 (Study 2): Task variety moderates the association between formal hierarchy skewness and patient care, such that the association is more negative when task variety is higher rather than lower.
+
 **Mechanism Process**
 - IV(s): Formal hierarchical structure in Study 1; formal hierarchy skewness in Study 2.
 - DV(s): Team-optimal decisions in Study 1; patient care in Study 2.
@@ -60,6 +71,16 @@ How do alternative formal hierarchical structures beyond the pyramid and leaderl
 - Moderators: Perspective-taking accuracy in Study 1; task variety in Study 2 as a task-based indicator likely to reduce perspective-taking accuracy.
 
 The paper argues that formal hierarchical differentiation creates power imbalances that shape whose perspectives team members try to incorporate. Positively skewed pyramids contain more low-authority members, increasing perspective-taking motivation; this helps when members can accurately infer one another's task preferences but hurts when task variety makes such inference unreliable. Negatively skewed inverse pyramids contain more high-authority members, reducing misplaced perspective taking and improving performance when perspective-taking accuracy is low. The field study tests this model by showing that inverse-pyramid-like nursing shifts provide better patient care than pyramid-like shifts when task variety is high, but not when task variety is low.
+
+**Data & Measures**
+Study 1 used an agent-based model in a 6 × 2 between-team design crossing six formal hierarchical structures with high versus low member perspective-taking accuracy. The authors simulated 500 nine-member teams in each cell for 300 decisions per team. Perspective-taking motivation was modeled through whose utilities members incorporated and the authority-weight assigned to their own utility; social identification adjusted dynamically after each team decision. Perspective-taking error was 0 in the high-accuracy condition and ranged from −3.33 to 3.33 in the low-accuracy condition. Team performance was the percentage of team-optimal decisions.
+
+Study 2 combined archival hierarchy data with two online surveys, administered three to four months apart, of members of 135 clinical nursing shifts across five hospitals; the final analytic sample was 68 shifts. Job titles were classified into five authority levels and those values were used to compute each shift's formal hierarchy skewness. Task variety was measured at Time 1 with a three-item skill-variety subscale adapted to the shift level, and patient care was measured at Time 2 with five items adapted from SERVQUAL. Linear mixed models accounted for hospital-level clustering and included controls for gender, education, organizational tenure, shift size, mean authority, and conflict.
+
+**Key Findings**
+Study 1 showed that at high perspective-taking accuracy the pyramid produced the highest team-optimal decision rate (99.96%) and the inverse pyramid the lowest (95.06%). At low accuracy, the ranking reversed: the inverse pyramid performed best (86.52%) and the pyramid worst (81.31%). Sensitivity analyses preserved the relative ordering across changes in team size and decision rules.
+
+Study 2 supported Hypothesis 1. Formal hierarchy skewness interacted negatively with task variety in predicting patient care (b = −0.15, SE = 0.06, p = .02). When task variety was high, skewness was negatively associated with patient care (b = −0.09, SE = 0.03, p = .01), meaning inverse-pyramid-like shifts outperformed pyramid-like shifts; when task variety was low, the association was not significant (b = 0.00, SE = 0.03, p = .92).
 
 **Theoretical Contribution**
 The paper extends hierarchy research by identifying a taxonomy of six formal hierarchical structures and showing that alternatives to the pyramid and leaderless team can matter for team performance. It challenges functional accounts that treat pyramid-shaped hierarchy as generally superior by showing that the inverse pyramid can outperform the pyramid when task conditions reduce perspective-taking accuracy.

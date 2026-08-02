@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Aoki 2020 The Roles of Material Artifact
 text_path: "library/AMJ/vol-63-no-4/text/Aoki 2020 The Roles of Material Artifacts in Managing the Learning–Performance Paradox The Kaizen Case.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["material artifacts", "learning–performance paradox", "kaizen", "continuous improvement", "epistemic objects", "triggering", "supporting", "disconnecting", "connecting"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "theory of “epistemic objects”"
   methods_overview: "I conducted qualitative process studies"
   keywords_source: "triggering, supporting, disconnecting, and connecting"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "I relied on multiple data sources, including archival data, observations, and interviews."
+  findings_overview: "frontline employees focused exclusively on performance. In the other project, by contrast"
 ---
 
 # The Roles of Material Artifacts in Managing the Learning–Performance Paradox: The Kaizen Case
@@ -50,6 +55,9 @@ This paper aims to uncover the roles of material artifacts in managing the learn
 **Research Question**
 How do material artifacts contribute to transforming organizations in ways that effectively manage the learning–performance paradox? The paper asks this in the setting of kaizen implementation, where frontline employees are expected to maintain efficient performance while also experimenting, learning, and improving standardized procedures.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Learning–performance paradox; material artifacts; social interaction; epistemic objects; kaizen; 4S/5S; performance orientation and learning orientation.
 - Process / phases: Sociomaterial stimulation; competing or interrelating epistemic objects; frontline employees' responses to paradox.
@@ -58,6 +66,12 @@ How do material artifacts contribute to transforming organizations in ways that 
 - Boundary conditions: The theorized process is especially relevant to formal, hierarchical organizations where frontline employees have limited authority and depend on managerial support for kaizen.
 
 The process begins when artifacts such as red tags, pictures, videos, painted lines, problem follow-up sheets, SOPs, tables, and graphs become part of everyday interaction. These artifacts can render the learning–performance paradox salient by directing attention to both fixing operational problems and learning new ways to improve procedures. Whether this salience is sustained depends on the interplay among artifact roles: disconnecting artifacts such as customer KPIs and 5S scores can split managerial and frontline understandings, whereas connecting artifacts can link local 4S activities to broader TPS-JIT or kaizen objectives and create support for continued learning.
+
+**Data & Measures**
+The qualitative process study examined the M&A and Die-Casting transformation projects at two production plants of C-Maker, a Chinese electronics parts maker. The M&A project ran from December 2014 to June 2016, and the Die-Casting project from September 2015 to June 2016. The corpus combined archival material artifacts, around 80 hours of on-site observation while shadowing TPS-C, and 32 semi-structured interviews with 20 informants across organizational levels. Interviews lasted between 30 minutes and two hours, were almost all recorded and fully transcribed, and were triangulated with observations and archival data. Analysis was iterative and abductive: the author developed chronological case stories, coded interviewees’ terms into theoretically relevant themes and aggregate concepts, identified artifact roles and actors’ responses, and integrated the two cases into a process model.
+
+**Key Findings**
+Across both projects, triggering artifacts made problems visible and supporting artifacts helped participants enact kaizen, rendering the learning–performance paradox salient through social interaction. In the M&A project, their interplay with disconnecting artifacts—customer KPIs and 5S scores—produced competing objectives and relations; managerial support weakened and frontline employees regressed from attending to performance and learning to focusing exclusively on performance. In the Die-Casting project, their interplay with connecting artifacts used for problem analysis produced interrelating objectives and relationships; management supported frontline learning, and employees persistently accepted both performance and learning. Die-casting changeover time fell from 13,500 seconds to less than 5,400 seconds by the fourth trial, defects fell from 26 to seven, and analysis activities expanded to other machines and processes.
 
 **Theoretical Contribution**
 The paper extends paradox research by showing that material artifacts do more than cue attention to paradox; their interplay creates organizational contexts that shape whether actors respond defensively or proactively. It moves beyond discourse-centered accounts by theorizing how artifact-mediated micro interactions become durable cognitive and relational conditions for managing paradox.

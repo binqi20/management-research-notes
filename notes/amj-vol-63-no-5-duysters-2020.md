@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Duysters 2020 What Drives Exploration Co
 text_path: "library/AMJ/vol-63-no-5/text/Duysters 2020 What Drives Exploration Convergence and Divergence of Exploration Tendencies among Alliance Partners and Competitors.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["exploration", "exploitation", "vicarious learning", "alliance partners", "competitors", "imitation", "legitimation", "firm-specific uncertainty", "technological proximity"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "developing theory on vicarious learning"
   methods_overview: "We tested our hypotheses with a two-stage model"
   keywords_source: "drive firms’ tendencies to explore versus exploit"
+  hypotheses_source: "Hypothesis 1. A firm’s tendency to explore exhibits"
+  measures_overview: "unique patent classes at year t based on patents applied"
+  findings_overview: "counter to expectations, we show that this convergence is weakened by the technological"
 ---
 
 # What Drives Exploration? Convergence and Divergence of Exploration Tendencies among Alliance Partners and Competitors
@@ -53,6 +58,16 @@ Management research has alluded to organizational and environmental conditions t
 **Research Question**
 What drives a firm's tendency to explore in its knowledge domains, and how do the exploration levels of its alliance partners and primary competitors shape convergence or divergence in that tendency? The paper asks whether firms adjust exploration interdependently through reference-group learning rather than only through industry conditions or firm-specific traits.
 
+**Hypotheses / Propositions**
+H1a: A firm's tendency to explore has an inverted U-shaped association with its alliance partners' exploration levels.
+H1b: A firm's tendency to explore has an inverted U-shaped association with its primary competitors' exploration levels.
+H2a: Firm-specific uncertainty strengthens the positive association between a firm's exploration and its alliance partners' exploration.
+H2b: Firm-specific uncertainty strengthens the positive association between a firm's exploration and its primary competitors' exploration.
+H3a: Variation in alliance partners' exploration levels weakens the positive association between firm and partner exploration.
+H3b: Variation in primary competitors' exploration levels weakens the positive association between firm and competitor exploration.
+H4a: Technological proximity to alliance partners strengthens the positive association between firm and partner exploration.
+H4b: Technological proximity to primary competitors strengthens the positive association between firm and competitor exploration.
+
 **Mechanism Process**
 - IV(s): Lagged exploration levels of alliance partners and primary competitors; squared partner and competitor exploration levels.
 - DV(s): Focal firm's exploration tendency, measured as patent-class diversity in the firm's knowledge domains.
@@ -60,6 +75,14 @@ What drives a firm's tendency to explore in its knowledge domains, and how do th
 - Moderators: Firm-specific uncertainty, variation in partners' and competitors' exploration levels, technological proximity to partners, and technological proximity to competitors.
 
 The paper argues that firms use alliance partners and primary competitors as reference groups when deciding how much to explore. At lower alter-exploration levels, imitation and legitimacy-seeking pull the focal firm toward convergence with partners and competitors. At excessive alter-exploration levels, perceived risk and specialization pressures push the focal firm toward exploitation, producing an inverted U-shaped association. Firm-specific uncertainty strengthens convergence, incoherence in partners' or competitors' exploration weakens it, and technological proximity to competitors unexpectedly weakens convergence because differentiation from close rivals becomes more salient.
+
+**Data & Measures**
+The study combines NBER and Comets patent data, SDC alliance records, Compustat financial data, and CRSP stock-price data. The partner-exploration analysis uses 1,474 firm-year observations for 153 firms, and the competitor-exploration analysis uses 2,337 firm-year observations for 180 firms during 1990–2006; patent and alliance histories extend back to 1985. Firm exploration is the inverse normalized Herfindahl index of unique patent classes represented in applications over the preceding five years. Partner exploration is the corresponding index averaged across active alliance partners, and competitor exploration is the corresponding index averaged across the five most technologically similar competitors; explanatory variables are lagged one year.
+
+Firm-specific uncertainty is the firm's standardized monthly stock-price volatility minus the average for sampled firms; variation in partner and competitor exploration is the variance of the corresponding exploration indices; and technological proximity is the Jaffe patent-class-overlap measure averaged across the relevant reference group. Two first-stage panel probit models estimate sample selection and alliance formation, and the second-stage fixed-effects panel models include the resulting inverse Mills ratios, an AR(1) correction, lagged controls, and maximum-likelihood estimation.
+
+**Key Findings**
+H1a is supported: partner exploration has an inverted U-shaped association with firm exploration (linear b = 0.54, p < .001; squared b = -0.51, p < .001; u-test p = .003). H1b receives marginal support for the corresponding competitor-exploration association (linear b = 0.24, p < .01; squared b = -0.21, p < .05; u-test p = .088). H2a and H2b are supported in the full models: firm-specific uncertainty strengthens convergence with partners (b = 0.22, p < .01) and competitors (b = 0.17, p < .01). H3a and H3b are supported: variation weakens convergence with partners (b = -0.34, p < .001) and competitors (b = -0.19, p < .01). H4a is not supported, and H4b is contradicted: technological proximity to competitors weakens rather than strengthens convergence (b = -0.26, p < .01). Some alternative specifications did not reproduce H2a, H2b, or H4b, while the authors retained the reported models and concluded that their overall tests reaffirmed the measures and model specification.
 
 **Theoretical Contribution**
 The paper contributes to research on antecedents of exploration by showing that firm exploration tendencies are interdependent and shaped by unique cooperation and competition networks, not only by industry-level conditions or internal organizational characteristics. It extends vicarious learning theory by identifying when reference-group behavior leads to convergence and when perceived risk, specialization, incoherence, and proximity lead to divergence. It also refines exploration-exploitation research by distinguishing learning from partners' and competitors' knowledge from learning from their exploratory behavior.

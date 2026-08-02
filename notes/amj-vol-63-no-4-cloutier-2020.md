@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Cloutier 2020 Identity Trajectories Expl
 text_path: "library/AMJ/vol-63-no-4/text/Cloutier 2020 Identity Trajectories Explaining Long-Term Patterns of Continuity and Change in Organizational Identities.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["organizational identities", "identity trajectories", "identity refinement", "identity enrichment", "identity work", "means-ends structure"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "The concept of organizational identity was first"
   methods_overview: "Data analysis combined methods from"
   keywords_source: "identity refinement"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Step 2. Open coding of identity-related processes."
+  findings_overview: "organizational ends are more likely to shape long-term patterns of identity change and"
 ---
 
 # Identity Trajectories: Explaining Long-Term Patterns of Continuity and Change in Organizational Identities
@@ -50,6 +55,9 @@ In this study, we track long-term patterns of continuity and change in the organ
 
 **Research Question**
 In the absence of major external events, how do organizational identity claims evolve over time, and why do they evolve the way they do? The paper examines this question by tracking long-term continuity and change in the organizational identities of four nonprofit organizations.
+
+**Hypotheses / Propositions**
+Not reported in paper
 
 **Mechanism Process**
 - Core contrast: identity refinement versus identity enrichment.
@@ -61,6 +69,12 @@ In the absence of major external events, how do organizational identity claims e
 
 The paper theorizes identity change as a process shaped by the means-ends structure of identity claims. When organizations define their ends through category-based claims, members are more likely to preserve categorical fit, enact identity through formal structures, reject identity-inconsistent opportunities, and refine a stable position. When organizations define their ends through relationship-based claims, members are more likely to treat categories as flexible means for serving focal constituents, pursue opportunities across categorical boundaries, and enrich or reinterpret identity over time.
 
+**Data & Measures**
+The longitudinal multiple-case study followed four Canadian nonprofits—Earth, Just, Meals, and Kids—from their founding to the time of the study. The corpus comprised 41 interviews with organizational members, 42 interviews with current and potential funders, organizational and funder documents, and observations; interview and archival data were collected in 2005–2007, 2011–2012, and 2014–2015. The authors reconstructed event chronologies, independently and jointly open-coded identity-related processes, compared cases, coded changes in identity statements, and classified claims as category-, relationship-, or attribute-based and as defining organizational means or ends.
+
+**Key Findings**
+The comparative analysis revealed two identity trajectories. Earth and Just used category-based claims to define organizational ends and attribute-based claims to define means; their mostly planned reflection, structured enactment, and rigorous enforcement produced identity refinement, marked mainly by elaboration and reformulation of established claims. Meals and Kids used relationship-based claims to define ends and category-based claims to define means; their more ad hoc reflection, emergent enactment, and flexible enforcement produced identity enrichment, marked by ongoing reinterpretation and periodic addition or deletion of claims. The model identifies relative conformity to categorical expectations and latitude in pursuing opportunities as the mechanisms linking the means–ends structure of claims to these trajectories.
+
 **Theoretical Contribution**
 The paper contributes to organizational identity theory by explaining long-term identity continuity and change outside disruptive events. It shows that identity claims are not equally consequential: claims defining organizational ends shape trajectories more strongly than claims defining means. It also challenges content-based hierarchy assumptions by arguing that category-based claims do not always precede relationship-based or attribute-based claims; their importance depends on whether members use them to define ends or means.
 
@@ -71,7 +85,7 @@ For nonprofit organizations, the findings suggest that managing mission drift is
 The authors note that the study is based on nonprofit organizations, though they argue that the theoretical logic may transfer to organizations operating within institutionalized classification systems and relationships with constituencies. They also consider sector differences as a possible alternative explanation because the four organizations operated in different nonprofit sectors, but report that their analysis did not support this explanation. Transferability therefore depends on whether other settings share comparable classification systems, constituency relationships, and opportunities to define organizational ends in categorical or relational terms.
 
 **Future Research**
-Future research could examine alternative configurations of identity claims beyond the two observed here, such as attribute-based claims defining means with relationship-based ends, or relationship-based claims defining means with category-based ends. It could also investigate how the means-ends structure of identity claims shapes identity work and strategic change in for-profit firms, professional service organizations, or other settings where category membership and focal-constituency relationships both matter.
+Future research could examine alternative configurations of identity claims beyond the two observed here, such as attribute-based claims defining means with relationship-based ends, or relationship-based claims defining means with category-based ends.
 
 **APA 7th Citation**
 Cloutier, C., & Ravasi, D. (2020). Identity trajectories: Explaining long-term patterns of continuity and change in organizational identities. *Academy of Management Journal*, 63(4), 1196-1235. https://doi.org/10.5465/amj.2017.1051

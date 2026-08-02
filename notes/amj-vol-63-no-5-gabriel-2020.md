@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Gabriel 2020 When Work and Family Blend 
 text_path: "library/AMJ/vol-63-no-5/text/Gabriel 2020 When Work and Family Blend Together Examining the Daily Experiences of Breastfeeding Mothers at Work.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-mixed"
 keywords: ["blended work–family experiences", "breastfeeding at work", "breastfeeding interference", "breastfeeding enrichment", "negative affect", "positive affect", "work–family balance satisfaction", "breastfeeding stigma", "breastfeeding compassion", "quality of the breastfeeding space"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "Theoretical frameworks by Clark (2000)"
   methods_overview: "We used multilevel path analysis in Mplus 7.4"
   keywords_source: "blended work–family experiences"
+  hypotheses_source: "positively relates to negative affect and (b) negatively"
+  measures_overview: "demands of my breastfeeding or pumping interfered"
+  findings_overview: "interference increased negative affect and decreased positive affect daily"
 ---
 
 # When Work and Family Blend Together: Examining the Daily Experiences of Breastfeeding Mothers at Work
@@ -54,6 +59,14 @@ Although several work–family theories describe complexities associated with fu
 **Research Question**
 How do breastfeeding women working full-time experience breastfeeding at work as a blended work–family experience, and how do those daily experiences affect breastfeeding, work, and family outcomes? The paper asks whether breastfeeding at work operates only as interference or can also generate enrichment when work and family roles are fully blended during the workday.
 
+**Hypotheses / Propositions**
+- H1. Daily breastfeeding interference (a) positively relates to negative affect and (b) negatively relates to positive affect.
+- H2. Daily breastfeeding enrichment (a) negatively relates to negative affect and (b) positively relates to positive affect.
+- H3. Daily breastfeeding interference has a negative indirect effect on (a) breastfeeding goal progress, (b) work goal progress, and (c) work–family balance satisfaction via increased negative affect.
+- H4. Daily breastfeeding interference has a negative indirect effect on (a) breastfeeding goal progress, (b) work goal progress, and (c) work–family balance satisfaction via decreased positive affect.
+- H5. Daily breastfeeding enrichment has a positive indirect effect on (a) breastfeeding goal progress, (b) work goal progress, and (c) work–family balance satisfaction via decreased negative affect.
+- H6. Daily breastfeeding enrichment has a positive indirect effect on (a) breastfeeding goal progress, (b) work goal progress, and (c) work–family balance satisfaction via increased positive affect.
+
 **Mechanism Process**
 - IV(s): Daily breastfeeding interference and daily breastfeeding enrichment; contextual features of breastfeeding stigma, breastfeeding compassion, and quality of the breastfeeding space.
 - DV(s): Breastfeeding goal progress, work goal progress, and work–family balance satisfaction.
@@ -61,6 +74,14 @@ How do breastfeeding women working full-time experience breastfeeding at work as
 - Moderators: Breastfeeding stigma, breastfeeding compassion, and quality of the breastfeeding space were explored as contextual moderators; breastfeeding compassion significantly moderated the relationship between breastfeeding interference and positive affect.
 
 The paper argues that breastfeeding at work creates a borderland in which a family role is physically, temporally, and psychologically brought into work. When women appraise that blended experience as interference, negative affect increases and positive affect decreases, which undermines breastfeeding goal progress and work goal progress through negative affect and lowers work–family balance satisfaction through reduced positive affect. When women appraise breastfeeding at work as enriching, negative affect decreases and positive affect increases, producing the opposite pattern for breastfeeding and work goal progress through lower negative affect and improving balance satisfaction through higher positive affect. Contextual features shape these affective experiences, with stigma and breastfeeding-space quality having direct affective effects and compassion strengthening the interference-positive affect relationship in the tested model.
+
+**Data & Measures**
+Study 1 used semi-structured interviews with 38 women working full-time who were currently or had recently stopped breastfeeding at work. Six open-ended questions produced audio-recorded interviews averaging 32 minutes; a five-step content analysis reduced 563 references into 25 first-order categories, 10 second-order codes, and four higher-order themes, with three independent coders resolving discrepancies through discussion.
+
+Study 2 used a 15-workday experience sampling design with 106 women and 1,206 day-level observations, collecting an opt-in survey and three surveys per day. Breastfeeding stigma was measured at opt-in with three adapted items; the morning survey measured breastfeeding interference, enrichment, and compassion with three items each, quality of the breastfeeding space with five items, and negative and positive affect with eight Job-Related Affective Well-Being Scale items. Breastfeeding goal progress was the summed actual ounces produced in the morning and afternoon; the evening survey measured work goal progress with three items and work–family balance satisfaction with four items. The authors used multilevel path analysis in Mplus 7.4, within-person centered Level 1 predictors, grand-mean centered Level 2 stigma, and Monte Carlo confidence intervals for indirect effects.
+
+**Key Findings**
+Study 1 generated four themes around interference and enrichment, daily affect, breastfeeding/work/family goal progress, and contextual features; these themes informed the Study 2 model. In Study 2, H1 and H2 were supported: interference increased negative affect (γ = .13, p < .01) and decreased positive affect (γ = −.20, p < .01), whereas enrichment decreased negative affect (γ = −.13, p < .01) and increased positive affect (γ = .23, p < .01). H3 and H5 received partial support: via negative affect, interference had negative indirect effects on breastfeeding goal progress (estimate = −.035) and work goal progress (estimate = −.015), while enrichment had positive indirect effects on those outcomes (estimates = .035 and .015, respectively), but neither pattern held for work–family balance satisfaction. H4 and H6 received limited support only for work–family balance satisfaction through positive affect (interference estimate = −.016; enrichment estimate = .018). Breastfeeding stigma increased negative affect and decreased positive affect; compassion increased positive affect but not negative affect; and higher-quality breastfeeding spaces decreased negative affect and increased positive affect. Compassion also strengthened the negative interference–positive affect relationship rather than buffering it.
 
 **Theoretical Contribution**
 The paper extends work–family theory by showing that some experiences are not transfers between separate work and family domains but fully blended states in which role boundaries are thin or absent. It demonstrates that the same blended experience, breastfeeding at work, can generate both interference and enrichment rather than fitting only the traditional family-demand model. It also adds contextual detail to work–family border theory by examining stigma, compassion, and the physical breastfeeding space as features that influence daily affect in the borderland.

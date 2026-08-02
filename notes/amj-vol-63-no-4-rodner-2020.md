@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Rodner 2020 Making Space for Art A Spati
 text_path: "library/AMJ/vol-63-no-4/text/Rodner 2020 Making Space for Art A Spatial Perspective of Disruptive and Defensive Institutional Work in Venezuela’s Art World.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["space", "disruptive institutional work", "defensive institutional work", "Venezuela’s art world", "Henri Lefebvre", "material dimensions", "social dimensions", "symbolic dimensions", "bubble of freedom"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "the classical work of Henri Lefebvre"
   methods_overview: "We systematically coded"
   keywords_source: "symbolic aspects of the spatial dimensions"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "disruption and defense. We systematically coded"
+  findings_overview: "space to challenge and maintain their key values and practices—and that these three"
 ---
 
 # Making Space for Art: A Spatial Perspective of Disruptive and Defensive Institutional Work in Venezuela’s Art World
@@ -53,6 +58,9 @@ The physical and material aspects of space, such as geographical distance or bou
 **Research Question**
 The paper asks what role space plays in the disruption and defense of institutions, and how the dimensions of space interact in that disruption and defense. It examines these questions in Venezuela’s art world after the Bolivarian Revolution, where government actors and displaced art professionals used different spatial tactics to contest what art should be and who could legitimate it.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Space; disruptive institutional work; defensive institutional work; material, social, and symbolic dimensions of space; government appropriation of official art venues; displaced art actors’ alternative “bubble of freedom.”
 - Process / phases: Government centralization and reclamation of official art spaces; exclusion and displacement of established art professionals; clustering of private galleries and alternative venues; social and symbolic reconstruction of value-granting practices.
@@ -61,6 +69,12 @@ The paper asks what role space plays in the disruption and defense of institutio
 - Boundary conditions: The process is theorized in a mature field marked by a strong power imbalance, where government actors controlled publicly financed cultural spaces and displaced actors retained social and symbolic links to the global art world.
 
 The process begins when the Chávez administration appropriates and reorganizes museums, galleries, art salons, and cultural agencies to align official art space with Bolivarian ideology. Established art professionals respond by distancing themselves from state-run venues and clustering private galleries, foundations, and alternative venues into a “bubble of freedom” where they can continue curatorial and value-conferring practices. Material demarcation enables new social interactions, and those interactions reinforce symbolic legitimacy; at the same time, the bubble protects defensive work while also narrowing access to wider audiences and material resources.
+
+**Data & Measures**
+The longitudinal qualitative case combined 40 semi-structured interviews (31 in 2009–2012 and 9 in 2016–2017, including four follow-up interviews), just over 800 pages of interview transcripts, nonparticipant observation, just under 100 secondary sources, and approximately 200 photographs. The authors manually coded and translated the interview material, generated informant-centric first-order codes, used memo writing, and iteratively developed second-order themes and the aggregate material, social, and symbolic dimensions, informed by Lefebvre’s model and spatial concepts of boundaries, distance, and movement.
+
+**Key Findings**
+Disruptive and defensive actors leveraged the material, social, and symbolic dimensions of space in interdependent ways. Government actors appropriated and centralized official art venues but, despite physical control, struggled to legitimate ideologically aligned practices; displaced art professionals clustered private venues into a “bubble of freedom,” maintaining social ties and symbolic value-granting practices aligned with the global art world. Material demarcation enabled social interaction and symbolic expression, while the social and symbolic uses of space mutually reinforced one another. The defensive actors’ isolation was double-edged: it preserved institutional legitimacy but restricted access to wider audiences and material resources, allowing competing institutional prescriptions to coexist in different spaces.
 
 **Theoretical Contribution**
 The paper contributes to institutional work by showing that space is not merely a background location for institutional struggle but a strategic lever through which actors disrupt and defend institutions. It extends research on place and materiality by distinguishing material positioning, social embodiment/enactment, and symbolic expressiveness, and by showing how these dimensions mutually reinforce one another during institutional conflict.

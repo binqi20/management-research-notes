@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Yi 2020 You Are Great and I Am Great (To
 text_path: "library/AMJ/vol-63-no-5/text/Yi 2020 You Are Great and I Am Great (Too) Examining New CEOs’ Social Influence Behaviors during Leadership Transition.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["new CEOs", "social influence behaviors", "leadership transition", "CEO succession", "early dismissal", "ingratiation", "self-promotion", "stock market reactions"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Social influence theory suggests"
   methods_overview: "the Cox proportional hazards regression model"
   keywords_source: "new CEOs’ social influence behaviors"
+  hypotheses_source: "Hypothesis 1. The retention of the predecessor CEO as"
+  measures_overview: "“CEO early dismissal” refers to a dismissal"
+  findings_overview: "Therefore, Hypothesis 5a is not supported."
 ---
 
 # You Are Great and I Am Great (Too): Examining New CEOs’ Social Influence Behaviors during Leadership Transition
@@ -52,6 +57,18 @@ In this study, we examine new CEOs’ social influence behaviors in leadership t
 **Research Question**
 How do new CEOs' social influence behaviors during leadership transition alter the relationship between two vulnerability conditions and their likelihood of early dismissal? The paper focuses on predecessor CEOs remaining as board chairs and negative stock market reactions to new CEO appointments.
 
+**Hypotheses / Propositions**
+H1: Retaining the predecessor CEO as board chair is positively related to the new CEO's likelihood of early dismissal.
+H2: A negative stock market reaction to the new CEO's appointment is positively related to the new CEO's likelihood of early dismissal.
+H3a: Publicly praising the predecessor weakens the positive relationship between predecessor-chair retention and early dismissal.
+H3b: Commitment to strategic continuity weakens the positive relationship between predecessor-chair retention and early dismissal.
+H4a: Self-centered expression weakens the positive relationship between a negative appointment reaction and early dismissal.
+H4b: Expression of confidence weakens the positive relationship between a negative appointment reaction and early dismissal.
+H5a: Publicly praising the predecessor strengthens the positive relationship between a negative appointment reaction and early dismissal.
+H5b: Commitment to strategic continuity strengthens the positive relationship between a negative appointment reaction and early dismissal.
+H6a: Self-centered expression strengthens the positive relationship between predecessor-chair retention and early dismissal.
+H6b: Expression of confidence strengthens the positive relationship between predecessor-chair retention and early dismissal.
+
 **Mechanism Process**
 - IV(s): Retention of predecessor CEO as board chair; negative stock market reaction to new CEO appointment.
 - DV(s): New CEO early dismissal within three years of succession.
@@ -60,6 +77,12 @@ How do new CEOs' social influence behaviors during leadership transition alter t
 
 The mechanism is audience-specific social influence during early CEO tenure. Ingratiation toward a retained predecessor CEO can elicit liking-based approval and reduce the adverse effect of predecessor-chair retention on new CEO survival. Self-promotion can elicit competence-based approval from shareholders and boards and reduce the adverse effect of a negative stock market reaction. The same behaviors can also backfire with nontarget audiences: commitment to strategic continuity can amplify the adverse effect of negative market reaction, and self-centered expression can amplify the adverse effect of predecessor-chair retention.
 
+**Data & Measures**
+The study analyzes 440 CEO successions in publicly listed S&P 500 companies from 2001–2012, yielding 1,688 CEO-year observations. It combines ExecuComp and Compustat succession data, CRSP returns, Factiva turnover records, press releases, and earnings-call transcripts collected from the succession year through three years or the CEO's departure. Early dismissal is departure classified as dismissal within three years; predecessor-chair retention is an annual indicator for a predecessor remaining chair without an announced departure plan; and a strong negative appointment reaction is an indicator based on cumulative abnormal returns over days −2 to +2. Public praise is coded from whether opening remarks compliment the predecessor; commitment to strategic continuity, self-centered expression, and confidence are derived from DICTION measures of reverse-coded Activity, Self-Reference, and Strong Modal language, respectively. Cox proportional-hazards models estimate dismissal risk, with Heckman two-stage corrections for selection into predecessor-chair retention and strong negative market reactions.
+
+**Key Findings**
+H1 and H2 were supported: predecessor-chair retention (b = 1.23, p < .05; hazard ratio = 3.42) and a strong negative market reaction (b = 0.93, p < .05; hazard ratio = 2.53) increased early-dismissal hazards. H3a and H3b were supported: public praise (interaction b = −3.20, p < .05) and commitment to strategic continuity (b = −1.13, p < .05) weakened the predecessor-retention effect. H4a and H4b were supported: self-centered expression (b = −0.92, p < .05) and confidence (b = −0.98, p < .05) weakened the negative-market-reaction effect. H5a was not supported (b = 0.57, n.s.), but H5b was supported: commitment to strategic continuity amplified the negative-market-reaction effect (b = 1.07, p < .05). H6a was supported: self-centered expression amplified the predecessor-retention effect (b = 0.99, p < .05); H6b was not supported (b = 0.41, n.s.).
+
 **Theoretical Contribution**
 The paper contributes to CEO succession research by shifting attention from succession as an event to the leadership transition period and showing how new CEOs' own social influence behaviors shape early survival prospects. It also extends social influence theory by documenting both beneficial and adverse consequences of ingratiation and self-promotion, depending on whether the relevant audience is the target or a nontarget audience. Methodologically, it develops unobtrusive proxies for upper-echelon social influence using public conference-call language.
 
@@ -67,7 +90,7 @@ The paper contributes to CEO succession research by shifting attention from succ
 The paper implies that new CEOs should consider which audience a social influence behavior is likely to affect. Ingratiating a retained predecessor may be useful when that predecessor remains powerful, and self-promotion may help when investors initially react negatively, but each tactic can create negative impressions among other stakeholders. Boards evaluating new CEOs should also recognize that public transition-period language can shape perceptions and early dismissal risk.
 
 **Limitations**
-The study infers social influence behaviors from public earnings conference-call opening remarks rather than directly observing private interactions between new CEOs, predecessors, boards, and shareholders. The sample is limited to publicly listed S&P 500 companies and excludes financial firms and utilities, so the findings may not generalize to private firms, regulated industries, or non-U.S. governance settings. The authors address selection concerns with two-stage corrections and robustness checks, but the design remains observational.
+Not reported in paper
 
 **Future Research**
 Future research could apply similar language-based measures to other upper-echelon social interactions and to other issues involving social interaction processes among upper echelons. The paper also points to further work on social influence behaviors in leadership transitions, including how self-promotion and ingratiation can help with target audiences while backfiring with nontarget audiences.

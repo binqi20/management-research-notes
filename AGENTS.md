@@ -140,24 +140,22 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-08-01):
+**Current main-branch audit state (2026-08-02):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 16 upgraded 25 notes (AMJ vol-64-no-1 + vol-63-no-6, all v2
-augmentations) to v3. The final batch audit is **225/225 prose-field verdicts
-SUPPORTED, with no residual `PARTIAL` accepted**, after five evidence-based
-legacy-field repairs across four notes in two repair rounds and three audit
-rounds. All 25 augmentation deltas passed the validator and diff-guard on the
-first attempt with zero self-fix cycles. The first audit round found four
-legacy-field `PARTIAL`s: inferred practitioner directives in Abdurakhmonov,
-Cappellaro, and Pierce, plus Taeuscher limitations not stated by the paper. A
-fresh auditor then identified one new nuance in Cappellaro's Future Research;
-the source-narrowed repair cleared in round 3. All 75 verdicts on the three new
-v3 fields were `SUPPORTED`, so the repeated-new-field stop rule was not
-triggered. This is the first backfill batch run end-to-end on `gpt-5.6-sol`
-for both augmentation and audit; batches 01–07 recorded `claude-opus-4-8` and
-batches 08–15 recorded `claude-opus-5`. A cross-family spot-audit follows at
-the workshop review. The corpus contains 61 legacy v1
-notes, 709 v2 notes, and 397 v3 notes with evidence anchors; new notes are
+batch 17 upgraded 24 notes (AMJ vol-63-no-5 + vol-63-no-4, all v2
+augmentations) to v3. The final batch audit is **216/216 prose-field verdicts
+SUPPORTED, with no residual `PARTIAL` accepted**, after seven evidence-based
+legacy-field repairs across four notes in one repair round and two audit
+rounds. All 24 augmentation deltas passed the validator and initial diff-guard
+without a gate failure. The repairs narrowed Ody-Brasier's Practical
+Implication, Limitations, and Future Research; Yi's Limitations; Bourgoin's
+Research Question and Future Research; and Cloutier's Future Research. All 72
+verdicts on the three new v3 fields were `SUPPORTED`, so the repeated-new-field
+stop rule was not triggered. This is the second consecutive backfill batch run
+end-to-end on `gpt-5.6-sol` for both augmentation and audit; the recurring
+workshop cross-family spot-audit applies, and batch 16's review scored 27/27
+agreement. The corpus contains 61 legacy v1
+notes, 685 v2 notes, and 421 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -180,7 +178,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-08-01.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-08-02.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 

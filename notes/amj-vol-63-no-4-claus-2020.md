@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Claus 2020 Making Change from Behind a M
 text_path: "library/AMJ/vol-63-no-4/text/Claus 2020 Making Change from Behind a Mask How Organizations Challenge Guarded Institutions by Sparking Grassroots Activism.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["guarded institutions", "grassroots activism", "alter ego", "public dissent", "high-stakes event", "astroturfing", "child marriage", "institutional change"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "social movement theory"
   methods_overview: "an in-depth qualitative study of efforts"
   keywords_source: "guarded institutions"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Specifically, we used NVivo to code phrases and terms"
+  findings_overview: "and the emergence of “real” grassroots activism."
 ---
 
 # Making Change from Behind a Mask: How Organizations Challenge Guarded Institutions by Sparking Grassroots Activism
@@ -51,6 +56,9 @@ We examine how organizations can challenge institutions that are coercively prot
 **Research Question**
 The paper asks how organizations can challenge guarded institutions when they are unable or unwilling to advocate publicly against them. It examines this question through ICO's covert campaign against child marriage in Indonesia.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Contextual problem: Child marriage in Indonesia operated as a guarded institution, morally reinforced and coercively protected by religious and political elites.
 - Organizational constraint: ICO wanted to challenge child marriage but depended on government and religious relationships for other child-welfare work, making open dissent risky.
@@ -59,6 +67,12 @@ The paper asks how organizations can challenge guarded institutions when they ar
 - Emergent outcome: Public contestation moved beyond ICO's control as independent activists, organizations, media actors, and local initiatives took up the anti-child-marriage cause.
 
 The process centers on covert institutional disruption rather than direct public advocacy. ICO masked its organizational role, mimicked grassroots mobilization, and used a high-stakes event to shift child marriage from a repressed issue to one that could be publicly contested. The paper argues that what began as strategically organized, quasi-astroturfed activism became increasingly independent grassroots activism.
+
+**Data & Measures**
+The longitudinal case draws on 105 interviews (96 conducted by the authors, six by local research assistants, and three sourced from ICO archives), 90 hours of observation, 7,027 pages of archival documents, and 23 hours of archival visual material. The data span 1974–2019 and are concentrated from the campaign's start in late 2013 through the aftermath of the June 2015 Constitutional Court verdict. Analysis proceeded iteratively through a thick chronology, temporal bracketing into five periods, NVivo first-order coding, aggregation into eight second-order categories and four theoretical dimensions, and processual analysis; the authors triangulated sources and refined the model using informant and colleague feedback.
+
+**Key Findings**
+The study develops a process model in which crafting an alter ego—through secretive coalition building and feigning a social movement—helped move child marriage from repressed contestation and scattered activism to emergent contestation and orchestrated activism. Incubating public dissent—by provoking public outrage around the high-stakes Constitutional Court verdict and then fueling grassroots activism—helped shift the context toward open contestation and independently organized grassroots activism. Thus, organization-led mobilization that initially resembled astroturfing stimulated activism that increasingly operated independently of the organization that helped spawn it.
 
 **Theoretical Contribution**
 The paper develops a process model explaining how organizations can challenge guarded institutions when open advocacy is too risky. It contributes two strategies--crafting an alter ego and incubating public dissent--and specifies their tactics, including secretive coalition building, feigning a social movement, provoking public outrage, and fueling grassroots activism. It also challenges a sharp distinction between astroturfing and grassroots mobilization by showing how organization-led mobilization can stimulate activism that later becomes more organic and bottom-up.

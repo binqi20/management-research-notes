@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Nurmohamed 2020 The Underdog Effect When
 text_path: "library/AMJ/vol-63-no-4/text/Nurmohamed 2020 The Underdog Effect When Low Expectations Increase Performance.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["underdog expectations", "desire to prove others wrong", "performance", "perceived credibility", "self-enhancement", "psychological reactance", "self-fulfilling prophecy"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "psychological reactance"
   methods_overview: "I conducted four studies"
   keywords_source: "underdog expectations, defined as individuals’ perceptions"
+  hypotheses_source: "Hypothesis 1. Underdog expectations are positively"
+  measures_overview: "was measured in terms of the total number of targets"
+  findings_overview: "Studies 1 and 2 provide support for the positive relationship between underdog expectations and performance."
 ---
 
 # The Underdog Effect: When Low Expectations Increase Performance
@@ -50,6 +55,12 @@ Existing theory and research has documented the benefits of facing high expectat
 **Research Question**
 When do underdog expectations increase rather than inhibit individual performance? The paper asks whether individuals' perceptions that others view them as unlikely to succeed can motivate performance through the desire to prove others wrong, and whether this effect depends on observers' perceived credibility.
 
+**Hypotheses / Propositions**
+H1: Underdog expectations are positively related to task performance.
+H2: The desire to prove others wrong mediates the positive relationship between underdog expectations and task performance.
+H3: Perceived credibility moderates the effect of underdog expectations on performance, such that underdog expectations increase performance only when credibility is low, not high.
+H4: The desire to prove others wrong mediates the interactive effect of underdog expectations and perceived credibility on performance.
+
 **Mechanism Process**
 - IV(s): Underdog expectations, compared with high observer expectations or neutral/evenly matched expectations across the experimental studies.
 - DV(s): Supervisor-rated job performance, mouse-target task performance, and negotiation performance.
@@ -57,6 +68,18 @@ When do underdog expectations increase rather than inhibit individual performanc
 - Moderators: Perceived credibility of observers.
 
 The paper argues that underdog expectations can activate self-enhancement and psychological reactance motives: individuals discount less credible low expectations, seek to protect positive self-appraisals, and work harder to show observers that their judgments are wrong. This desire to prove others wrong explains the performance benefit in Study 3 and partly explains the conditional effect in Study 4. When observers are credible, the same underdog expectations are more likely to be internalized or to make proving others wrong performance-disruptive, aligning the findings with the Golem effect and self-fulfilling prophecy.
+
+**Data & Measures**
+- Study 1 used lagged, multisource field data from 371 newly hired employees at a U.S. consumer packaged goods company. Employees completed a three-item underdog-expectations scale during training; about seven weeks later, supervisors rated seven-item in-role job performance. The associational regressions controlled for task self-efficacy, sex, and ethnicity.
+- Study 2 randomly assigned 327 TurkPrime participants to underdog (n = 108), high-observer (n = 108), or neutral (n = 111) expectations. Performance was the number of targets clicked during a five-minute mouse-target task, with practice-round performance controlled in regression analyses.
+- Study 3 randomly assigned the 78 focal negotiators in 78 student dyads to underdog (n = 25), high-observer (n = 27), or evenly matched (n = 26) expectations. Performance was whether a dyad reached the binary optimal integrative solution; the mediator was a four-item desire-to-prove-others-wrong scale. Logistic regressions and 10,000-resample bootstrapping tested mediation.
+- Study 4 used a 3 × 2 randomized online experiment with 589 TurkPrime participants, manipulating observer expectations and high versus low credibility. Performance was the number of mouse targets clicked; the mediator was a six-item desire-to-prove-others-wrong scale, and credibility was manipulated through the observer's prior task performance and prediction accuracy. Regressions and 10,000-resample moderated-mediation analyses controlled for practice-round performance.
+
+**Key Findings**
+- Study 1 supported H1: underdog expectations positively predicted supervisor-rated performance (b = .08, p < .05).
+- Study 2 supported H1: underdog expectations positively affected mouse-target performance after prior performance was controlled (b = 14.47, p < .001).
+- Study 3 supported H1 (b = .71, p < .05) and H2: underdog expectations increased the desire to prove others wrong, which positively predicted reaching the optimal negotiation solution; the bootstrapped indirect effect was positive (b = .48, SE = .26, 95% CI [.053, 1.09]).
+- Study 4 did not support the unconditional H1 or H2 effects. It supported H3: underdog expectations increased performance when credibility was low (b = 11.19, SE = 3.43, p = .0012) but not when credibility was high (b = −3.15, SE = 3.30, p > .05), with an interaction of b = −14.34 (p < .01). H4 was qualified rather than supported as originally specified: first-stage moderated mediation was nonsignificant, while exploratory analyses indicated that credibility moderated both stages; the positive indirect effect at low credibility emerged only at the 90% confidence level and was absent at high credibility.
 
 **Theoretical Contribution**
 The paper challenges the assumption that low expectations from others are uniformly detrimental by showing that underdog expectations can motivate performance. It contributes a relational mechanism, the desire to prove others wrong, to expectations and motivation research, moving beyond self-efficacy as the dominant explanation for expectation effects. It also identifies perceived observer credibility as a boundary condition that reconciles the underdog effect with self-fulfilling prophecy theory.

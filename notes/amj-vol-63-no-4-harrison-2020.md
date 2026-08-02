@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-4/pdfs/Harrison 2020 Perception Is Reality How 
 text_path: "library/AMJ/vol-63-no-4/text/Harrison 2020 Perception Is Reality How CEOs’ Observed Personality Influences Market Perceptions of Firm Risk and Shareholder Returns.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["observable personality traits", "market perceptions", "firm stock risk", "shareholder returns", "risk-return relationship", "upper echelons"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "upper echelons and personality literatures"
   methods_overview: "we used random-effects panel"
   keywords_source: "CEOs’ observable personality traits influence market"
+  hypotheses_source: "Hypothesis 3. The CEO’s observed level of neuroticism will be positively related to firm stock risk."
+  measures_overview: "measure stock risk as systematic risk"
+  findings_overview: "risk–return relationship from positive to negative."
 ---
 
 # Perception Is Reality: How CEOs’ Observed Personality Influences Market Perceptions of Firm Risk and Shareholder Returns
@@ -53,6 +58,14 @@ We develop theory to explain how CEOs’ observable personality traits influence
 **Research Question**
 How do CEOs' observed personality traits influence market perceptions of firm risk and shareholder returns? The paper asks whether observed conscientiousness, neuroticism, and extraversion shape firm stock risk and condition the relationship between stock risk and returns.
 
+**Hypotheses / Propositions**
+- H1: The CEO's observed conscientiousness will be negatively related to firm stock risk.
+- H2: The relationship between firm stock risk and shareholder returns will be more positive when the CEO's observed conscientiousness is higher.
+- H3: The CEO's observed neuroticism will be positively related to firm stock risk.
+- H4: The relationship between firm stock risk and shareholder returns will be less positive when the CEO's observed neuroticism is higher.
+- H5: The CEO's observed extraversion will be positively related to firm stock risk.
+- H6: The relationship between firm stock risk and shareholder returns will be less positive when the CEO's observed extraversion is higher.
+
 **Mechanism Process**
 - IV(s): CEOs' observed levels of conscientiousness, neuroticism, and extraversion.
 - DV(s): Firm stock risk and total shareholder returns.
@@ -60,6 +73,15 @@ How do CEOs' observed personality traits influence market perceptions of firm ri
 - Moderators: CEOs' observed conscientiousness, neuroticism, and extraversion moderate the relationship between firm stock risk and shareholder returns.
 
 The paper argues that CEOs' observable verbal and behavioral cues lead market actors to extend judgments about the CEO to the firm. More conscientious CEOs are expected to make the firm appear less risky and more capable of translating risk into returns because they signal deliberation, dependability, and careful management. More neurotic CEOs are expected to make firms appear riskier and less able to convert risk into returns because their cues suggest instability, anxiety, and less predictable leadership. More extraverted CEOs are expected to raise perceived risk and weaken the risk-return relationship because boldness, dominance, and excitement seeking may be read as aggressive risk taking rather than disciplined value creation.
+
+**Data & Measures**
+The final panel contains 18,748 CEO-firm-year observations for 2,880 CEOs of 2,008 S&P 1500 firms from 1993 to 2015. The sample frame comes from ExecuComp; CEO language comes from more than 100,000 LexisNexis earnings-call transcripts; stock risk and shareholder returns come from CRSP; and firm and industry controls come from Compustat. The focal personality traits—conscientiousness, neuroticism, and extraversion—are scored from 1 to 7 by applying the Open Language Chief Executive Personality Tool to CEOs' extemporaneous answers to analysts' unscripted questions. Firm stock risk is systematic beta estimated with one year of daily stock-return data; total shareholder return is the fiscal-year change in share price plus dividends, divided by beginning share price. Random-effects panel regressions corrected for serial correlation estimate the associations, with multilevel longitudinal models used as robustness checks.
+
+**Key Findings**
+- H1 and H2 were supported: conscientiousness was negatively related to stock risk (b = -0.03, p < .05), and its interaction with stock risk positively predicted shareholder returns (b = 5.80, p < .001). Moving from low to high stock risk reduced returns by 1.70% at low conscientiousness but increased them by 3.83% at high conscientiousness.
+- H3 and H4 received some support: neuroticism was positively but only marginally related to stock risk (b = 0.02, p < .10), and its interaction with stock risk negatively predicted returns in the primary model (b = -2.53, p < .05). Moving from low to high stock risk increased returns by 2.68% at low neuroticism but had no meaningful effect at high neuroticism; the interaction was not significant in the multilevel robustness models.
+- H5 and H6 were supported: extraversion was positively related to stock risk (b = 0.02, p < .05), and its interaction with stock risk negatively predicted returns (b = -5.59, p < .001). Moving from low to high stock risk increased returns by 5.43% at low extraversion but reduced them by 3.30% at high extraversion.
+- Post hoc, the stock-risk-by-agreeableness interaction negatively predicted returns (b = -3.32, p < .01), whereas the stock-risk-by-openness interaction was not significant.
 
 **Theoretical Contribution**
 The paper extends upper echelons research by shifting attention from CEOs' effects on internal strategic choices to CEOs' effects on external market perceptions of firm risk and value creation. It contributes to CEO personality research by distinguishing observed personality from self-reported or underlying personality and showing that externally visible traits have firm-level capital-market consequences. It also contributes to risk-return theory by showing that the risk-return relationship is contingent on how market actors view the CEO.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Brattström 2020 Interorganizational Rel
 text_path: "library/AMJ/vol-63-no-5/text/Brattström 2020 Interorganizational Relationships as Political Battlefields How Fragmentation within Organizations Shapes Relational Dynamics between Organizations.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["interorganizational relationships", "internal fragmentation", "relational dynamics", "strategic alliance", "competing partnership logics", "dual relational dynamics", "organizational politics", "trust", "commitment"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "organizational politics literature"
   methods_overview: "Based on a longitudinal case study of a dyadic strategic alliance"
   keywords_source: "internal fragmentation—that is, the existence of multiple"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we had established a database consisting of 396 events."
+  findings_overview: "commitments, while simultaneously experiencing negative trust dynamics. We show"
 ---
 
 # Interorganizational Relationships as Political Battlefields: How Fragmentation within Organizations Shapes Relational Dynamics between Organizations
@@ -51,6 +56,9 @@ Whereas extant theorizing on interorganizational relational dynamics has highlig
 **Research Question**
 How does internal fragmentation within one partner organization influence relational dynamics between organizations? The paper examines this question by studying how competing coalitions inside Alpha shaped trust and commitment dynamics in its strategic alliance with Beta.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Triggering context: Alpha's technological transition created a need to collaborate differently with suppliers.
 - Competing partnership logics: Alpha directors held an embedded partnership logic, while Alpha technology managers held a transactional partnership logic.
@@ -60,6 +68,12 @@ How does internal fragmentation within one partner organization influence relati
 - Feedback process: the dual relational dynamics sustained the competing partnership logics inside Alpha.
 
 The process is not a variable-based causal model. Internal coalitions used the interorganizational relationship as a political battlefield for broader supplier-management logics. Directors' nurturing actions regenerated hope and formal commitments, while technology managers' destabilizing actions produced disappointment and mistrust, preventing the reinforcing trust-commitment spiral assumed in much prior interorganizational research.
+
+**Data & Measures**
+The longitudinal single-case corpus comprised 33 Alpha interviews with 24 informants, six Beta interviews, 160 archival documents, 1,064 e-mails, and a 396-event database. Event analysis produced a chronology; first-order visual mapping compared interpretations, actions, and emotional states across five episodes; and second-order comparative analysis connected the patterns to organizational-politics concepts and yielded the process model.
+
+**Key Findings**
+Competing embedded and transactional partnership logics inside Alpha produced divergent framing-action sequences: directors cooperatively framed events and took nurturing actions, whereas technology managers competitively framed the same events and took destabilizing actions. These intertwined sequences generated hope about a better future and disappointment with the present among Alpha and Beta decision makers, sustaining renewed formal commitments despite negative trust dynamics; the resulting dual relational dynamics in turn sustained Alpha's internal fragmentation.
 
 **Theoretical Contribution**
 The paper contributes a political perspective on interorganizational relationships by showing that partner organizations should not be treated as monolithic actors. It specifies how within-partner coalitions can frame and act on the same interorganizational events differently, and how those politically charged sequences can generate dual relational dynamics rather than positive or negative reinforcing spirals. It also shows that interorganizational relationships can feed back into internal fragmentation by giving coalitions evidence for their competing partnership logics.

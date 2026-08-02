@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Tong 2020 Stakeholder Preservation or Ap
 text_path: "library/AMJ/vol-63-no-5/text/Tong 2020 Stakeholder Preservation or Appropriation The Influence of Target CSR on Market Reactions to Acquisition Announcements.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["target corporate social responsibility", "market reaction", "acquisition announcement", "stakeholder preservation", "stakeholder appropriation", "implicit contracts", "stakeholder value congruence", "business similarity"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "two distinct perspectives"
   methods_overview: "We used Heckman two-stage models"
   keywords_source: "target corporate social responsibility affects the economic gains"
+  hypotheses_source: "Hypothesis 1. Target CSR is positively associated with"
+  measures_overview: "Target CSR was measured on the basis of the five"
+  findings_overview: "corporate social responsibility is positively associated with acquirer abnormal returns"
 ---
 
 # Stakeholder Preservation or Appropriation? The Influence of Target CSR on Market Reactions to Acquisition Announcements
@@ -52,6 +57,13 @@ This study examines how target corporate social responsibility affects the econo
 **Research Question**
 How does a target firm's CSR affect market reactions to acquisition announcements, and do the observed contingencies align more with stakeholder preservation or stakeholder appropriation? The paper asks whether acquirer gains from high-CSR targets are better explained by honoring target stakeholders' implicit contracts and building trust, or by defaulting on those contracts and transferring wealth to acquirers.
 
+**Hypotheses / Propositions**
+- H1: Target CSR is positively associated with acquirer announcement returns.
+- H2a (stakeholder preservation): Stakeholder value congruence strengthens the positive relationship between target CSR and acquirer announcement returns.
+- H2b (stakeholder appropriation): Stakeholder value congruence weakens the positive relationship between target CSR and acquirer announcement returns.
+- H3a (stakeholder preservation): Business similarity weakens the positive relationship between target CSR and acquirer announcement returns.
+- H3b (stakeholder appropriation): Business similarity strengthens the positive relationship between target CSR and acquirer announcement returns.
+
 **Mechanism Process**
 - IV(s): Target corporate social responsibility.
 - DV(s): Acquirer announcement return, measured as three-day cumulative abnormal return around the acquisition announcement.
@@ -59,6 +71,12 @@ How does a target firm's CSR affect market reactions to acquisition announcement
 - Moderators: Stakeholder value congruence between acquirer and target; business similarity between acquirer and target.
 
 The paper develops two competing explanations for why target CSR may be associated with positive acquirer announcement returns. The stakeholder preservation perspective argues that preserving implicit contracts with stakeholders of high-CSR targets can help acquirers elicit trust, cooperation, and reciprocal support, creating expected acquisition value. The stakeholder appropriation perspective argues that high-CSR targets offer larger opportunities for wealth transfer because their stakeholders hold more favorable implicit contracts that acquirers may later alter or default on. The empirical tests favor the preservation account: target CSR is positively associated with acquirer abnormal returns, stakeholder value congruence strengthens that relationship, and business similarity weakens it.
+
+**Data & Measures**
+The analysis uses 237 U.S. acquisition deals from 2000–2012 drawn from SDC and matched to KLD, CRSP, Compustat, ExecuComp, U.S. patent, and occupational-employment data; KLD, ExecuComp, Compustat, and moderator variables are lagged one year and cover 1999–2011. The DV, acquirer announcement return, is the three-day cumulative abnormal return over the [−1, +1] event window, calculated with Eventus and multiplied by 100. Target CSR is the sum of standardized KLD strengths minus standardized concerns across environment, employee, community, diversity, and product. Stakeholder value congruence is the reverse Mahalanobis distance between the acquirer's and target's 10-element KLD stakeholder portfolios. Business similarity averages standardized product-market, human-capital, and technology-resource similarity measures. Heckman two-stage models use robust standard errors adjusted for acquirer-level clustering and include year and industry dummies.
+
+**Key Findings**
+H1 was supported: target CSR was positively associated with acquirer announcement return (Model 3: b = 0.19, p < .10; Model 6: b = 0.73, p < .05), and a one-standard-deviation increase in target CSR corresponded to a return 0.68% higher than the mean announcement abnormal return. H2a was supported and H2b was not: the target CSR × stakeholder value congruence interaction was positive (Model 4: b = 0.13, p < .05; Model 6: b = 0.16, p < .01). H3a was supported and H3b was not: the target CSR × business similarity interaction was negative (Model 5: b = −0.27, p < .05; Model 6: b = −0.33, p < .001). The support pattern favors stakeholder preservation over stakeholder appropriation.
 
 **Theoretical Contribution**
 The paper contributes to acquisition research by directly comparing stakeholder preservation and stakeholder appropriation as alternative explanations for acquirer value gains from target stakeholders. It extends CSR and market-response research by shifting attention from acquirer CSR to target CSR in acquisition announcements. It also complicates the usual positive view of similarity in mergers and acquisitions by showing that stakeholder value congruence and business similarity have different implications depending on whether stakeholder preservation or appropriation is expected.

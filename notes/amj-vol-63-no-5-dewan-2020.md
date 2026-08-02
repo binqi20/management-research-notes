@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Dewan 2020 Catching the Big Fish The Rol
 text_path: "library/AMJ/vol-63-no-5/text/Dewan 2020 Catching the Big Fish The Role of Scandals in Making Status a Liability.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["social status", "organizational status", "social control agents", "multiple-actor scandal", "SEC enforcement action", "labeling of misconduct", "organizational misconduct"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "adopted the labeling perspective and viewed"
   methods_overview: "We use Cox proportional hazard regression to"
   keywords_source: "organizational status is more likely to be a liability than an asset"
+  hypotheses_source: "an alleged violation by a highstatus organization is more likely to be labeled as misconduct when that violation is part"
+  measures_overview: "measured by the amount of sell-side security analyst"
+  findings_overview: "exposes organizations to the enforcement action, but that status increases the likelihood"
 ---
 
 # Catching the Big Fish: The Role of Scandals in Making Status a Liability
@@ -52,6 +57,10 @@ This study focuses on how scandal shapes the effect of social status in labeling
 **Research Question**
 When do social control agents label alleged organizational violations of rules and norms as misconduct, and how does a multiple-actor scandal change whether high organizational status is an asset or a liability? The paper asks whether high-status firms accused of securities fraud are more likely to face SEC enforcement action when their alleged violation is part of a widespread scandal rather than a standalone violation.
 
+**Hypotheses / Propositions**
+- Proposition: Alleged violations of high-status organizations are more likely to be labeled as misconduct by a social control agent when they are part of a multiple-actor scandal than when they are standalone alleged violations.
+- Hypothesis: The SEC is more likely to take enforcement action against high-status organizations when the alleged violation is part of a multiple-actor scandal than when it is a standalone alleged violation.
+
 **Mechanism Process**
 - IV(s): Firm status; involvement in a multiple-actor scandal; the interaction between firm status and scandal.
 - DV(s): SEC enforcement action against the focal firm, modeled as the likelihood and timing of an enforcement action.
@@ -59,6 +68,12 @@ When do social control agents label alleged organizational violations of rules a
 - Moderators: Multiple-actor scandal moderates the effect of firm status on SEC enforcement action.
 
 The mechanism is sociopolitical rather than purely psychological. In standalone allegations, high status can protect firms by generating trust, legitimacy, power, and benefit of the doubt. During a multiple-actor scandal, public attention, audience-provided evidence, reputational contamination, vengeance, and deterrence incentives weaken those protections while increasing the hazards of visibility and high expectations, so status becomes associated with a greater likelihood of formal labeling by the SEC.
+
+**Data & Measures**
+The data comprise 806 securities class action lawsuits against 737 publicly traded firms filed from 2006–2011; the primary Cox models report 3,786 observations. SEC enforcement action is a binary outcome equal to 1 when the SEC files fraud charges against the focal firm and 0 otherwise, hand-collected from Factiva for up to seven years after each lawsuit. Firm status is measured as sell-side security analyst coverage weighted by each analyst's industry expertise using IBES data; scandal equals 1 when a lawsuit complaint concerns the options backdating or subprime mortgage scandal and 0 otherwise. The associational analysis uses Cox proportional hazard regressions with time-varying covariates, industry and year fixed effects, and robust standard errors, supplemented by alternative binary models, samples, and status measures.
+
+**Key Findings**
+The hypothesis was supported. In Model 6, the firm-status × scandal interaction is positive and statistically significant (b = 0.35, p < 0.01), while the conditional effect of status when scandal equals 0 is negative and significant (b = -0.18, p < 0.05); the standalone status effect in Model 3 is not significant. Thus, higher status is associated with a greater hazard of SEC enforcement during a scandal but a lower hazard outside a scandal. Visualizations and the reported alternative-model, sample, and measurement checks corroborate the positive interaction.
 
 **Theoretical Contribution**
 The study contributes to organizational misconduct research by explaining when status shifts from protection to liability in social-control-agent labeling decisions. It extends prior work that emphasized psychological mechanisms such as violated expectations and status anxiety by specifying sociopolitical mechanisms through which multiple-actor scandals reduce status protections and heighten status hazards. It also advances labeling research by showing that regulatory labeling is not merely a direct implication of law or norms, but is shaped by organizational status and scandal context.

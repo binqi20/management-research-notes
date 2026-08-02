@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-5/pdfs/Ody-Brasier 2020 Who is Punished Most fo
 text_path: "library/AMJ/vol-63-no-5/text/Ody-Brasier 2020 Who is Punished Most for Challenging the Status Quo.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-mixed"
 keywords: ["role digressions", "traditionality", "sanctioning", "status quo", "Champagne grape market", "attribution"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Attribution theory highlights the contrasting ways"
   methods_overview: "full-cycle research design that combines"
   keywords_source: "traditional buyers may be penalized less for the same"
+  hypotheses_source: "those buyers that are considered to be more traditional."
+  measures_overview: "average price that a house paid for the raw materials"
+  findings_overview: "These findings support Hypothesis 1."
 ---
 
 # Who is Punished Most for Challenging the Status Quo?
@@ -51,6 +56,13 @@ Over time, markets evolve into particular structures, with clearly defined roles
 **Research Question**
 Why are some firms punished more than others when they challenge established industry roles? The paper asks whether Champagne houses that appear more traditional are penalized less by grape sellers than less traditional houses for the same role digressions, and how sellers interpret those violations.
 
+**Hypotheses / Propositions**
+H1: Buyers that vertically integrate are penalized by paying higher prices for the same goods, but this relationship is weaker for more traditional buyers.
+
+H2: Buyers that engage in foreign diversification are penalized by paying higher prices for the same goods, but this relationship is weaker for more traditional buyers.
+
+H3: Buyers that vertically disintegrate are penalized by paying higher prices for the same goods, but this relationship is weaker for more traditional buyers.
+
 **Mechanism Process**
 - Quantitative IV(s): Buyer role digressions through vineyard acquisition, foreign winemaking subsidiaries, and supplying supermarket brands.
 - Quantitative DV(s): Average price paid by Champagne houses for grape inputs.
@@ -59,17 +71,27 @@ Why are some firms punished more than others when they challenge established ind
 
 The process begins with an institutionalized role division in which growers supply grapes and houses make, brand, sell, and distribute Champagne. When houses cross role boundaries, sellers interpret the same behavior differently depending on whether the buyer carries traditional characteristics. Less traditional buyers' deviations confirm suspicion and are attributed to disposition and volition, whereas traditional buyers' deviations are treated as out of character and attributed to external constraints, reducing sellers' willingness to punish them.
 
+**Data & Measures**
+The qualitative phases draw on field observations and 78 interviews conducted between October 2008 and October 2016: 39 on-site and 39 telephone interviews with 17 industry experts, 14 grape buyers, and 47 grape sellers. Phase 3 used sentence-by-sentence open coding of 8,790 interview-data rows, developed 57 emergent themes, and then used focused coding and diagramming to consolidate five themes and validate the attribution process through a further round of qualitative data collection.
+
+The quantitative phase uses a 1998–2007 panel with complete data for 64 of the 66 official Champagne houses, drawn from Diane, the Registre du commerce et des sociétés, and the Guide Curien de la Champagne. The dependent variable is the average price paid per kilogram of grape inputs, calculated by dividing annual raw-material purchase cost by grape volume. The three role-digression measures are cumulative hectares of vineyard acquired since 1998, the number of wine-production subsidiaries opened outside France since 1998, and the log of supermarket brands supplied in each year. Traditionality is the equally weighted 0–4 sum of four binary indicators: founded before 1960, family management by a founder's descendant, location in a traditional village, and independence from a corporate group. The reported models use 636 firm-year observations, random-effects regressions with robust standard errors clustered by buyer and year dummies, Mundlak specifications, and an instrumental-variable model for vineyard acquisition.
+
+**Key Findings**
+All three hypotheses were supported. For H1, each hectare acquired was associated with an additional €0.06 per kilogram, while each increment in traditionality reduced that penalty by €0.03; the Mundlak and instrumental-variable models yielded similar negative interactions. For H2, operating a foreign wine-production subsidiary was associated with an additional €3.32 per kilogram, and each increment in traditionality reduced the penalty by €1.53. For H3, each supermarket brand supplied was associated with an additional €5.35 per kilogram, and each increment in traditionality reduced the penalty by €1.43; the Mundlak models again supported the interaction.
+
+The qualitative phase explains these patterns: sellers treated traditional characteristics as signals of commitment to the status quo. They attributed less traditional buyers' role digressions to disposition, volition, and bad faith, producing anger and sanctions through price, allocation, quality sorting, and stigmatization; they interpreted the same digressions by traditional buyers as out of character and situationally constrained, made excuses for them, and punished them less.
+
 **Theoretical Contribution**
 The paper contributes to research on norm enforcement and market structuration by showing that punishment for role transgressions varies with the violator's perceived traditionality, not only with the violation itself. It identifies sellers' interpretation of motives as the mechanism linking buyer identity characteristics to sanctioning, extending institutional and role-theoretic accounts of how market role systems are maintained. It also reframes field-level inertia as partly contextual: exchange partners' sanctions can make less traditional firms especially constrained when they try to initiate structural change.
 
 **Practical Implication**
-Firms seeking to change established role systems should recognize that exchange partners may judge their motives through preexisting identity cues. In this setting, less traditional Champagne houses faced stronger price and relational penalties for the same deviations than traditional houses, so strategic moves that challenge a status quo may require careful management of how commitment to the field is interpreted. The findings also suggest that firms controlling scarce resources can protect established role systems through everyday exchange decisions, not only formal regulation.
+In the Champagne market, less traditional houses were charged substantially higher grape prices when they engaged in the same role deviations for which traditional houses incurred little penalty. More generally, exchange partners controlling scarce resources can retaliate more fiercely when relative outsiders undermine the status quo, creating contextual inertia that is particularly strong for less traditional firms and can prevent field-level change.
 
 **Limitations**
-The paper does not present a standalone limitations section. Its scope is anchored in the Champagne grape market, where growers control a legally constrained scarce resource and can price, allocate, sort, or stigmatize buyers; generalization depends on whether exchange partners in other settings have comparable sanctioning capacity and value the status quo. The quantitative evidence is observational panel evidence strengthened by instrumental-variable and Mundlak analyses, while the qualitative phase explains the attribution process in this specific institutional context.
+The paper does not present a standalone limitations discussion. It states one explicit boundary condition: sellers value the status quo and hence their buyers' traditionality.
 
 **Future Research**
-The paper does not provide an explicit future research agenda. Its discussion implies opportunities to examine whether traditionality moderates sanctioning in other mature industries, how emotions shape norm enforcement, and when contextual inertia prevents less traditional firms from initiating field-level change.
+Not reported in paper
 
 **APA 7th Citation**
 Ody-Brasier, A., & Vermeulen, F. (2020). Who is punished most for challenging the status quo? *Academy of Management Journal*, 63(5), 1621-1651. https://doi.org/10.5465/amj.2017.0683
