@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Chua 2020 Across the Great Divides Gende
 text_path: "library/AMJ/vol-63-no-3/text/Chua 2020 Across the Great Divides Gender Dynamics Influence How Intercultural Conflict Helps or Hurts Creative Collaboration.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["intercultural creative collaboration", "intercultural conflict", "task conflict", "relationship conflict", "dyad gender", "information elaboration", "creativity"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "social role theory"
   methods_overview: "We designed two studies—a laboratory study and"
   keywords_source: "intercultural creative collaboration"
+  hypotheses_source: "Hypothesis 1. Dyad gender moderates the"
+  measures_overview: "Creativity. We hired three experienced experts"
+  findings_overview: "we found that intercultural task conflict has a negative effect"
 ---
 
 # Across the Great Divides: Gender Dynamics Influence How Intercultural Conflict Helps or Hurts Creative Collaboration
@@ -51,6 +56,12 @@ Collaborating across cultures can potentially increase creativity owing to acces
 **Research Question**
 How does dyad gender shape whether intercultural task conflict and relationship conflict help or hurt creative collaboration effectiveness? The paper asks whether women and men dyads manage intercultural conflict differently, and whether information elaboration explains the resulting effects on creativity.
 
+**Hypotheses / Propositions**
+- H1: Dyad gender moderates the relationship between intercultural task conflict and creative collaboration effectiveness: task conflict decreases effectiveness in men dyads but increases it in women dyads.
+- H2: Information elaboration mediates the interaction between dyad gender and intercultural task conflict on creative collaboration effectiveness.
+- H3: Dyad gender moderates the negative effect of intercultural relationship conflict on creative collaboration effectiveness, with a stronger negative effect in women dyads than men dyads.
+- H4: Information elaboration mediates the interaction between dyad gender and intercultural relationship conflict on creative collaboration effectiveness.
+
 **Mechanism Process**
 - IV(s): Intercultural task conflict and intercultural relationship conflict.
 - DV(s): Creative collaboration effectiveness, measured as expert-rated creative output in Study 1 and dyad-level perceived creative collaboration effectiveness in Study 2.
@@ -58,6 +69,12 @@ How does dyad gender shape whether intercultural task conflict and relationship 
 - Moderators: Dyad gender composition, especially women dyads versus men dyads; mixed-gender dyads and cultural distance are examined as additional empirical comparisons.
 
 The mechanism is that gender is a salient social cue in intercultural same-gender collaboration, so collaborators enact gendered conflict-management expectations when cultural differences generate disagreement. Women dyads are expected to handle task conflict more cooperatively, which supports exchange, discussion, and integration of task-relevant information and helps turn task conflict into creative collaboration benefits. Men dyads are expected to handle task conflict more competitively, reducing information elaboration and lowering creativity. Relationship conflict generally disrupts collaboration, but it is especially damaging for women dyads because attention to relational repair diverts effort from task-relevant information elaboration.
+
+**Data & Measures**
+Study 1 paired 450 business students at a large Asian university into 225 dyads for a laboratory poster task. Analyses using video-coded task conflict and information elaboration used 197 complete recordings (97 intercultural and 100 intracultural dyads); three art-school experts rated poster creativity. Study 2 used 139 matched U.S. intercultural employee–colleague dyads recruited through ClearVoice. Both partners reported creative collaboration effectiveness using two process indicators, task and relationship conflict using Jehn’s eight-item scale, and information elaboration using three items; responses were aggregated to the dyad level. Regression models, simple slopes, and 5,000-iteration bootstrapping tested moderation and mediation.
+
+**Key Findings**
+Study 1 supported H1: among intercultural dyads, task conflict was positively related to creativity for women dyads (b = .16, p = .01) and negatively related for men dyads (b = −.11, p = .02). It also supported H2: information elaboration conditionally mediated these opposite task-conflict effects for women and men dyads. Study 2 again supported H1, with task conflict positively related to creative collaboration effectiveness for women dyads (b = .41, p < .01) and negatively related for men dyads (b = −.73, p = .01), and supported H3: relationship conflict was negative for women dyads (b = −.59, p < .01) but nonsignificant for men dyads. H2 and H4 received only partial support in Study 2: information elaboration mediated the task-conflict effect for men but not women, and mediated the relationship-conflict effect for women but not men, while the latter indirect effects did not significantly differ.
 
 **Theoretical Contribution**
 The paper contributes a gender-and-conflict contingency model explaining why intercultural collaboration does not always produce creativity benefits despite access to nonredundant ideas. It integrates conflict-outcome and categorization-elaboration perspectives by specifying information elaboration as the process through which intercultural task and relationship conflict affect creative collaboration under different dyad-gender conditions. It also extends gender-and-creativity research from individual creativity and group gender diversity to same-gender intercultural dyadic collaboration.

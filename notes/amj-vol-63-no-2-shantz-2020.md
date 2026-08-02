@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Shantz 2020 How Formal and Informal Hier
 text_path: "library/AMJ/vol-63-no-2/text/Shantz 2020 How Formal and Informal Hierarchies Shape Conflict within Cooperatives A Field Experiment in Ghana.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-mixed"
 keywords: ["cooperatives", "formal hierarchy", "informal hierarchy", "collective psychological ownership", "intragroup conflict", "field experiment", "Ghana"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "collective psychological ownership"
   methods_overview: "field experiment involving 40 newly formed"
   keywords_source: "formal hierarchical control structures"
+  hypotheses_source: "Hypothesis 2a. The presence of an informal hierarchy"
+  measures_overview: "we created a four-item scale that could best capture"
+  findings_overview: "formal hierarchical control structures lead to lower levels"
 ---
 
 # How Formal and Informal Hierarchies Shape Conflict within Cooperatives: A Field Experiment in Ghana
@@ -53,6 +58,12 @@ As an organizational form, cooperatives are increasingly being used throughout t
 **Research Question**
 The paper asks whether formal hierarchy reduces or exacerbates conflict within cooperatives, and whether informal hierarchy changes that relationship. It studies newly formed cooperatives in rural Ghana to test whether formal hierarchical control structures weaken collective psychological ownership and thereby increase intragroup conflict relative to flat structures.
 
+**Hypotheses / Propositions**
+- H1a: A formal hierarchical control structure will produce higher conflict than a flat control structure in cooperatives.
+- H1b: Collective psychological ownership (CPO) will mediate this relationship: formal hierarchy will lower CPO, which will increase conflict.
+- H2a: Informal hierarchy will attenuate the extent to which formal hierarchy produces higher conflict than a flat structure.
+- H2b: Informal hierarchy will moderate the mediated relationship, such that whether lower CPO under formal hierarchy increases conflict depends on the presence or absence of informal hierarchy.
+
 **Mechanism Process**
 - IV(s): Formal control structure, comparing formal hierarchy with a flat control structure.
 - DV(s): Intragroup conflict among cooperative members.
@@ -61,6 +72,12 @@ The paper asks whether formal hierarchy reduces or exacerbates conflict within c
 - Qualitative process evidence: Follow-up interviews with selected cooperatives illustrated how hierarchy shaped role confusion, shirking, learning, knowledge sharing, and deference to elders.
 
 The proposed mechanism is that pairing equal cooperative ownership with unequal formal control differentiates roles and authority, shifting members from a collective "we" orientation toward a more individualistic "me" orientation. That lower collective psychological ownership reduces shared responsibility and makes conflict more likely. Informal hierarchy, especially age-based authority in the Ghanaian context, attenuates this effect because elder authority can clarify roles and provide socially legitimate conflict-avoidance guidance.
+
+**Data & Measures**
+The field experiment randomly assigned 45 newly formed income-generating cooperative groups to formal hierarchy or flat conditions; after five exclusions, the quantitative analysis used 40 groups (22 hierarchy, 18 flat), with surveys completed by 10 members per group and aggregated to the group level. Formal control structure was the assigned condition. Intragroup conflict was a four-item, 7-point frequency scale; CPO was a three-item scale covering ownership, responsibility, and positive influence; and informal hierarchy was the group-level aggregate of members' binary perceptions of whether most group members were of different or similar ages. The authors used one-way ANOVA, OLS, bias-corrected bootstrapped mediation, and moderated mediation. Follow-up interviews in 10 purposively selected extreme-case cooperatives, mostly one-on-one and lasting 30–60 minutes, provided qualitative illustrations of the hypothesized relationships.
+
+**Key Findings**
+H1a was supported: formally hierarchical groups reported more conflict than flat groups (p = .03). H1b was supported: formal hierarchy was negatively associated with CPO (p = .07), CPO was negatively associated with conflict (p = .006), and the bootstrapped indirect-effect 95% confidence interval excluded zero [.005, .418]. H2a was supported at p = .066: informal hierarchy attenuated the positive formal-hierarchy–conflict relationship, with hierarchical and flat structures having relatively similar effects when informal hierarchy was present. H2b was supported using a 90% confidence interval for moderated mediation [−.623, −.002]; the indirect effect through CPO was significant only at low informal hierarchy. Follow-up interviews generally affirmed the quantitative relationships and illustrated role confusion, shirking, learning, knowledge sharing, and elder guidance as relevant processes.
 
 **Theoretical Contribution**
 The paper contributes to cooperative theory by explaining why formal hierarchy may increase, rather than reduce, conflict when it conflicts with equal ownership. It identifies collective psychological ownership as a mechanism linking formal structure to conflict and shows that informal hierarchy conditions this relationship. It also extends hierarchy research by showing that formal and informal hierarchies can coexist and interact, rather than simply substitute for one another.

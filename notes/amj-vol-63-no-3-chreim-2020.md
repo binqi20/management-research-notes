@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Chreim 2020 Constructing and Sustaining 
 text_path: "library/AMJ/vol-63-no-3/text/Chreim 2020 Constructing and Sustaining Counter-Institutional Identities.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["counter-institutional identity", "identity work", "identity foil", "authoritative texts", "Assertive Community Treatment"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "The notion of “identity regulation” is a concept"
   methods_overview: "We used a qualitative multiple case study design"
   keywords_source: "counter-institutional identities"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We engaged in within-case analysis followed by"
+  findings_overview: "We develop a cross-level process model of encapsulation in which authoritative texts"
 ---
 
 # Constructing and Sustaining Counter-Institutional Identities
@@ -54,6 +59,9 @@ How do individuals and collectives construct and sustain identities that run cou
 **Research Question**
 How do individuals and collectives construct and sustain counter-institutional identities? The paper examines this question in ACT teams whose values, roles, and practices are positioned against the dominant hospital-based medical model of mental health care.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: counter-institutional identity, identity foil, authoritative texts, oppositional identity work, relational identity work, and encapsulation.
 - Setting / contrast: ACT teams are defined against the dominant hospital-based medical model through recovery-oriented values, generalist roles, and pride in work with stigmatized clients.
@@ -62,6 +70,12 @@ How do individuals and collectives construct and sustain counter-institutional i
 - Boundary variation: Alpha exemplifies strong encapsulation; Gamma and Delta are becoming ACT; Omega approximates ACT with more permeable boundaries and internalized tensions.
 
 The process is not a variable-based causal mechanism but a cross-level identity construction process. Authoritative ACT Standards provide identity prescriptions and legitimate roles; leaders, groups, and members then enact identity work that excludes elements of the dominant institution while elevating counter-institutional values, roles, and practices as superior. Strong counter-institutional identity depends on both oppositional identity work against the foil and relational identity work that supports members inside the group.
+
+**Data & Measures**
+The comparative case study covers four ACT teams across three Canadian provinces. The corpus comprises 55 semi-structured interviews with 51 team members (1,362 transcript pages), 17 nonparticipant observations of client-review and administrative meetings (122 pages of notes), provincial ACT Standards, and team documents. The researchers conducted within-case and cross-case analyses: interview and observation data were coded initially with descriptive categories, emerging themes were compared iteratively across cases, and interpretations were checked through triangulation and team presentations and member feedback.
+
+**Key Findings**
+The teams varied in their appropriation of ACT counter-institutional identity: Alpha exemplified ACT; Gamma and Delta were becoming ACT; Omega approximated ACT and retained internal tensions. Across levels, leaders modeled identity and filtered membership, groups regulated and bonded members, and individuals reframed roles and self-selected; authoritative texts legitimated these practices but were insufficient without coherent enactment. The model links stronger identities to mutually reinforcing oppositional identity work against the dominant-institution foil and relational identity work that values “who we are,” producing more durable encapsulation around the group.
 
 **Theoretical Contribution**
 The paper develops counter-institutional identity construction as a distinctive identity phenomenon in which individuals and groups define "who we are" through direct opposition to dominant institutional values, roles, and practices. It contributes a cross-level model showing how authoritative texts, leader identity work, group identity work, and member identity work interact to construct and sustain such identities. It also theorizes encapsulation and the identity foil as central to explaining why some counter-institutional identities become coherent and durable while others remain fragmented.

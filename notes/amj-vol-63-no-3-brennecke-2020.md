@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Brennecke 2020 Dissonant Ties in Intraor
 text_path: "library/AMJ/vol-63-no-3/text/Brennecke 2020 Dissonant Ties in Intraorganizational Networks Why Individuals Seek Problem-Solving Assistance from Difficult Colleagues.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-mixed"
 keywords: ["dissonant ties", "intraorganizational networks", "problem-solving assistance", "difficult colleagues", "organizational architecture", "instrumental networking behavior"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "According to social ledger theory"
   methods_overview: "In the empirical analysis, I use a mixed-method"
   keywords_source: "of “dissonant ties”: network ties to colleagues"
+  hypotheses_source: "Hypothesis 2a. There is a negative relationship between egos’ formal hierarchical rank"
+  measures_overview: "Effectiveness nomination by own supervisor"
+  findings_overview: "tenure ego multiplexity parameter is negative"
 ---
 
 # Dissonant Ties in Intraorganizational Networks: Why Individuals Seek Problem-Solving Assistance from Difficult Colleagues
@@ -50,6 +55,16 @@ This paper investigates employees seeking problem-solving assistance from collea
 **Research Question**
 The paper asks why employees seek problem-solving assistance from colleagues with whom they have difficult working relationships. It examines whether these dissonant ties improve individual performance and how formal hierarchical rank, tenure, and unit membership shape employees' willingness to form them.
 
+**Hypotheses / Propositions**
+- H1: Individuals' employment of dissonant ties is positively related to their performance.
+- H2a: Egos' formal hierarchical rank is negatively related to their employment of dissonant ties.
+- H2b: Egos' tenure is negatively related to their employment of dissonant ties.
+- H3a: Alters' formal hierarchical rank is negatively related to their being approached with dissonant ties.
+- H3b: Alters' tenure is positively related to their being approached with dissonant ties.
+- H4a: Similarity in formal hierarchical rank is positively related to dissonant tie formation between dyads.
+- H4b: Similarity in tenure is positively related to dissonant tie formation between dyads.
+- H4c: Working in the same unit is negatively related to dissonant tie formation between dyads.
+
 **Mechanism Process**
 - IV(s): For performance consequences, employees' number of dissonant ties; for tie formation, ego and alter formal hierarchical rank, ego and alter tenure, dyadic similarity in rank and tenure, and shared unit membership.
 - DV(s): Individual effectiveness nominations by direct supervisors and all formal leaders; likelihood of observing problem-solving ties, difficult ties, and overlapping dissonant ties.
@@ -57,6 +72,12 @@ The paper asks why employees seek problem-solving assistance from colleagues wit
 - Moderators: No conventional moderation model is tested; organizational architecture enters through ego, alter, and dyad effects that change the perceived benefits and costs of dissonant tie formation.
 
 The mechanism is a cost-benefit account of instrumental networking under cognitive inconsistency. Employees may approach difficult colleagues when the expected work benefits of unique knowledge, assumption-challenging interaction, and improved problem solving outweigh the unpleasantness and risks of the tie. The evidence suggests that dissonant ties are associated with higher effectiveness evaluations, while shorter-tenured egos, longer-tenured alters, tenure similarity, and cross-unit boundaries make dissonant tie formation more likely; high-ranking difficult alters are avoided because they carry disproportionate risk.
+
+**Data & Measures**
+The quantitative data are whole-network survey responses from 171 engineers in a large aerospace manufacturing firm's engineering department. Problem-solving and difficult ties were captured as asymmetric binary roster nominations; a dissonant tie was their overlap, and an ego's number of dissonant ties was the focal predictor of performance. Performance was operationalized as a binary effectiveness nomination by the engineer's direct supervisor and as the count of effectiveness nominations from all formal leaders. Logistic and negative binomial regressions tested the performance consequences of dissonant ties. A multiplex ERGM modeled tie formation using ego, alter, and dyadic similarity effects for formal hierarchical rank, tenure, and unit membership. Eighteen semi-structured interviews, coded in NVivo, were used to interpret the quantitative mechanisms. The cross-sectional analyses are associational.
+
+**Key Findings**
+H1 was supported: dissonant ties were positively associated with effectiveness nominations by the engineer's own supervisor (b = 0.54, p < .05) and all formal leaders (b = 0.16, p < .05). H2a was rejected, whereas H2b was supported: ego tenure was negatively associated with dissonant tie formation (b = −0.17, p < .01). H3a and H3b were supported: high-ranking difficult alters were less likely to receive problem-solving requests (b = −2.00, p < .01), while longer-tenured difficult alters were more likely to receive them (b = 0.15, p < .05). H4a was rejected; H4b and H4c were supported, as tenure similarity increased dissonant tie formation (tenure-dissimilarity b = −0.16, p < .05) and shared unit membership decreased it (b = −0.86, p < .05). The interviews corroborated the positive performance association and elaborated access to unique resources, challenged assumptions, diverse perspectives, and increased cognitive preparation as mechanisms.
 
 **Theoretical Contribution**
 The article introduces dissonant ties as a cognition-based positive-negative network multiplexity construct and shows that positive and negative workplace ties need not be mutually exclusive or neutralize each other. It extends social ledger theory by showing that overlapping positive and negative ties can generate distinct instrumental benefits rather than simply offsetting benefits and liabilities.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Snihur 2020 The Genesis and Metamorphosi
 text_path: "library/AMJ/vol-63-no-2/text/Snihur 2020 The Genesis and Metamorphosis of Novelty Imprints How Business Model Innovation Emerges in Young Ventures.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["business model innovation", "novelty imprinting", "imprinting theory", "structural imprinting", "cognitive imprinting", "founder novelty orientation"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "we apply the imprinting lens to the"
   methods_overview: "qualitative research design and analyze in-depth field"
   keywords_source: "business model innovation in their ventures"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We evaluated the novelty of the sampled ventures’ business model content, governance, and structure"
+  findings_overview: "explains how cognitive imprints reinforce structural imprints in the context of business"
 ---
 
 # The Genesis and Metamorphosis of Novelty Imprints: How Business Model Innovation Emerges in Young Ventures
@@ -50,6 +55,9 @@ In this research, we ask whether and how founders bring about business model inn
 
 **Research Question**
 The paper asks how, if at all, founders imprint business model novelty in young ventures. It examines how business model innovation can emerge and persist despite imprinting theory's usual emphasis on stability and inertia.
+
+**Hypotheses / Propositions**
+Not reported in paper
 
 **Mechanism Process**
 - Key constructs: Business model innovation, novelty imprinting, founder novelty orientation, structural imprinting, cognitive imprinting, and high versus low BMI.
@@ -61,8 +69,14 @@ The paper asks how, if at all, founders imprint business model novelty in young 
 
 The process is not a variable-based causal test. The authors theorize that founders imprint business model novelty through two linked pathways: founders directly shape early business model structures, and they also shape employees' cognition so that employees later enact and reproduce founder-oriented practices. In high-BMI ventures, the founder practices orient members toward distant search, system-level thinking, and decisive implementation; in low-BMI ventures, the corresponding practices orient members toward industry imitation, efficiency, and consensus-bound incrementalism.
 
+**Data & Measures**
+The study uses a longitudinal multiple-case design on six young ventures selected as three high-BMI and three low-BMI extreme cases from about 160 local ventures. Across three waves, the corpus comprises 53 interviews, 16 observed meetings, 1,270 pages of internal documents, and archival materials. The authors operationalize BMI as novelty in business model content, governance, and structure relative to local industry peers; they trace 72 nonincremental business model changes through temporal bracketing, iterative coding, triangulation, member checks, and intercoder-reliability testing.
+
+**Key Findings**
+Across the six cases, high BMI was associated with industry-spanning search, complex system thinking, and powerful centralized decision making, whereas low BMI was associated with industry-focused search, internal efficiency thinking, and organic decentralized decision making. Structural imprinting connected founder novelty orientation to business model content, governance, and structure; cognitive imprinting transmitted founder practices to employees through employee selection, memorable early mentoring, and role modeling. Employee cognitive imprints then reinforced structural imprints, sustaining either high or low BMI over time, including high BMI after the founder's departure in the Villa case.
+
 **Theoretical Contribution**
-The paper contributes to imprinting theory by developing the concept of novelty imprinting, showing that imprinting can produce and sustain novel structural imprints rather than only organizational inertia. It also specifies cognitive imprinting as a cross-level process through which employees assimilate founder practices and reinforce structural imprints. For business model innovation research, the paper identifies founder novelty orientation as a mechanism linking founder practices to the emergence and persistence of BMI.
+The paper contributes to imprinting theory by developing the concept of novelty imprinting, showing that imprinting can produce and sustain novel structural imprints rather than only organizational inertia. It also specifies cognitive imprinting as a cross-level process through which employees assimilate founder practices and reinforce structural imprints. For business model innovation research, the paper identifies founder novelty orientation as a construct embodying founders' search behavior, thinking style, and decision-making patterns, and shows how structural and cognitive imprinting connect those practices to the emergence and persistence of BMI.
 
 **Practical Implication**
 The study suggests that founders have substantial influence over early business model structures and over the cognitive practices that later become institutionalized in ventures. It implies that founders should be deliberate about search boundaries, system-level thinking, decision authority, hiring, mentoring, and role modeling because these practices may become difficult to change after the early imprinting period.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Beckman 2020 It Takes Three Relational B
 text_path: "library/AMJ/vol-63-no-2/text/Beckman 2020 It Takes Three Relational Boundary Work, Resilience, and Commitment among Navy Couples.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["relational boundary work", "work-nonwork boundary", "family systems theory", "cohesion", "adjustability", "resilience", "organizational commitment"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "family systems theory"
   methods_overview: "five rounds of coding"
   keywords_source: "relational boundary work"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "intention was coded as high commitment"
+  findings_overview: "balanced couples (moderate cohesion, moderate adjustability) are both resilient and committed in this organization."
 ---
 
 # It Takes Three: Relational Boundary Work, Resilience, and Commitment among Navy Couples
@@ -51,6 +56,9 @@ Although scholars have generally focused on how individuals manage their work an
 **Research Question**
 The paper asks how employees, spouses, and organizations jointly construct work-nonwork boundaries, and how those relational boundary-work patterns are associated with couple resilience and organizational commitment. It studies this question in the U.S. Navy, where long deployment separation and organizational rules create strong pressures toward both segmentation and integration.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs: Relational boundary work, cohesion, adjustability, couple resilience, and organizational commitment.
 - Relational system: Boundary work is coconstructed by the Navy employee, the spouse, and organizational expectations rather than by the employee alone.
@@ -60,14 +68,20 @@ The paper asks how employees, spouses, and organizations jointly construct work-
 
 The process is not a variable-based causal test. The authors theorize from qualitative evidence that the same individual integration or segmentation behavior can have different consequences depending on the spouse's response and the Navy's expectations. Couples with moderate cohesion and moderate adjustability can maintain both connection and role flexibility during deployment, whereas extreme adjustability weakens resilience and extreme cohesion or separation weakens commitment.
 
+**Data & Measures**
+The data comprise 58 interviews with 29 Navy couples conducted in 2003, 2004, and 2010, plus 14 interviews with high-level officers and IT professionals in 2013, for 72 interviews total. The authors also used primary and secondary archival data on Navy policies and guidelines. Interviews were taped, transcribed, imported into NVivo, and analyzed through five iterative coding rounds that moved from open coding to broader categories, selective coding, paired-couple comparison, and Circumplex Model–informed focused coding. Cohesion and adjustability were coded low, moderate, or high at the couple level; resilience was classified as high or low from adaptation to deployment, and organizational commitment from intent to remain and attitudes toward the Navy.
+
+**Key Findings**
+The authors identify five relational boundary-work configurations with distinct outcome patterns. Balanced couples had high resilience and high organizational commitment; chaotic and rigid couples had low resilience and mixed commitment; enmeshed couples had high resilience but low commitment; and insecure couples had low resilience but high commitment. Across configurations, moderate adjustability was associated with resilience, while moderate cohesion was associated with the highest organizational commitment. The paper does not claim causality because its data are cross-sectional.
+
 **Theoretical Contribution**
-The paper contributes to boundary-work research by moving the level of analysis from individual boundary management to a relational system involving employees, spouses, and organizations. It develops relational boundary work as a construct and uses family systems theory to specify cohesion and adjustability as two dimensions that explain why individual integration and segmentation behaviors are insufficient on their own. It also links relational boundary configurations to both couple-level resilience and organization-level commitment.
+The paper contributes to boundary-work research by moving the level of analysis from individual boundary management to a relational system involving employees, spouses, and organizations. It develops relational boundary work as a construct and uses family systems theory to specify cohesion and adjustability as two dimensions that explain why individual integration and segmentation behaviors are insufficient on their own. It also links relational boundary configurations to couple resilience and to employees' organizational commitment as expressed in the couple interviews.
 
 **Practical Implication**
 The study suggests that organizations should understand employees' work-nonwork boundary management as embedded in partner relationships, not merely as an individual preference or policy-compliance issue. In settings with intense work demands, separation, or technology-mediated communication, organizations should attend to how policies and expectations shape couples' cohesion and adjustability rather than assuming that individual integration or segmentation behaviors are sufficient on their own.
 
 **Limitations**
-The authors note that they could not directly link each couple's relational boundary work to specific organizational policies in real time. The study is also cross-sectional, so it cannot establish causality or track how couples move among configurations over time. The Navy context is extreme, with long separations and strong organizational identity, which makes the setting theoretically useful but also limits direct generalization.
+The authors note that they could not directly link each couple's relational boundary work to specific organizational policies in real time. The study is also cross-sectional, so it cannot establish causality or track how couples move among configurations over time.
 
 **Future Research**
 Future research should examine relational boundary work in other organizational contexts with different levels of boundary permeability and flexibility. The authors also call for longitudinal work to study whether couples shift toward more balanced patterns with experience, and for research on gender because Navy-spouse identities and gendered expectations may shape relational boundary work.

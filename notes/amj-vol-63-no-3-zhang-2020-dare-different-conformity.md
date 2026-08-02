@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Zhang 2020 Dare to Be Different Conformi
 text_path: "library/AMJ/vol-63-no-3/text/Zhang 2020 Dare to Be Different Conformity Versus Differentiation in Corporate Social Activities of Chinese Firms and Market Responses.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["optimal distinctiveness", "corporate social responsibility (CSR)", "scope conformity", "emphasis differentiation", "analyst coverage", "analysts' investment recommendations", "market value", "Chinese listed firms"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Building on the literature on optimal distinctiveness"
   methods_overview: "Taking advantage of our panel dataset"
   keywords_source: "scope conformity has a stronger effect on analyst coverage"
+  hypotheses_source: "differentiation in CSR emphasis leads to more-favorable analyst recommendations and"
+  measures_overview: "higher recommendations took larger values."
+  findings_overview: "we show that scope conformity has a stronger effect on analyst coverage for state-owned"
 ---
 
 # Dare to Be Different? Conformity Versus Differentiation in Corporate Social Activities of Chinese Firms and Market Responses
@@ -52,6 +57,14 @@ Building on the literature on optimal distinctiveness, this study explores the e
 **Research Question**
 How can firms achieve optimal distinctiveness in CSR by conforming in one dimension of a complex practice while differentiating in another, and how do analysts and financial markets respond to those CSR strategies? The paper asks whether CSR scope conformity increases analyst coverage, whether CSR emphasis differentiation improves analyst recommendations and market value, and whether state ownership, firm visibility, high-status house coverage, and earnings pressure condition these relationships.
 
+**Hypotheses / Propositions**
+- H1: CSR scope conformity to established reporting guidelines positively affects analyst coverage.
+- H2a: State ownership strengthens the positive relationship between CSR scope conformity and analyst coverage.
+- H2b: Firm visibility strengthens the positive relationship between CSR scope conformity and analyst coverage.
+- H3: CSR emphasis differentiation is positively associated with analysts' investment recommendations and firm market value.
+- H4a: Coverage by higher-status brokerage houses strengthens the positive relationships between CSR emphasis differentiation and analysts' investment recommendations and firm market value.
+- H4b: Greater earnings pressure weakens the positive relationships between CSR emphasis differentiation and analysts' investment recommendations and firm market value.
+
 **Mechanism Process**
 - IV(s): CSR scope conformity; CSR emphasis differentiation.
 - DV(s): Adjusted analyst coverage; analysts' investment recommendations; Tobin's q as market value.
@@ -60,6 +73,12 @@ How can firms achieve optimal distinctiveness in CSR by conforming in one dimens
 - Controls: CEO and governance characteristics, socially contested industries, ownership concentration, list age, firm size, ROA, financial leverage, share price, overall level of CSR, and related firm-level factors.
 
 The mechanism is compensatory orchestration within a complex CSR practice. CSR scope is the more material and salient dimension, so conformity to established reporting guidelines helps firms appear legitimate to analysts and increases coverage. CSR emphasis is more abstract and allows firms to align CSR attention with idiosyncratic stakeholder and strategic needs, so differentiation in emphasis can signal value and produce more favorable analyst recommendations and higher market value. The effects depend on legitimacy pressure and audience evaluation capacity: state-owned and highly visible firms benefit more from scope conformity, while emphasis differentiation is valued more when firms are covered by high-status houses and less when firms face high earnings pressure.
+
+**Data & Measures**
+The study combines 2008–2014 CSR activity data from the GTA China Listed Firm Corporate Social Responsibility Research Database, analyst coverage and recommendations from the China Listed Firm Financial Analyst Forecasting Research Database, and firm characteristics from CSMAR. The outcome-specific fixed-effects models use 3,230 observations for adjusted analyst coverage, 3,203 for analyst recommendations, and 3,224 for Tobin's q. Adjusted analyst coverage is the share of analysts covering an industry segment who cover the focal firm; recommendations are the firm-year mean of reverse-coded 5-point ratings; and Tobin's q is market value of equity plus book value of debt divided by book value of assets. Scope conformity is the sum of indicators for nine CSR issue fields weighted by prior-period eigenvector centrality. Emphasis differentiation is the eigenvector-centrality-weighted absolute distance between the firm's allocation across CSR fields and its industry's average allocation. The moderators are state ownership based on the ultimate controller, visibility measured as selling and administrative expenses divided by sales, high-status-house coverage measured as the ratio of star houses among covering brokerages, and earnings pressure measured as analysts' consensus forecast minus actual earnings. The baseline design is observational and uses firm fixed-effects models; the authors also report instrumental-variable, first-difference, dose-response, and alternative multidimensional-scaling robustness analyses.
+
+**Key Findings**
+All six hypotheses receive support in the reported models. Scope conformity is positively associated with adjusted analyst coverage (H1: b = 0.073, p < .001), and this relationship is stronger for state-owned firms (H2a interaction: b = 0.021, p < .01) and more visible firms (H2b interaction: b = 0.060, p < .05). Emphasis differentiation is positively associated with analyst recommendations (H3: b = 0.036, p < .01) and Tobin's q (b = 0.172, p < .001). High-status-house coverage strengthens both relationships, although the recommendation interaction is marginal (H4a: b = 0.067, p < .10; Tobin's q interaction: b = 0.135, p < .05). Earnings pressure weakens both relationships (H4b: recommendation interaction b = -0.062, p < .05; Tobin's q interaction b = -0.146, p < .001). The instrumental-variable, first-difference, dose-response, and alternative-measure analyses are substantively consistent with the main results.
 
 **Theoretical Contribution**
 The paper extends optimal distinctiveness theory by showing that firms need not locate a single balance point between conformity and differentiation; they can orchestrate the two within different dimensions of one complex practice. It theorizes this as compensatory orchestration, where legitimacy in one dimension can support differentiation in another. It also contextualizes optimal distinctiveness by showing that legitimacy pressures and audience status shape the effectiveness of conformity and differentiation strategies.

@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Koopman 2020 My Coworkers are Treated Mo
 text_path: "library/AMJ/vol-63-no-3/text/Koopman 2020 My Coworkers are Treated More Fairly than Me! A Self-Regulatory Perspective on Justice Social Comparisons.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords:
@@ -65,6 +67,9 @@ evidence:
   theories_overview: "theory on self-regulation"
   methods_overview: "We analyzed our model with multilevel path"
   keywords_source: "justice social comparison perceptions influence employee"
+  hypotheses_source: "Hypothesis 5. Resource depletion is positively related"
+  measures_overview: "We measured envy (a 5 .97)"
+  findings_overview: "Hypothesis 5, resource depletion was positively"
 ---
 
 # My Coworkers are Treated More Fairly than Me! A Self-Regulatory Perspective on Justice Social Comparisons
@@ -75,6 +80,14 @@ Social comparison processes were integral to the origins of the organizational j
 **Research Question**
 Why, when, and for whom do justice social comparison perceptions influence employee behavior? The paper asks whether low justice social comparisons reduce helping and increase instigated incivility through envy and self-regulatory resource depletion, especially when employees' own justice perceptions are low.
 
+**Hypotheses / Propositions**
+- H1: Justice social comparison perceptions are negatively associated with envy, such that lower comparisons lead to higher envy.
+- H2: Justice perceptions moderate the negative association between justice social comparison perceptions and envy, which is stronger when justice perceptions are low rather than high.
+- H3: Envy is positively associated with resource depletion.
+- H4: Resource depletion is negatively related to helping behavior.
+- H5: Resource depletion is positively related to instigated incivility.
+- H6: Justice perceptions moderate the serial indirect relationships of justice social comparison perceptions through envy and resource depletion with helping (positive indirect relationship) and instigated incivility (negative indirect relationship), such that both are stronger when justice perceptions are low rather than high.
+
 **Mechanism Process**
 - IV(s): Justice social comparison perceptions, defined as employees' daily perceptions that they receive lower versus higher justice than coworkers.
 - DV(s): Helping behavior and instigated incivility.
@@ -83,6 +96,12 @@ Why, when, and for whom do justice social comparison perceptions influence emplo
 - Alternative mechanisms: Psychological contract breach or psychological tension for equity theory, group identification for the group engagement model, felt obligation for social exchange theory, and overall fairness for referent cognitions theory.
 
 The authors theorize that low justice social comparisons create discrepancy awareness: employees see their own treatment as falling below the reference standard implied by coworkers' treatment. This discrepancy elicits envy, which is costly to suppress and therefore depletes self-regulatory resources. Depleted employees then have fewer resources to enact helping and inhibit low-intensity deviant behavior such as instigated incivility. Low justice perceptions intensify the first stage because the comparison occurs in a more threatening, resource-poor justice context.
+
+**Data & Measures**
+Both studies used 15-workday daily experience sampling. Study 1 analyzed 680 daily cases from 96 full-time employees; justice social comparison perceptions, justice perceptions, and envy were assessed at the end of the day, resource depletion the following morning, and self-reported helping and instigated incivility that afternoon. Study 2 analyzed 853 daily cases from 100 university staff members; the predictors and mediators were assessed at midday, helping and instigated incivility at the end of the day, and helping was obtained from coworker reports. Justice social comparison perceptions and justice perceptions aggregated distributive, procedural, informational, and interpersonal justice items; envy used four Duffy et al. items, resource depletion five Johnson et al. items, helping six adapted Settoon and Mossholder items, and instigated incivility three Rosen et al. items. The authors estimated multilevel path models in Mplus with group-mean-centered predictors, random slopes for hypothesized paths, controls for four alternative mechanisms, and 20,000-resample parametric bootstraps for mediation and moderated mediation.
+
+**Key Findings**
+Both studies supported H1-H6. In Study 1, justice social comparison perceptions negatively predicted envy (gamma = -0.25), the interaction with justice perceptions was positive (gamma = 0.56), envy positively predicted depletion (gamma = 0.08), and depletion negatively predicted helping (gamma = -0.12) and positively predicted incivility (gamma = 0.10). The serial indirect effects were significant at low but not high justice perceptions for helping (0.004) and incivility (-0.004). Study 2 replicated these patterns: gamma = -0.38 for justice social comparisons to envy, 0.26 for the interaction, 0.20 for envy to depletion, -0.12 for depletion to helping, and 0.02 for depletion to incivility; the low-justice conditional indirect effects were 0.013 for helping and -0.002 for incivility.
 
 **Theoretical Contribution**
 The paper revitalizes social comparison as a foundational but underdeveloped element of organizational justice theory by specifying why, when, and for whom justice social comparisons matter. Its central contribution is integrating social comparison with self-regulation to identify envy and resource depletion as a mechanism that predicts behavior beyond equity theory, the group engagement model, social exchange theory, and referent cognitions theory. It also shifts justice social comparison research toward a daily within-person perspective, showing that much of the variance in justice social comparisons occurs within individuals rather than only between them.

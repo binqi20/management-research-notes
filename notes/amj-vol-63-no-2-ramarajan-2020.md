@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Ramarajan 2020 Relational Reconciliation
 text_path: "library/AMJ/vol-63-no-2/text/Ramarajan 2020 Relational Reconciliation Socializing Others across Demographic Differences.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["relational reconciliation", "socialization agents", "social identity threat", "elaborated socialization", "demographic differences", "identity", "diversity"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "social identity threat"
   methods_overview: "qualitative, theory-building approach"
   keywords_source: "relational reconciliation"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "semi-structured interviews with 52 tutors"
+  findings_overview: "enables them to engage in elaborated socialization practices that aim to meet the needs of both the organization and the socializee."
 ---
 
 # Relational Reconciliation: Socializing Others across Demographic Differences
@@ -51,6 +56,9 @@ In demographically diverse organizations, employees charged with socializing oth
 **Research Question**
 The paper asks how socialization agents in demographically diverse work contexts navigate the tension between organizational demands to assimilate members into a collective and socializees' demands for recognition of race, class, and other identity differences. It studies tutors in an urban charter school where largely White, middle- and upper-class educators socialized largely racial-ethnic minority and lower-income students into a dominant professional culture.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Competing demands: The organization demands assimilation into middle- and professional-class norms, while students demand recognition of demographic identity differences and inequalities.
 - Identity threat: Tutors fear being seen through negative race and class stereotypes, such as privileged oppressors, saviors, or betrayers.
@@ -60,6 +68,12 @@ The paper asks how socialization agents in demographically diverse work contexts
 - Emergent practices: This bridging enables elaborated socialization: personalized practices and personal rules combined with expected organizational practices.
 
 The process is recursive rather than linear. When tutors anchor only on connection, they risk abandoning the school's expected practices; when they anchor only on distance, they risk implementing impersonal prescribed practices that amplify students' recognition demands. Relational reconciliation allows them to keep both facets in view, reducing identity threat and supporting more responsive socialization across demographic divides.
+
+**Data & Measures**
+Data came primarily from semi-structured interviews with 52 tutors across two cohorts, supplemented by interviews with six administrators, internal documents, observations of two leadership, faculty, and staff retreats, and four days of tutor training. The authors iteratively analyzed interview transcripts, compared themes and cases, refined codes into second-order themes and theoretical dimensions, and examined relationships among the resulting constructs.
+
+**Key Findings**
+Competing organizational assimilation demands and students' recognition demands triggered social identity threat among tutors. Through multifaceted disclosure and empathic inquiry, moments of closeness and estrangement informed connected and distant self-constructions; bridging both selves enabled elaborated socialization that combined personalized practices and personal rules with expected practices. Tutors who emphasized only connection tended to abandon expected practices, while those who emphasized only distance tended to implement prescribed practices; amplified organizational or student demands then pushed them back into the ongoing reconciliation process. Elaborated socialization alleviated identity threat by enabling students to see tutors in less stereotypical and more individualized ways.
 
 **Theoretical Contribution**
 The paper contributes to socialization research by repositioning socialization agents as active parties whose identities are threatened and transformed through socialization, rather than as passive transmitters of organizational tactics. It contributes to identity and diversity scholarship by theorizing relational reconciliation as an interpersonal way of engaging social identity threat. It also shows that socialization practices can vary because agents experience misalignment with organizational assimilation demands, not only because socializees react differently.

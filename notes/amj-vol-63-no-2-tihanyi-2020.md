@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Tihanyi 2020 From “That’s Interestin
 text_path: "library/AMJ/vol-63-no-2/text/Tihanyi 2020 From “That’s Interesting” to “That’s Important”.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "editorial"
 keywords: ["interestingness", "important management research", "problem-driven research", "societal problems", "practical implications", "theoretical contributions"]
@@ -51,6 +53,9 @@ Not reported in paper
 **Research Question**
 The editorial asks why management research should move beyond merely interesting findings toward important problems with societal relevance. It focuses on the trade-offs created when AMJ submissions prioritize counterintuitive interestingness over research that can improve organizations, managerial behavior, and society.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: The pursuit of interestingness can encourage catchy titles, counterintuitive propositions, complex post hoc models, and thin practical implications.
 - Field-level concern: Easy access to large data sets and analytical tools can make unusual or surprising effects easier to find while weakening attention to meaningful relationships and societal problems.
@@ -59,6 +64,12 @@ The editorial asks why management research should move beyond merely interesting
 - Evaluation system: Schools, journals, citations, media incentives, and reviewer patience shape whether scholars are rewarded for important research or for attention-grabbing findings.
 
 The process logic is editorial rather than causal. Tihanyi argues that an overemphasis on interestingness can shift scholarly effort toward surprising findings and away from questions that matter for workplace abuse, dishonest communication, state-owned enterprises, ethical leadership, inclusion, international trade, and societal crises. The essay positions problem-driven research as a way to develop stronger theory while helping managers and organizations address consequential problems.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new theory. Its contribution is to sharpen the distinction between interestingness and importance as evaluative standards for management scholarship, arguing that problem-driven research can be both theoretically meaningful and socially consequential.

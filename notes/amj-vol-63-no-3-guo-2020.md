@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Guo 2020 Rivals’ Negative Earnings Sur
 text_path: "library/AMJ/vol-63-no-3/text/Guo 2020 Rivals’ Negative Earnings Surprises, Language Signals, and Firms’ Competitive Actions.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["competitive dynamics", "negative earnings surprises", "competitive action intensity", "complex language", "vague language", "earnings conference call", "awareness–motivation–capability (AMC) perspective"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "the AMC framework"
   methods_overview: "negative binomial models are the recommended"
   keywords_source: "competitive action intensity"
+  hypotheses_source: "earnings conference call will strengthen the positive relationship between the rival’s negative earnings surprise"
+  measures_overview: "complexity of conference calls using the Fog Index"
+  findings_overview: "with an 11.85% increase in the focal firm’s tactical"
 ---
 
 # Rivals’ Negative Earnings Surprises, Language Signals, and Firms’ Competitive Actions
@@ -52,6 +57,11 @@ Research in competitive dynamics has primarily analyzed how characteristics of o
 **Research Question**
 Why and how do firms take competitive action in response to critical events that affect rivals, even when the focal firm has not been directly attacked? The paper asks whether rivals’ negative earnings surprises increase focal firms’ competitive action intensity and whether complex or vague language in rivals’ earnings conference calls strengthens that relationship.
 
+**Hypotheses / Propositions**
+H1. A rival’s negative earnings surprise will be positively associated with the intensity of competitive actions initiated by a focal firm.
+H2. The complexity of a rival’s language in an earnings conference call will strengthen the positive relationship between the rival’s negative earnings surprise and the focal firm’s competitive action intensity.
+H3. The vagueness of a rival’s language in an earnings conference call will strengthen the positive relationship between the rival’s negative earnings surprise and the focal firm’s competitive action intensity.
+
 **Mechanism Process**
 - IV(s): Rival negative earnings surprise, measured as the magnitude of a rival’s shortfall from analysts’ consensus earnings estimates scaled by the rival’s prior-quarter stock price.
 - DV(s): Focal firm competitive action intensity, measured as the number of tactical competitive actions initiated within 90 days after a rival’s earnings release.
@@ -59,6 +69,12 @@ Why and how do firms take competitive action in response to critical events that
 - Moderators: Rival complex language and rival vague language in earnings conference calls.
 
 The mechanism follows the awareness-motivation-capability logic. A rival’s negative earnings surprise is public and salient, signals vulnerability, and may reduce the rival’s willingness or ability to respond because short-term financial-market pressure, management instability, internal coordination problems, reduced market value, and higher capital costs shift its priorities. This changes the focal firm’s perceived opportunity and relative capability, motivating more tactical competitive actions. Complex and vague language in the rival’s post-surprise conference call further signals possible obfuscation and deeper vulnerability, strengthening the positive association between the negative surprise and focal action intensity.
+
+**Data & Measures**
+The study uses quarterly data for 130 competitor dyads in 38 U.S. oligopolistic industries, yielding 3,202 complete firm–rival–quarter observations from 2003–2014. Data come from RavenPack News Analytics for tactical competitive actions, Thomson Reuters StreetEvent for conference-call transcripts, Thomson Reuters I/B/E/S for earnings and analysts’ forecasts, and Compustat Fundamentals Quarterly for controls. Competitive action intensity is the count of tactical actions initiated within 90 days after a rival’s earnings release. Rival negative earnings surprise is the absolute shortfall between reported quarterly earnings and the median analyst forecast, scaled by prior-quarter stock price; language complexity is measured with the Fog Index, and vagueness as Hiller-dictionary words and expressions normalized by total call words. The associational hypotheses are tested with random-effects negative binomial regressions including industry and year-quarter fixed effects, lagged controls, and dyad-clustered robust standard errors.
+
+**Key Findings**
+H1 was supported: the rival negative-earnings-surprise coefficient was positive and statistically significant (p < .05), and a one-standard-deviation increase was associated with an 11.85% increase in focal-firm tactical competitive actions. H2 and H3 were also supported: the interactions of negative earnings surprise with complex language and vague language were both positive and statistically significant, so each language form amplified the positive relationship. A supplementary three-way interaction was positive and significant (p = .006), indicating still higher competitive action intensity when rival language was both complex and vague; the main results remained consistent across the reported robustness checks.
 
 **Theoretical Contribution**
 The paper extends competitive dynamics research beyond direct attack-response dyads by showing that critical events befalling rivals can trigger focal firms’ competitive actions. It contributes to language and competition research by showing that complex and vague language can increase, rather than dampen, rivals’ competitive actions when it reveals vulnerability after a negative earnings surprise. It also contributes to research on capital markets and firm behavior by shifting attention from how missing earnings targets affects a firm’s own strategy to how such surprises shape rivals’ strategies.

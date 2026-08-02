@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Sharma 2020 Cocreating Rigorous and Rele
 text_path: "library/AMJ/vol-63-no-2/text/Sharma 2020 Cocreating Rigorous and Relevant Knowledge.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["research-practice gap", "cocreation", "process ontology", "rigor and relevance", "business sustainability", "incomplete objects", "temporal connections"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "process ontology (Langley, Smallman, Tsoukas"
   methods_overview: "We analyzed the data in three discrete steps"
   keywords_source: "making temporal connections between events and (2) recognizing the incompleteness of the objects"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We analyzed the data in three discrete steps"
+  findings_overview: "participants were better able to cocreate knowledge. Furthermore, we identified two"
 ---
 
 # Cocreating Rigorous and Relevant Knowledge
@@ -51,6 +56,9 @@ The communities of research and practice are embedded in different knowledge sys
 **Research Question**
 The paper asks how researchers and managers imbricate rigorous and relevant knowledge, given the challenges inherent in the cocreation process. It focuses on how researcher and practitioner knowledge systems become connected over time rather than only within discrete collaboration events.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Research-practice tension: Researchers seek generalizable and defensible rigor, while managers seek relevant, context-specific, prescriptive knowledge.
 - Process lens: Cocreation is treated as continuous becoming, not as a bounded event with a simple success or failure outcome.
@@ -59,6 +67,12 @@ The paper asks how researchers and managers imbricate rigorous and relevant know
 - Emergent outcome: Rigor and relevance become imbricated over time as researchers and managers work together, retreat to their own knowledge systems, and revise objects across events.
 
 The process is not a variable-based causal model. Sharma and Bansal show that researcher-manager cocreation advances when actors can see the ongoing process and can see objects changing through their contributions. Temporal connections sustain participation across disappointing or non-dialogic events, while incomplete objects create openings for managers and researchers to contribute without either knowledge system being collapsed into the other.
+
+**Data & Measures**
+The data comprise real-time observations of two NBS projects (seven Project 1 meetings from January to September 2014 and six Project 2 meetings from February to August 2015), recordings and extensive memos, 67 interviews with 47 individuals, project documents, and five manager focus groups. Analysis proceeded iteratively in three steps: ongoing analysis of memos and field notes; line-by-line analysis of within-event interactions, with data-near codes aggregated into higher-order themes; and process analysis across events, including systematic coding of temporal connections and changes in objects. This is an interpretive qualitative process design rather than a variable-based measurement or causal-identification design.
+
+**Key Findings**
+Cocreation moments within joint events were rare—two of seven Project 1 meetings and three of six Project 2 meetings—but participants sustained the projects because they experienced cocreation as an ongoing process across events. Two devices made that process explicit: making temporal connections among past, present, and future events, and recognizing objects as incomplete within and across events. These devices sustained participation and enabled researcher and practitioner knowledge to become imbricated over time.
 
 **Theoretical Contribution**
 The paper contributes to research on the research-practice gap by shifting the analysis of cocreation from event-based or synoptic accounts to a process ontology. It theorizes temporal connections and incomplete objects as devices that make the process visible to participants and help explain how rigor and relevance can be imbricated rather than traded off. It also extends work on engaged scholarship and knowledge cocreation by showing that cocreation occurs between events as well as within dialogic encounters.
@@ -70,7 +84,7 @@ For facilitators of researcher-practitioner collaboration, the study suggests de
 The authors identify boundary conditions around the type of knowledge, the structure of the NBS process, and empirical generalizability. Some domains, such as climate change policy debates, may require expert knowledge transfer rather than cocreation because treating settled science as open to cocreation could stall action. The study is also grounded in NBS's structured series of meetings with a clear beginning and end, so other cocreation processes may reveal additional devices.
 
 **Future Research**
-Future research could examine other forms of cross-boundary knowledge work, including interdisciplinary research and sustainability institutes. Scholars could study whether temporal connections and incomplete objects operate similarly in less structured collaborations or in contexts without a clear project endpoint. Further work could also identify additional devices that make cocreation processes visible to participants.
+Future research could examine other forms of cross-boundary knowledge work, including interdisciplinary research and sustainability institutes. Further work could study other cocreation processes and identify additional devices that make those processes visible to participants.
 
 **APA 7th Citation**
 Sharma, G., & Bansal, P. (2020). Cocreating rigorous and relevant knowledge. *Academy of Management Journal*, 63(2), 386-410. https://doi.org/10.5465/amj.2016.0487

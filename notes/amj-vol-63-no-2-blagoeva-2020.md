@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Blagoeva 2020 Problem-Solving or Self-En
 text_path: "library/AMJ/vol-63-no-2/text/Blagoeva 2020 Problem-Solving or Self-Enhancement A Power Perspective on How CEOs Affect R&D Search in the Face of Inconsistent Feedback.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["performance feedback", "inconsistent feedback", "CEO power", "R&D search", "behavioral theory of the firm", "self-enhancement"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "behavioral theory of the firm"
   methods_overview: "Arellano–Bond dynamic panel estimator"
   keywords_source: "inconsistent feedback—that is, positive performance feedback"
+  hypotheses_source: "prospects will result in less R&D search when the"
+  measures_overview: "R&D search as the ratio of R&D spending to"
+  findings_overview: "b 5 –23.30, p , .05), supporting Hypothesis 1."
 ---
 
 # Problem-Solving or Self-Enhancement? A Power Perspective on How CEOs Affect R&D Search in the Face of Inconsistent Feedback
@@ -53,6 +58,12 @@ Firms consider multiple reference points simultaneously to assess performance; h
 **Research Question**
 When firms face inconsistent feedback, why do some decision makers respond through problem solving and increased R&D search while others respond through self-enhancement and reduced R&D search? The paper asks how four sources of CEO power shape the firm's response to positive backward-looking performance feedback combined with negative forward-looking prospects.
 
+**Hypotheses / Propositions**
+H1: Greater inconsistency between positive performance feedback and negative performance prospects will result in less R&D search when the CEO has more structural power.
+H2: Greater inconsistency between positive performance feedback and negative performance prospects will result in less R&D search when the CEO has more ownership power.
+H3: Greater inconsistency between positive performance feedback and negative performance prospects will result in more R&D search when the CEO has more expert power.
+H4: Greater inconsistency between positive performance feedback and negative performance prospects will result in more R&D search when the CEO has more prestige power.
+
 **Mechanism Process**
 - IV(s): Inconsistency between positive performance feedback and negative performance prospects; CEO structural power; CEO ownership power; CEO expert power; CEO prestige power.
 - DV(s): R&D search, measured as the ratio of R&D spending to sales.
@@ -60,6 +71,16 @@ When firms face inconsistent feedback, why do some decision makers respond throu
 - Moderators: CEO structural power, CEO ownership power, CEO expert power, and CEO prestige power moderate the relationship between inconsistent feedback and R&D search.
 
 The mechanism contrasts problem solving with self-enhancement. Positive past feedback paired with negative prospects creates ambiguity about whether the firm should treat the situation as a problem requiring search or as a threat to be reframed. Structural and ownership power give CEOs more ability and incentive to protect their position by emphasizing the positive signal and reducing R&D search; expert power unexpectedly works similarly in the main models. Prestige power instead gives CEOs confidence, stakeholder support, and access to information, making problem-solving responses and increased R&D search more likely.
+
+**Data & Measures**
+Data: a panel of 241 S&P 500 firms and 1,887 firm-year observations from 2002–2014, combining COMPUSTAT, CRSP, KLD, Execucomp, BoardEx, ISS, and IBES data. DV: R&D search = R&D spending divided by sales; unreported R&D spending was replaced with zero and accompanied by a missing-R&D indicator. Focal IV: inconsistent feedback = the interaction of positive backward-looking performance feedback (past ROA above a weighted historical aspiration) and negative forward-looking prospects (analyst-forecast expected ROA below the firm's current target). Moderators: structural power = an index of CEO duality, reversed non-CEO TMT board membership, title inequality, and pay inequality; ownership power = an index of founder status and CEO ownership relative to outside-director and institutional-blockholder ownership; expert power = an index of firm tenure, roles, and functional areas; prestige power = an index of public-board seats, nonprofit-board seats, and elite education. The design is observational and associational; the authors estimate Arellano–Bond dynamic panel models with firm and year fixed effects, treating predictors as endogenous and instrumenting them with past regressor values.
+
+**Key Findings**
+- H1 supported: CEO structural power negatively moderated the inconsistent-feedback relationship with R&D search (Model 2, b = –23.30, p < .05); firms with low structural-power CEOs showed a 22.6% larger increase than the baseline effect.
+- H2 supported: CEO ownership power negatively moderated the relationship (Model 3, b = –56.88, p < .05); firms with low ownership-power CEOs showed a 15.1% larger increase than the baseline effect.
+- H3 rejected: the interaction for CEO expert power was significant but negative (Model 4, b = –15.29, p < .05), opposite the predicted positive moderation; more inconsistency produced more R&D search when expert power was lower rather than higher.
+- H4 supported: CEO prestige power positively moderated the relationship (Model 5, b = 45.86, p < .01), increasing the baseline difference in expected R&D search by 47.2% for high-prestige CEOs.
+- In post hoc functional-background models, only sales-and-marketing expertise positively moderated the relationship (b = 108.01, p < .001); the authors caution that some functions were underrepresented.
 
 **Theoretical Contribution**
 The paper advances research on inconsistent performance feedback by specifying when problem-solving versus self-enhancement logics are likely to dominate. It shows that the source of CEO power matters: structural and ownership power support self-enhancing assessment, prestige power supports problem solving, and broad expert power does not operate as predicted.

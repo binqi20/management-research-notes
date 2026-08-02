@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Kim 2020 Does Negative Feedback Benefit 
 text_path: "library/AMJ/vol-63-no-2/text/Kim 2020 Does Negative Feedback Benefit (or Harm) Recipient Creativity The Role of the Direction of Feedback Flow.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["negative feedback", "recipient creativity", "direction of feedback flow", "task processes", "meta-processes", "feedback intervention theory"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "feedback intervention theory"
   methods_overview: "conditional indirect effect analysis"
   keywords_source: "recipient creativity"
+  hypotheses_source: "direction of feedback flow determines the nature of the relationship between negative feedback and recipient creativity, via two distinct mechanisms: task processes and meta-processes."
+  measures_overview: "creativity using Zhou and George’s (2001) 13-item"
+  findings_overview: "Negative feedback increases recipient creativity in the bottom-up feedback flow (from followers to supervisors), because it heightens the recipients’ focus on task processes"
 ---
 
 # Does Negative Feedback Benefit (or Harm) Recipient Creativity? The Role of the Direction of Feedback Flow
@@ -51,6 +56,10 @@ Negative feedback alerts recipients to a creativity–standard gap, and thus may
 **Research Question**
 How does negative feedback influence recipient creativity, and why have prior studies found positive, negative, and null relationships? The paper asks whether the direction of feedback flow explains when negative feedback improves creativity through task processes and when it harms creativity through meta-processes.
 
+**Hypotheses / Propositions**
+H1: The direction of feedback flow moderates the relationship between negative feedback and recipient creativity: the relationship is positive in bottom-up flow and negative in top-down and lateral flows.
+H2: Task processes and meta-processes mediate this moderated relationship: task processes mediate the positive bottom-up relationship, while meta-processes mediate the negative top-down and lateral relationships.
+
 **Mechanism Process**
 - IV(s): Negative feedback targeted at creativity; direction of feedback flow, distinguished as bottom-up, top-down, and lateral.
 - DV(s): Recipient creativity.
@@ -58,6 +67,12 @@ How does negative feedback influence recipient creativity, and why have prior st
 - Moderators: Direction of feedback flow.
 
 The paper argues that negative feedback makes recipients aware of a creativity-standard gap, but the recipient's social relationship to the sender channels attention differently. In bottom-up feedback, supervisors have social power and are more likely to treat negative feedback from followers as task-relevant information, increasing task processes and creativity. In top-down feedback, followers are vulnerable to supervisors' resource control, so negative feedback shifts attention toward threat and social evaluation. In lateral feedback, peer competition similarly makes negative feedback threatening, reducing task focus and creativity.
+
+**Data & Measures**
+Study 1 was a quasi-field experiment with 225 employees in creative jobs at a Korean health food company. Direction of feedback flow was established through recipients’ positions and March/June quarterly evaluations; recipients rated negative feedback using a modified seven-item feedback-valence scale, task processes and meta-processes with four- and five-item scales, respectively, and superiors rated creativity two months later using Zhou and George’s 13-item scale. Study 2 randomly assigned 356 undergraduates in a 2 × 3 laboratory experiment, manipulating negative versus neutral feedback through percentile scores and feedback direction through supervisor, follower, or peer roles plus resource control; it used the same mediator scales and independent judges’ ratings of three second-round ideas for creativity.
+
+**Key Findings**
+Study 1 supported H1: negative feedback was positively related to creativity in bottom-up flow and negatively related to creativity in top-down and lateral flows. It also supported H2: the bottom-up relationship was mediated by task processes but not meta-processes, while both task processes and meta-processes mediated the top-down and lateral relationships. Study 2 replicated these direction-specific effects under random assignment and the same conditional indirect-effect pattern, supporting H1 and H2.
 
 **Theoretical Contribution**
 The paper integrates conflicting theories of negative feedback and creativity by organizing them around feedback intervention theory's two pathways: task processes and meta-processes. It extends feedback intervention theory by introducing direction of feedback flow as a boundary condition that determines which pathway is activated. It also argues that feedback should be conceptualized as a social flow between actors, not merely as a valenced message.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Reinwald 2020 Being Different, Being Abs
 text_path: "library/AMJ/vol-63-no-3/text/Reinwald 2020 Being Different, Being Absent A Dynamic Perspective on Demographic Dissimilarity and Absenteeism in Blue-Collar Teams.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["demographic dissimilarity", "absenteeism behavior", "relational demography", "social identity theory", "anchoring events", "blue-collar teams"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "social identity theory with the theory of anchoring events"
   methods_overview: "growth modeling in a generalized linear mixed"
   keywords_source: "demographic dissimilarity on absenteeism behavior"
+  hypotheses_source: "Hypothesis 1a. An individual’s gender dissimilarity"
+  measures_overview: "measured absence as the total number of days lost"
+  findings_overview: "We find that gender dissimilarity significantly predicts higher absenteeism only after Time 2"
 ---
 
 # Being Different, Being Absent? A Dynamic Perspective on Demographic Dissimilarity and Absenteeism in Blue-Collar Teams
@@ -51,6 +56,12 @@ This study offers a new theoretical and empirical perspective on the dynamic eff
 **Research Question**
 How does individual-level demographic dissimilarity in teams unfold over time, and how does this affect individual absenteeism? The paper asks whether gender and age dissimilarity produce dynamic absenteeism trajectories, and whether those trajectories are asymmetric for women and older employees in blue-collar teams.
 
+**Hypotheses / Propositions**
+H1a: Greater individual gender dissimilarity from the team predicts a steeper increase in absenteeism over time.
+H1b: Greater individual age dissimilarity from the team predicts a steeper increase in absenteeism over time.
+H2a: Gender dissimilarity has a greater effect on absenteeism trajectories among women than among men, such that dissimilar women exhibit steeper trajectories than dissimilar men.
+H2b: Age dissimilarity has a greater effect on absenteeism trajectories among older than younger individuals, such that dissimilar older individuals exhibit steeper trajectories than dissimilar younger individuals.
+
 **Mechanism Process**
 - IV(s): Individual gender dissimilarity and age dissimilarity relative to team gender and age composition.
 - DV(s): Individual absenteeism, measured as yearly workdays lost for reasons other than approved vacation, military service, training, maternity leave, or personal days.
@@ -58,6 +69,12 @@ How does individual-level demographic dissimilarity in teams unfold over time, a
 - Moderators: Time since team entry, individual gender, and individual age; the core tests use gender-by-team-gender-composition-by-time and age-by-team-age-composition-by-time interactions.
 
 The mechanism is dynamic and cross-level. Drawing on the social identity approach, the authors argue that dissimilar newcomers are likely to be categorized as out-group members and to perceive discrimination, social exclusion, or alienation. Anchoring events theory adds the temporal logic: early negative exchanges can be stored in autobiographical memory and bias later interpretations of team interactions, so absenteeism does not necessarily rise immediately but increases over time. The effect should be strongest for women and older employees because tokenism, status characteristics, and blue-collar job prototypes make them more likely to perceive negative anchoring events in predominantly male and younger teams.
+
+**Data & Measures**
+The study uses official archival HR records at seven annual time points (2010–2016) for 2,711 newcomers from 820 blue-collar teams, yielding 13,830 person-year observations. Absenteeism is the annual count of workdays lost for reasons other than approved vacation, military service, training, maternity leave, or personal days. Gender similarity is operationalized as individual gender interacted with the team share of women, and age similarity as individual age interacted with team average age; reversing the signs yields dissimilarity effects. The associational longitudinal analyses use negative binomial generalized linear mixed growth models with repeated observations nested within individuals and a random time slope.
+
+**Key Findings**
+H1a was supported: gender dissimilarity had no initial effect but predicted higher absenteeism after Time 2. H1b was not supported because age dissimilarity showed no consistent overall trajectory pattern: it predicted lower absenteeism at Times 0–1, no significant effect at Times 2–4, and higher absenteeism at Times 5–6. H2a was supported: dissimilar women had steeper absenteeism trajectories than dissimilar men, although highly dissimilar men also had steeper trajectories than less dissimilar men. H2b was supported: the predicted age-dissimilarity pattern held for older employees, whereas dissimilar younger employees had lower absenteeism throughout the observation period.
 
 **Theoretical Contribution**
 The paper extends relational demography by replacing a static account of dissimilarity effects with a temporal model of how those effects intensify across team membership. It integrates the social identity approach with anchoring events theory to explain why dissimilarity may have little initial association with absenteeism but stronger effects later. It also refines asymmetric relational-demography theory by showing that low-status demographic groups, especially women and older employees in the study context, are most likely to exhibit steeper absenteeism trajectories.

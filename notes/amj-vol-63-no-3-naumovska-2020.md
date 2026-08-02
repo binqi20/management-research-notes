@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Naumovska 2020 Last to Come and Last to 
 text_path: "library/AMJ/vol-63-no-3/text/Naumovska 2020 Last to Come and Last to Go The Complex Role of Gender and Ethnicity in the Reputational Penalties for Directors Linked to Corporate Fraud.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["ex post settling-up", "reputational immunity", "director labor market", "board diversity", "corporate misconduct", "corporate fraud", "minority directors", "resource-provisioning role"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "agency theory perspective"
   methods_overview: "we ran OLS models"
   keywords_source: "a degree of “reputational immunity”"
+  hypotheses_source: "and ethnic minority) directors will experience reputational immunity in the director labor market relative"
+  measures_overview: "media discourse variable was measured as the sum of"
+  findings_overview: "minority directors experienced a 21.65% lower net"
 ---
 
 # Last to Come and Last to Go? The Complex Role of Gender and Ethnicity in the Reputational Penalties for Directors Linked to Corporate Fraud
@@ -52,6 +57,11 @@ Scholars have found consistent evidence that directors who served on boards of f
 **Research Question**
 How does a director's demographic minority status affect the ex post settling-up process in the director labor market after corporate fraud? The paper asks whether socioeconomic pressures for board diversity can lessen or reverse the reputational penalties usually imposed on fraud-tainted directors, and whether media discourse and the diversity level of nonfraudulent boards amplify or attenuate that effect.
 
+**Hypotheses / Propositions**
+- H1: Fraud-tainted minority (women and ethnic minority) directors will experience reputational immunity in the director labor market relative to fraud-tainted White male directors.
+- H2: The greater the media discourse promoting board diversity, the higher the reputational immunity of fraud-tainted minority directors.
+- H3: The greater the board diversity of a nonfraudulent firm, the lower a fraud-tainted minority director's reputational immunity on that firm.
+
 **Mechanism Process**
 - IV(s): Minority director status; media discourse on board diversity; number of minority directors at the nonfraudulent firm.
 - DV(s): Net loss of outside directorships at nonfraudulent firms; loss of a specific outside directorship at a nonfraudulent firm.
@@ -59,6 +69,12 @@ How does a director's demographic minority status affect the ex post settling-up
 - Moderators: Media discourse on board diversity strengthens minority directors' reputational immunity; the number of minority directors already on a nonfraudulent board lowers a fraud-tainted minority director's marginal diversity value.
 
 The mechanism is a cross-level reputational calculus in which director labor-market evaluators weigh fraud-tainted directors' apparent monitoring failure against their resource-provisioning and legitimacy-conferring value. Because women and ethnic minority directors are underrepresented and increasingly sought after, socioeconomic pressures for board diversity can counterbalance penalties attached to corporate fraud. This reputational immunity is stronger when media discourse heightens the value of board diversity and weaker when a nonfraudulent firm already has more minority directors, reducing the focal director's marginal diversity contribution.
+
+**Data & Measures**
+Fraud cases came from Karpoff and colleagues' proprietary database of SEC and Department of Justice enforcement actions for financial misrepresentation; director and board data came from BoardEx, ISS, annual reports and proxy statements, biographical databases, and news outlets, while media coverage came from Factiva. For H1 and H2, the director-level dependent variable was outside directorships lost minus those gained during the three years after fraud revelation; minority director was coded 1 for women and ethnic minorities and 0 for White men; media discourse was the number of board-diversity articles in specified business media during the 12 months before through 36 months after revelation. The 2,030-director sample was estimated with OLS and firm-clustered Huber–White robust standard errors. For H3, the 356 director–nonfraudulent-board pairings used a loss dummy equal to 1 when the focal minority director lost that seat within three years, the count of minority directors on that board as the independent variable, and logit regression with heteroscedasticity-robust standard errors.
+
+**Key Findings**
+H1 was supported: minority directors had a smaller net loss of outside directorships than White male directors (b = -0.12, p < .05), a 21.65% lower net loss. H2 was supported: greater media discourse strengthened this reputational immunity (interaction b = -0.08, p < .05); discourse two standard deviations above the mean corresponded to a 24.17% decrease in minority directors' net loss. H3 was supported: each increase in minority-director count on the nonfraudulent board increased the probability of losing that seat (b = 0.26, p < .05); predicted exit probabilities rose from 20.02% when the focal director was the only minority director to 22.54% with one additional and 48.28% with two additional minority directors.
 
 **Theoretical Contribution**
 The paper extends ex post settling-up research by showing that director labor-market penalties are not only agency-theoretic assessments of directors as monitors. They also reflect the socially embedded value of directors as resource providers and conferrers of legitimacy under evolving norms for board diversity.

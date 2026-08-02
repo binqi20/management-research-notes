@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Farh 2020 Token Female Voice Enactment i
 text_path: "library/AMJ/vol-63-no-3/text/Farh 2020 Token Female Voice Enactment in Traditionally Male-Dominated Teams Facilitating Conditions and Consequences for Performance.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["token female voice enactment", "traditionally male-dominated teams", "leader's gender beliefs", "task complexity", "team performance", "minority influence"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "tokenism, gender stereotypes, and minority influence literatures"
   methods_overview: "we used hierarchical linear modeling"
   keywords_source: "token female voice enactment"
+  hypotheses_source: "Hypothesis 1b. Token female’s voice enactment will"
+  measures_overview: "completion time, which was measured via stopwatch"
+  findings_overview: "voice enactment was higher when team leaders possessed more favorable beliefs about"
 ---
 
 # Token Female Voice Enactment in Traditionally Male-Dominated Teams: Facilitating Conditions and Consequences for Performance
@@ -55,6 +60,12 @@ When is a token female's voice incorporated into the actions of a traditionally 
 **Research Question**
 When is a token female's voice incorporated into the actions of a traditionally male-dominated team, and with what consequences for team performance? The paper asks what conditions facilitate token female voice enactment and when acting on that voice helps or harms team performance.
 
+**Hypotheses / Propositions**
+H1a. Token female voice enactment will be lower than a comparison male's voice enactment.
+H1b. Token female voice enactment will be higher than a comparison male's voice enactment.
+H2. Leaders' gender beliefs moderate the effect of gender on voice enactment, such that token females are more likely to have higher voice enactment than comparison males when leaders' gender beliefs are high rather than low.
+H3. The relationship between token female voice enactment and team performance is contingent on task complexity: positive when task complexity is high and negative when it is low.
+
 **Mechanism Process**
 - IV(s): Team gender composition, token female status versus comparison male status, leader's gender beliefs, and token female voice enactment.
 - DV(s): Yellow-helmet voice enactment and team performance.
@@ -62,6 +73,12 @@ When is a token female's voice incorporated into the actions of a traditionally 
 - Moderators: Leader's gender beliefs moderate token female voice enactment; task complexity moderates the performance effect of token female voice enactment.
 
 The paper argues that tokenism and gender stereotypes can make a token female's suggestions less likely to be enacted, but minority influence mechanisms can make a demographically distinct member's suggestions more carefully processed. Leaders with more favorable beliefs about women's military capabilities legitimize the token female's competence and help the team consider her suggestions. When the task is complex, enacting token female voice contributes divergent ideas and deeper processing that improve performance; when the task is low in complexity, the same divergence can slow efficient execution and hurt performance.
+
+**Data & Measures**
+The study used 173 enlisted U.S. Marine Corps personnel assigned to 39 all-male or female-token teams. Each team completed four counterbalanced tasks of high or low complexity, producing 156 team-task observations; formal leadership rotated across tasks. Hypothesis-blind observers coded suggestions and whether teams acted on them in real time. Leader gender beliefs were measured before team assignment with three seven-point items on women's physical strength, combat readiness, and leadership capability. Team performance was an index calculated as 18 minutes minus task completion time. The authors estimated hierarchical linear models with task episodes nested within teams.
+
+**Key Findings**
+H1b, rather than H1a, was supported: token female voice enactment was higher than comparison-male voice enactment. H2 was supported: more favorable leader gender beliefs predicted higher token female voice enactment but did not affect comparison-male voice enactment. H3 was supported: token female voice enactment was positively related to team performance on high-complexity tasks and negatively related on low-complexity tasks; comparison-male voice enactment was unrelated to performance at either complexity level. Supplementary analyses found that female-token teams voiced more suggestions before the first enacted suggestion than all-male teams.
 
 **Theoretical Contribution**
 The paper extends voice research by shifting attention from voice frequency to voice enactment, or whether expressed suggestions are incorporated into team action. It reconciles tokenism, gender stereotype, and minority influence perspectives by showing that leader gender beliefs condition whether token female voice is enacted. It also contributes to team diversity and minority influence research by identifying token female voice enactment as a micro-dynamic through which diversity shapes team performance under task-complexity boundary conditions.

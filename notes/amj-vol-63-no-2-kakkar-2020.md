@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Kakkar 2020 Fall from Grace The Role of 
 text_path: "library/AMJ/vol-63-no-2/text/Kakkar 2020 Fall from Grace The Role of Dominance and Prestige in the Punishment of High-Status Actors.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["social status", "dominance", "prestige", "ambiguous transgressions", "punishment", "intentionality", "moral credentials", "third-party judgments"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "building on third-party attribution theories"
   methods_overview: "employing archival field data, controlled lab experiments"
   keywords_source: "dominance and prestige as two alternate forms of status"
+  hypotheses_source: "suggest that actors associated with dominance-based status will be penalized more"
+  measures_overview: "asking participants how harshly they would punish the"
+  findings_overview: "dominant actors are punished more harshly than their prestigious counterparts."
 ---
 
 # Fall from Grace: The Role of Dominance and Prestige in the Punishment of High-Status Actors
@@ -52,6 +57,12 @@ When actors transgress social norms, their social status colors the severity wit
 **Research Question**
 Why are some high-status actors punished harshly for ambiguous norm violations while others receive leniency for comparable misconduct? The paper asks whether the basis of status, dominance versus prestige, explains third-party punishment judgments toward high-status transgressors.
 
+**Hypotheses / Propositions**
+H1. When accused of an ambiguous transgression, a high-status actor will be punished more harshly when the actor's status is based on dominance rather than prestige.
+H2. A high-status actor's ambiguous transgression will be perceived as more intentional when the actor's status is based on dominance rather than prestige.
+H3. A high-status actor will be granted greater moral credentials when the actor's status is based on prestige rather than dominance.
+H4. Attributions of intentionality and moral credentials will mediate the relationship between dominance- versus prestige-based high status and punishment severity for an ambiguous transgression.
+
 **Mechanism Process**
 - IV(s): High-status actor status type, operationalized or manipulated as dominance-based status versus prestige-based status.
 - DV(s): Third-party punishment, including NHL minor penalty minutes, difficult questions assigned to a leader, and punishment/legal-case recommendations in scenarios.
@@ -59,6 +70,12 @@ Why are some high-status actors punished harshly for ambiguous norm violations w
 - Moderators: Not reported in paper.
 
 The mechanism is that observers infer different motives from different forms of high status. Dominance-based status signals assertiveness, control, self-interest, and agency, so ambiguous transgressions by dominant high-status actors are judged as more intentional and less morally credentialed. Prestige-based status signals expertise, helpfulness, respect, and prior other-oriented behavior, so observers grant more benefit of the doubt and punish less severely. Across the studies, intentionality and lack of moral credentials explain the harsher punishment of dominant versus prestigious high-status actors.
+
+**Data & Measures**
+Study 1 analyzed 1,294 player-season observations from 756 NHL players over 2014–2016. Punishment was minor penalty minutes per game; overall status was salary, prestige was the residual status remaining after accounting for performance and related factors, and dominance-based status was the interaction of facial width-to-height ratio with overall status. The authors estimated random-coefficient multilevel regressions with teams as the higher-level factor and season fixed effects. Study 2 randomly assigned 152 participants in 38 European business-school lab groups to interact with a confederate leader displaying dominant or prestigious behavior; after an ambiguous dictator-game violation, punishment was the number of difficult questions assigned to the leader, analyzed with ANOVA and multilevel regression. Study 3 randomly assigned 491 MTurk participants in a 2 × 2 × 2 design varying dominance, prestige, and a CEO tax-fraud versus senior-VP racial-discrimination scenario. Punishment used two recommendation items, moral credentials used a three-item composite, intentionality used one item, and the authors used ANOVA plus bootstrapped structural-equation mediation.
+
+**Key Findings**
+Study 1 supported H1: prestige-based status was negatively associated with punishment (b = -0.02, p = .025), dominance-based status was positively associated with punishment (b = 3.52, p < .001), and the coefficients differed significantly (χ² = 22.93, p < .001). Study 2 also supported H1: leaders received more difficult questions in the dominance than prestige condition (M = 1.86 vs. 1.60; F(1, 150) = 4.80, p = .03), with the multilevel result likewise positive (b = 0.32, p = .01). Study 3 supported H1–H4: compared with the low-dominance/high-prestige actor, the high-dominance/low-prestige actor was punished more (M = 4.28 vs. 2.75), judged more intentional (M = 4.40 vs. 2.67), and granted fewer moral credentials (M = 3.32 vs. 4.64), all p < .001. The indirect effects on punishment through intentionality (b = 0.86) and lack of moral credentials (b = 0.56) were significant, the total indirect effect was b = 1.42 (all p < .001), and the remaining direct effect was nonsignificant (b = 0.12, p = .34).
 
 **Theoretical Contribution**
 The paper reconciles contradictory findings on whether high status protects or harms transgressors by separating dominance-based from prestige-based status. It contributes to status theory by showing that the type of status, not merely rank, shapes third-party judgments after ambiguous wrongdoing. It also links status research to retributive justice and organizational misconduct literatures by identifying intentionality and moral credentials as parallel mechanisms behind punishment judgments.

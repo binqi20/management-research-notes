@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Hampel 2020 The Art of the Pivot How New
 text_path: "library/AMJ/vol-63-no-2/text/Hampel 2020 The Art of the Pivot How New Ventures Manage Identification Relationships with Stakeholders as They Change Direction.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["pivot", "new ventures", "stakeholder identification", "user community", "identification reset work", "lean start-up"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "identification management, user community identification"
   methods_overview: "conduct an inductive, qualitative process study"
   keywords_source: "Many new ventures have to “pivot”—radically transform"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Interviews with Impossible staff and retailers              40"
+  findings_overview: "finding is that ventures can remove the affective hostility of stakeholders and rebuild"
 ---
 
 # The Art of the Pivot: How New Ventures Manage Identification Relationships with Stakeholders as They Change Direction
@@ -52,6 +57,9 @@ Many new ventures have to “pivot”—radically transform what they are about�
 **Research Question**
 The paper asks what consequences pivoting has for new ventures that rely on stakeholders who identify with them, and how such ventures can manage relations with these stakeholders during pivots. It studies this question through Impossible's shift from an analog instant-film venture serving a niche user community to an analog-digital photography company seeking mass-market customers.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Triggering condition: A new venture enacts a live pivot that changes its identity, strategy, products, operations, and community interactions.
 - Stakeholder reactions: Community-based supporters feel personally betrayed and attack the venture; product-based supporters feel anxious and doubt the venture's new focus.
@@ -60,6 +68,12 @@ The paper asks what consequences pivoting has for new ventures that rely on stak
 - Boundary condition: A small group of attackers remains hostile despite the reset work.
 
 The process is not a variable-based causal model. Impossible reduced stakeholder hostility by exposing its vulnerabilities and reframing the pivot as a shared struggle to keep analog instant photography alive. This moved many stakeholders away from an "us versus them" relationship and toward either detached acceptance or renewed support, allowing the venture to continue its pivot.
+
+**Data & Measures**
+The corpus comprised 74 interviews (35 Impossible staff, five retailers, and 34 community members); archival material including 1,570 selected tweets, 650 newsletters, 388 minutes of documentary film, 206 press articles, 131 selected blog posts, 90 press releases, and seven books and documentaries; and eight weeks (about 350 hours) of participant observation at Impossible's Berlin office. The authors used open coding, separate emotion coding, triangulation, second-order themes, aggregate theoretical dimensions, visual mapping, and temporal bracketing to build the process model.
+
+**Key Findings**
+Impossible's live pivot threatened its user community's identification: community-based supporters who felt betrayed attacked the venture, while product-based supporters who felt anxious doubted it. Identification reset work followed two routes. Seeking empathy for the venture's challenges led the core group of attackers to stop confronting Impossible and disengage, although a small minority continued attacking; mythologizing the technology and the venture's commitment to the product led doubters either to disengage or to resume support, and none became attackers. By 2016, a major part of the original community again supported or tolerated Impossible, while only a small group opposed it.
 
 **Theoretical Contribution**
 The paper contributes to identification management by theorizing identification reset work as a way new ventures can repair threatened relationships with external stakeholders over whom they have limited control. It extends user community research by showing that intense community identification can become a liability during radical change. It also contributes to lean start-up scholarship by distinguishing early conceptual pivots from later live pivots, where the central challenge is managing existing stakeholder identification relationships.

@@ -142,20 +142,20 @@ audit**:
 
 **Current main-branch audit state (2026-08-02):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 17 upgraded 24 notes (AMJ vol-63-no-5 + vol-63-no-4, all v2
-augmentations) to v3. The final batch audit is **216/216 prose-field verdicts
-SUPPORTED, with no residual `PARTIAL` accepted**, after seven evidence-based
-legacy-field repairs across four notes in one repair round and two audit
-rounds. All 24 augmentation deltas passed the validator and initial diff-guard
-without a gate failure. The repairs narrowed Ody-Brasier's Practical
-Implication, Limitations, and Future Research; Yi's Limitations; Bourgoin's
-Research Question and Future Research; and Cloutier's Future Research. All 72
-verdicts on the three new v3 fields were `SUPPORTED`, so the repeated-new-field
-stop rule was not triggered. This is the second consecutive backfill batch run
-end-to-end on `gpt-5.6-sol` for both augmentation and audit; the recurring
-workshop cross-family spot-audit applies, and batch 16's review scored 27/27
-agreement. The corpus contains 61 legacy v1
-notes, 685 v2 notes, and 421 v3 notes with evidence anchors; new notes are
+batch 18 upgraded 24 notes (AMJ vol-63-no-3 + vol-63-no-2, all v2
+augmentations) to v3. The final batch audit is **215/216 prose-field verdicts
+SUPPORTED, with one faithful `PARTIAL` accepted**, after nine evidence-based
+edit operations across six notes in two repair rounds and three audit rounds.
+All 24 augmentation deltas passed the validator and initial diff-guard without
+a gate failure. Beckman's Future Research is the sole accepted `PARTIAL`: the
+fitted audit input cuts at an interleaved `REFERENCES` heading, but the retained
+raw text at lines 1248–1260 directly supports the gender-research rationale.
+All 72 verdicts on the three new v3 fields were `SUPPORTED`, so the
+repeated-new-field stop rule was not triggered. This is the third consecutive
+backfill batch run end-to-end on `gpt-5.6-sol` for both augmentation and audit;
+the recurring workshop cross-family spot-audit applies, with the next
+calibration due around batch 20. The corpus contains 61 legacy v1
+notes, 661 v2 notes, and 445 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes

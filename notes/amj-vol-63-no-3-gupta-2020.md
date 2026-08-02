@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Gupta 2020 CFO Gender and Financial Stat
 text_path: "library/AMJ/vol-63-no-3/text/Gupta 2020 CFO Gender and Financial Statement Irregularities.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["CFO gender", "financial misreporting", "financial statement irregularities", "institutional ownership", "analyst coverage", "FSD Score"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "from managerial discretion theory"
   methods_overview: "We test our hypotheses using panel regressions with"
   keywords_source: "chief financial officer (CFO) gender"
+  hypotheses_source: "female CFOs have a lower likelihood of financial"
+  measures_overview: "we use the natural log of the FSD Score to"
+  findings_overview: "female-CFO firms have a 2.6% lower FSD Score"
 ---
 
 # CFO Gender and Financial Statement Irregularities
@@ -54,6 +59,10 @@ The increasing presence of women in upper echelon positions draws attention to t
 **Research Question**
 Does CFO gender influence the likelihood of corporate financial misreporting, and is this relationship contingent on external governance mechanisms? The paper asks whether firms with female CFOs have lower financial statement irregularities than comparable firms with male CFOs, especially when institutional ownership and analyst coverage are weak.
 
+**Hypotheses / Propositions**
+- H1: Firms with female CFOs have a lower likelihood of financial misreporting than firms with male CFOs.
+- H2: CFO gender is more strongly related to financial misreporting when monitoring is weaker, at low levels of institutional ownership and analyst coverage.
+
 **Mechanism Process**
 - IV(s): CFO gender, operationalized as an indicator for female CFO.
 - DV(s): Financial misreporting, primarily measured by the natural log of the Financial Statement Deviation Score; earnings restatements are used as an alternative dependent variable.
@@ -61,6 +70,12 @@ Does CFO gender influence the likelihood of corporate financial misreporting, an
 - Moderators: Institutional ownership and analyst coverage, dichotomized into low versus high monitoring conditions.
 
 The mechanism is cross-level: CFO gender is treated as a senior-executive attribute that can shape firm-level financial reporting because CFOs have direct responsibility for financial statements. Drawing on upper echelons theory and literatures on gender differences in ethics and risk taking, the authors argue that female CFOs are less likely than male CFOs to engage in financial misreporting. Managerial discretion theory supplies the contingency: when monitoring from institutional owners or analysts is weak, CFO attributes should matter more; when monitoring is strong, external governance constrains discretion and reduces male-female CFO differences.
+
+**Data & Measures**
+The authors merge Execucomp, Compustat, ISS, CRSP, IBES, and Thomson Reuters data for 18,659 firm-year observations from 2,186 U.S.-based firms over 1996–2016. Female CFO is an indicator based on Execucomp's CFOANN, supplemented by TITLEANN, with gender identified through GENDER. The dependent variable is the natural log of the Financial Statement Deviation Score, calculated from deviations from Benford's Law in 10-K financial-statement line items. Institutional ownership is institutional shares divided by total shares outstanding; analyst coverage is the number of analyst EPS estimates for the fiscal year-end. The main tests are panel regressions with firm-clustered standard errors and industry and year fixed effects, supplemented by SOX and financial-crisis analyses and alternative estimators, outcomes, matching, and treatment-effects models.
+
+**Key Findings**
+The main panel analyses supported H1: female-CFO firms had a 2.6% lower FSD Score than male-CFO firms. They also supported H2: the gender difference was larger when institutional ownership and analyst coverage were low. Robustness evidence was generally but not uniformly supportive: the institutional-ownership interaction persisted more consistently, whereas the analyst-coverage interaction was marginal or nonsignificant in several random-effects, fixed-effects, hybrid, and treatment-effects specifications. The SOX and global-financial-crisis analyses produced patterns aligned with the theorized gender difference.
 
 **Theoretical Contribution**
 The paper extends upper echelons theory by showing that gender, an executive characteristic often overlooked in strategic-leadership research, is associated with a firm-level misconduct outcome. It also extends managerial discretion theory by treating institutional ownership and analyst coverage as governance mechanisms that condition the effect of a specific executive attribute on corporate behavior. Methodologically, it contributes evidence on the Financial Statement Deviation Score as a tool for studying financial misreporting beyond detected fraud cases.

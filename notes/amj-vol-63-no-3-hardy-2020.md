@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-3/pdfs/Hardy 2020 Organizations, Risk Translati
 text_path: "library/AMJ/vol-63-no-3/text/Hardy 2020 Organizations, Risk Translation, and the Ecology of Risks The Discursive Construction of a Novel Risk.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-qualitative"
 keywords: ["novel risks", "risk translation", "ecology of risks", "risk objects", "bisphenol A", "discursive construction", "grand challenges"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "novel risks. It finds that organizations engage in “risk translation”"
   methods_overview: "We conducted a series of systematic searches"
   keywords_source: "risk translation and the ecology of risks"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We conducted a series of systematic searches for"
+  findings_overview: "risks” that evolves over time, allowing for the construction of a novel risk."
 ---
 
 # Organizations, Risk Translation, and the Ecology of Risks: The Discursive Construction of a Novel Risk
@@ -51,6 +56,9 @@ The contemporary “risk society” is associated with the emergence of a wide r
 **Research Question**
 How are risk objects constructed in the case of novel risks? The paper also asks what role risk translation plays when organizations face equivocal risks that prevailing scientific risk-assessment techniques cannot settle.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: novel risks; equivocal meaning in relation to risk; risk objects; translated organizational risks; the body of risk knowledge; the ecology of risks.
 - Risk translations: actors translated BPA's equivocality into professional risk for scientists, regulatory risk for chemical manufacturers, reputational risk for retailers and NGOs, and operational risk for Canadian and Australian regulators.
@@ -59,6 +67,12 @@ How are risk objects constructed in the case of novel risks? The paper also asks
 - Emergent outcome: the ecology of risks evolved until synergistic strengthening actions outweighed weakening actions by toxicologists, manufacturers, and Australian regulators, helping BPA become constructed as a risk object.
 
 The process model is that novel risks become actionable for organizations through translation into familiar organizational risks. These translations are local and not necessarily coordinated, but actions taken to manage one translated risk heighten or dampen other actors' translated risks. Over time, the interaction of translated risks forms an ecology that can reproduce equivocality, generate contestation, and eventually stabilize a risk object's meaning when risk knowledge and organizational practices are revised.
+
+**Data & Measures**
+The study combines systematic searches of BPA-related scientific, media, regulatory, and organizational texts from 1993–2013 with 58 semi-structured interviews conducted in Canada and Australia in 2011–2012. Interviews lasted 30–90 minutes and were recorded and transcribed verbatim. The authors used descriptive, analytical, and pattern coding, followed by iterative process analysis of risk-management actions, their effects on BPA's meaning, their sequencing, and their interactions across actors.
+
+**Key Findings**
+Organizations translated BPA's equivocality into familiar professional, regulatory, reputational, or operational risks and acted to manage those translated risks. The resulting ecology initially reproduced equivocality because actors' risk-management actions had contradictory strengthening and weakening effects on BPA's meaning. As the ecology expanded, a synergistic strengthening chain linking endocrinologists, Canadian regulators, Canadian NGOs and retailers, and Australian NGOs and retailers eventually outweighed the weakening actions of toxicologists, manufacturers, and Australian regulators; alongside revisions to risk knowledge and organizational practices, this stabilized BPA's meaning and constructed it as a risk object.
 
 **Theoretical Contribution**
 The paper contributes to organizing and risk research by theorizing how organizations respond when the dominant body of risk knowledge cannot determine whether an object poses a risk. It extends risk translation research by showing that organizations translate equivocal novel risks into familiar categories of organizational risk, rather than merely shifting responsibility for already established risks. It also develops the concept of an ecology of risks to explain how uncoordinated organizational actions cumulatively construct novel risk objects and shape societal responses to grand challenges.

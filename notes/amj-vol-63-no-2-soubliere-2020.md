@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-2/pdfs/Soublière 2020 The Legitimacy Threshold
 text_path: "library/AMJ/vol-63-no-2/text/Soublière 2020 The Legitimacy Threshold Revisited How Prior Successes and Failures Spill Over to Other Endeavors on Kickstarter.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-02"
 
 paper_type: "empirical-quantitative"
 keywords: ["legitimacy threshold", "legitimacy spillovers", "crowdfunding", "Kickstarter", "entrepreneurial endeavors"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "extend the notion of a “legitimacy threshold”"
   methods_overview: "generalized least squares (GLS) models to perform"
   keywords_source: "generate legitimacy spillovers"
+  hypotheses_source: "Hypothesis 2a. Entrepreneurial endeavors in crowdfunding contexts acquire resources to a greater extent"
+  measures_overview: "pledged to a campaign as our dependent variable"
+  findings_overview: "Blockbuster successes encourage key audiences"
 ---
 
 # The Legitimacy Threshold Revisited: How Prior Successes and Failures Spill Over to Other Endeavors on Kickstarter
@@ -51,6 +56,12 @@ How does the legitimacy conferred on entrepreneurial endeavors affect the legiti
 **Research Question**
 How does the legitimacy bestowed upon prior entrepreneurial endeavors affect the legitimacy of subsequent related endeavors? The paper asks whether the magnitude and type of prior success or failure on Kickstarter change how audiences support later campaigns in the same category.
 
+**Hypotheses / Propositions**
+- H1a: Entrepreneurial endeavors in crowdfunding contexts acquire resources to a greater extent when they follow related blockbuster successes.
+- H1b: Entrepreneurial endeavors in crowdfunding contexts acquire resources to a lesser extent when they follow related unsung successes.
+- H2a: Entrepreneurial endeavors in crowdfunding contexts acquire resources to a greater extent when they follow related path breaking failures.
+- H2b: Entrepreneurial endeavors in crowdfunding contexts attract resources to a lesser extent when they follow related broken path failures.
+
 **Mechanism Process**
 - IV(s): Recent category-level counts of blockbuster successes, unsung successes, path breaking failures, and broken path failures in the 90 days before a focal campaign.
 - DV(s): Amount pledged to the focal campaign, logged, as a resource-acquisition proxy for legitimacy.
@@ -58,6 +69,12 @@ How does the legitimacy bestowed upon prior entrepreneurial endeavors affect the
 - Moderators: Attraction of new backers, category maturity, and concurrent launches are tested in additional analyses.
 
 The paper argues that prior campaign outcomes prime audiences' legitimacy assessments of related later campaigns. Blockbuster successes and path breaking failures expand the carrying capacity for subsequent campaigns by encouraging audience support, whereas unsung successes and broken path failures reduce later support. The mechanism is recursive because individual legitimation outcomes collectively flow back into the category and shape later resource acquisition.
+
+**Data & Measures**
+The study uses publicly available Kickstarter records for 182,358 campaigns in 165 subordinate categories from April 2009 through December 2014. The dependent variable is the log of the amount pledged to a focal campaign. For each category and day, the focal predictors are the average numbers of blockbuster successes (over 150% funded), unsung successes (100–150% funded), path breaking failures (over 20% but under 100% funded), and broken path failures (0–20% funded) ending during the prior 90 days. The main observational analysis uses generalized least squares models with campaign-, category-, country-, and platform-level controls; additional analyses vary windows, cut points, and outcomes and use difference-in-differences, propensity score matching, and qualitative content analysis of Kickstarter Campus discussions.
+
+**Key Findings**
+All four hypotheses were supported in the main analyses: recent blockbuster successes and path breaking failures predicted greater pledged support for subsequent related campaigns, whereas unsung successes and broken path failures predicted less support. In the separate hypothesis-testing models, a one-standard-deviation increase corresponded to a paper-reported 72% increase for blockbuster successes, a 12% decrease for unsung successes, a 47% increase for path breaking failures, and a 35% decrease for broken path failures. Robustness checks were generally consistent, although the path-breaking-failure result became inconsistent at the 90% failure cut point and annual subset models showed inconsistencies during Kickstarter's first two years.
 
 **Theoretical Contribution**
 The paper contributes to legitimacy theory by showing that legitimacy is not only a threshold crossed by individual endeavors but also a recursive category-level process. It qualifies the usual positive view of legitimacy by showing that prior successes can be detrimental and prior failures can be beneficial, depending on their magnitude. It also reframes entrepreneurial categories as simultaneously cooperative and competitive spaces rather than as moving cleanly from cooperation to competition as they mature.
