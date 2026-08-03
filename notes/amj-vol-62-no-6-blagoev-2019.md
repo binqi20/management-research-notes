@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Blagoev 2019 Why Do Extreme Work Hours P
 text_path: "library/AMJ/vol-62-no-6/text/Blagoev 2019 Why Do Extreme Work Hours Persist Temporal Uncoupling as a New Way of Seeing.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-qualitative"
 keywords: ["extreme work hours", "temporal uncoupling", "temporal structuring", "positive feedback", "temporal lock-in"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "temporal uncoupling as a new way of seeing"
   methods_overview: "We conducted a historical case study of Consult"
   keywords_source: "We develop positive feedback as a mechanism"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "using the software MaxQDA. We applied open coding"
+  findings_overview: "We find that a small shift in temporal structuring mobilized two"
 ---
 
 # Why Do Extreme Work Hours Persist? Temporal Uncoupling as a New Way of Seeing
@@ -51,6 +56,9 @@ This paper develops temporal uncoupling as a new way of seeing the puzzling pers
 **Research Question**
 The paper asks why and how extreme work hours persist in a state of asynchrony relative to dominant societal work time rhythms. It investigates this puzzle through the historical emergence, reinforcement, and maintenance of extreme work hours at an elite strategy consulting firm called Consult.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: temporal structuring, temporal uncoupling, synchrony with clients, asynchrony from societal work time rhythms, positive feedback, temporal lock-in.
 - Process / phases: outcome-oriented temporal structuring in office projects; process-oriented temporal structuring in presence projects; temporal lock-in after hiring and retention pressures made extreme work hours increasingly problematic.
@@ -59,6 +67,12 @@ The paper asks why and how extreme work hours persist in a state of asynchrony r
 - Boundary conditions: the explanation is grounded in an elite consulting context where client visibility, implementation-oriented projects, and price competition made availability and speed central to perceived value.
 
 The process begins with a shift from weekly alternation between client interaction and desk work to presence projects in which consultants worked on-site with clients during the day. This increased synchrony with clients, but pushed desk work into evenings and weekends, thereby increasing asynchrony from regular work time. Positive feedback then made both sides of the pattern self-reinforcing: clients came to expect continuous availability, while Consult reorganized internal practices around extreme hours. Over time, this produced temporal lock-in, where the firm maintained the temporal structure despite employee burnout, attrition, and repeated change efforts.
+
+**Data & Measures**
+The historical qualitative case study draws on data collected between 2013 and 2017: 88 semi-structured interviews, including 52 at Consult, seven with client representatives, and 29 with consultants at other firms; internal archival materials; 257 press articles; and other external archival materials. The authors analyzed the data abductively, organizing it in MaxQDA and applying open coding by chronology, unit of analysis, and initial topic before constructing a temporally bracketed case narrative across three phases. They triangulated interviews and archival sources, compared interpretations across the two researchers, and conducted four member-check meetings.
+
+**Key Findings**
+A shift from office projects to presence projects synchronized consultants more closely with clients during the day but moved desk work into evenings and weekends. This shift activated two mutually dependent positive-feedback cycles: client expectations for presence, speed, and availability reinforced daytime synchronization, while hiring, rewards, project calculation, and scheduling became aligned with long hours and reinforced desynchronization from societal work time norms. Although the resulting arrangement initially supported exponential growth, it eventually locked in both Consult's internal temporal structuring and client-consultant expectations, so extreme work hours persisted despite burnout, attrition, environmental pressure, and repeated change initiatives.
 
 **Theoretical Contribution**
 The paper contributes temporal uncoupling as an alternative to the dominant entrainment lens in organizational temporality research. Rather than treating organizations as time takers that adapt to external Zeitgebers, the authors theorize organizations as time makers that select which rhythms to synchronize with and which to desynchronize from.

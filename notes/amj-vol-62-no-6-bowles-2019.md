@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Bowles 2019 Reconceptualizing What and H
 text_path: "library/AMJ/vol-62-no-6/text/Bowles 2019 Reconceptualizing What and How Women Negotiate for Career Advancement.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-mixed"
 keywords: ["gender in career negotiations", "career advancement", "leadership claiming", "asking", "bending", "shaping"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "leadership claiming (Derue & Ashford, 2010)"
   methods_overview: "we conducted six studies"
   keywords_source: "role of gender in career negotiations"
+  hypotheses_source: "predicted that women would report more bending"
+  measures_overview: "extent the negotiation enhanced their leadership,"
+  findings_overview: "greater propensity for bending than male executives."
 ---
 
 # Reconceptualizing What and How Women Negotiate for Career Advancement
@@ -53,6 +58,10 @@ We propose a conceptual framework for expanding the scope of future research on 
 **Research Question**
 How can research on gender in career negotiations move beyond a pay-negotiation deficit account to explain what women negotiate for career advancement and how they negotiate role development, work–family conflicts, compensation, and leadership claims in organizational contexts?
 
+**Hypotheses / Propositions**
+- No formally numbered hypotheses are stated. Study 2 predicts that women will report more workload negotiations and bending, men will report more compensation negotiations, and partners in leadership roles will report more shaping.
+- The inductive studies develop propositions that women may use bending more often than men to cope with organizational lack of fit and that shaping functions as leadership claiming.
+
 **Mechanism Process**
 - Focal phenomenon: Gendered career negotiation as agency in organizational context.
 - Negotiation subjects: Role development, workload or work–family flexibility, and compensation or job offers.
@@ -61,6 +70,15 @@ How can research on gender in career negotiations move beyond a pay-negotiation 
 - Contextual conditions: Gender roles and stereotypes, organizational norms, policies, practices, and demographics shape the decision to negotiate, the choice of strategy, and negotiation outcomes.
 
 The process starts from broad career ambitions and specific role, pay, or workload goals. Asking involves routine negotiations in line with organizational norms; bending seeks individual exceptions when standard paths do not fit; shaping advances an individual proposal that would also change organizational practices or structures. Across the studies, bending helps explain how women navigate work–family conflicts and nontraditional career paths, while shaping is developed as a process of leadership claiming through multiparty support for organizational change.
+
+**Data & Measures**
+Study 1 interviewed 49 U.S. federal executives and coded their self-advocacy accounts by negotiation subject and asking, bending, or shaping strategy. Study 2 surveyed 156 U.S. professional-services partners; frequency items measured role, workload, and job-offer negotiations, and two-item scales measured asking, bending, and shaping, with factor analysis, Wilcoxon rank-sum tests, chi-square tests, and ordered logistic regression. Study 3 reanalyzed career-story interviews with 50 executive women and coded 64 negotiations. Study 4 interviewed 45 executive and nonexecutive women in the Middle East and North Africa and coded 35 negotiation examples. Study 5 surveyed 58 women executives from 17 countries, eliciting self-coded success and disappointment cases. Study 6 obtained 140 respondents (69 men, 71 women) from a survey sent to 527 recent U.S. professional-school graduates and measured negotiation subject, strategy, duration, counterparts, satisfaction, and perceived gains in leadership, authority, compensation, and work–life balance.
+
+**Key Findings**
+- Across Studies 1–5, role negotiations predominated. Studies 1 and 2 found that female executives reported more bending than male executives; in Study 2, this association remained positive after controlling for breadwinner status and workload-negotiation frequency.
+- Studies 3 and 4 showed bending helping women navigate work–family conflicts and nontraditional career paths, while shaping was associated with leadership claiming; in Study 4, shaping was the modal strategy among executives but exceptional among nonexecutives.
+- In Study 5, bending was the modal successful strategy (49%), whereas asking was the modal disappointment strategy (57%). Study 6 did not replicate the greater female propensity for bending among recent graduates, but women reported more disappointment cases than men.
+- In Study 6, successful role, compensation, and workload negotiations respectively produced greater leadership or authority, pay, and work–life-balance gains; successful shaping produced greater leadership gains than bending or asking.
 
 **Theoretical Contribution**
 The paper challenges the dominant account that women’s career-negotiation problem is mainly a lack of assertiveness in pay bargaining. It broadens the construct of career negotiation by integrating role, workload, and compensation negotiations and by proposing asking, bending, and shaping as distinct strategies with different career implications. It also positions negotiation as a micro-mechanism of gender inequality and leadership advancement that operates through individual agency embedded in organizational norms and contexts.

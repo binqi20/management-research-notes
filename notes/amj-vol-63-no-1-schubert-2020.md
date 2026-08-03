@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Schubert 2020 Product Innovation and Edu
 text_path: "library/AMJ/vol-63-no-1/text/Schubert 2020 Product Innovation and Educational Diversity in Top and Middle Management Teams.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["diversity in management teams", "firm innovation", "top management teams", "middle management teams", "educational diversity", "product innovations"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Building on the problem-based view of the firm"
   methods_overview: "ordered probit models with clustered standard errors"
   keywords_source: "diversity in management teams on firm innovation"
+  hypotheses_source: "TMT diversity increases the firm’s likelihood to decide on conducting innovation."
+  measures_overview: "The educational diversity of the TMT in firm i in year t."
+  findings_overview: "determines whether firms engage in innovation activities at all, while MMTs’ diversity"
 ---
 
 # Product Innovation and Educational Diversity in Top and Middle Management Teams
@@ -51,6 +56,13 @@ The effects of diversity in management teams on firm innovation have become an i
 **Research Question**
 The paper asks how educational diversity in top management teams and middle management teams differently affects firms' innovation engagement and product innovation outcomes. It specifically examines whether TMT diversity is tied to the decision to innovate, while MMT diversity is tied to realized innovation outcomes and market novelty.
 
+**Hypotheses / Propositions**
+H1: Educational diversity in TMTs has a positive effect on the firm's likelihood of engaging in innovation activities (the decision to innovate).
+
+H2: Educational diversity in MMTs has a positive effect on the firm's likelihood of introducing new products (the outcome side of the innovation process).
+
+H3: The effect of educational diversity in MMTs is stronger for new-to-market innovation than for new-to-firm innovation.
+
 **Mechanism Process**
 - IV(s): Educational diversity in TMTs and educational diversity in MMTs, measured primarily with Teachman's Entropy Index and checked with Blau-based alternatives.
 - DV(s): Innovation engagement, product innovation, new-to-firm innovation, and new-to-market innovation.
@@ -58,6 +70,12 @@ The paper asks how educational diversity in top management teams and middle mana
 - Moderators: Firm size is examined as a delimiting/moderating factor in robustness analysis.
 
 The mechanism is that TMTs and MMTs occupy different organizational roles in the innovation process. TMT educational diversity broadens the knowledge pools and cognitive frames used for strategic problem formulation, making firms more likely to engage in innovation activities. MMT educational diversity affects problem solving and implementation because middle managers allocate resources, select and manage innovation projects, and coordinate functions. Because educational diversity is expected to raise creativity, its outcome effect is strongest for new-to-market product innovation rather than imitative new-to-firm innovation.
+
+**Data & Measures**
+The authors merge five waves (2004, 2006, 2008, 2010, and 2012) of the Swedish Community Innovation Survey with LISA employer–employee records and registered firm-characteristics data. The innovation-engagement models use 486 firms and 1,873 observations; the product-innovation models use 414 firms and 1,233 observations. TMT and MMT educational diversity is calculated from nine education-field categories, using Teachman's Entropy Index in the reported main results and Blau-based measures in robustness checks. Innovation engagement is binary, indicating expenditure in at least one of five innovation activities; product innovation is ordered as no product innovation, new-to-firm innovation, or new-to-market innovation. The paper estimates probit models for engagement and ordered probit models for product-innovation outcomes, with clustered standard errors and sector and time controls. These observational panel analyses are associational; the paper separately reports endogeneity robustness checks.
+
+**Key Findings**
+H1 is supported: TMT educational diversity positively predicts innovation engagement (average marginal effect = 0.13, p < .01 in the full model), whereas MMT diversity is not significant for engagement. H2 is supported: MMT educational diversity positively predicts product innovation (b = 0.40, p < .01 in the full ordered-probit model), whereas TMT diversity is not significant for product-innovation outcomes. H3 is supported: MMT educational diversity increases new-to-market innovation (average marginal effect = 0.14, p < .01) but has no significant effect on new-to-firm innovation; TMT diversity has no significant effect on either outcome category.
 
 **Theoretical Contribution**
 The paper extends the informational variety perspective by showing that diversity effects depend on the organizational level and task responsibilities of the management team. It challenges TMT-centered upper echelons explanations by showing that some innovation effects attributed to top managers may actually stem from diversity in lower-level MMTs. It also conceptualizes innovation as a process with separable engagement and outcome stages.

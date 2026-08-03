@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Hehenberger 2019 The Assembly of a Field
 text_path: "library/AMJ/vol-62-no-6/text/Hehenberger 2019 The Assembly of a Field Ideology An Idea-Centric Perspective on Systemic Power in Impact Investing.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-qualitative"
 keywords: ["idea-centric perspective", "field ideology", "systemic power", "impact investing", "suppression", "inside-out research"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "institutional theory of organizations"
   methods_overview: "inside-out research methodology we adopt"
   keywords_source: "field ideology—a coherent"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Our coding system depicts opposing ideas found in the impact investing field of practice."
+  findings_overview: "suppression as a mechanism that gives rise to and perpetuates systemic power in fields,"
 ---
 
 # The Assembly of a Field Ideology: An Idea-Centric Perspective on Systemic Power in Impact Investing
@@ -53,6 +58,9 @@ We advance a novel idea-centric perspective to study power-laden aspects of inst
 **Research Question**
 The paper asks how some ideas become dominant and form part of what shapes thinking, reasoning, and acting in a field. It studies this question in the European impact investing field by examining idea-level contestation before dominant ideas consolidated into a widely shared field ideology.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Empirical context / sites: Impact investing in Europe, with EVPA, GECES, and GSG as interaction sites where field participants negotiated ideas.
 - Ideas in opposition: Dichotomies such as standardized versus customized, self-sufficiency versus dependency, scaling versus going native, measuring impact versus telling stories, and tool first versus need first.
@@ -62,6 +70,12 @@ The paper asks how some ideas become dominant and form part of what shapes think
 - Alternative paths: Customized, participatory, beneficiary-centered, ecosystem-nurturing, narrative, and need-first ideas persisted as paths not taken and possible futures.
 
 The process starts as ideas from philanthropy, finance, social economy, policy, and adjacent fields enter impact investing and are negotiated in repeated interactions. Dichotomy-based analysis makes latent conflict visible at the level of ideas, showing how some ideas become patterned into an emerging field ideology while others are abandoned, sidelined, or left unstructured. Suppression operates through devaluing alternative ideas, prioritizing tools and practices over social ends, and simplifying complex social problems into investable, measurable, scalable forms. These modes reinforce systemic power by restricting options and shaping what becomes valued and taken for granted in the field.
+
+**Data & Measures**
+The authors conducted inside-out qualitative research in the European impact investing field from 2006–2018, using EVPA, GECES, and GSG as primary interaction sites. The dataset comprised almost 800 hours of observations and more than 3,000 pages of public transcripts (official minutes, presentations, speeches, newsletters, policy briefs, and publications) and hidden transcripts (field notes, observations, emails, conference-call and interview transcripts, and internal strategy documents). Analysis proceeded in two steps: the researchers first coded recurrent opposing ideas as dichotomies and organized them under field ambition, investment focus, and decision-making anchor; they then reexamined the coded segments to identify covert, power-laden suppression modes, using differentiated insider–outsider roles, researcher comparison, and field-participant feedback to validate interpretations.
+
+**Key Findings**
+Dominant ideas assembled into a field ideology organized around standardized and big ambitions, top-down heroic leadership, self-sufficiency, scaling and picking winners, rational or head-based decision making, impact measurement, and tool-first approaches, while opposing ideas persisted as possible alternative futures. Suppression explained how dominance emerged through three reinforcing modes: devaluing repositioned what merited attention, prioritizing means over ends reordered priorities around tools and practices, and simplifying refocused attention by determining what was in or out. Together, these interlinked modes further suppressed dissenting and alternative ideas and helped the field ideology take shape, reinforce itself, and shape practices.
 
 **Theoretical Contribution**
 The paper contributes an idea-centric perspective for studying institutional life in fields and introduces field ideology as a coherent system of ideas and beliefs that orders a field. It specifies suppression as a mechanism through which systemic power arises and is perpetuated in field formation. It also shows how attention to sidelined ideas can reveal alternative pasts and possible futures, thereby linking institutional durability and transformation.

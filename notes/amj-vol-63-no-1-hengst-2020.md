@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Hengst 2020 Toward a Process Theory of M
 text_path: "library/AMJ/vol-63-no-1/text/Hengst 2020 Toward a Process Theory of Making Sustainability Strategies Legitimate in Action.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-qualitative"
 keywords: ["sustainability strategy", "mainstream competitive strategy", "legitimacy making", "decoupling", "integration", "co-enactment", "action cycles", "qualitative case study"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "strategy implementation as a process of legitimation"
   methods_overview: "a longitudinal qualitative case study"
   keywords_source: "sustainability strategy alongside an existing mainstream competitive strategy"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "ATLAS.ti qualitative data analysis software"
+  findings_overview: "working through these tensions on specific tasks enables actors to legitimate the sustainability strategy in action"
 ---
 
 # Toward a Process Theory of Making Sustainability Strategies Legitimate in Action
@@ -53,6 +58,9 @@ We draw on a three-year qualitative study of the processual dynamics of implemen
 **Research Question**
 How do organizational actors implement a sustainability strategy alongside an existing mainstream competitive strategy, and what does this imply for the legitimate coexistence of the two strategies? The paper studies how actors work through action-level tensions that arise even when the sustainability strategy is legitimate at the organizational level.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key tensions: Tensions between product features, tensions between organizational values, and tensions between strategic goals.
 - Process / action cycles: Compromising-reinterpreting or splitting; sacrificing-valorizing; procedural embracing-synergizing.
@@ -60,6 +68,12 @@ How do organizational actors implement a sustainability strategy alongside an ex
 - Boundary conditions: Strong organizational and actor-level moral legitimacy of the new strategy, and tasks where actors must enact it alongside an already legitimate existing strategy.
 
 The process starts with a sustainability strategy that is legitimate as an organizational purpose but difficult to enact within mainstream competitive tasks. Product-feature tensions trigger mutual adjustment through compromise, reinterpretation, or splitting; value tensions trigger prioritization through sacrifice and valorization; and strategic-goal tensions trigger combination through procedural embracing and synergizing. Across repeated tasks, these action cycles legitimate the sustainability strategy in action, making co-enactment possible and cumulatively reinforcing its organizational-level integration with the mainstream strategy.
+
+**Data & Measures**
+This longitudinal qualitative case study followed TechPro from 2012 to 2015, with follow-up visits in 2016. The corpus comprised 80 days of field observation, 90 open-ended interviews with 83 informants across organizational sites, functions, and hierarchies, and 80 firm documents. The authors organized first-order action and strategy codes in ATLAS.ti and Excel, then coded three types of tension and recurrent action cycles through iterative qualitative process analysis and checked aggregated interpretations with TechPro managers.
+
+**Key Findings**
+Tensions between product features triggered compromising-reinterpreting or splitting cycles that enabled mutual adjustment between the two strategies. Tensions between organizational values triggered sacrificing-valorizing cycles that enabled task-specific prioritization of the sustainability strategy without discrediting the mainstream strategy more broadly. Tensions between strategic goals triggered procedural embracing-synergizing cycles that enabled the strategies to be combined in action. Across tasks, these cycles legitimated the sustainability strategy in action, enabled co-enactment, and cumulatively reinforced its organizational-level legitimacy and integration with the mainstream strategy.
 
 **Theoretical Contribution**
 The paper extends the integrative view of sustainability by theorizing co-enactment of dual strategies as a process that can avert decoupling without eliminating tensions. It contributes an action-level account of how organizations respond to sustainability tensions, showing that repeated task-level action cycles can recursively reinforce organizational-level legitimacy. It also extends strategy implementation as a legitimation process by showing that legitimacy is constructed relationally between multiple strategies rather than only gained or lost by a single strategy.

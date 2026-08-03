@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Tihanyi 2020 Academy of Management Journ
 text_path: "library/AMJ/vol-63-no-1/text/Tihanyi 2020 Academy of Management Journal in 2020 and Beyond.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "editorial"
 keywords: ["editorial team", "journal mission", "methodological transparency", "societal relevance", "global and inclusive journal", "paper development workshops"]
@@ -41,6 +43,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how AMJ's 22nd editorial team will serve the journal from 2020 through 2022. It focuses on the team's priorities for maintaining AMJ's mission while increasing relevance, credibility, global reach, and inclusiveness.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial continuity: The new team frames its work as continuing AMJ's mission to publish empirical research that tests, extends, or builds management theory and contributes to practice.
 - Team structure: The editorial describes a larger and more diverse editorial team, including deputy editors, associate editors across micro, macro, and qualitative areas, and an expanded editorial review board.
@@ -49,6 +54,12 @@ The editorial asks how AMJ's 22nd editorial team will serve the journal from 202
 - Review process: The editorial emphasizes timely first decisions, constructive reviews, reviewer-editor matching, plagiarism and overlap screening, and continued feedback about the reviewing process.
 
 The process logic is editorial rather than causal: AMJ's standing is presented as depending on a capable and diverse editorial infrastructure, rigorous and transparent empirical standards, and broader engagement with authors and scholarly communities across countries and methods. The proposed initiatives aim to make the journal more relevant to societal conversations while preserving high theoretical and empirical standards.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new theory. Its contribution is to articulate how AMJ's incoming editorial team interprets the journal's mission: publish original empirical research with strong theoretical and practical contributions while strengthening societal relevance, methodological credibility, and global inclusiveness.

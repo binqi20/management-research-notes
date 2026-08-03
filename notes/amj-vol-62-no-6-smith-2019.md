@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Smith 2019 Making the Invisible Visible 
 text_path: "library/AMJ/vol-62-no-6/text/Smith 2019 Making the Invisible Visible Paradoxical Effects of Intersectional Invisibility on the Career Experiences of Executive Black Women.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-qualitative"
 keywords: ["Black women", "intersectional invisibility", "outsider within", "credible visibility", "agentic visibility tactics"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "draw from the intersectional invisibility framework"
   methods_overview: "We employed a grounded theory approach"
   keywords_source: "intersectional invisibility plays in Black women’s perceptions and experiences"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "The vast majority (112 of 118) of the interviews"
+  findings_overview: "associated with two forms of intersectional invisibility: benign and hostile."
 ---
 
 # Making the Invisible Visible: Paradoxical Effects of Intersectional Invisibility on the Career Experiences of Executive Black Women
@@ -53,19 +58,28 @@ The unique and complex experiences of and challenges for Black women, which are 
 **Research Question**
 How do executive Black women experience and manage intersectional invisibility as they navigate senior-level careers? The paper asks how benign and hostile forms of intersectional invisibility shape these women's credible visibility and career trajectories.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Contexts: Intersectional dual stigma, professional investment and support, and personal support and self-assurance produce executive Black women's outsider within status.
 - Paradox: Benign intersectional invisibility creates a license for authenticity, while hostile intersectional invisibility creates a need to reduce perceived threat.
 - Agentic visibility tactics: Executive Black women lean into risk, use bold autonomy, strategically deploy invisibility, and consciously craft cross-race and cross-gender relationships.
-- Career trajectories: These tactics help create credible visibility, but trajectories still vary across credible ascent, reinvention, plateau, and hypervisibility.
+- Career trajectories: These tactics help create credible visibility, but trajectories still vary across credible ascent, reinvention, and plateau; hypervisibility contributes to some plateaus.
 
 The process is not a simple disadvantage story. The authors argue that the same intersectional position can both loosen stereotypical constraints and intensify scrutiny, so executive Black women must continually balance authenticity, threat reduction, risk-taking, relationship work, and strategic visibility.
+
+**Data & Measures**
+The study used a grounded-theory qualitative design based on two waves of semi-structured interviews, conducted approximately in 2007 and 2014, with the 59 executive Black women who completed both waves. Of 118 interviews, 112 were audio recorded and professionally transcribed, yielding approximately 3,300 pages; the remaining six were documented through detailed interviewer notes. Three authors developed first-order codes iteratively, consolidated them into second-order themes and aggregate theoretical dimensions, coded each participant’s T1 and T2 interviews sequentially, and used cross-case analysis to compare job changes and career trajectories.
+
+**Key Findings**
+The analysis showed that the women shared an outsider-within status and simultaneously experienced benign and hostile intersectional invisibility: benign invisibility licensed authenticity, whereas hostile invisibility created a need to reduce threat. They navigated this paradox through four nonexclusive agentic visibility tactics—leaning into risk, bold autonomy, strategic deployment of invisibility, and conscious relationship crafting—to gain credible visibility. Across the seven-year interval, 70% remained on an upward trajectory through retirement, 25% reinvented themselves, and 5% plateaued; hypervisibility contributed to some plateaus.
 
 **Theoretical Contribution**
 The paper advances a theory of the paradoxical effects of intersectional invisibility by showing that it operates through both benign and hostile dimensions rather than being wholly positive or wholly negative. It also extends social identity management research by identifying agentic visibility tactics through which intersectionally invisible actors seek credible visibility while managing the tension between fitting in and standing out.
 
 **Practical Implication**
-The paper cautions against one-size-fits-all advice for advancing women because executive Black women's career experiences are shaped by the intersection of race, gender, and executive status. It suggests that sponsors, mentors, and organizations should recognize the longer career runways and distinct visibility burdens facing Black women rather than assuming that generic confidence, risk-taking, or relationship-building advice is sufficient.
+The paper cautions against one-size-fits-all advice for advancing women because executive Black women's career experiences are shaped by the intersection of race, gender, and executive status. It suggests that sponsors, mentors, and organizations should recognize the longer career runways and distinct visibility burdens facing Black women: generic confidence and risk-taking advice may not fit, while tailored developmental relationships and sponsorship are critical.
 
 **Limitations**
 The authors note that the study focuses only on senior-level executive Black women, so the findings may not generalize to Black women at lower organizational levels or to other intersectional groups. They also acknowledge limitations from retrospective self-reports, reliance on the women's own perspectives rather than others' perceptions, two waves of data, and the inability to make definitive claims about the causal effects of specific tactics on career outcomes.

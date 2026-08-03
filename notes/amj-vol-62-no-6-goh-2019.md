@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Goh 2019 From Actions to Paths to Patter
 text_path: "library/AMJ/vol-62-no-6/text/Goh 2019 From Actions to Paths to Patterning Toward a Dynamic Theory of Patterning in Routines.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-mixed"
 keywords: ["organizational routines", "paths", "patterns of action", "narrative network", "patterning", "routine dynamics"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Strong process theory offers a radical, process-centric"
   methods_overview: "The scrum sheets were used to create a database"
   keywords_source: "dynamic patterning of actions"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "basic properties that define any network are (1) the"
+  findings_overview: "found that action patterns change dramatically over time based on the"
 ---
 
 # From Actions to Paths to Patterning: Toward a Dynamic Theory of Patterning in Routines
@@ -51,6 +56,9 @@ This paper demonstrates a new way of seeing and theorizing about the dynamics of
 **Research Question**
 The paper asks what drives a pattern of action to become more or less varied over time. It studies how paths, understood as time-ordered sequences of actions or events, link situated actions to broader patterns in organizational routines.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs: Paths, situated actions, patterns of action, narrative networks, routine dynamics, and patterning.
 - Empirical setting: ProjectBQ, a video game development project team at GameSG, studied through scrum sheets, observations, interviews, and archival materials.
@@ -59,6 +67,12 @@ The paper asks what drives a pattern of action to become more or less varied ove
 - Analytic logic: Narrative networks made sequences of actions visible as paths, and changes in nodes, handoffs, and estimated paths allowed the authors to theorize how routines become more or less varied.
 
 In the authors' account, each situated action can enact, reinforce, add, or dissolve paths in a narrative network. Performance demands and revisions can increase the number of actions and handoffs, while repetition, cut-backs, deadlines, and declining motivation can reduce path variety. The paper therefore treats patterning itself as a process through which routine dynamics unfold, rather than only as an outcome of other motors of change.
+
+**Data & Measures**
+The longitudinal field study combined 122 daily scrum-sheet versions, observations, interviews, and archival materials from ProjectBQ. The authors converted the final 2,428 scrum-sheet tasks into 159 coded sequences using six task categories and organizational roles, bracketed them into 11 three-week sprints, and used ThreadNet to construct a narrative network for each sprint. Distinct role-task actions were nodes, adjacent coded actions were handoff edges, and the authors estimated paths from the difference between edge and node counts and expressed complexity as the base-10 logarithm of estimated paths. A chronologically constructed project narrative and causal loop diagrams integrated the network metrics with interview, observation, and archival evidence.
+
+**Key Findings**
+The number of possible paths changed dramatically across four phases. Using the values in Table 3, complexity rose from 0.16 to 4.64 across Sprints 1–4, fell to 1.52 in Sprint 5, rose from 3.92 to 5.76 across Sprints 6–8, and declined from 3.12 to 1.74 across Sprints 9–11. These changes reflected shifts in distinct actions and especially handoffs; for example, Sprints 6–8 added more than 500,000 possible paths while the number of distinct actions remained at 21. The qualitative analysis identified six mechanisms shaping path addition or removal: reinforcement, performance, revision, delay, cut-back, and motivation loops.
 
 **Theoretical Contribution**
 The paper contributes to routine dynamics by making the link between specific actions, paths, and patterns of action empirically visible. It extends strong process theory by operationalizing paths in narrative networks and showing how action patterns change over time. It also argues that patterning can be understood as a motor of routine dynamics alongside, and sometimes more naturally than, lifecycle, teleological, dialectical, or evolutionary explanations.

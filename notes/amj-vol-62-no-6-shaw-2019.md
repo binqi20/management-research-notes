@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Shaw 2019 From the Editors—Reflections
 text_path: "library/AMJ/vol-62-no-6/text/Shaw 2019 From the Editors—Reflections on Three Years at AMJ New Ways of Seeing and Beyond.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "editorial"
 keywords: ["New Ways of Seeing", "Special Research Forum", "cross-disciplinary collaborations", "cutting-edge research designs", "global outreach"]
@@ -51,6 +53,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial theme: The New Ways of Seeing theme asked management researchers to reconsider theoretical bases, assumptions, and cross-disciplinary collaborations.
 - Special Research Forum: The call attracted around 150 submissions; 13 appear in the issue and others were still in process.
@@ -59,6 +64,12 @@ Not reported in paper
 - Transition: The editorial closes with thanks to the outgoing team and passes the journal to the 22nd editorial team.
 
 The process logic is editorial and retrospective rather than causal. Shaw uses the end of the 21st editorial team's term to connect the New Ways of Seeing theme with a special issue, manuscript-review operations, international outreach, empirical-quality initiatives, and the transition to the next editorial team.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new theory. Its contribution is to document and frame the 21st AMJ editorial team's New Ways of Seeing theme, emphasizing theoretical reconsideration, cross-disciplinary collaboration, and novel research designs as aspirations for AMJ scholarship.

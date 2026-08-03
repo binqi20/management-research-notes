@@ -140,22 +140,23 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-08-02):
+**Current main-branch audit state (2026-08-03):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 18 upgraded 24 notes (AMJ vol-63-no-3 + vol-63-no-2, all v2
-augmentations) to v3. The final batch audit is **215/216 prose-field verdicts
-SUPPORTED, with one faithful `PARTIAL` accepted**, after nine evidence-based
-edit operations across six notes in two repair rounds and three audit rounds.
-All 24 augmentation deltas passed the validator and initial diff-guard without
-a gate failure. Beckman's Future Research is the sole accepted `PARTIAL`: the
-fitted audit input cuts at an interleaved `REFERENCES` heading, but the retained
-raw text at lines 1248–1260 directly supports the gender-research rationale.
-All 72 verdicts on the three new v3 fields were `SUPPORTED`, so the
-repeated-new-field stop rule was not triggered. This is the third consecutive
-backfill batch run end-to-end on `gpt-5.6-sol` for both augmentation and audit;
+batch 19 upgraded 27 notes (AMJ vol-63-no-1 + vol-62-no-6, all v2
+augmentations) to v3. The final batch audit is **242/243 prose-field verdicts
+SUPPORTED, with one faithful `PARTIAL` accepted**, after four evidence-based
+legacy-field repairs across three notes in one repair round and two audit
+rounds. All 27 augmentation deltas passed the validator and initial diff-guard
+without a gate failure. Lee's founder-succession Limitations is the sole
+accepted `PARTIAL`: the fitted audit input cuts at an interleaved `REFERENCES`
+heading, but the retained raw text at lines 888–925 directly supports the
+limitations. All 81 verdicts on the three new v3 fields were `SUPPORTED`, so
+the repeated-new-field stop rule was not triggered. This is the fourth
+consecutive backfill batch run end-to-end on `gpt-5.6-sol` for both augmentation
+and audit;
 the recurring workshop cross-family spot-audit applies, with the next
-calibration due around batch 20. The corpus contains 61 legacy v1
-notes, 661 v2 notes, and 445 v3 notes with evidence anchors; new notes are
+calibration running at the batch-20 review. The corpus contains 61 legacy v1
+notes, 634 v2 notes, and 472 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -178,7 +179,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-08-02.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-08-03.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 

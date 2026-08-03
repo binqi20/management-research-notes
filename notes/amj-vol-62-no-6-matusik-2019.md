@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Matusik 2019 Dynamic Systems Theory and 
 text_path: "library/AMJ/vol-62-no-6/text/Matusik 2019 Dynamic Systems Theory and Dual Change Score Models Seeing Teams through the Lens of Developmental Psychology.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["team development", "dynamic systems theory", "dual change score models", "multiteam systems"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Dynamic Systems Theory"
   methods_overview: "dual change score models"
   keywords_source: "Empirical research examining team development"
+  hypotheses_source: "linear, non-past-dependent (nondynamic) change in"
+  measures_overview: "were aggregated to the team-level"
+  findings_overview: "provide some support for Hypothesis 3"
 ---
 
 # Dynamic Systems Theory and Dual Change Score Models: Seeing Teams through the Lens of Developmental Psychology
@@ -53,6 +58,13 @@ Empirical research examining team development has long lagged behind purely conc
 **Research Question**
 The paper asks how team properties change when formerly standalone teams are restructured into interdependent multiteam systems. It also asks whether those changes are linear and non-past-dependent or nonlinear and past-dependent, depending on whether the team property is informed by observable behavioral evidence.
 
+**Hypotheses / Propositions**
+H1. Restructuring standalone teams into multiteam systems will adversely affect team goal commitment, backup behavior, relationship conflict, psychological empowerment, team identification, and cohesiveness.
+
+H2. The restructuring will produce linear, non-past-dependent (nondynamic) change in properties informed by observable behavioral evidence: team goal commitment, backup behavior, and relationship conflict.
+
+H3. The restructuring will produce nonlinear, past-dependent (dynamic) change in properties not informed by observable behavioral evidence: psychological empowerment, team identification, and cohesiveness.
+
 **Mechanism Process**
 - IV(s): Restructuring from standalone teams to component teams embedded in multiteam systems.
 - DV(s): Team goal commitment, backup behavior, relationship conflict, psychological empowerment, team identification, and cohesiveness.
@@ -60,6 +72,12 @@ The paper asks how team properties change when formerly standalone teams are res
 - Dynamic property terms: Observability of the evidence associated with the team property; prior levels of the same team property in the dual change score models.
 
 Drawing on event system theory, structural adaptation theory, and dynamic systems theory, the paper argues that moving into a multiteam system disrupts formerly independent teams by imposing interdependence and reducing autonomy. Observable properties such as goal commitment, backup behavior, and relationship conflict should change gradually and linearly because team members can monitor and conform to visible behaviors. Less observable motivational, cognitive, and affective properties should be more past-dependent and reactive because members compare current internal states with prior states. The results support linear change for the observable properties, dual-change-score dynamics for psychological empowerment and team identification, and a nonmonotonic pattern for cohesion that did not fit the three main model classes.
+
+**Data & Measures**
+The four-wave study followed undergraduate students over one school year as their four- or five-person teams moved from standalone work in the leadership development exercise simulation at Wave 1 to component-team roles in three-team multiteam systems at Waves 2–4. Two of the original 141 teams were dropped for missing data, leaving 139 teams nested in 47 multiteam systems. Survey responses were aggregated to the team level. Team goal commitment used an adapted nine-item Hollenbeck et al. measure; backup behavior used an adapted Dalal et al. measure; relationship conflict used an adapted Jehn measure; psychological empowerment used three adapted self-determination items from Spreitzer; team identification used four adapted importance items from Roccas et al.; and cohesion used three Podsakoff et al. items. The authors compared intercept-only, linear-change, and dual change score models in Mplus and accounted for team nesting by clustering on multiteam system.
+
+**Key Findings**
+H1 received support overall: restructuring was associated with adverse changes across the six team properties. H2 was fully supported: team goal commitment decreased by .07 and backup behavior by .06 per measurement interval, while relationship conflict increased by .07; linear models were retained for all three observable properties. H3 received partial support. Dual change score models fit psychological empowerment and team identification, which fell most sharply during the Wave 1-to-Wave 2 transition and then declined more gradually; teams starting higher on either property experienced larger initial declines. Cohesion changed nonmonotonically—dropping, rising, then dropping—and did not fit the three initial model classes, although exploratory appendix models fit a quadratic dual change score specification.
 
 **Theoretical Contribution**
 The paper extends dynamic systems theory from developmental psychology to team development and integrates it with event system theory and structural adaptation theory. Its central contribution is a within-construct account of team dynamics in which a property is dynamic only when its prior level predicts subsequent change in that same property. It also argues that calling all team properties dynamic is too broad because observable behavioral properties may change linearly without past-dependent proportional change.

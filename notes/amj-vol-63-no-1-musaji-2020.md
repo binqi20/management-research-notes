@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Musaji 2020 How Long Does It Take to Get
 text_path: "library/AMJ/vol-63-no-1/text/Musaji 2020 How Long Does It Take to Get to the Learning Curve.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["learning curve", "organizational learning", "strategic learning", "strategic decision making", "franchisee selection", "pace", "performance variance"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "organizational learning theory in general"
   methods_overview: "used multilevel regression analysis"
   keywords_source: "strategic decision making"
+  hypotheses_source: "Hypothesis 1. The relationship between accumulated"
+  measures_overview: "we measure Accumulated Experience as"
+  findings_overview: "Hypothesis 1 and Hypothesis 2 are supported."
 ---
 
 # How Long Does It Take to Get to the Learning Curve?
@@ -52,6 +57,12 @@ The learning curve describes learning from experience, even in its earliest phas
 **Research Question**
 How much accumulated experience is needed before strategic decision outcomes trend reliably positive, and how do the pace and variance of those experiences shape the journey to the learning curve? The paper examines these questions in franchisee selection decisions made by a global remittances firm across remittance markets.
 
+**Hypotheses / Propositions**
+- H1: The relationship between accumulated experience and decision outcomes is U-shaped, with performance negative at low experience levels and positive at high experience levels.
+- H2: Pace negatively moderates that relationship, such that the number of experiences required to reach the learning curve rises when decision pace is high.
+- H3a: Variance moderates that relationship, such that high-variance groups require fewer experiences to reach the learning curve than low-variance groups.
+- H3b: Variance moderates that relationship, such that high-variance groups incur a lower cost of reaching the learning curve than low-variance groups.
+
 **Mechanism Process**
 - IV(s): Accumulated experience in franchisee selection within a remittance market; decision pace; performance variance in prior decisions.
 - DV(s): Franchisee long-term performance, measured as Daily Transaction Volume on February 3, 2015.
@@ -59,6 +70,12 @@ How much accumulated experience is needed before strategic decision outcomes tre
 - Moderators: Pace of decision making and variance in prior franchisee revenues.
 
 The paper argues that strategic learning differs from continuous learning-by-doing because early strategic decisions are episodic, ambiguous, and costly to reverse. When accumulated experience is low, spurious success and failure, weak causal understanding, and limited feedback can initially make the experience-performance relationship negative. As more decisions accumulate, decision makers gain enough information to identify better franchisees and markets, producing a U-shaped relationship that eventually resembles a traditional learning curve. Slower pace gives the organization more time to process feedback and lowers the number and cost of decisions needed to reach the positive portion of the curve, while higher variance improves information content and lowers cost without materially reducing the required number of decisions.
+
+**Data & Measures**
+The screened sample contains 3,620 franchisee-selection decisions in 165 home-host remittance markets from 2001 to 2015. Long-term franchisee performance is Daily Transaction Volume on February 3, 2015. Accumulated Experience is the number of franchises previously awarded in the focal origin-host-country group; Pace is the moving average of days between the three prior decisions; and Performance Variance is computed from Daily Transaction Volume for those three prior decisions. The authors estimate multilevel regressions by maximum likelihood with random effects, modeling home- and host-country levels.
+
+**Key Findings**
+H1 was supported: the experience-performance relationship was U-shaped, with a turning point at 18 decisions. H2 was supported: slower pace shifted the curve upward and left, with turning points of 11 decisions under slow pace and 30 under fast pace, while also reducing the cost of reaching the learning curve. H3a was not supported because high variance did not materially reduce the required experience (17 versus 21 decisions). H3b was supported: high variance reduced the cost of reaching the curve by more than 500 euros per day.
 
 **Theoretical Contribution**
 The paper contributes to organizational learning and strategic learning theory by showing that the positive learning curve may not begin immediately in strategic decision contexts. It identifies an initial negative phase of learning and estimates the experience threshold needed before performance trends positive. It also extends learning-curve theory by showing that attributes of the learning experience matter differently: slower decision pace shortens the journey and reduces its cost, while higher outcome variance reduces cost without materially hastening the journey.

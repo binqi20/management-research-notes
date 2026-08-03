@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Shafi 2020 Investment Ties Gone Awry.pdf
 text_path: "library/AMJ/vol-63-no-1/text/Shafi 2020 Investment Ties Gone Awry.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["VC withdrawal", "venture valuation", "follow-on round of financing", "adverse selection", "signaling theory", "new joining investors", "status", "reputation"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "signaling theory to the strategic question"
   methods_overview: "Heckman (1979) treatment effects model"
   keywords_source: "follow-on round of financing"
+  hypotheses_source: "Hypothesis 4. New joining VCs possessing high status"
+  measures_overview: "Valuation. This variable indicated the pre-money"
+  findings_overview: "negative effect on the Valuation (b 5 –0.418, p , .05)"
 ---
 
 # Investment Ties Gone Awry
@@ -52,6 +57,13 @@ Forming early relationships increases entrepreneurial ventures' chances of survi
 **Research Question**
 What are the financial and partner-selection costs to entrepreneurial ventures when an existing venture capitalist does not repeat its investment tie in a follow-on financing round? The paper asks whether VC withdrawal lowers venture valuation by creating adverse-selection perceptions and deterring new, high-status, and high-reputation investors from joining the syndicate.
 
+**Hypotheses / Propositions**
+H1: Withdrawal of VC investment ties decreases venture valuation in the follow-on financing round.
+H2: The negative relationship between VC withdrawal and follow-on valuation is amplified for early-stage ventures relative to late-stage ventures.
+H3: New joining VCs partially and positively mediate the negative relationship between VC withdrawal and follow-on valuation: withdrawal reduces the likelihood that new VCs join, which lowers valuation.
+H4: New joining VCs with high status partially and positively mediate this negative relationship: withdrawal reduces their likelihood of joining, which lowers valuation.
+H5: New joining VCs with high reputation partially and positively mediate this negative relationship: withdrawal reduces their likelihood of joining, which lowers valuation.
+
 **Mechanism Process**
 - IV(s): VC withdrawal, defined as at least one existing independent VC not participating in the follow-on financing round.
 - DV(s): Venture valuation in the second financing round, with round size used as an alternative proxy.
@@ -59,6 +71,12 @@ What are the financial and partner-selection costs to entrepreneurial ventures w
 - Moderators: Early-stage venture development amplifies the negative relationship between VC withdrawal and valuation.
 
 The mechanism is that withdrawal by an insider VC can be read by prospective investors as negative private information or as a signal of adverse-selection risk, even when the withdrawal is unrelated to underlying venture quality. Because new investors cannot fully observe the withdrawing VC's private information or motives, they may treat the venture as riskier and exclude it from consideration. This reduces the chance of attracting new investors, especially high-status and high-reputation VCs, which weakens the venture's bargaining position and depresses valuation.
+
+**Data & Measures**
+The authors used SDC Platinum data, accessed through Thomson ONE, on U.S. VC financing rounds from 1980 to 2014. The final sample contains 2,181 ventures; the valuation analysis uses the 535 ventures with complete valuation data. The primary DV is the logged pre-money valuation in the second financing round, measured in millions of 2012 U.S. dollars; logged round size is the alternative proxy. VC withdrawal equals one when at least one existing independent VC does not participate in the follow-on round. Early stage is a binary moderator distinguishing seed/early-stage from expansion/late-stage ventures. The mediators are an outside-round indicator for whether a new VC joins, the maximum eigenvector centrality of joining VCs as status, and the maximum prior-round investment experience and IPO experience of joining VCs as reputation measures. The primary analysis uses a Heckman treatment-effects model, with other-state deal growth and distance as exclusion restrictions, and the mediation tests adapt the Baron–Kenny procedure to that model with bootstrap tests.
+
+**Key Findings**
+H1 was supported: VC withdrawal reduced valuation (b = –0.418, p < .05), an estimated 34.1% decline, and reduced round size in the larger sample (b = –0.956, p < .01), an estimated 61.6% decline. H2 was supported: the withdrawal-by-early-stage interaction was negative (b = –0.287, p < .10), and split-sample estimates were larger for early-stage ventures (b = –1.106, p < .10) than for late-stage ventures (b = –0.230, n.s.). H3–H5 were supported: withdrawal negatively predicted an outside round (b = –0.230), joining-VC centrality (b = –0.024), general experience (b = –1.343), and IPO experience (b = –0.684), all p < .05; each mediator was positively related to valuation, and including it reduced the absolute withdrawal coefficient.
 
 **Theoretical Contribution**
 The paper extends research on interorganizational relationship discontinuation by shifting attention from why ties dissolve to the performance consequences for entrepreneurial ventures after investment ties are not repeated. It contributes to signaling theory by showing that signals affect not only valuation directly but also the quality of exchange partners a venture can attract. It also connects partner selection and entrepreneurial resource mobilization by showing how disrupted preexisting social ties impede search, access, and transfer of financial resources.

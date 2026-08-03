@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Grijalva 2020 Examining the “I” in T
 text_path: "library/AMJ/vol-63-no-1/text/Grijalva 2020 Examining the “I” in Team A Longitudinal Investigation of the Influence of Team Narcissism Composition on Team Outcomes in the NBA.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["narcissism", "team narcissism composition", "team coordination", "team performance", "team familiarity", "social exchange theory", "agency model of narcissism", "National Basketball Association"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "we draw on social exchange theory"
   methods_overview: "game-level longitudinal data from National Basketball Association teams"
   keywords_source: "team narcissism composition affects team coordination and performance"
+  hypotheses_source: "Hypothesis 1. The mean level of narcissism in teams"
+  measures_overview: "used a count of a team’s assists in each game"
+  findings_overview: "had poorer coordination and in turn performance"
 ---
 
 # Examining the “I” in Team: A Longitudinal Investigation of the Influence of Team Narcissism Composition on Team Outcomes in the NBA
@@ -53,6 +58,14 @@ Previous research has shown that narcissism is unrelated to job performance, yet
 **Research Question**
 The paper asks whether the composition of narcissism within teams undermines coordination and, through coordination, team performance. It further asks whether these effects differ across mean, maximum, and core-role operationalizations of team narcissism and whether team familiarity amplifies the effects over time.
 
+**Hypotheses / Propositions**
+H1: The mean level of narcissism in teams is negatively related to team coordination.
+H2: The maximum level of narcissism in teams is negatively related to team coordination.
+H3: Teams with higher-narcissism members in core roles coordinate more poorly than teams with lower-narcissism members in core roles.
+H4: Team familiarity strengthens the negative relationship of (a) mean, (b) maximum, and (c) core-role narcissism with team coordination.
+H5: Coordination mediates the effect of team-level narcissism on team performance for (a) mean, (b) maximum, and (c) core-role narcissism.
+H6: Coordination mediates the effect of the team-level narcissism-by-familiarity interaction on team performance for (a) mean, (b) maximum, and (c) core-role narcissism.
+
 **Mechanism Process**
 - IV(s): Team-level narcissism composition, operationalized as team mean narcissism, team maximum narcissism, and core role narcissism.
 - DV(s): Team coordination measured as assists; team performance measured as winning probability and victory margin.
@@ -60,6 +73,16 @@ The paper asks whether the composition of narcissism within teams undermines coo
 - Moderators: Team familiarity moderates the narcissism-coordination relationship for mean and core role narcissism; the hypothesized maximum narcissism interaction is not supported.
 
 The mechanism combines the agency model of narcissism with social exchange theory. Because narcissists are high in agency and low in communion, their self-interested behavior is expected to trigger reciprocal selfishness and weaken the exchange relationships needed for coordination. In high-familiarity teams, lower-narcissism teams gain coordination as members learn to work together, whereas higher-narcissism teams fail to capture these normative coordination gains.
+
+**Data & Measures**
+The main analysis used team-level data from every game in the 2013–2014 NBA regular season: 2,460 team-game performance episodes across 30 teams. The hypothesis tests used 2,430 observations after excluding each team’s first game because current-year opponent-quality measures were unavailable until after that game. Team performance was measured as game-level win/loss and victory margin; coordination as the count of team assists; and current-season familiarity as game number from 1 through 82.
+
+Player narcissism combined the percentage of sampled tweets coded as narcissistic with trained coders’ profile-picture ratings; the standardized indicators were summed, then aggregated game by game as minutes-weighted team mean, maximum, and point-guard core-role narcissism. A separate social-media-recruited validation study obtained complete information from 104 respondents and compared the composite with the 40-item Narcissistic Personality Inventory. The authors estimated generalized estimating equations in SPSS 22 with robust standard errors and tested indirect effects using MCMED Monte Carlo simulations with 10,000 samples.
+
+**Key Findings**
+H1–H3 were supported: mean narcissism (b = −.07, p < .01), maximum narcissism (b = −.09, p < .01), and core-role narcissism (b = −.04, p < .05) were negatively related to coordination. H4a and H4c were supported for the mean-narcissism × familiarity (b = −.06, p < .01) and core-role-narcissism × familiarity interactions (b = −.07, p < .01); H4b was not supported because the maximum-narcissism × familiarity interaction was nonsignificant (b = −.02).
+
+H5a–c were supported: mean, maximum, and core-role narcissism had significant negative indirect effects through coordination on both victory margin and winning probability. H6a and H6c were supported for the corresponding mean- and core-role-narcissism × familiarity indirect effects; H6b was not supported because the maximum-narcissism interaction did not predict coordination. Contrary to the initially expected deterioration, higher mean- and core-role-narcissism teams maintained similar coordination over time while lower-narcissism teams improved as familiarity increased.
 
 **Theoretical Contribution**
 The article shifts narcissism research from individual job performance to team-level outcomes, showing that narcissism can matter for organizational performance through interdependent team processes even when individual-level performance relationships are weak. It also clarifies team personality composition by comparing mean, maximum, and core-role narcissism rather than assuming one aggregation approach.

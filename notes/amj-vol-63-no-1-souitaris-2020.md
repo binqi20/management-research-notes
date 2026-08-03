@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Souitaris 2020 Should I Stay or Should I
 text_path: "library/AMJ/vol-63-no-1/text/Souitaris 2020 Should I Stay or Should I Go Founder Power and Exit via Initial Public Offering.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-mixed"
 keywords: ["founder exit", "initial public offerings", "founder power", "frustration", "full exit", "partial exit"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "power theory to develop and test a model of founder exit"
   methods_overview: "binary and multinomial regression"
   keywords_source: "Founders can voluntarily exit their ventures via initial public offerings (IPOs)."
+  hypotheses_source: "Hypothesis 1. The lower a founder’s power at IPO,"
+  measures_overview: "We operationalize a full exit as when a"
+  findings_overview: "support for the model—a negative relationship between founder power and full exit."
 ---
 
 # Should I Stay or Should I Go? Founder Power and Exit via Initial Public Offering
@@ -53,6 +58,13 @@ Founders can voluntarily exit their ventures via initial public offerings (IPOs)
 **Research Question**
 How and why does founders' power influence their decision to exit from their ventures via IPO? The paper asks whether low founder power predicts full exit, whether frustration explains that relationship, and whether power matters differently for full versus managerial or financial partial exits.
 
+**Hypotheses / Propositions**
+H1: The lower a founder’s power at IPO, the more likely he or she will fully exit the venture via IPO rather than maintain involvement.
+
+H2: Frustration mediates the relationship between a founder’s power at IPO and full exit: power is negatively related to frustration, and frustration is positively related to full exit.
+
+H3: A founder’s power at IPO has a weaker association with managerial and financial partial exits than with full exit.
+
 **Mechanism Process**
 - Archival IV(s): Founder power at IPO, measured through structural, ownership, expertise, and prestige dimensions.
 - Experimental IV(s): Assigned high- versus low-power condition at the time of IPO.
@@ -61,6 +73,16 @@ How and why does founders' power influence their decision to exit from their ven
 - Moderators / comparisons: The power-exit association is compared across full exits and two forms of partial exit.
 
 The mechanism starts from power theory: IPOs create uncertainty, negotiation, and political turmoil, making founders' capacity to influence venture decisions consequential. When founders lack power over ventures they created, they experience frustration because their goals are blocked. Full exit is theorized as a vigorous withdrawal response to that frustration, whereas managerial and financial partial exits can reflect other career, ownership, or financial motives and are therefore less tightly tied to low power.
+
+**Data & Measures**
+Study 1 uses archival data on 313 founders nested in 177 first-time U.K. entrepreneurial listings on the LSE main market or AIM from 2002 to 2010. Exit was assessed 24 months after each founder’s lock-up period: full exit meant leaving management and the board while holding less than 3% ownership; managerial partial exit meant leaving those roles while retaining at least 3%; financial partial exit meant selling all shares while remaining in management and on the board; the comparison category was continuation. Founder power was measured through six proxies: CEO/chair status; ownership relative to the largest shareholder; inventor/main-developer status and related-industry experience; and outside directorships and pre-IPO media coverage. The authors also standardized and summed the six proxies into a power index, estimated binary probit and multinomial logit models with firm-clustered standard errors, and conducted longitudinal robustness analyses.
+
+Study 2 consists of two randomized vignette experiments. Experiment 1 assigned 181 entrepreneurial decision makers to high- or low-power IPO scenarios and measured the likelihood of full, managerial partial, and financial partial exit on 7-point scales. Experiment 2 used the same manipulation and exit measures with 190 managers taking an entrepreneurship course, and additionally measured frustration with seven items from Spector’s organizational-frustration scale; mediation was tested with regressions and bootstrapping.
+
+**Key Findings**
+H1 was largely supported. In Study 1, five of the six separate power proxies were negatively associated with full exit, while media coverage was not; the power index was also negative (b = −.19, p < .001), and a one-standard-deviation decrease in the index increased the probability of full exit by 11.05%. Experiment 1 likewise found greater full-exit likelihood under low power than high power (difference = 1.81, p < .001, d = 1.09), and Experiment 2 replicated this result (difference = 1.56, p < .001, d = .95).
+
+H2 was supported in Experiment 2: low power increased frustration (difference = 1.83, p < .001, d = 1.68), and the bootstrapped indirect effect of power on full exit through frustration was significant (b = .85, p = .00). H3 was also supported: in Study 1 a one-standard-deviation power-index decrease increased managerial partial-exit probability by 3.85% but did not significantly affect financial partial exit, and its effect on full exit was 7.45 percentage points greater than on managerial partial exit and 11.82 points greater than on financial partial exit. Both experiments likewise found smaller effects on managerial partial exit and no significant effect on financial partial exit.
 
 **Theoretical Contribution**
 The article extends founder-exit research by explaining why founders may voluntarily leave high-potential ventures through IPOs, rather than focusing only on forced CEO replacement or failure-related exit. It distinguishes full exit from managerial and financial partial exits, showing that exit is not an all-or-nothing outcome. It also contributes to power and entrepreneurship theory by identifying frustration as an emotional mechanism linking low power to founder exit and by specifying that this mechanism is stronger for full exits than for partial exits.

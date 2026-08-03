@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Lee 2020 Fostering Positive Relational D
 text_path: "library/AMJ/vol-63-no-1/text/Lee 2020 Fostering Positive Relational Dynamics The Power of Spaces and Interaction Scripts.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-qualitative"
 keywords: ["positive relational dynamics", "spaces", "interaction scripts", "respect", "openness", "connectedness", "global distributed teams", "interpersonal sharing"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "notion of organizational scripts"
   methods_overview: "open coding of the primary"
   keywords_source: "spaces and interaction scripts"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Using meeting observations and interviews"
+  findings_overview: "the combination of spaces and interaction scripts was critical for helping the team enact counternormative forms of interpersonal sharing"
 ---
 
 # Fostering Positive Relational Dynamics: The Power of Spaces and Interaction Scripts
@@ -52,6 +57,9 @@ Despite well-accepted understanding that relational dynamics characterized by re
 **Research Question**
 How can teams cultivate positive relational dynamics characterized by respect, openness, and connectedness? The paper asks how a global distributed team moved from mistrust, minimal communication, and disconnection toward more positive relational dynamics during an intervention built around spaces and interaction scripts.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: positive relational dynamics; respect, openness, and connectedness; spaces; interaction scripts; counter-normative interpersonal sharing; uncertainty, social risk, and collective action problems.
 - Intervention elements: collaborative work time calls created dyadic spaces for personal and work-related sharing, while pulse check meetings created whole-team spaces for discussing work challenges.
@@ -61,6 +69,12 @@ How can teams cultivate positive relational dynamics characterized by respect, o
 
 The process model is that bounded spaces opened a temporary setting where everyday team norms were less dominant, but spaces alone did not tell team members how to behave. Interaction scripts supplied content parameters and participation rules that made risky forms of sharing more specific, legitimate, and collectively enactable. As team members shared personal lives and work challenges and received positive responses, the team built energy and adapted the scripts, which helped the new relational dynamics become more accepted.
 
+**Data & Measures**
+Data came from a 12-week study of one U.S.–India global distributed technology consulting team: two weeks before the intervention and a 10-week intervention involving collaborative work time calls and weekly pulse checks. The corpus comprised 127 weekly and end-of-intervention interviews, observations of 15 meetings, pulse-check transcripts, facilitator field notes, emails, and descriptive and analytic memos. Using grounded theory building, iterative textual analysis, and open coding, the authors identified changes in interpersonal dynamics and then reanalyzed the calls and meetings through the induced constructs of spaces, interaction scripts, and positive relational dynamics.
+
+**Key Findings**
+The intervention's bounded collaborative work time calls and pulse-check meetings, coupled with interaction scripts specifying content parameters and participation rules, enabled counter-normative sharing about personal lives and work challenges. Positive responses to sharing established respect, openness, and connectedness; the resulting energy and engagement promoted bottom-up script adaptation and deeper sharing, producing a reinforcing cycle that spilled into everyday interactions. Leadership support and external facilitation enabled this process, while not every script adaptation worked equally: the week-5 social-comparison prompt was less successful at fostering positive relational dynamics.
+
 **Theoretical Contribution**
 The paper contributes to research on positive relationships at work by showing an empirical process through which respect, openness, and connectedness can be fostered rather than only treated as beneficial relational states. It extends organizational change research by theorizing interaction scripts as a complement to spaces: spaces create openings for change, while scripts guide what interaction patterns can emerge within those openings. It also contributes to global team research by showing how relational closeness can be developed in a distributed team without the whole team meeting face to face.
 
@@ -68,7 +82,7 @@ The paper contributes to research on positive relationships at work by showing a
 Managers seeking to improve team relational dynamics should not rely only on informal appeals for openness or connection. The study suggests designing bounded meeting spaces with explicit content parameters, participation rules, leadership support, and facilitation so team members can safely practice new ways of sharing personal information and work challenges.
 
 **Limitations**
-The study is limited by temporal scope: the authors observed a two-week assessment plus a 10-week intervention, so they likely captured unfreezing and changing but not the full refreezing of new team norms. The evidence comes from one global distributed technology consulting team and an intervention supported by leaders and facilitators, which limits certainty about whether similar dynamics would occur in other teams or without those enabling conditions.
+The study is limited by temporal scope: the authors observed a two-week assessment plus a 10-week intervention, so they likely captured unfreezing and changing but not the full refreezing of new team norms.
 
 **Future Research**
 Future research could examine how team relational dynamics evolve over longer timeframes and whether spaces and interaction scripts remain necessary after new patterns are established. The authors also call for research on which content parameters and participation rules make scripts more or less effective, whether bounded spaces can sometimes be sufficient without scripts, whether scripts can work outside bounded spaces, whether external facilitation is necessary, and how interaction scripts matter for other forms of organizational change.

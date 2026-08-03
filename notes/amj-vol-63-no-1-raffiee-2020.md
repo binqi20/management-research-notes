@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Raffiee 2020 Revisiting the Portability 
 text_path: "library/AMJ/vol-63-no-1/text/Raffiee 2020 Revisiting the Portability of Performance Paradox Employee Mobility and the Utilization of Human and Social Capital Resources.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["portability of performance paradox", "employee mobility", "employee utilization", "human capital resource fit", "human capital resource complementarity", "human capital resource similarity", "social capital resources", "U.S. lobbying industry"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Drawing theoretically from the person–organization fit and social capital literatures"
   methods_overview: "ordinary least squares (OLS) panel regressions"
   keywords_source: "human capital and social capital resources relate"
+  hypotheses_source: "Hypothesis 1. The negative relationship between"
+  measures_overview: "We use LN Revenue as our dependent variable"
+  findings_overview: "Thus, Hypothesis 2 is supported."
 ---
 
 # Revisiting the Portability of Performance Paradox: Employee Mobility and the Utilization of Human and Social Capital Resources
@@ -51,6 +56,14 @@ This study revisits the portability of performance paradox—the common finding 
 **Research Question**
 The paper asks when external hires can be integrated and utilized in a new firm's value-creating activities despite the portability of performance paradox. It examines whether human capital resource similarity, human capital resource complementarity, retained internal social capital, and retained external social capital weaken the post-mobility decline in employee utilization.
 
+**Hypotheses / Propositions**
+- H1: The negative relationship between employee mobility and employee utilization will weaken with greater employee–hiring-firm human capital resource similarity.
+- H2: The negative relationship between employee mobility and employee utilization will weaken with greater employee–hiring-firm human capital resource complementarity.
+- H3: The negative relationship between employee mobility and employee utilization will weaken when the employee transfers and retains more internal social capital through comobility.
+- H4: The negative relationship between employee mobility and employee utilization will weaken when the employee transfers and retains more external social capital through client relationships.
+- H5a–b: Human capital resource fit—(a) similarity and (b) complementarity—will substitute for internal social capital transfer in weakening the negative mobility–utilization relationship.
+- H6a–b: Human capital resource fit—(a) similarity and (b) complementarity—will substitute for external social capital transfer in weakening the negative mobility–utilization relationship.
+
 **Mechanism Process**
 - IV(s): Employee mobility, human capital resource similarity, human capital resource complementarity, internal social capital transfer through comobility, and external social capital transfer through retained client ties.
 - DV(s): Employee utilization, measured as logged lobbying revenue associated with the focal lobbyist; supplemental firm-level revenue.
@@ -58,6 +71,16 @@ The paper asks when external hires can be integrated and utilized in a new firm'
 - Moderators: Human capital resource similarity and complementarity; comobility; retained client ratio; three-way substitution terms between human capital fit and social capital transfer.
 
 The mechanism is that external mobility creates integration frictions because hiring firms may have difficulty using the employee's human and social capital in current value-creating work. Human capital complementarity lowers these frictions when the employee's issue expertise fills a need in the hiring firm, while retained internal or external social capital preserves coworker coordination or client work after the move. The results support a descriptive pattern: utilization falls after mobility, complementarity and client transfer attenuate that decline, similarity does not consistently do so, and complementarity appears to substitute for transferred social capital.
+
+**Data & Measures**
+The main analysis uses Lobbying Disclosure Act reports for registered U.S. federal lobbyists from 1998–2008, yielding 125,657 lobbyist–semiannual-period observations for 16,255 lobbyists across 18 periods after the stated exclusions. Employee utilization is the natural log of the dollar sum of lobbying-contract revenue associated with a lobbyist; mobility marks the first period in which a lobbyist changes employers. Human capital resource similarity is unweighted Jaffe proximity based on overlap between the lobbyist's and firm's issue portfolios, whereas complementarity weights nonoverlapping issues by a client issue-cooccurrence relatedness matrix. Internal social capital is the number of prior coworkers retained through comobility, and external social capital is the ratio of clients retained from the prior period.
+
+The authors estimate OLS panel regressions with lobbyist and year fixed effects and Huber–White standard errors clustered by lobbyist and firm; they characterize the evidence as descriptive rather than causal. Supplemental analyses aggregate the data to 22,836 firm–semiannual observations from 3,137 lobbying firms, model logged firm revenue, and include firm and year fixed effects.
+
+**Key Findings**
+Mobility is associated with a 7.1% decline in lobbyist revenue in the first post-move period (b = −.071, p < .01), with predicted revenue recovering over the next two semiannual periods. H1 is not supported: similarity does not significantly attenuate the decline. H2 is supported (b = .145, p < .05), H3 receives marginal support (b = .004, p = .088), and H4 is supported (b = .134, p < .05): complementarity, comobility, and retained client ties respectively weaken the post-mobility utilization decline.
+
+The substitution results support H5a (b = −.020, p < .05), H5b (b = −.026, p < .001), and H6b (b = −.289, p < .05), but not H6a. Robustness checks most consistently reaffirm complementarity and external-client transfer, while support for some three-way substitutions is less stable. In the supplemental firm-level analysis, external hiring is positively associated with firm revenue (b = .174, p < .001), and this association is stronger with greater human or retained social capital resources.
 
 **Theoretical Contribution**
 The paper reframes the portability paradox around employee utilization rather than treating performance portability as mainly a firm-specific human capital problem. It contributes to strategic human capital and P-O fit research by distinguishing human capital resource similarity from complementarity and showing that complementarity, not similarity, is the more consistent moderator of post-mobility utilization decline.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Barberá-Tomás 2019 Energizing through 
 text_path: "library/AMJ/vol-62-no-6/text/Barberá-Tomás 2019 Energizing through Visuals How Social Entrepreneurs Use Emotion-Symbolic Work for Social Change.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-qualitative"
 keywords: ["social entrepreneurs", "emotion-symbolic work", "visual images", "moral shock", "emotional energy", "multimodal interactions", "enactment of a cause"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "they combine emotion work"
   methods_overview: "We followed an inductive theory generation"
   keywords_source: "emotion-symbolic work"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Step 1: Open coding. We first performed open"
+  findings_overview: "then transforming those emotions into emotional energy for enactment."
 ---
 
 # Energizing through Visuals: How Social Entrepreneurs Use Emotion-Symbolic Work for Social Change
@@ -53,6 +58,9 @@ Little is known about how social entrepreneurs try to induce enactment of their 
 **Research Question**
 The paper asks how social entrepreneurs use visual images and textual interactions to influence targets to enact a difficult cause. Empirically, it examines how anti-plastic pollution social entrepreneurs used the Midway albatross visual and related multimodal interactions to move targets toward refusing, rather than merely recycling, plastic.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: visual images, textual interactions, moral shock, emotional energy, and enactment of a difficult cause.
 - Process / phases: symbol production and diffusion; connecting target actors to the cause, an emerging collective identity, and the social entrepreneurs; emotional transformation; enactment.
@@ -61,6 +69,12 @@ The paper asks how social entrepreneurs use visual images and textual interactio
 - Boundary conditions: the authors argue that powerful visuals alone are insufficient; multimodal emotion-symbolic work is needed to transform shock into sustained enactment.
 
 The process begins when social entrepreneurs produce and diffuse a morally shocking visual symbol. They then use verbal and visual interactions to anchor the symbol to the cause, responsibilize target actors, promote solidarity and hope, and establish the legitimacy and influence of the NPO. In this account, negative emotions such as sadness, rage, despair, and guilt are transformed into emotional energy that supports enactment of the anti-plastic cause.
+
+**Data & Measures**
+The main longitudinal qualitative corpus combined 50 semi-structured interviews (1,789 transcribed minutes), naturalistic observations, archival materials, and Facebook, Twitter, Instagram, YouTube, and news-site data gathered across 2009–2018. Analysis followed three recursive steps: open coding of actors, activities, interactions, and in vivo codes; abductive axial coding to develop 10 theoretical constructs; and aggregate-dimension and model development through line-by-line analysis of Facebook conversations, interview cross-checks, and member checks. Separately, a supplementary analysis of more than 500 Guardian and YouTube comments examined responses to the albatross visuals without NPO-mediated emotion-symbolic work.
+
+**Key Findings**
+The induced model finds that social entrepreneurs first produced and diffused a morally shocking symbol and then used multimodal interactions to connect targets to the cause, an emerging collective identity, and the entrepreneurs and NPO. This embedding transformed sadness, rage, and despair into emotional energy—energetic arousal, identification, and moral emotions—that fueled enactment through pledging to act, performing the cause, and evangelizing. In the supplementary comments without NPO mediation, the visuals evoked moral shock but usually did not generate personal responsibility or sustained identification; the authors infer that the visual was important but insufficient without emotion-symbolic work.
 
 **Theoretical Contribution**
 The paper introduces emotion-symbolic work as the deliberate production and use of symbols, often multimodally, to manage target actors' emotions and emotional energy in order to influence action. It contributes to social entrepreneurship research by shifting attention from entrepreneurs' own emotions to how entrepreneurs evoke and transform others' emotions. It also contributes to research on visuals and multimodality by showing how visual symbols and text can work together to transform moral shock into emotional energy and enactment.

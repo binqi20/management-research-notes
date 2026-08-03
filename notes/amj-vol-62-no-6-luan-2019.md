@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Luan 2019 Ecological Rationality Fast-an
 text_path: "library/AMJ/vol-62-no-6/text/Luan 2019 Ecological Rationality Fast-and-Frugal Heuristics for Managerial Decision Making under Uncertainty.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["ecological rationality", "fast-and-frugal heuristics", "D-inference", "personnel selection", "logistic regression", "managerial decisions", "uncertainty"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "theoretical perspective of ecological rationality"
   methods_overview: "validation to assess its accuracy in predicting"
   keywords_source: "fast-and-frugal heuristics"
+  hypotheses_source: "The smaller the sample size, the larger the relative"
+  measures_overview: "The scale range for each variable is as follows"
+  findings_overview: "D-inference achieved higher prediction accuracy than did logistic regression in all"
 ---
 
 # Ecological Rationality: Fast-and-Frugal Heuristics for Managerial Decision Making under Uncertainty
@@ -52,6 +57,12 @@ Heuristics are often viewed as inferior to “rational” strategies that exhaus
 **Research Question**
 The paper asks whether a fast-and-frugal heuristic can make personnel-selection predictions that are as good as, or better than, logistic regression under uncertainty. It also asks under which ecological conditions D-inference outperforms logistic regression and whether decision makers adapt their strategy use to task characteristics.
 
+**Hypotheses / Propositions**
+- Study 1 expectation: D-inference will predict as accurately as or more accurately than logistic regression, especially when learning opportunities are limited.
+- Study 2 Prediction 1: The smaller the sample size, the larger the relative advantage of D-inference.
+- Study 2 Prediction 2: The more skewed the distribution of cue validities, the larger the relative advantage of D-inference.
+- Study 3 expectation: Greater prior personnel-selection experience will be associated with more ecologically rational or adaptive strategy use across task conditions.
+
 **Mechanism Process**
 - IV(s): Decision strategy, especially D-inference versus logistic regression; ecological conditions such as learning opportunities, cue-validity skew, best cue's relative predictiveness, and linear predictability.
 - DV(s): Predictive accuracy, frugality of cue search, classified strategy use, and strategy switching in paired-comparison personnel-selection decisions.
@@ -59,6 +70,18 @@ The paper asks whether a fast-and-frugal heuristic can make personnel-selection 
 - Moderators: Sample size, distribution of cue validities, linear predictability, best cue's relative predictiveness, job-position condition, cue-importance ratings, and prior selection-decision experience.
 
 The mechanism is ecological fit between a decision strategy and a task environment. D-inference searches cues sequentially, stops when the difference on a cue exceeds a threshold, and decides noncompensatorily; this can reduce variance and cue-search costs when uncertainty is high, learning opportunities are limited, and one cue is substantially more informative than others. Logistic regression can perform relatively better when sample size is large and the task is more linearly predictable. Study 3 extends the prescriptive analysis by showing that many participants used D-inference and that experienced participants were more likely to vary strategy use across conditions.
+
+**Data & Measures**
+Study 1 used data from 236 applicants at an airline company. General mental ability and conscientiousness came from applicant assessments, unstructured interview performance was scored by a line manager, and supervisors assessed future job performance about three months after hiring. D-inference and logistic regression were compared through cross-validation using sample sizes of 30, 100, and 1,000 and training proportions of 50%, 60%, and 80%; outcomes were predictive accuracy and cues searched.
+
+Study 2 generated 1,728 linear task environments from meta-analytic correlations among future job performance, general mental ability, conscientiousness, and structured interview performance. The simulations varied sample size, whether cue validities were J-shaped, linear predictability, and the best cue's relative predictiveness; a 60/40 cross-validation split compared the strategies by the relative frequency with which logistic regression predicted better than D-inference and by D-inference's cue-search frugality.
+
+Study 3 used a within-subject experiment with a final sample of 143 participants at a management university in Southeast Asia. Each participant made 105 paired-comparison hiring decisions for both receptionist and data-analyst positions using general mental ability, conscientiousness, and structured-interview scores. The study recorded choices and reaction times, cue-importance ratings, and prior selection experience; comparative maximum-likelihood model testing trained D-inference and logistic-regression models on the first 60 experimental trials and tested them on the next 40.
+
+**Key Findings**
+In Study 1, D-inference predicted more accurately than logistic regression in all nine learning conditions, with a larger advantage when learning opportunities were limited, while searching fewer than 1.5 cues on average rather than all three. In Study 2, the smaller-sample prediction was supported: logistic regression's mean relative frequency of predicting better was .44 at n = 30 and .49 at n = 100, but .65 at n = 1,000. The cue-validity-skew prediction was generally supported; D-inference also performed relatively better as the best cue's relative predictiveness increased, whereas logistic regression performed relatively better as linear predictability increased.
+
+In Study 3, 49% of participants were classified as using D-inference in the receptionist condition and 38% in the analyst condition. More experienced participants were more likely to use D-inference and switched strategies more often between job conditions (53% versus 33% for less experienced participants); D-inference use was descriptively higher when cue-importance ratings were skewed, especially among more experienced participants.
 
 **Theoretical Contribution**
 The paper introduces ecological rationality as an alternative way to evaluate managerial heuristics, shifting the benchmark from universal economic or logical rationality to fit between strategy and environment. It challenges the common view that heuristics are necessarily inferior to more information-intensive strategies and advances a contingency view of managerial decision making. It also contributes to personnel selection by modeling cue integration processes rather than only cue validities.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Bentley 2020 Give Them Some Slack—They
 text_path: "library/AMJ/vol-63-no-1/text/Bentley 2020 Give Them Some Slack—They’re Trying to Change! The Benefits of Excess Cash, Excess Employees, and Increased Human Capital in the Strategic Change Context.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["slack resources", "HR slack", "financial slack", "strategic change", "firm performance", "human capital investment", "contingency theory", "resource-based view", "resource management perspective"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "resource-based view"
   methods_overview: "we estimated our models using"
   keywords_source: "financial slack on firm performance"
+  hypotheses_source: "Hypothesis 3. There will be a three-way interaction"
+  measures_overview: "measured financial slack as the difference between a"
+  findings_overview: "slack on Tobin’s q is more positive when financial"
 ---
 
 # Give Them Some Slack—They’re Trying to Change! The Benefits of Excess Cash, Excess Employees, and Increased Human Capital in the Strategic Change Context
@@ -51,6 +56,12 @@ We address calls for contextualization in the study of slack resources by examin
 **Research Question**
 When does slack create value rather than waste, and how does the pursuit of strategic change alter the performance effects of HR slack and financial slack? The paper asks whether financial slack complements HR slack in strategic-change contexts by enabling increased human capital investment.
 
+**Hypotheses / Propositions**
+- H1: Strategic change moderates the relationship between HR slack and firm performance, such that the relationship is more positive under strategic change.
+- H2: Strategic change moderates the relationship between financial slack and change in human capital investment, such that the relationship is more positive under strategic change.
+- H3: HR slack, strategic change, and change in human capital investment interact in predicting firm performance; HR slack is more positively related to performance under strategic change, especially when the change in human capital investment is high.
+- H4: HR slack, strategic change, and financial slack interact in predicting firm performance, partially mediated by change in human capital investment; HR slack is more positively related to performance under strategic change, especially when financial slack is high.
+
 **Mechanism Process**
 - IV(s): HR slack and financial slack, with strategic change distinguishing change and nonchange contexts.
 - DV(s): Firm performance, measured as Tobin's q.
@@ -58,6 +69,15 @@ When does slack create value rather than waste, and how does the pursuit of stra
 - Moderators: Strategic change moderates the HR slack-performance relationship and the financial slack-human capital investment relationship; financial slack and change in human capital investment strengthen the HR slack-performance relationship.
 
 The mechanism is that strategic change creates identifiable resource needs because firms must maintain current operations while entering or serving new customer segments. HR slack gives firms extra employees to allocate across current and change-oriented activities, but excess employees may not automatically have the skills or motivation needed for new strategic demands. Financial slack helps convert HR slack into performance value by funding increased human capital investment in salaries, bonuses, training, and related employee development, thereby improving the fit between excess employees and the requirements of strategic change.
+
+**Data & Measures**
+The FDIC panel covers 6,606 federally chartered U.S. commercial banks from 2002–2014. Table 1 reports 60,328 observations; the main regressions use 38,249 nonchange and 19,079 strategic-change observations. Firm performance is Tobin's q, calculated as the sum of the market value of equity and the book value of debt divided by book assets. HR slack is the bank's employees-to-sales ratio minus the industry average, and financial slack is its current ratio minus the industry current ratio; negative values of either slack measure are set to zero. Strategic change is the absolute z-scored deviation of a bank's business-to-consumer-loan ratio from its two-year autoregressive moving average, with values above one categorized as strategic change. Change in human capital investment is the year-over-year change in salaries, bonuses, and training expenditures per employee. The focal moderated-mediation tests use random-effects regressions with robust standard errors, estimated separately for change and nonchange banks; robustness analyses use instrumental-variable two-stage least squares and a continuous strategic-change measure.
+
+**Key Findings**
+- H1 was supported: HR slack was negatively related to Tobin's q in the nonchange context (b = -0.151, p < .001) but positively related under strategic change (b = 0.300, p < .05), and the estimates differed significantly (t = 3.047, p < .01).
+- H2 was supported: financial slack positively predicted change in human capital investment in both contexts, but more strongly under strategic change (b = 0.020 versus 0.015; difference t = 3.535, p < .001).
+- H3 was supported: the HR-slack × change-in-human-capital-investment interaction was positive in both contexts but stronger under strategic change (b = 0.354, p < .001, versus b = 0.020, p < .01; difference t = 3.40, p < .001).
+- H4 was supported: under strategic change, the HR-slack × financial-slack interaction was positive (b = 0.086, p < .01), and the indirect effect of financial slack through change in human capital investment differed between low and high HR slack (-0.06 versus 0.08; difference = 0.14, p < .01). Approximately 60% of financial slack's moderating effect was explained by change in human capital investment. The robustness analyses were consistent with the focal results.
 
 **Theoretical Contribution**
 The paper advances the slack literature by treating strategic change as a dynamic contingency that shapes when excess resources have a clear, suitable purpose. It also contributes to resource management research by showing how resource accumulation and deployment activities combine: financial slack supports changes in human capital investment, which helps HR slack create value during strategic change. This reframes HR slack as potentially valuable in dynamic strategic contexts rather than inherently absorbed or limited to current operations.

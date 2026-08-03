@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Rond 2019 Sensemaking from the Body An E
 text_path: "library/AMJ/vol-62-no-6/text/Rond 2019 Sensemaking from the Body An Enactive Ethnography of Rowing the Amazon.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-qualitative"
 keywords: ["carnal sociology", "embodied organizational sensemaking", "enactive ethnography", "sensemaking from the body", "real-time video", "audio journal"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "methodological and conceptual anchors provided in carnal sociology"
   methods_overview: "Drawing on real-time video, an audio journal, interviews, and field notes"
   keywords_source: "embodied organizational sensemaking"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Our analyses rely on 755 video segments"
+  findings_overview: "the ‘who’ of sensemaking matters"
 ---
 
 # Sensemaking from the Body: An Enactive Ethnography of Rowing the Amazon
@@ -52,6 +57,9 @@ Drawing on real-time video, an audio journal, interviews, and field notes from t
 **Research Question**
 The paper asks how the body is involved in organizational sensemaking, and what is learned by studying sensemaking both "of the body" and "from the body." It uses the Amazon rowing journey to examine how carnal sociology can extend embodied sensemaking beyond observable sensorimotor behavior to the lived, suffering, situated body.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / vantage points: Embodied organizational sensemaking, carnal sociology, enactive ethnography, "of the body" analysis, and "from the body" analysis.
 - Process / data logic: The video-based account identifies bodily sensing, movement, gesture, discomfort, and coordination as visible aspects of sensemaking; the enactive account uses audio journals, fieldnotes, recollection, and first-person experience to recover what the body felt from the inside.
@@ -59,6 +67,12 @@ The paper asks how the body is involved in organizational sensemaking, and what 
 - Boundary conditions: The empirical setting is an extreme, temporary, high-risk rowing journey, but the paper argues that carnal sociology can also inform more conventional organizational settings.
 
 The process account contrasts what can be seen from outside the body with what can be known by performing the phenomenon. Video made visible how rowers sensed currents, adjusted action, and coordinated with little talk. The enactive ethnography showed that sensemaking also depended on hunger, fatigue, fear, injury, social history, skill, and the relational position of the sensemaker. The central process is therefore not simply noticing, interpreting, and acting, but sensemaking that unfolds through a body that is sentient, suffering, skilled, sedimented, and situated.
+
+**Data & Measures**
+The study uses two qualitative analyses of the same Amazon rowing journey. The "of the body" account draws primarily on 755 real-time video segments plus separately conducted post-journey interviews with two rowers; the researchers screened all videos, identified 54 illustrative sensemaking episodes, and coded these in Atlas.ti 7 using an emergent scheme. The "from the body" enactive ethnography revisits the same episodes using multiple video reviews, a documentary compilation, 62 audio-diary entries, the participant-author's field journal, and embodied recollections to reconstruct how events felt from inside the body.
+
+**Key Findings**
+The video-based account found that bodily sensation enabled rowers to act into sense and coordinate with little talk, while changing physical states altered their ability to notice and respond. The enactive account showed that sensemaking unfolded through a holistic body in which sensory experience was entangled with emotional, physical, relational, and moral aspects; its capacity and engagement were shaped by embodied history and situation. Comparing the two accounts shifts explanation toward the "who" of sensemaking and highlights enactive ethnography's ability to reveal experience that external observation misses.
 
 **Theoretical Contribution**
 The paper contributes to organizational sensemaking by shifting attention from cognition and discourse toward embodied experience as a constitutive part of sensemaking. It develops a complementary "from the body" approach that foregrounds the holistic body and argues that the "who" of sensemaking matters alongside the "how." It also contributes methodologically by showing how enactive ethnography and carnal sociology can help researchers access forms of organizational experience that video, interviews, and retrospective accounts may leave under-specified.

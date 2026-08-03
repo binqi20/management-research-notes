@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Quigley 2020 Unintended Consequences Inf
 text_path: "library/AMJ/vol-63-no-1/text/Quigley 2020 Unintended Consequences Information Releases and CEO Stock Option Grants.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["agency theory", "information asymmetry", "stock options", "option grants", "impression management", "CEO underpayment", "managerial discretion", "negative press releases", "cumulative abnormal returns"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Agency theory asserts that managers in the modern"
   methods_overview: "Eventus software of WRDS"
   keywords_source: "critical issue of information asymmetry"
+  hypotheses_source: "underpaid CEOs will release a larger quantity of"
+  measures_overview: "the bottom quartile of all releases"
+  findings_overview: "CAR of –1.31% in the 30 trading days (six weeks)"
 ---
 
 # Unintended Consequences: Information Releases and CEO Stock Option Grants
@@ -53,6 +58,13 @@ Scholars, regulators, and practitioners have long struggled with challenges eman
 **Research Question**
 How do CEOs use their informational advantage before stock option grant dates, and can the timing and tenor of firm information releases reduce stock prices in ways that personally benefit CEOs? The paper asks whether stock options, intended by agency theory to align interests, can create pregrant incentives for CEOs to use impression management against shareholders' interests.
 
+**Hypotheses / Propositions**
+- H1: Firms experience a negative cumulative abnormal return (CAR) in the period preceding CEO stock option grants.
+- H2: Relative to other times of the year, firms release more negatively valenced press releases before CEO stock option grants.
+- H3: Before CEO stock option grants, the quantity of negatively valenced press releases is negatively related to CAR.
+- H4: Before an option grant, underpaid CEOs release more negative press releases, which in turn drive increasingly negative CARs.
+- H5: Before an option grant, high-discretion CEOs release more negative press releases, which in turn drive increasingly negative CARs.
+
 **Mechanism Process**
 - IV(s): CEO stock option grant timing and pregrant negative press-release activity; CEO underpayment and managerial discretion are modeled as antecedents of greater negative-release activity.
 - DV(s): Cumulative abnormal returns before CEO option grants and, in intermediate models, the count and affective tone of negative press releases.
@@ -60,6 +72,12 @@ How do CEOs use their informational advantage before stock option grant dates, a
 - Moderators: Not reported in paper.
 
 The mechanism is that stock options align CEO and shareholder interests after grants but create a temporary pregrant incentive to lower the firm's share price and strike price. Because information asymmetry persists, CEOs can influence when information is released and how it is framed. More negatively valenced press releases before option grants are theorized and found to depress cumulative abnormal returns, while underpaid CEOs and CEOs in high-discretion settings release more negative information before grants. Supplemental analyses add nuance: mandatory negative releases carry the stronger price effect, while discretionary releases are less important for the stock-price response.
+
+**Data & Measures**
+The sample contains 1,753 CEO option-grant dates for 659 CEOs at 627 large U.S. public firms from 2009–2013 and 49,436 firm press releases. Option grants came from Thompson-Reuters insider filings and were merged with Execucomp CEO data, ISS director data, Compustat firm data, Eventus returns, and LexisNexis releases. CAR was estimated with an Eventus market-model event study, using a primary 30-trading-day pregrant window and a 255-trading-day estimation period ending 46 days before the grant. Negative press releases were measured both as the count of releases in the bottom tenor quartile and as overall affective tone, calculated from LIWC positive and negative word counts across six-week periods. CEO underpayment was actual total direct compensation minus GEE-predicted pay, multiplied by –1; industry-level managerial discretion combined R&D intensity, munificence, reverse-coded concentration, and reverse-coded capital intensity. Tests used GEE models for release outcomes, firm-clustered OLS for CAR, and firm-clustered structural equation models for indirect effects.
+
+**Key Findings**
+H1 was supported: mean CAR was –1.31% over the 30 trading days before grants (p < .001) and –2.24% over 45 trading days (p < .001). H2 was supported because the pregrant-period indicator predicted more negative releases (b = 0.14, p < .001) and a two-percentage-point drop in overall affective tone (b = –0.02, p < .001). H3 was supported by the negative-release count (b = –0.49, p < .05); the continuous-tone test was not significant (b = 3.77, p = .12), although the supplemental low-tenor spline was significant (b = –9.52, p < .05). H4 received marginal support: underpayment predicted more negative releases (b = 0.23, p < .01), with a marginal negative indirect effect on CAR (indirect effect = –0.10, p < .10). H5 was supported: managerial discretion predicted more negative releases (b = 0.08, p < .01), with a negative indirect effect on CAR (indirect effect = –0.04, p < .05). Supplemental analyses indicated that mandatory rather than discretionary negative releases drove the principal frequency and CAR results.
 
 **Theoretical Contribution**
 The paper contributes to agency theory by showing a loophole in a core governance prescription: stock options can be manipulated when information asymmetry remains unresolved. It also extends impression management research by showing that CEOs may use impression management to create negative, not only positive, stakeholder impressions. More broadly, it argues that outcome-based contracts do not remove the informational advantage that allows self-serving executive action.

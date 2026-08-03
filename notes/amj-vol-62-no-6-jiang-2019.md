@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Jiang 2019 Can Joy Buy You Money The Imp
 text_path: "library/AMJ/vol-62-no-6/text/Jiang 2019 Can Joy Buy You Money The Impact of the Strength, Duration, and Phases of an Entrepreneur’s Peak Displayed Joy on Funding Performance.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-quantitative"
 keywords: ["entrepreneurs’ displayed joy", "peak displayed joy", "emotion temporal dynamics", "funding performance", "facial expression analysis", "crowdfunding"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "gestalt characteristics theory"
   methods_overview: "Our STATA regression analyses results are shown"
   keywords_source: "emotion temporal dynamics in the interpersonal context"
+  hypotheses_source: "U-shaped relationship with funding performance."
+  measures_overview: "the total amount of funding in U.S. dollars"
+  findings_overview: "shows an inverted U-shaped relationship"
 ---
 
 # Can Joy Buy You Money? The Impact of the Strength, Duration, and Phases of an Entrepreneur’s Peak Displayed Joy on Funding Performance
@@ -52,13 +57,32 @@ Does displaying positive emotions (e.g., joy) during a funding pitch help an ent
 **Research Question**
 The paper asks whether displaying positive emotion, specifically joy, during an entrepreneur’s funding pitch helps gain financial support. It focuses on whether the strength, duration, and beginning/ending phases of peak displayed joy are associated with crowdfunding performance.
 
+**Hypotheses / Propositions**
+H1: The level of an entrepreneur’s peak displayed joy during a fundraising pitch is positively related to funding performance.
+
+H2: The total duration of peak displayed joy has an inverted U-shaped relationship with funding performance.
+
+H3a: Peak displayed joy during the beginning phase of a fundraising pitch is positively related to funding performance.
+
+H3b: Peak displayed joy during the ending phase of a fundraising pitch is positively related to funding performance.
+
+H4a: The duration of peak displayed joy during the beginning phase has an inverted U-shaped relationship with funding performance.
+
+H4b: The duration of peak displayed joy during the ending phase has an inverted U-shaped relationship with funding performance.
+
 **Mechanism Process**
 - IV(s): Peak displayed joy level; total length of time at peak displayed joy; beginning-, middle-, and ending-phase peak displayed joy and peak duration.
 - DV(s): Logged funding amount and logged number of backers.
 - Mediators: Not directly tested; theorized mechanisms include emotional contagion, attribution of positive affect to the entrepreneur, and inferences about the entrepreneur’s potential for success.
-- Moderators: Temporal phase of the pitch, especially beginning and ending phases, is theorized through primacy and recency effects.
+- Moderators: Not directly tested; temporal phase is operationalized through separate beginning-, middle-, and ending-phase predictors, with primacy and recency effects theorized for the beginning and ending phases.
 
 The mechanism is that a stronger peak display of joy becomes especially salient and memorable to pitch viewers, making viewers more likely to experience positive affect and infer favorable qualities about the entrepreneur. Event system theory adds that duration and phase matter: brief peak joy can intensify attention and support, but prolonged peak joy can backfire by appearing excessive, unprofessional, or overly optimistic. The empirical results support positive associations for peak displayed joy, especially in the beginning and ending phases, and an inverted U-shaped association for peak duration in the full pitch and beginning phase.
+
+**Data & Measures**
+The analysis used 1,460 Kickstarter project pitch videos from projects listed across all platform categories on October 7, 2015. Funding performance was measured as the natural log of total U.S.-dollar funding and the natural log of the number of backers. FaceReader scored displayed joy from 0 to 10 in each visible-face video frame; peak displayed joy was the highest frame score, and peak duration was the total seconds spent at that score. Beginning, middle, and ending measures came from the first, middle, and last thirds of each video, with first- and last-quarter partitions used for robustness checks. Fourteen STATA OLS models with robust standard errors estimated the associations, with Models 1–7 predicting funding amount and Models 8–14 predicting backers.
+
+**Key Findings**
+H1 was supported: peak displayed joy positively predicted logged funding amount (b = 0.152, p < .01), and a one-unit increase corresponded to 16.42% more funding. H2 was supported: peak duration had a positive linear coefficient (b = 0.539, p < .05) and a negative squared coefficient (b = −0.107, p < .01), with predicted funding highest at 2.51 seconds. H3a and H3b were supported: beginning- and ending-phase peak displayed joy had positive coefficients (b = 0.094, p < .01; b = 0.056, p < .05), corresponding to 9.86% and 5.76% more funding per unit, respectively. H4a was supported: beginning-phase peak duration had an inverted U-shaped relationship, with its squared term negative (b = −0.076, p < .01) and predicted funding highest at approximately three seconds. H4b was not supported; ending-phase peak duration had no significant nonlinear effect. Quarter-phase robustness checks retained support for H3a, H3b, and H4a but not H4b, and models using number of backers yielded similar results.
 
 **Theoretical Contribution**
 The paper connects emotion temporal dynamics research with the interpersonal influence of displayed emotions. It contributes by showing that displayed emotion should not be treated only as a static average level; peak strength, duration, and phase can matter for observers’ decisions in an entrepreneurial funding context.

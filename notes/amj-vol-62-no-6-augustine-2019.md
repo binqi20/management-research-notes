@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-62-no-6/pdfs/Augustine 2019 Constructing a Distant Fu
 text_path: "library/AMJ/vol-62-no-6/text/Augustine 2019 Constructing a Distant Future Imaginaries in Geoengineering.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-qualitative"
 keywords: ["distant future", "geoengineering", "imaginaries", "as-if reality", "climate change", "dialectic process"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "cognitive construal (Berntsen & Bohn, 2010; Trope"
   methods_overview: "multi-step, abductive analysis of the evolution of"
   keywords_source: "societal-level imaginaries that were built on deeply held moral bases"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "multi-step, abductive analysis of the evolution of"
+  findings_overview: "dialectic process is the engine for the increasing as-if"
 ---
 
 # Constructing a Distant Future: Imaginaries in Geoengineering
@@ -53,6 +58,9 @@ We develop the concept of the distant future as a new way of seeing the future i
 **Research Question**
 The paper asks how the distant future of geoengineering was conceived and how it came to be treated as if it were real. More broadly, it asks how distant futures acquire enough concreteness and credibility to orient collective efforts despite ambiguity, controversy, and the absence of implementation.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Empirical setting: Geoengineering as a hypothetical set of planetary-scale climate technologies.
 - Key constructs: Distant future, near future, imaginaries, as-if reality, concreteness, and credibility.
@@ -61,6 +69,12 @@ The paper asks how the distant future of geoengineering was conceived and how it
 - Emergent outcome: Increasing as-if reality for geoengineering without substantial implementation.
 
 The analysis identifies Technofix as an initial imaginary that imports a societal-level belief in scientific progress and human mastery of nature into climate change discourse. Human Hubris contests this imaginary, while Plan B and Governance First attempt partial syntheses that make geoengineering more concrete while leaving core oppositions unresolved. The dialectic attracts more actors and more differentiated debate, so controversy increases rather than decreases the as-if reality of geoengineering.
+
+**Data & Measures**
+The authors assembled a longitudinal database of more than 2,500 documents totaling over 12,000 pages and 23 hours of video, drawing on scientific articles, books, governmental materials, speeches and debates, nongovernmental sources, conference reports, and newspapers through 2016. They iteratively identified five imaginaries in non-news materials and examined them in news articles; a purposeful temporal news sample and early scientific articles yielded 647 coded imaginary instances, which were cross-tabulated by phase, co-occurrence, and six actor types before dialectic mapping. As-if reality was interpreted through increasing concreteness in the discourse and credibility reflected in the diversity of actors treating geoengineering as worthy of engagement.
+
+**Key Findings**
+The analysis identified five imaginaries—Technofix, Human Hubris, Plan B, Governance First, and Conspiracy of Elite Control—organized through a dialectic of thesis, antithesis, and incomplete proposed syntheses. Technofix imported a societal imaginary; opposition from Human Hubris and later articulations of Plan B and Governance First increased specificity and brought in additional actors, while Conspiracy of Elite Control supplied a further antithesis. Rather than producing consensus or implementation, this ongoing contestation differentiated the ecology of imaginaries and increased geoengineering's concreteness and credibility, giving the distant future greater as-if reality.
 
 **Theoretical Contribution**
 The paper contributes the concept of the distant future as a way to distinguish futures that are distant from experience and convention from near futures organized around uncertainty, probability, and practical expectations. It theorizes imaginaries as moral and cosmological structures that allow actors to imagine discontinuous future possibilities. It also contributes to research on future-oriented action by showing that opposition and dialectic debate can make a distant future more concrete and credible without implementation or consensus.

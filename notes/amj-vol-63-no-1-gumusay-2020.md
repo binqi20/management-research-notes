@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-63-no-1/pdfs/Gümüsay 2020 “God at Work” Engagin
 text_path: "library/AMJ/vol-63-no-1/text/Gümüsay 2020 “God at Work” Engaging Central and Incompatible Institutional Logics through Elastic Hybridity.txt"
 ingested_at: "2026-06-27"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-03"
 
 paper_type: "empirical-qualitative"
 keywords: ["institutional logics", "hybrid organizations", "elastic hybridity", "polysemy", "polyphony", "Islamic banking"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Borrowing from paradox"
   methods_overview: "qualitative data"
   keywords_source: "polysemy” and “polyphony” as mechanisms"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Data items       60 days                                   73 semi-structured interviews            1,350 documents"
+  findings_overview: "outline “polysemy” and “polyphony” as mechanisms that dynamically engage conflicting logics through an organizational–individual interplay."
 ---
 
 # “God at Work”: Engaging Central and Incompatible Institutional Logics through Elastic Hybridity
@@ -52,6 +57,9 @@ Based on a 24-month ethnographic case study of the opening of the first Islamic 
 **Research Question**
 The paper asks how contested hybrid organizations can constructively engage central and incompatible logics to reduce conflict and increase organizational resilience. It focuses on the opening of KT Bank, where religion and market logics were both core to the organization and deeply implicated in employees' personal convictions.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key tensions: Central and incompatible religion and market logics in a nascent Islamic bank operating in Germany.
 - Organizational mechanism: Polysemy, through conceptual and presentational ambiguity, makes space for multiple meanings around Islamic banking, Sharia compliance, purpose, symbols, and presentation.
@@ -60,6 +68,12 @@ The paper asks how contested hybrid organizations can constructively engage cent
 - Boundary conditions: The case is especially revelatory because it involves a nascent organization, a Western market context, and religion as a demanding institutional logic.
 
 The process is not a variable-based causal model. KT Bank reduced conflict by keeping organizational meanings sufficiently open while allowing individuals to enact different balances of religion and market across places, times, and languages. This made competing logics temporarily more compatible or less central without permanently separating, blending, or resolving them.
+
+**Data & Measures**
+The study draws on a 24-month ethnographic case study of KT Bank comprising 60 days of observation, 73 semi-structured interviews, and 1,350 documents; data collection ended with the bank opening in July 2015. Analysis iterated between open coding text as religion or market, cross-coding practices by place, time, and language, and abstracting conceptual/presentational, spatial/temporal/multilingual, and inclusive/optional themes into polysemy, polyphony, and elastic hybridity.
+
+**Key Findings**
+KT Bank’s conceptual and presentational polysemy kept organizational meanings open, while employees’ spatial, temporal, and multilingual polyphony enabled separate enactments of religion and market. Their recursive interplay produced elastic hybridity: inclusiveness and optionality that reduced conflict and increased resilience without permanently separating, blending, or resolving the central, incompatible logics.
 
 **Theoretical Contribution**
 The paper contributes to institutional theory by theorizing polysemy and polyphony as multilevel mechanisms for engaging conflicting institutional logics. It develops elastic hybridity as a state in which a hybrid organization maintains unity in diversity and remains resilient despite central, incompatible logics. It also extends paradox theory by showing how frontline staff, not only managers or formal structures, participate in dynamic balancing.
