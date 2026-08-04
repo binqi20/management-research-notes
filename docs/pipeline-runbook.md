@@ -319,7 +319,11 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   unfindable claim as PARTIAL with suspected strip loss, never as
   fabrication. Parent handling: verify truncation-shaped PARTIALs against
   the RAW text with both search modes; faithful-in-stripped-region →
-  accepted PARTIAL (ferns/pamphile precedent). The cut-point logic itself is
+  accepted PARTIAL (ferns/pamphile precedent). The 15% flag ROUTES
+  attention — it does not bound the class: batch-20 de-stefano lost
+  Discussion prose at a 13.9% strip with no caution issued, so treat ANY
+  truncation-shaped PARTIAL as a raw-text verification case regardless of
+  the ratio. The cut-point logic itself is
   deliberately NOT fixed mid-backfill — it is global regex behavior under
   the corpus-sweep policy, and by user decision (2026-07-30) the fix is
   scheduled AFTER the AMJ backfill completes (all 67 issues at v3), in a
