@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-62-no-4/pdfs/Prato 2019 Middle-Status Conformity Revi
 text_path: "library/AMJ/vol-62-no-4/text/Prato 2019 Middle-Status Conformity Revisited The Interplay between Achieved and Ascribed Status.txt"
 ingested_at: "2026-06-29"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["middle-status conformity", "achieved status", "ascribed status", "conformity", "U.S. symphony orchestras"]
@@ -47,6 +49,9 @@ evidence:
   theories_overview: "ascribed and achieved status."
   methods_overview: "We used OLS models with a pooled panel design"
   keywords_source: "middle-status conformity applies"
+  hypotheses_source: "Hypothesis 1. There is an inverted U-shaped relationship between achieved status and"
+  measures_overview: "operationalized by the recordings of the conductor,"
+  findings_overview: "achieved status and conformity is inverted U-shaped"
 ---
 
 # Middle-Status Conformity Revisited: The Interplay between Achieved and Ascribed Status
@@ -57,6 +62,10 @@ Decisions about conforming to or deviating from conventional practices in a fiel
 **Research Question**
 The paper asks when middle-status conformity applies and when the opposite pattern, middle-status deviance, should be expected. It examines whether actors' conformity based on achieved status depends on the ascribed status inherited from their social group.
 
+**Hypotheses / Propositions**
+H1. There is an inverted U-shaped relationship between achieved status and conformity among actors from high ascribed-status groups.
+H2. There is a U-shaped relationship between achieved status and conformity among actors from low ascribed-status groups.
+
 **Mechanism Process**
 - IV(s): Achieved status, measured through conductors' cumulative weighted recordings and percentile rank in the conductor status hierarchy.
 - DV(s): Conductor conformity, measured as the extent to which a conductor's repertoire leaned toward canonical composers.
@@ -64,6 +73,12 @@ The paper asks when middle-status conformity applies and when the opposite patte
 - Moderators: High ascribed status, coded for German or Austrian conductors versus all other conductors.
 
 The mechanism is that ascribed status changes how actors interpret their achieved-status position. High ascribed status gives low- and high-achieved-status actors security or aspiration pressure that encourages deviance, leaving middle-status actors most conformist. Low ascribed status instead makes low-achieved-status actors focus on survival and high-achieved-status actors protect a precarious standing, producing greater conformity at the low and high ends of achieved status.
+
+**Data & Measures**
+The data are the repertoires of compositions played by the 27 largest U.S. symphony orchestras (by operating budget) from 1918 to 1969, taken from a data set originally assembled by Mueller (1973) and retrieved from the Cultural Policy and the Arts National Data Archive, updated with digitized repertoire information from the New York Philharmonic; season repertoires with fewer than 10 performances were excluded (17 cases, 1.6% of conductor-year observations). Biographical information was hand-collected for all 100 principal conductors of these orchestras, and recording information came from A Classical Discography (retrieved July 2018), from which 11,335 matrices (master recordings) by the sampled conductors were identified. The dependent variable, conductor conformity, is the weighted average of the conventionality of the composers in a conductor's repertoire in a given year, where composer conventionality is the proportion of a composer's compositions played by other conductors in the previous five years, scaled so that the most-played composer takes the value 1; the variable can range between 0 and 1. Achieved status is the conductor's cumulative number of recordings up to the current year, weighted by label prominence, converted into the percentile ranking position the conductor occupied in the status hierarchy that year. Ascribed status is an indicator variable coded 1 for conductors from Germany or Austria and 0 otherwise; 15 of the 100 conductors have high ascribed status. Controls include repertoire size, a Big Five orchestras indicator, orchestra centrality and its quadratic form, conducting experience in the United States, conductor tenure at the orchestra, first year with the orchestra, number of prior orchestras, conational composer popularity, and preference toward conational composers. Estimation uses OLS models with a pooled panel design on 1,031 conductor-year observations, with conductor fixed effects, decade fixed effects, and heteroskedasticity-robust standard errors. The design is associational and no causal identification strategy is claimed: conductor fixed effects are used to account for time-invariant heterogeneity across conductors, which absorbs the main effect of ascribed status so that it is not estimated in the OLS regressions. Robustness analyses follow Haans, Pieters, and He (2016) in testing slopes at the minimum and maximum of achieved status and the location of the inflection point, split the sample on the ascribed-status dummy (176 and 855 observations), and re-estimate with Allison's (2009) hybrid between-within model with conductor random effects.
+
+**Key Findings**
+Both hypotheses are supported. In the fully specified Model 5 of Table 3 (1,031 observations), the interaction of achieved status with high ascribed status (b1) is positive (0.73) and the interaction of achieved status squared with high ascribed status (b2) is negative (-0.61). A Wald test of the joint effects indicates that b1 + b3 is positive and statistically significant (p < .01) and that b2 + b4 is negative and statistically significant (p < .01), thereby supporting Hypothesis 1. The same model supports Hypothesis 2: the Results section reports that the coefficient on achieved status (b3) is negative and significant (p < .05) and that the coefficient on achieved status squared (b4) is positive and significant (p < .01); Table 3 gives b3 = -0.15 and b4 = 0.16. The additional curvilinear tests in Table 4 show significant slopes in the predicted directions at the minimum and maximum values of achieved status, 0.50 and -0.27 for German/Austrian conductors and -0.12 and 0.16 for non-German/Austrian conductors, with inflection points inside the observed range (0.64, 95% CI [0.56, 0.72] for German/Austrians; 0.47, 95% CI [0.35, 0.59] for non-German/Austrians). In the split-sample models of Table 5, the 176 German/Austrian observations yield a positive achieved-status coefficient (0.51, p < .05) and a negative squared term (-0.34, p = .07), while the 855 non-German/Austrian observations yield a negative achieved-status coefficient (-0.16, p < .05) and a positive squared term (0.16, p < .01). The hybrid between-within models in Table 6 are consistent, showing an inverted U-shaped relationship with high ascribed status and U-shaped relationships with low ascribed status. The authors also note that the inverted U-shaped relationship for high ascribed-status conductors appears to be more pronounced than the U-shaped relationship for low ascribed-status ones.
 
 **Theoretical Contribution**
 The paper revisits the scope conditions of middle-status conformity and argues that the classic inverted U-shaped pattern is a special case rather than a universal default. It contributes a more general status theory by distinguishing malleable achieved status from less malleable ascribed status and showing that their interplay can generate either middle-status conformity or middle-status deviance. It also extends research on multiple status hierarchies by emphasizing hierarchy malleability as a condition shaping behavior under status inconsistency.

@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-62-no-5/pdfs/Kahn 2019 Dynamics and Implications of D
 text_path: "library/AMJ/vol-62-no-5/text/Kahn 2019 Dynamics and Implications of Distress Organizing.txt"
 ingested_at: "2026-06-29"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-04"
 
 paper_type: "empirical-qualitative"
 keywords: ["distress organizing", "psychological distress", "collective avoidance mechanisms", "interpersonal avoidance patterns", "dispassionate responding", "compassion", "child welfare agency", "grounded theory"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "Social construction theory"
   methods_overview: "Data collection involved document and website"
   keywords_source: "psychological distress navigate paradoxical demands"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "primary categories of such responses: “dispassion” (lack of emotional involvement with distressed workers) and “compassion” (noticing, empathizing"
+  findings_overview: "Distress organizing thus amplified rather than ameliorated distress."
 ---
 
 # Dynamics and Implications of Distress Organizing
@@ -50,6 +55,9 @@ This study offers a theory-generating examination of the social construction pro
 **Research Question**
 How do organization members who are regularly exposed to psychological distress socially construct ways of navigating the paradoxical demands to both extend themselves toward others and protect themselves from distressing emotional experience? The study asks how individual, interpersonal, and organizational dynamics in a child welfare agency shape members' approaches to distress, dispassionate responding, and moments of compassion.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Psychological distress, the simultaneous need to work effectively with distressed others and protect the self, and the tension between emotional availability and self-protective disengagement.
 - Collective avoidance mechanisms: Intent task focus, clinical review structures, and constricting narratives that reduce the time, space, and impetus for members to experience distressing emotion.
@@ -58,6 +66,12 @@ How do organization members who are regularly exposed to psychological distress 
 - Counter-process: Momentary compassion when members notice, empathize with, and act to alleviate a distressed coworker's suffering, and when the distressed worker is available to receive support.
 
 The process begins with recurring distress episodes in child welfare work, including loss, traumatic stress, and public assaults on agency members' identities. Agency members collectively organize around task completion, clinical case review, and toughness narratives while also avoiding distress interpersonally through detachment, deflection, and suppression. These mutually reinforcing patterns create distress organizing: a socially constructed process that reduces emotional availability and legitimates dispassionate responding. Distress is therefore amplified rather than alleviated, except in brief moments when caring relationships, principles of care, or identification with another's suffering support compassion.
+
+**Data & Measures**
+Qualitative, theory-generating single-organization design. Table 1 lists the data sources: document analysis of agency regulations, procedures, and recommended child removal practices, and of local newspapers and websites documenting agency practices and community reactions; 22 office all-staff meetings (avg. 38 members, avg. 64 minutes) run as large-group semi-structured discussions captured via field notes; 22 office manager and director meetings (avg. 4 members, avg. 47 minutes) as small-group semi-structured discussions; and semi-structured individual interviews with 85 agency members, which provided the primary data — 34 social workers (avg. 57 minutes), 26 supervisors (avg. 61 minutes), 12 program managers (avg. 54 minutes), 8 office directors (avg. 49 minutes), and 5 senior administrators and attorneys (avg. 51 minutes). The interview sample was constructed to maximize demographics (tenure, roles, age, gender) by asking for volunteers at the large and small group meetings, then snowball sampling for members with compelling or unique perspectives. Interviews with the 34 social workers yielded descriptions of 87 discrete child removal events. Analysis used a grounded theory approach iterating between data and theory, with reflective memos written after meetings and interviews, continuing until no new themes emerged (theoretical saturation), across two analytic segments. In the first, meeting, field-note, and interview data on distressing episodes were analyzed into types of distress, formal agency and proximal member responses, and recurring effects on members' thought, feeling, and behavior, which were conceptualized as organizing practices. In the second, workers' accounts of how others responded to their removal-related distress were sorted into two primary categories — dispassion (lack of emotional involvement with distressed workers) and compassion (noticing, empathizing with, and acting to alleviate workers' distress) — with inductively developed sequences describing each category's effects on workers, and an inductively developed set of conditions under which compassionate responses occurred. The study is interpretive and theory-generating and makes no causal identification claim.
+
+**Key Findings**
+The central emergent finding is distress organizing: agency members enacted collective avoidance mechanisms — intent task focus, clinical review structures, and constricting narratives ("We save kids," "We are overrun," "We are tough") — alongside interpersonal avoidance patterns of detachment, deflection, and suppression, which sanctioned reduced emotional availability and set in place a culture of disengagement. Three types of recurring experience were the impetus for distress: loss, traumatic stress (primary and secondary), and public assaults on identity. Across the 87 discrete removal instances, 79% (69 instances) of how workers were responded to featured these mechanisms and interactive patterns of distress organizing; such dispassionate responding left workers emotionally isolated and then emotionally exhausted, blunted their empathy, and prompted further avoidance of clients and coworkers, so that distress organizing amplified rather than ameliorated distress. A minority of removal incidents — 21% of identified incidents — involved compassion, in which members noticed, empathized with, and sought to alleviate suffering workers. Compassion was activated in three types of circumstance: members personally cared about the distressed worker, the situation activated a principle related to caring for others, or the situation elicited a sense of identification with the distressed worker; it also required the distressed worker to be available and open to emotional support. Compassionate responses restored emotional connection and members' ability to empathize with and engage clients and coworkers, but these moments were counter-normative, brief, and extinguished as mounting caseloads, client demands, and emergent situations returned members to distress organizing, which remained the primary relational context.
 
 **Theoretical Contribution**
 The paper contributes to theory on emotional distress in organizations by shifting attention from individual coping to the social contexts that members enact together. It theorizes distress organizing as a collective-level process through which avoidance mechanisms and interpersonal patterns maintain and amplify distress. It also extends work on compassion and organizing by showing that organizations can contain prevailing cultures of disengagement alongside temporary counter-prevailing moments of compassion.

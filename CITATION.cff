@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-08-03"
-version: "0.52.0"
+date-released: "2026-08-04"
+version: "0.53.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,26 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.52.0
-  (2026-08-03) continues the v3 backfill with Academy of Management Journal
+  a published rubric) gates every note into the library. Version 0.53.0
+  (2026-08-04) continues the v3 backfill with Academy of Management Journal
+  volume 62 issues 5 and 4 — 25 notes, all v2 augmentations. A backfill adds no
+  papers, so the record total remains 1,167; the version-tier census shifts to
+  61 v1, 609 v2, and 497 v3 notes. All 25 augmentations passed the validator and
+  initial mechanical diff-guard on their first attempt, with no self-fix cycle
+  used anywhere in the batch. Each touched note passed a fresh full independent
+  9-field rubric-v2 audit, with a final 217 of 225 prose-field verdicts
+  SUPPORTED and 8 faithful PARTIALs accepted after two evidence-based
+  legacy-field repairs that each cleared a fresh blind re-audit at 9 of 9
+  SUPPORTED. Five accepted PARTIALs are the interleaved-REFERENCES class, in
+  which the fitted audit input discards column-1 Discussion prose because a
+  REFERENCES heading has begun in column 2; one of them sits below the 15%
+  strip-ratio suspicion threshold, showing that the detector routes attention
+  rather than bounding the problem. All 75 verdicts on the three new v3 fields
+  were SUPPORTED. This batch returns to claude-opus-5 under Claude Code for both
+  augmentation and audit, after four consecutive batches run end-to-end on
+  gpt-5.6-sol.
+  Version 0.52.0
+  (2026-08-03) continued the v3 backfill with Academy of Management Journal
   volume 63 issue 1 and volume 62 issue 6 — 27 notes, all v2 augmentations.
   A backfill adds no papers, so the record total remains 1,167; the version-tier
   census shifts to 61 v1, 634 v2, and 472 v3 notes. All 27 augmentations passed

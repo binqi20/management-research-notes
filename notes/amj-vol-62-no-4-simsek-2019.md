@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-62-no-4/pdfs/Simsek 2019 New Ways of Seeing Big Data.
 text_path: "library/AMJ/vol-62-no-4/text/Simsek 2019 New Ways of Seeing Big Data.txt"
 ingested_at: "2026-06-29"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-04"
 
 paper_type: "editorial"
 keywords: ["big data", "management scholarship", "theory", "methodology", "machine learning", "ethics", "privacy"]
@@ -45,6 +47,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Big data should not be treated as the end of theory or as a purely data-driven substitute for conventional management research. The editors argue for a two-way dialogue in which management scholarship both learns from and actively shapes big data research.
 - Perspective: The paper challenges pure empiricism, emphasizes the continued importance of causal adequacy and context, and suggests that big data inquiry may need abductive combinations of deductive and inductive logic.
@@ -54,6 +59,12 @@ Not reported in paper
 - Publishing barriers: Authors need to justify why big data fits the research question, make data creation and analysis transparent, validate constructs, avoid computational black boxes, and show the importance of predictive findings rather than relying on massive sample size alone.
 
 The process logic is editorial and programmatic rather than causal. Simsek and colleagues argue that management scholars can enrich big data research by bringing attention to theory, context, construct clarity, research design, ethics, and organizational phenomena. At the same time, big data can expand management scholarship by enabling new empirical approaches, new questions about organizations and decision-making, and new forms of theory building and testing when used carefully.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes a management-oriented agenda for studying big data as concept, methodology, and phenomenon. Its theoretical contribution is not a new formal theory but a positioning argument: management research should resist claims that data volume replaces theory and should instead use theory, context, and construct clarity to make big data research more meaningful and managerially relevant.
