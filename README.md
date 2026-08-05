@@ -549,6 +549,44 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.54.0 v3 backfill batch 21 (2026-08-05, 1,167 notes):**
+  Upgrades **AMJ volume 62, issues 3 and 2, 25 notes total** to the v3 schema —
+  all v2 augmentations. The **record total is unchanged at 1,167**; the
+  version-tier census shifts to 61 v1, 584 v2, and 522 v3. All 25 notes passed
+  `validate_note.py` and the `verify_augmentation.py` diff-guard, 24 of them on
+  the first attempt (one note used its single permitted self-fix cycle). Each
+  touched note then passed a fresh full independent 9-field rubric-v2 audit:
+  the final state is **224 / 225 prose-field verdicts `SUPPORTED`**, 1 faithful
+  `PARTIAL`, 0 `UNSUPPORTED`, and 0 `CONTRADICTED` (all 25 notes overall pass).
+  Round 1 returned 217/225 `SUPPORTED` with 8 `PARTIAL`s; **seven were
+  source-verified drift and were repaired, and all 63 verdicts across the seven
+  fresh blind re-audits came back `SUPPORTED`**. Six repairs share one legacy
+  class — a limitation, future direction, or audience the paper never states,
+  in three cases against the paper's own text: Dutt's Future Research asked
+  whether the findings hold in pharmaceuticals, telecoms, and ICT where the
+  paper states they *do* apply there; Weber's Limitations claimed the
+  experiments cannot reproduce real contract complexity where the paper's
+  conclusion touts experimental "precision and control"; and Zuzul's
+  Limitations added a prevalence caveat where the paper argues its cases'
+  differences "amplify the generalizability". The seventh repair is the batch's
+  only new-field content error: Shi's Data & Measures credited the Heckman
+  selection model with addressing the non-random assignment of language style
+  matching, which the paper assigns to IPTW — its Heckman first stage predicts
+  "whether a firm undertakes M&As in a year". The single remaining `PARTIAL` is
+  accepted, not edited: Sherf's Data & Measures faithfully reports an
+  Appendix A pilot (202 managers via Prolific, 263 via Qualtrics) that is
+  present in the raw text but **absent from the fitted audit input**, confirmed
+  by reconstructing the exact text the auditor received — the
+  interleaved-`REFERENCES` class at the batch's highest 22.3% strip ratio. All
+  25 `hypotheses` and all 25 `key_findings` verdicts were `SUPPORTED` in round
+  one, with no sign or direction reversal anywhere in the batch, so the
+  repeated-new-field stop rule was never approached. `library.bib` regenerated
+  byte-identical (the all-augmentation signature — only SQLite and CSV
+  changed). This batch ran on **`claude-opus-5` under Claude Code** for both
+  augmentation and audit, the second consecutive batch in that stamp era;
+  backfill provenance stamps now span batches 01–07 `claude-opus-4-8`, 08–15
+  `claude-opus-5`, 16–19 `gpt-5.6-sol`, and 20–21 `claude-opus-5`.
+
 - **v0.53.0 v3 backfill batch 20 (2026-08-04, 1,167 notes):**
   Upgrades **AMJ volume 62, issues 5 and 4, 25 notes total** to the v3 schema —
   all v2 augmentations. The **record total is unchanged at 1,167**; the
@@ -1230,7 +1268,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 609 v2 notes, and 497 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 584 v2 notes, and 522 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 

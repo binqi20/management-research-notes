@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-08-04"
-version: "0.53.0"
+date-released: "2026-08-05"
+version: "0.54.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,30 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.53.0
-  (2026-08-04) continues the v3 backfill with Academy of Management Journal
+  a published rubric) gates every note into the library. Version 0.54.0
+  (2026-08-05) continues the v3 backfill with Academy of Management Journal
+  volume 62 issues 3 and 2 — 25 notes, all v2 augmentations. A backfill adds no
+  papers, so the record total remains 1,167; the version-tier census shifts to
+  61 v1, 584 v2, and 522 v3 notes. All 25 augmentations passed the validator and
+  mechanical diff-guard, 24 on the first attempt and one after its single
+  permitted self-fix cycle. Each touched note passed a fresh full independent
+  9-field rubric-v2 audit, with a final 224 of 225 prose-field verdicts
+  SUPPORTED and 1 faithful PARTIAL accepted. Round one returned 217 of 225
+  SUPPORTED with 8 PARTIALs; seven were source-verified drift and were repaired,
+  and all 63 verdicts across the seven fresh blind re-audits returned SUPPORTED.
+  Six repairs share one legacy class — a limitation, future direction, or
+  audience the source paper never states, in three cases against the paper's own
+  text — and the seventh corrected the batch's only new-field content error, a
+  note crediting a Heckman selection model with a role the paper assigns to
+  inverse-probability-of-treatment weighting. The single accepted PARTIAL is the
+  interleaved-REFERENCES class: appendix pilot figures present in the raw text
+  but absent from the fitted audit input, confirmed by reconstructing the exact
+  text the auditor received. All 25 hypotheses and all 25 key-findings verdicts
+  were SUPPORTED in round one, with no sign or direction reversal in the batch.
+  This batch ran on claude-opus-5 under Claude Code for both augmentation and
+  audit, the second consecutive batch in that stamp era.
+  Version 0.53.0
+  (2026-08-04) continued the v3 backfill with Academy of Management Journal
   volume 62 issues 5 and 4 — 25 notes, all v2 augmentations. A backfill adds no
   papers, so the record total remains 1,167; the version-tier census shifts to
   61 v1, 609 v2, and 497 v3 notes. All 25 augmentations passed the validator and

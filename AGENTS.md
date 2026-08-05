@@ -140,27 +140,33 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-08-04):
+**Current main-branch audit state (2026-08-05):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 20 upgraded 25 notes (AMJ vol-62-no-5 + vol-62-no-4, all v2
-augmentations) to v3. The final batch audit is **217/225 prose-field verdicts
-SUPPORTED, with 8 faithful `PARTIAL`s accepted**, after two evidence-based
-legacy-field repairs across two notes in one repair round and two audit
-rounds. All 25 augmentation deltas passed the validator and initial diff-guard
-on their first attempt, without a gate failure or a self-fix cycle. Five of the
-accepted `PARTIAL`s are the interleaved-`REFERENCES` class, where the fitted
-audit input discards column-1 Discussion prose because a `REFERENCES` heading
-has begun in column 2 — Wang (×2) and Shea (×2) above the 15% strip-ratio
-threshold, and De Stefano at 13.9%, below it, which shows the detector is a
-routing aid rather than a floor. The remaining three (Lin, Nigam, Simsek) are
-faithful content carrying a minor inferred frame, the rubric's own definition
-of `PARTIAL`. All 75 verdicts on the three new v3 fields were `SUPPORTED`, so
-the repeated-new-field stop rule was not approached. This batch returns to
-`claude-opus-5` under Claude Code for both augmentation and audit, after four
-consecutive batches (16–19) run end-to-end on `gpt-5.6-sol`; the recurring
-workshop cross-family spot-audit moves to the next Codex batch's review. The
-corpus contains 61 legacy v1
-notes, 609 v2 notes, and 497 v3 notes with evidence anchors; new notes are
+batch 21 upgraded 25 notes (AMJ vol-62-no-3 + vol-62-no-2, all v2
+augmentations) to v3. The final batch audit is **224/225 prose-field verdicts
+SUPPORTED, with 1 faithful `PARTIAL` accepted**, after seven evidence-based
+repairs across seven notes in one repair round and two audit rounds. All 25
+augmentation deltas passed the validator and initial diff-guard, 24 on their
+first attempt and one after its single permitted self-fix cycle. Round 1
+returned 217/225 `SUPPORTED` with 8 `PARTIAL`s; seven were source-verified
+drift and were repaired, and all 63 verdicts across the seven fresh blind
+re-audits returned `SUPPORTED`. Six of those repairs share one legacy class —
+a limitation, future direction, or audience the source paper never states, in
+three cases against the paper's own text — and the seventh corrected the
+batch's only new-field content error, a note crediting a Heckman selection
+model with a role the paper assigns to IPTW. The single accepted `PARTIAL`
+(Sherf) is the interleaved-`REFERENCES` class, where the fitted audit input
+discards column-1 prose because a `REFERENCES` heading has begun in column 2:
+the note's Appendix A pilot figures are present in the raw text and absent
+from the fitted input, confirmed by reconstructing the exact text the auditor
+received, at the batch's highest 22.3% strip ratio. All 25 `hypotheses` and
+all 25 `key_findings` verdicts were `SUPPORTED` in round one — no sign or
+direction reversal anywhere in the batch — so the repeated-new-field stop rule
+was not approached. This batch ran on `claude-opus-5` under Claude Code for
+both augmentation and audit, the second consecutive batch in that stamp era;
+the recurring workshop cross-family spot-audit remains owed at the next Codex
+batch's review. The corpus contains 61 legacy v1
+notes, 584 v2 notes, and 522 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -194,7 +200,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.53.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.54.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

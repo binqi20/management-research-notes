@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-62-no-3/pdfs/DeCelles 2019 From the Editors—Discipl
 text_path: "library/AMJ/vol-62-no-3/text/DeCelles 2019 From the Editors—Disciplinary Code Switching at AMJ The Tale of Goldilocks and the Three Journals.txt"
 ingested_at: "2026-06-29"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-05"
 
 paper_type: "editorial"
 keywords: ["disciplinary code switching", "theoretical contribution", "theory development", "method and analyses", "base-discipline journals", "management research"]
@@ -43,6 +45,9 @@ Not reported in paper
 **Research Question**
 How can scholars trained in base disciplines craft manuscripts that are more likely to be understood as fitting AMJ's expectations for contribution, theory development, and methods? The editorial focuses especially on micro-oriented quantitative scholars who want to publish in AMJ or a similar management journal.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: What counts as "just right" varies across journals, so authors need to code switch across disciplinary and journal norms rather than assume that good research has a single universal presentation.
 - Contribution: AMJ expects authors to articulate how a manuscript changes what management researchers already know, rather than relying only on gap framing or contribution to a base discipline.
@@ -51,6 +56,12 @@ How can scholars trained in base disciplines craft manuscripts that are more lik
 - Boundary conditions: The advice is not exhaustive, not a formula for all AMJ papers, and is most applicable to micro-oriented quantitative scholars trained in disciplines such as psychology.
 
 The process logic is editorial and advisory rather than causal. DeCelles, Leslie, and Shaw argue that manuscripts from base-discipline scholars can be misread at AMJ when they do not make the management contribution, theoretical grounding, and empirical design choices explicit for AMJ's broad readership. The authors therefore translate AMJ preferences into three Goldilocks categories: contribution as the porridge, theory development as the chair, and methods as the bed.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new theory. Its contribution is to clarify AMJ's editorial expectations for disciplinary code switching, especially the need to frame contribution relative to management knowledge, use theory development that supports explicit hypotheses, and design methods that align tightly with the manuscript's theoretical claims.
