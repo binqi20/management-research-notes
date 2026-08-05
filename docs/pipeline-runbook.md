@@ -385,6 +385,21 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   Study 3 and costing an extra audit round. When attributing a claim to a
   study or section during verification or repair, read the line-level
   column geometry around the boundary; never conclude from offsets.
+- **Verification sweeps run in ONE Python script, not composite shell
+  chains (batches 04–21):** zsh word-splitting, quoting artifacts, and
+  grep's exit-1-on-no-match have each either mislabeled a clean state as
+  a failure or silently suppressed later checks in the same `&&` chain
+  (batch 21: the disk-scope grep found nothing — the GOOD outcome — and
+  its exit 1 aborted the anchor and heading checks queued behind it). Run
+  independent checks as separate commands or one Python script; any grep
+  used as a display filter where zero matches is success gets `|| true`.
+- **Strip-loss proof = presence-in-raw + absence-in-fitted (batch-21
+  sherf):** to verify a suspected strip-loss PARTIAL, do not stop at
+  finding the content in the raw text — RECONSTRUCT the exact fitted text
+  the auditor received via `audit_note.fit_pdf_text_for_audit(raw)` and
+  probe THAT. Content present in raw and absent from fitted is the proof;
+  content present in both means the auditor saw it and the PARTIAL needs
+  a different explanation.
 - **Full-line rule (batch 15, zipay + opper):** a width-truncated preview
   of a matched line is the sibling failure of the 0-hit search. Batch 15
   nearly deleted a supported claim and DID ship a wrong repair from a
