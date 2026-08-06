@@ -549,6 +549,46 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.55.0 v3 backfill batch 22 (2026-08-06, 1,167 notes):**
+  Upgrades **AMJ volume 62 issue 1 and volume 61 issue 6, 27 notes total** to the
+  v3 schema — all v2 augmentations. The **record total is unchanged at 1,167**;
+  the version-tier census shifts to 61 v1, 557 v2, and 549 v3. All 27 notes
+  passed `validate_note.py` and the `verify_augmentation.py` diff-guard, 26 of
+  them on the first attempt (one note used its single permitted self-fix cycle).
+  Each touched note then passed a fresh full independent 9-field rubric-v2 audit:
+  the final state is **238 / 243 prose-field verdicts `SUPPORTED`**, 5 faithful
+  `PARTIAL`s, 0 `UNSUPPORTED`, and 0 `CONTRADICTED` (all 27 notes overall pass).
+  Round 1 returned 234/243 `SUPPORTED` with 9 `PARTIAL`s; **four were
+  source-verified drift and were repaired, and all four repaired fields came back
+  `SUPPORTED` in fresh blind re-audits**. Three repairs share the recurring legacy
+  class — a limitation or future direction the paper never states, in all three
+  cases against the paper's own text: Jia's Limitations said the findings may not
+  generalize to privately owned firms where the paper states its theory "should,
+  in principle, be applicable" to them; Schilpzand's Future Research recommended
+  actigraphy where the paper raises it only to conclude that "Barnes (2012) even
+  recommended self-rated sleep as the most appropriate and useful methodology";
+  and Fini's Future Research recast a boundary condition the paper calls "rare"
+  and "likely to be met in most settings" as a research agenda. The fourth fixed a
+  direction garble: Simsek's Mechanism Process summary said research trails
+  practice, where the editorial says "When impact trails research" and "When
+  impact leads research" — the note's own bullets already had it right. The five
+  remaining `PARTIAL`s are accepted, not edited: all are the
+  interleaved-`REFERENCES` class, where a `REFERENCES` heading begins in column 2
+  while column 1 is still running Discussion prose, so the fitted audit input
+  discards faithful text. Each was proven by reconstructing the exact text the
+  auditor received — Wang's three verdicts at the batch's highest 19.3% strip
+  ratio, plus Li's and Simsek's at **14.9% and 13.0%, both below the 15% caution
+  threshold**, confirming again that the flag routes attention rather than
+  bounding the class. All 27 `hypotheses` and 26 of 27 `key_findings` verdicts
+  were `SUPPORTED` in round one, with no sign or direction reversal anywhere in
+  the batch, and all four repairs landed in legacy fields, so the
+  repeated-new-field stop rule was never approached. `library.bib` regenerated
+  byte-identical (the all-augmentation signature — only SQLite and CSV changed).
+  This batch ran on **`claude-opus-5` under Claude Code** for both augmentation
+  and audit, the third consecutive batch in that stamp era; backfill provenance
+  stamps now span batches 01–07 `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19
+  `gpt-5.6-sol`, and 20–22 `claude-opus-5`.
+
 - **v0.54.0 v3 backfill batch 21 (2026-08-05, 1,167 notes):**
   Upgrades **AMJ volume 62, issues 3 and 2, 25 notes total** to the v3 schema —
   all v2 augmentations. The **record total is unchanged at 1,167**; the
@@ -1268,7 +1308,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 584 v2 notes, and 522 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 557 v2 notes, and 549 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 

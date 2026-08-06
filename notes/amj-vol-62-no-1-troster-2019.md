@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-62-no-1/pdfs/Tröster 2019 The Coevolution of Social 
 text_path: "library/AMJ/vol-62-no-1/text/Tröster 2019 The Coevolution of Social Networks and Thoughts of Quitting.txt"
 ingested_at: "2026-06-28"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-06"
 
 paper_type: "empirical-quantitative"
 keywords: ["thoughts of quitting", "advice ties", "friendship ties", "network churn", "network stasis", "conservation of resources theory"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "conservation of resources theory"
   methods_overview: "To test our hypotheses, we used SIENA"
   keywords_source: "network churn"
+  hypotheses_source: "test the novel hypotheses that for friendship ties, thoughts of quitting are positively related to tie retention and negatively related to tie creation"
+  measures_overview: "think about quitting this job” and “I will probably look"
+  findings_overview: "we find support for our hypotheses that thoughts of quitting affect network changes, but do not find that network changes affect thoughts of quitting."
 ---
 
 # The Coevolution of Social Networks and Thoughts of Quitting
@@ -53,6 +58,16 @@ Research has shown that employees who occupy more central positions in their org
 **Research Question**
 The paper asks whether employees’ thoughts of quitting are a precursor to, a consequence of, or mutually intertwined with changes in their workplace social networks. It examines this question at the tie level by distinguishing advice ties from friendship ties and by separating tie creation, retention, and dissolution.
 
+**Hypotheses / Propositions**
+- H1: The number of newly created advice-seeking ties is negatively related to subsequent thoughts of quitting.
+- H2: The number of newly created friendship ties is negatively related to subsequent thoughts of quitting.
+- H3: The number of recently dropped advice-seeking ties is positively related to subsequent thoughts of quitting.
+- H4: The number of recently dropped friendship ties is positively related to subsequent thoughts of quitting.
+- H5: Thoughts of quitting are negatively related to the subsequent retention of advice ties (negative retention effect).
+- H6: Thoughts of quitting are positively related to the subsequent creation of advice ties (positive creation effect).
+- H7: Thoughts of quitting are positively related to the subsequent retention of friendship ties (positive retention effect).
+- H8: Thoughts of quitting are negatively related to the subsequent creation of new friendship ties (negative creation effect).
+
 **Mechanism Process**
 - IV(s): Newly created advice ties, newly created friendship ties, recently dropped advice ties, recently dropped friendship ties, and thoughts of quitting.
 - DV(s): Subsequent thoughts of quitting; subsequent creation and retention of outgoing advice and friendship ties.
@@ -60,6 +75,12 @@ The paper asks whether employees’ thoughts of quitting are a precursor to, a c
 - Moderators: Tie type, distinguishing instrumental advice ties from affective friendship ties.
 
 Drawing on conservation of resources theory, the paper argues that workplace ties provide valued resources and that employees seek to protect existing resources while selectively acquiring new ones. The authors expected newly created ties to reduce thoughts of quitting and dissolved ties to increase them, but found no support for network changes predicting thoughts of quitting. In the reverse direction, thoughts of quitting increased advice network churn by making employees more likely to drop old advice ties and create new ones, while increasing friendship tie retention as employees protected valued affective resources.
+
+**Data & Measures**
+Questionnaire data were collected at three time points approximately four months apart from 121 employees in eight healthcare organizations in the Netherlands; all questionnaires were administered in Dutch, and the overall response rates were 91, 90, and 89%. Thoughts of quitting was measured with two items adopted from the Michigan Organizational Assessment Questionnaire ("I frequently think about quitting this job" and "I will probably look for a new job soon") on five-point Likert scales; because SIENA only uses discrete dependent variables, the scores were summed and 1 subtracted, producing a discrete measure that could range from 1 to 9 (Cronbach's alphas for the three time points were .74, .83, and .82, respectively). Advice ties were measured by presenting respondents with a randomly sorted list of the names of all employees in their organization and asking them to check those they turn to for advice or help ("Do you usually go to this person for help or advice on work-related matters?"), with no restriction on the number of names chosen; friendship ties were measured after presenting participants with a definition of friendship (people with whom one likes to spend free time and with whom one has most often engaged in informal social activities), which gathered data on whom people perceived as a friend. Only outgoing ties were modeled. SIENA's degPosContrX and degNegContrX effects supplied the counts of newly created and recently lost outgoing ties used as the independent variables for Hypotheses 1-4, while Hypotheses 5-8 were tested as SIENA estimates of whether thoughts of quitting change the likelihood of retaining versus dropping, and of creating versus not creating, an outgoing tie. The model predicting thoughts of quitting included tenure, age, gender, job satisfaction (three Michigan Organizational Assessment Questionnaire items, alpha = .87), working hours, rank, need to belong (Leary and colleagues' 10-item Need to Belong Scale, alpha = .68), outgoing hindrance ties, and outgoing advice and friendship degree centrality; the models predicting outgoing ties added structural effects (reciprocity, transitivity, three-cycles, indegree popularity, outdegree activity), demographic ego, alter, and similarity effects, and a varying dyadic hindrance-relationship covariate ("Do you have a difficult relationship with this person?"). Because three dependent variables were estimated, 21 organization dummy variables were included (seven per model, with one organization as the comparison category). Estimation used SIENA stochastic actor-based modeling on 1,932 network relations encompassing 121 people across two networks assessed over three time points, with structural zeros for periods before joining or after leaving and between organizations, Jaccard indices above the recommended 0.3, 5,000 iterations, convergence statistics between -0.1 and 0.1, and an overall maximum convergence ratio of 0.24. The authors state that despite the longitudinal design, simulation-based analysis, and inclusion of relevant effects as covariates, they cannot establish causality.
+
+**Key Findings**
+Hypotheses 1-4 were not supported: the effect of tie creation on subsequent thoughts of quitting was not significant (advice: estimate = -.01, n.s.; friendship: estimate = .04, n.s.), nor was the effect of tie dissolution (advice: estimate = -.19, n.s.; friendship: estimate = .03, n.s.), and network centrality, included as a covariate, also did not affect thoughts of quitting. In the reverse direction, Hypothesis 5 was supported: thoughts of quitting had a significant and negative effect on advice-seeking tie retention (estimate = -2.53, p < .001), which the authors interpret as thoughts of quitting increasing the likelihood of dropping existing advice ties. Hypothesis 6 was supported by a positive and significant creation effect of thoughts of quitting on advice ties (estimate = 2.51, p < .001). Hypothesis 7 was supported: thoughts of quitting increased the tendency of maintaining friendship ties (estimate = .51, p < .05). Hypothesis 8 was not supported: the friendship tie creation effect was negative as predicted but not significant (estimate = -.17, n.s.). The authors summarize the pattern as higher thoughts of quitting producing churn in the advice network and stasis in the friendship network, while changes in network ties did not predict thoughts of quitting; they caution that the nonsignificant results should be read as a lack of evidence that networks affect thoughts of quitting rather than as proof against such influence.
 
 **Theoretical Contribution**
 The paper advances a dynamic coevolution perspective on turnover cognitions and social networks by showing that thoughts of quitting can shape network change rather than merely result from network embeddedness. It contributes to social network theory by demonstrating that aggregate network size can miss tie-level dynamics, especially the different patterns of advice network churn and friendship network stasis. It also extends conservation of resources theory by treating social ties as resources whose perceived loss and gain structure employees’ network behavior.

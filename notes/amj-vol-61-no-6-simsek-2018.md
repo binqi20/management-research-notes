@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-61-no-6/pdfs/Simsek 2018 From the Editors—Seeing Pr
 text_path: "library/AMJ/vol-61-no-6/text/Simsek 2018 From the Editors—Seeing Practice Impact in New Ways.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-06"
 
 paper_type: "editorial"
 keywords: ["practice impact", "research pathways", "trailing", "leading", "concurrent", "research-practice gap", "collective body of knowledge"]
@@ -56,6 +58,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial problem: The essay asks whether management research influences how practitioners think, talk, or perform their work, but argues that the field has framed practice impact too narrowly around ex post evaluations of individual studies.
 - Trailing pathway: Research affects practice after a study is completed, often through translated findings, articles, slide decks, teaching cases, books, meta-analyses, and cumulative bodies of knowledge.
@@ -63,7 +68,13 @@ Not reported in paper
 - Concurrent pathway: Researchers and practitioners jointly create impact during the research process through engaged scholarship, relational scholarship, action research, participant observation, and other reciprocal forms of inquiry.
 - Reframed unit of impact: The editors argue that research streams, collective knowledge, teaching, and co-creative research processes are better frames for practice impact than a single article's immediate managerial implications.
 
-The process logic is editorial and programmatic rather than causal. Simsek, Bansal, Shaw, Heugens, and Smith argue that practice impact emerges through multiple pathways over time: research can trail practice through cumulative evidence, lead research through practitioner involvement in question and design formation, or occur concurrently when researchers and practitioners jointly produce knowledge. The editorial's core move is to replace a narrow, article-level impact frame with a broader portfolio view of complementary academic and experiential knowledge systems.
+The process logic is editorial and programmatic rather than causal. Simsek, Bansal, Shaw, Heugens, and Smith argue that practice impact emerges through multiple pathways over time: impact can trail research, in which case the relevant unit is the body of knowledge rather than silver bullets in single studies; impact can lead research, in which case what matters is the dialogue created by bringing research more proximal to practice; or research can be concurrent with impact, in which case the co-created process and knowledge need to be considered. The editorial's core move is to replace a narrow, article-level impact frame with a broader portfolio view of complementary academic and experiential knowledge systems.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes a three-pathway framework for thinking about management research practice impact: trailing, leading, and concurrent. Its main conceptual contribution is to shift the level of reasoning from individual studies and immediate practical implications to research streams, collective bodies of knowledge, researcher-practitioner dialogue, teaching, and co-created inquiry processes. It also argues that academic and practitioner knowledge systems should be treated as complementary and mutually dependent rather than as substitutes.
