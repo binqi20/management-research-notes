@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-08-06"
-version: "0.55.0"
+date-released: "2026-08-12"
+version: "0.56.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,8 +54,33 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.55.0
-  (2026-08-06) continues the v3 backfill with Academy of Management Journal
+  a published rubric) gates every note into the library. Version 0.56.0
+  (2026-08-12) continues the v3 backfill with Academy of Management Journal
+  volume 61 issues 5 and 4 — 31 notes, all v2 augmentations, and the largest
+  batch of the backfill so far. A backfill adds no papers, so the record total
+  remains 1,167; the version-tier census shifts to 61 v1, 526 v2, and 580 v3
+  notes. All 31 augmentations passed the validator and mechanical diff-guard,
+  30 on the first attempt and one after its single permitted self-fix cycle.
+  Each touched note passed a fresh full independent 9-field rubric-v2 audit,
+  with a final 275 of 279 prose-field verdicts SUPPORTED and 4 faithful
+  PARTIALs accepted. Round one returned 272 of 279 SUPPORTED with 7 PARTIALs;
+  six fields were source-verified drift and were repaired, and five of the six
+  returned SUPPORTED in fresh blind re-audits. Three repairs share the recurring
+  legacy class — a limitation or direction the source paper never states, in two
+  cases against the paper's own text; a fourth corrected a count conflation that
+  merged a paper's six periods with its eight strategic configurations; and a
+  fifth removed an invented practice audience under the two-channel rule despite
+  a SUPPORTED verdict. Only one repair landed in a new v3 field, an inverted
+  sign convention for a change-in-confidence measure, so the repeated-new-field
+  stop rule was not approached. Three of the four accepted PARTIALs are the
+  interleaved-REFERENCES class, each confirmed by reconstructing the exact text
+  the auditor received, and two of those sit below the 15 percent caution
+  threshold. The fourth arose where no text was stripped at all and two
+  independent auditors split on framing alone; it was accepted under the repair
+  convergence bound. This batch ran on claude-opus-5 under Claude Code for both
+  augmentation and audit, the fourth consecutive batch in that stamp era.
+  Version 0.55.0
+  (2026-08-06) continued the v3 backfill with Academy of Management Journal
   volume 62 issue 1 and volume 61 issue 6 — 27 notes, all v2 augmentations. A
   backfill adds no papers, so the record total remains 1,167; the version-tier
   census shifts to 61 v1, 557 v2, and 549 v3 notes. All 27 augmentations passed

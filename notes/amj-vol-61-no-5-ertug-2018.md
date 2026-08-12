@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-5/pdfs/Ertug 2018 From the Editors—A Brief Pr
 text_path: "library/AMJ/vol-61-no-5/text/Ertug 2018 From the Editors—A Brief Primer on Data Visualization Opportunities in Management Research.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-12"
 
 paper_type: "editorial"
 keywords: ["data visualization", "qualitative data", "quantitative data", "word clouds", "word trees", "social graphs", "history flows", "multidimensional scaling plots", "funnel plots", "maps", "bubble plots", "dynamic plots", "tree maps"]
@@ -54,6 +56,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core purpose: The editorial introduces data visualization techniques from outside management that could help management scholars communicate qualitative and quantitative data more effectively.
 - Qualitative visualization techniques: The primer discusses word clouds, word trees, social graphs, and history flows, emphasizing how these tools can make text, networks, and editing histories more visible.
@@ -62,6 +67,12 @@ Not reported in paper
 - Aesthetic guidance: The editorial argues that visualization choices should make research more understandable, informative, efficient, and aesthetically appealing.
 
 The process logic is editorial and instructional rather than causal. Ertug and colleagues treat visualization as an additional communication mode for management research, first surveying techniques for qualitative and quantitative data and then linking those techniques to caveats, examples, and software choices. The central argument is that management researchers should look beyond standard charts and deliberately match visualization forms to the properties, relationships, and interpretive needs of their data.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop or test a theory. Its contribution is methodological and programmatic: it broadens the repertoire of visualization practices available to management researchers and frames visualization as a way to improve communication, memory, pattern recognition, and reader engagement.

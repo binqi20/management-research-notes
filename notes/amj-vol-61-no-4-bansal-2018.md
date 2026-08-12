@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-4/pdfs/Bansal 2018 New Ways of Seeing through Q
 text_path: "library/AMJ/vol-61-no-4/text/Bansal 2018 New Ways of Seeing through Qualitative Research.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-12"
 
 paper_type: "editorial"
 keywords: ["qualitative research", "inductive theorizing", "qualitative genres", "new ways of seeing", "methodological diversity"]
@@ -52,6 +54,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how qualitative research can help management scholars develop "new ways of seeing" and why AMJ authors should use a broader range of qualitative genres. It focuses on how methodological diversity, genre-specific assumptions, and internal coherence can strengthen inductive theory building.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Qualitative research can surface new theoretical insights by building theory inductively from data, especially in complex or understudied empirical contexts.
 - Genre diversity: The editorial presents variance-based case studies, process studies, engaged scholarship, historical studies, and discourse studies as different qualitative genres with distinct assumptions and forms of insight.
@@ -59,6 +64,12 @@ The editorial asks how qualitative research can help management scholars develop
 - Editorial stance: The essay treats methodological diversity as necessary for qualitative research to avoid premature institutionalization around a narrow set of norms.
 
 The process logic is editorial and methodological rather than empirical. Bansal, Smith, and Vaara argue that qualitative research advances theory when scholars deliberately match research questions, data, analysis, and onto-epistemological assumptions to the qualitative genre they are using. Their central warning is that templates can help establish rigor but can also narrow what qualitative research is able to reveal.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes to management-methods discourse by framing qualitative methods as genres rather than as a single method category. This framing helps distinguish the assumptions and analytic logics of variance-based cases, process studies, engaged scholarship, historical work, and discourse analysis while preserving the shared goal of inductive theorizing.

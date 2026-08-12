@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-5/pdfs/Gupta 2018 Evenhandedness in Resource Al
 text_path: "library/AMJ/vol-61-no-5/text/Gupta 2018 Evenhandedness in Resource Allocation Its Relationship with CEO Ideology, Organizational Discretion, and Firm Performance.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-12"
 
 paper_type: "empirical-quantitative"
 keywords: ["evenhandedness", "resource allocation", "CEO ideology", "organizational ideology", "motivated cognition", "firm performance"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "According to upper echelons theory"
   methods_overview: "GEE regression results"
   keywords_source: "personal political donations to capture ideologies"
+  hypotheses_source: "Hypothesis 1. The greater a CEO’s liberalism, the more"
+  measures_overview: "we used the firm’s Tobin’s q as the dependent variable"
+  findings_overview: "positive effect (p , .01) for CEO liberalism"
 ---
 
 # Evenhandedness in Resource Allocation: Its Relationship with CEO Ideology, Organizational Discretion, and Firm Performance
@@ -52,6 +57,14 @@ We develop a new explanation for why some organizations are relatively evenhande
 **Research Question**
 The paper asks whether CEOs' values, operationalized through political ideology on the conservatism-liberalism continuum, shape core strategic resource allocation decisions in multibusiness firms. It also asks when organizational ideology and CEO wealth incentives amplify or constrain that values-based influence, and whether the performance implications of evenhanded resource allocation depend on alignment with organizational ideology.
 
+**Hypotheses / Propositions**
+- H1: The greater a CEO's liberalism, the more evenhanded the resource allocations in the firm.
+- H2: Greater organizational liberalism will increase the positive effect of CEO liberalism on evenhandedness (and, conversely, greater organizational conservatism will increase the negative effect of CEO conservatism on evenhandedness).
+- H3: CEO equity-based pay moderates the association between a CEO's liberalism and evenhandedness in resource allocation, such that the greater the CEO's equity-based pay, the stronger that association.
+- H4: CEO shareholdings moderate the association between a CEO's liberalism and evenhandedness in resource allocation, such that the greater the CEO's shareholdings, the stronger that association.
+- H5: Organizational liberalism moderates the association between evenhanded resource allocation and firm performance, such that the greater the organization's liberalism, the more positive (or less negative) that association.
+- The authors state that, given competing forces, they do not hypothesize a baseline relationship between evenhandedness and subsequent performance.
+
 **Mechanism Process**
 - IV(s): CEO liberalism; organizational liberalism; CEO equity-based pay; CEO shareholdings; evenhandedness in capital allocation for the performance models.
 - DV(s): Evenhandedness in capital allocation across business units; subsequent firm performance measured primarily with Tobin's q.
@@ -60,11 +73,33 @@ The paper asks whether CEOs' values, operationalized through political ideology 
 
 The mechanism links CEO values, organizational social context, and financial incentives. Liberal CEOs are theorized to see evenhanded allocations as more consistent with egalitarian values, while conservative CEOs tolerate greater allocation disparities. Organizational ideology can amplify or mute the CEO's values because organizational members' prevailing beliefs shape the social arena in which allocation decisions are proposed, justified, and implemented. Equity-based pay and shareholdings intensify the CEO ideology effect because motivated cognition leads CEOs to perceive values-congruent allocation choices as instrumentally sensible when more wealth is at stake.
 
+**Data & Measures**
+- Data sources: the Compustat segment database for business segments and financial attributes; Federal Election Commission (FEC) filings for personal political donations (gifts of $200 or more); Execucomp for executive information; Thomson-Reuters Institutional Holdings for ownership vigilance; and CRSP for firm age.
+- Sample: U.S. Fortune 500 corporations over 2000-2012, restricted to firms with two or more units, yielding 278 multibusiness firms over 2,072 firm-years with an average of four units per year. Tables 1 and 2 report n = 2,072; the performance models in Table 3 report n = 1,819, and the Table 1 note states only that n is somewhat smaller for the Tobin's q variables.
+- DV, evenhandedness in capital allocation: coded in two steps. Unit-level allocation is new capital investment to each business segment i belonging to corporate parent j in year t, scaled by segment assets at the beginning of the year (Capx/Assets). The coefficient of variation (COV) of those allocations across a firm's units in a given year is then multiplied by -1 and standardized, so higher values reflect more evenhandedness and lower values more disparate allocations. The same variable is used as an independent variable in the performance models.
+- DV, subsequent firm performance: Tobin's q in year t+1, measured as the ratio of market value (book value of debt plus market value of equity) to the replacement cost of assets (book value of total assets), with Tobin's q in year t and industry average Tobin's q as controls. Total Shareholder Returns and Tobin's q at t+2 are reported as alternative specifications.
+- IV, CEO liberalism: FEC donation records from the prior 10 years, matched to Execucomp on self-reported names, employer names, job titles and locations. Four ratio indicators (behavioral commitment, financial commitment, persistence of commitment, scope of commitment) cohered at Cronbach's alpha = .92 and were averaged into a composite index ranging from 0 (extreme conservatism) to 1 (extreme liberalism). 82% of sample CEOs donated at least once during 1992-2012, averaging 27.2 donations per person; CEOs without political contributions were assigned .50.
+- Moderator, organizational liberalism: the same four-item logic applied to FEC donations by organizational members other than the CEO, averaging 1,881 donation records per firm over 1998-2012. The index was built for each two-year election cycle (Cronbach's alpha = .94) and averaged over the two latest cycles.
+- Moderator, CEO equity-based pay: the proportion of total CEO compensation comprised of stock options (ex ante value of options granted) and restricted stock, measured as a two-year average (t-1 and t-2).
+- Moderator, CEO shareholdings: the percent of company stock owned by the CEO.
+- Controls: unit-level heterogeneity in size, sales growth, Tobin's q, ROA, peer investment and peer performance; a new unit(s) dummy; industry dynamism; firm age, firm size, ROA, cash flow and debt-to-equity ratio; ownership vigilance; related diversification; number of units; number of CEO donations; a standardized four-indicator CEO power index; CEO age; plus four-digit GICS industry and calendar year fixed effects.
+- Estimation: generalized estimating equation (GEE) models with an exchangeable correlation structure and the company as the grouping set. Firm fixed effects were not included because the ideology predictors varied greatly between firms but were relatively stable within them. The design is associational; two-stage least squares models instrumenting CEO ideology with the home state's ideological bent and predecessor CEO ideology are reported as an endogeneity assessment rather than as the primary identification strategy.
+
+**Key Findings**
+- H1 supported: Model 2 of Table 2 shows a significant positive effect of CEO liberalism on evenhandedness in capital allocation (0.21, p < .01), indicating that liberal CEOs tend toward evenhandedness while conservative CEOs tend toward high distributional disparity. An alternative tercile-spline specification (not shown) indicates significant positive relationships across all three terciles of liberalism.
+- H2 supported: the interaction of CEO liberalism and organizational liberalism is positive and significant (Model 4, 0.26, p < .01). The paper also reports an unexpected result, that the slope for CEO liberalism is negative (p < .05) when the organization leans highly conservative, and flags it as warranting future research attention.
+- H3 supported: the interaction of CEO liberalism and CEO equity-based pay is positive and significant (Model 5, 0.15, p < .01).
+- H4 supported: the interaction of CEO liberalism and CEO shareholdings is positive and significant (Model 6, 0.16, p < .01).
+- All of the interactions remain significant at least at the p < .05 level in Model 7, the fully specified model with all main and interaction terms.
+- H5 supported: in Table 3, Model 2, the interaction of evenhanded allocations and organizational liberalism is significantly related to Tobin's q in year t+1 in the expected direction (0.02, p < .01). No baseline evenhandedness-performance relationship was hypothesized.
+- Effect sizes: a liberal firm engaging in high evenhandedness (+1 SD) has a Tobin's q ratio 5% higher than a liberal firm engaging in low evenhandedness (-1 SD). For a conservative firm the difference between distributional disparity and evenhandedness runs in the expected direction, 1.1% higher Tobin's q, but a simple slopes test indicates that the difference is not significant.
+- Robustness: instrumented 2SLS versions of CEO ideology yield results qualitatively similar to the main models, and the Durbin-Wu-Hausman test fails to reject the null that the CEO ideology variable is exogenous (p = .41). Analyses using Total Shareholder Returns, and predicting Tobin's q at t+2, are also qualitatively similar.
+
 **Theoretical Contribution**
 The paper extends upper echelons theory by showing that CEO values matter for a core strategic decision domain, not only for explicitly values-laden domains such as CSR or executive pay. It contributes to managerial discretion research by theorizing organizational ideology as a contextual moderator that can either amplify or constrain CEO value enactment. It also contributes to resource allocation and distributive justice research by linking evenhandedness in internal capital allocation to ideological beliefs about equality, merit, and performance alignment.
 
 **Practical Implication**
-The findings imply that leaders and boards should treat resource allocation style as both an economic and values-laden organizational signal. Evenhanded allocation may support performance when organizational members lean liberal, while more disparate allocation may fit conservative organizational expectations better. The practical implication is not that one allocation style is universally superior, but that misalignment between allocation practices and organizational ideology can weaken engagement and performance.
+The findings imply that leaders should treat resource allocation style as both an economic and values-laden organizational signal. Evenhanded allocation may support performance when organizational members lean liberal, while more disparate allocation may fit conservative organizational expectations better. The practical implication is not that one allocation style is universally superior, but that misalignment between allocation practices and organizational ideology can weaken engagement and performance.
 
 **Limitations**
 The paper states that it lacks direct data on the two psychological conduits through which values enter decisions, behavior channeling and motivated cognition. It also notes that CEO shareholdings reflect both power and financial incentives, so that moderation result cannot fully separate behavior channeling from motivated cognition. Finally, the authors state that they are unable to observe the causal processes between allocation practices and performance.

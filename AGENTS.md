@@ -140,39 +140,50 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-08-06):
+**Current main-branch audit state (2026-08-12):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 22 upgraded 27 notes (AMJ vol-62-no-1 + vol-61-no-6, all v2
-augmentations) to v3. The final batch audit is **238/243 prose-field verdicts
-SUPPORTED, with 5 faithful `PARTIAL`s accepted**, after four evidence-based
-repairs across four notes in one repair round and two audit rounds. All 27
-augmentation deltas passed the validator and initial diff-guard, 26 on their
-first attempt and one after its single permitted self-fix cycle. Round 1
-returned 234/243 `SUPPORTED` with 9 `PARTIAL`s; four were source-verified
-drift and were repaired, and all four repaired fields returned `SUPPORTED` in
-fresh blind re-audits. Three of those repairs share the recurring legacy class
-— a limitation or future direction the source paper never states, in all three
-cases against the paper's own text (Jia's non-generalizability to private
-firms, which the paper says its theory "should, in principle, be applicable"
-to; Schilpzand's actigraphy recommendation, which the paper raises only to
-rebut; Fini's boundary condition the paper calls "rare", recast as an agenda)
-— and the fourth corrected a direction garble in Simsek's Mechanism Process
-summary, which reversed the editorial's "When impact trails research" pairing
-that the note's own bullets already had right. All five accepted `PARTIAL`s
-are the interleaved-`REFERENCES` class, where the fitted audit input discards
-column-1 prose because a `REFERENCES` heading has begun in column 2; each was
-confirmed by reconstructing the exact text the auditor received. Three sit on
-Wang at the batch's highest 19.3% strip ratio, and the other
-two sit at **14.9% and 13.0% — both below the 15% caution threshold**, so the
-flag again routed attention without bounding the class. All 27 `hypotheses`
-and 26 of 27 `key_findings` verdicts were `SUPPORTED` in round one — no sign
-or direction reversal anywhere in the batch, and every repair landed in a
-legacy field — so the repeated-new-field stop rule was not approached. This
-batch ran on `claude-opus-5` under Claude Code for both augmentation and
-audit, the third consecutive batch in that stamp era;
+batch 23 upgraded 31 notes (AMJ vol-61-no-5 + vol-61-no-4, all v2
+augmentations) to v3 — the largest batch of the backfill so far. The final
+batch audit is **275/279 prose-field verdicts SUPPORTED, with 4 faithful
+`PARTIAL`s accepted**, after six evidence-based repairs across six notes in
+one repair round and two audit rounds. All 31 augmentation deltas passed the
+validator and initial diff-guard, 30 on their first attempt and one after its
+single permitted self-fix cycle. Round 1 returned 272/279 `SUPPORTED` with 7
+`PARTIAL`s; six fields were source-verified drift and were repaired, and five
+of the six returned `SUPPORTED` in fresh blind re-audits. Three of those
+repairs share the recurring legacy class — a limitation or direction the
+source paper never states, in two cases against the paper's own text (Baer's
+claim that Study 2's laboratory scenario limited generalization, where the
+paper lists that design under *Strengths* and claims "more confidence in the
+robustness and generalizability of our findings"; Kotha's one-TTO
+generalization limit, where the paper speculates "the theoretical principles
+from our framework will generally apply"; and Dumas's Future Research, which
+recast an ideal-worker discussion claim as a research agenda). A fourth fixed
+a count conflation in Deken's Mechanism Process, which merged the paper's six
+*periods* with its eight strategic configurations (C1–C8) although the note's
+own new v3 sections had it right, and a fifth removed an invented audience
+from Gupta's Practical Implication ("leaders and boards", where "board"
+appears in the paper only as a CEO-duality control variable) under the
+two-channel rule, after parent verification, despite a `SUPPORTED` verdict.
+Only one repair landed in a new v3 field — Dai's Data & Measures, which
+inverted the paper's stated sign convention for change in confidence — so the
+repeated-new-field stop rule was not approached, and no sign or direction
+reversal appeared anywhere else in the batch. Three of the four accepted
+`PARTIAL`s are the interleaved-`REFERENCES` class, where the fitted audit
+input discards column-1 prose because a `REFERENCES` heading has begun in
+column 2; each was confirmed by reconstructing the exact text the auditor
+received. One sits on König at a 19.8% strip ratio and two sit on Kotha at
+**14.6% — below the 15% caution threshold**, so the flag again routed
+attention without bounding the class. The fourth is different in kind: Deken's
+`future_research` strips 0.0%, so both auditors saw identical text, yet round
+1 scored it `SUPPORTED` and round 2 `PARTIAL` disputing only framing; it was
+accepted under the repair convergence bound. Two writer-channel concerns
+closed without a fix after parent verification, one of which averted an
+over-repair. This batch ran on `claude-opus-5` under Claude Code for both
+augmentation and audit, the fourth consecutive batch in that stamp era;
 the recurring workshop cross-family spot-audit remains owed at the next Codex
 batch's review. The corpus contains 61 legacy v1
-notes, 557 v2 notes, and 549 v3 notes with evidence anchors; new notes are
+notes, 526 v2 notes, and 580 v3 notes with evidence anchors; new notes are
 produced at extraction **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -206,7 +217,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.55.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.56.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-4/pdfs/To 2018 Going for it on Fourth Down Riva
 text_path: "library/AMJ/vol-61-no-4/text/To 2018 Going for it on Fourth Down Rivalry Increases Risk Taking, Physiological Arousal, and Promotion Focus.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "claude-opus-5"
+augmented_at: "2026-08-12"
 
 paper_type: "empirical-quantitative"
 keywords: ["risk taking", "rivalry", "promotion focus", "physiological arousal", "regulatory focus", "competitive decision making"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "to risk taking and integrate regulatory focus theory"
   methods_overview: "We ran separate rare-events logistic regressions"
   keywords_source: "rivalry increases risk taking via two pathways: increased promotion focus and physiological arousal"
+  hypotheses_source: "Hypothesis 4. Relative to competition against a nonrival, competition against a rival increases"
+  measures_overview: "Our dependent measure was the total number of cards"
+  findings_overview: "find that interactions with rival (versus nonrival) partners increases risky behavior"
 ---
 
 # Going for it on Fourth Down: Rivalry Increases Risk Taking, Physiological Arousal, and Promotion Focus
@@ -53,6 +58,15 @@ Risk taking is fundamental to organizational decision making. Extending prior wo
 **Research Question**
 How does rivalry, as a relational characteristic of competition, affect risk taking? The paper asks whether competing against a rival rather than a nonrival increases risky behavior, and whether promotion focus and physiological arousal explain that effect.
 
+**Hypotheses / Propositions**
+- Hypothesis 1. Individuals engage in increased risky behavior when competing against their rivals, compared to competing against nonrival opponents.
+- Hypothesis 2. Relative to competition against a nonrival, competition against a rival leads to a promotion mindset.
+- Hypothesis 3. An increased promotion focus will mediate the positive effect of rivalry on risk taking.
+- Hypothesis 4. Relative to competition against a nonrival, competition against a rival increases physiological arousal.
+- Hypothesis 5. Physiological arousal will mediate the effect of rivalry and increased risk taking.
+
+Study 1 tests Hypothesis 1 only; Study 2 tests all five hypotheses.
+
 **Mechanism Process**
 - IV(s): Rivalry versus nonrival competition, measured in Study 1 through NFL rivalry indicators and in Study 2 through rival versus nonrival university-fan confederates.
 - DV(s): Risk taking, measured as two-point attempts and fourth-down attempts in Study 1 and total risky card selections in Study 2.
@@ -60,6 +74,32 @@ How does rivalry, as a relational characteristic of competition, affect risk tak
 - Moderators: Not reported in paper.
 
 The paper argues that rivalry raises the psychological stakes of competition. This pushes decision makers toward a promotion mindset oriented to gains and ideal outcomes, increasing willingness to choose higher-variance options. Rivalry also heightens physiological arousal, which can activate disinhibition and impulsivity in goal pursuit; Study 2 supports promotion focus and heart-rate arousal as simultaneous independent pathways from rivalry to risk taking.
+
+**Data & Measures**
+Study 1 (archival, National Football League):
+- Data source: the complete play-by-play data of all NFL regular-season games from 2002 to 2010 (16 games across 32 teams per year; 485,684 unique plays from 2,048 unique games), obtained from www.footballoutsiders.com, which coded raw play-by-play text transcripts from ESPN.com. These were supplemented with team-level and game-level variables including weekly ESPN.com ability rankings and week of the season.
+- Dependent variables: fourth-down attempts, with all fourth-down plays coded 0 for the low-risk option (attempting a field goal or punting) and 1 for the risky option of "going for it" (35,870 fourth-down decisions); and two-point attempts, with all plays after a touchdown coded 0 for kicking and 1 for "going for two" (11,076 two-point decisions). A pilot study with 100 Mechanical Turk NFL fans rated both behaviors significantly above the scale midpoint of four (two-point attempts: M = 4.84, t(99) = 7.19, p < .001; fourth-down attempts: M = 5.53, t(99) = 14.86, p < .001).
+- Independent variable: rivalry intensity, assessed in three ways. First, a dummy for whether a pair of teams appeared on NFL.com's list of the top 10 historical NFL rivalries. Second, the summed number of webpages returned by six standardized Google.com search phrases for each pair of teams. Third, votes from 56 Mechanical Turk NFL fans (of 100 recruited) who answered at least six of eight NFL-history quiz questions correctly and passed an attention check, each listing what they believed to be the top five to ten NFL rivalries. The three measures were highly correlated, so the authors standardized them and combined them into an aggregate measure.
+- Estimation: rare-events logistic regression at the play level (0 = non-risky choice, 1 = risky choice), with year and team fixed effects and standard errors clustered at the team level, plus team-, game-, and play-level controls (conference opponent, division opponent, absolute and relative rank difference, divisional crowding, week of the season, offensive yard line, yards to first down, gap in score and its square, home team, time remaining, and quarter dummies). The authors describe these data as correlational.
+
+Study 2 (behavioral laboratory experiment):
+- Participants and design: 149 undergraduates recruited at the University of Arizona into a two-condition (rival and nonrival competition) behavioral laboratory study, drawn from a prescreen of 615 students of whom 365 (59%) met both the school-spirit and rivalry criteria and were invited. The final dataset was 137 participants (68 in the rivalry condition; 77 females) after removing five participants who indicated suspicion regarding the confederate (rivalry condition), one participant for equipment failure (control condition), and six participants missing all physiological data (two rivalry, four control).
+- Manipulation: participants competed face-to-face against a confederate who wore either an Arizona State University hat (rival) or a University of Colorado hat (nonrival competition), preceded by a five-minute writing prime about the relationship between the participant's university and the confederate's.
+- Risk taking: a variation of the "hot" version of the Columbia Card Task, in which participants turned over cards from a 32-card array containing 30 gain cards and 2 loss cards. The dependent measure was the total number of cards turned over across the four trials, excluding the rigged second trial (overall M = 75.14, SD = 17.72).
+- Regulatory focus: promotion and prevention focus adapted from Lockwood, Jordan, and Kunda's (2002) measure of general regulatory focus, with items reframed to capture the participant's current mindset on a scale of 1 (Not at all true of me) to 9 (Very true of me); promotion alpha = .84, prevention alpha = .73.
+- Physiological arousal: continuous electrocardiographic (ECG) and electrodermal (EDA) recordings using a Biopac MP150 system, from which heart rate and the magnitude of skin conductance response were derived. Both were averaged over a critical period running from immediately after the writing prime to the end of the participant's turn in the card task, with the participant's 30-second baseline average entered as a covariate. Baseline and post-treatment testosterone and cortisol were also collected.
+- Analysis: bias-corrected bootstrap mediation tests using the PROCESS macro in SPSS, followed by a simultaneous parallel mediation model.
+
+**Key Findings**
+- Study 1 (Hypothesis 1 only): without controls, the aggregate rivalry measure had a significant and positive relationship with going for it on fourth down (b = .043, p < .001) and with attempting a two-point conversion after a touchdown (b = .100, p < .001). In the full models including all controls, rivalry remained significant and positive for fourth-down attempts (b = .055, p < .001) and two-point attempts (b = .084, p = .025), supporting Hypothesis 1.
+- Study 1 magnitudes: using the binary NFL.com measure with covariates set to their means, two-point attempts were predicted at 4.86% against nonrivals versus 6.67% against rivals (rivalry increases two-point conversions by 37%), and fourth-down attempts at 12.10% versus 12.96% (7.11% more likely). The authors report that the rivalry relationship is nonsignificant when the models are run without fixed effects, and that rivals were not more likely to succeed in their risky attempts.
+- Study 2, Hypothesis 1 supported: participants who competed against a rival turned over more cards (M = 80.97, SD = 15.54) than those who competed against a nonrival (M = 69.39, SD = 17.96); t(135) = 4.03, p < .001, d = .68. The effect held in a regression including a gender dummy (rivalry b = .33, p < .001; gender b = .027, p = .742), with no significant rivalry-by-gender interaction.
+- Study 2, Hypothesis 2 supported: condition significantly predicted an increase in promotion mindset (b = .32, p < .001). Rivalry did not affect prevention focus (b = -.01, p = .939), and gender did not interact with rivalry in predicting promotion focus (b = .11, p = .684).
+- Study 2, Hypothesis 3 supported: promotion focus in turn predicted the number of cards turned over (b = .23, p = .006), and the bias-corrected bootstrapped confidence interval for the indirect effect did not contain zero (95% CI [.52, 5.64]; [.57, 5.89] controlling for gender).
+- Study 2, Hypothesis 4 supported: relative to nonrival competition, rivalry produced a significantly greater increase in heart rate over the critical period (b = .23, p = .001) and a higher skin conductance response (b = .19, p = .012).
+- Study 2, Hypothesis 5 partially supported: increased heart rate predicted the number of cards overturned (b = .29, p = .011) and mediated the effect of rivalry on risk taking (95% CI [.95, 4.79]; [1.02, 5.10] controlling for gender), but skin conductance response did not predict the number of cards selected (b = -.06, p = .470).
+- In a simultaneous parallel mediation model both indirect effects remained significant (promotion mindset 95% CI [.30, 5.14]; arousal 95% CI [.77, 4.42]), which the authors read as simultaneous and independent psychological and physiological pathways from rivalry to risk taking. The testosterone and cortisol measures produced no significant results.
+- Supplemental NFL analyses reported alongside the future directions: the rivalry effect on fourth-down attempts was moderated by holding a comfortable lead (interaction b = -.192, p = .036), with no rivalry effect when teams were ahead by 14 or more points (b = -.075, p = .485) but a strong positive effect when they were not comfortably ahead (b = .055, p = .001); this interaction did not appear for two-point conversion decisions (b = .042, p = .381). Competing against a rival also increased the number of fake field goals attempted (b = 1.40, p = .024).
 
 **Theoretical Contribution**
 The study extends risk-taking research by showing that risk attitudes are shaped not only by individual traits and situational incentives but also by the identity of one's competitor and the relationship with that competitor. It extends regulatory focus theory by showing that a social relationship can activate promotion focus in interdependent decision contexts. It also contributes to rivalry theory by identifying risk taking, promotion focus, and physiological arousal as consequences and mechanisms of rivalry.
