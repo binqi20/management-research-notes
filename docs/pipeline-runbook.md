@@ -342,7 +342,11 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   status.claude.com to distinguish capacity from concurrency, and if the
   outage is sustained, stop and report — the audit phase is read-only
   until layer2 assembly, so an interrupted batch resumes later with zero
-  rework. Dispatch scripts must fail FAST on a dead wave: `parallel()`
+  rework. An account/session USAGE LIMIT is not an API outage (batch 23):
+  when a quota kill takes out part of a wave, bank the completed
+  verdicts, wait for the stated reset time, and re-dispatch only the
+  outstanding notes — no ladder walk, no model substitution, zero rework.
+  Dispatch scripts must fail FAST on a dead wave: `parallel()`
   resolves dead agents to null and never rejects, so check for an all-null
   wave and abort instead of marching through the remaining waves. A
   PARTIAL wave — most agents return, one dies on a connection error — is
@@ -399,7 +403,13 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   the auditor received via `audit_note.fit_pdf_text_for_audit(raw)` and
   probe THAT. Content present in raw and absent from fitted is the proof;
   content present in both means the auditor saw it and the PARTIAL needs
-  a different explanation.
+  a different explanation. **The proof establishes only that the auditor
+  was BLIND — not that the note is faithful (batch-23 kotha):** after
+  proving blindness, READ the recovered passage and judge accept-vs-repair
+  on its content. Kotha's Limitations tail was both invisible to the
+  auditor AND wrong (the note claimed a generalization limit where the
+  recovered text says the principles "will generally apply") — stopping
+  at the proof would have false-accepted an invented claim.
 - **Full-line rule (batch 15, zipay + opper):** a width-truncated preview
   of a matched line is the sibling failure of the 0-hit search. Batch 15
   nearly deleted a supported claim and DID ship a wrong repair from a
