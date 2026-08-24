@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Soda 2018 Harvesting Value from Brokerag
 text_path: "library/AMJ/vol-61-no-3/text/Soda 2018 Harvesting Value from Brokerage Individual Strategic Orientation, Structural Holes, and Performance.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["brokerage", "structural holes", "strategic orientation toward brokering", "arbitraging", "collaborating", "individual performance"]
@@ -46,6 +48,9 @@ evidence:
   theories_overview: "harvest the value buried in structural holes"
   methods_overview: "We tested our theory using ordered probit models"
   keywords_source: "arbitraging versus collaborating behaviors enacted"
+  hypotheses_source: "a collaborating orientation will be less advantageous."
+  measures_overview: "size. Conceptually, effective size measures the amount"
+  findings_overview: "arbitraging and collaborating orientations have differential effects on the relationship between brokerage and performance"
 ---
 
 # Harvesting Value from Brokerage: Individual Strategic Orientation, Structural Holes, and Performance
@@ -56,6 +61,9 @@ In this paper, we explore the mechanisms underpinning returns to brokerage posit
 **Research Question**
 The paper asks why individuals occupying brokerage positions differ in the performance returns they obtain from those positions. It specifically examines whether the relationship between structural brokerage and individual performance depends on whether brokers enact an arbitraging or collaborating strategic orientation toward brokering.
 
+**Hypotheses / Propositions**
+H1: The positive relationship between brokerage and performance is contingent on strategic orientation toward brokering; brokers with an arbitraging orientation are expected to perform better than brokers with a collaborating orientation.
+
 **Mechanism Process**
 - IV(s): Brokerage, measured primarily with Burt's effective size measure of nonredundancy in ego networks.
 - DV(s): Individual performance evaluations from the company's management-by-objectives process.
@@ -63,6 +71,12 @@ The paper asks why individuals occupying brokerage positions differ in the perfo
 - Moderators: Strategic orientation toward brokering, distinguishing arbitraging from collaborating orientations.
 
 The mechanism is an alignment between network structure and networking behavior. Brokerage offers vision and control advantages because brokers span structural holes, but those advantages are more effectively converted into individual performance when the broker acts in an arbitraging way that preserves access, control, and ownership of knowledge recombination. A collaborating orientation weakens those brokerage returns because it socializes information, connects otherwise disconnected alters, dilutes the broker's unique informational advantage, and adds coordination costs without necessarily creating closed-network benefits.
+
+**Data & Measures**
+The main analysis combines an online advice-network survey of HR employees with company archival demographics and annual supervisor performance evaluations for 356 individuals. Performance is an ordinal management-by-objectives rating (below average, average, or above average); brokerage is logged Burt effective size; and strategic orientation is elicited with a ranked, scenario-based visual scale and coded first as arbitraging versus collaborating and then as separate orientation indicators. Ordered probit models test the brokerage-by-orientation interactions with robust standard errors clustered by functional area. Approximately one and a half years later, 232 of the 356 participants completed a follow-up survey using Obstfeld's six collaborating items plus three arbitraging items to assess convergent validity and temporal stability.
+
+**Key Findings**
+H1 was supported: brokerage was positively associated with performance, and the brokerage-by-orientation interaction indicated higher returns for arbitraging than collaborating brokers (b = 0.330, p < .05). Separate models showed that a collaborating orientation weakened the brokerage effect (b = -0.361, p < .01), whereas an arbitraging orientation strengthened it (b = 0.375, p < .01); the orientation main effects were not significant. In the reported magnitude analysis, an arbitraging orientation made brokers 3% less likely to receive a below-average rating and 14% more likely to receive an above-average rating, while a collaborating orientation made them 16% less likely to receive an above-average rating. Alternative estimators, instrumental-variable and sensitivity analyses, and alternative brokerage measures yielded consistent results; follow-up responses also indicated temporal stability in brokering orientations.
 
 **Theoretical Contribution**
 The paper separates brokerage as a structural network position from brokering as a strategic behavioral orientation, challenging the assumption that network structure directly implies how actors behave. It contributes to network advantage research by showing that individual strategic orientation is a contingency that shapes whether structural holes translate into performance benefits. The study also links brokerage theory to behavioral signatures by arguing that stable situation-behavior patterns help explain heterogeneous returns among actors occupying similar network positions.

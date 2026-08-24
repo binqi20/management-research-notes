@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-2/pdfs/Cooper 2018 Leader Humor as an Interpers
 text_path: "library/AMJ/vol-61-no-2/text/Cooper 2018 Leader Humor as an Interpersonal Resource Integrating Three Theoretical Perspectives.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["leader humor", "organizational citizenship behaviors", "leader-member exchange", "positive emotion", "burnout", "social exchange"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "social exchange theory, conservation of resources theory, and broaden-and-build theory."
   methods_overview: "ducted multilevel modeling (MLM) in HLM 7.0"
   keywords_source: "leader humor (LH) facilitates subordinate organizational citizenship behaviors (OCBs)."
+  hypotheses_source: "Hypothesis 1. LMX mediates the positive relationship"
+  measures_overview: "LH. Subordinates responded to the three-item LH"
+  findings_overview: "Therefore, we found support for Hypothesis 3."
 ---
 
 # Leader Humor as an Interpersonal Resource: Integrating Three Theoretical Perspectives
@@ -52,6 +57,13 @@ We integrate theoretical perspectives on humor to test the processes through whi
 **Research Question**
 The paper asks whether social exchange, stress relief, and positive emotion mechanisms translate leader humor into subordinate organizational citizenship behaviors. It specifically tests whether leader-triggered positive emotion acts as a proximal mediator between leader humor and later LMX and burnout, and whether LMX and burnout mediate the leader humor-OCB relationship.
 
+**Hypotheses / Propositions**
+H1: LMX mediates the positive relationship between leader humor and subordinate OCBs.
+H2: Burnout mediates the positive relationship between leader humor and subordinate OCBs.
+H3: Leader-triggered positive emotion mediates the positive relationship between leader humor and LMX.
+H4: Leader-triggered positive emotion mediates the negative relationship between leader humor and burnout.
+H5: Leader-triggered positive emotion mediates the positive relationship between leader humor and OCBs when the mediating effects of LMX and burnout are simultaneously accounted for.
+
 **Mechanism Process**
 - IV(s): Leader humor.
 - DV(s): Subordinate organizational citizenship behaviors.
@@ -59,6 +71,16 @@ The paper asks whether social exchange, stress relief, and positive emotion mech
 - Moderators: Not reported in paper.
 
 The proposed mechanism treats leader humor as an interpersonal, socioemotional resource. Leader humor is expected to trigger subordinate positive emotion, which should build high-quality social exchange with the leader through LMX and potentially reduce burnout. The supported pathway is leader humor to positive emotion to LMX to OCBs; the stress relief pathway through burnout was not supported.
+
+**Data & Measures**
+Study 1 was a cross-sectional dyadic survey. Subordinates rated leader humor with a three-item scale and LMX with Liden and Maslyn's 12-item LMX-MDM; leaders rated subordinate OCBs with Deckop and colleagues' nine-item scale. Study 1 tested H1 using multilevel models and Monte Carlo mediation tests.
+
+Study 2 used a two-wave, time-lagged dyadic survey, with the number of dyads varying by analysis. At Time 1, subordinates rated leader humor with the three-item scale and leader-triggered positive emotion with Nifadkar and colleagues' eight-item scale. At Time 2, subordinates rated LMX with Bernerth and colleagues' eight-item LMSX scale and burnout with Maslach and Jackson's eight-item emotional-exhaustion scale; leaders rated OCBs with the same nine-item scale as Study 1. The authors used CFA, multilevel modeling in HLM 7.0 with the CWC(M) 1-1-1 procedure, and Monte Carlo mediation tests.
+
+**Key Findings**
+Study 1 supported H1: LMX mediated the positive relationship between leader humor and OCBs (95% CI [.01, .08]). Study 2 replicated support for H1 (95% CI [.01, .13]) and supported H3: leader-triggered positive emotion mediated the positive leader humor-LMX relationship (95% CI [.02, .16]).
+
+Study 2 did not support H2 or H4: neither leader humor nor leader-triggered positive emotion predicted burnout, although burnout was negatively related to OCBs. H5 was also not supported because the positive-emotion mediation of the leader humor-OCB relationship became nonsignificant when LMX and burnout were included simultaneously (95% CI [−.01, .11]).
 
 **Theoretical Contribution**
 The paper contributes to humor research by integrating social exchange theory, conservation of resources theory, and broaden-and-build theory into a single model of leader humor. It shows that leader humor is linked to subordinate OCBs primarily through positive emotion and LMX rather than through burnout reduction.

@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-61-no-2/pdfs/Uzunca 2018 A Competence-Based View of I
 text_path: "library/AMJ/vol-61-no-2/text/Uzunca 2018 A Competence-Based View of Industry Evolution The Impact of Submarket Convergence on Incumbent−Entrant Dynamics.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["industry evolution", "submarket convergence", "technological competences", "customer competences", "incumbent-entrant dynamics"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "competence-based approach to define intra-industry"
   methods_overview: "Cox proportional hazards model"
   keywords_source: "industry evolution, disruption, and competitive dynamics"
+  hypotheses_source: "Hypothesis 2 (Technology disruption): Entrants will"
+  measures_overview: "Year-over-year increase in submarket j’s market closeness at time t"
+  findings_overview: "also supported: there is a null effect on how entrants"
 ---
 
 # A Competence-Based View of Industry Evolution: The Impact of Submarket Convergence on Incumbent−Entrant Dynamics
@@ -54,6 +59,12 @@ Understanding intra-industry boundaries is important because it offers insight i
 **Research Question**
 The paper asks how convergence in the technological and customer competences required by submarkets affects the relative success of industry incumbents and entrants. It examines whether convergence in both competence dimensions protects incumbents, while non-convergence in either dimension gives entrants space to gain a foothold.
 
+**Hypotheses / Propositions**
+H1 (market disruption): Entrants will fare better than incumbents in submarkets that converge only in technological competences.
+H2 (technology disruption): Entrants will fare better than incumbents in submarkets that converge only in customer competences.
+H3 (dominance of incumbents): Incumbents will fare better than entrants in submarkets that converge in both technological and customer competences.
+H4 (continued separation of submarkets): There will be a null effect on how entrants and incumbents fare in submarkets that converge in neither technological nor customer competences.
+
 **Mechanism Process**
 - IV(s): Technology convergence, market convergence, and their interaction at the submarket-year level.
 - DV(s): Likelihood of fab closure, interpreted as entrant exit or incumbent repositioning through closure of a production facility.
@@ -62,6 +73,12 @@ The paper asks how convergence in the technological and customer competences req
 
 The mechanism is that submarket convergence changes which competences can be leveraged across the industry. When both technological and customer competences converge, incumbents can apply accumulated competences and slack resources across submarkets, while entrants face head-on competition and have fewer ways to differentiate. When only one competence dimension converges, the remaining non-convergent dimension preserves room for entrants to avoid direct incumbent competition and survive long enough to potentially disrupt incumbents.
 
+**Data & Measures**
+The study combines SEMI World Fab Watch panel data for 1995–2015 with worldwide submarket sales data from VLSI Research and Yole Développement. After exclusions, the data cover five semiconductor submarkets and 17,806 fab-year observations; Cox Models 1–5 use 15,559 observations, 1,128 failures, and 1,565 subjects, while the restricted H4 Model 6 uses 4,568 observations, 303 failures, and 966 subjects. The dependent variable equals one when a firm stops operating a fab. Technology and market convergence are year-over-year increases in a submarket’s average closeness to all submarkets, calculated from Jaffe-style technology and product-profile vectors; incumbent status equals one for firms with multiple fabs or a single fab older than eight years. Cox proportional hazards models use time-varying covariates, robust estimation, controls at industry, submarket, firm, and fab levels, and country fixed effects; the full Model 5 and H4 Model 6 also include submarket fixed effects.
+
+**Key Findings**
+All four hypotheses receive support. For H1, a one-standard-deviation increase only in technology closeness reduces entrants’ fab-closure risk by 75% but incumbents’ risk by 16%, so entrants fare relatively better. For H2, market convergence alone reduces closure risk for both groups, but more strongly for entrants. For H3, when technology closeness is at its maximum, a one-standard-deviation increase in market closeness raises entrants’ closure risk by 6% and lowers incumbents’ risk by 18%. For H4, in the restricted non-convergence analysis, the focal convergence coefficients retain their directions but lose significance, consistent with a null effect.
+
 **Theoretical Contribution**
 The paper develops a competence-based view of industry evolution that defines intra-industry boundaries by the technological and customer competences needed to compete in submarkets. It extends industry evolution, disruption, and competitive dynamics research by showing that incumbent dominance, entrant disruption, and continued submarket separation can coexist within the same industry depending on the pattern of competence convergence. It also reframes disruption as incumbents' lack of the competences needed to produce or sell in different submarkets, rather than only as incumbent myopia.
 
@@ -69,7 +86,7 @@ The paper develops a competence-based view of industry evolution that defines in
 Managers should assess industry threats at the submarket level rather than relying on broad industry categories. Incumbents need to identify whether their advantage rests on technological or customer competences and monitor whether adjacent submarkets are converging in ways that remove or preserve entrants' room to differentiate. Entrants can gain a foothold by locating submarkets where at least one competence dimension remains sufficiently distinct from incumbent-dominated areas.
 
 **Limitations**
-The empirical evidence comes from the semiconductor manufacturing industry, so the tests are strongest for a setting with observable submarkets, production facilities, and technology/product profiles. The outcome is fab closure, which captures entrant exit or incumbent repositioning in a submarket but does not directly measure all firm-level strategic responses or industry-level survival. The competence-distance measures use technology- and product-category data, so the results should be interpreted through those observed proxies for technological and customer competence.
+Not reported in paper
 
 **Future Research**
 Future research could convert the paper's two-submarket theoretical illustration into a formal mathematical model or simulation. Scholars could further improve the framework to reconcile Klepper's account of incumbent dominance through shakeouts with Christensen's account of entrant disruption. The paper also calls for more work on incumbent repositioning as a strategic response to disruption, beyond treating survival and failure as the only outcomes.

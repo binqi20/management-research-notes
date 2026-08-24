@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Jensen 2018 Not in the Same Boat How Sta
 text_path: "library/AMJ/vol-61-no-3/text/Jensen 2018 Not in the Same Boat How Status Inconsistency Affects Research Performance in Business Schools.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["status inconsistency", "multi-unit organizations", "business schools", "research performance", "status ambiguity", "status theory"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "status inconsistency a concern for status theory"
   methods_overview: "multi-level mixed-effects model"
   keywords_source: "Status inconsistency refers to the extent"
+  hypotheses_source: "Hypothesis 1. Status inconsistency diminishes the"
+  measures_overview: "contribution score to measure journal publications."
+  findings_overview: "status on research performance to decrease by 9%"
 ---
 
 # Not in the Same Boat: How Status Inconsistency Affects Research Performance in Business Schools
@@ -51,6 +56,12 @@ This study examines the consequences of status inconsistency for the performance
 **Research Question**
 The paper asks how status inconsistency affects the performance benefits of status in multi-unit organizations. In the business school setting, it examines whether school-level status inconsistency weakens the positive associations between business school status, department status, and department research performance, and whether these effects differ for high- versus low-status schools and departments.
 
+**Hypotheses / Propositions**
+- H1: Status inconsistency diminishes the positive associations between (a) department status and department research performance and (b) business school status and department research performance.
+- H2: These diminishing effects are more likely for high-status business schools than for low-status business schools.
+- H3: These diminishing effects are more likely for high-status departments than for low-status departments.
+- H4: Status inconsistency is more likely to diminish the positive association between business school status and department research performance than the association between department status and department research performance.
+
 **Mechanism Process**
 - IV(s): Department status, business school status, and business school status inconsistency.
 - DV(s): Department research performance measured with the UTD research contribution score.
@@ -58,6 +69,12 @@ The paper asks how status inconsistency affects the performance benefits of stat
 - Moderators: Business school status inconsistency moderates the effects of department status and business school status on department research performance; high- versus low-status business schools and departments condition the moderation pattern.
 
 The mechanism is a status-ambiguity argument. Status normally helps external evaluators infer quality and justify decisions, but inconsistent status positions across units make the status of the multi-unit organization and its departments harder to interpret. This weakens status as a signal of perceived quality and as a tool for reducing accountability pressures, especially for high-status schools and high-status departments that have more to lose from status deflation; low-status departments may instead benefit from status inflation through association with higher-status units.
+
+**Data & Measures**
+The longitudinal panel follows 109 research-active business schools and their accounting, finance, management, marketing, and operations departments from 2002 to 2013; the main models use 4,444 department-year observations from 106 schools. Department research performance is the annual prorated UTD research contribution score, based on articles in 24 leading academic business journals assigned to departments. Department and school status are Bonacich centrality scores from annual symmetric PhD hiring-and-placement exchange networks constructed with five-year rolling data; school status inconsistency is the dispersion of the five department-status scores around their school mean. The associational three-level mixed-effects models include school and department random intercepts, country, department-type, and year fixed effects, a lagged dependent variable, department size, PhD-program and school controls, orthogonalized specifications, subsample tests, and robustness checks.
+
+**Key Findings**
+H1a received mixed support in the unorthogonalized models but consistent support in the orthogonalized models; H1b received strong support across the reported specifications. In the full orthogonalized model, a one-standard-deviation increase in status inconsistency reduced the effect of department status on research performance by 9% and the effect of school status by almost 14%. H2 and H3 were supported: status inconsistency weakened the status-performance associations for high-status schools and departments, while the effects were not significant for low-status schools and were strengthened for low-status departments. H4 was also supported: relative to their main effects, status inconsistency weakened the school-status association more than the department-status association.
 
 **Theoretical Contribution**
 The paper extends status inconsistency research from single-unit actors ranked differently across status dimensions to multi-unit organizations whose units differ in status within comparable social systems. It identifies status inconsistency as a boundary condition on cumulative status advantage: status remains valuable, but inconsistent unit-level status can make status less informative and less useful for external evaluation. The paper also adds involuntary co-location within multi-unit organizations to status theory, showing that associations not chosen as exchange ties can still reshape audience status beliefs.

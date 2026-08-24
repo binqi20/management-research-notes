@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Bunderen 2018 When Interteam Conflict Sp
 text_path: "library/AMJ/vol-61-no-3/text/Bunderen 2018 When Interteam Conflict Spirals into Intrateam Power Struggles The Pivotal Role of Team Power Structures.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["interteam conflict", "intrateam power struggles", "team power structures", "hierarchical teams", "egalitarian teams", "team performance"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Realistic group conflict theory postulates"
   methods_overview: "multi-source data, including surveys distributed"
   keywords_source: "resource-threatening interteam conflict promotes performance-detracting power struggles"
+  hypotheses_source: "Hypothesis 1. There is an interaction effect between"
+  measures_overview: "Intrateam power struggles. We measured power"
+  findings_overview: "conflict promotes performance-detracting power struggles in hierarchical (but not"
 ---
 
 # When Interteam Conflict Spirals into Intrateam Power Struggles: The Pivotal Role of Team Power Structures
@@ -52,6 +57,11 @@ Organizational teams frequently come into conflict with one another over limited
 **Research Question**
 The paper asks when resource-threatening interteam conflict unites teams internally versus spills over into intrateam power struggles. It examines whether a team's internal power structure determines whether interteam conflict reduces or promotes power struggles and, through them, team performance.
 
+**Hypotheses / Propositions**
+- H1: Interteam conflict and intrateam power structure interact in predicting intrateam power struggles: interteam conflict is positively related to power struggles in hierarchical teams and negatively related in egalitarian teams.
+- H2: Intrateam power struggles are negatively related to team performance.
+- H3: Interteam conflict and intrateam power structure have a moderated mediation effect on team performance through intrateam power struggles.
+
 **Mechanism Process**
 - IV(s): Resource-threatening interteam conflict.
 - DV(s): Intrateam power struggles and team performance.
@@ -59,6 +69,14 @@ The paper asks when resource-threatening interteam conflict unites teams interna
 - Moderators: Intrateam power structure, contrasting hierarchical with egalitarian or less hierarchical teams.
 
 The mechanism is a cross-level conflict-spillover argument. Interteam conflict threatens team resources; in egalitarian teams, members share a common fate and are more likely to unite, but in hierarchical teams, power differences make members differently affected by the threat and more focused on protecting or improving their own resource control. These internal power struggles distract from the task, encourage political behavior, reduce open information sharing, and thereby harm team performance.
+
+**Data & Measures**
+Study 1 was a 2 x 2 laboratory experiment with a final sample of 85 three-person negotiation teams. Interteam conflict and hierarchical versus egalitarian power structure were manipulated; intrateam power struggles were behaviorally coded from video on a 1–7 scale, and team performance was the team's joint negotiation outcome, calculated by summing members' points across four issues. Study 2 surveyed 158 pre-existing teams (1,809 employees) in a Dutch health insurance corporation: team members rated interteam conflict (three items), intrateam power structure (seven items), and power struggles (three items) on five-point scales, while managers rated team performance with four items. Study 1 used ANOVA, hierarchical regression, and PROCESS moderated mediation; Study 2 aggregated member ratings to the team level and used hierarchical regression and PROCESS moderated mediation with controls.
+
+**Key Findings**
+Study 1 supported H1: interteam conflict increased power struggles in hierarchical teams but decreased them in egalitarian teams (interaction F(1, 80) = 10.47, p = .002). H2 was supported: power struggles were negatively associated with joint outcomes (b = -.27, p = .03). H3 was supported through a negative indirect effect in hierarchical teams and a positive indirect effect through reduced power struggles in egalitarian teams; the direct conflict-by-structure effect on performance was not significant.
+
+Study 2 only partly supported H1: interteam conflict was positively related to power struggles under higher hierarchy (b = .26, p = .001) but was unrelated under lower hierarchy (b = .05, p = .59), rather than negatively related. H2 was supported (b = -.17, p = .047). H3 was supported at high and moderate hierarchy, but not at low hierarchy. Study 2 also found that interteam conflict was negatively related to performance under high hierarchy, but not under low hierarchy.
 
 **Theoretical Contribution**
 The paper reconciles intergroup conflict research that treats interteam conflict as internally unifying with conflict spillover theory that expects conflict to move across levels. It identifies internal team power structure as the contingency that determines whether resource-threatening interteam conflict produces cooperation or intrateam power struggles. It also extends social hierarchy research by showing that power hierarchies can become harmful when team resources are threatened.

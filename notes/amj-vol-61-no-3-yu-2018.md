@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Yu 2018 Is Leader–Member Exchange Diff
 text_path: "library/AMJ/vol-61-no-3/text/Yu 2018 Is Leader–Member Exchange Differentiation Beneficial or Detrimental for Group Effectiveness A Meta-Analytic Investigation and Theoretical Integration.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["leader-member exchange differentiation", "LMX differentiation", "allocation preferences theory", "equity-equality perspective", "input-mediator-outcome model", "group effectiveness", "emergent states", "group processes", "meta-analysis"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "equality perspective derived from allocation preferences theory"
   methods_overview: "We used random-effects meta-analysis"
   keywords_source: "leader–member exchange (LMX) differentiation"
+  hypotheses_source: "Hypothesis 1. LMX differentiation is positively related"
+  measures_overview: "variance (k 5 16) or standard deviation (k 5 16) of"
+  findings_overview: "LMX differentiation was detrimental to collective harmony"
 ---
 
 # Is Leader–Member Exchange Differentiation Beneficial or Detrimental for Group Effectiveness? A Meta-Analytic Investigation and Theoretical Integration
@@ -52,6 +57,19 @@ Despite the burgeoning number of studies that have examined leader–member exch
 **Research Question**
 The paper asks whether LMX differentiation is beneficial or detrimental for group effectiveness. It specifically examines how an equity-equality perspective and an input-mediator-outcome model can explain why LMX differentiation may support group performance while harming collective harmony and solidarity.
 
+**Hypotheses / Propositions**
+H1: LMX differentiation is positively related to group performance.
+H2a: LMX differentiation is negatively related to emergent states.
+H2b: LMX differentiation is negatively related to group processes.
+H3a: Emergent states mediate the negative relationship between LMX differentiation and group performance.
+H3b: Group processes mediate the negative relationship between LMX differentiation and group performance.
+H4a: Task interdependence strengthens the negative relationship between LMX differentiation and emergent states when task interdependence is higher.
+H4b: Task interdependence strengthens the negative relationship between LMX differentiation and group processes when task interdependence is higher.
+H4c: Task interdependence strengthens the positive relationship between LMX differentiation and group performance when task interdependence is lower.
+H5a: Cultural collectivism strengthens the negative relationship between LMX differentiation and emergent states when collectivism is higher.
+H5b: Cultural collectivism strengthens the negative relationship between LMX differentiation and group processes when collectivism is higher.
+H5c: Cultural collectivism strengthens the positive relationship between LMX differentiation and group performance when collectivism is lower.
+
 **Mechanism Process**
 - IV(s): LMX differentiation, defined as variability in LMX relationship quality among members of the same workgroup.
 - DV(s): Group performance, emergent states, and group processes.
@@ -59,6 +77,16 @@ The paper asks whether LMX differentiation is beneficial or detrimental for grou
 - Moderators: Task interdependence and cultural collectivism are theorized moderators; supplemental analyses examine power distance, workgroup LMX quality, group size, job type, and operationalization of LMX differentiation.
 
 The mechanism is a tradeoff between equity and equality principles. Differentiation can align with equity by directing scarce leader resources toward members who contribute more to collective performance, creating a positive direct path to performance. At the same time, differentiation violates equality expectations, weakens emergent states and group processes, and thereby creates negative indirect paths to performance. The meta-analytic path model shows that these negative indirect paths suppress the positive direct relationship, producing a near-zero total relationship between LMX differentiation and group performance.
+
+**Data & Measures**
+The meta-analysis synthesized 41 independent samples from 39 studies, comprising 4,114 workgroups and 21,745 individuals. LMX differentiation was most often operationalized as the variance (k = 16) or standard deviation (k = 16) of individual LMX reports; other studies used reversed rWG, average item-level standard deviations, or the coefficient of variation. Outcomes were coded as group performance (subjective, objective, or creative performance), emergent states (attitudes, commitment, collective efficacy, and justice climate), or group processes (conflict, coordination, extra-role behaviors, and team-member exchange).
+
+Task interdependence was assigned by matching each sample's occupation to a six-variable O*NET index, while cultural collectivism and power distance were assigned from Hofstede's country scores; mixed-country samples were excluded from those cultural analyses. The authors used Hunter-Schmidt random-effects psychometric meta-analysis with reliability corrections and composite correlations, meta-analytic path modeling with a harmonic-mean sample size of 1,442, and inverse-sample-size-weighted WLS moderator regressions.
+
+**Key Findings**
+The overall meta-analytic relationship between LMX differentiation and group performance was nonsignificant (r = -.01, 90% CI [-.06, .03]), so H1 was not supported in that analysis. LMX differentiation was negatively related to emergent states (corrected r = -.32) and group processes (corrected r = -.35), supporting H2a and H2b. The path model showed negative indirect effects on performance through emergent states (b = -.03, p < .01) and group processes (b = -.06, p < .01), supporting H3a and H3b, alongside a positive direct effect (b = .14, p < .01) and a near-zero total effect (.05).
+
+Neither task interdependence nor cultural collectivism significantly moderated the relationships with group performance, emergent states, or group processes; H4a-H4c and H5a-H5c were not supported.
 
 **Theoretical Contribution**
 The paper provides a parsimonious group-level framework for reconciling positive and negative perspectives on LMX differentiation. By integrating allocation preferences theory with the input-mediator-outcome model, it distinguishes proximal social outcomes from distal performance outcomes and shows why LMX differentiation should not be treated as unilaterally beneficial or detrimental.

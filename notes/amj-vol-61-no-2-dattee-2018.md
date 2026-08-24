@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-2/pdfs/Dattée 2018 Maneuvering in Poor Visibil
 text_path: "library/AMJ/vol-61-no-2/text/Dattée 2018 Maneuvering in Poor Visibility How Firms Play the Ecosystem Game when Uncertainty is High.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-qualitative"
 keywords: ["innovation ecosystems", "generative technological innovations", "ecosystem creation", "dynamic control", "value propositions", "control points"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "systems (dynamics) perspective on ecosystems"
   methods_overview: "in-depth qualitative process research"
   keywords_source: "Innovation ecosystems are increasingly regarded"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "recoded the entire dataset at a more granular level to"
+  findings_overview: "Our analysis indicates that “winning at the ecosystem game” was about maintaining dynamic control"
 ---
 
 # Maneuvering in Poor Visibility: How Firms Play the Ecosystem Game when Uncertainty is High
@@ -52,6 +57,9 @@ Innovation ecosystems are increasingly regarded as important vehicles to create 
 **Research Question**
 The paper asks how an ecosystem champion can compel others to commit to a de novo ecosystem creation effort when uncertainty is too high to create a meaningful ex ante blueprint. It also asks how firms can position themselves for value appropriation when they lack enough visibility to know what the eventual ecosystem will look like.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Generative technological innovations, protovision, envisioned blueprint, enacted resonance, ecosystem drift, sliding control points, and dynamic control.
 - Process / phases: Firms narrow the future by probing external applications, switch to and keep up with ecosystem dynamics after external pull, roadmap and preempt future control points, and enact resonance between internal and external commitments.
@@ -60,6 +68,12 @@ The paper asks how an ecosystem champion can compel others to commit to a de nov
 - Boundary conditions: The model is developed from large technology firms in multilayered IT and telecommunications settings where generative technologies create high uncertainty and heterogeneous future applications.
 
 The process is not a variable-based causal model. The paper theorizes ecosystem creation as coupled feedback loops through which firms try to move from broad protovisions toward clearer ecosystem blueprints. Dynamic control matters because ownership of particular assets is insufficient when external actors' creative agency can make the ecosystem drift away from the focal firm's anticipated value creation and make intended control points slide away from future value capture.
+
+**Data & Measures**
+The authors use an embedded multiple-case qualitative process design covering Red and Green and four ecosystem-creation cases: Jade, Emerald, Ruby, and Coral. The core case evidence comprises 48 interviews at the two firms, more than 1,500 pages of secondary data, and three final research workshops; the preceding exploratory phase comprised 25 interviews across 10 technology-based multinationals, including 11 interviews with Red and Green. The authors developed and validated case narratives, applied the Gioia method, coded first-order concepts into second-order themes and aggregate dimensions, and then identified and checked causal links among themes to construct the feedback-process model.
+
+**Key Findings**
+Across the four cases, firms did not design a complete ecosystem blueprint ex ante. They moved from a broad protovision into ecosystem creation after external pull narrowed potential applications, then roadmapped and preempted future control points while enacting resonance between internal and external commitments. Reinforcing loops crystallized an envisioned blueprint, while ecosystem drift and sliding positions threatened value creation and capture. Maintaining dynamic control therefore required firms to influence ecosystem direction, monitor its evolution and likely control points, and update strategies when mismatches emerged.
 
 **Theoretical Contribution**
 The paper contributes to innovation ecosystem research by extending blueprint-based views to contexts where no clear value proposition can be planned ex ante. It introduces a systems-dynamics account of de novo ecosystem creation, showing how firms use dynamic control to influence, monitor, and update an emerging collective process. It also contributes to strategic entrepreneurship by combining goal-oriented and process-oriented views of opportunity creation under uncertainty.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Kotlar 2018 Financial Wealth, Socioemoti
 text_path: "library/AMJ/vol-61-no-3/text/Kotlar 2018 Financial Wealth, Socioemotional Wealth, and IPO Underpricing in Family Firms A Two-stage Gamble Model.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["IPO underpricing", "family firms", "socioemotional wealth", "financial wealth", "behavioral agency model", "prospect theory", "two-stage gamble"]
@@ -47,6 +49,9 @@ evidence:
   theories_overview: "endowment effect in prospect theory"
   methods_overview: "we used a two-step Heckman selection model"
   keywords_source: "initial public offering (IPO) underpricing phenomenon in family firms"
+  hypotheses_source: "status and IPO underpricing is negatively moderated"
+  measures_overview: "IPO underpricing, defined as the official closing"
+  findings_overview: "underpricing is highest in later generation family firms."
 ---
 
 # Financial Wealth, Socioemotional Wealth, and IPO Underpricing in Family Firms: A Two-stage Gamble Model
@@ -57,6 +62,14 @@ There are competing theoretical explanations and conflicting empirical evidence 
 **Research Question**
 The paper asks how family firms trade off financial wealth and socioemotional wealth when pricing an IPO. It focuses on whether IPO underpricing is better explained by static loss-aversion/endowment accounts or by a dynamic two-stage gamble in which family owners update reference points after the listing decision.
 
+**Hypotheses / Propositions**
+- H1: Family firms have higher IPO underpricing than lone-founder and nonfamily firms.
+- H2a: Family firms with a founder family CEO have lower IPO underpricing than lone-founder and nonfamily firms.
+- H2b: Family firms with a later generation family CEO have higher IPO underpricing than lone-founder and nonfamily firms.
+- H3: Family ownership retention positively moderates the relationship between family firm status and IPO underpricing, so family firms underprice more when retention is higher.
+- H4: Market momentum negatively moderates the relationship between family firm status and IPO underpricing, so family firms underprice less in hot IPO markets.
+- H5: Underwriter reputation positively moderates the relationship between family firm status and IPO underpricing, so family firms underprice more with high-reputation underwriters.
+
 **Mechanism Process**
 - IV(s): Family firm status; founding generation family CEO; later generation family CEO; ownership retention; IPO momentum; underwriter reputation.
 - DV(s): IPO underpricing, defined as the official first-day closing price minus the offer price, divided by the offer price.
@@ -64,6 +77,12 @@ The paper asks how family firms trade off financial wealth and socioemotional we
 - Moderators: Ownership retention, IPO momentum, and underwriter reputation moderate the relationship between family firm status and IPO underpricing.
 
 The mechanism is that the IPO first creates an initial loss of socioemotional wealth by diluting family control and influence. Family owners then frame the pricing decision through an adapted or incompletely adapted reference point: larger initial SEW losses and positive expectations of recovering SEW make underpricing more attractive as a way to avoid realizing losses, while negative future SEW expectations make owners adapt more quickly and prioritize financial wealth. The results show no average family-firm underpricing effect, but later-generation family firms underprice more, founder-led family firms underprice less, and the family-firm effect varies with retention, market momentum, and underwriter reputation.
+
+**Data & Measures**
+The study combines EurIPO prospectuses for 1,807 IPOs in seven European countries during 1995–2011 with first-day closing prices from Datastream and ownership data from Orbis. The first-stage selection model adds SDC and Amadeus data for 5,508 private firms acquired during the same period. IPO underpricing is the official first-day closing price minus the offer price, divided by the offer price. Family firms have at least 20% family control rights and at least two involved family members; lone-founder firms have at least 20% founder control and no related significant shareholder, director, or officer. Founder- and later-generation family firms are distinguished by CEO generation. Ownership retention is retained shares divided by post-IPO shares outstanding; IPO momentum is the prior month's median change from the initial filing-range midpoint to the final offer price; underwriter reputation is the lead underwriter's European IPO market share by capital raised. The two-step Heckman model uses M&A intensity as the first-stage instrument and applies industry, country, and year fixed effects with heteroskedasticity-corrected clustered robust standard errors.
+
+**Key Findings**
+H1 was not supported: family and lone-founder status had no average association with IPO underpricing relative to other nonfamily firms. H2a and H2b received overall support: founder-led family firms had 10% lower underpricing (marginally significant at p < .10), whereas later-generation family firms had 18% higher underpricing (p < .05). H3 was supported: the family-status × ownership-retention interaction was positive (0.88, p < .01), and a one-standard-deviation retention increase corresponded to a 6.9% decrease in underpricing among nonfamily firms but a 5.5% increase among family firms. H4 was supported: the family-status × IPO-momentum interaction was negative (−2.21, p < .001), with a one-standard-deviation momentum increase corresponding to 29.5% higher underpricing among nonfamily firms versus 11.9% among family firms. H5 was supported: the family-status × underwriter-reputation interaction was positive (0.06, p < .05); reputation reduced nonfamily-firm underpricing, while the combined effect for family firms was not statistically different from zero.
 
 **Theoretical Contribution**
 The paper reconciles behavioral agency and prospect-theory explanations by treating IPO pricing as a dynamic two-stage gamble rather than a single isolated choice. It extends the behavioral agency model by adding aversion to loss realization, showing how current SEW losses and future SEW expectations can shift family owners' focus between socioemotional wealth and financial wealth. It also clarifies why SEW can both add to and detract from business valuation at IPO.

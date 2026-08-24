@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-61-no-2/pdfs/Nadkarni 2018 New Ways of Seeing Radical
 text_path: "library/AMJ/vol-61-no-2/text/Nadkarni 2018 New Ways of Seeing Radical Theorizing.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "editorial"
 keywords: ["radical theorizing", "theory development", "scientific progress", "distant search", "innovation portfolio"]
@@ -54,6 +56,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how management scholars can engage in radical theorizing that generates new ways of seeing and advances theory beyond incremental extension. It focuses on why radical theorizing matters for scientific progress, what forms it can take, and how researchers can cultivate it in their own work.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Radical theorizing produces completely new theoretical insights that may substantially depart from existing paradigms and open future research directions.
 - Approaches: The editorial identifies inductive theory generation, evocative theoretical boundary spanning, theoretical consensus shifting, and diverse theoretical integration as broad routes to radical theorizing.
@@ -61,6 +66,12 @@ The editorial asks how management scholars can engage in radical theorizing that
 - Practical guidance: Scholars are encouraged to read beyond their immediate domain, embrace disagreement and anomalies, see work through others' eyes, spend time inside organizations, and manage a portfolio that includes radical projects.
 
 The process logic is editorial and developmental rather than causal. Nadkarni and colleagues argue that radical theory emerges when scholars move beyond local search, notice anomalies or inadequacies in existing explanations, borrow or integrate distant ideas carefully, and devote part of their research portfolio to transformational questions rather than only incremental extensions.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes a typology of radical theorizing approaches based on the kind of phenomenon being investigated and the state of existing theory. It also frames radical theorizing as a disciplined route to scientific progress, connecting management theory development to philosophy of science and innovation search.

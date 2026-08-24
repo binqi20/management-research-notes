@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Wang 2018 Does Anger Expression Help or 
 text_path: "library/AMJ/vol-61-no-3/text/Wang 2018 Does Anger Expression Help or Harm Leader Effectiveness The Role of Competence-based versus Integrity-based Violations and Abusive Supervision.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["leader anger expression", "leader effectiveness", "competence-based violations", "integrity-based violations", "abusive supervision", "emotions as social information theory"]
@@ -48,6 +50,9 @@ evidence:
   theories_overview: "Drawing on emotions as social information theory"
   methods_overview: "using experimental and field methods"
   keywords_source: "leaders’ expressions of anger"
+  hypotheses_source: "Hypothesis 2. The positive effect of anger expressions"
+  measures_overview: "we used the five-item inferential response scale"
+  findings_overview: "the negative effects of anger expressed toward competence-based violations are exacerbated"
 ---
 
 # Does Anger Expression Help or Harm Leader Effectiveness? The Role of Competence-based versus Integrity-based Violations and Abusive Supervision
@@ -58,6 +63,14 @@ The question of how leaders’ expressions of anger influence their effectivenes
 **Research Question**
 The paper asks whether leaders' anger expressions help or harm perceived leader effectiveness when followers commit workplace violations. It focuses on whether the effect depends on whether the violation is competence-based or integrity-based and whether the leader is perceived as abusive.
 
+**Hypotheses / Propositions**
+- H1a: Followers perceive a leader as more effective when the leader expresses anger rather than no emotion in response to an integrity-based violation.
+- H1b: Followers perceive a leader as less effective when the leader expresses anger rather than no emotion in response to a competence-based violation.
+- H2a: Followers' inferences that the conduct is unacceptable mediate the positive effect of anger about integrity-based violations on perceived leader effectiveness.
+- H2b: Followers' negative affective reactions mediate the negative effect of anger about competence-based violations on perceived leader effectiveness.
+- H3a: Abusive supervision weakens the positive relationship between anger about integrity-based violations and perceived leader effectiveness.
+- H3b: Abusive supervision strengthens the negative relationship between anger about competence-based violations and perceived leader effectiveness.
+
 **Mechanism Process**
 - IV(s): Leader anger expression in response to competence-based violations and integrity-based violations.
 - DV(s): Perceived leader effectiveness, measured through observer, employee, and upper-manager evaluations across the three studies.
@@ -65,6 +78,20 @@ The paper asks whether leaders' anger expressions help or harm perceived leader 
 - Moderators: Type of violation; abusive supervision.
 
 The mechanism is that anger conveys different social information depending on the violation context. When anger responds to integrity-based violations, observers are more likely to infer that unethical conduct is unacceptable, which improves leader-effectiveness evaluations. When anger responds to competence-based violations, observers are more likely to experience negative affective reactions, which lowers leader-effectiveness evaluations. Abusive supervision weakens the benefits of anger toward integrity violations and strengthens the harm of anger toward competence violations because observers interpret the anger through the leader's abusive style.
+
+**Data & Measures**
+Study 1 was a 2 × 2 vignette experiment with 125 participants at an Australian university. It manipulated leader anger versus a neutral expression and competence- versus integrity-based violations; two items checked anger, two three-item scales checked violation type, and four five-point items measured perceived leader effectiveness. The authors tested the effects with ANOVA.
+
+Study 2 used a final sample of 165 U.S.-based MTurk master workers who recalled a competence- or integrity-based workplace violation. Seven-point scales measured leader anger (three items), inference that the conduct was unacceptable (five items), negative affective reactions (three items), and perceived leader effectiveness (three items). PROCESS Model 8 with 5,000 bootstrap samples estimated conditional direct and indirect effects.
+
+Study 3 used 222 matched leader–follower–upper-manager triads from part-time postgraduate programs in the Philippines, collected over two rounds two weeks apart. Leaders rated their anger in separate competence- and integrity-violation incidents with three items each; followers rated abusive supervision with Tepper's 15-item scale; upper managers rated leader effectiveness with two retained Tsui items. Hierarchical regressions tested each anger-by-abusiveness interaction separately and then jointly, controlling for leader gender, age, tenure, and anger about the other violation type.
+
+**Key Findings**
+Study 1 supported H1a and H1b: anger reduced effectiveness ratings after competence violations (M = 3.12 vs. 3.62, p = .02) but increased them after integrity violations (M = 3.46 vs. 3.00, p = .04); the interaction was significant, F(1, 121) = 10.07, p = .002, η² = .08.
+
+Study 2 gave H1 only partial support: the interaction was marginal (B = −.22, p = .086), the competence-violation slope was negative and significant (B = −.33, p < .01), and the integrity-violation slope was not significant (B = −.11, p = .28). H2a and H2b were supported: the conditional indirect effect through inference was significant for integrity violations (estimate = .05, 95% CI [.002, .12]), while the indirect effect through negative affect was significant for competence violations (estimate = −.35, 95% CI [−.52, −.21]).
+
+Study 3 supported H1a and H1b: anger about competence violations was negatively associated with manager-rated effectiveness (B = −.34, p < .001), whereas anger about integrity violations was positively associated with it (B = .28, p < .001). Separate models supported H3a and H3b (both interaction B = −.13, p < .001). In the joint model, the competence-violation interaction remained significant (B = −.09, p = .04), but the integrity-violation interaction did not (B = −.05, p = .21), making the competence-side moderation more robust.
 
 **Theoretical Contribution**
 The paper reconciles conflicting views of leader anger by showing that anger expression is not uniformly destructive or functional; its consequences depend on the violation that elicits anger and on the leader who expresses it. It extends emotions as social information theory by distinguishing affective and inferential pathways in observers' reactions to leader anger. It also integrates anger-expression research with abusive supervision and ethical leadership research by showing that integrity-based violations can make anger appear more appropriate, while abusive supervision undermines that benefit.

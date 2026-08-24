@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-2/pdfs/Dwivedi 2018 Gender-inclusive Gatekeepin
 text_path: "library/AMJ/vol-61-no-2/text/Dwivedi 2018 Gender-inclusive Gatekeeping How (Mostly Male) Predecessors Influence the Success of Female CEOs.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-mixed"
 keywords: ["gender-inclusive gatekeeping", "female CEOs", "CEO succession", "male-typed leadership schemas", "qualitative comparative analysis"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "role congruity theory"
   methods_overview: "qualitative comparative analysis (QCA)"
   keywords_source: "gender-inclusive gatekeeping facilitates female leaders' success"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "with ROA in the upper quartile of their industry"
+  findings_overview: "Our qualitative comparative analysis approach reveal three recipes for female success"
 ---
 
 # Gender-inclusive Gatekeeping: How (Mostly Male) Predecessors Influence the Success of Female CEOs
@@ -52,6 +57,9 @@ Male-typed leadership schemas have been widely acknowledged as barriers to women
 **Research Question**
 The paper asks how predecessor CEOs and local succession contexts shape whether incoming women CEOs overcome male-typed leadership schemas and achieve high post-succession firm performance. It focuses on why some female CEO successors succeed while others do not, rather than treating CEO gender as a uniform performance effect.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core conditions: predecessor legacy, successor insider origin, governance structure, inherited performance, and embedding context.
 - Success recipes: handing over the legacy, partnering the legacy, and turning around the legacy.
@@ -60,6 +68,12 @@ The paper asks how predecessor CEOs and local succession contexts shape whether 
 - Comparative boundary: the sufficient configurations for women CEOs do not map cleanly onto matched male CEO successions.
 
 The process account is configurational: women CEOs' success emerges when predecessor legacy and successor insider origin combine with governance and context to make gender-inclusive gatekeeping possible. Long-tenured or founder predecessors can sponsor, endorse, and partner with insider female successors while local role imprints and inclusive practices reduce the salience of global male-typed leadership schemas. The three recipes differ in whether power is fully handed over, shared through partnership, or retained by the predecessor to support a turnaround.
+
+**Data & Measures**
+The primary sample comprises 84 complete-data female CEO succession cases from an initial 98 events; the cases span 1992–2009 and use annual reports, proxy statements, succession announcements, executive databases, Compustat, Execucomp, and RiskMetrics. The financial outcome is average post-succession return on assets (ROA) in years *t* + 1 through *t* + 3, calibrated relative to four-digit SIC industry ROA: at or below the median is fully out, the upper quartile is fully in, and the midpoint is the crossover. Conditions capture predecessor tenure or founder status, predecessor duality and post-succession board presence, successor insider tenure and duality, and inherited poor performance or involuntary predecessor exit. The authors use fsQCA sufficiency analyses, contingency and robustness analyses, deeper qualitative interpretation of the sufficient cases, and an 80-case male comparison sample matched on succession year, industry, and firm size.
+
+**Key Findings**
+Three configurations were sufficient for high post-succession ROA among women CEOs, covering 24 of the 44 cases above the high-performance crossover: handing over the legacy, partnering the legacy, and turning around the legacy. In the first, powerful long-tenured predecessors relinquished power to insider successors inheriting favorable performance; in the second, insider successors of favorable-performing firms matched non-dual predecessors and typically partnered with them or another powerful chair; in the third, insider successors turned around poor performance while powerful long-tenured predecessors remained board chairs. Qualitative case analysis linked all three recipes to predecessor mentoring and sponsorship, with role imprints, inclusive practices, and post-succession partnering varying by recipe and context. The configurations for matched male successors differed: outsider men, rather than insider women, succeeded under favorable predecessor legacies, and insider men did not reproduce women’s turnaround pattern under poor inherited performance.
 
 **Theoretical Contribution**
 The paper advances a midrange theory of gender-inclusive gatekeeping in which mostly male predecessors can help alter local leadership schemas for women entering CEO roles. It shifts research on women executives away from sex-difference comparisons and toward within-gender variability shaped by local organizational agents, governance structures, and succession histories. It also extends executive succession and gatekeeping research by showing that predecessor influence can be inclusive rather than only constraining or exclusionary.

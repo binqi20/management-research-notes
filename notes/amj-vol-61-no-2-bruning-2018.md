@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-61-no-2/pdfs/Bruning 2018 A Role–resource Approach�
 text_path: "library/AMJ/vol-61-no-2/text/Bruning 2018 A Role–resource Approach–avoidance Model of Job Crafting A Multimethod Integration and Extension of Job Crafting Theory.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-mixed"
 keywords: ["job crafting", "role crafting", "resource crafting", "approach crafting", "avoidance crafting", "work withdrawal"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "role-based and resource-based perspectives"
   methods_overview: "Study 1 used both qualitative and quantitative methods"
   keywords_source: "Job crafting refers to changes to a job"
+  hypotheses_source: "Hypothesis 1. Role crafting will positively relate to"
+  measures_overview: "Enrichment was measured with three-item scales for"
+  findings_overview: "Thus, Hypothesis 6 is supported."
 ---
 
 # A Role–resource Approach–avoidance Model of Job Crafting: A Multimethod Integration and Extension of Job Crafting Theory
@@ -51,6 +56,14 @@ Job crafting refers to changes to a job that workers make with the intention of 
 **Research Question**
 The paper asks how job crafting can be organized into a more comprehensive taxonomy that integrates role-based and resource-based perspectives with approach and avoidance themes. It also asks how specific forms of job crafting relate to enrichment, engagement, strain, performance, and work withdrawal.
 
+**Hypotheses / Propositions**
+- H1: Role crafting will positively relate to enrichment.
+- H2: Role and resource crafting will both positively relate to engagement.
+- H3: Resource crafting will positively relate to performance.
+- H4: Role and resource crafting will negatively relate to strain.
+- H5: Avoidance crafting will positively relate to work withdrawal for both role and resource forms of avoidance crafting.
+- H6: Approach forms of a given type of job crafting will be more effective than avoidance forms of the same type for strain reduction, enrichment, engagement, and performance.
+
 **Mechanism Process**
 - Focal construct: Job crafting as worker-initiated changes to structural, social, and cognitive aspects of work intended to improve the job for the worker.
 - Taxonomic dimensions: Role crafting versus resource crafting, crossed with approach crafting versus avoidance crafting.
@@ -60,17 +73,27 @@ The paper asks how job crafting can be organized into a more comprehensive taxon
 
 The process account distinguishes changes to role boundaries from changes to resources and demands. Approach role crafting expands tasks or social relationships to increase fit and enrichment, whereas avoidance role crafting reduces work roles and can connect to withdrawal. Approach resource crafting organizes, imports, or cognitively manages resources to improve engagement and performance, whereas avoidance resource crafting removes the worker mentally or physically from aversive stimuli and shows fewer positive relationships.
 
+**Data & Measures**
+Study 1 used 246 semistructured employee and supervisor interviews, yielding 433 employee job-crafting descriptions. Domain and taxonomic coding identified seven job-crafting types, which were represented by dichotomous codes for quantitative analyses; the final matched outcome sample was 158 employees nested within 35 supervisors. Enrichment was measured as work meaning and job satisfaction, performance through supervisor rankings of efficiency, teamwork, and work improvements, and strain through supervisor-observed strain and employee-reported work–home conflict. The authors tested Study 1 relationships using OLS regression or multilevel models according to group effects.
+
+Study 2 surveyed 323 U.S. working adults. Its job-crafting measure covered all seven subdimensions using five-point frequency items; enrichment comprised perceived work meaning and impact, engagement comprised physical and cognitive engagement, and work withdrawal comprised bored behavior, general neglect, and turnover intentions. Confirmatory factor analyses assessed dimensional structure, and OLS regressions tested outcomes; Table 5 reports an analysis n of 238 without explaining the difference from the recruited sample.
+
+**Key Findings**
+Study 1 identified seven job-crafting domains. H1 received partial support: work role expansion predicted work meaning, social expansion predicted work meaning and job satisfaction, and work role reduction predicted neither. H3 received relatively strong overall support: adoption and work organization predicted overall performance and several specific performance dimensions, whereas withdrawal crafting predicted efficiency but not overall performance. H4 was partially supported for both role and resource crafting.
+
+Study 2 supported the seven-factor job-crafting structure. H1 was supported for all three role-crafting types, but H2 was supported for approach role crafting, partially supported for approach resource crafting, and unsupported for avoidance role and resource crafting. Both avoidance forms positively predicted bored behavior, neglect, and turnover intentions, supporting H5. Across studies, approach forms showed more hypothesized positive relationships than avoidance forms, supporting H6.
+
 **Theoretical Contribution**
 The paper integrates two previously parallel job crafting perspectives by showing that role-based and resource-based crafting each contain approach and avoidance forms. It extends job crafting theory by identifying seven specific job crafting types, including clearer distinctions between work role reduction and withdrawal crafting and between work organization, adoption, and metacognition. It also links the taxonomy to differentiated outcomes, showing that approach crafting is generally more consistently related to positive outcomes than avoidance crafting.
 
 **Practical Implication**
-The findings suggest that employees and organizations should distinguish between job crafting strategies rather than treating job crafting as uniformly beneficial. Workers seeking enrichment may benefit more from expanding work roles and social relationships than from reducing roles, while workers seeking engagement or performance gains may benefit from work organization, adoption, and metacognition. Avoidance strategies may sometimes reduce demands or improve efficiency, but they are also associated with work withdrawal and should be used cautiously.
+The findings suggest that employees and organizations should distinguish between job crafting strategies rather than treating job crafting as uniformly beneficial. Workers seeking enrichment may benefit more from expanding work roles and social relationships than from reducing roles, while workers seeking engagement may benefit from work organization, adoption, and metacognition; performance gains were associated with work organization and adoption, not metacognition. Avoidance strategies may sometimes reduce demands or improve efficiency, but they are also associated with work withdrawal and should be used cautiously.
 
 **Limitations**
 The authors note that Study 1 asked specifically for examples intended to increase efficiency/effectiveness and decrease stress, which may have shaped the kinds of job crafting examples elicited. Study 2 relied on employee self-reports, although it replicated Study 1 patterns and controlled for personal characteristics and social desirability. The studies sampled varied jobs, so occupation-specific research is needed to reduce error linked to different work requirements and conditions.
 
 **Future Research**
-Future research should examine specific occupations and work contexts to test whether different job crafting forms operate differently under more homogeneous job requirements. The paper also calls for future quantitative measures of withdrawal crafting that include systematic reductions of cognitive demands. Additional research could use more comprehensive scales and multiple data sources to clarify the longer-term consequences of avoidance crafting.
+Future quantitative measures of withdrawal crafting should include systematic reductions of cognitive demands. The authors also call for multiple data sources, more comprehensive scales, and studies of specific occupations to reduce error associated with different work requirements and conditions.
 
 **APA 7th Citation**
 Bruning, P. F., & Campion, M. A. (2018). A role–resource approach–avoidance model of job crafting: A multimethod integration and extension of job crafting theory. *Academy of Management Journal*, 61(2), 499-522. https://doi.org/10.5465/amj.2015.0604

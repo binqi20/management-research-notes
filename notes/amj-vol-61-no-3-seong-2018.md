@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Seong 2018 Influencing the Influencers D
 text_path: "library/AMJ/vol-61-no-3/text/Seong 2018 Influencing the Influencers Diversification, Semantic Strategies, and Creativity Evaluations.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["diversification", "semantic strategies", "semantic autonomy", "semantic seeding", "creativity evaluations", "gatekeepers"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "parent–subsidiary names provides a “lens”"
   methods_overview: "we used a generalized least squares procedure"
   keywords_source: "semantic seeding”) or not (“semantic autonomy”)"
+  hypotheses_source: "will negatively moderate the inverted U-shaped relationship between the number of autonomous subsidiary"
+  measures_overview: "captures the number of seeded subsidiary names"
+  findings_overview: "new autonomous subsidiary name enhanced the parent’s creativity appeal up to a certain point (an inverted U-shaped relationship)."
 ---
 
 # Influencing the Influencers: Diversification, Semantic Strategies, and Creativity Evaluations
@@ -51,13 +56,28 @@ Diversification can be risky, as it extends a firm’s identity across multiple 
 **Research Question**
 The paper asks why some diversifying firms are perceived as more creative than others when they span multiple categories. It examines whether a parent firm's stock of subsidiary names, the semantic relationship between parent and subsidiary names, and gatekeepers' ongoing memory of those naming moves shape creativity evaluations.
 
+**Hypotheses / Propositions**
+H1: The number of autonomous subsidiary names has an inverted U-shaped relationship with gatekeepers’ creativity evaluations of the parent.
+H2: The number of seeded subsidiary names has a negative linear relationship with gatekeepers’ creativity evaluations of the parent.
+H3: Parent media co-appearance with autonomous subsidiary names is negatively related to gatekeepers’ creativity evaluations of the parent.
+H4a: Parent visibility negatively moderates the inverted U-shaped relationship between autonomous subsidiary-name stock and gatekeepers’ creativity evaluations.
+H4b: Parent visibility positively moderates the predicted negative linear relationship between seeded subsidiary-name stock and gatekeepers’ creativity evaluations.
+H5a: For each new autonomous subsidiary name, more time since the parent’s last autonomy move strengthens its positive impact on gatekeepers’ creativity evaluations.
+H5b: For each new seeded subsidiary name, more time since the parent’s last seeding move strengthens its negative impact on gatekeepers’ creativity evaluations.
+
 **Mechanism Process**
 - IV(s): Number of autonomous subsidiary names, number of seeded subsidiary names, autonomy co-appearance in media, parent visibility, time since last autonomy move, and time since last seeding move.
 - DV(s): Gatekeepers' creativity evaluations of the parent fashion house, based on Journal du Textile creativity points for showcased main collection lines.
 - Mediators: Not reported in paper.
 - Moderators: Parent visibility moderates the effects of autonomous and seeded subsidiary-name stocks; timing since the last same-type naming move conditions the creativity effect of new autonomy and seeding moves.
 
-The mechanism is a semantic sensemaking process. Subsidiary names create a stock of parent-subsidiary identity cues through which industrial buyers infer the parent's symbolic originality and commercial appropriateness while it diversifies across categories. Autonomous names initially signal originality and enhance creativity appeal, but too many autonomous names or frequent parent-subsidiary media co-appearance can exhaust gatekeepers' cognitive tolerance and make autonomy resemble seeding. Seeded names are predicted to signal risk aversion, although the empirical results show a U-shaped rather than negative linear stock effect; visibility and timing further shape how gatekeepers remember and evaluate these semantic moves.
+The mechanism is a semantic sensemaking process. Subsidiary names create a stock of parent-subsidiary identity cues through which industrial buyers infer the parent's symbolic originality and commercial appropriateness while it diversifies across categories. Autonomous names initially signal originality and enhance creativity appeal, but an overly large autonomous-name stock can exhaust gatekeepers' cognitive tolerance. Separately, frequent parent-subsidiary media co-appearance reinforces association until an autonomous name may be perceived as a seeded name, diminishing creativity appeal. Seeded names are predicted to signal risk aversion, although the empirical results show a U-shaped rather than negative linear stock effect; visibility and timing further shape how gatekeepers remember and evaluate these semantic moves.
+
+**Data & Measures**
+The panel covers fashion houses participating in New York, London, Milan, and Paris Fashion Weeks from Spring/Summer 1998 through Fall/Winter 2010, identified through Vogue and linked to Journal du Textile (JdT) creativity rankings, subsidiary-name histories, and Factiva media data in 25 languages. The sample comprises 250 fashion houses and 2,296 house-season observations. The DV, creativity evaluations, is each house’s average JdT score from industrial buyers, on a 0–20 scale. Semantic autonomy and semantic seeding are annual counts of subsidiary names with, respectively, no word overlap and at least one shared word with the parent name; autonomy co-appearance is the logged average number of Factiva articles in which parent and autonomous subsidiary names appear together. Parent visibility is the logged count of articles mentioning the parent in the year before each Fashion Week, and timing is years since the last same-type naming move (or since founding for a first move). The authors estimate generalized least squares panel models with fashion-house and season fixed effects and extensive controls; this is an observational, associational panel design rather than a causal identification strategy.
+
+**Key Findings**
+H1 was supported: autonomous subsidiary-name stock had an inverted U-shaped relationship with creativity evaluations (Model 28: linear b = 2.63 and quadratic b = −0.64, both p < .001); the estimated peak gain from introducing one autonomous name was 0.47 points. H2 was not supported as stated; instead of a negative linear effect, seeded-name stock had an unexpected U-shaped relationship (Model 28: linear b = −0.71, p < .001; quadratic b = 0.06, p < .01). H3 was supported: autonomy co-appearance was negative (Model 28: b = −0.37, p < .001). H4a was supported (interaction b = −0.14, p < .05), while H4b received marginal support (b = 0.05, p < .10). H5a was significant only in the fully specified model (Model 18: b = 0.01, not significant; Model 28: b = 0.04, p < .01); H5b was supported (b = −0.01, p < .01 in Model 19 and p < .001 in Model 28).
 
 **Theoretical Contribution**
 The paper contributes to diversification research by shifting attention from economic relatedness alone to the cultural and symbolic management of multiple identities across categories. It integrates category, naming, organizational identity, signaling, and sensemaking arguments to show how parent-subsidiary name configurations become an evaluative lens for gatekeepers. It also contributes to organizational creativity research by treating external creativity evaluations as shaped by identity-management strategies and gatekeeper memory, not only by internal leadership or network-position antecedents.
@@ -66,7 +86,7 @@ The paper contributes to diversification research by shifting attention from eco
 The findings imply that diversifying firms can influence external creativity evaluations through naming strategy, not only through the substantive scope of diversification. For less visible parents, autonomous subsidiary names may be especially useful, but the benefits decline when autonomy is overused or when media repeatedly ties autonomous names back to the parent. For highly visible parents, seeded naming may be less damaging because gatekeepers may interpret the move as a risky extension of an established identity rather than mere conservatism.
 
 **Limitations**
-The authors state that they do not examine the evaluative dynamics between producers and consumers because the ready-to-wear fashion market is mediated by gatekeepers. The setting is the global high-end ready-to-wear fashion industry, where creativity is especially salient, so the generalizability of the findings depends on whether other industries have comparable gatekeeping structures and creativity-valuing audiences. The dependent variable captures industrial buyers' creativity evaluations rather than consumer demand or direct financial performance.
+The authors identify one limitation: they do not examine evaluative dynamics between producers and consumers because gatekeepers mediate the feedback loop in the ready-to-wear market. They call for research that incorporates evaluating and non-evaluating gatekeepers and examines how digitalization and online crowds change gatekeeping as consumers gain access to information once reserved for market intermediaries.
 
 **Future Research**
 The authors suggest future research on nested dynamics between evaluating and non-evaluating gatekeepers. They also call for research on how online crowds and digitalization change gatekeeping as consumers gain access to information previously held by market intermediaries and producers open their communication channels. Additional work could extend the semantic strategy argument to other symbolic and financial performance contexts where names influence external evaluation.

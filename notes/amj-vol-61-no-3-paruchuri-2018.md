@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Paruchuri 2018 New Ways of Seeing Pitfal
 text_path: "library/AMJ/vol-61-no-3/text/Paruchuri 2018 New Ways of Seeing Pitfalls and Opportunities in Multilevel Research.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "editorial"
 keywords: ["multilevel research", "multilevel theorizing", "multilevel measurement", "multilevel models", "poorly chosen levels", "assuming homology", "theory-measurement-method alignment"]
@@ -53,6 +55,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how management scholars can avoid common pitfalls when theorizing across levels. It focuses on how multilevel research can enrich organizational theory when levels, constructs, measurement, and analytic methods are explicitly justified and aligned.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Multilevel research has moved from a marginal concern to a central way of building context-rich management theory, but the added complexity creates recurring pitfalls.
 - Failure to surface assumptions: Researchers may choose poorly motivated levels, leave construct levels insufficiently defined, or assume homology when logic from one level is transferred to another.
@@ -60,6 +65,12 @@ The editorial asks how management scholars can avoid common pitfalls when theori
 - Opportunities: Each pitfall creates a corresponding opportunity to make level choices explicit, develop stronger cross-level logic, align measurement with theory, and use multilevel methods to illuminate genuinely multilevel problems.
 
 The process logic is editorial rather than causal. Paruchuri and colleagues argue that multilevel theorizing is valuable when it identifies why factors at one level should affect outcomes at another level, but that value depends on surfacing assumptions and aligning theory, measurement, and analytical method. Poorly specified levels, unclear construct definitions, homology assumptions, and theory-method misfit can turn multilevel complexity into noise rather than insight.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes a compact diagnostic framework for evaluating multilevel management research. It distinguishes three aspects of multilevel work, namely theorizing, measurement, and models, and organizes pitfalls into failures to surface assumptions and misalignment among theory, measurement, and method.

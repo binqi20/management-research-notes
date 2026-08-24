@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Eckardt 2018 An Examination of the Firm-
 text_path: "library/AMJ/vol-61-no-3/text/Eckardt 2018 An Examination of the Firm-level Performance Impact of Cluster Hiring in Knowledge-intensive Firms.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["cluster hiring", "strategic human capital", "knowledge-intensive firms", "co-mobility", "expertise overlap"]
@@ -46,6 +48,9 @@ evidence:
   theories_overview: "group dynamics, signaling"
   methods_overview: "ordinary least"
   keywords_source: "cluster hiring approaches to the acquisition of strategic human capital"
+  hypotheses_source: "degree of co-mobility in cluster hiring will be negatively associated with a change in firm profitability."
+  measures_overview: "difference in profit per partner between"
+  findings_overview: "a negative impact on firm performance, the degree of expertise overlap is positively"
 ---
 
 # An Examination of the Firm-level Performance Impact of Cluster Hiring in Knowledge-intensive Firms
@@ -56,6 +61,14 @@ This research investigates the firm-level performance impact of cluster hiring a
 **Research Question**
 The paper asks how cluster hiring as an approach to acquiring strategic human capital affects firm-level performance in knowledge-intensive firms. It focuses on whether the performance impact depends on the cluster hire's expertise overlap, co-mobility, and fit with the hiring firm's existing strategic human capital depth.
 
+**Hypotheses / Propositions**
+- H1: Expertise overlap in cluster hiring is positively associated with change in firm profitability.
+- H2: Co-mobility in cluster hiring is negatively associated with change in firm profitability.
+- H3: Co-mobility weakens the positive association between expertise overlap and change in firm profitability as co-mobility increases.
+- H4: Existing strategic human capital depth at the hiring firm weakens the positive association between expertise overlap and change in firm profitability as depth increases.
+- H5: Existing strategic human capital depth at the hiring firm strengthens the negative association between co-mobility and change in firm profitability as depth increases.
+- H6: Existing strategic human capital depth strengthens the negative moderating impact of co-mobility on the expertise-overlap–profitability association as depth increases.
+
 **Mechanism Process**
 - IV(s): Expertise overlap in the cluster hire; co-mobility in the cluster hire; existing strategic human capital depth at the hiring firm.
 - DV(s): Change in firm profitability, measured as the difference in profit per partner between 2010 and 2011.
@@ -63,6 +76,12 @@ The paper asks how cluster hiring as an approach to acquiring strategic human ca
 - Moderators: Co-mobility moderating the expertise overlap effect; existing strategic human capital depth moderating the expertise overlap effect and the co-mobility effect; three-way interaction among expertise overlap, co-mobility, and existing strategic human capital depth.
 
 The mechanism is that cluster hiring can create economic value when expertise overlap adds novel and legitimate strategic human capital to areas where the hiring firm has little existing depth. Co-mobility can reduce firm-level performance by creating integration problems and appropriation concerns, even if it may help individual movers. The results support a negative main effect of co-mobility, a positive expertise-overlap effect only under low co-mobility, and a positive expertise-overlap effect only when existing strategic human capital depth is low.
+
+**Data & Measures**
+The study uses archival data on 112 domestic U.S. law firms in *The American Lawyer* top 200 that hired at least two lateral partners in 2010. Change in firm profitability is the difference in profit per partner between 2010 and 2011, using *The American Lawyer* data. Expertise overlap is a reverse-coded, group-size-adjusted Teachman's Index of hired partners' concentration across practice areas; co-mobility uses the same index for concentration across prior employers, with both based on ALM Legal Intelligence's Lateral Partner Moves database. Existing strategic human capital depth is the average number of hiring-firm partners in the practice areas represented by the cluster hire, based on Martindale Hubbell profiles. Main effects are estimated with OLS regression and interactions with moderated hierarchical regression, including controls for cluster, firm, client, partner-departure, and prior-profitability characteristics.
+
+**Key Findings**
+H1 was not supported: expertise overlap had no significant unconditional association with change in firm profitability. H2 was supported: co-mobility had a negative association (b = -45.82, p < .05). H3 was supported: co-mobility attenuated the expertise-overlap effect (b = -46.22, p < .01); expertise overlap was positive at low co-mobility (t = 2.28, p < .05) but nonsignificant at high co-mobility. H4 was supported: existing strategic human capital depth attenuated the expertise-overlap effect (b = -0.82, p < .05); expertise overlap was positive at low depth (t = 2.66, p < .01) but nonsignificant at high depth. H5 and H6 were not supported.
 
 **Theoretical Contribution**
 The paper extends strategic human capital research by moving cluster hiring from an individual-mobility question to a firm-level performance question. It clarifies cluster hiring as a strategic human capital acquisition tactic whose value depends on composition and fit, not merely on moving multiple employees together. It also shows that positive individual-level arguments about co-mobility do not necessarily scale to firm-level profitability.

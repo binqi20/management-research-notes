@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-2/pdfs/Schepker 2018 Planning for Future Leader
 text_path: "library/AMJ/vol-61-no-2/text/Schepker 2018 Planning for Future Leadership Procedural Rationality, Formalized Succession Processes, and CEO Influence in CEO Succession Planning.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-mixed"
 keywords: ["executive succession planning processes", "procedural rationality", "formalized succession processes", "CEO influence", "CEO succession candidates", "boards as information-processing groups"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "procedural rationality in decision-making theory"
   methods_overview: "logistic random coefficient"
   keywords_source: "executive succession planning processes"
+  hypotheses_source: "processes positively relates to the expected time required to name a permanent CEO."
+  measures_overview: "We measured this using 10 succession planning activities."
+  findings_overview: "such that firms with influential CEOs are less likely"
 ---
 
 # Planning for Future Leadership: Procedural Rationality, Formalized Succession Processes, and CEO Influence in CEO Succession Planning
@@ -53,6 +58,17 @@ Despite substantive organizational ramifications, surprisingly little theory exp
 **Research Question**
 The paper asks how boards overcome informational barriers in CEO succession planning and whether procedurally rational, formalized succession processes improve succession planning outcomes. It also asks whether CEO influence directly affects those outcomes and weakens the benefits of formalized board processes.
 
+**Hypotheses / Propositions**
+- H1a: Formalized CEO succession planning processes positively relate to considering more than one CEO successor candidate.
+- H1b: Formalized CEO succession planning processes positively relate to the likelihood of having an internal successor candidate.
+- H1c: Formalized CEO succession planning processes negatively relate to the expected time required to name a permanent CEO.
+- H1d: Formalized CEO succession planning processes positively relate to the use of external help.
+- H2a: CEO influence in succession planning negatively relates to considering more than one CEO successor candidate.
+- H2b: CEO influence in succession planning negatively relates to the likelihood of having an internal successor candidate.
+- H2c: CEO influence in succession planning positively relates to the expected time required to name a permanent CEO.
+- H2d: CEO influence in succession planning negatively relates to the use of external help.
+- H3: CEO influence moderates the relationship between formalized succession processes and all four succession planning outcomes, such that the relationships are weaker when CEO influence is high.
+
 **Mechanism Process**
 - IV(s): Formalized CEO succession planning processes and CEO influence in succession planning.
 - DV(s): Consideration of multiple successor candidates, likelihood of an internal successor, time to permanent successor, and use of external help.
@@ -60,6 +76,12 @@ The paper asks how boards overcome informational barriers in CEO succession plan
 - Moderators: CEO influence was theorized as a moderator of the relationship between formalized succession processes and succession planning outcomes.
 
 The mechanism is that procedurally rational board processes create systematic information gathering and analysis around CEO role requirements, candidate identification, and candidate development. These formalized processes should reduce adverse selection and decision biases by giving boards more objective information about succession candidates. CEO influence was expected to impede this information processing by shaping candidate access and information flow, but the empirical tests supported formalized process effects more consistently than CEO influence or its moderating role.
+
+**Data & Measures**
+The authors first developed grounded theory from nine CHRO interviews, informational meetings with 40 CHROs and three other executives, and interviews with 22 directors. They then tested the hypotheses using CHRO surveys administered in 2013–2015, yielding 355 firm-year observations from 218 U.S.-based public companies, supplemented with prior-year Compustat, MSCI, and proxy-statement data. Formalized succession processes were the count of 10 retained activities covering role definition, candidate identification, and development (α = .74); CEO influence was a 0–10 scale comparing CEO with board influence. The four outcomes were considering at least two candidates (binary), confidence in an immediate internal successor (0%–100%), expected time to a permanent successor (six categories), and use of external help (binary). Random-coefficient models were used, with logistic models for the binary outcomes and supplemental two-stage endogeneity analyses using board engagement as an instrumental variable.
+
+**Key Findings**
+H1a–H1d were supported in the baseline models: formalized succession processes increased consideration of multiple candidates (b = .24, p < .01), internal-successor likelihood (b = .20, p < .05), and external-help use (b = .16, p < .05), while reducing time to a permanent successor (b = −.10, p < .05). Moving from one standard deviation below to one above the process mean corresponded to changes of +12.0%, +20.0%, −11.9%, and +58.3%, respectively. H2a–H2c were not supported; H2d was supported because CEO influence was negatively related to external-help use (b = −.19, p < .05). H3 was not supported for any outcome. Supplemental endogeneity analyses were consistent with the baseline results except that H1a became nonsignificant when the endogeneity control was included.
 
 **Theoretical Contribution**
 The paper contributes to corporate governance and CEO succession research by theorizing boards as information-processing groups that can use procedural rationality to overcome information deficits. It shifts CEO succession planning research from event-centered succession outcomes toward ongoing board processes, showing that formalized processes are associated with more candidate options, stronger internal-succession readiness, faster expected succession, and greater use of external help. It also refines CEO-influence arguments by showing limited support for CEO influence as a direct or moderating constraint in this setting.

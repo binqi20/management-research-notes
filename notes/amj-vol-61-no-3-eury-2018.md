@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-3/pdfs/Eury 2018 The Past is Not Dead Legacy Id
 text_path: "library/AMJ/vol-61-no-3/text/Eury 2018 The Past is Not Dead Legacy Identification and Alumni Ambivalence in the Wake of the Sandusky Scandal at Penn State.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-qualitative"
 keywords: ["legacy identification", "organizational identification", "organizational alumni", "ambivalent identification", "identification threat", "social identity theory"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "The convergence of social identity theory"
   methods_overview: "Grounded theory development. Using NVivo"
   keywords_source: "a “legacy identification,” such that alumni"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we applied wordand line-level coding"
+  findings_overview: "affect identification states, including three previously undocumented forms of ambivalent identification: “reconciled identification,” “selective identification,” and “conditional identification.”"
 ---
 
 # The Past is Not Dead: Legacy Identification and Alumni Ambivalence in the Wake of the Sandusky Scandal at Penn State
@@ -53,6 +58,9 @@ We investigate how the temporal effects of past, present, and future influence o
 **Research Question**
 The paper asks how former members of an organization respond to scandal and, more specifically, how former members experience legacy identification when an identification threat calls their past, present, and future relationship with the organization into question. The empirical puzzle is how alumni maintain, revise, or withdraw identification when a formerly valued organization becomes associated with serious wrongdoing.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Focal construct: Legacy identification, defined as a residual identification retained from past experiences with an organization, group, or profession.
 - Identification threat: The Sandusky scandal and related organizational responses disrupted alumni's identity continuity by juxtaposing positive past experiences, negative present experiences, and uncertain future affiliation.
@@ -62,11 +70,17 @@ The paper asks how former members of an organization respond to scandal and, mor
 
 The process account shows legacy identification as temporal identity work under threat. Alumni compared who they had been in relation to Penn State with who they were during the scandal and who they might become afterward. Targeting specific people, groups, or outsiders helped some alumni preserve identification with the broader institution while directing negative emotion elsewhere, producing several forms of ambivalent identification.
 
+**Data & Measures**
+The primary dataset comprised 25,335 communications from 14,309 alumni sent to university offices from November 2011 to December 2012; analyses focused on e-mails, with telephone summaries as supplementary data. The first author read more than 700 communications; the team then analyzed more than 1,000 communications until the codebook no longer substantively changed and coded approximately 500 additional communications. Using NVivo, the authors applied grounded-theory procedures including word- and line-level coding, constant comparison, focused and axial coding, and analysis of code co-occurrences to build second-order themes and aggregate dimensions. Five alumni opinion surveys from 2012 to 2015 and letters in The Penn Stater provided supplementary evidence.
+
+**Key Findings**
+Alumni drew on legacy identification while juxtaposing positive past experiences, negative present experiences, and uncertain future affiliation. Their general or specific targeting of the university, insiders, and outsiders was associated with five reassessed identification modes: unconditional identification, disidentification, and three emergent ambivalent forms—reconciled, selective, and conditional identification. These modes were associated with intended support, withdrawal, or both, and most alumni maintained some form of identification despite the scandal.
+
 **Theoretical Contribution**
 The paper contributes the concept of legacy identification to organizational identification research, emphasizing that identification can persist after formal membership ends and can shape current and future self-understandings. It adds temporality, affect, and intended behavior to identification theory by showing how past, present, and future selves are intertwined during identity threat. It also identifies three forms of ambivalent identification—reconciled, selective, and conditional—that extend prior work on identification, disidentification, and ambivalence.
 
 **Practical Implication**
-The findings imply that organizations facing scandal should understand former members as consequential stakeholders whose identification may persist long after formal membership ends. Alumni may not respond only by supporting or abandoning the organization; they may also redirect blame toward specific insiders or outsiders, support selected parts of the organization, or make future support conditional on corrective action. For organizations with alumni or former-employee networks, responses to crises can therefore shape reputational support, withdrawal, and future affiliation.
+The paper identifies organizational alumni as an underrepresented but important stakeholder group whose legacy identification can persist after formal membership ends. In the scandal setting, alumni expressed unconditional support, withdrawal, and three forms of ambivalent identification—reconciled, selective, and conditional—linked to different support intentions. These findings show that former members can remain connected to and express support for selected parts of an organization even amid a severe identity threat.
 
 **Limitations**
 The authors note that the data mainly contain expressed intentions about future behavior and self-reported actions rather than direct behavioral measures. The study is based on university alumni and on communications during a fixed one-year period after a major scandal, which limits evidence about other alumni populations, current employees, tranquil periods, and longer-term changes. The authors also note that the revelatory scandal context made identification processes visible, but future work is needed to examine legacy identification outside such high-threat settings.

@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-2/pdfs/McDonald 2018 One Step Forward, One Step
 text_path: "library/AMJ/vol-61-no-2/text/McDonald 2018 One Step Forward, One Step Back White Male Top Manager Organizational Identification and Helping Behavior toward Other Executives Following the Appointment of a Female or Racial Minority CEO.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-quantitative"
 keywords: ["white male top managers", "minority-status CEO", "organizational identification", "helping behavior", "intergroup relations"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "social psychological literature on intergroup"
   methods_overview: "Our main analysis used ordinary least squares"
   keywords_source: "appointment of a minority-status CEO"
+  hypotheses_source: "female CEO will have a negative effect on the amount"
+  measures_overview: "This organization’s successes are my successes."
+  findings_overview: "provide less help to colleagues, with this reduction particularly pronounced for help provided to minority-status colleagues."
 ---
 
 # One Step Forward, One Step Back: White Male Top Manager Organizational Identification and Helping Behavior toward Other Executives Following the Appointment of a Female or Racial Minority CEO
@@ -52,6 +57,11 @@ In this paper, we examine white male managers' intrapsychic and behavioral respo
 **Research Question**
 The paper asks how white male top managers respond intrapsychically and behaviorally when their firm appoints a female or racial minority CEO. It specifically examines whether such appointments reduce white male top managers' organizational identification and, through that reduction, decrease the help they provide to other executives, especially female and racial minority colleagues.
 
+**Hypotheses / Propositions**
+- H1: White male top managers will experience lower organizational identification following the appointment of a racial minority or female CEO than following a white male CEO appointment.
+- H2: A racial minority or female CEO appointment will negatively affect white male top managers' work-related help to executive colleagues, mediated by reduced organizational identification.
+- H3: These indirect negative effects will be stronger for help to racial minority and female colleagues than for help to white male colleagues.
+
 **Mechanism Process**
 - IV(s): Appointment of a female CEO or racial minority CEO, compared with appointment of a white male CEO.
 - DV(s): White male top manager organizational identification; mentoring to subordinates; task-related help to subordinates and peers; recommendations for board seats for peers.
@@ -60,6 +70,14 @@ The paper asks how white male top managers respond intrapsychically and behavior
 
 The mechanism is a moderated mediation account. Drawing on intergroup relations and organizational identification literatures, the paper argues that white male top managers hold less favorable views of the organization and feel less valued by a minority-status CEO, which weakens their organizational identification. Lower identification then reduces attraction, empathy, and self-other overlap with colleagues, lowering work-related help. Because weaker organizational identification makes race and gender more salient bases for out-group categorization, the reduction in help is especially strong for female and racial minority executives.
 
+**Data & Measures**
+Annual executive surveys from 2006 to 2011 were combined with CEO-succession, executive-demographic, and archival firm data. The focal predictors were indicators for a white male top manager paired with a female CEO or a racial minority CEO, relative to a white male top manager paired with a white male CEO. Organizational identification was measured with a validated nine-item factor-score scale (α = .88). Potential help recipients reported mentoring through a six-item scale (α = .86) and task-related help through a nine-item scale (α = .90); board recommendations were coded 1 when the focal executive recommended a peer for an outside directorship during the subsequent 12 months. Organizational identification was measured at time t, the helping outcomes over the subsequent 12 months, and prior outcome levels were controlled; recipient race and gender supplied the H3 moderators.
+
+**Key Findings**
+- H1 was supported: female CEO and racial minority CEO appointments predicted lower organizational identification among white male top managers (b = −0.393, p < .001; b = −0.370, p < .01, respectively).
+- H2 was supported across mentoring to subordinates, task-related help to subordinates and peers, and board-seat recommendations to peers. Both appointment types reduced all four forms of help, and reduced organizational identification significantly mediated these effects; the bootstrapped 95% confidence intervals for every indirect effect excluded zero.
+- H3 was supported for all four helping outcomes: the indirect negative effects were stronger for help to female and racial minority colleagues than for help to white male colleagues, with nonoverlapping 95% confidence intervals.
+
 **Theoretical Contribution**
 The paper contributes to research on women and racial minorities in corporate leadership by shifting attention from external stakeholder reactions to internal executive reactions. It theorizes a "reverse generalized Matthew effect": appointing a minority-status CEO can indirectly disadvantage other minority-status executives by triggering reduced helping from white male top managers. It also extends organizational identification and CEO succession research by showing how demographic differences between an incumbent top manager and a new CEO can shape executive identification and discretionary helping behavior.
 
@@ -67,10 +85,10 @@ The paper contributes to research on women and racial minorities in corporate le
 The findings imply that appointing a female or racial minority CEO may not automatically improve the internal support available to other female and racial minority executives. Boards and senior teams should recognize that white male executives may withdraw support in subtle but consequential ways after such succession events. The authors argue that compensatory measures that bolster organizational identification may help mitigate these effects.
 
 **Limitations**
-The study focuses on large and mid-sized public U.S. companies, so the findings may not transfer directly to private firms, smaller organizations, nonprofits, or non-U.S. settings. The empirical design uses longitudinal survey and archival data around CEO succession events, which supports temporal ordering but remains observational. The sample included no CEOs who were both racial minority and female, and racial minority women were too rare among top managers to support statistically meaningful intersectional comparisons.
+The paper does not present a standalone limitations section. It reports that no CEO in the sample was both a racial minority and female, and that racial minority women were too rare among top managers during the study period to support statistically meaningful comparisons of intersectional effects.
 
 **Future Research**
-Future research could examine other outcomes of reduced organizational identification after minority-status CEO appointments, including extra-role behavior, strategic decision quality, strategy execution, and top manager turnover. Studies could also examine whether reduced help compromises executive careers or whether compensatory measures can mitigate the negative effects of minority-status CEO appointments on white male top managers' organizational identification. As racial minority women become more represented in top management and CEO roles, future work should examine whether effects are stronger or different for dual-minority CEOs and colleagues.
+Future research could examine other outcomes of reduced organizational identification after minority-status CEO appointments, including extra-role behavior, strategic decision quality, strategy execution, and top manager turnover. Studies could also examine compensatory measures that mitigate the negative effects of minority-status CEO appointments on white male top managers' organizational identification. As racial minority women become more represented in top management and CEO roles, future work should examine whether effects are stronger or different for dual-minority CEOs and colleagues.
 
 **APA 7th Citation**
 McDonald, M. L., Keeves, G. D., & Westphal, J. D. (2018). One step forward, one step back: White male top manager organizational identification and helping behavior toward other executives following the appointment of a female or racial minority CEO. *Academy of Management Journal*, 61(2), 405-439. https://doi.org/10.5465/amj.2016.0358

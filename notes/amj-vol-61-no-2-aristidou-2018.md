@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-61-no-2/pdfs/Aristidou 2018 Coordinating Service Prov
 text_path: "library/AMJ/vol-61-no-2/text/Aristidou 2018 Coordinating Service Provision in Dynamic Service Settings A Position-practice Relations Perspective.txt"
 ingested_at: "2026-07-01"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-24"
 
 paper_type: "empirical-qualitative"
 keywords: ["dynamic service settings", "continuity of service provision", "position-practice relations", "role-based interaction", "practice theory", "technology-enabled interaction"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "positionpractices” and position-practice relations (PPR)"
   methods_overview: "methods: documentation, observations, and interviews"
   keywords_source: "dynamic service settings (DSS)"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "methods: documentation, observations, and interviews"
+  findings_overview: "We found that the pattern of interaction that emerges is constantly reconfigured"
 ---
 
 # Coordinating Service Provision in Dynamic Service Settings: A Position-practice Relations Perspective
@@ -51,6 +56,9 @@ How is continuity of service provision supported in dynamic service settings (DS
 **Research Question**
 The paper asks how diverse interaction among dispersed actors contributes to coordinating and supporting continuous service provision in dynamic service settings. The empirical puzzle is how continuity can be maintained when interaction spans physical and virtual space, unfolds over time, involves technology, and includes actors outside formal organizational role sets.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / lens: Position-practices and position-practice relations (PPR) webs around the task of maintaining service provision for a specific patient.
 - Setting / phenomenon: UK child and adolescent mental health care as a dynamic service setting where patient needs evolve and interaction crosses organizational, non-organizational, physical, and virtual spaces.
@@ -60,6 +68,12 @@ The paper asks how diverse interaction among dispersed actors contributes to coo
 
 The process account shows service continuity as an evolving PPR web rather than as coordination within a fixed role set. When breakdowns occur, actors draw on histories of interaction and imagined future care arrangements, while also mobilizing interaction across physical and virtual spaces. These actions can introduce, remove, or rekindle position-practices, making service provision depend on distributed agency rather than only formal organizational roles.
 
+**Data & Measures**
+The 18-month longitudinal qualitative field study in a UK CAMHS catchment area combined 58 interviews (38 formal interviews recorded and transcribed verbatim and 20 ethnographic interviews), observations across physical and virtual sites, and archival and contemporary service and patient documents. The authors assembled activities on a timeline and used four stages of grounded, iterative coding to identify service-provision activities and breakdowns, categorize role-based interactions, examine extraorganizational and technology-enabled interaction, and theorize how PPR webs are reconfigured through spanning time and stretching space.
+
+**Key Findings**
+Continuity of service provision was coordinated through a dynamically reconfigured PPR web rather than a fixed organizational role set. Breakdowns mobilized distributed agency: actors spanned time by drawing on histories of interaction and imagining future care configurations, and stretched space by mobilizing interaction across physical and virtual, organizational and non-organizational spaces. These processes introduced, removed, rekindled, reaffirmed, or rebalanced position-practices, enabling extraorganizational and technology-supported interaction among workers, carers, friends, and current and past patients to maintain service continuity; histories of interaction and trust also shaped current coordination.
+
 **Theoretical Contribution**
 The paper contributes a position-practice relations perspective to role-based interaction and coordination research in dynamic service settings. It extends role-based accounts by showing that service provision may be extraorganizational and may involve current customers, past customers, friends, carers, and other actors who are not located within formal intra- or inter-organizational role sets. It also bridges role theory and practice theory by theorizing how agency, temporality, spatiality, technology, and histories of trust reconfigure PPR webs over time.
 
@@ -67,10 +81,10 @@ The paper contributes a position-practice relations perspective to role-based in
 The paper implies that service provision in dynamic service settings cannot be understood only through formal workers, customers, and organizational partners. Its PPR lens makes visible how carers, friends, past customers, online communities, and other extraorganizational actors can participate in maintaining continuity. The findings also show that technology-enabled interaction and histories of trust can affect coordination even when they sit outside formal organizational role sets.
 
 **Limitations**
-The article does not present a standalone limitations section. The main scope boundary visible in the design is that the evidence comes from one 1.5-year qualitative study of UK child and adolescent mental health services, using observations, interviews, documentation, and online-site records. The account supports theory development about coordination in dynamic service settings, but it does not estimate how frequently particular PPR reconfigurations occur or their comparative performance effects. The discussion argues that the PPR lens can transfer beyond the studied context, but that transferability remains a theoretical proposition for later research.
+Not reported in paper
 
 **Future Research**
-The authors call for future research on the transition from position-practices into formal organizational roles, using the observed emergence of the Peer Support Worker role as an example. Future work could examine how such transitions affect interaction within PPR webs and within official intra- and inter-organizational role sets. Additional research could also test how PPR webs operate in other dynamic service settings and how technology-enabled spaces alter coordination, substitution, trust building, and practice breakdowns.
+The authors call for future research on the transition from position-practices into formal organizational roles, using the observed emergence of the Peer Support Worker role as an example. They specifically suggest assessing how such a transition affects interaction within the PPR web and within the official intra- and inter-organizational role set tasked with service provision.
 
 **APA 7th Citation**
 Aristidou, A., & Barrett, M. (2018). Coordinating service provision in dynamic service settings: A position-practice relations perspective. *Academy of Management Journal*, 61(2), 685-714. https://doi.org/10.5465/amj.2015.0310
