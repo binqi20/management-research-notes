@@ -203,6 +203,15 @@ the issue and the user has asked for publication —
      yaml.safe_load(open('CITATION.cff'))"`.
    - `AGENTS.md`: §1 counts/coverage, §5 audit state (date + verdict totals),
      §6 citation version.
+   - **Version-currency sweep (mandatory, batch-24 lesson):** after updating the
+     three files, `grep -n -iE "current|0\.[0-9]+\.[0-9]+" README.md AGENTS.md
+     CITATION.cff` and require every line that asserts *currency* — "current",
+     "now contains", the version-tier sentence, the §6 citation, `version:`
+     fields — to carry THIS release's number. Historical per-release paragraphs
+     are exempt. Named line checks alone do not close the class: a "current
+     v0.47.0 snapshot" sentence in CITATION.cff's abstract survived nine
+     releases and two runtimes because the stale-line check named only the
+     README tier sentence and AGENTS §6.
 2. **Stage public artifacts only** — the issue's `notes/*.md`, its
    `library/.../manifest.tsv`, the rebuilt `index/` files, and any docs/tooling
    changes. Never `incoming/`, `pdfs/`, `text/`, or worklogs. Verify:
