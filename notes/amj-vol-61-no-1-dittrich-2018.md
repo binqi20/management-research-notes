@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Dittrich 2017 Emerging Intentionality in
 text_path: "library/AMJ/vol-61-no-1/text/Dittrich 2017 Emerging Intentionality in Routine Dynamics A Pragmatist View.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["intentionality", "routine dynamics", "pragmatist theory of action", "emerging intentionality", "foregrounding means", "ends-in-view", "routine change"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "pragmatist view on action"
   methods_overview: "audio recordings, interviews"
   keywords_source: "emerging intentionality"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We conducted our data analysis in four stages."
+  findings_overview: "a process model of continuous routine change"
 ---
 
 # Emerging Intentionality in Routine Dynamics: A Pragmatist View
@@ -51,6 +56,9 @@ This paper responds to recent interest in the role of intentionality in the inte
 **Research Question**
 The paper asks how the enactment of means influences actors' ends, and how this influence contributes to routine change. It investigates this question by studying how CellCo participants performed and patterned routines when new means in concrete situations generated new ends-in-view.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / distinctions: Ends-in-view in specific performances, general goals for a routine, means, unfolding situations, purposeful action, purposive action, and emerging intentionality.
 - Empirical routines: Assembling plates, shipping, newsletter, and sales routines at CellCo.
@@ -59,6 +67,12 @@ The paper asks how the enactment of means influences actors' ends, and how this 
 - Emergent outcomes: Routine change arises not only from actors pursuing pre-established goals, but also from situated action in which new means generate new purposes.
 
 The process centers on foregrounding means. When existing goals are less salient or the situation is unfamiliar, participants probe available material, relational, and socio-material means; this engagement can generate new ends-in-view, such as preserving lab space, organizing assembling as a student part-time job, creating predictable plate supply, or using a regional shipping hub to provide a better customer deal. Some emergent ends remain temporary exceptions, while others become new routine goals and stabilize as revised action patterns.
+
+**Data & Measures**
+The study draws on a year of ethnographic fieldwork at CellCo: nonparticipant observation, audio recordings, 30 semi-structured interviews, informal discussions, and documents. The corpus included nearly 1,000 pages of field notes, 3,000 pages of transcripts representing 150 hours, and approximately 8,000 internal documents. Analysis proceeded iteratively in four stages: constructing timelines and identifying patterns, flexible performances, and changes; analyzing means–ends relationships and inferred ends-in-view; tracing these dynamics over time and across routines; and abstracting the observations into a theoretical process model. The findings are presented through two thickly descriptive narratives selected as representative of the case observations.
+
+**Key Findings**
+The study develops a process model in which unfamiliar unfolding situations generate questions, prompting participants to explore and foreground means and thereby conceive new ends-in-view that may be unrelated to a routine's initial goals. When participants pattern actions involving these new means–ends relationships, they may update the routine's goals and associated action pattern, producing routine change; emergent ends may instead remain temporary exceptions that reconfirm existing goals. Progressive means–ends cycles can sustain continuous change and extend across interdependent routines. The study further finds a continuum between purposeful action, oriented toward pre-established goals, and purposive action, driven more strongly by situational engagement with means.
 
 **Theoretical Contribution**
 The paper contributes to routine dynamics by expanding intentionality beyond purposeful action guided by pre-existing goals. It theorizes purposive action as a form of intentional action in which ends-in-view emerge through engagement with means in situated routine performances. It also revises assumptions that intentionality is rooted in individual actors or prior cognition, arguing instead that intentionality is dynamically constituted through action.

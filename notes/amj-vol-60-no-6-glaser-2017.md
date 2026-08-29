@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Glaser 2017 Design Performances How Orga
 text_path: "library/AMJ/vol-60-no-6/text/Glaser 2017 Design Performances How Organizations Inscribe Artifacts to Change Routines.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["design performances", "sociomaterial assemblages", "routine dynamics", "performativity", "strategy tools", "game-theoretic artifact", "patrolling routines"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "routine dynamics, performativity, and strategy tools"
   methods_overview: "participant observer"
   keywords_source: "design performances and sociomaterial assemblages"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "I also gathered supplemental archival data."
+  findings_overview: "design performances influence routine"
 ---
 
 # Design Performances: How Organizations Inscribe Artifacts to Change Routines
@@ -50,6 +55,9 @@ Organizations often create and employ artifacts in order to change their routine
 **Research Question**
 The paper asks how organizational actors design artifacts to change routines. It studies how Metropol and Algo-Security created a game-theoretic software artifact intended to modify counterterrorism and fare-evasion patrolling routines.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key construct: Design performances, defined as organizational actions to create an artifact in order to intentionally change or influence a routine.
 - Process elements: Abstracting grammars of action, exposing assumptions, distributing agency, and appraising outcomes.
@@ -58,6 +66,12 @@ The paper asks how organizational actors design artifacts to change routines. It
 - Emergent outcomes: The design performances changed the artifact, altered understandings of patrolling routines, and created assemblages that could shape future routine performances.
 
 The process begins when an intention to change a routine is informed by existing routine experience and external communities, here Metropol's patrolling routines and Algo-Security's game-theoretic expertise. Through design performances, actors translate routine activity into abstract action grammars, make assumptions about criminal behavior and patrol coordination explicit, decide how agency should be distributed between humans and the algorithm, and develop ways to appraise outcomes. These mechanisms inscribe the artifact and produce a sociomaterial assemblage that can influence subsequent routine dynamics.
+
+**Data & Measures**
+The study draws on seven months of participant observation from February through September 2013, averaging approximately 10 hours per week, together with informal interviews, field notes, project documents, reports, emails, and other archival materials from the Metropol–Algo-Security pilot. The author mapped 31 fieldwork events into separate counterterrorism and fare-evasion paths, then used two rounds of constant-comparative coding and iterative comparison with routine-dynamics theory to build the data structure and process model.
+
+**Key Findings**
+Across the counterterrorism and fare-evasion narratives, design performances elicited four mechanisms—abstracting grammars of action, exposing assumptions, distributing agency, and appraising outcomes—that changed the artifact and actors' understandings of the routines. The performances also generated sociomaterial assemblages of actors, artifacts, theories, and practices that could shape future routine performances. In the fare-evasion experiment, game-theoretic scheduling produced more citations than human-augmented uniform random scheduling; the design process also prompted a single artifact for both patrol patterns and a revised distribution of agency between officers and the artifact.
 
 **Theoretical Contribution**
 The paper contributes to routine dynamics by shifting attention from ongoing routine performance to the design activities through which artifacts are created to intentionally change routines. It contributes to performativity by showing how game theory was locally translated into an artifact and assemblage that shaped organizational practice. It also contributes to strategy-tool research by theorizing how organizational actors design or redesign tools through design performances rather than only using already-formed tools.

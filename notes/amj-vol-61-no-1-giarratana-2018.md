@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Giarratana 2017 Rewards for Patents and 
 text_path: "library/AMJ/vol-61-no-1/text/Giarratana 2017 Rewards for Patents and Inventor Behaviors in Industrial Research and Development.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["Pay for performance (PFP)", "patented inventions", "false positives", "false negatives", "corporate scientists", "social identity theory"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "we use social identity theory"
   methods_overview: "OLS regressions with robust"
   keywords_source: "Pay for performance (PFP) for inventions"
+  hypotheses_source: "Hypothesis 3. The effects of false positives on"
+  measures_overview: "False Positives is the number of a firm’s rewarded"
+  findings_overview: "negative and statistically significant (p , .01) for"
 ---
 
 # Rewards for Patents and Inventor Behaviors in Industrial Research and Development
@@ -52,6 +57,11 @@ This study investigates the effects of rewards in a research and development (R&
 **Research Question**
 The paper asks how pay for performance for patents creates false positives and false negatives, and how these false rewards differ in their association with inventor behaviors. It focuses on whether corporate scientists react differently from other inventors when firms reward low-quality patents or fail to reward high-quality patents.
 
+**Hypotheses / Propositions**
+- H1a–b: As false positives increase, corporate scientists, relative to other inventors, dedicate fewer working hours to R&D tasks and interact less with R&D peers.
+- H2a–b: The negative effects of false positives on corporate scientists' R&D working time and peer interactions are stronger than the effects of false negatives.
+- H3a–b: The negative effects of false positives on corporate scientists' R&D working time and peer interactions are stronger in firms with many patents.
+
 **Mechanism Process**
 - IV(s): Firm-level false positives and false negatives in rewards for patents.
 - DV(s): R&D working hours and interactions with R&D colleagues.
@@ -59,6 +69,12 @@ The paper asks how pay for performance for patents creates false positives and f
 - Moderators: Corporate scientist identity and firm patent stock.
 
 The paper argues that false positives are tangible signals that a firm's patent reward system violates the scientific community's priority-based, winner-take-all norms. Corporate scientists, whose identity is tied to scientific prestige, peer recognition, and intellectual challenge, respond by withdrawing effort from R&D tasks and reducing interactions with close R&D peers. False negatives are theorized to be noisier and less threatening because they may reflect uncertainty or selective reward practices consistent with scientific norms.
+
+**Data & Measures**
+The analysis uses 3,955 patent–inventor observations from a 2009–2011 survey of inventors on European Patent Office applications with 2003–2005 priority dates. R&D Working Hours is the inventor's weekly hours devoted to creative R&D activities. Interactions with R&D Colleagues compares interaction frequency with R&D colleagues against the average frequency with colleagues in other departments. Corporate Scientists is an indicator for inventors rating both peer recognition and intellectual challenge above their sample medians. False Positives is the firm share of rewarded patents valued below the technological-class average; False Negatives is the firm share of unrewarded patents valued above that average. Patent–inventor-level OLS regressions use robust standard errors clustered by firm; the cross-sectional design is associational.
+
+**Key Findings**
+H1a–b were supported: the False Positives × Corporate Scientists interaction was negative and significant for both R&D Working Hours and Interactions with R&D Colleagues. The reported elasticity was −29.2% for R&D Working Hours, about four fewer R&D hours per week, and 10.1% for Interactions with R&D Colleagues. H2a–b were supported: the False Negatives × Corporate Scientists interaction was not significant, and Wald tests showed that the false-positive and false-negative interaction coefficients differed for both outcomes. H3a–b were supported: the negative false-positive interactions were stronger among firms above the median in patent stock for both outcomes.
 
 **Theoretical Contribution**
 The study extends the informational perspective on pay for performance by distinguishing false positives from false negatives rather than treating all reward errors as equivalent. It adds social identity theory to agency-based accounts, showing that employee reactions to compensation systems depend on group-based identities and the meaning employees attach to reward signals.

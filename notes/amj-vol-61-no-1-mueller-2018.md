@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Mueller 2017 Reframing the Decision-Make
 text_path: "library/AMJ/vol-61-no-1/text/Mueller 2017 Reframing the Decision-Makers’ Dilemma Towards a Social Context Model of Creative Idea Recognition.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["decision-maker roles", "economic mindset", "social approval cues", "creative idea recognition", "creativity assessments", "implicit theories"]
@@ -47,6 +49,9 @@ evidence:
   theories_overview: "implicit theories of creative ideas"
   methods_overview: "Across one experimental and one quasi-experimental"
   keywords_source: "decision-making roles inculcate an economic mindset"
+  hypotheses_source: "Hypothesis 1. Relative to adopting a role with no"
+  measures_overview: "we employed a three-item scale with the"
+  findings_overview: "Providing support for Hypothesis 1, we found that"
 ---
 
 # Reframing the Decision-Makers’ Dilemma: Towards a Social Context Model of Creative Idea Recognition
@@ -57,13 +62,26 @@ Can decision-maker roles—roles with responsibility for allocating resources to
 **Research Question**
 The paper asks whether decision-maker roles shape which ideas people recognize as creative. It specifically examines whether those roles evoke an economic mindset that makes low social approval cues reduce creativity assessments, even when usefulness ratings are unaffected.
 
+**Hypotheses / Propositions**
+H1: Relative to adopting a role with no decision-making responsibility, adopting a decision-maker role more strongly evokes an economic mindset.
+
+H2: For ideas with low rather than high social approval cues, decision-makers give lower creativity ratings through the mediating mechanism of economic mindset.
+
+H3: For ideas with low rather than high social approval cues, employees who spend more time in decision-maker roles view the idea as less creative through the mediating mechanism of economic mindset.
+
 **Mechanism Process**
 - IV(s): Decision-maker role in Study 1; percentage of time spent in decision-making roles in Study 2; high versus low social approval cues in both studies.
 - DV(s): Creativity assessments of product ideas.
 - Mediators: Economic mindset.
-- Moderators: Social approval cue level moderates the link between decision-maker role, economic mindset, and creativity assessment.
+- Moderators: Social approval cue level moderates the direct decision-maker-role-to-creativity path and the economic-mindset-to-creativity path; it does not moderate the role-to-mindset path.
 
 Decision-maker roles involve responsibility for allocating resources, so they can activate concerns with accuracy, rationality, and economic consequences. This economic mindset makes social approval cues salient when people judge creative ideas. When an otherwise creative idea has low social approval, people in decision-maker roles treat that cue as evidence that the idea is less creative; when social approval is high, the downgrading pattern does not appear.
+
+**Data & Measures**
+Study 1 randomly assigned 154 undergraduates to a 2 (decision-maker versus control role) x 2 (high versus low social approval cue) between-subjects experiment. Decision-maker responsibility and accountability were manipulation checks; economic mindset was a three-item scale, creativity assessment used “creative” and “innovative,” and usefulness used “practical,” “feasible,” and “useful.” Study 2 surveyed 84 employees: decision-maker role was the percentage of work time spent resourcing or funding ideas, economic mindset was independently coded from role descriptions on a four-point scale, social approval was manipulated on a mock Kickstarter page, creativity used the Study 1 scale, and usefulness used a two-item “useful”/“practical” scale. Both studies tested conditional process models with Hayes’s PROCESS model 15.
+
+**Key Findings**
+Study 1 supported H1: the decision-maker condition reported a higher economic mindset than the control condition. It supported H2: decision-maker role predicted lower creativity ratings directly and indirectly through economic mindset when social approval was low, but not when it was high; the model did not predict usefulness. Study 2 again supported H1: more time in decision-maker roles was positively related to coded economic mindset. It supported H3: greater decision-maker-role time reduced creativity ratings directly and indirectly through economic mindset under low, but not high, social approval; again, the model did not predict usefulness.
 
 **Theoretical Contribution**
 The paper develops a social context model of creative idea recognition that links organizational roles, economic mindsets, implicit theories, and creativity assessments. It reframes the decision-makers' dilemma by arguing that decision-makers may not experience a tradeoff between creative ideas and socially approved ideas because low social approval can make them see the idea as less creative in the first place. It also extends creativity research beyond idea attributes by showing how role-induced mindsets shape what people count as evidence of creativity.

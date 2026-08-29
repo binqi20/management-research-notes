@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Fan 2017 Constructing a Shared Governanc
 text_path: "library/AMJ/vol-60-no-6/text/Fan 2017 Constructing a Shared Governance Logic The Role of Emotions in Enabling Dually Embedded Agency.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["shared governance logic", "emotions", "dually embedded agency", "institutional logics", "institutional complexity", "water sustainability", "social emotions", "moral emotions", "emotional energy"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Research on institutional logics"
   methods_overview: "We used an inductive theory-building approach"
   keywords_source: "construct a new, shared governance logic together"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "all interview transcripts, archival data and field notes"
+  findings_overview: "findings suggest a recursive model of new logic construction"
 ---
 
 # Constructing a Shared Governance Logic: The Role of Emotions in Enabling Dually Embedded Agency
@@ -51,6 +56,9 @@ In a longitudinal qualitative study of a water stewardship council, we build the
 **Research Question**
 The paper asks how actors embedded in disparate institutional logics can construct a new logic that builds shared understandings and governs interactions across multiple fields. Empirically, it examines how members of the Okanagan Water Stewardship Council built and later weakened a shared governance logic for water sustainability.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Empirical setting: The Okanagan Water Stewardship Council, a voluntary technical advisory body working on basin-wide water sustainability in British Columbia.
 - Key tension: Council members remained attached to home logics from agriculture, fisheries, water supply, government, First Nations, science, conservation, and other fields while trying to govern a shared resource collectively.
@@ -60,6 +68,16 @@ The paper asks how actors embedded in disparate institutional logics can constru
 - Logic-weakening cycles: Reduced shared learning, violated shared values, and limited enactment weakened the shared governance logic during 2009-2013.
 
 The process is recursive rather than a one-time settlement. Positive emotions helped members become more open about their home logics, more committed to basin-wide values, and more engaged in collective action, which strengthened shared values, common language, and concrete projects. When trust, moral clarity, and emotional energy declined, the same interaction cycles turned negative and weakened the shared governance logic without fully dissolving it.
+
+**Data & Measures**
+The data corpus combined 18 months of naturalist observation from 2012 to 2014, including 32 monthly OBWB and Council meetings, 12 water-related conferences, and six social gatherings; semi-structured interviews conducted from October 2012 to June 2014; and archival records including meeting minutes, presentations, workshop materials, reports, videos, and audio clips. Table 1 reports 45 interviews, whereas the methods narrative reports 46 interviews.
+
+The authors used an inductive theory-building approach, iterating across data sources, emergent themes, theory, temporal bracketing, and visual mapping. They coded interview transcripts, archival data, and field notes with in vivo or first-order codes, grouped emotion codes into social emotions, moral emotions, and emotional energy, and grouped interaction codes into three logic-construction cycles and their negative states. They also used follow-up interviews, member checks, peer debriefing, and an audit trail to challenge and refine interpretations.
+
+**Key Findings**
+The study develops a recursive process model in which three emotional facilitators—social emotions, moral emotions, and emotional energy—operate through openness and reflexivity, commitment, and engagement to shape three logic-construction cycles: agreeing on values, shared learning, and enacting shared values. In the building phase, these interacting processes gradually produced a shared governance logic across micro-, meso-, and macrolevels.
+
+The same recursive dynamics also accounted for weakening. Violations of shared values, reduced shared learning, and limited enactment generated negative emotional reactions and reduced agentic capacity. The shared governance logic weakened but did not dissolve because continuing respect, liking, and moral commitment preserved enough capacity for collective governance.
 
 **Theoretical Contribution**
 The paper develops a multilevel process model of new logic construction in bridging issue fields, showing how microlevel interactions can produce mesolevel shared values and practices with macrolevel consequences for governance. It extends institutional-logics theory by foregrounding emotions as mechanisms that enable dually embedded actors to loosen the constraints of home logics while becoming committed to a new shared logic. It also contributes to embedded-agency research by distinguishing social emotions linked to openness and reflexivity, moral emotions linked to commitment, and emotional energy linked to engagement.

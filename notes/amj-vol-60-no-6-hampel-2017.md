@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Hampel 2017 How Organizations Move from 
 text_path: "library/AMJ/vol-60-no-6/text/Hampel 2017 How Organizations Move from Stigma to Legitimacy The Case of Cook’s Travel Agency in Victorian Britain.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["organizational destigmatization", "organizational stigma", "moral legitimacy", "stigma reduction work", "stigma elimination work", "social class", "Victorian Britain"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "organizational stigma and legitimacy literatures"
   methods_overview: "grounded theory methods"
   keywords_source: "organizational destigmatization"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "grounded theory methods to inductively analyze our"
+  findings_overview: "engages in stigma reduction work designed to minimize overt hostility among audiences"
 ---
 
 # How Organizations Move from Stigma to Legitimacy: The Case of Cook’s Travel Agency in Victorian Britain
@@ -51,15 +56,24 @@ Based on an in-depth historical study of how Thomas Cook’s travel agency moved
 **Research Question**
 The paper asks how stigmatized organizations can destigmatize among hostile audiences and why audiences come to accept stigmatized organizations as legitimate. It examines these questions through the case of Thomas Cook’s travel agency moving from elite stigmatization to normative approval in Victorian Britain.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Initial audience evaluation: The Victorian elite stigmatized Cook’s travel agency because it feared that conducted tours threatened social status, travel exclusivity, and the moral order of class hierarchy.
 - Phase 1, stigma reduction work: Cook deflected attention from stigma, isolated stigmatizers as a misguided minority, and demonstrated a narrow service to society.
 - Intermediate audience reaction: Establishment hostility softened, but the stigma had not yet disappeared.
 - Phase 2, stigma elimination work: Cook allied with former stigmatizers and demonstrated a broader service to society through education, national welfare, and international goodwill.
 - End audience evaluation: Former stigmatizers came to view the travel agency as socially valuable and conferred normative approval.
-- Boundary conditions: The model is framed for organizations that can plausibly challenge claims of harm and for cases where leaders are willing to endure public scrutiny.
+- Boundary conditions: The model is framed for organizations that can plausibly challenge claims of harm and whose stigmatization occurs early in their organizational lifecycle.
 
 The process is dialogical rather than a one-sided organizational tactic: Cook’s actions mattered because they interacted with audience fears and changing audience evaluations. Destigmatization occurred first by reducing elite fear that the organization threatened them, and then by persuading the same audience that the organization served a positive social role. The paper does not claim a variable-based causal test; it develops an inductive process model from historical evidence.
+
+**Data & Measures**
+The historical corpus comprised 369 press articles, 155 items from *Cook’s Excursionist Magazine*, 18 Thomas Cook documents, 26 competitor documents and magazine items, 26 books, 20 scholarly articles, and nine interviews with two archivists and seven period historians. The authors used grounded theory methods, constant comparison and theoretical sampling through saturation, open coding, temporal bracketing, iterative development of 24 first-order categories, 12 second-order themes, and six aggregate dimensions, and member checks with seven period historians.
+
+**Key Findings**
+The study develops a dialogical two-phase model of organizational destigmatization. Cook first engaged in stigma reduction work that reduced overt hostility by deflecting attention from stigma, isolating stigmatizers, and demonstrating a narrow service to society; it then engaged in stigma elimination work that gained support by allying with former stigmatizers and demonstrating a broader service to society. Through the interaction of these actions with changing audience evaluations, the elite moved from fear and stigmatization to normative approval while Cook maintained the practices previously viewed as deviant.
 
 **Theoretical Contribution**
 The paper contributes a process model of organizational destigmatization that explains how an organization can purge stigma rather than merely cope with it. It extends stigma-management research by distinguishing destigmatization from shielding, straddling, and co-opting, and it extends legitimacy research by showing how audiences can confer moral legitimacy on an organization that maintains practices once viewed as deviant. It also contributes to work on social class by showing how organizations may simultaneously challenge and reinforce class structures to gain approval.
@@ -71,7 +85,7 @@ The study suggests that stigmatized organizations may need to address the fear b
 The authors identify the single historical case and its distinctive Victorian class context as important boundary conditions for transferability. They also note that their archival evidence mainly captures public interactions between Cook and the press, and that surviving documents may omit destroyed records or informal interactions that affected stigmatizers’ views.
 
 **Future Research**
-The paper suggests studying how social media intermediaries may alter processes of stigmatization and destigmatization because contemporary organizations can communicate through channels beyond mainstream media. It also points to future work on private lobbying by marked organizations and on contexts that share the key characteristics of the Cook case, especially organizations that can contest perceived harm.
+The paper suggests studying how social media intermediaries may alter processes of stigmatization and destigmatization because contemporary organizations can communicate through channels beyond mainstream media. It also points to future work on private lobbying by marked organizations.
 
 **APA 7th Citation**
 Hampel, C. E., & Tracey, P. (2017). How organizations move from stigma to legitimacy: The case of Cook’s travel agency in Victorian Britain. *Academy of Management Journal*, 60(6), 2175-2207. https://doi.org/10.5465/amj.2015.0365

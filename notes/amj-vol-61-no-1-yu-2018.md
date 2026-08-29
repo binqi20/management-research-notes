@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Yu 2017 Introducing Team Mindfulness and
 text_path: "library/AMJ/vol-61-no-1/text/Yu 2017 Introducing Team Mindfulness and Considering its Safeguard Role Against Conflict Transformation and Social Undermining.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["team mindfulness", "team conflict", "relationship conflict", "social undermining", "multilevel team conflict processes"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Conflict expression theory suggests that negative"
   methods_overview: "equation modeling (MSEM) via Mplus"
   keywords_source: "The authors introduce the concept of team mindfulness"
+  hypotheses_source: "Hypothesis 1. Team mindfulness is negatively"
+  measures_overview: "Team mindfulness (T2, 6 weeks after T1) was"
+  findings_overview: "a team mindfulness instrument and indicate that team mindfulness (1) negatively relates"
 ---
 
 # Introducing Team Mindfulness and Considering its Safeguard Role Against Conflict Transformation and Social Undermining
@@ -51,6 +56,13 @@ The authors introduce the concept of team mindfulness, defined as a shared belie
 **Research Question**
 The paper asks whether team mindfulness can be conceptualized and measured as a team-level shared property, and whether it safeguards teams against dysfunctional multilevel conflict processes. Specifically, it examines whether team mindfulness reduces relationship conflict, weakens the task conflict-to-relationship conflict link, and limits spillover from team relationship conflict to individual social undermining.
 
+**Hypotheses / Propositions**
+- H1: Team mindfulness is negatively related to relationship conflict.
+- H2: Team mindfulness weakens the positive relationship between task conflict and relationship conflict.
+- H3: Team relationship conflict is positively associated with individual social undermining.
+- H4: Team mindfulness weakens the positive relationship between team relationship conflict and individual social undermining.
+- H5: Team mindfulness weakens the indirect relationship between task conflict and individual social undermining through relationship conflict, weakening both constituent links.
+
 **Mechanism Process**
 - IV(s): Task conflict; team relationship conflict.
 - DV(s): Team relationship conflict; individual social undermining.
@@ -58,6 +70,12 @@ The paper asks whether team mindfulness can be conceptualized and measured as a 
 - Moderators: Team mindfulness moderates both the task conflict-to-relationship conflict link and the relationship conflict-to-social undermining link.
 
 The proposed mechanism is that team mindfulness provides attentional stability, present-focused awareness, and experiential, nonjudgmental processing during conflict. These qualities reduce personalization, oppositional intensity, negative emotionality, and reactive escalation, making task conflict less likely to transform into relationship conflict and relationship conflict less likely to spill over into individual social undermining.
+
+**Data & Measures**
+Study 1 used a deductive multistage scale-development process, including item sorting, exploratory factor analysis of 241 undergraduate responses, confirmatory factor analysis of 176 MBA-student responses, and a nomological-network survey of 103 MBA students. Studies 2 and 3 were multi-wave field studies of, respectively, 198 individuals in 44 U.S. MBA teams and 292 individuals in 48 Chinese healthcare teams. Study 2 measured task conflict at T1 with three Jehn-based items, relationship conflict and the 10-item team mindfulness scale at T2, and social undermining at T3 with six adapted Duffy et al. items. Study 3 measured task conflict at T1 and relationship conflict and team mindfulness at T2, each two months apart, then social undermining at T3 with Duffy et al.'s 13-item scale. Both field studies used MSEM in Mplus and bootstrapped confidence intervals to test the moderated indirect effects.
+
+**Key Findings**
+Study 1 supported the reliability, content validity, construct validity, and nomological network of the two-dimensional, 10-item team mindfulness scale. In Study 2, H1-H5 were supported: team mindfulness negatively predicted relationship conflict; weakened both the task conflict-to-relationship conflict and relationship conflict-to-social undermining links; relationship conflict positively predicted social undermining; and the indirect effect was significant at low, but not high, team mindfulness. Study 3 constructively replicated support for H1-H5 in Chinese healthcare teams, including the same directional moderated indirect effect.
 
 **Theoretical Contribution**
 The paper introduces team mindfulness as a collective-level construct that is distinct from individual mindfulness and from aggregate individual mindfulness. It contributes to mindfulness research by validating a team mindfulness measure and showing that mindfulness can operate as a team-level safeguard in interpersonal processes. It also extends team conflict and social undermining research by theorizing and testing conflict transformation as a multilevel process in which team relationship conflict predicts individual social undermining.

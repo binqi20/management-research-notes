@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Burris 2017 The Value of Voice to Manage
 text_path: "library/AMJ/vol-60-no-6/text/Burris 2017 The Value of Voice to Managers Employee Identification and the Content of Voice.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-mixed"
 keywords: ["employee voice", "voice content", "employee identification", "work unit identification", "professional identification", "managerial value of voice", "importance", "resources", "interdependencies"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Hirschman’s (1970) classic"
   methods_overview: "randomly assigned to one of six"
   keywords_source: "employee identification and managers’ valuation of voice"
+  hypotheses_source: "profession is negatively related to managerial"
+  measures_overview: "Managerial endorsement was measured using a"
+  findings_overview: "resources as significantly less valuable (M 5 3.27,"
 ---
 
 # The Value of Voice to Managers: Employee Identification and the Content of Voice
@@ -52,6 +57,14 @@ Previous research on employee voice has aimed to understand the antecedents and 
 **Research Question**
 The paper asks how the target of employee identification shapes the content of employee voice and how that content affects managers' valuation of voiced ideas. It examines whether work unit and professional identification lead employees to speak up about different issues, and whether dimensions of voice content such as importance, required resources, and interdependencies explain why managers value some voice more than other voice.
 
+**Hypotheses / Propositions**
+- Hypothesis 1a: Employee voice related to the work unit is positively related to managerial perceptions of the value of voice.
+- Hypothesis 1b: Employee voice related to the profession is negatively related to managerial perceptions of the value of voice.
+- Hypothesis 2: Voice related to the work unit versus the profession mediates the relationship between the target of employee identification and managerial perceptions of voice value.
+- Hypothesis 3: Ideas low in importance receive less managerial endorsement than ideas high in importance.
+- Hypothesis 4: Ideas requiring high resources to implement receive less managerial endorsement than ideas requiring low resources.
+- Hypothesis 5: Ideas requiring high interdependency to implement receive less managerial endorsement than ideas requiring low interdependency.
+
 **Mechanism Process**
 - Key constructs: Work unit identification, professional identification, voice content, work-unit-related voice, profession-related voice, and managerial value or endorsement of voice.
 - Process / mediating pathway: Identification with the work unit or profession shapes what employees notice as worth voicing; the resulting voice content then influences how managers evaluate the value of the employee's ideas.
@@ -59,6 +72,16 @@ The paper asks how the target of employee identification shapes the content of e
 - Empirical tests: Study 1 inductively identifies the dimensions and links them to work unit versus professional identification; Study 2 tests mediation between identification targets, domain-specific voice, and managerial value; Study 3 experimentally manipulates importance, resources, and interdependencies to assess managerial endorsement.
 
 The process is identity-based: employees speak up about issues connected to the part of work that is self-defining for them. Work unit identification tends to produce voice that is more locally relevant and easier for managers to act on, whereas professional identification can produce voice tied to broader professional standards but requiring more resources or coordination. Managers then value voice partly according to whether the content appears important, feasible, and implementable within their constraints.
+
+**Data & Measures**
+- Study 1: Qualitative interviews with 35 emergency-department informants (7 doctors, 17 nurses, and 11 technicians), selected using pre-interview identification scores. Interviews covered recent voice attempts, their content, targets, and perceived results; transcripts were analyzed through open/substantive coding followed by axial and selective coding, yielding 73 voiced issues and three content dimensions.
+- Study 2: Two-wave surveys of 97 employees in two organizations, with 27 managers rating employees. Work-unit and professional identification used separate four-item Mael and Ashforth scales; work-unit- and profession-related voice used two items each adapted from Detert and Burris; managerial value of voice used a two-item manager-rated scale. Multilevel models accounted for employees nested within leaders, and bootstrap confidence intervals tested mediation.
+- Study 3: A scenario experiment with 396 full-time managers recruited through MTurk. Respondents were randomly assigned to high or low importance, resources, or interdependencies conditions and rated managerial endorsement on a five-item Burris scale; the authors used manipulation checks and t-tests to compare conditions.
+
+**Key Findings**
+- Study 1: Voice content varied in importance, resources, and interdependencies. Strong work-unit identifiers voiced locally focused ideas mindful of implementation constraints, whereas strong professional identifiers tended to voice ideas requiring greater resources and interdependencies; reported managerial reactions were suggestive rather than directly assessed.
+- Study 2: Work-unit-related voice was positively associated with managers' ratings of voice value, whereas profession-related voice was negatively associated. Each domain-specific form of voice mediated the matching identification-to-value relationship, supporting Hypotheses 1a, 1b, and 2; the cross-domain indirect effects were not significant.
+- Study 3: Managers valued high-importance ideas more than low-importance ideas, high-resource ideas less than low-resource ideas, and high-interdependency ideas less than low-interdependency ideas, supporting Hypotheses 3–5.
 
 **Theoretical Contribution**
 The paper shifts voice research from the frequency of speaking up to the content of what is voiced and the implementation implications of that content. It contributes to employee voice theory by identifying importance, resources, and interdependencies as dimensions that matter for managerial evaluation. It also extends identification theory by showing that different targets of identification can shape not only whether employees speak up, but what they speak up about and how managers respond to those ideas.

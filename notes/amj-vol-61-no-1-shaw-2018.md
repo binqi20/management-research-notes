@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Shaw 2018 New Ways of Seeing Theory Inte
 text_path: "library/AMJ/vol-61-no-1/text/Shaw 2018 New Ways of Seeing Theory Integration across Disciplines.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "editorial"
 keywords: ["cross-disciplinary theory integration", "theory development", "disciplined integration", "reciprocal integration", "communication clarity"]
@@ -54,19 +56,28 @@ Not reported in paper
 **Research Question**
 The editorial asks what motivates management scholars to integrate theory across disciplines and what effective cross-disciplinary integration should look like. It focuses on when such integration can solve management puzzles, explain recurring findings, or offer new ways of seeing existing phenomena.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Motivations: Cross-disciplinary theory integration can help solve puzzles in the management literature, explain recurring patterns of findings or stylized facts, and offer a new way of seeing an existing issue or phenomenon.
 - Best practices: Effective integration requires disciplined integration, work at theoretical intersections, and reciprocal integration that contributes back to the borrowed-from disciplines where possible.
 - Danger zones: Authors should attend to compatibility across epistemology, human-nature assumptions, and levels of analysis, and should maintain communication clarity around constructs and definitions.
 - Editorial stance: The article presents cross-disciplinary integration as one possible route to novelty and insight, not as a universal standard for theoretical contribution.
 
-The process logic is editorial and developmental rather than empirical. Shaw, Tangirala, Vissa, and Rodell argue that cross-disciplinary theory integration is useful when management theory faces unresolved puzzles, recurring unexplained findings, or opportunities for a new perspective, but only when authors reconcile assumptions, clarify constructs, and integrate theories in a disciplined and reciprocal way.
+The process logic is editorial and developmental rather than empirical. Shaw, Tangirala, Vissa, and Rodell argue that cross-disciplinary theory integration can be useful when management theory faces unresolved puzzles, recurring unexplained findings, or opportunities for a new perspective. Authors should assess compatibility among assumptions, clarify constructs, and integrate theories in a disciplined and reciprocal way.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes guidance for theory development by clarifying when cross-disciplinary theory integration is likely to advance management scholarship. It identifies disciplined integration, integration at theoretical intersections, and reciprocal integration as characteristics of stronger theory-building efforts, while warning against incompatibility and communication ambiguity.
 
 **Practical Implication**
-For AMJ authors, the editorial implies that borrowing from outside disciplines should be theoretically necessary, clearly motivated, and carefully integrated rather than merely imported.
+For AMJ authors, the editorial recommends cross-disciplinary borrowing to solve an unexplained puzzle, explain recurring findings, or offer a new way of seeing; it should be disciplined, attentive to theoretical compatibility and communication clarity, and reciprocally integrated rather than merely applied.
 
 **Limitations**
 Not reported in paper

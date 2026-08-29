@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Desai 2017 Collaborative Stakeholder Eng
 text_path: "library/AMJ/vol-61-no-1/text/Desai 2017 Collaborative Stakeholder Engagement An Integration between Theories of Organizational Legitimacy and Learning.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["collaborative stakeholder engagement", "organizational legitimacy", "organizational learning", "organizational search", "community policing"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "theories of organizational search and"
   methods_overview: "random-effects Tobit regression"
   keywords_source: "organizations balance knowledge search or exploration efforts with their needs to manage organizational legitimacy"
+  hypotheses_source: "Hypothesis 1. Collaborative engagement will"
+  measures_overview: "The unit of analysis is the agency-year, and the full"
+  findings_overview: "To collectively summarize results of all the study’s"
 ---
 
 # Collaborative Stakeholder Engagement: An Integration between Theories of Organizational Legitimacy and Learning
@@ -50,6 +55,12 @@ Organizations often collaborate with stakeholders such as customers, communities
 **Research Question**
 How do organizations balance the search benefits of collaborative stakeholder engagement against the legitimacy risks created when collaboration exposes internal practices to external scrutiny? In the law enforcement setting, the paper asks when agencies use community policing as a search tool and when stakeholder power or controversial practices suppress that response.
 
+**Hypotheses / Propositions**
+- H1: Collaborative engagement increases the volume of relevant information received from participants and observers.
+- H2: Organizational problems involving community members increase collaborative stakeholder engagement.
+- H3: Stakeholder power reduces the positive influence of organizational problems on collaborative engagement.
+- H4: Controversial practices reduce the positive influence of organizational problems on collaborative engagement.
+
 **Mechanism Process**
 - IV(s): Organizational problems involving community members, operationalized as crime rate within the agency’s jurisdiction.
 - DV(s): Calls for service as a measure of information received from external stakeholders; community policing practices as the measure of collaborative engagement.
@@ -57,6 +68,12 @@ How do organizations balance the search benefits of collaborative stakeholder en
 - Moderators: Stakeholder power through civilian oversight boards; controversial practices through nonlethal patrol gear and use-of-force complaints.
 
 Collaborative engagement gives organizations access to external information that may help them solve problems, so agencies facing higher crime rates should be more likely to use community policing practices. The same engagement also makes organizational practices more transparent to stakeholders, so agencies should temper collaboration when powerful stakeholders can hold them accountable or when controversial practices have already threatened legitimacy. The results generally support this logic most clearly for more substantive combinations of community policing practices rather than isolated or superficial adoption.
+
+**Data & Measures**
+The study uses a longitudinal panel assembled from the U.S. Department of Justice’s LEMAS surveys for 1993, 1997, 2000, 2003, and 2007, supplemented with FBI Uniform Crime Reporting data; 1993 observations construct initial lags, and model-specific samples vary. The unit is the agency-year, with 2,380 observations in the full estimation sample. Calls received through agency 9-1-1 systems measure external-stakeholder information, while the count of three community-policing procedures (0–3) measures collaborative engagement. Crime rate per capita measures organizational problems. A civilian oversight-board indicator measures stakeholder power; the number of permitted nonlethal patrol technologies and excessive-force complaints provide separate measures of controversial practices. Lagged predictors and year effects are used. Calls for service are estimated with random-effects Tobit models; community-policing practices are estimated with random-effects ordered logistic models, with generalized ordered logistic models used as robustness checks where the proportional-odds assumption was violated.
+
+**Key Findings**
+H1 is supported for agencies using one or two community-policing practices but not all three. H2 receives partial support: higher crime rates increase the likelihood of using all three practices and, over much of the range, two practices, but reduce the likelihood of using one practice in isolation. H3 is not supported for one practice but receives support in many cases for two or all three practices. H4 receives no support when controversy is measured by nonlethal patrol gear. When controversy is measured by excessive-force complaints, H4 is unsupported for one practice, supported only over an extremely limited range for two practices, and strongly supported for all three practices.
 
 **Theoretical Contribution**
 The paper integrates organizational search and learning theories with organizational legitimacy theory by treating collaborative stakeholder engagement as both an information-search mechanism and a legitimacy-exposure mechanism. It contributes to learning theory by showing that organizations may abstain from reciprocal search activities when those activities risk revealing practices to stakeholders. It also contributes to legitimacy research by showing that legitimacy concerns can indirectly shape organizational search and learning, not only direct reputation-management tactics.

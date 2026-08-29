@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Miron-Spektor 2017 Microfoundations of O
 text_path: "library/AMJ/vol-61-no-1/text/Miron-Spektor 2017 Microfoundations of Organizational Paradox The Problem Is How We Think about the Problem.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-mixed"
 keywords: ["organizational paradox", "paradox mindset", "resource scarcity", "experiencing tensions", "in-role job performance", "innovation"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "early paradox theory"
   methods_overview: "using quantitative and qualitative methods"
   keywords_source: "resource scarcity (i.e., limited time and funding) as a source of tensions"
+  hypotheses_source: "Hypothesis 1. Resource scarcity (i.e., limited"
+  measures_overview: "We measured resource scarcity"
+  findings_overview: "mindset, tensions can either enhance or hinder these"
 ---
 
 # Microfoundations of Organizational Paradox: The Problem Is How We Think about the Problem
@@ -54,6 +59,11 @@ Competing tensions and demands pervade our work lives. Accumulating research exa
 **Research Question**
 The paper asks why some individuals thrive with organizational tensions while others struggle, and what conditions intensify employees' experience of tensions. It examines whether resource scarcity surfaces tensions and whether paradox mindset changes the effects of those tensions on in-role job performance and innovation.
 
+**Hypotheses / Propositions**
+- H1: Resource scarcity (limited time and funding) is positively associated with individuals' experience of tensions.
+- H2: Paradox mindset moderates the relationship between experiencing tensions and in-role job performance and innovation: tensions enhance both outcomes when paradox mindset is high but hinder them when it is low.
+- H3: Paradox mindset moderates the indirect effect of resource scarcity on both outcomes through experiencing tensions: the mediated relationship is positive when paradox mindset is high and negative when it is low.
+
 **Mechanism Process**
 - IV(s): Resource scarcity; experiencing tensions.
 - DV(s): In-role job performance; innovation.
@@ -61,6 +71,12 @@ The paper asks why some individuals thrive with organizational tensions while ot
 - Moderators: Paradox mindset moderates the relationship between experiencing tensions and the outcomes, and moderates the indirect effects of resource scarcity through tensions.
 
 Resource scarcity makes competing demands more salient by forcing individuals to compare goals and allocate limited time and funding. Experiencing tensions can deplete or energize employees depending on whether they approach contradictions as dilemmas to resolve or paradoxes to accept and engage. A paradox mindset helps individuals value, accept, and feel comfortable with tensions, making them more likely to search for both/and responses that support performance and innovation.
+
+**Data & Measures**
+Study 1 developed and validated experiencing-tensions and paradox-mindset scales across eight samples (N = 80–300) from the United States, United Kingdom, Israel, and China. The authors generated 29 items deductively, used expert review, exploratory and confirmatory factor analyses, and convergent, discriminant, criterion, and cross-tension validation to retain seven experiencing-tensions items and nine paradox-mindset items. Study 2 surveyed 135 product specialists in a U.S. consumer-products company; 91 received supervisor ratings. Resource scarcity combined three time-pressure and three limited-finance items; employees completed the seven-item experiencing-tensions and nine-item paradox-mindset scales; supervisors rated in-role performance and innovation with four items each. Two authors qualitatively coded employees' open-ended tension examples as learning and/or performing tensions. The cross-sectional model was tested with regression and PROCESS model 14 moderated mediation with 10,000 bootstrap samples.
+
+**Key Findings**
+Study 1 supported the scales' reliability and distinctiveness across eight samples; criterion tests associated higher paradox mindset with greater job satisfaction and creativity. In Study 2, H1 was supported: resource scarcity was positively associated with experiencing tensions. H2 was supported as an interaction for both outcomes: at high paradox mindset, experiencing tensions was positively associated with performance and innovation; the low-mindset simple slopes at one standard deviation below the mean were nonsignificant, while Johnson–Neyman tests identified hindering effects only at very low mindset values. For H3, the indirect effects through tensions were positive at high paradox mindset for both outcomes and negative at low mindset for in-role performance, but the low-mindset indirect effect on innovation was not significant. The paper therefore reports support for its moderated-mediation model, with this outcome-specific qualification.
 
 **Theoretical Contribution**
 The paper contributes to the microfoundations of organizational paradox by theorizing individual variation in how employees experience and respond to tensions. It develops and validates measures of experiencing tensions and paradox mindset across multiple samples, then shows that paradox mindset helps explain when tensions undermine or improve job outcomes.

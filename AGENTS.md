@@ -140,29 +140,28 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-08-24):
+**Current main-branch audit state (2026-08-29):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 24 upgraded 31 notes (AMJ vol-61-no-3 + vol-61-no-2, all v2
-augmentations) to v3. Its final audit is **278/279 prose-field verdicts
-SUPPORTED, with 1 verified-faithful `PARTIAL` accepted**. Round 1 returned
-266/279 `SUPPORTED` with 13 `PARTIAL`s. Source verification led to 14 initial
-scoped legacy-field repairs across 12 notes; fresh blind re-audits surfaced
-three additional legacy wording nuances, bringing the total to 17. Each was
-repaired, and the final three
-re-audits returned 27/27 `SUPPORTED`. No repair landed in a new v3 field, no
-validation failure occurred, and the repeated-new-field stop rule was not
-approached. The remaining `PARTIAL` is Foulk's `future_research` at a 32.18%
-reference-strip ratio: reconstructing the exact fitted audit text proves that
-the phrases “motivation and self-monitoring” and “narcissism and self-concern”
-are present in the raw paper text but absent from the auditor's fitted input;
-reading the recovered passage confirms the note is faithful. All 31 final
-reports have current hashes. This batch ran end-to-end on `gpt-5.6-sol` for
-both augmentation and audit, the fifth such backfill batch; its workshop
-review includes the recurring cross-family spot-audit. The pre-batch census
-was 61 v1, 526 v2, and 580 v3; the corpus now contains 61 legacy v1 notes, 495
-v2 notes, and 611 v3 notes with evidence anchors. Provenance eras are batches
-01–07 `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23
-`claude-opus-5`, and 24 `gpt-5.6-sol`. New notes are produced at extraction
+batch 25 upgraded 31 notes (AMJ vol-61-no-1 + vol-60-no-6, all v2
+augmentations) to v3. Its final audit is **279/279 prose-field verdicts
+SUPPORTED**, with 0 `PARTIAL`, 0 `UNSUPPORTED`, and 0 `CONTRADICTED`. Round 1
+returned 272/279 `SUPPORTED`, 6 `PARTIAL`, and 1 `UNSUPPORTED`. Source
+verification led to seven initial repairs across six notes; fresh blind
+re-audits surfaced two additional factual legacy nuances, and both cleared a
+third independent round after repair. A final exact-substring sweep found one
+new Glaser findings anchor that had normalized a two-column splice; replacing
+it with a literal four-word fragment and re-auditing the whole note returned
+9/9 `SUPPORTED`. All 31 final reports have current hashes. The three first-round
+Data & Measures findings had distinct causes, and the single anchor defect did
+not form a repeated new-field cluster, so the stop rule was not triggered. This
+batch ran end-to-end on `gpt-5.6-sol` for both augmentation and audit, the sixth
+such backfill batch. The recurring cross-family spot-audit most recently ran at
+batch 24's workshop review with 27/27 agreement, matching batch 16; none is
+scheduled for batch 25. The pre-batch census was 61 v1, 495 v2, and 611 v3;
+the corpus now contains 61 legacy v1 notes, 464 v2 notes, and 642 v3 notes with
+evidence anchors. Provenance eras are batches 01–07 `claude-opus-4-8`, 08–15
+`claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23 `claude-opus-5`, and 24–25
+`gpt-5.6-sol`. New notes are produced at extraction
 **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -185,7 +184,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-08-24.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-08-29.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -196,7 +195,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.57.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.58.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

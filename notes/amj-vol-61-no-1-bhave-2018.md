@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Bhave 2017 The Other Side Occupational I
 text_path: "library/AMJ/vol-61-no-1/text/Bhave 2017 The Other Side Occupational Interactional Requirements and Work–Home Enrichment.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["occupational interactional requirements", "work–home enrichment", "vitality", "time allocation", "emotional labor"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Hobfoll, 1989) and self-determination theory (SDT)"
   methods_overview: "We conduct three studies"
   keywords_source: "occupational interactional requirements influence work–home"
+  hypotheses_source: "are negatively related to time spent in leisure)."
+  measures_overview: "eight items from the O*NET."
+  findings_overview: "time spent in leisure (b 5 23.48, p , .01), thus providing support for Hypothesis 3 (Table 2, Model 6)."
 ---
 
 # The Other Side: Occupational Interactional Requirements and Work–Home Enrichment
@@ -51,6 +56,12 @@ We examine how occupational interactional requirements influence work–home enr
 **Research Question**
 The paper asks whether occupational interactional requirements enrich employees' lives at home, and through which facets of the home domain this enrichment appears. It tests whether workplace interactions operate as restorative job properties that generate vitality and transfer resources from work to home.
 
+**Hypotheses / Propositions**
+- H1: Occupational interactional requirements are positively related to time spent caring for family, serving as supplements for enriching, resource-draining home activities.
+- H2: Occupational interactional requirements are positively related to time spent in housework, serving as supplements for maintenance, resource-draining home activities.
+- H3: Occupational interactional requirements are negatively related to time spent in leisure, serving as substitutes for enriching, resource-replenishing home activities.
+- H4: Employees' vitality mediates the relationship between occupational interactional requirements and work–home enrichment.
+
 **Mechanism Process**
 - IV(s): Occupational interactional requirements, measured through O*NET occupational indicators in Study 1 and employee reports in Studies 2 and 3.
 - DV(s): Work–home enrichment, captured as time allocation at home in Study 1 and perceived work–home enrichment in Studies 2 and 3.
@@ -58,6 +69,12 @@ The paper asks whether occupational interactional requirements enrich employees'
 - Moderators: Not reported in paper.
 
 The central mechanism is resource transfer. The authors integrate conservation of resources theory and self-determination theory to argue that workplace interactions can satisfy relatedness needs, spark vitality, and make employees more able to invest effort in the home domain. In Study 1, this appears as more time spent caring for family and less time spent in leisure; in Studies 2 and 3, vitality mediates the relationship between occupational interactional requirements and work–home enrichment.
+
+**Data & Measures**
+Study 1 links 2003–2015 American Time Use Survey diaries for 17,490 full-time U.S. workers living with a family member to O*NET occupational data. Occupational interactional requirements are an eight-item O*NET measure; the outcomes are ATUS minutes spent caring for family, doing housework, and engaging in leisure. The study estimates simultaneous regression models and is associational. Study 2 uses an introductory survey followed one week later by an end-of-workday Time 1 survey and, the following morning, a beginning-of-workday Time 2 survey from 274 full-time employees in Singapore. Employees report interactional requirements on a five-point scale and state vitality on Ryan and Frederick's six-item scale at Time 1; work–home enrichment is measured at Time 2 with Carlson et al.'s nine-item scale. Path analysis tests the bootstrapped indirect effect. Study 3 uses 610 matched daily survey pairs from 79 U.S. employees over two workweeks, applies the same focal measures as Study 2, and estimates a multilevel path model with a bootstrapped indirect effect.
+
+**Key Findings**
+In Study 1, H1 was supported: interactional requirements were positively related to caring time (b = 1.73, p < .01). H2 was not supported: the relationship with housework was not statistically significant (b = −0.68, p > .05). H3 was supported: interactional requirements were negatively related to leisure time (b = −23.48, p < .01). In Study 2, H4 was supported: the indirect effect through state vitality was positive and significant (ab = .04, 95% CI [.01, .08]); the positive total effect was .16 (95% CI [.04, .29]). Study 3 provided additional support for H4 at the within-person level: the indirect effect through state vitality was positive and significant (ab = .03, 95% CI [.01, .07]).
 
 **Theoretical Contribution**
 The paper challenges the dominant emotional-labor assumption that occupational interactional requirements are primarily depleting. It reframes interactive work as a contextual social resource that can replenish vitality and generate benefits across the work–home interface. It also contributes to work–family research by linking occupational attributes to both objective time-allocation indicators and employees' perceived work–home enrichment.

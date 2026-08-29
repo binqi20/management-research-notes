@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Kim 2017 The Strategic Value of Selectio
 text_path: "library/AMJ/vol-61-no-1/text/Kim 2017 The Strategic Value of Selection Practices Antecedents and Consequences of Firm-level Selection Practice Usage.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["selection practices", "contingency theory", "strategic human resource management", "firm performance", "collective turnover"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "strategic human resource management research, we introduce contingency theory"
   methods_overview: "we used random coefficient"
   keywords_source: "selection practices relate to organizational performance"
+  hypotheses_source: "Hypothesis 5. Firms that use more selection"
+  measures_overview: "The HCCP listed 12 selection"
+  findings_overview: "Thus, Hypothesis 7 receives only mixed support."
 ---
 
 # The Strategic Value of Selection Practices: Antecedents and Consequences of Firm-level Selection Practice Usage
@@ -51,13 +56,30 @@ The expectation that selection practices contribute to organizational performanc
 **Research Question**
 Why do firms differ in their use of selection practices, and when do selection practices relate to subsequent firm performance? The paper asks whether external industry conditions and internal firm conditions shape both selection-practice usage and the selection-performance relationship.
 
+**Hypotheses / Propositions**
+- H1: Firms in high-growth industries use fewer selection practices than firms in low-growth industries.
+- H2: Firms in dynamic industries use fewer selection practices than firms in stable industries.
+- H3: Firms with higher prior performance use more selection practices than lower-performing firms.
+- H4: Firms with more collective turnover use fewer selection practices than firms with less collective turnover.
+- H5: Firms using more selection practices have greater firm performance than firms using fewer practices.
+- H6: The positive selection-practices–performance relationship is stronger in growing industries.
+- H7: The positive selection-practices–performance relationship is stronger in dynamic industries.
+- H8: The positive selection-practices–performance relationship is stronger when firms use more selection stages.
+- H9: The positive selection-practices–performance relationship is stronger when firms have less collective turnover.
+
 **Mechanism Process**
 - IV(s): Industry growth, industry dynamism, prior firm performance, collective turnover, and composite selection practice usage.
 - DV(s): Selection practice usage; subsequent firm performance measured as sales per employee, operating profit per employee, and EBIT.
 - Mediators: Selection practices are tested as an indirect link between environmental factors and sales per employee.
 - Moderators: Industry growth, industry dynamism, selection stages, and collective turnover.
 
-The core mechanism is contingent fit between a firm's selection system and its competitive environment. Contingency theory implies that firms choose more or fewer selection practices in response to external industry conditions and internal human-capital conditions. More selection practices can build higher-quality generic human capital and raise productivity, but their value depends on context: dynamic industries and low collective turnover strengthen the performance benefits, while stable industries can make the costs or rigidity of more selection practices outweigh their benefits.
+The core mechanism is contingent fit between a firm's selection system and its competitive environment. Contingency theory implies that firms choose more or fewer selection practices in response to external industry conditions and internal human-capital conditions. More selection practices can build higher-quality generic human capital and raise productivity, but their value depends on context: dynamic industries and low collective turnover strengthen the performance benefits. The unexpectedly negative productivity effect in stable industries has an unclear explanation; the authors suggest that it may reflect the South Korean context or that selection's value offsets its costs only where competition for talent is greater.
+
+**Data & Measures**
+The study matches the 2005 Human Capital Corporate Panel survey from KRIVET with Korean Information Service financial data for 413 firms nested in 28 subindustries. Selection-practice usage is the sum of 11 dichotomous practice indicators reported by HR managers for 2004 (internships are excluded). Performance comprises average sales per employee, average operating profit per employee, and EBIT; prior performance uses 2000–2003 averages and subsequent performance uses 2004–2007 averages. Selection stages are a five-point count of screening stages, and collective turnover is 2004 full-time leavers divided by full-time employees. Industry growth and dynamism are derived from industry sales over 2000–2003 for antecedent models and 2004–2007 for moderation models. Random coefficient models account for firms nested within industries; model-specific analysis Ns differ because missing values are deleted.
+
+**Key Findings**
+H1, H2, and H4 are supported: industry growth, industry dynamism, and collective turnover negatively predict selection-practice usage. H3 is not supported. H5 is supported only for sales per employee: a one-standard-deviation increase in selection practices corresponds to a 56,359.00 increase in sales per employee, while operating profit per employee and EBIT are not significantly predicted. H6 is not supported. H7 receives mixed support: industry dynamism moderates both productivity outcomes, with positive slopes in dynamic industries and unexpectedly negative slopes in stable industries, but not EBIT. H8 is not supported. H9 is supported only for operating profit per employee; higher collective turnover weakens the benefit of selection practices.
 
 **Theoretical Contribution**
 The paper brings contingency theory into personnel selection research, challenging the assumption that selection practices have uniformly positive firm-level value. It extends strategic HRM by showing that choices inside a specific HR practice, not only broad HPWS bundles, can be strategically consequential. It also reframes validity generalization: selection practices may generalize at the individual level while their firm-level performance value remains contingent on industry and organizational conditions.

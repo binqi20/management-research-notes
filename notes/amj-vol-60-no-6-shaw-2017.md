@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Shaw 2017 The Suitability of Simulations
 text_path: "library/AMJ/vol-60-no-6/text/Shaw 2017 The Suitability of Simulations and Meta-Analyses for Submissions to Academy of Management Journal.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "editorial"
 keywords: ["simulations", "meta-analysis", "meta-analytic path modeling", "theory testing", "empirical designs"]
@@ -51,6 +53,9 @@ Not reported in paper
 **Research Question**
 The editorial asks when simulations and meta-analysis may be successfully used in submissions to AMJ and when their use may not be appropriate for full review. It frames the issue as one of mission fit rather than categorical acceptance or rejection of either method.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial premise: AMJ's mission requires theoretical and empirical contributions while remaining open to different theoretical approaches, empirical designs, levels of analysis, and regions of origin.
 - Simulation guidance: Simulations can contribute when they complement or enhance empirical designs, especially by evaluating alternative models, triangulating findings, exploring inductive theory, or assessing robustness.
@@ -58,6 +63,12 @@ The editorial asks when simulations and meta-analysis may be successfully used i
 - Boundary conditions: The editorial presents guidelines with fuzzy boundaries, not formal policy, and emphasizes accessibility and current methodological standards.
 
 The process logic is editorial and methodological rather than empirical. Shaw and Ertug argue that simulations and meta-analyses can be valuable for AMJ when they help test, extend, or build management theory and contribute to practice, but that standalone computational representations or standard empirical summaries often need additional empirical or theoretical leverage to fit the journal's mission.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new theory. Its contribution is to clarify how two increasingly influential methodological approaches can be aligned with AMJ's theory-and-empirical-contribution mission, distinguishing acceptable uses from weaker standalone uses.

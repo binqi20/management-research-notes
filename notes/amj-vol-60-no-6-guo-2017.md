@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Guo 2017 Language and Competition Commun
 text_path: "library/AMJ/vol-60-no-6/text/Guo 2017 Language and Competition Communication Vagueness, Interpretation Difficulties, and Market Entry.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["vague language", "corporate communications", "market entry", "competitive dynamics", "strategic communication", "interpretation", "annual reports"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "competitive signaling theory"
   methods_overview: "Cox proportional hazards model"
   keywords_source: "strategic use of language shapes competitive interactions"
+  hypotheses_source: "Hypothesis 1. Firms with positions in more"
+  measures_overview: "words and expressions normalized by the total number"
+  findings_overview: "both Hypotheses 1 and 2 are supported."
 ---
 
 # Language and Competition: Communication Vagueness, Interpretation Difficulties, and Market Entry
@@ -52,6 +57,13 @@ Firms have a lot to lose from the entry of competitors into their markets. Groun
 **Research Question**
 The paper asks when managers of incumbent firms are more likely to use vague language in corporate communication and how rivals react to such vagueness. It specifically examines whether market-entry threats increase incumbents' communication vagueness and whether that vagueness is associated with fewer entries by potential entrants.
 
+**Hypotheses / Propositions**
+- H1: Firms positioned in more profitable markets are more likely to use vague language.
+- H2: Firms positioned in markets with more potential entrants are more likely to use vague language.
+- H3: Incumbents' use of vague language is negatively associated with potential entrants' likelihood of market entry.
+- H4: Greater average incumbent size amplifies the relationship between incumbents' vague language and potential entrants' likelihood of entry.
+- H5: Greater market concentration amplifies the relationship between incumbents' vague language and potential entrants' likelihood of entry.
+
 **Mechanism Process**
 - IV(s): Market profitability and prevalence of potential entrants for incumbents' use of vague language; incumbent vagueness for potential entrants' market entry.
 - DV(s): Firm vagueness in annual reports and likelihood of entry by potential entrants.
@@ -59,6 +71,12 @@ The paper asks when managers of incumbent firms are more likely to use vague lan
 - Moderators: Average incumbent size and market concentration amplify the relationship between incumbent vagueness and potential entrants' likelihood of entry.
 
 The proposed mechanism is that incumbents facing stronger entry threats tilt corporate communication toward vaguer language, making their strategies and actions harder for rivals to interpret. For potential entrants, vague information can lengthen decision-making and increase the perceived risk of entry, reducing the likelihood of entering a market. The effect is expected to be stronger when entrants pay more attention to incumbents, as in markets with larger incumbents or higher concentration.
+
+**Data & Measures**
+The study combines U.S. Department of Transportation TranStats data with incumbent airlines' Form 10-K annual reports for 1995–2001. For H1–H2, firm vagueness is the percentage of vague words and expressions in four competition-relevant annual-report sections, identified with Hiller's 362-item communication-vagueness dictionary and normalized by document length; market profitability is average route profitability across a firm's market portfolio, and potential entrants are counted by market and averaged across that portfolio. These antecedent models use OLS at the firm-year level (91 observations). For H3–H5, market entry is a quarterly indicator of whether a potential entrant enters after annual-report release; incumbent vagueness is a market-share-weighted market-quarter average, average incumbent size is a market-share-weighted employee count, and concentration is the Herfindahl index. Cox proportional hazards models use entrant–market–quarter spells, with discrete-time probit and complementary log-log models and an instrumental-variable analysis as robustness checks.
+
+**Key Findings**
+H1 and H2 were supported: market profitability and the number of potential entrants were positively related to incumbent vagueness (coefficients .12 and .01, respectively; both p < .05). H3 was supported: incumbent vagueness was negatively related to market-entry likelihood (Cox coefficient -2.33, p < .01); a one-standard-deviation increase in vagueness reduced predicted entry probability by 11.4%. H4 and H5 were supported: the interactions of vagueness with average incumbent size (-.93, p < .01) and market concentration (-8.55, p < .05) were negative, indicating that each condition strengthened vagueness's negative association with entry. Alternative hazard specifications and the instrumental-variable analysis supported the H3 result.
 
 **Theoretical Contribution**
 The paper contributes to competitive dynamics by separating attention to rivals from interpretation of rivals' information, arguing that awareness requires more than noticing competitive signals. It extends competitive signaling theory by showing that vague and equivocal communication, not only explicit aggressive signaling, can shape competitive interaction. It also adds a competitive-rivalry setting to research on language as a strategic tool in organizations.

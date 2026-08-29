@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Krause 2017 Compromise on the Board Inve
 text_path: "library/AMJ/vol-60-no-6/text/Krause 2017 Compromise on the Board Investigating the Antecedents and Consequences of Lead Independent Director Appointment.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["lead independent director", "CEO duality", "board leadership", "CEO power", "agency theory", "classical organization theory", "firm performance"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "agency theory and classical organization theory"
   methods_overview: "gllamm Stata program"
   keywords_source: "lead independent director appointment reflects balanced"
+  hypotheses_source: "Hypothesis 1. At firms with CEO duality,"
+  measures_overview: "we operationalize firm performance in a number of"
+  findings_overview: "partial support for Hypothesis 3."
 ---
 
 # Compromise on the Board: Investigating the Antecedents and Consequences of Lead Independent Director Appointment
@@ -52,6 +57,14 @@ Board leadership has always been conceptualized as a tradeoff between two desira
 **Research Question**
 The paper asks when boards appoint a lead independent director, which independent director is chosen, how the appointment relates to firm performance, and whether the structure becomes permanent or leads to later CEO-board chair separation.
 
+**Hypotheses / Propositions**
+- H1: Among firms with CEO duality, no leadership change is most likely at high CEO power, CEO-chair separation at low power, and lead-independent-director appointment at moderate power.
+- H2: Director power has an inverse U-shaped relationship with selection as lead independent director, such that a director with moderate relative power is most likely to be selected.
+- H3: Lead-independent-director appointment is positively associated with subsequent firm performance.
+- H4: CEO power negatively moderates the positive association between lead-independent-director appointment and subsequent firm performance.
+- H5a: Lead-independent-director appointment reduces the likelihood of subsequent CEO-chair separation.
+- H5b: Competing with H5a, lead-independent-director appointment increases the likelihood of subsequent CEO-chair separation.
+
 **Mechanism Process**
 - IV(s): CEO power, director power, lead independent director appointment, and CEO-board chair separation.
 - DV(s): Board leadership change, individual lead-director selection, future stock performance, future analyst ratings, future ROI, and later CEO-board chair separation.
@@ -59,6 +72,12 @@ The paper asks when boards appoint a lead independent director, which independen
 - Moderators: CEO power moderates the association between lead independent director appointment and subsequent firm performance.
 
 The proposed mechanism is that board leadership choices reflect the balance of power between the CEO and the board. High CEO power favors no change from CEO duality, low CEO power favors CEO-board chair separation, and moderate CEO power favors the compromise of appointing a lead independent director. The same compromise logic extends to director selection, where a director with moderate power is most likely to be chosen. Performance benefits depend on whether the lead independent director can provide oversight without sacrificing unity of command; this is more likely when CEO power is low.
+
+**Data & Measures**
+The study follows 522 S&P 1500 firms that combined the CEO and chair roles in 2002 through 2012, with predictors and controls lagged one year. H1 uses 2,008 firm-years and a GLLAMM multinomial logit contrasting CEO-chair separation, lead-director appointment, and no change; CEO power is a standardized index of five tenure, board-position, board-composition, and performance indicators. H2 uses 3,130 director observations and conditional fixed-effects logistic regression; director power is a standardized five-indicator index of tenure, outside board seats, business expertise, elite education, and financial expertise. H3-H4 use firm fixed-effects regressions: future stock return, reverse-coded median IBES analyst recommendations, and ROI are the performance outcomes, and lead-director appointment is interacted with CEO power. H5a-H5b use 2,885 firm-years and firm-clustered Cox proportional hazards models of later CEO-chair separation among firms appointing a lead director. Data come from BoardEx, ISS/RiskMetrics, proxy statements, Compustat, Thomson Reuters Institutional Holdings, and IBES.
+
+**Key Findings**
+H1 was supported: separation was most likely at low CEO power, no change at high CEO power, and lead-director appointment near the middle of the power range. H2 was supported by an inverse U-shaped director-power effect. H3 received partial support: appointment predicted higher analyst ratings, but its stock-return and ROI coefficients were not significant. H4 was supported: appointment improved stock performance, analyst ratings, and ROI when CEO power was low, but not when it was high. H5a was supported and H5b was not: appointment reduced the hazard of later CEO-chair separation.
 
 **Theoretical Contribution**
 The paper introduces the lead independent director as a compromise board leadership structure that sits between agency theory's prescription of independent monitoring and classical organization theory's prescription of unity of command. It extends the political view of board decision-making by showing that balanced power can generate a compromise outcome rather than a winner-take-all outcome. It also contributes to board leadership theory by showing that the appointment can be symbolic for analysts but substantively beneficial for stock performance, analyst ratings, and ROI when CEO power is low.

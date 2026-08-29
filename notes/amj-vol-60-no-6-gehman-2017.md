@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Gehman 2017 Hidden Badge of Honor How Co
 text_path: "library/AMJ/vol-60-no-6/text/Gehman 2017 Hidden Badge of Honor How Contextual Distinctiveness Affects Category Promotion among Certified B Corporations.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-mixed"
 keywords: ["category promotion", "promotional forbearance", "contextual distinctiveness", "subordinate categories", "B Corporations", "Certified B Corporation", "category peers", "social entrepreneurship", "corporate sustainability"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "contextual distinctiveness, defined as the"
   methods_overview: "hurdle command in the R statistical package"
   keywords_source: "category promotion"
+  hypotheses_source: "distinctiveness within different basic categories increases promotion, and that these"
+  measures_overview: "We calculated category text promotion as"
+  findings_overview: "results support all four"
 ---
 
 # Hidden Badge of Honor: How Contextual Distinctiveness Affects Category Promotion among Certified B Corporations
@@ -51,6 +56,12 @@ Why would an organization pursue membership in an organizational category, yet f
 **Research Question**
 The paper asks why organizations pursue membership in an organizational category, such as Certified B Corporation status, but then vary in how much they promote that membership. It examines whether category promotion is driven by the contextual distinctiveness of a subordinate category within firms' regional and industry basic categories, and whether larger subordinate category peer groups amplify that effect.
 
+**Hypotheses / Propositions**
+- H1: Greater regional contextual distinctiveness of a subordinate category increases members' category promotion.
+- H2: Greater industry contextual distinctiveness of a subordinate category increases members' category promotion.
+- H3: More subordinate category members within a region amplify the positive effect of regional contextual distinctiveness on category promotion.
+- H4: More subordinate category members within an industry amplify the positive effect of industry contextual distinctiveness on category promotion.
+
 **Mechanism Process**
 - IV(s): Regional contextual distinctiveness and industry contextual distinctiveness of the B Corp subordinate category.
 - DV(s): Category text promotion and category image promotion on Certified B Corporation websites.
@@ -58,6 +69,12 @@ The paper asks why organizations pursue membership in an organizational category
 - Moderators: Regional category peers and industry category peers.
 
 The mechanism is a distinctiveness process rather than a membership-claiming process. B Corp membership can provide a firm with symbolic and practical resources for standing out from non-certified firms in the same region or industry, but this benefit is weaker when similar ESG practices are already common among non-members in that context. Larger B Corp peer groups make the subordinate category more familiar and credible, which increases members' willingness to use the category as a promotional signal. The interviews support this interpretation by showing that firms became B Corps largely for identity enactment and validation, while they promoted the certification when it helped differentiate them from non-certified companies.
+
+**Data & Measures**
+The quantitative analysis uses B Corps certified by December 2013 and still certified in November 2015. Category text promotion and category image promotion are counts of B Corp terms and images, respectively, within the first three levels of each firm's website, collected in late October and early November 2015. Regional and industry contextual distinctiveness are the mean numbers of ESG concerns among public companies in each B Corp's state and SIC division, calculated from 2012 MSCI ESG KLD STATS data. Regional and industry category peers are counts of Certified B Corporations in the focal firm's state and industry as of December 2013. The authors estimate two-part hurdle models and supplement them with thematic analysis of 49 interviews with entrepreneurs and executives from 44 companies.
+
+**Key Findings**
+H1 and H2 are supported: regional and industry contextual distinctiveness positively predict the extent of both text and image promotion (p < .001). H3 and H4 are also supported: larger regional and industry B Corp peer groups positively amplify the corresponding contextual-distinctiveness effects on both promotion outcomes (p < .001). All four hypotheses remain supported across the reported robustness checks. The interviews converge with the quantitative results: respondents distinguished identity- and validation-based reasons for certification from promotion motivated by differentiation, and described peer presence as encouraging promotion.
 
 **Theoretical Contribution**
 The paper contributes to category research by separating category membership from category promotion and showing that the two are driven by different logics. It extends work on promotional forbearance beyond stigma by showing that even a celebrated category can be hidden when it offers limited contextual distinctiveness. It also develops a relational view of category distinctiveness, arguing that subordinate categories must be assessed against the basic regional and industry categories in which members are embedded.

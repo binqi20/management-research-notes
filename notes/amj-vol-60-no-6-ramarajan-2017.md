@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Ramarajan 2017 Discordant vs. Harmonious
 text_path: "library/AMJ/vol-60-no-6/text/Ramarajan 2017 Discordant vs. Harmonious Selves The Effects of Identity Conflict and Enhancement on Sales Performance in Employee–Customer Interactions.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["identity conflict", "identity enhancement", "multiple work-role identities", "sales performance", "employee-customer interactions", "role-immersion", "intrinsic motivation", "role-taking", "perspective-taking"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "identity theory (Stryker & Burke, 2000)"
   methods_overview: "and sales using multi-level models"
   keywords_source: "identity conflict and enhancement within people affect performance"
+  hypotheses_source: "Hypothesis 4. Intrinsic motivation mediates"
+  measures_overview: "survey, archival, and longitudinal performance data."
+  findings_overview: "perspective-taking mediated this relationship, but not"
 ---
 
 # Discordant vs. Harmonious Selves: The Effects of Identity Conflict and Enhancement on Sales Performance in Employee–Customer Interactions
@@ -52,6 +57,9 @@ Across multiple studies, we examine how identity conflict and enhancement within
 **Research Question**
 The paper asks how employees' experience of multiple work identities as conflicting or enhancing affects performance in tasks that require interpersonal interaction, especially employee-customer sales interactions. It also asks whether role-immersion, operationalized as intrinsic motivation, and role-taking, operationalized as perspective-taking, explain those relationships.
 
+**Hypotheses / Propositions**
+H1 predicts that identity conflict is negatively related to performance in interpersonal-interaction tasks; H2 predicts that identity enhancement is positively related to such performance. H3 and H4 predict that intrinsic motivation mediates the negative identity conflict–performance relationship and the positive identity enhancement–performance relationship, respectively. H5 and H6 make the corresponding negative and positive mediation predictions for perspective-taking.
+
 **Mechanism Process**
 - IV(s): Identity conflict and identity enhancement between salient work-role brand identities.
 - DV(s): Objective monthly sales performance in Study 1 and intention to sell additional items in Studies 2a and 2b.
@@ -59,6 +67,12 @@ The paper asks how employees' experience of multiple work identities as conflict
 - Moderators: Intrinsic motivation present versus absent in Study 2a and perspective-taking present versus absent in Study 2b, used as moderation-of-process tests of the proposed mechanisms.
 
 The mechanism is grounded in identity theory and symbolic interactionism. The authors argue that identity conflict drains motivational and cognitive resources, reducing role-immersion and role-taking, whereas identity enhancement creates complementarity and energy across work-role identities. In the field study, intrinsic motivation mediates the relationships in the predicted direction; perspective-taking is related to the focal identity variables but does not mediate in the expected direction because it has a negative relationship with sales. The experiments strengthen causal inference by manipulating identity conflict or enhancement jointly with intrinsic motivation or perspective-taking.
+
+**Data & Measures**
+Study 1 matched surveys from 763 call-center employees with HR records and unit sales per month for four post-survey months. Identity conflict and identity enhancement were separate three-item scales concerning two salient brand identities; intrinsic motivation was a four-item adapted scale, and customer perspective-taking was a four-item adapted scale. The authors estimated multilevel models and multilevel SEM. Study 2a randomly assigned 1,002 U.S. MTurk adults in a 2 × 2 simulated call-center design crossing identity conflict versus enhancement with intrinsic motivation present versus absent. Study 2b randomly assigned 795 U.S. MTurk adults in the corresponding 2 × 2 design with perspective-taking present versus absent. Both experiments used manipulation-check items and a one-item, seven-point intention-to-sell measure, standardized for analysis, with ANOVA and planned comparisons.
+
+**Key Findings**
+In Study 1, H1 and H2 were supported: identity conflict negatively predicted sales (b = −2.75, p < .05), whereas identity enhancement positively predicted sales (b = 3.20, p < .05). H3 and H4 were supported through intrinsic motivation (indirect effects b = −.51 and 1.27, respectively, both p < .05). Perspective-taking was negatively related to sales, so although the indirect effects were significant, H5 and H6 were not supported in their predicted directions. Study 2a constructively replicated the intrinsic-motivation process: adding intrinsic motivation eliminated conflict's negative effect, and removing it eliminated enhancement's positive effect. Study 2b found no evidence that perspective-taking altered the identity conflict–selling relationship (H5), while perspective-taking dampened rather than explained the positive identity enhancement–selling relationship, counter to H6.
 
 **Theoretical Contribution**
 The paper contributes to research on multiple identities by showing that relationships among identities, not only the strength or salience of individual identities, predict organizationally relevant performance. It treats identity conflict and identity enhancement as distinct constructs rather than opposite ends of one continuum and shows that each has independent effects. It also extends identity theory to interdependent work by connecting multiple work-role identities to role-immersion, role-taking, and employee-customer performance.

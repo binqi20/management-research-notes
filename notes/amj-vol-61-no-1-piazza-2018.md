@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Piazza 2017 When the Dust Settles The Co
 text_path: "library/AMJ/vol-61-no-1/text/Piazza 2017 When the Dust Settles The Consequences of Scandals for Organizational Competition.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["scandals", "organizational competition", "scandal publicity", "organizational membership", "strictness"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "to an organization that shapes their social identity"
   methods_overview: "Arellano–Bond generalized"
   keywords_source: "scandals durably affect competition"
+  hypotheses_source: "Hypothesis 1. There is a negative relationship"
+  measures_overview: "construct a measure of scandal publicity for"
+  findings_overview: "and significant, indicating support for Hypothesis 3."
 ---
 
 # When the Dust Settles: The Consequences of Scandals for Organizational Competition
@@ -51,6 +56,15 @@ Recent works have documented the dark side of scandals, revealing how they sprea
 **Research Question**
 The paper asks how scandals durably affect competition among organizations within a field after the immediate fallout subsides. It focuses on whether scandal publicity harms the implicated organization while creating relative membership advantages for competitors that offer close substitutes and are perceived as enforcing stricter conduct norms.
 
+**Hypotheses / Propositions**
+H1: Scandal publicity is negatively related to Catholic membership at the local level.
+
+H2a: Scandal publicity is positively related to non-Catholic membership at the local level.
+
+H2b: The positive relationship between scandal publicity and non-Catholic membership is weaker for denominations more dissimilar to the Catholic Church.
+
+H3: The positive relationship between scandal publicity and local organizational membership is stronger for stricter non-Catholic denominations than for less strict denominations.
+
 **Mechanism Process**
 - IV(s): Catholic sex-abuse scandal publicity, measured as logged local press coverage of abuse cases; denomination dissimilarity to the Catholic Church; and whether a non-Catholic denomination is stricter than the Catholic Church.
 - DV(s): Logged number of adherents to the Catholic Church and to non-Catholic Christian denominations at the county or denomination-county level.
@@ -58,6 +72,12 @@ The paper asks how scandals durably affect competition among organizations withi
 - Moderators: Denomination dissimilarity to the Catholic Church and denomination strictness relative to the Catholic Church.
 
 The mechanism combines identity threat, substitution, and evaluative shift. Publicized misconduct threatens members' identification with the implicated organization, making exit more likely and recruitment harder. Competitor organizations can gain when they offer a comparable experience without the tainted category association. Scandals also make conduct standards more salient, so stricter denominations should benefit more than less strict alternatives when members and potential members reassess organizational options.
+
+**Data & Measures**
+The study combines county-level denomination membership from the 1971, 1980, 1990, and 2000 Churches and Church Membership studies with Catholic sex-abuse case records and local newspaper coverage from BishopAccountability.org. The dependent variable is the logged number of adherents for the Catholic Church and 16 non-Catholic Christian denominations. Scandal publicity is a diocese-level count of newspaper articles reporting abuse cases during the previous decade, matched to counties; denomination dissimilarity is the absolute difference between its Iannaccone strictness score and the Catholic score, and relative strictness is an indicator for denominations stricter than the Catholic Church. The Catholic-membership models use Arellano–Bond generalized method of moments estimation, while the non-Catholic denomination–county models use generalized estimating equations with an exchangeable correlation structure and Huber–White robust standard errors.
+
+**Key Findings**
+Scandal publicity was negatively associated with Catholic membership, supporting H1: a 1% increase in publicity was associated with a 0.116% decrease in county Catholic membership. Publicity was positively associated with non-Catholic membership, supporting H2a; a 1% increase was associated with a 0.029% increase. The publicity effect was strongest for denominations closest to the Catholic Church and became nonsignificant for the most dissimilar denominations, supporting H2b. The publicity-by-strictness interaction was positive and significant, supporting H3; the estimated membership increase was ten times larger for stricter than for less strict non-Catholic denominations.
 
 **Theoretical Contribution**
 The paper extends scandal research beyond contamination and short-term investor reactions by theorizing scandals as events that reshape competition within organizational fields. It distinguishes penalties for the implicated organization from substitution benefits for competitors, and argues that scandals can create durable evaluative shifts that favor organizations perceived as enforcing stricter norms. The study also contributes to organizational competition research by showing how moralized events redistribute membership resources across organizations.

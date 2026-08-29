@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Maltarich 2017 Pay-for-performance, Some
 text_path: "library/AMJ/vol-60-no-6/text/Maltarich 2017 Pay-for-performance, Sometimes An Interdisciplinary Approach to Integrating Economic Rationality with Psychological Emotion to Predict Individual Performance.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["pay-for-performance", "PFP indebtedness", "PFP exceptions", "individual performance", "expectancy theory", "psychological contract theory"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "psychological contract theory"
   methods_overview: "mixed effects model"
   keywords_source: "pay-for-performance (PFP) system"
+  hypotheses_source: "Hypothesis 1. PFP is positively related to future"
+  measures_overview: "mean monthly production was US $38,217"
+  findings_overview: "lend additional support to Hypotheses 2 and 3"
 ---
 
 # Pay-for-performance, Sometimes: An Interdisciplinary Approach to Integrating Economic Rationality with Psychological Emotion to Predict Individual Performance
@@ -55,6 +60,12 @@ This interdisciplinary study integrates economicsand psychology-based explanatio
 **Research Question**
 The paper asks how employees respond to pay-for-performance systems when they underperform and whether economic rationality alone is sufficient to predict those responses. It tests how PFP, PFP indebtedness, and PFP exceptions jointly shape future individual performance.
 
+**Hypotheses / Propositions**
+- H1: PFP is positively related to future individual performance.
+- H2: PFP indebtedness weakens the positive relationship between PFP and future individual performance.
+- H3: PFP exceptions strengthen the positive relationship between PFP and future individual performance.
+- H4: The positive effect of a PFP exception on individual performance is stronger in more proximal than distal performance periods.
+
 **Mechanism Process**
 - IV(s): PFP incentive intensity, measured as the percentage of sales a practitioner is contracted to receive as commission; PFP indebtedness; PFP exception receipt.
 - DV(s): Future individual performance, measured as monthly revenue collected for services the practitioner was directly involved in delivering.
@@ -62,6 +73,12 @@ The paper asks how employees respond to pay-for-performance systems when they un
 - Moderators: PFP indebtedness moderates the PFP-performance relationship; PFP exceptions moderate the PFP-performance relationship; post hoc analyses examine the joint interaction among PFP, indebtedness, and exceptions.
 
 The mechanism integrates economic incentive logic, expectancy theory, and psychological contract theory. PFP should raise performance when employees can see a stronger link between performance and pay, but accumulated indebtedness weakens expectancy because employees have lower perceived achievability and a harder path to additional pay. PFP exceptions remove indebtedness and can create a positive psychological-contract response, improving performance immediately. The paper finds that this exception effect is short-lived, which qualifies both stable economic-incentive expectations and purely affective explanations.
+
+**Data & Measures**
+The study uses monthly compensation, performance, indebtedness, and PFP-exception records from a U.S. for-profit healthcare provider. The main mixed-effects models analyze 33,581 monthly observations from 1,573 medical practitioners nested in 404 business units. Individual performance is monthly revenue collected for services the practitioner helped deliver, scaled in thousands; PFP is the contracted commission percentage; PFP indebtedness is the log-transformed accrued shortfall, lagged one month; and a PFP exception is a monthly indicator for an exception granted. The models include individual-, unit-, environmental-, year-, and calendar-month covariates, random intercepts, and random slopes for interacted variables. The duration analysis compares five monthly lags using the 21,965 observations available through the longest lag.
+
+**Key Findings**
+All four hypotheses were supported. H1: PFP was positively associated with future performance (b = 0.64, p < .01). H2: indebtedness weakened the positive PFP–performance relationship (interaction b = -0.06, p < .001). H3: a PFP exception strengthened that relationship (interaction b = 0.86, p < .05); the simultaneous-interaction model also supported H2 and H3. H4: the positive exception effect declined over time, remaining significant only in the grant month and one month afterward and dissipating two months after the exception. These results are associational evidence from the longitudinal field data.
 
 **Theoretical Contribution**
 The paper contributes to PFP theory by identifying underperformance and indebtedness as boundary conditions for the PFP-performance relationship. It integrates economics-based incentive-intensity logic with expectancy theory and psychological contract theory to explain why underperforming employees may not respond as economic rationality alone predicts. It also adds a temporal contribution by showing that performance gains from PFP exceptions dissipate after roughly two months.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Harrison 2017 Pliable Guidance A Multile
 text_path: "library/AMJ/vol-60-no-6/text/Harrison 2017 Pliable Guidance A Multilevel Model of Curiosity, Feedback Seeking, and Feedback Giving in Creative Work.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["trait curiosity", "feedback seeking", "feedback giving", "open questions", "ambivalent feedback", "creative work", "design revision", "pliable guidance"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "the social nature of creativity"
   methods_overview: "We used three-level HGLM to test Hypotheses 2 and"
   keywords_source: "feedback seeking and feedback giving"
+  hypotheses_source: "more curious individuals seek feedback by asking more open questions, which allows them to obtain more feedback"
+  measures_overview: "using the five-item diversive curiosity scale from"
+  findings_overview: "We also find that ambivalent feedback is more likely to lead to feedback acceptance and design revision"
 ---
 
 # Pliable Guidance: A Multilevel Model of Curiosity, Feedback Seeking, and Feedback Giving in Creative Work
@@ -51,6 +56,11 @@ We propose and test a multilevel model that positions trait curiosity as a key i
 **Research Question**
 The paper asks how trait curiosity shapes feedback seeking and feedback acceptance during the revision and evaluation stages of creative work. It examines whether curious designers ask more open questions, whether open questions attract more feedback, whether emotionally ambivalent feedback predicts later design revision, and whether curiosity strengthens that response to ambivalent feedback.
 
+**Hypotheses / Propositions**
+- H1: Highly curious individuals will seek feedback through more open questions, and those questions will attract more feedback responses.
+- H2: Emotionally ambivalent feedback will be positively related to changes in subsequent creative drafts.
+- H3: Curiosity will strengthen the positive relationship between emotionally ambivalent feedback and changes in subsequent creative drafts.
+
 **Mechanism Process**
 - IV(s): Trait curiosity; open questions; emotionally ambivalent feedback.
 - DV(s): Feedback receipt and design change in subsequent creative drafts.
@@ -58,6 +68,12 @@ The paper asks how trait curiosity shapes feedback seeking and feedback acceptan
 - Moderators: Trait curiosity moderates the relationship between ambivalent feedback and design change.
 
 The mechanism is a multilevel feedback process organized around pliable guidance. Curious creative workers seek feedback in open ways that give feedback providers latitude to respond, which increases the amount of feedback they receive. Feedback providers' ambivalent language gives designers both direction and room for interpretation, making feedback more likely to be accepted and translated into revisions. Curiosity also makes designers more responsive to that ambivalent feedback, so individual differences shape how social feedback becomes part of creative revision.
+
+**Data & Measures**
+The study combined surveys from 39 designers with archival records for 39 designs, 274 drafts, and 1,662 feedback responses. Trait curiosity was the averaged five-item diversive-curiosity scale (α = .81). Coders counted open questions in each draft's forum posts (initial Krippendorff's α = .75), and feedback receipt was the count of comments per draft. Ambivalent feedback was calculated from LIWC positive- and negative-emotion scores using the similarity–intensity model. Independent coders compared each feedback comment with later drafts and coded design change as binary (initial Cohen's κ = .88). H1 used two-level overdispersed-Poisson HGLMs for drafts nested within individuals. H2–H3 used three-level Bernoulli-logit HGLMs for 1,656 comments nested within 234 drafts and 39 individuals.
+
+**Key Findings**
+H1 was supported: curiosity predicted more open questions (γ = .87, p < .05), open questions predicted more feedback (γ = .27, p < .001), and open questions partially mediated curiosity's relationship with feedback receipt. H2 was supported: ambivalent feedback positively predicted design change (γ = .04, p < .05). H3 was supported: the ambivalent-feedback × curiosity interaction was positive (γ = .06, p < .01); ambivalent feedback predicted change at high curiosity (γ = .07, p < .05) but not at low curiosity (γ = −.00, ns).
 
 **Theoretical Contribution**
 The paper contributes to creativity theory by showing that curiosity matters not only at idea generation, but also in later stages when creative workers evaluate and revise provisional ideas. It develops pliable guidance as a theoretical umbrella for feedback seeking and feedback giving in creative work, arguing that useful feedback balances direction with interpretive freedom. It also extends multilevel creativity theorizing by showing that comments nest within drafts and drafts nest within individuals, making individual traits a context for social influence.

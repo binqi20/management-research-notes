@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Katila 2017 Is There a Doctor in the Hou
 text_path: "library/AMJ/vol-60-no-6/text/Katila 2017 Is There a Doctor in the House Expert Product Users, Organizational Roles, and Innovation.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-mixed"
 keywords: ["professional users", "expert users", "organizational roles", "young firms", "product innovation", "variation-selection", "surgical instrument ventures", "physician-users"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "variation–selection view of innovation"
   methods_overview: "negative binomial regression"
   keywords_source: "professional end users of a product"
+  hypotheses_source: "which the CEO is a user achieve lower innovation"
+  measures_overview: "We collected annual data on product approvals"
+  findings_overview: "positive and significant while the coefficient for the"
 ---
 
 # Is There a Doctor in the House? Expert Product Users, Organizational Roles, and Innovation
@@ -53,6 +58,12 @@ We explore the impact on innovation that domain experts, i.e., professional end 
 **Research Question**
 The paper asks how professional users in different organizational roles are related to product innovation in young firms. It examines whether physician-users help or hinder innovation when they occupy inventor, executive, CEO, and board-member roles in surgical instrument ventures.
 
+**Hypotheses / Propositions**
+H1: The proportion of users in technical roles is curvilinearly (taking an inverted U-shape) related with a young firm's innovation.
+H2: The proportion of users in executive roles is curvilinearly (taking an inverted U-shape) related with a young firm's innovation.
+H3: A user in the CEO role is negatively related with a young firm's innovation.
+H4: The proportion of users in board-member roles is curvilinearly (taking an inverted U-shape) related with a young firm's innovation.
+
 **Mechanism Process**
 - IV(s): Proportion of user-inventors, proportion of user-executives, user-CEO indicator, and proportion of user-board members.
 - DV(s): Young firm innovation measured as yearly counts of FDA product approvals.
@@ -60,6 +71,12 @@ The paper asks how professional users in different organizational roles are rela
 - Moderators: Nonlinear role effects are modeled through squared terms; role type conditions whether user expertise emphasizes variation, selection, or both.
 
 The mechanism is role activation of expert-user knowledge. User-inventors and user-board members are theorized to improve innovation because their tasks emphasize variation or combine variation and selection, allowing physician-users to broaden product ideas and improve relevance. User-executives, especially user-CEOs, are less beneficial because executive roles emphasize selection, and the paper argues that expert users may then rely too narrowly on prior domain knowledge and familiar solutions. The empirical results support positive curvilinear effects for user-inventors and user-board members, no overall support for user-executives, and a negative relationship for user-CEOs.
+
+**Data & Measures**
+The quantitative analysis uses a longitudinal panel of 231 U.S. surgical instrument ventures (1,864 firm-years) observed from 1985 to 2009, assembled from venture databases, patent records, the AMA Physician Masterfile, and FDA product-approval databases; interviews with physicians, entrepreneurs, investors, and industry experts supplement the panel. Innovation is the annual count of each firm's FDA 510(k) and PMA product approvals. User-inventors, user-executives, and user-board members are annual percentages of people in each role who were board-certified physicians, while user-CEO is a binary indicator.
+
+**Key Findings**
+H1 was supported: user-inventors had a positive linear and negative squared association with product approvals, consistent with an inverted U-shape. H2 was not supported in the main models because neither user-executive term was significant. H3 was supported because user-CEO was negatively associated with product approvals, and H4 was supported by a positive linear and negative squared association for user-board members; the squared board-member term was not significant in the QML Poisson robustness analysis. Results were otherwise broadly robust, and funding-stage analyses provided partial support for H2 only in early rounds.
 
 **Theoretical Contribution**
 The paper contributes to the evolutionary perspective on innovation by showing that variation and selection effects depend on the organizational role through which expert users participate. It extends user innovation research by moving beyond whether professional users are present to how their expertise is activated or constrained by specific internal roles in young firms. It also contributes to organizational roles research by showing that role tasks can change the innovation consequences of the same domain expertise.

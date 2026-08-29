@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Lam 2016 Does Proactive Personality Matt
 text_path: "library/AMJ/vol-61-no-1/text/Lam 2016 Does Proactive Personality Matter in Leadership Transitions Effects of Proactive Personality on New Leader Identification and Responses to New Leaders and their Change Agendas.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["proactive personality", "leadership transitions", "leader identification", "change agenda", "engagement", "voice behavior", "contrast effects", "congruence"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Drawing from the contrast and congruence effects"
   methods_overview: "achieved through polynomial regression analyses"
   keywords_source: "team’s behavioral responses to the new leader’s change agenda"
+  hypotheses_source: "This effect is strongest when the new leader’s proactive personality is"
+  measures_overview: "personalities using 10 items from Seibert, Kraimer,"
+  findings_overview: "enhanced new leader identification and the team’s shared identification with the new leader’s change agenda"
 ---
 
 # Does Proactive Personality Matter in Leadership Transitions? Effects of Proactive Personality on New Leader Identification and Responses to New Leaders and their Change Agendas
@@ -53,6 +58,11 @@ Despite the growing frequency of leadership transitions and their significant im
 **Research Question**
 Why and how do teams develop identification with a new leader during leadership transitions, and how does that identification shape teams' receptiveness to the new leader's change agenda? The paper asks whether congruence between team and new-leader proactive personalities, conditioned by the contrast between former and new leaders' proactive personalities, predicts new leader identification, change-agenda identification, engagement, and voice.
 
+**Hypotheses / Propositions**
+- H1: The contrast between former- and new-leader proactive personalities moderates the relationship between new-leader–team proactive-personality congruence and shared identification with (a) the new leader and (b) the new leader's change agenda; positive contrast strengthens and negative contrast weakens the relationship.
+- H2: New leader identification mediates the relationship between new-leader–team proactive-personality congruence and team (a) engagement with and (b) voice about the change agenda; this mediation is stronger under positive than negative former–new leader contrast.
+- H3: The team's shared identification with the new leader's change agenda mediates the relationship between new-leader–team proactive-personality congruence and team (a) engagement with and (b) voice about the change agenda; this mediation is stronger under positive than negative former–new leader contrast.
+
 **Mechanism Process**
 - IV(s): Congruence between the team's proactive personality and the new leader's proactive personality; contrast between the former leader's and new leader's proactive personalities.
 - DV(s): Team engagement with the new leader's change agenda and team voice behavior about the new leader's change agenda.
@@ -60,6 +70,12 @@ Why and how do teams develop identification with a new leader during leadership 
 - Moderators: Former-new leader proactive personality contrast, especially positive contrast where the new leader is more proactive than the former leader.
 
 The mechanism is an identification process activated by leadership transition. When a proactive new leader is paired with a proactive team, the leader and team are more likely to share norms, values, and a sense of oneness, which strengthens identification with the new leader and the leader's change agenda. This congruence effect is stronger when the new leader's proactive personality positively contrasts with the former leader's proactive personality, because team members evaluate the new leader against the former leader as a salient reference point. Stronger identification then carries through to more engagement with, and voice about, the change agenda.
+
+**Data & Measures**
+The four-wave, before-and-after survey followed 155 employees nested in 51 hotel work teams in mainland China. Team members reported demographics at Time 0, their proactive personality at Time 1, and new leader identification and shared identification with the change agenda at Time 2; former leaders rated their own proactive personality at Time 0, and new leaders rated their own proactive personality at Time 1 and team engagement and voice at Time 3. Proactive personality used the 10-item short scale from Seibert et al. (2001); new leader identification used Shamir et al.'s seven-item scale; change-agenda identification used a modified six-item affective-commitment-to-change scale; engagement used four modified physical-engagement items; and voice used six modified voice items. Measures used seven-point Likert scales and employee responses were aggregated to the team level. The associational analyses used moderated polynomial regression and response-surface modeling, followed by 1,000-sample bootstrapped path analyses of moderated mediation.
+
+**Key Findings**
+H1 was supported: high–high new-leader–team proactive-personality congruence produced the highest new leader identification and shared identification with the change agenda, and these congruence effects were significantly stronger when the new leader was more proactive than the former leader. H2 and H3 were supported: new leader identification and shared change-agenda identification mediated the effects of congruence on team engagement and voice, with the predicted moderated mediation. The indirect and total effects were significant when former- and new-leader proactive personalities were incongruent, but the indirect effects were not significant when they were congruent.
 
 **Theoretical Contribution**
 The paper extends leadership-transition research beyond CEO and top-management succession by explaining middle- and lower-level leader transitions through team-level identification mechanisms. It shows that reactions to a new leader depend not only on new leader-team congruence but also on the contrast between the former and new leader.

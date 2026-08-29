@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Stewart 2017 Those with the Most Find It
 text_path: "library/AMJ/vol-60-no-6/text/Stewart 2017 Those with the Most Find It Hardest to Share Exploring Leader Resistance to the Implementation of Team-based Empowerment.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-mixed"
 keywords: ["team-based empowerment", "leader resistance", "leader status", "shared leadership", "leader identity work", "leader delegation", "Veterans Health Administration"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "expectations states theory"
   methods_overview: "convergent parallel mixed methods approach"
   keywords_source: "team-based empowerment creates a status"
+  hypotheses_source: "hypothesis that higher-status physician leaders are less successful than lower-status"
+  measures_overview: "percentage of same-day appointment"
+  findings_overview: "providers was quadruple that of physician providers"
 ---
 
 # Those with the Most Find It Hardest to Share: Exploring Leader Resistance to the Implementation of Team-based Empowerment
@@ -54,6 +59,9 @@ We use a convergent parallel mixed methods approach to explore barriers to the s
 **Research Question**
 The paper asks why leaders resist the implementation of team-based empowerment even when sharing tasks and leadership could improve personal and organizational outcomes. It specifically examines whether teams led by higher-status physician providers are less effective in implementing team-based empowerment than teams led by lower-status nonphysician providers, and what identity and delegation processes explain that difference.
 
+**Hypotheses / Propositions**
+H1: Teams led by higher-status leaders are less effective in implementing team-based empowerment than teams led by lower-status leaders.
+
 **Mechanism Process**
 - Focal intervention: Team-based empowerment through the VHA's Patient Aligned Care Teams.
 - Status condition: Higher-status physician providers versus lower-status nonphysician providers as team leaders.
@@ -62,6 +70,12 @@ The paper asks why leaders resist the implementation of team-based empowerment e
 - Delegation patterns: Balanced delegation, insufficient delegation, and overabundant delegation.
 
 The process begins when team-based empowerment asks leaders to shift from hierarchical control toward shared task and leadership responsibility. For higher-status physician leaders, this shift can create status threat because the new role weakens the distinct physician-in-charge identity. Leaders who protect the old hierarchical identity tend to delegate improperly, either by withholding tasks and control or by pushing too much responsibility onto team members without coordination. Leaders who embrace the empowering identity are more likely to use balanced delegation that recognizes team member expertise and supports team effectiveness.
+
+**Data & Measures**
+The quantitative component used VHA administrative records for 224 providers (142 physicians and 82 nonphysicians) in 21 geographical divisions, with monthly observations from 7 months before through 37 months after implementation. Team effectiveness was the percentage of same-day appointment requests granted each month; leader status distinguished physician from nonphysician providers, panel size and diagnostic cost group average were covariates, and discontinuous growth models estimated pre- and post-intervention trajectories. The qualitative component used purposive sampling for 30 semistructured interviews during initial implementation and 14 follow-up interviews one year later. A three-step analysis identified themes, created within-theme categories, and connected patterns; a research assistant blind to the findings and developing theory independently coded the provider descriptions.
+
+**Key Findings**
+H1 was supported: the status-by-post-intervention interaction was negative (g = -.003, p < .01), and access improved faster for nonphysician-led teams (simple slope = .004, p < .01) than physician-led teams (simple slope = .001, p < .05); by month 37, the improvement for nonphysician providers was four times that for physician providers. In the qualitative provider descriptions, 88% of nonphysicians versus 38% of physicians were associated with embracing the empowering identity, whereas 13% versus 63%, respectively, were associated with protecting the hierarchical identity (chi-square[1] = 6.00, p < .05). Embracing the empowering identity was also associated with balanced rather than insufficient or overabundant delegation (chi-square[2] = 23.20, p < .01).
 
 **Theoretical Contribution**
 The paper contributes to research on team-based empowerment and shared leadership by showing that leader status shapes whether a move from bureaucracy to team structure succeeds. It adds an identity-work explanation for leader resistance, arguing that high-status leaders may need to change who they perceive themselves to be before changing what they do. It also extends delegation research by distinguishing balanced delegation from both insufficient and overabundant delegation.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-6/pdfs/Powell 2017 In The Beginning Identity Pr
 text_path: "library/AMJ/vol-60-no-6/text/Powell 2017 In The Beginning Identity Processes and Organizing in Multi-Founder Nascent Ventures.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["identity processes", "multi-founder nascent ventures", "founder identity", "social identities", "role identities", "collective identity prototype", "identity homophily", "grounded theory"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "founder identity theory"
   methods_overview: "We conducted a longitudinal field study"
   keywords_source: "identity processes"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we conducted 42 formal interviews"
+  findings_overview: "a working consensus about how to move forward"
 ---
 
 # In The Beginning: Identity Processes and Organizing in Multi-Founder Nascent Ventures
@@ -51,6 +56,9 @@ We conducted a longitudinal field study of nine nascent ventures attempting to r
 **Research Question**
 The paper asks how and why identity processes shape organizing efforts in multi-founder nascent ventures. It examines how founders' social and role identities affect early structuring, collective identity prototype construction and enforcement, consensus, and continued engagement in joint organizing.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key identity foundations: Founders bring communitarian, missionary, or hybrid social identity profiles, along with role identities, into early organizing.
 - Prototype construction: Founders first emphasize commonalities and show pragmatic deference, but their enactment of the community as connected or separate shapes recruitment, roles, and authority.
@@ -58,6 +66,12 @@ The paper asks how and why identity processes shape organizing efforts in multi-
 - Emergent outcomes: The process shapes whether founders reach working consensus and whether they remain engaged in the nascent venture.
 
 The process begins with multiple founders who share a desire to help the community but differ in how they understand that community and their relationship to it. Those differences initially surface through practical organizing choices, especially whether to recruit community members or skill holders, whether roles remain fluid or stable, and whether authority is shared or positional. These choices then become part of "who we are" for the emerging in-group, so disagreements about organizing become identity-laden rather than merely task-based. Communitarian in-groups tend to develop warmer ties and small-win signals that sustain engagement, whereas missionary in-groups in the observed cases reach consensus without continued engagement; contested cases disband when neither in-group can dominate.
+
+**Data & Measures**
+The authors followed nine nascent-venture cases, originating as four groups across three municipalities and developing through mergers, disbandings, and new organizing efforts, for up to 28 months. Data included approximately 722 hours of participant and nonparticipant observation, 42 formal interviews (22–119 minutes; approximately 440 single-spaced transcript pages), field notes, informal interactions, and archival documents. Iterative case-report and cross-case analysis used constant comparison and axial coding. Two authors coded 243 social-identity dimensions across 30 founders and reconciled differences jointly; role-identity analysis used 309 evidence pieces for 84 roles held by those founders.
+
+**Key Findings**
+Founders’ connected-versus-separate enactments of community shaped recruitment, roles, and authority, which became elements of collective identity prototypes. In seven cases, one in-group dominated through founder adjustment or exclusion and achieved working consensus; in the two contested cases, competing in-groups persisted and the ventures disbanded. Communitarian in-groups’ fluid roles, shared authority, warmer ties, and small-win signals sustained continued engagement in the observed cases, whereas missionary in-groups achieved consensus but did not sustain engagement. Thus, prototype construction and enforcement linked founders’ social and role identities to both consensus and continued joint organizing.
 
 **Theoretical Contribution**
 The paper extends founder identity theory from individual founders to multi-founder organizing by showing how individual social identities become incorporated into collective identity prototypes and in-groups. It also extends founder identity theory from operational ventures to nascent ventures, showing that identity processes shape basic organizing questions before a venture becomes operational. The study integrates social identity theory and identity theory by linking founders' social identities, role construction, prototype enforcement, and early venture consensus or disbanding.

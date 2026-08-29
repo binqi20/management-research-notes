@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Knight 2017 Organizational Affective Ton
 text_path: "library/AMJ/vol-61-no-1/text/Knight 2017 Organizational Affective Tone A Meso Perspective on the Origins and Effects of Consistent Affect in Organizations.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["organizational affective tone", "consumer-centric industries", "workforce strain", "personnel policies", "organizational structure"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Grounded in an open systems perspective"
   methods_overview: "survey-based study of 24,015 human resource managers, top management team members, and employees of 161 firms"
   keywords_source: "organizational affective tone and connect to workforce strain"
+  hypotheses_source: "positive affective tone lowers workforce strain"
+  measures_overview: "Employee Survey A responded to nine items"
+  findings_overview: "These results partially support Hypothesis 5."
 ---
 
 # Organizational Affective Tone: A Meso Perspective on the Origins and Effects of Consistent Affect in Organizations
@@ -52,6 +57,13 @@ Grounded in an open systems perspective, we build and test new theory about how 
 **Research Question**
 The paper asks why some organizations develop a more positive or negative affective tone and whether that tone matters for workforce strain. It examines whether consumer-centric activity shapes organizational affective tone through personnel practices and organizational design.
 
+**Hypotheses / Propositions**
+- H1: Greater consumer-centric activity is associated with more positive and less negative organizational affective tone.
+- H2: Emotion-focused personnel practices partially mediate the relationship between consumer-centric activity and organizational affective tone.
+- H3: Formalization partially mediates the relationship between consumer-centric activity and organizational affective tone.
+- H4: Centralization partially mediates the relationship between consumer-centric activity and organizational affective tone.
+- H5: Positive organizational affective tone decreases workforce strain, whereas negative organizational affective tone increases it.
+
 **Mechanism Process**
 - IV(s): Consumer-centric activity, measured as the firm's participation in service and retail activities.
 - DV(s): Positive organizational affective tone, negative organizational affective tone, employee exhaustion, and employee sick days.
@@ -59,6 +71,12 @@ The paper asks why some organizations develop a more positive or negative affect
 - Moderators: Post-hoc analyses examine whether consumer-centric activity moderates the relationship between affective tone and workforce strain.
 
 The central mechanism is a meso open-systems process. Organizations whose domains include more consumer-centric activity place greater value on positive affect and lower negative affect, and this logic is embedded through emotion-focused personnel practices and lower centralization. Formalization was hypothesized as part of the structural pathway but was not supported in the results. Organizational affective tone then functions as a contextual resource or demand: positive tone is expected to reduce workforce strain, while negative tone is expected to increase it.
+
+**Data & Measures**
+The cross-sectional, multi-source survey covered 24,015 respondents in 161 German firms. Human resource representatives reported firm activities, personnel practices, and sick days; top managers rated prior firm performance; and employees were randomly assigned across four surveys measuring affective tone, expression norms, organizational design, and emotional exhaustion. Consumer-centric activity was the percentage of firm activity in service and retail. Positive and negative organizational affective tone were firm means of five pleasant and four unpleasant high-activation Job-Related Affective Well-Being items, respectively. Emotion-focused personnel practices used a six-item human resource representative measure; formalization and centralization used five-item employee measures; workforce strain combined reported employee sick days with a four-item Maslach emotional-exhaustion measure aggregated to the firm level. The associational analyses used organization-level OLS regressions, bootstrapped indirect effects with 10,000 draws, and path analysis; the cross-sectional design does not establish causal identification.
+
+**Key Findings**
+H1 was supported: consumer-centric activity related positively to positive affective tone (b = 0.24, p < 0.01) and negatively to negative affective tone (b = -0.17, p = 0.01). H2 was supported only for positive tone: the indirect effect through emotion-focused personnel practices was positive and significant (Est. = 0.02, 95% CI [0.00, 0.06]), whereas the negative-tone indirect effect was not significant. H3 was not supported. H4 was supported: centralization carried a positive indirect effect to positive tone (Est. = 0.08, 95% CI [0.01, 0.18]) and a negative indirect effect to negative tone (Est. = -0.07, 95% CI [-0.15, -0.01]). H5 received partial support in the OLS models: negative tone related positively to exhaustion (b = 0.42, p < 0.01), and positive tone related negatively to sick days at marginal significance (b = -0.23, p = 0.08); the other two predicted main effects were not significant. Post-hoc analyses further indicated that consumer-centric activity moderated the positive-tone–exhaustion and negative-tone–sick-days relationships, but the simple slopes for the latter relationship were not significantly different from zero.
 
 **Theoretical Contribution**
 The paper contributes a meso explanation for collective affect by linking organizational affective tone to the macro domain in which an organization creates value. It extends affect research beyond small-group emotional contagion by showing how organizational design and personnel practices can embed consistent affect across a whole firm. It also connects organizational affective tone to workforce strain as a contextual demand or resource.

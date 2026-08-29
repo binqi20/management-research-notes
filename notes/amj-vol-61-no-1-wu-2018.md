@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-61-no-1/pdfs/Wu 2017 When and Why People Engage in Di
 text_path: "library/AMJ/vol-61-no-1/text/Wu 2017 When and Why People Engage in Different Forms of Proactive Behavior Interactive Effects of Self-construals and Work Characteristics.txt"
 ingested_at: "2026-06-30"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["proactive behavior", "self-construals", "trait activation theory", "job autonomy", "job interdependence", "career commitment", "work unit commitment"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "we integrate self-construal theory"
   methods_overview: "latent moderated structural (LMS)"
   keywords_source: "different forms of proactive behavior at work"
+  hypotheses_source: "Hypothesis 1. An independent self-construal"
+  measures_overview: "self-construals were measured using Lu and"
+  findings_overview: "did not enhance career-oriented proactive behavior, even when we manipulated job"
 ---
 
 # When and Why People Engage in Different Forms of Proactive Behavior: Interactive Effects of Self-construals and Work Characteristics
@@ -53,6 +58,12 @@ When and why do people engage in different forms of proactive behavior at work? 
 **Research Question**
 When and why do employees engage in different forms of proactive behavior at work? The paper asks whether employees' independent and interdependent self-construals lead to career-oriented versus work unit-oriented proactive behavior when job autonomy or job interdependence activates the relevant self-construal.
 
+**Hypotheses / Propositions**
+- H1: Independent self-construal relates positively to career-oriented proactive behavior when job autonomy is high.
+- H2: Interdependent self-construal relates positively to work unit-oriented proactive behavior when job interdependence is high.
+- H3: Independent self-construal and job autonomy interact positively to predict career commitment, which in turn predicts career-oriented proactive behavior; the indirect association is positive only when autonomy is high.
+- H4: Interdependent self-construal and job interdependence interact positively to predict work unit commitment, which in turn predicts work unit-oriented proactive behavior; the indirect association is positive only when interdependence is high.
+
 **Mechanism Process**
 - IV(s): Independent self-construal and interdependent self-construal.
 - DV(s): Career-oriented proactive behavior and work unit-oriented proactive behavior.
@@ -60,6 +71,12 @@ When and why do employees engage in different forms of proactive behavior at wor
 - Moderators: Job autonomy for independent self-construal; job interdependence for interdependent self-construal.
 
 The mechanism is trait activation through goal regulation. Independent self-construal should direct attention toward personal career goals, but it translates into career-oriented proactive behavior mainly when job autonomy gives employees discretion to act on those goals. Interdependent self-construal should direct attention toward collective and relational goals, but it translates into work unit-oriented proactive behavior mainly when job interdependence makes collective contribution salient. Study 1 experimentally supports the interdependent self-construal by job interdependence path; Study 2 supports both proposed interaction paths and the corresponding commitment mediators.
+
+**Data & Measures**
+Study 1 was a 2 × 2 between-subjects online experiment with 61 retained U.S. working adults. Sentence construction primed independent versus interdependent self-construal, autobiographical narratives manipulated job autonomy versus job interdependence, and two situational judgment tests measured career-oriented and work unit-oriented proactive behavior. Study 2 used three survey waves from 205 Chinese subordinate-supervisor pairs: employees reported self-construals and work characteristics at Time 1 and career and work unit commitment two months later, and supervisors rated both forms of proactive behavior after another two months. Self-construal used selected facets of Lu and Gilmour's scale; job autonomy and job interdependence used three-item scales; commitments used three items each; and proactive behavior used supervisor-rated items. Study 1 used ANOVA, ordinal regression, and sensitivity analyses; Study 2 used confirmatory factor analysis, structural equation modeling, latent moderated structural equations, and conditional indirect-effect tests.
+
+**Key Findings**
+In Study 1, H1 was not supported: priming independent self-construal did not increase career-oriented proactive behavior under job autonomy. H2 was supported: participants primed with interdependent self-construal showed more work unit-oriented proactive behavior under job interdependence than under job autonomy. In Study 2, H1 and H2 were supported: independent self-construal predicted career-oriented proactive behavior only when job autonomy was high, and interdependent self-construal predicted work unit-oriented proactive behavior only when job interdependence was high. H3 and H4 were also supported: career commitment carried the conditional independent self-construal effect under high autonomy, and work unit commitment carried the conditional interdependent self-construal effect under high interdependence; neither indirect effect was significant when its corresponding work characteristic was low.
 
 **Theoretical Contribution**
 The paper advances a differential approach to proactivity by explaining why employees pursue different proactive targets rather than treating proactivity as one general tendency. It integrates self-construal theory and trait activation theory to show that person-situation fit shapes the form of proactive behavior. It also specifies commitment as a goal-regulation mechanism linking self-construals and work design to proactive action.
