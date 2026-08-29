@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Uy 2017 Is it Better to Give or Receive 
 text_path: "library/AMJ/vol-60-no-4/text/Uy 2017 Is it Better to Give or Receive The Role of Help in Buffering the Depleting Effects of Surface Acting.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["surface acting", "emotional exhaustion", "work engagement", "giving help", "receiving help", "conservation of resources theory"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Drawing on conservation of resources theory and the ecological congruence model"
   methods_overview: "we conduct a five-day diary study"
   keywords_source: "surface acting positively predicted end-of-day emotional exhaustion"
+  hypotheses_source: "daily surface acting at work is positively related"
+  measures_overview: "We used five items to measure surface acting."
+  findings_overview: "giving help buffered the depletion process while receiving help did not."
 ---
 
 # Is it Better to Give or Receive? The Role of Help in Buffering the Depleting Effects of Surface Acting
@@ -53,6 +58,13 @@ The resource-depleting effect of surface acting is well established. Yet we know
 **Research Question**
 The paper asks whether the depleting effects of surface acting carry forward from one workday to next-day work engagement through end-of-day emotional exhaustion. It also asks whether at-work social interactions with coworkers, specifically giving help and receiving help, buffer that depletion process.
 
+**Hypotheses / Propositions**
+- H1a: At the within-individual level, daily surface acting is positively related to end-of-day emotional exhaustion.
+- H1b: At the within-individual level, end-of-day emotional exhaustion is negatively related to next-day work engagement.
+- H1c: At the within-individual level, end-of-day emotional exhaustion mediates the relationship between surface acting and next-day work engagement.
+- H2a: At-work help giving buffers the mediated relationship between surface acting and next-day work engagement through end-of-day emotional exhaustion, making it weaker when help giving is high.
+- H2b: At-work help giving buffers that mediated relationship more strongly than at-work help receiving.
+
 **Mechanism Process**
 - IV(s): Daily surface acting at work.
 - DV(s): Next-day work engagement.
@@ -61,6 +73,12 @@ The paper asks whether the depleting effects of surface acting carry forward fro
 - Controls: Before-work positive affect, before-work negative affect, daily deep acting, and current-day work engagement in lagged analyses.
 
 The mechanism is a within-person resource-depletion process. Surface acting requires externally controlled emotional regulation that threatens the employee's sense of self and increases end-of-day emotional exhaustion. That exhaustion then reduces psychological availability for next-day work engagement. Giving help, because it is more autonomous and self-expressive, restores resources connected to the sense of self and buffers the surface acting-to-exhaustion link; receiving help provides support but does not show the same buffering effect.
+
+**Data & Measures**
+The study uses 486 diary surveys from 102 full-time CSRs at an inbound call center in Singapore, collected at three daily time points over five consecutive workdays; Table 2 reports analysis samples of 243-486 because lagged analyses have smaller samples. Surface acting (five items) and deep acting (three items) were measured at workday end on 1-5 frequency scales. Work engagement was a five-item daily measure adapted from UWES and completed at workday end; emotional exhaustion was a two-item Maslach Burnout Inventory measure completed at home before bed. Giving help used an eight-item daily coworker-help scale and receiving help a three-item daily scale, both ranging from 1 to 5. Before-work positive and negative affect, deep acting, and current-day engagement were controls. Day-level observations were nested within people and analyzed as group-mean-centered within-person path models in Mplus 7's unconflated multilevel framework.
+
+**Key Findings**
+All five hypotheses were supported. H1a: surface acting positively predicted end-of-day emotional exhaustion (g = 0.28, p < .01). H1b: emotional exhaustion negatively predicted next-day work engagement (g = -0.14, p < .01). H1c: the indirect effect was negative (indirect effect = -0.04, 90% CI [-0.07, -0.01]). H2a: giving help buffered the first-stage relationship (interaction g = -0.36, p < .05); surface acting predicted exhaustion when help giving was low (simple slope = 0.44, p < .01) but not when it was high (simple slope = 0.12, p > .10), and the conditional indirect effect was significant only at low help giving. H2b: receiving help did not moderate the relationship (g = 0.14, p > .10), and the two moderation effects differed significantly (difference = -0.50, SE = 0.24, p < .05).
 
 **Theoretical Contribution**
 The paper extends conservation of resources theory by specifying temporality, autonomy, and resource congruence in the depletion and restoration process. It shows that the costs of surface acting are not confined to the same workday but spill over to next-day engagement through emotional exhaustion. It also contributes to emotional labor and recovery research by distinguishing the restorative effect of giving help from receiving help during the workday.

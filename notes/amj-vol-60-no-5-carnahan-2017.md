@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Carnahan 2017 When Does Corporate Social
 text_path: "library/AMJ/vol-60-no-5/text/Carnahan 2017 When Does Corporate Social Responsibility Reduce Employee Turnover Evidence from Attorneys Before and After 911.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["corporate social responsibility", "employee turnover", "meaningfulness at work", "pro bono legal services", "occupation change", "startup law firms", "mortality-related shocks"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "meaningfulness at work is likely to be a crucial"
   methods_overview: "We use logit and multinomial logit models"
   keywords_source: "The provision of pro bono legal services"
+  hypotheses_source: "founds a startup firm is lower in firms with higher"
+  measures_overview: "Two-thirds of the pro bono ranking comes"
+  findings_overview: "supporting Hypothesis 1a and Hypothesis 2a"
 ---
 
 # When Does Corporate Social Responsibility Reduce Employee Turnover? Evidence from Attorneys Before and After 9/11
@@ -52,6 +57,13 @@ This study places important boundary conditions on the generally accepted notion
 **Research Question**
 The paper asks when firms' CSR investments reduce employee turnover and whether the retention benefit is concentrated in departures plausibly motivated by a search for more meaningfulness at work. It examines whether pro bono activity in large law firms reduces attorneys' occupation changes and startup founding more than moves to established law firms, and whether these effects strengthen after a mortality-related shock.
 
+**Hypotheses / Propositions**
+H1a: Employees are less likely to change occupations in firms with higher CSR activity.
+H1b: Higher CSR has a stronger negative relationship with occupation-changing turnover than with moves to another firm in the same occupation.
+H2a: Employees are less likely to found startup firms when their employers have higher CSR activity.
+H2b: Higher CSR has a stronger negative relationship with startup founding than with moves to established firms.
+H3: Following a mortality-related shock, employees are less likely to leave the legal occupation or found a new firm when their employers have higher CSR activity.
+
 **Mechanism Process**
 - IV(s): Firm-level CSR activity, measured mainly through AmLaw pro bono ranking and related pro bono measures.
 - DV(s): Attorney departure destinations: occupation change, founding a startup law firm, joining an established law firm, and leaving for any destination.
@@ -59,6 +71,12 @@ The paper asks when firms' CSR investments reduce employee turnover and whether 
 - Moderators: Type of job change and mortality-related shock exposure; the 9/11 analysis compares NYC metro-born attorneys with non-NYC metro-born officemates and splits firms by pro bono strength.
 
 The mechanism is that CSR activities, especially pro bono legal work, can supply meaningfulness in and at work. That meaningfulness should matter most when employees might otherwise leave for destinations that offer greater purpose, such as occupational change or founding a new firm, rather than for moves to established competitors. The 9/11 shock provides an indirect test of the mechanism: if mortality salience increases attorneys' search for meaningful work, then higher-CSR firms should be better able to retain affected attorneys. The results support this boundary-condition argument but also show that higher CSR is associated with more turnover to established law firms.
+
+**Data & Measures**
+The study links attorney and firm records from the nationwide Martindale-Hubbell Law Directory for 1999–2011. The main nonshock sample is restricted to attorneys employed by AmLaw 200 firms from 1999–2010; the shock analysis compares NYC metro-born attorneys with officemates born outside the NYC metro area and excludes offices in New York and New Jersey in the primary specification. The DVs are indicators for occupation change, startup-law-firm founding, and joining an established law firm. The main CSR measure is the American Lawyer pro bono ranking, based two-thirds on average pro bono hours per lawyer and one-third on the percentage of lawyers completing at least 20 hours. September 11, 2001 is treated as a mortality-related shock. Logit and multinomial logit competing-risk models estimate associations; the authors explicitly caution against causal conclusions.
+
+**Key Findings**
+H1a and H2a are supported: stronger pro bono rankings are associated with fewer occupation changes and startup foundings. H1b and H2b are also supported because these negative associations differ significantly from the positive association between pro bono ranking and moves to established law firms. A one-standard-deviation improvement in pro bono ranking corresponds to 3.6% fewer occupation changes and 5% fewer foundings relative to their sample means, but 5.3% more moves to established law firms. H3 is supported: after 9/11, the increase in occupation changes among NYC metro-born attorneys is concentrated in below-median-pro-bono firms; in those firms, they are 85% more likely than officemates to change occupations in 2002, whereas no difference appears in above-median-pro-bono firms.
 
 **Theoretical Contribution**
 The paper qualifies the broad claim that CSR reduces employee turnover by showing that CSR's retention benefit depends on the motive implied by the employee's destination. It contributes to CSR and employee-outcome research by identifying meaningfulness at work as a central mechanism and by showing that CSR may operate like insurance against turnover after mortality-related shocks. It also extends turnover and entrepreneurship research by treating startup founding as a distinct departure path that may be partly motivated by meaningfulness rather than only financial gain.

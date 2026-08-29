@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Siebert 2017 “Devils May Sit Here” T
 text_path: "library/AMJ/vol-60-no-4/text/Siebert 2017 “Devils May Sit Here” The Role of Enchantment in Institutional Maintenance.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["institutional maintenance", "organizational space", "Scottish advocates", "emplacement", "enactment of space", "enchantment of space", "maintenance of closure", "reproduction of the status order", "professions", "Faculty of Advocates"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "neo-institutional perspective on professions"
   methods_overview: "a wealth of ethnographic data"
   keywords_source: "enchantment evoked by organizational spaces"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we conducted 43 interviews with devils"
+  findings_overview: "are intertwined, thus enabling the process of institutional maintenance: (1) emplacement, (2) enactment of space, and (3) enchantment of space."
 ---
 
 # “Devils May Sit Here:” The Role of Enchantment in Institutional Maintenance
@@ -52,6 +57,9 @@ This paper contributes to the literature on maintenance of institutions by analy
 **Research Question**
 The paper asks what role organizational space plays in institutional maintenance. It examines how practices in and around Parliament House and the Advocates Library help maintain the Faculty of Advocates' closure and reproduce its internal status order.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / spatial phenomena: Emplacement, enactment of space, and enchantment of space.
 - Process / practices: Advocates and devils learn, accept, and enact visible and invisible spatial boundaries in the Library, Parliament Hall, the Reading Room, the Law Room, and related spaces.
@@ -61,6 +69,12 @@ The paper asks what role organizational space plays in institutional maintenance
 
 The process is not a simple coercive mechanism. Spatial rules emplace actors and make hierarchy visible, but the paper argues that enchantment explains why newcomers and members often accept and reproduce these rules rather than resist them. Parliament House and the Advocates Library generate awe, pride, and fascination through history, secrecy, ceremony, and aesthetic appeal. By desiring access to these spaces, actors help maintain closure and continue the Faculty's internal ordering.
 
+**Data & Measures**
+The inductive, single-case organizational ethnography examined the Faculty of Advocates through participant-as-observer fieldwork over 18 months. The corpus comprised around 110 observation days and over 200 field notes, five internal documents, and 43 recorded interviews totaling 47 hours with devils, devilmasters, and expert informants. Analysis proceeded iteratively through three stages: coding spatial practices and locations, interpreting visible and invisible boundaries through emplacement and enactment, and incorporating emotional responses to develop enchantment while comparing data, emerging patterns, and theory.
+
+**Key Findings**
+The study finds that emplacement, enactment of space, and enchantment interweave to maintain institutional closure and reproduce the status order. Emplacement fixes actors into ranked spaces, while learned and routinized enactment reproduces explicit and tacit spatial rules. Enchantment arising from beauty, history, mystery, secrecy, and awe reduces resistance: actors accept emplacement and reproduce the rules and status order across generations. The authors identify enchantment as the dominant phenomenon in explaining the institution's stability.
+
 **Theoretical Contribution**
 The paper contributes to institutional maintenance theory by showing how organizational spaces and actors' interactions with them can stabilize an institution. It extends accounts of institutional work beyond human action and cognitive rule reproduction by foregrounding emotional and aesthetic reactions to space. It also develops emplacement, enactment, and enchantment as interwoven spatial phenomena through which closure and status order are maintained.
 
@@ -68,7 +82,7 @@ The paper contributes to institutional maintenance theory by showing how organiz
 The paper implies that institutional maintenance can involve more than formal rules, economic incentives, or disciplinary controls. Physical spaces, rituals, secrecy, and aesthetic experience can make hierarchy feel desirable, legitimate, and worth preserving.
 
 **Limitations**
-The paper is based on a single qualitative case: Scottish advocates located in Parliament House and the Advocates Library. The authors explicitly caution against spatial determinism, noting that organizational spaces do not determine behavior even if they prompt culturally appropriate action. The case is historically distinctive, so the specific pattern of enchantment, closure, and status reproduction may not transfer unchanged to less tradition-laden institutions.
+The paper is based on a single qualitative case: Scottish advocates located in Parliament House and the Advocates Library. The authors explicitly caution against spatial determinism, noting that organizational spaces do not determine behavior even if they prompt culturally appropriate action. Although the case has a long historical tradition, the authors suggest its spatial-maintenance dynamics could also apply to institutions with much less historical legacy.
 
 **Future Research**
 The paper calls for further theoretical and empirical inquiry into whether institutions survive in the same form when moved from their historical buildings. It asks whether preserving organizational space supports institutional reproduction over time, and whether moving to a new building can disrupt an institution. It also suggests studying other institutions whose buildings carry mythic, symbolic, or aesthetic appeal, including churches, private schools, ancient universities, concert halls, and parliaments.

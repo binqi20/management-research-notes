@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Giachetti 2017 Red Queen Competitive Imi
 text_path: "library/AMJ/vol-60-no-5/text/Giachetti 2017 Red Queen Competitive Imitation in the U.K. Mobile Phone Industry.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["Red Queen competition", "competitive imitation", "imitation scope", "imitation speed", "product technology heterogeneity", "sales performance", "U.K. mobile phone industry"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "This paper uses Red Queen competition theory to examine competitive imitation."
   methods_overview: "We tested the hypotheses with three regression models"
   keywords_source: "imitation scope, which describes the extent to which a firm imitates"
+  hypotheses_source: "Hypothesis 1a. An increase in the focal firm"
+  measures_overview: "number of handsets sold on a yearly basis"
+  findings_overview: "Hypotheses 4a and 4b are thus not supported."
 ---
 
 # Red Queen Competitive Imitation in the U.K. Mobile Phone Industry
@@ -52,6 +57,20 @@ This paper uses Red Queen competition theory to examine competitive imitation. W
 **Research Question**
 The paper asks how far and how fast firms should imitate rivals' new product technologies in rapidly changing technology-intensive industries. It examines whether focal firms' imitation scope and imitation speed affect their own sales performance, whether these imitative actions trigger rivals' imitation, and whether product technology heterogeneity changes the Red Queen competitive imitation cycle.
 
+**Hypotheses / Propositions**
+- H1a: Greater focal-firm imitation scope positively influences focal-firm performance.
+- H1b: Greater focal-firm average imitation speed positively influences focal-firm performance.
+- H2a: Greater focal-firm imitation scope increases rivals' imitation scope.
+- H2b: Greater focal-firm average imitation speed increases rivals' average imitation speed.
+- H3a: Holding focal-firm imitation scope constant, greater rivals' imitation scope decreases focal-firm performance.
+- H3b: Holding focal-firm average imitation speed constant, greater rivals' average imitation speed decreases focal-firm performance.
+- H4a: Product technology heterogeneity negatively moderates the relationship between focal-firm imitation scope and performance.
+- H4b: Product technology heterogeneity negatively moderates the relationship between focal-firm average imitation speed and performance.
+- H5a: Product technology heterogeneity negatively moderates the relationship between focal-firm imitation scope and rivals' imitation scope.
+- H5b: Product technology heterogeneity negatively moderates the relationship between focal-firm average imitation speed and rivals' average imitation speed.
+- H6a: Product technology heterogeneity negatively moderates the relationship between rivals' imitation scope and focal-firm performance.
+- H6b: Product technology heterogeneity negatively moderates the relationship between rivals' average imitation speed and focal-firm performance.
+
 **Mechanism Process**
 - IV(s): Focal firm's imitation scope, focal firm's average speed of imitation, rivals' imitation scope, rivals' average speed of imitation, and product technology heterogeneity.
 - DV(s): Focal firm sales performance, rivals' imitation scope, and rivals' average speed of imitation.
@@ -59,6 +78,12 @@ The paper asks how far and how fast firms should imitate rivals' new product tec
 - Moderators: Product technology heterogeneity moderates focal-firm imitation effects on performance, focal-firm imitation effects on rivals' imitation, and rivals' imitation effects on focal-firm performance.
 
 The mechanism is a Red Queen action-reaction process. Focal firms imitate new product technologies to maintain or improve competitive position; those moves can improve performance directly, but they also push rivals to imitate, and rivals' imitation then erodes focal firm performance. Product technology heterogeneity shapes this process because multiple competing designs increase technological uncertainty, changing both the performance value of broad imitation and rivals' willingness or ability to respond.
+
+**Data & Measures**
+The study uses an unbalanced panel of 566 firm-system-year observations covering 13 U.K. handset vendors, 48 product technologies, and 566 phones over 1997–2008, excluding smartphones. Product-technology introductions and handset attributes came from FACTIVA, vendor archival materials, and specialist industry magazines; vendor sales came from Mintel International Group Limited, Euromonitor International, and firm archives. Focal-firm imitation scope is the annual count of newly introduced technologies imitated within a technological system; average imitation speed is a normalized 0–1 measure based on months to imitation. Rivals' scope subtracts the focal firm's imitations from competitors' total subsequent imitations, and rivals' speed averages rivals' normalized imitation speeds. Focal-firm performance is annual handset unit sales. Product technology heterogeneity is measured with a Shannon entropy index. The associational panel models temporally order focal actions at t, rivals' responses at t+1, and performance at t+2; estimation uses robust fixed-effects, fixed-effects Poisson, and robustness models.
+
+**Key Findings**
+H1b was supported: focal-firm imitation speed positively predicted sales performance; H1a was not supported because imitation scope had a significant negative coefficient. H2a was supported, whereas H2b was not: focal-firm scope increased rivals' scope, but focal-firm speed did not significantly increase rivals' speed. H3a and H3b were supported: both rivals' imitation scope and speed negatively predicted focal-firm performance. H4a and H4b were not supported: the scope interaction was significantly positive rather than negative, and the speed interaction was nonsignificant. H5a was supported and H5b was not. H6a was supported and H6b was not. The positive scope-by-heterogeneity interaction means focal-firm imitation scope was beneficial at high product technology heterogeneity despite H1a's negative unconditional result.
 
 **Theoretical Contribution**
 The paper extends Red Queen competition research by examining imitation of new product technologies in a technology-intensive industry rather than treating competitive action as a general count of moves. It distinguishes imitation scope from imitation speed and shows that these two forms of imitation have different performance and rival-response implications. It also contributes by theorizing and testing product technology heterogeneity as a boundary condition for the Red Queen cycle.

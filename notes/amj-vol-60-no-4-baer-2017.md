@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Baer 2017 Falling in Love Again with Wha
 text_path: "library/AMJ/vol-60-no-4/text/Baer 2017 Falling in Love Again with What We Do Academic Craftsmanship in the Management Sciences.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "editorial"
 keywords: ["academic craftsmanship", "research question", "pride and perfection", "societal welfare", "clear, honest, and direct communication"]
@@ -52,6 +54,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Craftsmanship framing: Baer and Shaw define academic craftsmanship as the noble and socially responsible pursuit of perfection in creating new understandings about organizations.
 - Falling in love with the question: They argue that scholars should craft research questions that need answering, are worth answering, and are personally meaningful.
@@ -60,6 +65,12 @@ Not reported in paper
 - Anti-shortcut norm: They warn against opportunistic projects, hasty execution, and novelty-through-terminology that obstruct knowledge accumulation.
 
 The process is editorial and normative rather than empirical. Baer and Shaw use Jiro Ono's sushi craftsmanship as an analogy for scholarly work, then translate craftsmanship into three expectations for management researchers: intimate commitment to worthwhile questions, pride and care in execution, and responsibility to the communities served by research.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a formal theory. Its contribution is to articulate "academic craftsmanship" as a standard for management scholarship that integrates intrinsic motivation, careful research design, clear communication, rigor, relevance, and responsibility to the wider community.
@@ -71,7 +82,7 @@ For authors, the editorial implies that research projects should begin with care
 Not reported in paper
 
 **Future Research**
-The editorial encourages future management research to formulate questions that address important problems, contribute to community or societal welfare, and are personally meaningful enough to sustain long-term scholarly commitment. It also implies a need for work that combines well-crafted theory, carefully designed empirical studies, rigorous analysis, and clear communication for audiences inside and outside academia.
+Not reported in paper
 
 **APA 7th Citation**
 Baer, M., & Shaw, J. D. (2017). Falling in love again with what we do: Academic craftsmanship in the management sciences. *Academy of Management Journal*, 60(4), 1213-1217. https://doi.org/10.5465/amj.2017.4004

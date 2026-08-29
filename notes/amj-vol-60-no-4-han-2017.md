@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Han 2017 Unequal Bedfellows Gender Role-
 text_path: "library/AMJ/vol-60-no-4/text/Han 2017 Unequal Bedfellows Gender Role-based Deference in Multiplex Ties between Korean Business Groups.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-mixed"
 keywords: ["deference", "multiplex relationships", "competitive positioning", "gender-based status differences", "Korean business groups", "market entries or exits"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "literatures on status, multiplex relationships, and competitive positioning"
   methods_overview: "we used the event study"
   keywords_source: "gender-based status differences within kinship ties"
+  hypotheses_source: "owned by a wife’s family decreases the probability"
+  measures_overview: "data on the personal wealth of chaebols’ owner-CEOs."
+  findings_overview: "family is much more likely to enter and exit common"
 ---
 
 # Unequal Bedfellows: Gender Role-based Deference in Multiplex Ties between Korean Business Groups
@@ -53,6 +58,12 @@ Deference within a dyad occurs when one partner acknowledges that the other is e
 **Research Question**
 The paper asks whether deference in the personal domain of a multiplex tie can spill over into the business domain and shape strategic market entry and exit. It examines this question through marriages between owner-families of Korean business groups, where Confucian gender-role norms create asymmetric deference between the husband's and wife's families.
 
+**Hypotheses / Propositions**
+H1a: After marriage, the business group owned by the husband's family becomes more likely to enter markets occupied by the wife's family business group.
+H1b: After marriage, the business group owned by the husband's family becomes more likely to exit markets occupied by the wife's family business group.
+H2a: After marriage, the business group owned by the wife's family becomes less likely to enter markets occupied by the husband's family business group.
+H2b: After marriage, the business group owned by the wife's family becomes less likely to exit markets occupied by the husband's family business group.
+
 **Mechanism Process**
 - IV(s): Formation of marriage ties between owner-families of Korean chaebols, differentiated by whether the focal chaebol belongs to the husband's family or the wife's family.
 - DV(s): Market entry into and market exit from the marriage partner's 4-digit SIC markets; supplementary owner-CEO wealth ranking as a performance consequence.
@@ -60,6 +71,12 @@ The paper asks whether deference in the personal domain of a multiplex tie can s
 - Moderators: Not modeled as formal moderators in the main hypotheses; supplementary analyses consider market attractiveness through entry and exit ratios.
 
 The proposed mechanism is cross-level: culturally prescribed gender-role deference between families alters strategic behavior by the business groups those families own. Marriage creates a trusted communication channel, but the husband's chaebol is expected to actively reconfigure market positions while the wife's chaebol accommodates and restrains its own entry or exit. The quantitative results support this asymmetry: after marriage, husbands' chaebols become more likely to enter and exit wives' markets, whereas wives' chaebols become less likely to enter or exit husbands' markets.
+
+**Data & Measures**
+The study combines owner-family and marriage records for the largest 60 Korean chaebols over 1987–2011 (23 marriages) from Chaebol-Ga and supplementary news, business-magazine, and web-archive searches with 4-digit SIC market-presence data from KIS, annual reports, and press releases. Fifteen interviews with ten senior executives and an interview with the Chaebol-Ga journalist supply qualitative context. The four event-study datasets separately model husbands' entries, husbands' exits, wives' entries, and wives' exits within three years before and after marriage; the reporting-table analysis samples contain 1,961, 462, 40,555, and 443 dyad–market–year observations, respectively. Market entry and exit are binary events based on affiliate presence in a partner's market; After Marriage marks post-marriage treatment observations. The design combines difference-in-differences estimation with Coarsened Exact Matching (CEM), then estimates probit models with standard errors clustered on 4-digit market IDs. Supplementary performance models use annual owner-CEO personal-wealth rank for 153 chaebol–year observations and estimate OLS and ordered probit models.
+
+**Key Findings**
+All four predicted directional effects appeared. H1a was supported: husbands' chaebols became more likely to enter wives' markets after marriage (coefficient = 0.370, p < .01; approximately a 75% increase). H1b received marginal support: husbands' chaebols became more likely to exit wives' markets (coefficient = 0.419, p < .10; approximately a 50% increase). H2a was supported: wives' chaebols became less likely to enter husbands' markets (coefficient = −0.717, p < .01), with entry falling to zero in the matched sample after marriage. H2b was supported: wives' chaebols became less likely to exit husbands' markets (coefficient = −0.633, p < .05; approximately a 68% decrease). Seemingly unrelated estimations confirmed that the corresponding husbands' and wives' coefficients differed, and the interviews supplied qualitative evidence of the same asymmetric pattern. In the performance analysis, entries into marriage partners' markets improved husbands' owner-CEO wealth rank relative to wives', whereas exits did not.
 
 **Theoretical Contribution**
 The paper contributes to multiplexity research by identifying deference spillover as a mechanism through which one relational domain can shape behavior in another. It also contributes to competitive positioning by showing that market entry and exit are not only responses to economic overlap, market munificence, or multimarket contact, but can also be shaped by personal ties and culturally grounded status asymmetries.

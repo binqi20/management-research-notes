@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Ramus 2017 Institutional Complexity in T
 text_path: "library/AMJ/vol-60-no-4/text/Ramus 2017 Institutional Complexity in Turbulent Times Formalization, Collaboration, and the Emergence of Blended Logics.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["institutional complexity", "environmental turbulence", "collaboration", "formalization", "blended logics", "social enterprises"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "institutional logics perspective suggests"
   methods_overview: "we used the qualitative database ATLAS.ti"
   keywords_source: "institutional complexity manage internal tensions triggered by environmental turbulence"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we used the qualitative database ATLAS.ti to"
+  findings_overview: "it is the structured interaction between collaboration and formalization that allows organizations to successfully blend logics"
 ---
 
 # Institutional Complexity in Turbulent Times: Formalization, Collaboration, and the Emergence of Blended Logics
@@ -52,6 +57,9 @@ This paper explores how organizations dealing with institutional complexity mana
 **Research Question**
 The paper asks how organizations originally guided by a central institutional logic change when environmental turbulence amplifies a previously peripheral competing logic. Empirically, it examines how Italian work integration social enterprises responded when the financial crisis made both social and commercial logics central to organizational survival.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Institutional complexity, environmental turbulence, internal tensions, social logic, commercial logic, collaboration, formalization, blended logics.
 - Process / phases: Collaboration without formalizing the peripheral logic; simultaneous collaboration and formalization; sequential formalization, formalized collaboration, and collaborative formalization.
@@ -61,6 +69,12 @@ The paper asks how organizations originally guided by a central institutional lo
 
 The process argument is that collaboration alone does not resolve institutional complexity because existing formalized practices pull interaction back toward the historically dominant logic. Simultaneous formalization and collaboration can also intensify conflict when carriers of each logic lack flexibility in applying new procedures. Delta succeeded because an initial period of separated formalization helped members understand which rules were essential and which could be flexibly negotiated; later collaboration then enabled formalized collaboration and collaborative formalization, producing practices that blended social and commercial logics.
 
+**Data & Measures**
+The longitudinal multiple-case corpus covers four Italian WISEs—Alpha, Beta, Gamma, and Delta—from mid-2008 through the end of 2012; 77 recorded and transcribed interviews (30–90 minutes) and 246 archival documents were gathered between early 2009 and late 2013. The authors built event histories, coded the corpus in ATLAS.ti through grounded-theory open and axial coding, and compared temporal patterns within and across cases. Collaboration was coded as sharing information, performing tasks conjointly, and participating in meetings; formalization was coded as practices embodied in rules and instructions that defined responsibilities and procedures.
+
+**Key Findings**
+Alpha and Beta used collaboration without adapting formalized procedures to the newly central logic; tensions subsided, but each reverted to its historically dominant logic. Gamma's simultaneous combination of formalization and collaboration intensified competition and conflict without making the logics compatible. Delta first formalized and separated the logics, then used formalized collaboration and collaborative formalization; this sequence minimized internal tensions and produced new practices that blended the social and commercial logics. Across cases, neither collaboration nor formalization alone explained integration; successful blending rested on their structured interaction over time.
+
 **Theoretical Contribution**
 The paper extends research on institutional complexity and hybrid organizations by showing how organizations can move among Besharov and Smith's logic-multiplicity types after an external shock. It contributes a process model in which the timing and sequencing of formalization and collaboration, not either mechanism alone, explains whether organizations relapse into a dominant logic, remain contested, or develop blended logics. It also connects institutional complexity to organizational design by showing how organizations can alternate differentiation and integration rather than search for one stable structural balance.
 
@@ -68,7 +82,7 @@ The paper extends research on institutional complexity and hybrid organizations 
 Managers of hybrid organizations should not assume that cross-functional collaboration will integrate competing logics by itself. The findings suggest that members first need clear, formalized understandings of their own logic-specific priorities and procedures before collaboration can support flexible exception handling. Practically, managers can use formal rules to clarify responsibilities and then use structured collaboration to revise those rules into integrated practices.
 
 **Limitations**
-The authors note that the study is based on four Italian WISEs, so the timing and sequencing model needs testing in other hybrid contexts and other combinations of logics. The comparative design also prevents strong conclusions about the microprocesses through which members decide when to shift from compartmentalization to integration. The paper further notes that reciprocal identification appears important but cannot be established conclusively from the available data.
+The processual model still needs testing with other combinations of logics, especially combinations involving different emotional registers. The comparative design also prevents strong conclusions about the microprocesses through which members decide when to shift from compartmentalization to integration. The paper further notes that reciprocal identification appears important but cannot be established conclusively from the available data.
 
 **Future Research**
 Future research could use event-history or ethnographic longitudinal designs to examine how much time organizations should allocate to logic compartmentalization and integration. Studies could investigate the signals through which members recognize that a strategy shift is needed, as well as the role of reciprocal identification in resolving tensions. The authors also call for larger-sample research on how perceived time horizons and pressure intensity shape whether organizations sequence or immediately combine formalization and collaboration.

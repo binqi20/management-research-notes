@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Shymko 2017 When Does Medici Hurt Da Vin
 text_path: "library/AMJ/vol-60-no-4/text/Shymko 2017 When Does Medici Hurt Da Vinci Mitigating the Signaling Effect of Extraneous Stakeholder Relationships in the Field of Cultural Production.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-mixed"
 keywords: ["corporate philanthropy", "corporate donors", "peer recognition", "institutional logics", "stakeholder relationships", "signaling", "Russian theaters", "cultural production"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "institutional logics and stakeholder literatures by bringing in a signaling perspective"
   methods_overview: "We employ a mixed method approach"
   keywords_source: "corporate donors—has a negative effect on peer recognition"
+  hypotheses_source: "donors—will negatively affect the judgment of the"
+  measures_overview: "Total number of corporate donors"
+  findings_overview: "donor decreases the incidence rate of obtaining peer"
 ---
 
 # When Does Medici Hurt Da Vinci? Mitigating the Signaling Effect of Extraneous Stakeholder Relationships in the Field of Cultural Production
@@ -52,6 +57,15 @@ Does corporate philanthropy have an indiscriminately positive effect on recipien
 **Research Question**
 Does corporate philanthropy help or harm recipient cultural organizations' peer recognition, and how can recipients mitigate the adverse signal created by relationships with corporate donors outside their field?
 
+**Hypotheses / Propositions**
+H1: The higher the number of corporate donors on which a theater relies, the lower its odds of obtaining peer recognition.
+
+H2: Institution-centric collaboration, relative to project-centric collaboration, accentuates the negative signaling effect of corporate donors on peer recognition.
+
+H3: Longer involvement with the same corporate donor accentuates the negative signaling effect of corporate donors on peer recognition.
+
+H4: More corporate donors from tainted industries such as mining and extraction accentuate the negative signaling effect of corporate donors on peer recognition.
+
 **Mechanism Process**
 - IV(s): Salience of relationships with extraneous stakeholders, operationalized as the number of corporate donors.
 - DV(s): Peer recognition, measured by Golden Mask nominations and nomination likelihood.
@@ -59,6 +73,12 @@ Does corporate philanthropy help or harm recipient cultural organizations' peer 
 - Moderators: Breadth of the relationship, depth of the relationship, and negative valence of the relationship, measured by institution-centric versus project-centric support, longevity of the longest corporate tie, and number of donors from mining and extraction industries.
 
 Corporate donors provide needed resources but are outside the cultural field and associated with commercial logics that peers view as inconsistent with artistic authenticity. The number of donors makes the relationship with extraneous stakeholders more salient, which signals distance from the dominant logic and lowers peer recognition. The negative signal is stronger when the relationship is broader, deeper, or linked to more tainted industries, and weaker when theaters keep donor ties project-specific, shorter, and less negatively valenced.
+
+**Data & Measures**
+The qualitative exploration used direct observation, field-related publications, seven in-depth semistructured interviews and follow-up conversations, and archival records of Golden Mask nominations, awards, and jury composition. The quantitative analysis merged the Ministry of Culture's official theater database with theater websites, annual CSR reports or direct theater contacts, and nomination records. The 2004–2011 panel covers 449 theaters and 3,573 theater-year observations; H1 count models use 2,987 observations, and moderation models use 1,105, except depth models use 1,035 because of missing depth observations. Peer recognition is measured as the annual Golden Mask nomination count and as a binary nomination indicator. Salience is the number of corporate donors; breadth distinguishes project-centric from institution-centric support; depth is the longest donor tie; and valence is the number of donors from mining and extraction industries. Two-stage estimation uses regional profitable-firm share and theater density as instruments. The paper reports a two-step random-intercept negative binomial model and panel mixed-effects Poisson regressions with robust errors for the count outcome, plus random-intercept logit robustness models for nomination likelihood.
+
+**Key Findings**
+H1 was supported: more corporate donors reduced peer recognition, and one additional donor lowered the incidence rate of obtaining peer recognition by more than 10% in a set period. H2, H3, and H4 were supported in their hypothesis-specific count models: institution-centric breadth, longer donor ties, and more donors from mining and extraction industries each intensified the negative effect of donor salience. In the full count model, the breadth-by-salience and depth-by-salience interactions remained significant, but the valence-by-salience interaction did not. The random-intercept logit results generally converged with the count results, although at lower significance levels.
 
 **Theoretical Contribution**
 The paper connects institutional logics, stakeholder theory, and signaling theory by showing that stakeholder relationships can function as signals of adherence to or deviation from a field's dominant logic. It contributes to stakeholder theory by distinguishing stakeholders inside and outside an organizational field and by specifying breadth, depth, and valence as relationship dimensions that shape peer evaluation. It also challenges the assumption that corporate philanthropy is indiscriminately beneficial for recipients.

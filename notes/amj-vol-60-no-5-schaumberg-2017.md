@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Schaumberg 2017 Self-reliance A Gender P
 text_path: "library/AMJ/vol-60-no-5/text/Schaumberg 2017 Self-reliance A Gender Perspective on its Relationship to Communality and Leadership Evaluations.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["self-reliance", "gender stereotypes", "leadership evaluations", "communality", "expectancy violation theory", "role congruity theory"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "expectancy violation theory"
   methods_overview: "between-subjects ANOVA"
   keywords_source: "self-reliance and leadership evaluations"
+  hypotheses_source: "We posit a female advantage in the relationship between self-reliance and leadership"
+  measures_overview: "Self-reliance. We measured self-reliance with the"
+  findings_overview: "We find that self-reliant female leaders are evaluated as better"
 ---
 
 # Self-reliance: A Gender Perspective on its Relationship to Communality and Leadership Evaluations
@@ -51,6 +56,11 @@ We posit a female advantage in the relationship between self-reliance and leader
 **Research Question**
 The paper asks whether self-reliance, as a discrete agentic trait, is more positively associated with leadership evaluations for women than for men. It also asks whether perceived communality explains this female advantage relative to self-reliant male leaders and to leaders described as dominant or only generally positive.
 
+**Hypotheses / Propositions**
+H1: Self-reliant women are seen as more communal than self-reliant men.
+H2: Self-reliance is more positively associated with leadership evaluations for women than for men.
+H3: Perceived communality mediates gender differences in the relationship between self-reliance and leadership evaluations.
+
 **Mechanism Process**
 - IV(s): Leader gender; displayed agentic trait, including self-reliance, dominance, or no discrete agentic trait; self-reliance in the field survey; explicit communality information in Study 3.
 - DV(s): Leadership evaluations, including 360-degree leadership ratings, voting or hiring intentions, perceived leadership ability, and investment or valuation judgments.
@@ -58,6 +68,22 @@ The paper asks whether self-reliance, as a discrete agentic trait, is more posit
 - Moderators: Leader gender, agentic-trait condition, and explicit communality information.
 
 The mechanism is grounded in expectancy violation theory. Self-reliance signals agency for both men and women, but the authors argue that observers assimilate women's self-reliance to feminine stereotypes of communality rather than treating it as evidence of low communality. As a result, self-reliant women are seen as similarly competent but more communal than self-reliant men, which improves their leadership evaluations.
+
+**Data & Measures**
+Study 1 uses first-year MBA students at a U.S. business school and archived multi-rater leadership evaluations; Table 2 reports N = 234. Self-reliance is measured with the horizontal individualism scale, and leadership evaluations combine 16 leadership-behavior items with six influence-behavior items; hierarchical linear regression tests the gender-by-self-reliance interaction.
+
+Study 2 analyzes 123 U.S. MTurk participants after exclusions in a 2 × 2 experiment manipulating a state politician's gender and agentic trait (self-reliance versus dominance). Four leadership-evaluation items, three-item communality and competence measures, and manipulation checks are analyzed with between-subjects ANOVA and bootstrapped conditional indirect effects.
+
+Study 3 analyzes 521 MTurk participants after exclusions and listwise deletion in a 2 × 3 × 2 experiment manipulating a financial-services CEO's gender, agentic trait (self-reliance, dominance, or neutral), and explicit communality information. Four leadership-evaluation items, competence, perceived communality, and manipulation checks are analyzed with between-subjects ANOVA.
+
+Study 4 analyzes 533 MTurk participants after exclusions and listwise deletion in a 2 × 3 experiment using real technology executives and manipulating agentic trait. Leadership evaluations combine standardized hiring, investment, and stock-valuation judgments; communality, competence, and leader and company familiarity are also measured, with between-subjects ANOVA and bootstrapped mediation analyses.
+
+**Key Findings**
+Study 1 provides initial support for H2: self-reliance is positively related to leadership evaluations for women but unrelated to them for men. In Study 2, self-reliant female politicians receive higher leadership evaluations and communality ratings than self-reliant male politicians, supporting H1-H3; dominant politicians show no gender differences on those outcomes.
+
+In Study 3, self-reliant female CEOs are evaluated more favorably than self-reliant male CEOs when no explicit communality information is supplied; the difference disappears when communality is made explicit because the self-reliant male CEO's evaluation improves, supporting the proposed communality process. Study 4 likewise finds a self-reliant female advantage and a significant indirect effect through communality (95% CI [.03, .27]), while competence does not differ significantly.
+
+The combined analysis of Studies 2-4 finds a self-reliant female-versus-male leadership-evaluation difference of 0.49 standardized units (95% CI [0.26, 0.71]); across comparison conditions, self-reliance benefits female leaders' evaluations but undermines male leaders' evaluations.
 
 **Theoretical Contribution**
 The paper challenges the undifferentiated treatment of agency in role congruity accounts of gender and leadership evaluation. It shows that a desirable masculine trait can operate as a positive expectancy violation for female leaders, so gender stereotypes can sometimes buffer rather than penalize women's displays of agency. It also brings self-reliance into trait theories of leadership by showing that its evaluative meaning depends on both leader gender and perceived communality.

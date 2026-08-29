@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Waldman 2017 A Neurological and Ideologi
 text_path: "library/AMJ/vol-60-no-4/text/Waldman 2017 A Neurological and Ideological Perspective of Ethical Leadership.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["ethical leadership", "moral self", "default mode network", "quantitative electroencephalogram", "ethical ideology", "relativism", "idealism", "organizational cognitive neuroscience"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Based on ethical position theory"
   methods_overview: "qEEG provide a multi-method procedure"
   keywords_source: "default mode network in the prediction of ethical leadership"
+  hypotheses_source: "Hypothesis 3. Leader relativism is negatively"
+  measures_overview: "high-beta coherence values of 15 right hemisphere"
+  findings_overview: "Hypothesis 1 was supported"
 ---
 
 # A Neurological and Ideological Perspective of Ethical Leadership
@@ -53,6 +58,13 @@ A growing body of literature has considered the outcomes of ethical leadership i
 **Research Question**
 The paper asks whether ethical leadership can be predicted from leaders' neurological activity in the right hemisphere of the default mode network and from their ethical ideology. More specifically, it examines whether rcDMN predicts ethical leadership directly and indirectly through relativism, and whether idealism conditions the relativism-ethical leadership relationship.
 
+**Hypotheses / Propositions**
+- H1: Higher rcDMN connectivity is positively associated with ethical leadership.
+- H2: Higher rcDMN connectivity is negatively associated with leader relativism.
+- H3: Leader relativism is negatively associated with ethical leadership.
+- H4: Idealism moderates the negative relativism-ethical leadership relationship, which is stronger under low idealism; ethical leadership is highest when both relativism and idealism are low.
+- H5: Idealism moderates the indirect rcDMN-ethical leadership relationship through relativism, such that the indirect relationship is more positive under low rather than high idealism.
+
 **Mechanism Process**
 - IV(s): Right-hemisphere default mode network connectivity measured through high-beta qEEG coherence.
 - DV(s): Ethical leadership, rated by subordinates or peers using Brown et al.'s 10-item scale.
@@ -60,6 +72,12 @@ The paper asks whether ethical leadership can be predicted from leaders' neurolo
 - Moderators: Leader idealism, which moderates the relativism-ethical leadership path and the indirect rcDMN effect.
 
 The mechanism is that higher rcDMN is theorized to support moral self-regulation through self-projection, social awareness, watchfulness, perspective-taking, and emotional regulation. These capacities should make leaders less relativistic and more consistent in applying ethical principles. The empirical results support a direct positive association between rcDMN and ethical leadership, a negative association between rcDMN and relativism, and a moderated indirect path in which low idealism makes the negative relativism-ethical leadership link stronger.
+
+**Data & Measures**
+The sample comprises 104 leaders (27 military officers, 29 executive MBA participants, and 48 private-sector managers). The rcDMN index aggregates high-beta qEEG coherence across 15 right-hemisphere network connections after an eyes-closed resting EEG assessment. Leaders self-reported relativism and idealism using 10 items per construct on 9-point scales; two to five subordinates or peers rated each leader's ethical leadership using a 10-item, 5-point scale. Multiple regressions test the direct and interaction hypotheses, and the conditional indirect effects use 10,000 bootstrap samples.
+
+**Key Findings**
+H1 was supported: rcDMN positively predicted ethical leadership (b = .31, p < .01). H2 was supported: rcDMN negatively predicted relativism (b = -.19, p < .05). H3 was not supported (b = -.10, p > .10). H4 was supported: the relativism-by-idealism interaction was significant (b = .23, p < .05), and relativism was negatively related to ethical leadership under low idealism. H5 was supported: the indirect effect through relativism was significant under low idealism (b = .005, p < .05, 95% CI [.001, .011]) but not high idealism (b = -.001, p > .10, 95% CI [-.006, .001]).
 
 **Theoretical Contribution**
 The paper extends ethical leadership research by shifting attention from follower outcomes to personal antecedents of ethical leadership. It contributes an organizational cognitive neuroscience account of the moral self by linking right-hemisphere default mode network coherence to ethical leadership and ethical ideology. It also extends ethics position theory by showing that relativism and idealism jointly predict ethical leadership, with exceptionalism--low relativism and low idealism--associated with the highest ethical-leadership ratings.
@@ -71,7 +89,7 @@ The authors suggest that organizations may eventually use neurological signature
 The study is cross-sectional, which limits causal interpretation even though the model treats ethical ideology and intrinsic brain circuitry as antecedents. The sample is relatively limited and drawn from U.S. business and military contexts, so cultural and occupational context may shape both neural patterns and follower perceptions of ethical leadership. The paper also theorizes mediating processes such as social awareness and perspective taking but does not directly measure all of those mechanisms.
 
 **Future Research**
-Future research should test the model longitudinally and measure mediating mechanisms such as social awareness, perspective taking, moral personality, moral conation, and moral identity more directly. Researchers should examine whether the DMN predicts ethical behavior beyond ethical leadership, such as workplace deviance, and whether cultural contexts alter the effects of relativism and idealism. The authors also call for work on the interplay between leader characteristics, occupational background, context, and neural development.
+Future research should test the model longitudinally and measure mediating mechanisms such as social awareness, perspective taking, moral personality, moral conation, and moral identity more directly. Researchers should examine whether the DMN predicts ethical behavior beyond ethical leadership, such as workplace deviance, and whether cultural contexts alter the effects of relativism and idealism. The authors also call for work on the interplay between leader characteristics, occupational background, context, and neural qualities.
 
 **APA 7th Citation**
 Waldman, D. A., Wang, D., Hannah, S. T., & Balthazard, P. A. (2017). A neurological and ideological perspective of ethical leadership. *Academy of Management Journal*, 60(4), 1285-1306. https://doi.org/10.5465/amj.2014.0644

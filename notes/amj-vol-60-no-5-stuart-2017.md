@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Stuart 2017 Shady Characters The Implica
 text_path: "library/AMJ/vol-60-no-5/text/Stuart 2017 Shady Characters The Implications of Illicit Organizational Roles for Resilient Team Performance.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["illicit roles", "resilient team performance", "enforcer", "professional hockey teams", "team experience", "organizational roles", "organizational misconduct"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Role theory distinguishes between roles"
   methods_overview: "ordinary least squares (OLS) regression"
   keywords_source: "illicit roles and explore their effects on resilient team performance"
+  hypotheses_source: "Hypothesis 3. The decline in team performance"
+  measures_overview: "the number of points earned by a team in the focal"
+  findings_overview: "also found that efforts to replace an enforcer slow the"
 ---
 
 # Shady Characters: The Implications of Illicit Organizational Roles for Resilient Team Performance
@@ -52,6 +57,11 @@ In this paper we theorize about illicit roles and explore their effects on resil
 **Research Question**
 The paper asks how illicit organizational roles affect resilient team performance when their occupants depart. It specifically examines whether losing an NHL enforcer disrupts team performance more than losing formal role occupants, whether replacement attempts slow recovery, and whether the enforcer's team experience magnifies the disruption.
 
+**Hypotheses / Propositions**
+- H1: Team performance is more disrupted after the departure of an illicit role occupant than after the exit of a formal role occupant.
+- H2: Following the exit of an illicit role occupant, teams that replace the occupant experience slower performance recovery than teams that do not replace the occupant.
+- H3: The greater the illicit role occupant's experience with the team, the more disruptive the occupant's exit.
+
 **Mechanism Process**
 - IV(s): Injury-related departure of an illicit role occupant, operationalized as the injury of an NHL enforcer; replacement attempts after an enforcer injury, proxied by team penalty concentration; enforcer team experience.
 - DV(s): Team performance and performance recovery, measured by team points per game in pre- and post-injury windows.
@@ -59,6 +69,12 @@ The paper asks how illicit organizational roles affect resilient team performanc
 - Moderators: Team experience of the enforcer; replacement attempts after the enforcer's injury.
 
 The mechanism is that illicit role occupants specialize in work that cannot be formally codified, openly trained, or transparently replaced because the activities are forbidden but believed to support organizational goals. When an enforcer leaves, the team loses a role occupant whose effectiveness depends on trust, local social context, and context-specific knowledge. Attempts to substitute another player into that role slow recovery because replacements lack the same credibility and embedded experience, while longer team tenure makes the departed enforcer more locally valuable and therefore more disruptive to lose.
+
+**Data & Measures**
+The study uses game-, player-, and team-level data from the 2005–2006 and 2006–2007 NHL seasons. Sources were NHL.com and TSN injury records; hockeyfights.com and Canadian Newsstand archives helped identify enforcers. The 1,473 injury events yield 12,493 game observations for H1; the extended recovery window yields 15,067 observations for H2; and the enforcer-only H3 analysis uses 334 game observations from 39 injuries. Team performance is the points earned in the focal game. Enforcer status is an indicator based on fighting frequency and archive labels; replacement is the Gini coefficient of team penalty-minute concentration after an enforcer injury; and team experience is the player's cumulative games with the team. OLS regressions use injury and opponent fixed effects with robust standard errors.
+
+**Key Findings**
+H1 received mixed support. An enforcer injury reduced team performance by 11.3% relative to other player injuries; it was 11.2% more disruptive than a captain injury (p = .087) and 12.9% more disruptive than a center injury (p = .028), but did not differ significantly from a goalie injury. H2 was supported: greater post-injury penalty concentration, indicating replacement, slowed performance recovery (three-way interaction b = −0.652, p < .01). H3 was supported: the enforcer-injury effect became more negative as team experience increased (b = −0.253, p < .05), whereas league experience did not moderate the effect.
 
 **Theoretical Contribution**
 The paper contributes to role theory by theorizing illicit organizational roles: roles that specialize in prohibited activity and operate outside formal organizational structures. It extends research on teams by showing that non-core, informal, and illicit roles can affect resilient performance even though they are marginal to formal workflow. It also contributes to organizational misconduct research by showing that teams may organize prohibited activity through a role-based allocation of labor.

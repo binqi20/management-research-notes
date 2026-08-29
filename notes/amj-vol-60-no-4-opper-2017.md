@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Opper 2017 Risk Aversion and Guanxi Acti
 text_path: "library/AMJ/vol-60-no-4/text/Opper 2017 Risk Aversion and Guanxi Activities A Behavioral Analysis of CEOs in China.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["risk aversion", "guanxi activities", "CEO preferences", "behavioral strategy", "investment theory", "China"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "suggests an investment theory"
   methods_overview: "combine incentivized behavioral tasks using multiple price list formats for risk elicitation"
   keywords_source: "CEO preferences, specifically risk aversion"
+  hypotheses_source: "Hypothesis 1b. CEO risk aversion is negatively"
+  measures_overview: "as a measure of risk aversion (risk). Values"
+  findings_overview: "higher risk aversion is associated with weaker"
 ---
 
 # Risk Aversion and Guanxi Activities: A Behavioral Analysis of CEOs in China
@@ -52,19 +57,33 @@ In China, the strategic use of personal relationships is pervasive in transactio
 **Research Question**
 The paper asks whether CEO risk aversion helps explain between-firm differences in strategic reliance on guanxi activities after organizational resources and institutional conditions are considered. It also asks whether firm age and market orientation condition this association, and whether risk-averse CEOs obtain stronger financial returns when they do use guanxi.
 
+**Hypotheses / Propositions**
+- H1a: CEO risk aversion is negatively associated with guanxi activities with government officials.
+- H1b: CEO risk aversion is negatively associated with guanxi activities with other business-firm leaders.
+- H1c: The negative association between CEO risk aversion and guanxi activities is stronger for ties with business-firm leaders than for ties with government officials.
+- H2: The negative relationship between CEO risk aversion and both forms of guanxi is weaker for younger than for more established firms.
+- H3: The negative relationship between CEO risk aversion and both forms of guanxi is weaker for firms with a local than a nonlocal market orientation.
+- H4: The positive relationship between both forms of guanxi and firm performance is stronger for more risk-averse than less risk-averse CEOs.
+
 **Mechanism Process**
 - IV(s): CEO risk aversion, elicited through incentivized behavioral tasks.
 - DV(s): Guanxi activities with government officials; guanxi activities with other business firm leaders; firm performance measured by ROA and sales growth.
 - Mediators: No formal mediator is tested; guanxi activities serve as the strategic behavior linking CEO risk preferences to some performance models.
-- Moderators: Firm age, local versus nonlocal market orientation, and CEO risk-aversion status in the guanxi-performance relationship.
+- Moderators: Firm age and local versus nonlocal market orientation moderate the risk-aversion-to-guanxi relationships; CEO risk-aversion status moderates the guanxi-to-performance relationships.
 
 The mechanism is an investment logic of relational strategy. Guanxi activities require costly investments of CEO time and firm resources, while future returns are uncertain because ties may fail, political or market conditions may change, and partners may move or defect. More risk-averse CEOs are therefore less inclined to invest heavily in guanxi at the margin, especially for established firms and nonlocal government ties where risk-return tradeoffs are more salient. When risk-averse CEOs do use guanxi, the paper argues that their caution may lead them to select and manage ties more carefully, which is associated with stronger ROA effects.
+
+**Data & Measures**
+The focal data come from the 2009 CEO survey of private manufacturers in seven municipalities of the extended Yangzi Delta region. Of 350 CEOs randomly allocated to the risk-aversion task, five invalid questionnaires were excluded, leaving 345 valid observations. Government and business guanxi are separate composite averages of three survey items each, rated from 1 to 7. CEO risk aversion is the switching decision from a safer to a riskier lottery in a standard price-list task; later switching indicates greater risk aversion, and never switching is coded 11. Firm age is years since private-firm registration, and market orientation averages the shares of local supplies and local sales. Performance is the three-year average ROA and corresponding sales growth. The paper estimates associational OLS models, subgroup regressions, and risk-aversion-by-guanxi interaction models; 2012 data provide robustness checks.
+
+**Key Findings**
+H1a and H1b are supported: greater CEO risk aversion is negatively associated with both government and business guanxi. H1c receives preliminary, weak support because the negative association is stronger for business guanxi. H2 is supported: risk aversion is unrelated to guanxi among younger firms but negatively associated with both forms among established firms. H3 is only partly supported: local versus nonlocal market orientation conditions government guanxi, but the negative relationship with business guanxi appears in both groups. H4 receives partial support: neither form of guanxi has a significant direct relationship with performance, but guanxi used by risk-averse CEOs is positively associated with ROA—significantly for government guanxi and at the 10% level for business guanxi—not with sales growth.
 
 **Theoretical Contribution**
 The paper extends guanxi research by shifting attention from organizational and institutional antecedents to CEO dispositional preferences. It develops a behaviorally grounded investment theory of guanxi strategy, arguing that personal risk preferences shape relational strategic choices and their performance consequences. It also contributes to behavioral strategy and upper-echelons research by using incentivized risk-elicitation tasks with a stratified random sample of CEOs rather than relying only on demographic proxies or convenience samples.
 
 **Practical Implication**
-Executives should not treat guanxi investment as an unavoidable cultural requirement for doing business in China. The findings suggest that guanxi's financial value is limited and contingent on behavior-strategy fit, especially the CEO's risk preferences and the firm's age and market orientation. For policymakers, the weak direct performance effects of guanxi support efforts to separate business and government spheres as markets become more institutionalized.
+Executives should not treat guanxi investment as an unavoidable cultural requirement for doing business in China. The findings suggest that guanxi's financial value is limited and depends on behavior-strategy fit between CEO risk preferences and the firm's guanxi use; firm age and market orientation instead condition how strongly risk aversion predicts guanxi activity. For policymakers, the weak direct performance effects of guanxi support efforts to separate business and government spheres as markets become more institutionalized.
 
 **Limitations**
 The authors caution that the sample is relatively homogeneous: private manufacturing firms in one of China's most developed and liberalized regions, with many owner-managed and medium-scale firms. This setting may make CEO preferences especially visible in firm strategy and limits generalization to other ownership forms, regions, or institutional environments. The analysis is association-based, and the authors note that causal inference from the sample requires caution despite robustness checks and intertemporal stability.

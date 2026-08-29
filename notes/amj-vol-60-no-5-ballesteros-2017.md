@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Ballesteros 2017 Masters of Disasters An
 text_path: "library/AMJ/vol-60-no-5/text/Ballesteros 2017 Masters of Disasters An Empirical Analysis of How Societies Benefit from Corporate Disaster Aid.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["corporate disaster aid", "disaster relief and recovery", "dynamic capabilities", "synthetic control method", "social welfare"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "dynamic capabilities literature"
   methods_overview: "synthetic control method"
   keywords_source: "disaster relief and recovery"
+  hypotheses_source: "relief will arrive faster and nations will recover more"
+  measures_overview: "a disaster as a proxy for the speed of aid provision"
+  findings_overview: "HDI growth rate for such nations is 92% higher than"
 ---
 
 # Masters of Disasters? An Empirical Analysis of How Societies Benefit from Corporate Disaster Aid
@@ -53,6 +58,12 @@ Corporations are increasingly influential within societies worldwide, while the 
 **Research Question**
 The paper asks whether societies benefit when firms assume disaster-relief responsibilities that have traditionally fallen to governments, aid agencies, and other organizations. More specifically, it tests whether disaster-affected nations receive aid faster and recover more fully when locally active firms account for a larger share of disaster aid, especially when that giving leverages firm-specific routines and resources.
 
+**Hypotheses / Propositions**
+H1: Aid will be provided faster when locally active corporations account for a greater share of total disaster aid.
+H2: Long-term recovery will be greater when locally active corporations account for a greater share of total disaster aid.
+H3: Aid from locally active corporations will have a greater effect on aid speed when giving leverages firm-specific routines and resources.
+H4: Aid from locally active corporations will have a greater effect on recovery when giving leverages firm-specific routines and resources.
+
 **Mechanism Process**
 - IV(s): Share of disaster aid from locally active firms; relatedness of corporate disaster giving to firms' core business routines and resources.
 - DV(s): Speed of aid provision; national disaster recovery, measured through Human Development Index growth after disasters.
@@ -60,6 +71,12 @@ The paper asks whether societies benefit when firms assume disaster-relief respo
 - Moderators: Degree to which locally active firms' disaster giving leverages firm-specific routines and resources.
 
 The mechanism is that locally active firms possess dynamic capabilities that help them sense areas of critical need after disasters, seize response opportunities, and reconfigure routines and resources quickly. Because these firms have local operations, market interests, supply capabilities, and decision routines tied to the affected country, their aid can arrive faster and address recovery-relevant needs more effectively than aid from traditional providers alone. The paper does not claim that corporate aid replaces governments or aid agencies; it argues that corporate involvement produces stronger societal benefits when firms play a large collective role and when their donations draw on core competencies.
+
+**Data & Measures**
+The study combines sudden-natural-disaster records from EM-DAT with donation reports retrieved through Factiva and LexisNexis, local-affiliate status from the LexisNexis Corporate Affiliations database, and disaster-loss data from Swiss Re. Aid speed is the portion of total disaster aid provided during the first four weeks after a disaster; recovery is the annual growth rate of the Human Development Index (HDI). The share of locally active corporate aid is aid from firms located in or having a subsidiary in the affected country divided by all aid received during the following year. Related giving is the value of in-kind aid aligned with a firm's four-digit Standard Industrial Classification code divided by all aid from locally active firms. Recovery predictors come from the World Development Indicators (WDI) database. The quasi-experimental synthetic control method (SCM), implemented with a Stata algorithm, compares treated nations with weighted synthetic controls and uses placebo analyses to generate probability values.
+
+**Key Findings**
+H1 was supported conditionally: no significant aid-speed difference appeared at a 7.7% corporate-aid share, but treated nations received 121% more first-month aid at 24.5% and more than twice as much by week four above 44.4%. H2 was supported: recovery effects were insignificant at 7.7%, while ten-year HDI growth was 92% higher at a corporate-aid share above 24.5% and 145.5% higher at 44.4%. H3 received strong support: greater relatedness significantly accelerated aid when locally active firms supplied at least 24.5% of total aid, reaching 170% and 260% faster in reported treatment combinations. H4 received strong support: related giving had a consistently positive, significant influence on HDI growth, with the highest corporate-aid and relatedness levels associated with almost 190% greater ten-year annual HDI growth than comparators.
 
 **Theoretical Contribution**
 The paper contributes to CSR research by providing quasi-experimental evidence on societal outcomes rather than inferring social benefits from firms' CSR participation. It extends dynamic capabilities theory from firm-level performance to organization-form differences in social welfare production, arguing that capabilities associated with locally active firms can make corporate disaster aid socially valuable. It also qualifies the win-win CSR argument by showing that benefits are context-specific, collective, and stronger when corporate aid leverages firm-specific competencies.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Ou 2017 When Can Humble Top Executives R
 text_path: "library/AMJ/vol-60-no-5/text/Ou 2017 When Can Humble Top Executives Retain Middle Managers The Moderating Role of Top Management Team Faultlines.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["middle managers", "executive humility", "top management team faultlines", "job satisfaction", "voluntary turnover", "multilevel inquiry"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "integrating a micro-level leadership process"
   methods_overview: "We used hierarchical linear modeling (HLM)"
   keywords_source: "multilevel inquiry into contextual influences on voluntary turnover"
+  hypotheses_source: "Hypothesis 1. TMT faultlines moderate the"
+  measures_overview: "product of faultline strength and distance."
+  findings_overview: "humility no longer sustains MMs’ job satisfaction,"
 ---
 
 # When Can Humble Top Executives Retain Middle Managers? The Moderating Role of Top Management Team Faultlines
@@ -53,6 +58,10 @@ Top management in organizations must effectively retain middle managers (MMs)—
 **Research Question**
 The paper asks when humble top executives can retain middle managers, given that top executives are both immediate leaders of MMs and members of the TMT that shapes the broader organizational context. It specifically examines whether TMT faultlines weaken the positive relationship between top executive humility and MM job satisfaction and weaken the negative relationship between MM job satisfaction and voluntary turnover.
 
+**Hypotheses / Propositions**
+- H1: TMT faultlines moderate the relationship between executive humility and MM job satisfaction, such that the positive relationship diminishes as faultlines change from low to high.
+- H2: TMT faultlines moderate the relationship between MM job satisfaction and voluntary turnover, such that the negative relationship diminishes as faultlines change from low to high.
+
 **Mechanism Process**
 - IV(s): Top executive humility.
 - DV(s): Middle manager voluntary turnover.
@@ -60,6 +69,12 @@ The paper asks when humble top executives can retain middle managers, given that
 - Moderators: TMT faultlines moderate the humility-to-job-satisfaction path and the job-satisfaction-to-voluntary-turnover path.
 
 The mechanism is cross-level. Humble top executives should increase MM job satisfaction by valuing subordinates, soliciting their input, and supporting needs for competence, autonomy, and relatedness. TMT faultlines create a demanding context marked by coordination problems, subgroup divisions, and uncertainty, which diverts MMs' attention from humble leader behavior and can make humility appear less useful or less credible. Faultlines also reduce the retention power of job satisfaction because MMs attend to TMT conflict and future career uncertainty rather than relying on current job satisfaction as a reason to stay.
+
+**Data & Measures**
+The multisource, three-wave sample comprised 43 private-company TMTs, 313 top executives, and 502 middle managers in China. At Time 1, middle managers rated top executive humility with a 19-item measure; at Time 2, they reported job satisfaction with a three-item measure; at Time 3, HR managers reported voluntary turnover, which was coded as a binary indicator from the reported reasons for leaving. TMT faultlines were measured as the product of faultline strength and distance across six demographic attributes. The authors used HLM for job satisfaction and HGLM for voluntary turnover.
+
+**Key Findings**
+H1 was supported: the interaction of top executive humility and TMT faultlines was negative (γ = −0.10, p < .01), and humility was positively related to job satisfaction when faultlines were low but not when they were high. H2 was supported: the interaction of job satisfaction and TMT faultlines was positive (γ = 0.71, p < .01), and job satisfaction was negatively related to voluntary turnover when faultlines were low but not when they were high.
 
 **Theoretical Contribution**
 The paper develops a multilevel theory of middle manager voluntary turnover by integrating micro-level leader humility and job satisfaction mechanisms with macro-level TMT faultline context. It identifies TMT faultlines as a boundary condition for leader humility effects, showing that humility does not always translate into subordinate satisfaction and retention. It also extends the TMT faultline literature by showing that faultlines can spill over beyond the top team and shape lower-level managers' responses to their leaders and jobs.

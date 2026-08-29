@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Jeong 2017 Glass Breaking, Strategy Maki
 text_path: "library/AMJ/vol-60-no-4/text/Jeong 2017 Glass Breaking, Strategy Making, and Value Creating Meta-Analytic Outcomes of Women as CEOs and TMT members.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["female representation in the upper echelons", "firm performance", "strategic risk-taking", "decision latitude", "role incongruity theory", "long-term financial performance", "short-term stock market returns"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "upper echelons perspective"
   methods_overview: "random effects meta-regression"
   keywords_source: "female representation in the upper echelons"
+  hypotheses_source: "Hypothesis 7a. The appointment of females to"
+  measures_overview: "take the value of 1 for a female CEO and 0 for a male"
+  findings_overview: "Overall, we find support for Hypothesis 1a."
 ---
 
 # Glass Breaking, Strategy Making, and Value Creating: Meta-Analytic Outcomes of Women as CEOs and TMT members
@@ -51,6 +56,18 @@ We conduct a comprehensive synthesis of the research on how female representatio
 **Research Question**
 The paper asks what firm-performance consequences follow from female representation in upper echelons roles, specifically female CEOs and female TMT members. It also asks why those consequences occur and under what country-level and organizational conditions they become stronger or weaker.
 
+**Hypotheses / Propositions**
+- H1a: Female presence in CEO positions is positively related to long-term financial performance.
+- H1b: Strategic risk-taking mediates the beneficial effect of female CEO presence on long-term financial performance.
+- H2a: Female membership in TMTs is positively related to long-term financial performance.
+- H2b: Strategic risk-taking mediates the beneficial effect of female TMT membership on long-term financial performance.
+- H3: Country-level managerial discretion accentuates the negative relationships of female CEO presence and female TMT membership with strategic risk-taking.
+- H4: Country-level managerial discretion accentuates the positive relationships of female CEO presence and female TMT membership with long-term financial performance.
+- H5: Autonomous organizational structure accentuates the negative relationships of female CEO presence and female TMT membership with strategic risk-taking.
+- H6: Autonomous organizational structure accentuates the positive relationships of female CEO presence and female TMT membership with long-term financial performance.
+- H7a: Female appointments to CEO positions lead to negative short-term stock market returns.
+- H7b: Female appointments to TMTs lead to negative short-term stock market returns.
+
 **Mechanism Process**
 - IV(s): Female presence in CEO positions and female membership in TMTs.
 - DV(s): Long-term financial performance and short-term stock market returns.
@@ -58,6 +75,18 @@ The paper asks what firm-performance consequences follow from female representat
 - Moderators: Country-level managerial discretion and autonomous organizational structure.
 
 The mechanism is that female CEOs and female TMT members influence strategy making through unique resource portfolios and TMT decision-process changes that reduce strategic risk-taking. Reduced risk-taking helps explain why female representation is associated with stronger long-term financial performance. At the same time, role incongruity perceptions among investors produce negative short-term market reactions to female CEO appointments, even though the longer-term financial association is positive.
+
+**Data & Measures**
+The meta-analysis uses 146 primary studies (90 published and 56 unpublished) covering 33 countries and primary data collected from 1983 through 2014; eligible studies reported computable effect sizes and used archival sources for dependent variables. Female CEO presence was coded 1 for a female CEO and 0 for a male CEO. Female TMT membership was measured through dichotomous presence, proportion, or heterogeneity indicators. Strategic risk-taking was operationalized as financial leverage (debt relative to assets), capital expenditures relative to assets, and stock-return volatility. Long-term financial performance comprised accounting-based measures (ROA, ROE, and ROS) and market-based measures (Tobin’s Q, market-to-book ratio, and total shareholder returns); short-term performance was cumulative abnormal returns over event windows averaging 7.6 days. Country-level managerial discretion combined individualism, uncertainty tolerance, legal orientation, ownership dispersion, and labor flexibility; autonomous organizational structure was coded 1 for small private-firm samples and 0 otherwise. The authors estimated random-effects correlations, random-effects meta-regressions for moderators, and meta-analytic structural path models for mediation.
+
+**Key Findings**
+- H1a was supported: female CEO presence had a small positive association with long-term financial performance (mean r = .007, 95% CI [.001, .013]), driven by market-based rather than accounting-based measures.
+- H2a was supported: female TMT membership was positively associated with long-term financial performance (mean r = .028, 95% CI [.019, .037]), for both accounting- and market-based measures.
+- H1b was generally supported: female CEO presence was negatively associated with strategic risk-taking (mean r = −.025), and the indirect effects through leverage and capital expenditures were significant, but the indirect effect through stock volatility was not; the direct performance path was nonsignificant, indicating full mediation.
+- H2b was supported: female TMT membership was negatively associated with strategic risk-taking (mean r = −.028), all three indirect paths were significant, and the positive direct performance path remained significant, indicating partial mediation.
+- H3 received partial support: country-level managerial discretion strengthened the negative TMT–risk-taking relationship (B = −.055) but not the CEO–risk-taking relationship. H4 received mixed support: discretion strengthened the positive CEO–performance relationship (B = .045) but not the TMT–performance relationship.
+- H5 received mixed support: autonomous organizational structure strengthened the negative TMT–risk-taking relationship (B = −.077) but not the CEO–risk-taking relationship. H6 was supported for both CEO and TMT long-term performance relationships (B = .038 and .058, respectively).
+- H7a was supported: female CEO appointments were negatively associated with short-term stock market returns (mean r = −.126, 95% CI [−.241, −.011]). H7b was not supported: the corresponding TMT relationship was nonsignificant (mean r = −.010, 95% CI [−.142, .122]).
 
 **Theoretical Contribution**
 The paper integrates upper echelons theory, gender differences in strategic risk-taking, team information elaboration, managerial discretion, and role incongruity theory into one meta-analytic framework. It clarifies that the accumulated evidence does not support a long-term financial performance penalty for women in CEO or TMT roles; instead, the main financial effects are small and positive. It also separates long-term value creation from short-term investor reactions, showing that stakeholder perceptions and realized firm outcomes can diverge.

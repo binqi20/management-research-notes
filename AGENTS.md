@@ -142,26 +142,29 @@ audit**:
 
 **Current main-branch audit state (2026-08-29):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 25 upgraded 31 notes (AMJ vol-61-no-1 + vol-60-no-6, all v2
-augmentations) to v3. Its final audit is **279/279 prose-field verdicts
-SUPPORTED**, with 0 `PARTIAL`, 0 `UNSUPPORTED`, and 0 `CONTRADICTED`. Round 1
-returned 272/279 `SUPPORTED`, 6 `PARTIAL`, and 1 `UNSUPPORTED`. Source
-verification led to seven initial repairs across six notes; fresh blind
-re-audits surfaced two additional factual legacy nuances, and both cleared a
-third independent round after repair. A final exact-substring sweep found one
-new Glaser findings anchor that had normalized a two-column splice; replacing
-it with a literal four-word fragment and re-auditing the whole note returned
-9/9 `SUPPORTED`. All 31 final reports have current hashes. The three first-round
-Data & Measures findings had distinct causes, and the single anchor defect did
-not form a repeated new-field cluster, so the stop rule was not triggered. This
-batch ran end-to-end on `gpt-5.6-sol` for both augmentation and audit, the sixth
-such backfill batch. The recurring cross-family spot-audit most recently ran at
-batch 24's workshop review with 27/27 agreement, matching batch 16; none is
-scheduled for batch 25. The pre-batch census was 61 v1, 495 v2, and 611 v3;
-the corpus now contains 61 legacy v1 notes, 464 v2 notes, and 642 v3 notes with
-evidence anchors. Provenance eras are batches 01–07 `claude-opus-4-8`, 08–15
-`claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23 `claude-opus-5`, and 24–25
-`gpt-5.6-sol`. New notes are produced at extraction
+batch 26 upgraded 32 notes (AMJ vol-60-no-5 + vol-60-no-4, all v2
+augmentations) to v3. Its final audit is **286/288 prose-field verdicts
+SUPPORTED**, with 2 verified-faithful `PARTIAL`, 0 `UNSUPPORTED`, and 0
+`CONTRADICTED`. Round 1 returned 283/288 `SUPPORTED` and 5 `PARTIAL`. Source
+verification led to nine legacy-field repairs across eight notes; all repaired
+notes cleared fresh blind full-note re-audits at 72/72 `SUPPORTED`. The two
+remaining `PARTIAL`s are documented interleaved-reference strip-loss cases:
+the fitted audit inputs omitted Lee's managerial-guidance passage and
+Schaumberg's leadership-efficacy future-research passage, while the recovered
+raw text confirms both note fields are faithful. All 32 final reports have
+current hashes. A pre-audit sweep corrected Lawrence's normalized anchor; the
+independent pre-publication provenance review then caught a nonliteral Malesky
+data-source phrase, which was narrowed to the exact raw-text name `PCI survey`
+and returned 9/9 `SUPPORTED` in a fresh blind full-note audit. These were
+distinct causes, and no repeated new-field or validation cause reached the stop
+threshold. This batch ran end-to-end on `gpt-5.6-sol` for augmentation and
+audit, the seventh such backfill batch. The recurring cross-family spot-audit
+most recently ran at batch 24's workshop review with 27/27 agreement, matching
+batch 16; none is scheduled for batch 26. The pre-batch census was 61 v1, 464
+v2, and 642 v3; the corpus now contains 61 legacy v1 notes, 432 v2 notes, and
+674 v3 notes with evidence anchors. Provenance eras are batches 01–07
+`claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23
+`claude-opus-5`, and 24–26 `gpt-5.6-sol`. New notes are produced at extraction
 **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -195,7 +198,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.58.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.59.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

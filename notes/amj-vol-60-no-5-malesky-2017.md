@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Malesky 2017 The Danger of Not Listening
 text_path: "library/AMJ/vol-60-no-5/text/Malesky 2017 The Danger of Not Listening to Firms Government Responsiveness and the Goal of Regulatory Compliance.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["regulatory compliance", "government responsiveness", "government legitimacy", "procedural justice", "deliberative democracy", "corporate social responsibility", "self-regulation", "corporate political activity", "emerging economies", "Vietnam"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "(procedural justice) and political science (deliberative democracy)"
   methods_overview: "entropy balancing procedure"
   keywords_source: "corporate social responsibility, self-regulation, and corporate political activity"
+  hypotheses_source: "regulatory design process is more likely to"
+  measures_overview: "Our main operationalization of regulatory com"
+  findings_overview: "did not hear a response from government have lower"
 ---
 
 # The Danger of Not Listening to Firms: Government Responsiveness and the Goal of Regulatory Compliance
@@ -51,6 +56,10 @@ Firms in emerging economies exhibit dangerously low rates of compliance with gov
 **Research Question**
 The paper asks whether firm participation in the design of government regulations increases subsequent regulatory compliance in emerging economies, and whether this relationship depends on firms seeing government as responsive to their input. It examines this question in Vietnam by linking firms' comments on draft regulations, government responses to those comments, perceptions of government legitimacy, and compliance with the Labor Code.
 
+**Hypotheses / Propositions**
+H1: A firm that participates in regulatory design is more likely to comply with the resulting regulation than a nonparticipating firm.
+H2: A participating firm that sees government as unresponsive is less likely to comply with the resulting regulation than a nonparticipating firm.
+
 **Mechanism Process**
 - IV(s): Firm participation in the regulatory design process, especially whether the firm provided comments on a draft regulation and whether government acknowledged or used the comment.
 - DV(s): Regulatory compliance, measured mainly as the share of long-term employees with formal labor contracts and as a three-point compliance scale; alternative outcomes are trade union presence and recruitment-budget share.
@@ -58,6 +67,12 @@ The paper asks whether firm participation in the design of government regulation
 - Moderators: Government responsiveness to firm input; firm size is also used to show that effects are concentrated among SMEs.
 
 The mechanism is that participation can make firms view the rule-making process as fair and government as a legitimate regulatory authority, which makes compliance with the resulting regulation more likely. However, participation has this constructive effect only when government is seen as responsive to firm input. If firms comment but receive no response, the process can look symbolic or unfair, lowering perceived legitimacy and making compliance less likely than among firms that did not participate.
+
+**Data & Measures**
+The study uses the PCI survey of domestic private firms, focusing on 2013. Participation equals whether a firm commented on a draft regulation; Participation with Government Response identifies acknowledged comments; Effective Participation identifies comments firms believed altered the regulation. Regulatory compliance is operationalized primarily as Formal Labor, the self-reported share of long-term employees with formal contracts, and a three-point Compliance Scale (less than 50%, 50–99%, or 100% under contract); Trade Union presence and the logged recruitment-budget share are alternative outcomes. Government legitimacy is a factor score from Government Attitude, Regulatory Abuse, and Fairness in Implementation indicators. Because the data are observational and cross-sectional, the design is associational: entropy-balanced OLS and ordered probit models include province and two-digit sector fixed effects, and mediation is estimated with STATA’s SEM.
+
+**Key Findings**
+H1 is not supported for simple commenting alone, but receives conditional support when participation is accompanied by government responsiveness: acknowledged comments predict 3.2 percentage points more formal contracting, and acknowledged and effective participation increase the probability of full compliance by 1.6% and 3.0%, respectively. H2 is supported on the primary outcomes: firms whose comments received no response have 3.5 percentage points less formal contracting and a 7% lower probability of full compliance than noncommenters. The backlash pattern is not found for the Trade Union or recruitment-budget alternatives, and acknowledged comments matter only among SMEs in the size-disaggregated primary-outcome models. Legitimacy mediates 22.9% of the response effect on Formal Labor and 35.8% on the Compliance Scale.
 
 **Theoretical Contribution**
 The paper contributes a firm-level theory of regulatory compliance built from individual-level procedural justice and deliberative democracy arguments. It qualifies participation-based accounts by showing that responsiveness is not a procedural detail but a contingency that determines whether participation increases compliance or produces backlash. It also contributes to nonmarket strategy, CSR, self-regulation, corporate political activity, and institutional theory by foregrounding SMEs and by showing how direct firm-government interactions shape legitimacy assessments in emerging economies.

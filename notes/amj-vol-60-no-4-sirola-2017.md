@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Sirola 2017 Economic Downturns Undermine
 text_path: "library/AMJ/vol-60-no-4/text/Sirola 2017 Economic Downturns Undermine Workplace Helping by Promoting a Zero-Sum Construal of Success.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["economic downturns", "workplace helping", "zero-sum construal of success", "macroeconomic context", "employee psychology", "helping behavior"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "We draw on social cognition principles"
   methods_overview: "We report four studies testing this theory"
   keywords_source: "Workplace helping is essential to the success of organizations and economies"
+  hypotheses_source: "Hypothesis 2. Economic downturns reduce"
+  measures_overview: "a measure of zero-sum construal of success"
+  findings_overview: "The results thus support Hypotheses 1 and 2."
 ---
 
 # Economic Downturns Undermine Workplace Helping by Promoting a Zero-Sum Construal of Success
@@ -51,6 +56,10 @@ Workplace helping is essential to the success of organizations and economies. Gi
 **Research Question**
 The paper asks whether economic downturns undermine workplace helping and, if so, whether they do so by making employees construe success in more zero-sum terms. It tests whether macroeconomic cues shape individual employee psychology and helping behavior even when helping carries no apparent personal cost.
 
+**Hypotheses / Propositions**
+- Hypothesis 1: Economic downturns promote a zero-sum construal of success.
+- Hypothesis 2: Economic downturns reduce workplace helping by promoting a zero-sum construal of success.
+
 **Mechanism Process**
 - IV(s): Objective macroeconomic downturn indicators in Study 1, manipulated perception of the U.S. economy in Studies 2 and 3, and perceived economic downturn in the participant's country in Study 4.
 - DV(s): Zero-sum construal of success in Study 1; helping intentions or behavior in Studies 2-4.
@@ -58,6 +67,12 @@ The paper asks whether economic downturns undermine workplace helping and, if so
 - Moderators: Not directly tested.
 
 The mechanism is that cues of economic downturns make success appear more like a limited, exclusive good. Employees then apply this generalized zero-sum construal to workplace situations in which coworkers need help, even when helping would not objectively reduce their own success. This construal makes another person's success seem less desirable or more threatening, reducing willingness to help. Across the studies, mood changes do not explain the effect, whereas zero-sum construal carries the indirect relationship between downturn cues and lower helping.
+
+**Data & Measures**
+Study 1 merged WVS responses from 59,694 people in 51 countries (1995-2012) with WDI country-year unemployment rates; zero-sum construal was a reversed single item, and multilevel regressions nested respondents within countries, with GDP-change and OLS robustness checks. Study 2 randomized 231 U.S. employees recruited through ClearVoice to downturn versus upturn articles, measured the mediator with six zero-sum items, mood with PANAS, and helping as a binary coworker-help decision; mediation used logistic and OLS paths with 5,000 bootstrap samples. Study 3 randomized 212 U.S. employees using the same manipulation and six-item mediator, a shorter ten-item PANAS, and an eight-item helping scale averaged from binary responses; the focal model used OLS paths with bootstrapped indirect effects. Study 4 used passive observational data from 101 marketing-and-sales freelancers hired through Upwork across 47 countries: the IV was a three-item perception of the current economy, zero-sum construal and mood were mediators, and actual written advice was scored both as any helping and character count; models used logistic and negative binomial regression with robust standard errors.
+
+**Key Findings**
+Study 1 supported Hypothesis 1: higher unemployment was associated with a more zero-sum construal of success (b = 0.05, p < .001). Studies 2 and 3 supported Hypotheses 1 and 2: the downturn manipulation increased zero-sum construal and reduced helping, and its negative indirect effect on helping through zero-sum construal was significant while the mood alternatives were not. Study 4 likewise supported Hypotheses 1 and 2 for measured downturn perceptions: a worse perceived economy was associated with greater zero-sum construal and with both a lower likelihood and a lower extent of actual helping, with significant indirect effects through zero-sum construal; the mood alternatives were not supported.
 
 **Theoretical Contribution**
 The paper contributes by linking macroeconomic conditions to individual employee psychology and behavior, thereby bridging the macro-micro divide in organizational research. It identifies reduced workplace helping as a counterproductive employee reaction to economic downturn cues and shows that this response operates through zero-sum construal rather than mood. It also develops zero-sum construal of success as a useful construct for understanding organizational behaviors involving others' success, such as helping, cooperation, social exchange, and inclusion.

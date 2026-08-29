@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Love 2017 The Face of the Firm The Influ
 text_path: "library/AMJ/vol-60-no-4/text/Love 2017 The Face of the Firm The Influence of CEOs on Corporate Reputation.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["CEOs", "corporate reputation", "leader prominence", "leader quality", "media coverage", "industry awards", "outsider standing"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "firm is a reflection of its leaders"
   methods_overview: "generalized propensity score technique"
   keywords_source: "leader prominence and on perceptions of leader quality"
+  hypotheses_source: "received more media attention will have stronger reputations, ceteris paribus."
+  measures_overview: "score in the Fortune “Most Admired Companies”"
+  findings_overview: "negative press coverage damage their firms’ reputations. However, CEO prominence"
 ---
 
 # The Face of the Firm: The Influence of CEOs on Corporate Reputation
@@ -53,6 +58,12 @@ It is widely assumed that CEOs shape how people view firms, but the question of 
 **Research Question**
 The paper asks to what degree CEOs independently matter for firm reputation and which CEOs affect their firms' reputations. It focuses on whether CEO media coverage, media tenor, industry awards, and outsider status shape Fortune reputation ratings after accounting for firm financial performance and firm-level media coverage.
 
+**Hypotheses / Propositions**
+- H1: Companies whose CEOs receive more media attention will have stronger reputations.
+- H2: Companies whose CEOs receive more positive (more negative) media attention will have stronger (weaker) reputations.
+- H3: Companies whose CEOs have won industry awards will have stronger reputations.
+- H4: Companies with outsider CEOs will have stronger reputations.
+
 **Mechanism Process**
 - IV(s): CEO media prominence, positive CEO media tenor, negative CEO media tenor, CEO awards, and outsider CEO status.
 - DV(s): Firm reputation, measured through Fortune's Most Admired Companies overall rating.
@@ -61,11 +72,17 @@ The paper asks to what degree CEOs independently matter for firm reputation and 
 
 The mechanism is that evaluators use CEOs as signals of the firm's underlying capabilities and propensities, especially because leadership quality is difficult to observe directly. Media coverage can make CEOs salient and provide positive or negative evaluations of CEO quality, while industry awards act as certification contests that reduce uncertainty about leadership quality. The findings support quality-signal effects: positive CEO media tenor and CEO awards are associated with stronger firm reputations, negative CEO media tenor is associated with weaker firm reputation, and prominence alone and outsider status are not supported.
 
+**Data & Measures**
+The panel covers 372 large U.S. firms and 1,599 firm-years from 1991 to 1997. Firm reputation is the published Fortune *Most Admired Companies* overall rating, which averages eight attributes scored from 0 to 10. CEO media prominence is the count of qualifying *New York Times* and *Wall Street Journal* articles, categorized as no, moderate, or high coverage. CEO media tenor uses the Linguistic Inquiry Word Count (LIWC) positive and negative emotion dictionaries and the Janis–Fadner coefficient, then categorizes coverage as negative, neutral, or positive. CEO awards is a dummy for receiving a *Financial World* “CEO of the Year” award, and outsider CEO status is a dummy for having fewer than three years of tenure at the focal organization before appointment. CEO data came primarily from ExecuComp, media articles through ProQuest and LexisNexis, and financial controls from COMPUSTAT. The primary analysis uses two-stage generalized propensity scores followed by weighted firm fixed-effects regressions with CEO-clustered Huber–White standard errors.
+
+**Key Findings**
+H1 was not supported: moderate CEO prominence was nonsignificant, while high prominence had a significant negative coefficient, opposite to the prediction. H2 was supported: positive tenor was positively associated with reputation (p < .05), negative tenor was negatively associated at a marginal level (p < .09), and a supplementary prominence-weighted analysis found a stronger negative effect for high-prominence negative coverage (p < .01). H3 was supported: a CEO award increased the Fortune rating by 0.070 points (p < .05), with supplementary analyses also showing positive cumulative-award effects. H4 was not supported because outsider CEO status was nonsignificant.
+
 **Theoretical Contribution**
 The paper extends upper-echelons and CEO celebrity research by showing that CEOs can influence not only firm actions and performance but also corporate reputation as a consequential intangible outcome. It also contributes to corporate reputation research by positioning leadership as an integral determinant of reputational judgments, distinct from the firm behaviors, outcomes, and capabilities emphasized in prior work. More broadly, it develops the idea that social evaluations can transfer between internal actors and organizations whose reputations co-evolve.
 
 **Practical Implication**
-The findings imply that boards and executives should not assume that CEO visibility itself improves corporate reputation; reputational effects depend more on signals of CEO quality than on prominence alone. Firms may gain reputational benefits when CEOs receive credible positive evaluations such as industry awards or favorable coverage, but negative CEO coverage can damage firm reputation.
+The study finds that CEO media tenor and industry awards, rather than prominence alone, are associated with firms' reputations; negative CEO coverage is associated with lower firm reputation. The authors present these results as implications for research on CEOs and corporate reputation, not as prescriptions for boards or executives.
 
 **Limitations**
 The paper notes that the study covers a relatively short and historically specific period, uses large U.S. public firms, and does not capture all relevant CEO characteristics. It also cautions that CEO information was less available for smaller firms, so the findings may not apply to small or less well-known firms.

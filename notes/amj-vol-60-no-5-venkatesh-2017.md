@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Venkatesh 2017 Networks, Technology, and
 text_path: "library/AMJ/vol-60-no-5/text/Venkatesh 2017 Networks, Technology, and Entrepreneurship A Field Quasi-experiment among Women in Rural India.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["women's entrepreneurship", "social networks", "ICT use", "rural India", "field quasi-experiment", "entrepreneurial activity", "entrepreneurial profit"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "Social networks, which focus on various types of"
   methods_overview: "generalized estimating equations (GEE)"
   keywords_source: "interplay of women's social networks"
+  hypotheses_source: "Hypothesis 3. ICT use will be positively related"
+  measures_overview: "ICT use was assessed as the total number of"
+  findings_overview: "Thus, Hypothesis 3 was supported."
 ---
 
 # Networks, Technology, and Entrepreneurship: A Field Quasi-experiment among Women in Rural India
@@ -54,6 +59,19 @@ We address a grand economic challenge faced by women in rural India. We consider
 **Research Question**
 The paper asks how women's social networks, ICT use, and time jointly relate to the initiation and success of women's entrepreneurial ventures in rural India. It specifically examines whether family centrality, community centrality, and ties to men in power shape ICT use, entrepreneurial activity, and entrepreneurial profit, and whether ICT use and time change these relationships.
 
+**Hypotheses / Propositions**
+- H1a: Family centrality will be positively related to ICT use.
+- H1b: Community centrality will be positively related to ICT use.
+- H1c: Ties to men in power will be negatively associated with ICT use.
+- H2a: Family centrality will be positively related to entrepreneurial activity and profit.
+- H2b: Community centrality will be positively related to entrepreneurial activity and profit.
+- H2c: Ties to men in power will be negatively associated with entrepreneurial activity and profit.
+- H3: ICT use will be positively related to entrepreneurial activity and profit.
+- H4a: ICT use will strengthen the positive relationship between family centrality and entrepreneurial activity and profit.
+- H4b: ICT use will strengthen the positive relationship between community centrality and entrepreneurial activity and profit.
+- H4c: ICT use will weaken the negative relationship between ties to men in power and entrepreneurial activity and profit.
+- H5: Time will further moderate the interactions between the three social networks and ICT use, such that their relationships with entrepreneurial activity and profit become stronger over time.
+
 **Mechanism Process**
 - IV(s): Family centrality, community centrality, ties to men in power, ICT intervention and ICT use, and time.
 - DV(s): Entrepreneurial activity and entrepreneurial profit.
@@ -61,6 +79,12 @@ The paper asks how women's social networks, ICT use, and time jointly relate to 
 - Moderators: ICT use moderates network-position effects; time further moderates the network-position by ICT-use relationships.
 
 The mechanism is socio-structural and temporal. Family and community ties can provide support, information, and resources that encourage ICT use and entrepreneurial activity, while ties to men in power can reinforce patriarchal constraints and pressure women toward the status quo. ICT use supplies information, access to programs, communication channels, and e-government resources that complement supportive family and community networks. For ties to men in power, the interaction pattern is more constrained: ICT use is associated with increased entrepreneurial activity over time only when those ties are low, and the interaction does not emerge for profit. Over time, the benefits of combining supportive network positions with ICT use become stronger for entrepreneurial activity and, for family and community centrality, for profit.
+
+**Data & Measures**
+The seven-year field quasi-experiment covered 20 rural villages, with staffed Internet-enabled ICT kiosks deployed in 10 intervention villages and 10 geographically proximal villages serving as controls. Social networks and entrepreneurial activity were measured in annual structured interviews; network centrality used communication-frequency rosters weighted by tie strength. ICT use was the yearly number of kiosk hours recorded in physical visitor ledgers and matched to Internet logs, and time was coded from 1 to 7. Entrepreneurial activity was coded 1 when a woman had an operational new business in a given year and 0 otherwise; annual entrepreneurial profit came from interviews and was cross-validated with government or bank filings where available. Generalized estimating equations (GEE) modeled the repeated measures.
+
+**Key Findings**
+H1 and H2 were supported: family and community centrality related positively, and ties to men in power negatively, to ICT use, entrepreneurial activity, and profit. H3 was supported; ICT use increased the likelihood of entrepreneurial activity by 73% and was positively related to profit (b = .60, p < .01). H4a and H4b were supported, with positive family- and community-centrality relationships stronger at high ICT use; H4c was not supported because the negative relationship between ties to men in power and entrepreneurial activity was stronger, not weaker, at high ICT use, while its profit interaction was nonsignificant. H5 was supported for family and community centrality for both outcomes but not for ties to men in power. Descriptively, women started 160 new businesses in intervention villages versus 40 in control villages.
 
 **Theoretical Contribution**
 The paper contributes to research on grand challenges, women's entrepreneurship, social networks, and ICT interventions by showing how social structure and technology operate jointly rather than independently in a rural developing-country context. It qualifies the generally positive view of network centrality by distinguishing supportive ties to family and community from constraining ties to men in local power. It also extends entrepreneurship research by modeling time explicitly and showing that ICT-enabled network effects unfold dynamically across a seven-year intervention.

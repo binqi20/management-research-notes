@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Briscoe 2017 Bringing the Boss’s Polit
 text_path: "library/AMJ/vol-60-no-4/text/Briscoe 2017 Bringing the Boss’s Politics In Supervisor Political Ideology and the Gender Gap in Earnings.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["gender gap in earnings", "performance-based pay", "supervisor political ideology", "political liberalism", "conservatism", "perceptual filtering", "motivated cognition", "law firms", "managerial discretion", "gender inequality"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Political ideology, as a reflection of personal"
   methods_overview: "hierarchical linear models"
   keywords_source: "supervisor’s political ideology"
+  hypotheses_source: "Hypothesis 1. Supervisor liberalism will reduce"
+  measures_overview: "the total bonus awarded to each"
+  findings_overview: "performance-based pay is reduced for professional workers tied to liberal supervisors"
 ---
 
 # Bringing the Boss’s Politics In: Supervisor Political Ideology and the Gender Gap in Earnings
@@ -51,6 +56,11 @@ The gender gap in earnings and rewards remains persistent across many profession
 **Research Question**
 To what extent do supervisors' personal political values shape performance evaluation and reward allocation decisions for male and female professional workers? The paper asks whether supervisor liberalism versus conservatism reduces or enlarges the gender gap in performance-based pay, and whether that effect changes with worker seniority and work-unit ideology.
 
+**Hypotheses / Propositions**
+- H1: Supervisor liberalism will reduce the gender gap in performance-based pay; the gap will be smallest at high liberalism and largest at low liberalism.
+- H2: Worker seniority will strengthen this effect, making the conservative–liberal difference in the gender gap greater among more-senior than less-senior workers.
+- H3: The supervisor-liberalism effect on the gender pay gap will decrease as work-unit liberalism declines; the conservative–liberal difference will be smaller under low than high work-unit liberalism.
+
 **Mechanism Process**
 - IV(s): Supervisor liberalism, measured from political campaign donation behavior; worker gender.
 - DV(s): Worker performance-based pay, measured as annual bonus relative to the worker's cohort average.
@@ -58,6 +68,12 @@ To what extent do supervisors' personal political values shape performance evalu
 - Moderators: Worker seniority; department liberalism and department-head liberalism as work-unit ideological context.
 
 The mechanism is that political ideology shapes how supervisors interpret ambiguous performance information when objective criteria are weak. Liberal supervisors are theorized to reject inequality and social-status-quo explanations, making them more likely to give female workers the benefit of the doubt in male-typed professional settings. Conservative supervisors are theorized to accept existing outcome differences as reflecting individual human capital or motivation, which preserves a larger gender gap in rewards. This ideological difference becomes more consequential as workers gain seniority because senior work is more complex, subjective, and tied to entry into the firm's leadership ranks.
+
+**Data & Measures**
+The cross-nested dataset combines internal worker, bonus, and client-project billing records with public political-donation records. It contains 908 worker–supervisor–year observations on 359 workers tied to 119 supervisors across six years; the reported mixed-effects models use N = 906. Performance-based pay is the worker's annual bonus net of the average bonus for the worker's cohort that year. Supervisor liberalism is a 0–1 index averaging four donation-based indicators of commitment to one political orientation, using donation records from 1990–2014. Worker gender is a female indicator, seniority increases with cohort tenure, and work-unit liberalism is captured by department-peer and department-head liberalism. Models use worker and supervisor random intercepts and department, office, and year indicators.
+
+**Key Findings**
+H1 was supported: the female-worker × supervisor-liberalism coefficient was positive (5.00, p < .05), and the gender gap declined to nonsignificance at high supervisor liberalism. H2 was supported: the female-worker × supervisor-liberalism × seniority interaction was positive in the reported models (4.26, p < .001; 4.31, p < .01); under conservative supervisors, the estimated gap rose from $2,060 at low seniority (not significant) to $15,468 at high seniority (p < .001). H3 was not supported: the work-unit-liberalism interactions and simple-slope tests were nonsignificant.
 
 **Theoretical Contribution**
 The paper contributes to research on gender inequality by shifting attention from supervisor demographic similarity and formal organizational practices to supervisors' personal political beliefs as a source of bias in reward allocation. It shows how ostensibly gender-neutral values about inequality and social change can enter everyday managerial decisions through perceptual filtering. It also extends political ideology research from senior executives and firm-level outcomes to proximal supervisory decisions affecting individual workers.

@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Lawrence 2017 High-Stakes Institutional 
 text_path: "library/AMJ/vol-60-no-5/text/Lawrence 2017 High-Stakes Institutional Translation Establishing North America’s First Government-sanctioned Supervised Injection Site.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["high-stakes institutional translation", "supervised injection site", "institutional translation", "discursive translations", "material translations", "emotion"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Research on institutional translation focuses on"
   methods_overview: "The data collection process for this study"
   keywords_source: "practices as “high-stakes institutional translation.”"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "writing was done using NVivo software"
+  findings_overview: "Based on the Insite case, I propose a process model"
 ---
 
 # High-Stakes Institutional Translation: Establishing North America’s First Government-sanctioned Supervised Injection Site
@@ -51,6 +56,9 @@ Around the world, potentially effective responses to serious social problems are
 **Research Question**
 The paper asks how actors import contentious responses to serious social problems into communities that initially reject those responses. It examines this question through the establishment of Insite, North America's first government-sanctioned supervised injection site for users of illegal drugs.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: High-stakes institutional translation; contested concepts and objects; discursive and material translations; pain, protest, anger, empathy, and collective reflexivity.
 - Process / phases: Energizing through public expressions of pain and protest and a new interpretive scheme; exploring through discursive and material translations; integrating through translations that connect the contentious concept to local ideas, routines, and relationships.
@@ -59,6 +67,12 @@ The paper asks how actors import contentious responses to serious social problem
 - Boundary conditions: The process concerns practices with serious material consequences and profound moral or ethical challenges for the target community.
 
 The process begins when public pain and protest disrupt established assumptions about drug use and addiction and create energy for translation work. Actors then repeatedly construct the supervised injection-site concept in discursive and material forms, first making it visible and contested, then connecting it to locally legitimate routines and relationships. Over time, the translations and translators co-evolve: early isolated actors and advocacy groups give way to more connected networks capable of embedding the practice institutionally. Emotion is not incidental to this process; anger helps trigger disruption, while empathy sustains later translation work and connects actors across social worlds.
+
+**Data & Measures**
+The study draws on 36 interviews with 25 people; publicly available organizational and government documents, print and online media, video, and radio recordings; more than 600 newspaper items; and secondary accounts. The analysis first constructed and validated a detailed historical timeline and then developed core concepts through constant comparative analysis, open coding, and recursive movement between data and theory. Coding and memo writing used NVivo. Translation was coded as an episode connecting the supervised injection-site concept to nonlocal examples or earlier translations; the analysis then focused on 16 major translations that prompted substantial reporting, discussion, support, or opposition.
+
+**Key Findings**
+The study develops a three-phase process model of high-stakes institutional translation. Public expressions of pain and protest and an alternative interpretive scheme first energize actors and disrupt settled assumptions. Waves of exploratory discursive and material translations then introduce and contest the contentious concept. Integrative translations connect it to local ideas, routines, and relationships, producing an embedded practice. Across these phases, translations and translators co-evolve: more complex translations require actors in more complex social positions. Emotion also performs three roles: intense emotion triggers the process, empathy motivates difficult and risky translation work, and anger and empathy connect actors across social worlds.
 
 **Theoretical Contribution**
 The paper extends institutional translation theory by theorizing how communities import practices that are politically, culturally, or morally problematic but potentially effective responses to serious social problems. It contributes a process model of high-stakes institutional translation and distinguishes exploratory versus integrative and discursive versus material translations. It also contributes to research on emotions and institutions by showing how anger and empathy energize, sustain, and connect distributed agency in institutional change.

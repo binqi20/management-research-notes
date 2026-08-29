@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Kaplan 2017 Symbiont Practices in Bounda
 text_path: "library/AMJ/vol-60-no-4/text/Kaplan 2017 Symbiont Practices in Boundary Spanning Bridging the Cognitive and Political Divides in Interdisciplinary Research.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["interdisciplinary research", "boundary spanning", "symbiont practices", "scientific instruments", "sociomaterial perspective"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "we develop a sociomaterial perspective on boundary spanning"
   methods_overview: "three sorts of field data: in vivo observations"
   keywords_source: "what we call symbiont practices: matching disciplinary"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we coded our data to understand how instruments"
+  findings_overview: "We found three symbiont practices that"
 ---
 
 # Symbiont Practices in Boundary Spanning: Bridging the Cognitive and Political Divides in Interdisciplinary Research
@@ -52,6 +57,9 @@ Organizing for interdisciplinary research must overcome two challenges to collab
 **Research Question**
 The paper asks how interdisciplinary collaborations take place when cognitive structures and political economies remain anchored in disciplines. More specifically, it asks how cognitive and political boundaries are spanned simultaneously in interdisciplinary research.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: cognitive incommensurability across disciplines; political economy of research rewards; costly scientific instruments; student capacities; symbiont practices.
 - Process / practices: matching disciplinary language and methods with instrument possibilities; developing cospecialization between students and instruments; engaging disciplinary actors to design experiments using specific instruments.
@@ -59,6 +67,12 @@ The paper asks how interdisciplinary collaborations take place when cognitive st
 - Boundary conditions: the prominence of the student-instrument relationship is tied to an instrument-intensive scientific context and the uncertainty of nanotechnology as an emerging field.
 
 The central process is sociomaterial rather than purely interpersonal. Instruments create incipient possibilities for new questions, funding, and collaboration, but these possibilities remain unrealized until students develop specialized competence and use that competence to connect faculty, methods, and disciplinary interests. Students also need the instruments because instrument expertise helps classify them, staff them on projects, and support their career prospects, producing a reciprocal symbiosis.
+
+**Data & Measures**
+The authors conducted a nine-month field study (September 2008–May 2009), using in vivo observations, 22 semi-structured interviews, documentary evidence, and archival data on publications, coauthorships, citations, and student careers. They coded collaboration evidence along cognitive and political-economy dimensions, then coded how instruments were mobilized and who performed boundary spanning; a subsequent step examined intersections between instruments and students. Archival supplements analyzed coauthorship among 2,355 publications (2004–2013), five-year citation counts for 1,094 publications (the regression table reports n = 1,093 after eliminating one outlier), and first and current jobs for 133 graduates (68 center-affiliated and 65 comparison graduates).
+
+**Key Findings**
+The study identifies three symbiont practices: matching disciplinary language and methods with instrument possibilities, developing cospecialization between students and instruments, and engaging actors across disciplines to design experiments using specific instruments. Through these reciprocal student–instrument relationships, students actualized instruments' incipient possibilities and bridged cognitive incommensurability and the discipline-based political economy, enabling interdisciplinary collaboration. Archival patterns were consistent with the process model: student involvement rose from 54% of publications without center-faculty collaboration to 72% with such collaboration, 83% for cross-department collaborations, and 85% for cross-school collaborations; center-attributed and interdisciplinary publications had lower five-year citation rates in the reported models, while center graduates showed greater two-year persistence in academic careers than the comparison group.
 
 **Theoretical Contribution**
 The paper develops a sociomaterial perspective on boundary spanning by showing that boundary work can occur through symbiont practices rather than through people or objects alone. It extends boundary-spanning and boundary-object research by arguing that instruments do more than convey information across domains: they become subjects of boundary-spanning practices whose possibilities are actualized through student-instrument symbiosis. It also explains why lower-status actors, not only high-status brokers, may do critical boundary-spanning work when the required investments are costly and uncertain.

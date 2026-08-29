@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Wright 2017 An Inconvenient Truth How Or
 text_path: "library/AMJ/vol-60-no-5/text/Wright 2017 An Inconvenient Truth How Organizations Translate Climate Change into Business as Usual.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["climate change", "grand challenges", "corporate environmentalism", "translation", "business as usual", "critique"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "process of “translation”"
   methods_overview: "five in-depth case studies"
   keywords_source: "corporate translation of climate change"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Using the qualitative data analysis software NVivo"
+  findings_overview: "identify three key stages in the corporate translation of climate change: framing, localizing, and normalizing"
 ---
 
 # An Inconvenient Truth: How Organizations Translate Climate Change into Business as Usual
@@ -51,6 +56,9 @@ Climate change represents the grandest of challenges facing humanity. In the spa
 **Research Question**
 The paper asks how firms engage over time with competing market and social/environmental demands when translating complex challenges such as climate change into practice. It examines why initially strong corporate climate commitments in proactive firms are narrowed, diluted, or redirected toward business-as-usual concerns.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Empirical setting: Five proactive Australian corporations facing climate-change pressure across electricity and gas, banking, manufacturing, insurance, and media and communications.
 - Triggering tension: External and internal critique makes climate change salient while exposing conflict between business growth and environmental demands.
@@ -60,6 +68,12 @@ The paper asks how firms engage over time with competing market and social/envir
 - Emergent outcome: The revolutionary implications of climate change are translated into familiar corporate routines and less threatening business-as-usual formulations.
 
 The process is dialectical rather than a variable-based causal test. Critique repeatedly reveals tensions between climate demands and business imperatives: initial social/environmental critique prompts framing, dissonance between framing and practice prompts localization, and later market evaluation prompts normalization. The model explains deterioration over time by showing how corporate climate initiatives are continually judged against dominant market discourses, especially under financial stress, leadership change, and shifting political conditions.
+
+**Data & Measures**
+The study compares five major Australian corporations across electricity and gas, banking, manufacturing, insurance, and media and communications. The 2005–2015 case comparison draws on 70 semi-structured interviews (1,629 transcript pages) and 377 documents (1,819 pages); the document collection extends back to 2000 to establish company prehistories. The researchers developed case histories and timelines, open-coded practices, strategies, narratives, and discourses in NVivo into more than 60 primary nodes, used axial coding to form second-order themes, and applied matrix coding queries to compare the emergent stages across cases and time.
+
+**Key Findings**
+Across all five cases, corporate climate engagement moved through framing, localizing, and normalizing. Firms first associated climate change with business-compatible meanings such as risk, opportunity, and innovation; then incorporated it into roles, products, metrics, advocacy, and eco-efficiency practices; and ultimately purified initiatives back toward core business or diluted them into broader sustainability agendas. Critique repeatedly exposed tensions between environmental demands and market evaluation, and engagement with climate change steadily diminished and narrowed toward shareholder value and business as usual.
 
 **Theoretical Contribution**
 The paper contributes to business and the natural environment research by explaining how corporate environmental initiatives deteriorate over time rather than only how they are initially framed or implemented. It develops a grounded model of grand-challenge translation that links framing, localizing, and normalizing through continuous critique. It also qualifies both optimistic win-win accounts and purely cynical greenwashing accounts by showing that managers may be authentically concerned while still constrained by short-term profitability and shareholder-value pressures.

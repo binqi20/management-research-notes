@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Howard 2017 Knowledge Dependence and the
 text_path: "library/AMJ/vol-60-no-5/text/Howard 2017 Knowledge Dependence and the Formation of Director Interlocks.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["knowledge dependence", "director interlocks", "interorganizational ties", "technological trajectories", "patent litigation", "R&D alliances", "resource dependence theory"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "resource dependence perspective"
   methods_overview: "analysis using Siena version 3.2"
   keywords_source: "knowledge dependence, a unique form of external dependence"
+  hypotheses_source: "between firms reduces the likelihood that they"
+  measures_overview: "cases are drawn from Lex Machina, a private"
+  findings_overview: "positive and significant in predicting interlock formation (b 5 1.754, p , .001)."
 ---
 
 # Knowledge Dependence and the Formation of Director Interlocks
@@ -52,6 +57,12 @@ In this study, we examine knowledge dependence, a unique form of external depend
 **Research Question**
 The paper asks whether firms form director interlocks to manage knowledge dependence on external firms whose technologies and intellectual property shape the focal firm's core technological trajectory. It also asks whether those interlocks reduce patent litigation risk and increase R&D alliance formation between the linked firms.
 
+**Hypotheses / Propositions**
+- H1: A focal firm is more likely to form a director interlock with an outside firm whose innovations in its core technology area align more closely with that technology's global trajectory.
+- H2: A focal firm is more likely to form a director interlock with another firm that more aggressively defends legal claims in the focal firm's core technology.
+- H3: A director interlock between firms reduces the likelihood that they will pursue patent litigation against each other.
+- H4: A director interlock between firms increases the likelihood that they will pursue R&D alliances with each other.
+
 **Mechanism Process**
 - IV(s): Alter firm alignment to the global trajectory of the focal firm's core technology; alter firm patent assertions in the focal firm's core technology area; prior board interlock ties for downstream outcome models.
 - DV(s): Director interlock tie formation; patent litigation adversarial tie formation; R&D alliance formation.
@@ -59,6 +70,12 @@ The paper asks whether firms form director interlocks to manage knowledge depend
 - Moderators: Not reported in paper.
 
 The mechanism is grounded in resource dependence theory. Firms pursuing new technologies depend on external knowledge trajectories that they cannot fully control, especially when other firms are closely aligned with those trajectories or aggressively defend related intellectual property. By inviting directors tied to those counterpart firms, focal firms coopt external knowledge providers, reduce uncertainty and potential litigation barriers, and create conditions for more direct knowledge access through R&D alliances.
+
+**Data & Measures**
+The study follows 717 publicly traded U.S. technology firms from 2002–2006. Director interlock formation is a new concurrent board tie; patent-litigation formation is a directed plaintiff–defendant tie coded from Lex Machina; and R&D-alliance formation is coded from SDC Platinum. Patent records define each focal firm's core technology and the global and alter-firm trajectories, while alter-firm patent assertions count prior-year court cases involving patents in that core technology. Compustat supplies firm controls. Interlock and litigation networks are estimated with Stochastic Actor-Oriented Models in Siena version 3.2; the R&D-alliance dyad-year panel uses rare-events logistic regression.
+
+**Key Findings**
+All four hypotheses are supported. Greater alter-firm alignment with the focal technology's global trajectory predicts more interlock formation (H1: b = 1.754, p < .001), as do more alter-firm patent assertions in that technology area (H2: b = 0.123, p < .05). An existing interlock predicts less subsequent patent litigation between the firms (H3: b = -14.564, p < .001) and more R&D-alliance formation (H4: b = 1.291, p < .001). Rare-events-logit robustness tests also show positive effects for trajectory alignment (b = 1.890, p < .001) and patent assertions (b = 0.137, p < .05) on interlock formation.
 
 **Theoretical Contribution**
 The paper extends resource dependence theory by theorizing knowledge dependence as a distinct form of external dependence created by path-dependent technological trajectories and intellectual property control. It contributes to board interlock research by showing that interlocks are not only information conduits but also dependence-management ties that help firms manage litigation threats and access knowledge resources. It also contributes to innovation and network research by modeling interlock formation as a network-level process rather than as independent dyadic choices.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Lee 2017 Male Immorality An Evolutionary
 text_path: "library/AMJ/vol-60-no-5/text/Lee 2017 Male Immorality An Evolutionary Account of Sex Differences in Unethical Negotiation Behavior.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["unethical negotiation behavior", "mating motivation", "sex differences", "intrasexual competition", "evolutionary psychology", "parental investment theory", "opponent attractiveness", "norm violation severity"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "evolutionary psychology, we predict conditions"
   methods_overview: "We used ordinary least squares (OLS) regression"
   keywords_source: "mating motivation and unethical negotiation behavior"
+  hypotheses_source: "Hypothesis 1a. There is a stronger positive effect"
+  measures_overview: "motivation was manipulated by asking participants"
+  findings_overview: "Study 1 found a positive relationship between mating motivation and unethical negotiation behavior for male, but not female, employees."
 ---
 
 # Male Immorality: An Evolutionary Account of Sex Differences in Unethical Negotiation Behavior
@@ -53,6 +58,14 @@ Past research has found that men negotiate more unethically than women, although
 **Research Question**
 The paper asks when sex differences in unethical negotiation behavior are more versus less pronounced, and whether men's greater unethical negotiation behavior can be explained by mating motivation and intrasexual competition. It also asks whether opponent sex, opponent attractiveness, and the severity of the unethical tactic condition this pattern.
 
+**Hypotheses / Propositions**
+- H1a: Mating motivation has a stronger positive effect on unethical negotiation behavior for men than for women.
+- H1b: Men negotiate more unethically than women primarily when mating motivation is high rather than low.
+- H2a: Mating motivation makes men more than women negotiate unethically, particularly against attractive male opponents.
+- H2b: Men negotiate more unethically than women primarily when mating motivation is high and the opponent is an attractive same-sex opponent.
+- H3a: The sex difference in mating motivation's effect is pronounced for more severe unethical behavior and attenuated for less severe behavior, particularly with an attractive opponent.
+- H3b: With high mating motivation and an attractive opponent, the sex difference in unethical negotiation is pronounced for more severe behavior and attenuated for less severe behavior.
+
 **Mechanism Process**
 - IV(s): Mating motivation; participant sex; opponent sex; opponent attractiveness; severity of the unethical negotiation tactic.
 - DV(s): Unethical negotiation behavior, measured as self-reported unethical negotiation tactics in Study 1 and deception or dodging choices in simulated negotiations in Studies 2 and 3.
@@ -60,6 +73,20 @@ The paper asks when sex differences in unethical negotiation behavior are more v
 - Moderators: Participant sex, opponent sex, opponent attractiveness, and norm violation severity.
 
 The mechanism is grounded in evolutionary psychology and parental investment theory. The authors argue that men's evolved tendency toward intrasexual competition makes mating motivation more likely to increase unethical negotiation behavior among men, especially when the opponent is an attractive same-sex rival. Because social sanctions for severe norm violations are theorized to have been more costly for women, the sex difference should be strongest for outright deception and attenuated for less severe tactics such as dodging a question.
+
+**Data & Measures**
+Study 1 used a two-wave survey of 138 employed adults. Mating motivation was a single embedded romantic/sexual-activities interest item; unethical negotiation behavior was a 16-item scale, rated from never to always (alpha = .89). The authors estimated OLS regressions with participant sex, mating motivation, their interaction, and controls.
+
+Study 2 recruited 317 behavioral-lab participants and analyzed 305 classifiable written negotiation responses. It experimentally manipulated mating motivation through attractive versus unattractive faces and manipulated opponent sex and attractiveness in a simulated buyer-seller negotiation. Two condition-blind coders classified responses as explicit deception or truthful communication; logistic regression modeled the binary decision.
+
+Study 3 recruited 375 participants and randomized mating motivation, opponent attractiveness, and tactic severity. Mating motivation was manipulated with print advertisements; participants selected a truthful response or either outright deception (N = 189) or dodging (N = 189) in the same negotiation case. Separate logistic regressions modeled deception and dodging.
+
+**Key Findings**
+Study 1 supported H1a and H1b. Mating motivation predicted more unethical negotiation behavior among men (b = 0.20, p = .005) but not women (b = -0.03, p = .614); men exceeded women only when mating motivation was high (b = 0.36, p = .009), not low (b = -0.13, p = .377).
+
+Study 2 produced results consistent with H2a and H2b. Activating mating motivation increased men's deception only against attractive male opponents (39.1% to 76.0%; b = 0.37, p = .006), and under that condition men deceived more than women (b = 0.41, p = .005). The effect was not significant for unattractive male opponents or female opponents, and mating motivation did not significantly increase women's deception.
+
+Study 3 supported the predicted severity boundary in H3a and H3b. For severe deception, mating motivation increased unethical behavior for men facing attractive male opponents (45.8% to 87.5%; b = 0.42, p = .001) but not for women. For less severe dodging against attractive same-sex opponents, it increased unethical behavior for both men (62.5% to 95.7%; b = 0.33, p = .002) and women (47.8% to 91.3%; b = 0.43, p < .001), eliminating the sex difference.
 
 **Theoretical Contribution**
 The paper extends socialization-based accounts of sex differences in unethical behavior by integrating them with evolutionary theory and specifying when sex differences should appear. It contributes to unethical work behavior and negotiation research by showing that mating motivation, same-sex competition, opponent attractiveness, and norm violation severity jointly shape unethical negotiation behavior. It also qualifies the assumption that physical attractiveness generally benefits negotiators by showing that attractive male opponents can elicit more unethical behavior from mating-motivated men.

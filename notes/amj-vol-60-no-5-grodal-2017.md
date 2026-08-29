@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Grodal 2017 How does a Grand Challenge B
 text_path: "library/AMJ/vol-60-no-5/text/Grodal 2017 How does a Grand Challenge Become Displaced Explaining the Duality of Field Mobilization.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["grand challenges", "field mobilization", "goal displacement", "goal grafting", "interest misalignment", "nanotechnology", "molecular manufacturing", "institutional theory"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "institutional theory"
   methods_overview: "inductive, multimethod"
   keywords_source: "goal displacement"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Ambitious goals included references to “robot,” “machine,” or"
+  findings_overview: "gradually became displaced by near-term ambitions"
 ---
 
 # How does a Grand Challenge Become Displaced? Explaining the Duality of Field Mobilization
@@ -51,6 +56,9 @@ evidence:
 **Research Question**
 The paper asks why fields that successfully mobilize support for a grand challenge may still fail to realize their initial ambitions. It examines how five communities in the nanotechnology field mobilized around molecular manufacturing and how that ambitious field-level goal became displaced by less ambitious near-term goals.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Empirical setting: The nanotechnology field's grand challenge of creating molecular manufacturing, traced across the mobilization and pursuit of the U.S. National Nanotechnology Initiative.
 - Participating communities: Futurists, government officials, service providers, entrepreneurs, and scientists entered the field with different underlying interests.
@@ -60,6 +68,12 @@ The paper asks why fields that successfully mobilize support for a grand challen
 - Emergent outcome: The original molecular-manufacturing ambition was displaced by less ambitious nanotechnology goals that many participants still interpreted as progress.
 
 The process is qualitative and field-level rather than a variable-based causal test. The central mechanism is a duality of field mobilization: the same strategies that successfully mobilize diverse actors also introduce interest misalignment. When the field shifts from rhetoric to action, participants act through existing interests, evaluation criteria, and distributed structures, gradually turning the grand challenge into near-term projects in established domains.
+
+**Data & Measures**
+The longitudinal, inductive multimethod study combines 26 ethnographic observations, 85 interviews, 9,011 community-specific archival articles, 3,762 articles from the top 50 U.S. newspapers, and a qualitative sample of 938 articles. The authors organized ethnographic, interview, and archival material in ATLAS.ti, constructed and updated a temporal map, and used open and axial coding to develop eight overarching categories. For the discourse analysis, ambitious-goal articles referenced robot, machine, or artificial-intelligence elements of molecular manufacturing, whereas near-term articles referenced existing domains such as cosmetics, textiles, consumer electronics, batteries, golf balls, or pants; the authors generated the comparison with DocParser.
+
+**Key Findings**
+The study identifies a duality of field mobilization. Enlisting diverse communities and goal grafting successfully broadened participation and attracted resources, but also generated interest misalignment. During pursuit, retrofitting existing actions, relying on status quo criteria, and distributed independent action redirected resources toward near-term goals in existing domains; consequently, the original molecular-manufacturing grand challenge was gradually displaced even though many participants viewed the near-term achievements as progress.
 
 **Theoretical Contribution**
 The paper contributes a grounded theoretical model of goal displacement in grand challenges. It extends institutional theory by showing that field mobilization is not only a source of collective energy and legitimacy; it can also weaken the integrity of field-level goals when broad support is built through goal grafting. The study adds a dynamic political account of field-level strategic action by distinguishing rhetorical support from later action under heterogeneous interests.

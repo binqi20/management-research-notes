@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Zhang 2017 The Conditional Importance of
 text_path: "library/AMJ/vol-60-no-4/text/Zhang 2017 The Conditional Importance of Prior Ties A Group-Level Analysis of Venture Capital Syndication.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-mixed"
 keywords: ["multiparty collaborations", "multiparty venture capital syndicates", "prior tie density", "network faultlines", "status dynamics", "industry popularity"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "repeated tie density provides various forms of social capital"
   methods_overview: "we used a conditional logit model grouped on"
   keywords_source: "multiparty venture capital syndicates"
+  hypotheses_source: "theorize that the positive impact of tie density on"
+  measures_overview: "as the ratio of preexisting dyadic ties to the total"
+  findings_overview: "positive and highly significant (p 5 .001) in both the"
 ---
 
 # The Conditional Importance of Prior Ties: A Group-Level Analysis of Venture Capital Syndication
@@ -52,6 +57,13 @@ While there is growing scholarly interest in multiparty collaborations that invo
 **Research Question**
 The paper asks how prior co-investment ties among a particular group of VC firms shape whether they form an actual multiparty syndicate at the time of first-round investments in a new venture. It also asks when group-level attributes and industry conditions make prior tie density more or less important for syndicate formation.
 
+**Hypotheses / Propositions**
+- H1: Prior tie density will have a stronger positive impact on syndicate formation when the potential syndicate is larger.
+- H2: Prior tie density will have a stronger positive impact on syndicate formation when the prospective syndicate has a higher risk of network faultlines.
+- H3a: Prior tie density will have a stronger positive impact on syndicate formation when the prospective syndicate has greater status heterogeneity.
+- H3b: Prior tie density will have a stronger positive impact on syndicate formation when the prospective syndicate has greater status-based subgroups.
+- H4: Prior tie density will have a stronger positive impact on syndicate formation at higher levels of industry popularity.
+
 **Mechanism Process**
 - IV(s): Prior tie density among the prospective VC syndicate members.
 - DV(s): Formation of a specific multiparty VC syndicate for a first-round investment.
@@ -60,11 +72,21 @@ The paper asks how prior co-investment ties among a particular group of VC firms
 
 The mechanism is that repeated ties create social capital that helps VC firms judge partner quality, reduce opportunism concerns, and coordinate time-sensitive investment decisions. This makes prior tie density more valuable when the prospective syndicate is larger, status-disparate, or operating in a more popular industry where fast coordination is especially important. Contrary to one hypothesis, tie density does not significantly offset the negative effect of network faultlines, suggesting that subgroup divisions rooted in prior ties may remain difficult to overcome.
 
+**Data & Measures**
+Qualitative evidence came from interviews with 12 VCs and 12 entrepreneurs. The quantitative test used VentureXpert data on 1,336 U.S.-based ventures receiving first-round investments during 1985–2008; each real syndicate was compared with five matched hypothetical syndicates, and the hypotheses were estimated with conditional logit models grouped by venture.
+
+Syndicate formation was coded 1 for the real syndicate and 0 for a hypothetical syndicate. Prior tie density was the ratio of preexisting dyadic ties to all possible dyadic ties within the prospective syndicate, using co-investments during the prior five years. Syndicate size was the number of investing VC firms; network-faultline risk was the logged standard deviation of dyadic tie strength, orthogonalized against prior tie density and average tie strength; status heterogeneity was one minus mean pairwise status similarity based on Bonacich centrality; status-based subgroups were the standard deviation of pairwise status similarity; and industry popularity was the logged prior-year count of ventures receiving first-time VC funding in the same industry segment.
+
+**Key Findings**
+H1 was supported: the interaction between prior tie density and syndicate size was positive in both the partial and full models (p = .001), and the reported margins indicated a 66% greater likelihood of formation in a five-firm versus three-firm syndicate for a one-standard-deviation increase in prior tie density. H2 was not supported because the interaction with network faultlines was nonsignificant in both models.
+
+H3a was supported: the status-heterogeneity interaction was positive in the partial (p = .022) and full (p = .033) models, with a reported 23% greater likelihood when status heterogeneity was one standard deviation above its mean rather than at its mean. H3b received nuanced partial support: the status-based-subgroups interaction was positive and significant in the partial model (p = .015), near significant in the full model (p = .071), and significant only under some robustness conditions; the full-model margins indicated a 6% greater likelihood at one standard deviation above the moderator's mean. H4 was supported: the industry-popularity interaction was positive in both models (p = .001), with a reported 15% greater likelihood at one standard deviation above industry popularity's mean rather than at its mean.
+
 **Theoretical Contribution**
 The paper contributes to multiparty collaboration and network formation research by showing that syndicate formation cannot be reduced to a collection of dyadic tie-formation decisions. It identifies group-level constructs, including syndicate size, network faultlines, status heterogeneity, and status-based subgroups, as meaningful predictors or contingencies in multiparty VC syndication. It also revises status-based accounts of collaboration by showing that multiparty VC syndicates often form around status disparities rather than simple status homophily.
 
 **Practical Implication**
-For VC firms, the findings imply that prior co-investment ties are especially valuable when a syndicate is large, status-diverse, or forming in a hot industry where fast coordination is needed. For entrepreneurs assembling investor groups, the study suggests that partner composition matters beyond each investor's individual quality: dense prior ties can help some heterogeneous groups function, but network faultlines can still deter formation. The paper also cautions against assuming that a lead investor alone determines syndicate formation, because mutual agreement among potential co-investors is central.
+The findings show that prior co-investment ties are especially consequential for syndicate formation when the group is large, status-diverse, or forming in a hot industry where rapid coordination matters. Partner composition matters beyond each VC's individual attributes: dense prior ties favor the formation of some heterogeneous groups, whereas network faultlines can still deter formation. The paper also cautions against assuming that a lead investor alone determines syndicate formation, because mutual agreement among potential co-investors is central.
 
 **Limitations**
 The authors study one setting: first-round multiparty VC syndicates in U.S.-based ventures. Their theory assumes that syndicate formation depends on mutual agreement among all parties and that focal firms have enough network connectedness to form dense multiparty collaborations; these assumptions may not hold in contexts with a single coordinator, looser networks, or more entry and exit. They also note that status-disparity benefits may be especially pronounced in VC because equity ownership and investment roles are central.

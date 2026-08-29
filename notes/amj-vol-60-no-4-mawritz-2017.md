@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Mawritz 2017 I Just Can’t Control Myse
 text_path: "library/AMJ/vol-60-no-4/text/Mawritz 2017 I Just Can’t Control Myself A Self-Regulation Perspective on the Abuse of Deviant Employees.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["subordinate deviance", "abusive supervision", "supervisor self-regulation impairment", "social exchange", "subordinate performance", "bottom-line mentality"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "Drawing on self-regulation theory"
   methods_overview: "cross-lagged longitudinal mediation model"
   keywords_source: "subordinate deviance and abusive supervision"
+  hypotheses_source: "Hypothesis 1b. The indirect effect of subordinate"
+  measures_overview: "seven-item Impact of Event scale"
+  findings_overview: "Thus, Hypothesis 1a was supported."
 ---
 
 # I Just Can’t Control Myself: A Self-Regulation Perspective on the Abuse of Deviant Employees
@@ -54,6 +59,14 @@ Drawing on self-regulation theory, we contribute to the abusive supervision lite
 **Research Question**
 The paper asks why and when subordinate deviance leads supervisors to engage in abusive supervision. It tests whether supervisor self-regulation impairment explains this relationship more strongly than social exchange, and whether subordinate performance and supervisor bottom-line mentality intensify the impairment process.
 
+**Hypotheses / Propositions**
+H1a: Supervisor self-regulation impairment mediates the relationship between subordinate deviance and abusive supervision.
+H1b: The indirect effect of subordinate deviance on abusive supervision through supervisor self-regulation impairment is stronger than the indirect effect through social exchange.
+H2a: The positive relationship between subordinate deviance and self-regulation impairment is stronger when subordinate performance is higher rather than lower.
+H2b: The positive indirect effect of subordinate deviance on abusive supervision through self-regulation impairment is stronger when subordinate performance is higher rather than lower.
+H3a: The positive relationship between subordinate deviance and self-regulation impairment is stronger when supervisor bottom-line mentality is higher rather than lower.
+H3b: The positive indirect effect of subordinate deviance on abusive supervision through self-regulation impairment is stronger when supervisor bottom-line mentality is higher rather than lower.
+
 **Mechanism Process**
 - IV(s): Subordinate supervisor-directed deviance.
 - DV(s): Abusive supervision.
@@ -61,6 +74,16 @@ The paper asks why and when subordinate deviance leads supervisors to engage in 
 - Moderators: Subordinate performance and supervisor bottom-line mentality.
 
 The mechanism is that deviant subordinate behavior consumes supervisors' limited self-regulatory resources because supervisors must process, interpret, and manage the aversive behavior. Once impaired, supervisors are less able to constrain abusive urges, making abusive supervision more likely. The effect is stronger when the deviant employee is also a high performer, because the supervisor receives inconsistent performance information, and when the supervisor has a high bottom-line mentality, because deviance conflicts with a salient goal of bottom-line attainment.
+
+**Data & Measures**
+Study 1 used 165 matched supervisor-subordinate dyads recruited through Amazon’s Mechanical Turk. Supervisors reported subordinate deviance at Time 1 and, two weeks later, subordinate performance, bottom-line mentality, and self-regulation impairment; subordinates reported abusive supervision at Time 2. Deviance used a 10-item scale, performance a six-item scale, bottom-line mentality a four-item scale, self-regulation impairment an adapted seven-item Impact of Event scale, and abusive supervision a 15-item scale. The authors used hierarchical regression and 10,000-resample bootstrap mediation and moderated-mediation tests.
+
+Study 2 used 169 unique supervisor-subordinate dyads (103 supervisors and 169 subordinates) in a large property management company in the southwestern United States, with surveys administered weekly across four weeks. It used the Study 1 measures and added a four-item Social Exchange Relationship scale; deviance, self-regulation impairment, social exchange, and abusive supervision were measured weekly, while performance and bottom-line mentality were measured at Time 4. The authors analyzed a cross-lagged longitudinal mediation model in Mplus 7.3, accounted for subordinates nested within supervisors, used expectation-maximization for missing data, and estimated indirect effects with 10,000-replication Monte Carlo bootstrapping.
+
+**Key Findings**
+Study 1 supported H1a, H2a, H2b, H3a, and H3b; H1b was not tested. The indirect effect through self-regulation impairment was .085 (95% CI [.025, .202]). The deviance-to-impairment relationship and the indirect effect on abusive supervision were significant at higher, but not lower, subordinate performance and supervisor bottom-line mentality.
+
+Study 2 supported all six hypotheses. The total indirect effect through self-regulation impairment was .124 (95% CI [.012, .235]), whereas the indirect effect through social exchange was nonsignificant at .017 (95% CI [−.007, .041]); their difference was .107 (90% CI [.008, .204]). The positive deviance-to-impairment relationship and the conditional indirect effect were stronger at higher subordinate performance and higher supervisor bottom-line mentality.
 
 **Theoretical Contribution**
 The paper contributes to abusive supervision research by shifting attention from deliberate retaliation toward a self-regulation explanation of how supervisors may abuse deviant employees without careful forethought. It also compares self-regulation theory with social exchange theory and finds that self-regulation impairment is the stronger mediator in the tested model. The study further extends work on subordinate performance and bottom-line mentality by showing that normally valued performance-related conditions can make deviance more draining for supervisors.

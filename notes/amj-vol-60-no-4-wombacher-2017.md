@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-4/pdfs/Wombacher 2017 The Interplay of Team and
 text_path: "library/AMJ/vol-60-no-4/text/Wombacher 2017 The Interplay of Team and Organizational Commitment in Motivating Employees’ Interteam Conflict Handling.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-quantitative"
 keywords: ["interteam conflict", "team commitment", "organizational commitment", "dual commitment", "conflict handling strategies", "dominating", "integrating", "obliging", "avoiding"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "common in-group identity model"
   methods_overview: "conducted two studies: a vignette experiment (Study 1) and a field survey (Study 2)"
   keywords_source: "interteam conflict handling strategies"
+  hypotheses_source: "Hypothesis 1. The positive relationship between"
+  measures_overview: "management strategies were measured with three items"
+  findings_overview: "The results were largely borne out by a subsequent survey (N 5 692)"
 ---
 
 # The Interplay of Team and Organizational Commitment in Motivating Employees’ Interteam Conflict Handling
@@ -51,6 +56,12 @@ Interteam conflict is part of everyday organizational life. Combining evidence f
 **Research Question**
 The paper asks how employees' team commitment and organizational commitment jointly shape their preferences for managing conflict between organizationally nested teams. It tests whether commitment to only one target can motivate dysfunctional conflict handling, while dual commitment motivates integrating responses that better serve the organization.
 
+**Hypotheses / Propositions**
+H1: The positive relationship between team commitment (TC) and Dominating is more positive when organizational commitment (OC) is low and less positive when OC is high; Dominating is highest when TC is high and OC is low.
+H2: The positive relationship between TC and Integrating is more positive when OC is high and less positive when OC is low; Integrating is highest when both commitments are high.
+H3: The positive relationship between OC and Obliging is more positive when TC is low and less positive when TC is high; Obliging is highest when TC is low and OC is high.
+H4: The negative relationship between TC and Avoiding is more negative when OC is low and less negative when OC is high; Avoiding is highest when both commitments are low.
+
 **Mechanism Process**
 - IV(s): Team commitment and organizational commitment, manipulated in Study 1 and measured in Study 2.
 - DV(s): Preferences for four interteam conflict handling strategies: dominating, integrating, obliging, and avoiding.
@@ -58,6 +69,12 @@ The paper asks how employees' team commitment and organizational commitment join
 - Moderators: Team commitment and organizational commitment moderate each other's effects; the focal tests are TC x OC interactions.
 
 The mechanism is that commitment binds employees to act on behalf of a target, but interteam conflict creates tension between team-level and organization-level interests. High team commitment without high organizational commitment increases concern for the own team and makes dominating more attractive. High organizational commitment without high team commitment can make employees neglect own-team concerns and oblige the other team. When both commitments are high, employees are motivated to preserve team interests while also serving organizational goals, increasing the likelihood of integrating conflict handling.
+
+**Data & Measures**
+Study 1 uses 1,432 vignette-level observations from 179 German Armed Forces soldiers. TC and OC were experimentally manipulated as high or low in eight reality-based scenarios per respondent; preferences for Dominating, Integrating, Obliging, and Avoiding were rated on five-point scales and analyzed with multilevel linear regression. Study 2 analyzes 692 usable surveys from the same organizational context. Its four conflict-strategy preferences were measured with modified ROCI-II items; OC and TC used four- and three-item Affective Commitment Scale measures, respectively, all on five-point scales, followed by hierarchical regressions with controls.
+
+**Key Findings**
+Study 1 supported all four hypotheses: Dominating was highest under high TC and low OC (H1), Integrating under high TC and high OC (H2), Obliging under low TC and high OC (H3), and Avoiding under low TC and low OC (H4). Study 2 confirmed the predicted interactions for Dominating (H1) and Integrating (H2). The predicted interaction for Obliging (H3) was not supported: both TC and OC instead had positive main effects. H4 was partially confirmed because TC and OC each related negatively to Avoiding, but their interaction was nonsignificant, indicating additive rather than compensatory effects.
 
 **Theoretical Contribution**
 The paper contributes to commitment and intergroup-relations research by showing that team and organizational commitment should be analyzed interactively rather than as independent positive attachments. It extends the common in-group identity model, mutual intergroup differentiation model, and in-group projection model into organizationally nested interteam conflict, where conflict has a social dilemma structure involving the focal team, the other team, and the organization. The findings support a dual commitment model: simultaneous team and organizational commitment reduces dysfunctional preferences and strengthens integrating conflict handling.

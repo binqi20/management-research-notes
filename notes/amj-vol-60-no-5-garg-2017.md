@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-5/pdfs/Garg 2017 Unpacking the CEO–Board Rela
 text_path: "library/AMJ/vol-60-no-5/text/Garg 2017 Unpacking the CEO–Board Relationship How Strategy Making Happens in Entrepreneurial Firms.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-29"
 
 paper_type: "empirical-qualitative"
 keywords: ["CEO-board relationship", "strategy-making process", "entrepreneurial firms", "resource dependence theory", "venture governance", "resource versus power tradeoff"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "resource dependence theory and venture governance"
   methods_overview: "Using the inductive multiple-case study approach"
   keywords_source: "resource versus power tradeoff"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Our focal outcome variable is the effectiveness of"
+  findings_overview: "venture CEOs use four behaviors to resolve"
 ---
 
 # Unpacking the CEO–Board Relationship: How Strategy Making Happens in Entrepreneurial Firms
@@ -52,6 +57,9 @@ We examine how venture CEOs effectively engage their boards in the strategy-maki
 **Research Question**
 How do venture CEOs effectively engage in strategy making with their boards? The paper asks how CEOs in professionally funded young firms draw useful advice from knowledgeable but busy or potentially misaligned directors while retaining enough power to move the strategy-making process forward.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core tension: Venture CEOs need board resources such as advice, legitimacy, funding, and connections, but board engagement can reduce CEO power when directors are busy, conflicted, or misaligned.
 - Effective process behaviors: More effective CEOs use dyadic interactions and unique director roles, propose single formal alternatives in board meetings, run dedicated strategic brainstorming sessions outside regular board meetings, and use political action to close the strategy-making process.
@@ -59,6 +67,12 @@ How do venture CEOs effectively engage in strategy making with their boards? The
 - Emergent outcome: These process behaviors help CEOs obtain better director advice while preserving control over the direction, pace, and closure of board-level strategy making.
 
 The process logic is "divide and conquer": effective venture CEOs divide board attention into dyadic roles, distinct meeting formats, and selective alliances, then place themselves at the center as orchestrators of the strategy process. The framework explains why CEO-board relationships are not only a matter of board composition or incentives, but also a sequence of behaviors through which CEOs manage the resource-versus-power tradeoff.
+
+**Data & Measures**
+The longitudinal, multi-source corpus covers four ventures and combines observations of 16 board meetings, 93 semi-structured interviews conducted in four or five waves per firm, and archival materials. The researchers developed case histories, coded the data independently before resolving differences through discussion and revisiting raw data, and conducted cross-case analysis using replication logic. The focal outcome—effectiveness of the board-level strategy-making process—was assessed at strategy-making and firm levels through triangulated qualitative and quantitative measures of progress and effectiveness; the four process behaviors were assessed with behavioral counts and representative quotations.
+
+**Key Findings**
+The more effective CEOs engaged directors in dyadic interactions and unique roles, proposed single formal alternatives in board meetings, held strategic brainstorming apart from regular board meetings, and used political action late in the process to achieve closure. These interlinked behaviors helped them obtain useful advice while retaining power; less effective CEOs did not combine the behaviors in this way. One CEO's shift during the study from an ineffective to a more effective approach provided within-case evidence consistent with the emergent framework, but the authors explicitly did not test the framework.
 
 **Theoretical Contribution**
 The paper clarifies the resource-versus-power tradeoff as a central tension in venture governance and returns resource dependence theory to its exchange-theoretic roots. It adds a process component to resource dependence by identifying four CEO behaviors that resolve this tension during board-level strategy making. It also reframes the venture CEO-board relationship from the CEO's perspective and treats CEO-director dyads, rather than the board as a single group, as the more fundamental exchange relationship.
