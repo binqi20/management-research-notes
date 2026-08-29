@@ -250,6 +250,14 @@ Propositions, Data & Measures, and Key Findings. Two tiers, two treatments:
   an agent ADDS the three sections + three anchors + version bump + provenance
   lines (`augmented_model`, `augmented_at`) and changes nothing else.
   `extraction_model` keeps recording who wrote the six original fields.
+  **Named-entity verification (mandatory, batch-25 lesson):** every proper noun
+  an augmenter writes into the three NEW sections — database and data-source
+  names, scale names, software, panel names — must be grep-verified present in
+  the raw extracted text before writing, exactly as anchors are. Batch 25's
+  krause note drew the backfill's first UNSUPPORTED verdict when its Data &
+  Measures draft named five data sources the paper never mentions; the blind
+  audit caught it, but the class is writer-side fabrication and must be
+  blocked at the writer.
   **`tools/verify_augmentation.py`** (the diff-guard, Layer 0 of the backfill)
   mechanically proves the do-not-touch guarantee against the git HEAD version
   after every augmentation, before the audit.
