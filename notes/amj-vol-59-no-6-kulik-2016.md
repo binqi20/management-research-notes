@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Kulik 2016 Engage Me The Mature-Age Work
 text_path: "library/AMJ/vol-59-no-6/text/Kulik 2016 Engage Me The Mature-Age Worker and Stereotype Threat.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["mature-age workers", "stereotype threat", "employee engagement", "high performance practices", "mature-age practices"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "We used a stereotype threat framework"
   methods_overview: "using hierarchical multiple regression"
   keywords_source: "young manager, young workgroup, manual"
+  hypotheses_source: "Hypothesis 5a. The indirect relationship between"
+  measures_overview: "We measured engagement in Wave 3 using seven"
+  findings_overview: "threat in the workplace reported lower engagement 11–12 months later."
 ---
 
 # Engage Me: The Mature-Age Worker and Stereotype Threat
@@ -52,6 +57,13 @@ As the workforce ages, and people retire later in life, organizations will need 
 **Research Question**
 How do threat-inducing contextual cues and threat-inhibiting organizational practices shape stereotype threat and later engagement among mature-age workers? The paper asks whether high performance practices and mature-age practices reduce stereotype threat and whether they buffer the threat associated with young managers.
 
+**Hypotheses / Propositions**
+- H1a–c: Younger managers, young workgroups, and manual occupations are associated with higher stereotype threat.
+- H2a–c: These threat-inducing contextual cues have indirect effects on engagement through stereotype threat, with the lowest engagement under younger managers, young workgroups, and manual occupations.
+- H3a–b: High performance practices and mature-age practices are each associated with lower stereotype threat.
+- H4a–b: High performance practices and mature-age practices each have positive indirect effects on engagement through stereotype threat.
+- H5a–b: High performance practices and mature-age practices each weaken the indirect relationship between manager age and engagement through stereotype threat.
+
 **Mechanism Process**
 - IV(s): Young manager, young workgroup, manual occupation, high performance practices, and mature-age practices.
 - DV(s): Mature-age worker engagement.
@@ -59,6 +71,12 @@ How do threat-inducing contextual cues and threat-inhibiting organizational prac
 - Moderators: High performance practices and mature-age practices in the relationship between manager age and engagement.
 
 The proposed mechanism is that mature-age workers monitor workplace cues to judge whether they may be evaluated through negative age stereotypes. Threat-inducing cues increase stereotype threat, which depletes psychological resources and reduces later engagement. High performance practices affirm personal identity, while mature-age practices affirm age-group identity; both reduce stereotype threat, but mature-age practices are especially useful for counteracting cues from young managers.
+
+**Data & Measures**
+The analytic sample comprised 666 mature-age employees in Australia who completed all three waves and worked for the same employer throughout. Manager age was continuous; workgroup age and occupation were dichotomized. High performance practices were assessed with eight Wave 2 items, mature-age practices with eight Wave 1 items, and stereotype threat with five Wave 2 items modified to focus on age. Engagement was measured in Wave 3 with seven items from the Utrecht Work Engagement Scale. Analyses used hierarchical multiple regression, Relative Weight Analysis with RWA-Web, and the PROCESS macro for SPSS with bias-corrected bootstrapping.
+
+**Key Findings**
+H1a–c and H3a–b were supported: younger managers, young workgroups, and unskilled manual occupations predicted higher stereotype threat, while both practice bundles predicted lower stereotype threat. H2a–c and H4a–b were supported because all five contextual cues had significant indirect effects on engagement through stereotype threat. H5b was supported: mature-age practices weakened the indirect effect of manager age, and manager age was nonsignificant at high levels of those practices. H5a was not supported for the hypothesized indirect moderation; instead, high performance practices moderated the direct effect of manager age on engagement.
 
 **Theoretical Contribution**
 The paper extends stereotype threat research into an organizational, mature-age worker setting and shows that chronic workplace cues are associated with later engagement, not only immediate task performance. It also contributes to diversity management by showing that identity blind high performance practices and identity conscious mature-age practices operate independently and additively rather than as substitutes.

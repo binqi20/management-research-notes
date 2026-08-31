@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Banks 2016 Management’s Science–Prac
 text_path: "library/AMJ/vol-59-no-6/text/Banks 2016 Management’s Science–Practice Gap A Grand Challenge for All Stakeholders.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-mixed"
 keywords: ["science–practice gap", "stakeholder theory", "grounded theory", "grand challenges", "knowledge creation", "knowledge transfer", "collaboration costs"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "by applying stakeholder theory"
   methods_overview: "we used qualitative content analysis"
   keywords_source: "science–practice gap by applying stakeholder theory"
+  hypotheses_source: "Proposition 1: Mutual knowledge of utility"
+  measures_overview: "we used qualitative content analysis"
+  findings_overview: "our work identified 22 grand challenges"
 ---
 
 # Management’s Science–Practice Gap: A Grand Challenge for All Stakeholders
@@ -55,6 +60,13 @@ Despite multiple high-profile calls—across decades and from multiple stakehold
 **Research Question**
 The paper asks how management academics and practitioners can overcome collaboration challenges in knowledge creation and transfer, how information asymmetry and goal incongruence raise collaboration costs, and how grand challenges can reduce the science–practice gap. It also asks which grand challenges academics view as accomplished, which future challenges academics and practitioners identify, and how those challenges can be leveraged for collaboration.
 
+**Hypotheses / Propositions**
+The paper derives rather than statistically tests four formal propositions:
+- Proposition 1: Mutual knowledge of utility functions can mitigate the negative effects of information asymmetry.
+- Proposition 2: Identifying and establishing mutual goals—grand challenges that interest academics and practitioners—can mitigate the negative effects of goal incongruence.
+- Proposition 3: Greater collaboration between academics and practitioners creates knowledge that is more valuable to stakeholders by combining different perspectives and joint work.
+- Proposition 4: Effective communication of created knowledge to stakeholders depends on incentives for knowledge holders and on the use of optimal communication channels.
+
 **Mechanism Process**
 - Key constructs / tensions: science–practice gap, information asymmetry, goal incongruence, collaboration costs, utility functions, grand challenges, knowledge creation, and knowledge transfer.
 - Process / models: information asymmetry and goal incongruence increase collaboration costs; knowledge of utility functions and mutually valued grand challenges reduce those costs; lower collaboration costs enable knowledge creation with collaboration.
@@ -62,6 +74,12 @@ The paper asks how management academics and practitioners can overcome collabora
 - Empirical basis: grounded theory analysis produced theoretical models and propositions; survey-based qualitative content analysis identified 22 grand challenges, including overlapping academic and practitioner priorities.
 
 The core process is that academics and practitioners often develop knowledge separately because they do not understand one another’s utility functions and do not always share aligned goals. Stakeholder theory is used to argue that reciprocal exchanges, mutual value creation, and attention to shared grand challenges can lower collaboration costs and create more valuable knowledge. The paper treats the science–practice gap as both a knowledge creation problem and a knowledge transfer problem.
+
+**Data & Measures**
+The interview/focus-group strand comprised 38 interviewees (22 practitioners and 16 academics) and a seven-participant member-check focus group (four practitioners and three academics). The authors analyzed 331 transcript pages through open, axial, and selective coding, using triangulation, theoretical saturation, and member checks. The survey strand comprised 1,767 participants (828 academics and 939 practitioners) recruited through direct emails, listservs, and MTurk. Open-ended responses were organized in ATLAS.ti and analyzed through qualitative content analysis: a coding frame was developed from 100 responses, three independent coders coded the data, and interrater reliability was 0.91.
+
+**Key Findings**
+The grounded-theory analysis indicated that information asymmetry and goal incongruence contribute to collaboration costs. Knowledge of the parties’ utility functions can mitigate information asymmetry, shared grand challenges can mitigate goal incongruence, and lower collaboration costs can enable joint knowledge creation that combines different perspectives. Effective knowledge transfer also depended on incentives and appropriate communication channels. The survey-based qualitative content analysis identified 22 future grand challenges: eight shared, eight unique to academics, and six unique to practitioners; pay inequality across demographic groups, employee rank, and social class was the most discussed challenge.
 
 **Theoretical Contribution**
 The paper extends stakeholder theory by applying it to the management science–practice gap and by specifying how information asymmetry, goal incongruence, utility functions, grand challenges, and collaboration costs shape stakeholder collaboration. It contributes theoretical models and propositions for knowledge creation and knowledge transfer, arguing that collaboration between academics and practitioners can create more valuable knowledge by capitalizing on different perspectives and joint work.

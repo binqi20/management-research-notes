@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Rond 2016 Some Things Can Never Be Unsee
 text_path: "library/AMJ/vol-59-no-6/text/Rond 2016 Some Things Can Never Be Unseen The Role of Context in Psychological Injury at War.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["psychological injury", "institutional context", "war", "senselessness", "futility", "surreality", "existential grounding"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "institutional context as a contributing factor"
   methods_overview: "Ethnographic data were collected over 16 months"
   keywords_source: "senselessness, futility, and surreality"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Both authors coded the fieldnotes"
+  findings_overview: "sustained experiences of senselessness, futility, and surreality that are partially rooted in cultural"
 ---
 
 # Some Things Can Never Be Unseen: The Role of Context in Psychological Injury at War
@@ -51,6 +56,9 @@ Recent wars in Iraq and Afghanistan have reignited debates on how to prevent and
 **Research Question**
 The paper asks what role cultural, professional, and organizational contexts play in the experience of psychological distress at war. It examines how institutional context shapes what deployed medical personnel experience as traumatic beyond direct exposure to combat threat.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key contexts / expectations: cultural expectations of innocence and normality, professional role identity as medical caregivers, and organizational military protocol.
 - Distressing experience themes: senselessness, futility, and surreality.
@@ -59,6 +67,12 @@ The paper asks what role cultural, professional, and organizational contexts pla
 - Emergent outcome: sustained contextual dissonance threatens existential grounding and makes improvised coping strategies only temporarily effective.
 
 The process account is interpretive rather than variable-causal. The authors argue that institutional context filters and amplifies exposure to war by producing dissonance between what medics understand as meaningful, good, and normal and what they encounter in practice. Because the same professional and organizational contexts also inhibit open processing of distress, medics rely on improvised coping strategies that may temporarily distance them from distress but do not resolve its contextual sources.
+
+**Data & Measures**
+One author collected ethnographic data over 16 months, from April 2010 through August 2011, including predeployment training and a six-week deployment with a DCS team at Camp Bastion. Fieldnotes formed the main corpus; additional sources included informants’ reflections, poetry, two post-tour reports, hospital admissions and triage data, data from weekly morbidity and mortality meetings, about 1,000 usable photographs, and the ethnographer’s headnotes. Both authors independently coded fieldnotes for distressing events and coping strategies, compared and reconciled codes, temporally bracketed contextual data, and used interpretive and abductive reasoning to develop the model.
+
+**Key Findings**
+The team’s lived experience of work at war was characterized by sustained senselessness, futility, and surreality. Cultural, professional, and organizational contexts produced dissonance between institutionalized expectations and experience on the ground; when unresolved and sustained, this dissonance threatened existential grounding. The medics used five improvised coping strategies—avoiding, bracketing, humor, recovering familiarity, and reclaiming control—but these offered only temporary escape and could amplify distress by increasing the contrast between life at war and life at home.
 
 **Theoretical Contribution**
 The paper develops a contextual explanation of psychological distress at war that complements individual-level trauma accounts. It contributes to organizational research by showing how context theory and institutional theory can explain existential threat in organizations: institutional context socializes expectations, produces dissonance when those expectations clash with lived experience, and supplies coping resources that may fail or even amplify distress.

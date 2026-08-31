@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/George 2016 Management Research in AMJ C
 text_path: "library/AMJ/vol-59-no-6/text/George 2016 Management Research in AMJ Celebrating Impact While Striving for More.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "editorial"
 keywords: ["management research", "research impact", "actionability", "grand challenges", "research dissemination", "business schools", "responsible science", "AMJ editorship"]
@@ -51,6 +53,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how management research can have greater impact beyond publication, citation, and internal scholarly recognition. It reflects on how AMJ scholarship can remain rigorous while becoming more significant, actionable, visible, and useful to managers, policy makers, business schools, and society.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Management scholarship should celebrate the robust knowledge it already produces while pushing harder toward broader managerial, organizational, and societal impact.
 - Topic choice: Impact begins with bolder research topics that emphasize significance, novelty, curiosity, scope, and actionability rather than only literature gaps or methodological refinements.
@@ -60,6 +65,12 @@ The editorial asks how management research can have greater impact beyond public
 - Institutional context: Business schools, funders, accrediting bodies, and responsible-science initiatives are putting impact at the center of research evaluation and mission.
 
 The process is editorial and agenda-setting rather than empirical. George argues that impact grows from selecting consequential phenomena, using rigorous and varied methods, communicating research beyond the published article, and aligning business-school research with societal usefulness. The editorial closes by connecting this impact agenda to the outgoing AMJ team's service record and the journal's transition into its 60th year.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new named theory. Its contribution is to reframe AMJ's research-impact agenda around bolder topic selection, phenomenon-driven theorizing, methodological richness, active dissemination, and business-school accountability for societal relevance.
@@ -71,7 +82,7 @@ For management scholars, the editorial recommends choosing topics with significa
 The editorial is a reflective essay by the outgoing AMJ editor rather than a systematic empirical study or formal review. Its examples come mainly from AMJ Best Paper Award finalists, AMJ editorials, and the author's editorial and dean experience, so the claims are illustrative rather than comprehensive.
 
 **Future Research**
-The editorial calls for more management research on significant organizational and societal problems, including grand challenges and emergent phenomena whose managerial implications are not yet well understood. It also encourages scholars to examine how research can create impact through practice, policy, teaching, dissemination, and responsible-science initiatives beyond conventional citation metrics.
+The editorial calls for more management research on significant organizational and societal problems, including grand challenges and emergent phenomena whose managerial implications are not yet well understood.
 
 **APA 7th Citation**
 George, G. (2016). Management research in AMJ: Celebrating impact while striving for more. *Academy of Management Journal*, 59(6), 1869-1877. https://doi.org/10.5465/amj.2016.4006

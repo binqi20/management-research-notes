@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/George 2016 Understanding and Tackling S
 text_path: "library/AMJ/vol-59-no-6/text/George 2016 Understanding and Tackling Societal Grand Challenges through Management Research.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "editorial"
 keywords: ["grand challenges", "societal grand challenges", "management research", "Sustainable Development Goals", "coordinated effort", "collaborative effort", "multilevel actions", "socially inclusive society"]
@@ -54,6 +56,9 @@ evidence:
 **Research Question**
 How can management research help formulate, articulate, coordinate, and empirically study societal grand challenges that individuals, organizations, communities, and nations face? The editorial asks how management scholars can convert persistent global problems into tractable organizational and managerial research questions.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Grand challenges require coordinated and collaborative effort across multiple stakeholders, levels, and institutional contexts.
 - Articulation and participation: Collective goals need to be framed in ways that inspire voice, identification, purpose, and stakeholder engagement.
@@ -64,6 +69,12 @@ How can management research help formulate, articulate, coordinate, and empirica
 - Outcomes and impact: Success can appear as resilience, innovation, sustainability, behavioral change, goal attainment, and measurable societal impact.
 
 The process is conceptual and editorial rather than causal-variable based. George, Howard-Grenville, Joshi, and Tihanyi argue that management research can study how grand challenges are formulated, how actors participate, what barriers and constraints shape action, and how multilevel coordinating architectures influence outcomes. The framework is meant to help scholars break large social problems into smaller empirical questions that remain connected to broader societal impact.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes a management-oriented definition of grand challenges and a higher-order framework for studying them through organizational and multilevel lenses. It positions grand challenges as managerial as well as societal problems, emphasizing articulation, stakeholder coordination, institutional context, reinforcing mechanisms, and outcomes. Rather than offering a new named theory, it provides a structure for developing theory and empirical research around societal problems.

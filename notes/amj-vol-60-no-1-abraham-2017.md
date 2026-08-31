@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/Abraham 2017 Pay Formalization Revisited
 text_path: "library/AMJ/vol-60-no-1/text/Abraham 2017 Pay Formalization Revisited Considering the Effects of Manager Gender and Discretion on Closing the Gender Wage Gap.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["formalization of pay systems", "gender wage gap", "social identity theory", "manager gender", "gender pay inequality", "less formalized pay systems"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "I draw on social identity theory"
   methods_overview: "estimating equations models accounting for both"
   keywords_source: "formalization of pay systems"
+  hypotheses_source: "Hypothesis 1b. For less formalized components"
+  measures_overview: "Less formalized pay was measured as annual base"
+  findings_overview: "support for Hypothesis 1b, but not Hypothesis 1a."
 ---
 
 # Pay Formalization Revisited: Considering the Effects of Manager Gender and Discretion on Closing the Gender Wage Gap
@@ -51,6 +56,12 @@ While most studies of the formalization of pay systems suggest that it helps red
 **Research Question**
 Under what conditions do less formalized pay systems reduce, rather than perpetuate, gender pay inequality? The paper asks whether male and female managers use discretion differently in pay decisions and whether those differences depend on the organizational position of the employees being evaluated.
 
+**Hypotheses / Propositions**
+- H1a: For less formalized pay, female employees will earn more under female than male managers.
+- H1b: For less formalized pay, male employees will earn more under male than female managers.
+- H2a: For less formalized pay, female employees in lower-level positions will earn more under female than male managers.
+- H2b: For less formalized pay, male employees in lower-level positions will earn less under female than male managers.
+
 **Mechanism Process**
 - IV(s): Pay-system formalization, especially less formalized base salary versus more formalized bonus pay; manager gender; employee gender; and employee organizational position.
 - DV(s): Gender differences in annual base salary and annual bonus pay among non-managerial employees within the same branch positions.
@@ -58,6 +69,12 @@ Under what conditions do less formalized pay systems reduce, rather than perpetu
 - Moderators: Manager gender and organizational position, with the key conditional effect concentrated among tellers, the lowest-status branch role.
 
 The mechanism is that formalized pay constrains managerial discretion, whereas less formalized pay allows manager identity and status dynamics to shape compensation decisions. Drawing on social identity theory, the paper argues that male and female managers may differ in their gender-based in-group preferences when they have discretion. Because women are a lower-status gender group and managerial roles are higher-status positions, female managers are expected to favor female subordinates most clearly in lower-status jobs, where support for women is less status-threatening. Empirically, female managers close the base-salary gap among tellers by paying female tellers more and male tellers less than male managers do; the same pattern does not appear for formalized bonus pay or for higher-status positions.
+
+**Data & Measures**
+The study uses FinServ personnel records for 897 unique full-time non-managerial employees (2,139 person-years) and 156 branch managers across 120 retail branches. The dependent variables are logged annual base salary and annual bonus pay: base salary operationalizes less formalized pay with greater managerial discretion, whereas bonus pay operationalizes highly formalized pay with minimal discretion. Employee gender and manager gender are binary indicators; their interaction captures gender-pay differences by manager gender. Five organizational-position indicators, with teller as the reference category, support the position-specific tests. Longitudinal cross-sectional time-series generalized estimating equation models account for heteroscedasticity, first-order autocorrelation, repeated observations, and employee clustering within branches; the design is observational and associational.
+
+**Key Findings**
+H1b was supported: pooled across positions, male employees reporting to male managers earned approximately 5% higher base salaries than male employees reporting to female managers (p < .01). H1a was not supported because female employees' pooled base salaries did not differ by manager gender. H2a and H2b were supported for tellers: under female rather than male managers, female tellers earned approximately 6% higher base salaries and male tellers earned over 4% lower base salaries (both p < .05), leaving nearly equal base salaries versus a 7.5% gap under male managers (p < .01). No manager-gender differences appeared for bonus pay or for other organizational positions.
 
 **Theoretical Contribution**
 The paper shifts the formalization debate from whether formalized pay systems reduce inequality on average to when discretion can reduce inequality. It shows that the effects of pay formalization depend on who exercises discretion and on the local status ordering of the employees being evaluated. The contribution is a more conditional account of gender pay inequality that connects pay-system formalization, manager gender, social identity theory, and hierarchical position.

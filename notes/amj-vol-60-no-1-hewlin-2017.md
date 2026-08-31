@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/Hewlin 2017 To Thine Own Self Be True Fa
 text_path: "library/AMJ/vol-60-no-1/text/Hewlin 2017 To Thine Own Self Be True Facades of Conformity, Values Incongruence, and the Moderating Impact of Leader Integrity.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["facades of conformity", "values congruence", "leader integrity", "work engagement", "social exchange theory", "person-organization fit"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "According to social exchange theory"
   methods_overview: "We conducted two studies to test our predictions."
   keywords_source: "leader integrity influences the tendency to create facades of conformity"
+  hypotheses_source: "We conducted two studies to test our predictions."
+  measures_overview: "Facades of conformity. We used Hewlin’s (2009)"
+  findings_overview: "Therefore, Hypotheses 3 is supported."
 ---
 
 # To Thine Own Self Be True? Facades of Conformity, Values Incongruence, and the Moderating Impact of Leader Integrity
@@ -52,6 +57,11 @@ When employees feel that their values do not match those of the organization, th
 **Research Question**
 The paper asks how perceived leader integrity changes the relationship between employees' values congruence and their creation of facades of conformity. It also asks whether facade creation helps explain why low values congruence reduces work engagement.
 
+**Hypotheses / Propositions**
+- H1: Leader integrity moderates the negative relationship between values congruence and facades of conformity; the relationship is stronger under high rather than low leader integrity.
+- H2: Creating facades of conformity is negatively related to work engagement.
+- H3: Leader integrity moderates the indirect effect of values congruence on work engagement through facades of conformity; the indirect effect is greater under high rather than low leader integrity.
+
 **Mechanism Process**
 - IV(s): Values congruence between the individual and the organization or group.
 - DV(s): Facades of conformity and, in Study 2, work engagement.
@@ -59,6 +69,12 @@ The paper asks how perceived leader integrity changes the relationship between e
 - Moderators: Perceived leader integrity moderates the relationship between values congruence and facade creation.
 
 The mechanism is that high-integrity leaders create a positive social exchange context in which members with incongruent values may feel stronger pressure to reciprocate by conforming to organizational values. For those members, high leader integrity magnifies the tendency to suppress divergent personal values and pretend to embrace organizational values. Facade creation then reduces work engagement because inauthentic self-presentation consumes emotional and cognitive resources and weakens connection to work.
+
+**Data & Measures**
+Study 1 was a randomized 2 x 2 laboratory experiment with 131 undergraduates. Values congruence and leader integrity were manipulated; two blinded judges coded participants' discussion statements for facades of conformity on a 1–7 scale. The study used ANOVA in SPSS. Study 2 was a two-wave Qualtrics panel survey of 135 working adults, with surveys spaced 10 days apart. Values congruence was measured at Time 1 with a three-item scale; facades of conformity (six items), leader integrity (seven items), and work engagement (nine items) were measured at Time 2. Analyses used moderated regression and the PROCESS macro in SPSS, Model 7; the survey design supports associational, not causal, inference.
+
+**Key Findings**
+Study 1 supported H1: values congruence and leader integrity interacted significantly in predicting facade creation (F[3,127] = 4.56, p < .05, η² = .04); values congruence affected facades under high leader integrity but not low leader integrity. Study 2 replicated H1 (interaction b = −.14, SE = .05, p < .01), supported H2 (facades predicted lower work engagement: b = −.22, SE = .10, p < .05), and supported H3. The conditional indirect effect was nonsignificant at low leader integrity (b = −.03, SE = .02, LLCI = −.10, ULCI = .00) but significant at high leader integrity (b = .05, SE = .03, LLCI = .00, ULCI = .14); the moderated-mediation index was significant (b = .03, SE = .02, LLCI = .00, ULCI = .08).
 
 **Theoretical Contribution**
 The paper contributes to leadership theory by showing a counterintuitive downside of a valued leader attribute: leader integrity can heighten conformity rather than always encouraging authentic expression. It extends person-organization fit research by introducing facades of conformity as an explanatory mechanism linking low values congruence to work engagement. It also connects fit, leadership, authenticity, and self-presentation research by showing how leaders influence followers' self-presentational choices.

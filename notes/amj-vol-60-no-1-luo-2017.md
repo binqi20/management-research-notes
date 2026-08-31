@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/Luo 2017 Whose Call to Answer Institutio
 text_path: "library/AMJ/vol-60-no-1/text/Luo 2017 Whose Call to Answer Institutional Complexity and Firms’ CSR Reporting.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["CSR reporting", "institutional complexity", "conflicting government pressures", "central government", "provincial governments", "decoupling", "China"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "CSR reporting is viewed as an organizational response to institutional complexity"
   methods_overview: "We used discrete-time event history analysis to"
   keywords_source: "conflicting pressures from the state"
+  hypotheses_source: "Hypothesis 3. Among the firms that issue CSR"
+  measures_overview: "quality with the ratings published by RKS (Rankins CSR Ratings)."
+  findings_overview: "early adoption but low-quality reports."
 ---
 
 # Whose Call to Answer: Institutional Complexity and Firms’ CSR Reporting
@@ -52,6 +57,13 @@ While research on the disclosure of CSR (corporate social responsibility) recogn
 **Research Question**
 The paper asks how conflicting pressures from different levels of the state shape firms' CSR reporting behavior after central government guidelines encourage disclosure. It examines whether Chinese listed firms exposed to both central government scrutiny and provincial GDP-growth pressure respond through early CSR report issuance but lower-quality implementation.
 
+**Hypotheses / Propositions**
+- H1a: Central-government-linked and larger firms will issue CSR reports more swiftly.
+- H1b: Among reporting firms, central-government-linked and larger firms will issue higher-quality CSR reports.
+- H2a: Firms in provinces whose governments prioritize GDP growth will issue CSR reports more slowly.
+- H2b: Among reporting firms, those in provinces whose governments prioritize GDP growth will issue lower-quality CSR reports.
+- H3: Among reporting firms in high-GDP-priority provinces, central-government-linked and larger firms will decouple through early issuance combined with low report quality.
+
 **Mechanism Process**
 - IV(s): Central government linkage through central government ownership and national political appointment, firm size, provincial government priority on GDP growth, and interactions between firm attributes and provincial GDP priority.
 - DV(s): CSR report issuance hazard, CSR report quality, and a decoupling response defined as early first report issuance with below-average report quality.
@@ -59,6 +71,12 @@ The paper asks how conflicting pressures from different levels of the state shap
 - Moderators: Provincial government priority on GDP growth moderates the relationship between central government ownership or firm size and report quality/decoupling; the interaction with national political appointment receives weaker support.
 
 The mechanism is that central government CSR guidelines create legitimacy pressure to disclose, while provincial governments focused on short-term GDP growth make substantive CSR activity less aligned with local priorities. Firms that are large or centrally linked face heightened scrutiny from both sides, so they cannot simply ignore either constituency. They accommodate the conflict by issuing reports quickly to signal conformity to central expectations while producing lower-quality reports that preserve room to satisfy local growth priorities. The empirical results support this decoupling pattern for central government ownership and firm size, but not clearly for national political appointment.
+
+**Data & Measures**
+The full sample contains 6,709 firm-year observations for 2,028 publicly listed firms from 2008–2011; the report-quality and decoupling analyses use 1,779 observations from 584 reporting firms. Report issuance is modeled as a hazard rate. Report quality is the RKS weighted rating, ranging from 0 to 100, and decoupling equals one when a firm's first report appeared in 2008 or 2009 and its quality was below that year's firm average. Central government ownership and national political appointment are indicators, firm size is logged employees, and provincial GDP-growth priority is a composite based on content analysis of Five-Year Plans. Firm data come chiefly from CSMAR. The study uses discrete-time event history analysis for issuance, random-effects linear regression with a two-stage Heckman selection correction for quality, and random-effects logistic regression for decoupling, clustering standard errors by province.
+
+**Key Findings**
+H1a was supported: central government ownership, national political appointment, and firm size positively predicted report issuance. H1b received strong support because all three attributes positively predicted report quality. H2a was not supported: provincial GDP-growth priority had a negative but nonsignificant effect on issuance. H2b was supported: provincial GDP-growth priority negatively predicted report quality. H3 received partial support: under higher provincial GDP-growth priority, central government ownership and firm size predicted greater decoupling, but the interaction for national political appointment was not significant.
 
 **Theoretical Contribution**
 The paper extends CSR disclosure research by showing that the state is not a single institutional actor: fragmented central and provincial priorities can weaken the substantive quality of firms' compliance with CSR reporting guidelines. It contributes to institutional complexity research by identifying a specific form of decoupling that combines speedy adoption with low-quality implementation, rather than treating adoption and implementation as a single symbolic-versus-substantive choice. It also shows that attributes usually associated with stronger conformity, such as central linkage and large size, can produce either high-quality compliance or decoupling depending on whether institutional pressures conflict.

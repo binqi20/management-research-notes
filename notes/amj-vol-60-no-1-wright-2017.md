@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/Wright 2017 Maintaining the Values of a 
 text_path: "library/AMJ/vol-60-no-1/text/Wright 2017 Maintaining the Values of a Profession Institutional Work and Moral Emotions in the Emergency Department.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["professional values", "institutional work", "moral emotions", "specialization", "emergency-department physicians"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "professions as institutions comprised of regulative,"
   methods_overview: "inductive theory building from qualitative data"
   keywords_source: "professional values through two distinct processes of institutional work in which moral"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We collected a mixture of observation, interview"
+  findings_overview: "are enduring and shared across specialists. These emotions mobilize collective action in"
 ---
 
 # Maintaining the Values of a Profession: Institutional Work and Moral Emotions in the Emergency Department
@@ -52,6 +57,9 @@ Specialization within professions creates challenges for maintaining the macro-l
 **Research Question**
 The paper asks how specialist actors maintain the values of their profession in everyday work inside organizations. It examines how professional values are maintained when specialization refracts a shared professional value across specialist groups and when organizational practices conflict with professional values writ large.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: macro-level professional values, specialist interpretations of those values, emergency-referral practices, values refraction, values-practice misalignment, episodic problems, systemic problems, and moral emotions.
 - Episodic process: misaligned specialist interpretations during emergency referrals produce delayed care, patient safety, or contested-responsibility problems; individually experienced and transitory other-suffering or other-condemning moral emotions trigger advocacy, sanctioning, or brokering.
@@ -59,6 +67,12 @@ The paper asks how specialist actors maintain the values of their profession in 
 - Practice outcome: episodic work maintains professional values without changing the practice, while systemic work maintains values by adapting organizational routines.
 
 The process model distinguishes two paths of institutional maintenance work. In Path A, emergency specialists perceive a problem in an individual referral episode, moral emotions are elicited by the patient-victim or the specialist-violator, and the specialist acts through advocacy, sanctioning, or brokering to restore patient-centered professional values. In Path B, groups of specialists perceive that a practice itself violates professional values, shared and enduring moral emotions mobilize collective work, and values are encoded into new or revised organizational routines.
+
+**Data & Measures**
+Data came from observations, interviews, and archival documents gathered at a large public hospital in an Australian city. The episodic analysis treated emergency-referral interactions as episodes: 938 observed episodes were classified as 854 nonproblematic and 84 problematic, and 142 interview segments were coded for problem type, moral emotion, and maintenance action using open and axial coding, with a second author recoding all problematic episodes and a sample of nonproblematic episodes. The systemic analysis assembled three case narratives—trauma protocol, chest pain pathway, and night CT scanning—and compared patterns within and across cases. Additional 2014–2015 field data were kept separate from the earlier data and used to refine the emergent model.
+
+**Key Findings**
+The analysis identified two distinct maintenance processes. When specialist interpretations of professional values were misaligned during referral episodes, individually experienced and transitory other-condemning or other-suffering moral emotions triggered individual advocacy, sanctioning, or brokering; values were maintained while practices remained unchanged. Other-condemning emotions were more likely to prompt sanctioning for delayed-care or patient-safety problems, whereas other-suffering emotions were more likely to prompt advocacy; both types triggered brokering for contested responsibility. When organizational routines were misaligned with professional values, shared and enduring moral emotions mobilized collective work that encoded values in new routines, maintaining values through adapted practices.
 
 **Theoretical Contribution**
 The paper contributes to the study of professions by showing that conflicts among specialists are not only coordination failures or power/status contests; they can also arise from different enactments of a shared professional value in resource-constrained organizational work. It contributes to institutional work theory by specifying how maintenance of an institution's normative pillar occurs through microprocesses in which moral emotions trigger individual work and mobilize collective work. It also contributes to moral-emotions research by showing how a profession as an institution shapes what actors experience as emotion elicitors and whether emotions remain transient and individual or become shared and enduring.

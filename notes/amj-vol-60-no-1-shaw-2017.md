@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/Shaw 2017 Moving Forward at AMJ.pdf"
 text_path: "library/AMJ/vol-60-no-1/text/Shaw 2017 Moving Forward at AMJ.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "editorial"
 keywords: ["AMJ's mission", "theoretical contribution", "review experience", "outreach", "new ways of seeing"]
@@ -51,6 +53,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial transition: Shaw marks the official transition to AMJ's 21st editorial team and thanks the AOM membership, authors, reviewers, prior editors, and outgoing editorial team.
 - Team structure: The editorial introduces a deputy-editor structure, 18 associate editors, qualitative and quantitative editorial streams, a 320-member editorial review board, and managing-editor support.
@@ -59,6 +64,12 @@ Not reported in paper
 - Outreach and theme: The team plans outreach to research communities and regions underserved by AMJ, and frames "new ways of seeing" as an invitation to develop fresh theoretical positions, assumptions, and frameworks for management topics.
 
 The process logic is editorial rather than empirical. Shaw uses the change in editorial leadership to connect AMJ's mission, team design, review operations, outreach activities, and the New Ways of Seeing theme into a three-year agenda for the journal.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new theory. Its contribution is to articulate AMJ's editorial stance on theoretical contribution, arguing that novelty, interestingness, boldness, knowledge accumulation, and theory-driven quantitative research can coexist within the journal's mission.

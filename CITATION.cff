@@ -10,7 +10,7 @@ repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-08-31"
-version: "0.60.0"
+version: "0.61.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,24 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.60.0
+  a published rubric) gates every note into the library. Version 0.61.0
+  (2026-08-31) continues the v3 backfill with Academy of Management Journal
+  volume 60 issue 1 and volume 59 issue 6 — 32 notes, all v2 augmentations. A
+  backfill adds no papers, so the record total remains 1,167; the version-tier
+  census shifts to 61 v1, 368 v2, and 738 v3 notes. All 32 notes passed a fresh
+  full independent 9-field rubric-v2 audit; the final state is 287 of 288
+  prose-field verdicts SUPPORTED, 1 verified-faithful PARTIAL, 0 UNSUPPORTED,
+  and 0 CONTRADICTED. Source verification produced 17 scoped repairs across 10
+  notes over two rounds. The sole accepted PARTIAL is Desai's Future Research:
+  exact fitted-text reconstruction shows that interleaved-reference stripping
+  removed 16.38% of the raw text, including the supporting passage, and read-
+  after-proof review confirms the field is faithful. This batch ran end-to-end
+  on gpt-5.6-sol for augmentation and audit, the ninth such backfill batch.
+  Provenance eras are batches 01–07 claude-opus-4-8, 08–15 claude-opus-5,
+  16–19 gpt-5.6-sol, 20–23 claude-opus-5, and 24–28 gpt-5.6-sol. This batch's
+  workshop review runs the recurring cross-family calibration; the batch-16
+  and batch-24 calibrations both scored 27/27 agreement. Earlier, version
+  0.60.0
   (2026-08-31) continues the v3 backfill with Academy of Management Journal
   volume 60 issues 3 and 2 — 32 notes, all v2 augmentations. A backfill adds no
   papers, so the record total remains 1,167; the version-tier census shifts to
@@ -731,7 +748,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.60.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.61.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

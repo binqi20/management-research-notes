@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Luo 2016 Mobilization in the Internet Ag
 text_path: "library/AMJ/vol-59-no-6/text/Luo 2016 Mobilization in the Internet Age Internet Activism and Corporate Response.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["Internet activism", "corporate response", "corporate donations", "social comparison", "public image vulnerability", "authoritarian regimes"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "to a political opportunity structure"
   methods_overview: "We use continuous-time event history analysis"
   keywords_source: "Internet activism provides a novel mechanism"
+  hypotheses_source: "subsequently make donations faster than other"
+  measures_overview: "a firm had received any of these awards or been listed"
+  findings_overview: "positive effect on the speed of donation (p , .01,"
 ---
 
 # Mobilization in the Internet Age: Internet Activism and Corporate Response
@@ -52,6 +57,17 @@ Civil society’s inability to hold powerful businesses accountable in authorita
 **Research Question**
 The paper asks whether and how Internet activism can pressure large corporations to respond to social demands in authoritarian regimes where traditional civil society, organized protest, and press freedom are constrained. It examines this question through Chinese firms' donation responses after the 2008 Sichuan earthquake.
 
+**Hypotheses / Propositions**
+- H1: Firms that compare unfavorably in online rankings by Internet activists will subsequently donate faster than other firms.
+- H2a: The speed of firm donation will be positively related to the amount of Internet coverage of corporate donations.
+- H2b: Internet coverage of corporate donations will affect donation speed more strongly than traditional-media coverage.
+- H3: Private firms will respond faster than state-controlled firms.
+- H4: Real estate firms will respond faster than firms in other industries.
+- H5: High-reputation firms will respond faster than firms without a high reputation.
+- H6a: Firms whose top executives hold high-level political appointments will respond faster than firms whose top executives do not.
+- H6b: Firms whose top executives hold national-level political appointments will respond faster than those with provincial-level appointments.
+- H7: Public-image vulnerability will interact with unfavorable online rankings so that vulnerable firms respond faster through donation.
+
 **Mechanism Process**
 - IV(s): Internet activism pressure through online donation rankings and online articles on corporate donations; unfavorable ranking status; absence from donor rankings.
 - DV(s): Speed of corporate donation response, modeled as the hazard rate of donation; supplementary total donation amount.
@@ -59,6 +75,12 @@ The paper asks whether and how Internet activism can pressure large corporations
 - Moderators: Public image vulnerability, including private ownership, real estate industry membership, high reputation, and executives' political appointments.
 
 Internet activism is theorized to focus public attention rapidly, make corporate donation comparisons salient, and threaten firms' public image. Firms that compare unfavorably in online rankings, or that are vulnerable because of reputation, industry culpability, ownership, or political status, are expected to respond faster to preempt or repair image damage.
+
+**Data & Measures**
+The data cover 613 large publicly listed firms in China, followed daily from May 12 through June 30, 2008. Donation dates and amounts came from formal company announcements; firm data came from Sinofin and annual reports. Donation speed was the hazard of donation, operationalized as days from May 12 until donation, with multiple donations modeled as repeated events. Internet activism pressure was measured with lagged indicators for being ranked as a low donor or not recognized as a donor and with lagged daily counts of online articles; traditional-media coverage was the lagged daily newspaper-article count. Public-image vulnerability was measured through private ownership, real estate industry membership, high reputation based on eight national rankings or awards, and the chair's national- or provincial-level political appointment. The authors estimated continuous-time event-history models using a Gompertz specification, firm-clustered robust standard errors, and propensity-score weighting; supplementary total donation amount, logged, was analyzed with OLS and Heckman models.
+
+**Key Findings**
+H1 received strong support: being ranked as a low donor raised the donation likelihood in a given interval by 57%, and not being recognized as a donor raised it by 210%. H2a was supported, and H2b was strongly supported: online-article coverage had a positive effect on donation speed and a significantly larger effect than traditional-media coverage. H3 was not supported in the main model, although a robustness test excluding donations through May 14 supported it. H4 and H5 were supported: real estate firms and high-reputation firms had 58% and 88% higher donation likelihoods, respectively. H6a was partially supported because national-level appointments predicted faster donation but provincial-level appointments did not; H6b received some support. H7 was largely supported: national-level appointment strengthened the low-donor-ranking effect, and private ownership and high reputation strengthened the not-recognized effect, but the real estate interactions were not significant. Supplementary OLS and Heckman models associated real estate membership, high reputation, and national-level appointment—but not private ownership—with larger total donations.
 
 **Theoretical Contribution**
 The paper develops a theory of Internet activism as a mobilizing structure that can pressure corporations in authoritarian contexts despite weak formal civil society channels. It extends social movement and organization research by identifying online rankings, rapid information diffusion, and social comparison as mechanisms through which dispersed Internet users can create corporate image threat and elicit firm response.

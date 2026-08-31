@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Martin 2016 Echoes of Our Upbringing How
 text_path: "library/AMJ/vol-59-no-6/text/Martin 2016 Echoes of Our Upbringing How Growing Up Wealthy or Poor Relates to Narcissism, Leader Behavior, and Leader Effectiveness.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["parental income", "narcissism", "leader behavior", "leader effectiveness", "leadership behaviors", "social learning theory", "integrative trait-behavioral model"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "social learning theory (Bandura, 1977)"
   methods_overview: "structural equation modeling with"
   keywords_source: "parental income is positively related to narcissism"
+  hypotheses_source: "Hypothesis 2. Narcissism is negatively related to"
+  measures_overview: "four items from the Multifactor Leadership Questionnaire 6S"
+  findings_overview: "Hypotheses 6a and 6c are supported"
 ---
 
 # Echoes of Our Upbringing: How Growing Up Wealthy or Poor Relates to Narcissism, Leader Behavior, and Leader Effectiveness
@@ -52,6 +57,16 @@ We investigate how parental income during an individual’s upbringing relates t
 **Research Question**
 The paper asks how parental income during an individual’s upbringing is associated with later leadership effectiveness after entering an organization. It specifically examines whether higher parental income relates to higher adult narcissism, reduced relational-, task-, and change-oriented leadership behaviors, and lower follower-rated effectiveness and workgroup behavior outcomes.
 
+**Hypotheses / Propositions**
+- H1: Parental income is positively related to future narcissism.
+- H2: Narcissism is negatively related to leaders’ engagement in (a) relational-, (b) task-, and (c) change-oriented behaviors.
+- H3: Leaders’ engagement in (a) relational-, (b) task-, and (c) change-oriented behaviors is positively related to follower perceptions of leader effectiveness.
+- H4: Leaders’ engagement in (a) relational-, (b) task-, and (c) change-oriented behaviors is positively related to citizenship behaviors within their units.
+- H5: Leaders’ engagement in (a) relational-, (b) task-, and (c) change-oriented behaviors is negatively related to counterproductive behaviors within their units.
+- H6: The relationship between parental income and perceived leader effectiveness is serially mediated by narcissism and engagement in each of the three leadership behaviors.
+- H7: The relationship between parental income and followers’ citizenship behaviors is serially mediated by narcissism and engagement in each of the three leadership behaviors.
+- H8: The relationship between parental income and followers’ counterproductive behaviors is serially mediated by narcissism and engagement in each of the three leadership behaviors.
+
 **Mechanism Process**
 - IV(s): Parental income during upbringing, measured from USMA archival application data.
 - DV(s): Follower-rated leader effectiveness, followers’ citizenship behaviors, and followers’ counterproductive behaviors.
@@ -59,6 +74,12 @@ The paper asks how parental income during an individual’s upbringing is associ
 - Moderators: Not reported in paper.
 
 The proposed mechanism is serial and cross-level: higher parental income is theorized to foster self-sufficiency and self-focused behavioral learning, which is associated with higher narcissism in adulthood. Higher narcissism is then associated with lower engagement in relational-, task-, and change-oriented leadership behaviors. The serial indirect effects are significant for selected behavior-outcome paths: relational and change behaviors for effectiveness, change behavior for citizenship, and task and change behaviors for counterproductive behavior.
+
+**Data & Measures**
+A multisource, cross-sectional survey combined archival USMA application data, leader self-reports, and follower ratings. Parental income was derived from a 14-category prior-year parental-income item and converted to monetary amounts. Narcissism used a nine-item subscale; followers rated relational- and task-oriented leadership with five items each from the Leadership Behavior Development Questionnaire XII, change-oriented leadership with four items from the Multifactor Leadership Questionnaire 6S, leader effectiveness with four adapted items, citizenship behavior with five items, and counterproductive behavior with six items. The authors used confirmatory factor analysis and maximum-likelihood structural equation modeling; serial mediation tests used 1,000 bootstrap samples and 95% confidence intervals.
+
+**Key Findings**
+H1 and H2a–c were supported: parental income was positively associated with adult narcissism, and narcissism was negatively associated with all three leadership behaviors. Eight of the nine behavior-to-outcome hypotheses were supported; only H3b, the task-oriented behavior to perceived leader effectiveness path, was not significant. The serial indirect effects were significant through relational and change-oriented behaviors for perceived leader effectiveness (H6a and H6c), through change-oriented behavior for citizenship (H7c), and through task and change-oriented behaviors for counterproductive behavior (H8b and H8c); the remaining serial paths were not supported. Total indirect effects on all three outcomes were significant, while the direct effects of parental income on the outcomes were not significant.
 
 **Theoretical Contribution**
 The paper connects research on parental income and the psychological consequences of income with leadership effectiveness theory. It extends the integrative trait-behavioral model by identifying parental income as a developmental antecedent of narcissism and by showing how that trait is associated with leadership behavior and outcomes. It also brings social learning and self-sufficiency arguments into an organizational leadership setting.

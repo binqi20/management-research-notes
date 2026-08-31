@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Cobb 2016 Funding Financial Inclusion In
 text_path: "library/AMJ/vol-59-no-6/text/Cobb 2016 Funding Financial Inclusion Institutional Logics and the Contextual Contingency of Funding for Microfinance Organizations.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["microfinance", "microfinance organizations", "commercial and public funders", "institutional logics", "financial and development logics", "uncertainty", "funding"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "institutional logics perspective"
   methods_overview: "ordinary least squares (OLS)"
   keywords_source: "microfinance funding"
+  hypotheses_source: "Hypothesis 1. Within a country, the (a) size and"
+  measures_overview: "Return on Assets                     (Net Operating Income, less Taxes) / Assets"
+  findings_overview: "invest in MFOs that are larger and financially stronger."
 ---
 
 # Funding Financial Inclusion: Institutional Logics and the Contextual Contingency of Funding for Microfinance Organizations
@@ -52,13 +57,26 @@ Microfinance is a promising tool for addressing the grand challenge of global po
 **Research Question**
 The paper asks how commercial and public funders finance microfinance organizations, whether their lending practices differ according to financial and development logics, and how those practices change as country-level political and financial uncertainty rises. It examines whether institutional logics produce stable practice differences or contextually contingent convergence in MFO funding.
 
+**Hypotheses / Propositions**
+H1: MFO size and financial performance are positively associated with commercial funding.
+H2: MFO size and financial performance are negatively associated with public funding.
+H3: As political or financial uncertainty increases, the relationship between MFO size and commercial funding becomes more positive.
+H4: As political or financial uncertainty increases, the relationship between MFO financial performance and commercial funding becomes less positive.
+H5: As political or financial uncertainty increases, the relationship between MFO size and public funding becomes less negative.
+
 **Mechanism Process**
 - IV(s): Funder type and logic, MFO size, MFO financial performance, country political uncertainty, and country financial uncertainty.
 - DV(s): Commercial capital and public capital acquired by an MFO in a given year.
 - Mediators: Not reported in paper; the theory centers on attention to MFO size and financial performance as logic-consistent investment criteria.
-- Moderators: Country-level political uncertainty and financial uncertainty moderate how MFO size and financial performance relate to commercial and public funding.
+- Moderators: Country-level political and financial uncertainty moderate how MFO size relates to commercial and public funding. Both were also hypothesized to moderate the financial-performance–commercial-funding relationship; the paper did not propose financial-performance moderation of public funding.
 
 Commercial funders operate under a financial logic that prioritizes investment return, so they favor larger and financially stronger MFOs in stable contexts. Public funders operate under a development logic that supports sector health and poverty alleviation, so they are expected to favor smaller and less financially strong MFOs that commercial lenders overlook. As political or financial uncertainty rises, both types of funders shift attention toward MFO size as a visible signal of stability, causing their lending practices to converge even though their underlying logics remain different. This convergence directs capital toward larger MFOs and away from smaller MFOs that may be more committed to social outreach.
+
+**Data & Measures**
+The primary data are proprietary MIX funding transactions for 891 MFOs in 92 countries that borrowed from 1,490 funders during 2004–2012; the analyses use 1,746 MFO-year observations. Each outcome is the inflation-adjusted logged U.S.-dollar amount of commercial or public capital received by an MFO in a year. Factor scores represent MFO size (employees, assets, and offices), financial performance (return on assets, operational self-sufficiency, and write-off ratio), and transparency as a control; country political and financial uncertainty measures come from ICRG and are reverse-coded so higher scores indicate greater uncertainty. OLS models include country and year fixed effects, lag covariates one year except age, and use mean-centered values for the hypothesized interactions.
+
+**Key Findings**
+H1a–b were supported: commercial funders provided more capital to larger and financially stronger MFOs. H2a was not supported, while H2b was supported: public funding was unrelated to size in the baseline model but greater for financially weaker MFOs. H3a–b and H5a–b were supported in the separate interaction models: as political or financial uncertainty rose, commercial and public funding shifted more positively toward MFO size; in the joint model, the political-uncertainty interaction for public funding became insignificant. H4 received mixed support: political uncertainty weakened the positive financial-performance–commercial-funding relationship, whereas financial uncertainty did not. Simple-slope tests showed that size predicted both funding types under high uncertainty but did not predict public funding under low uncertainty.
 
 **Theoretical Contribution**
 The paper extends the institutional logics perspective by showing that the relationship between logics and organizational practices is contextually contingent rather than fixed across settings. It links institutional logics to environmental uncertainty, arguing that decision makers use logics as lenses for adapting behavior when the action-outcome link becomes less predictable. It also contributes to microfinance and foreign-aid research by shifting attention from aggregate funding flows to organization-level funding decisions that shape social-sector capacity.

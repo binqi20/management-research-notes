@@ -142,30 +142,22 @@ audit**:
 
 **Current main-branch audit state (2026-08-31):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 27 upgraded 32 notes (AMJ vol-60-no-3 + vol-60-no-2, all v2
-augmentations) to v3. Its final audit is **286/288 prose-field verdicts
-SUPPORTED**, with 2 verified-faithful `PARTIAL`, 0 `UNSUPPORTED`, and 0
-`CONTRADICTED`. Round 1 returned 281/288 `SUPPORTED` and 7 `PARTIAL`. Source
-verification led to five scoped repairs across five notes; all repaired notes
-cleared fresh blind full-note re-audits at 45/45 `SUPPORTED`. The two remaining
-`PARTIAL`s are Gomulya's limitations and future-research fields: exact fitted-
-text reconstruction proves that interleaved-reference stripping omitted their
-supporting passages, while read-after-proof review of the recovered raw text
-confirms both fields are faithful. All 32 final reports have current hashes.
-Before audit dispatch, literal-anchor checks corrected two two-column-splice
-anchors, a per-phase review corrected Heaphy's interview counts, and named-
-entity verification narrowed six new-field source or scale names to literal
-raw-text forms. The two anchor failures shared one cause but remained below the
-stop threshold of three; the Heaphy issue was distinct. This batch ran end-to-
-end on `gpt-5.6-sol` for augmentation and audit, the eighth such backfill batch.
-The recurring cross-family spot-audit most recently ran at batch 24's workshop
-review with 27/27 agreement, matching batch 16; none is scheduled for batch 27,
-and the next calibration is expected at batch 28's workshop review. The pre-
-batch census was 61 v1, 432 v2, and 674 v3; the corpus now contains 61 legacy
-v1 notes, 400 v2 notes, and 706 v3 notes with evidence anchors. Provenance eras
-are batches 01–07 `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19
-`gpt-5.6-sol`, 20–23 `claude-opus-5`, and 24–27 `gpt-5.6-sol`. New notes are
-produced at extraction
+batch 28 upgraded 32 notes (AMJ vol-60-no-1 + vol-59-no-6, all v2
+augmentations) to v3. Its final audit is **287/288 prose-field verdicts
+SUPPORTED**, with 1 verified-faithful `PARTIAL`, 0 `UNSUPPORTED`, and 0
+`CONTRADICTED`. Source verification produced 17 scoped repairs across 10 notes
+over two rounds. The remaining `PARTIAL` is Desai's Future Research: exact
+fitted-text reconstruction shows that interleaved-reference stripping removed
+16.38% of the raw text, including the supporting passage, while read-after-
+proof review confirms the field is faithful. All 32 final reports have current
+hashes. This batch ran end-to-end on `gpt-5.6-sol` for augmentation and audit,
+the ninth such backfill batch. Its workshop review runs the recurring cross-
+family calibration; the batch-16 and batch-24 calibrations both scored 27/27
+agreement. The pre-batch census was 61 v1, 400 v2, and 706 v3; the corpus now
+contains 61 legacy v1 notes, 368 v2 notes, and 738 v3 notes with evidence
+anchors. Provenance eras are batches 01–07 `claude-opus-4-8`, 08–15
+`claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23 `claude-opus-5`, and 24–28
+`gpt-5.6-sol`. New notes are produced at extraction
 **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -199,7 +191,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.60.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.61.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

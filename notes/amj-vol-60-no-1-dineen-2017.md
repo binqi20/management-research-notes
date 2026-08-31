@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/Dineen 2017 Green by Comparison Deviant 
 text_path: "library/AMJ/vol-60-no-1/text/Dineen 2017 Green by Comparison Deviant and Normative Transmutations of Job Search Envy in a Temporal Context.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["job search envy", "resume fraud", "job search effort", "temporal pressure", "employment opportunities", "social comparison"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "social comparison theory"
   methods_overview: "moderated regression analyses"
   keywords_source: "resume fraud or search effort"
+  hypotheses_source: "Hypothesis 1A. Temporal-based pressures will"
+  measures_overview: "Internship/job search effort. We operationalized"
+  findings_overview: "Providing replicated support for Hypothesis 1A"
 ---
 
 # Green by Comparison: Deviant and Normative Transmutations of Job Search Envy in a Temporal Context
@@ -53,6 +58,14 @@ We propose a novel temporal-based theory of how a painful social comparative emo
 **Research Question**
 How does job search envy translate into deviant or normative job-search behavior as temporal pressure and perceived employment opportunities change? The paper asks whether envy leads job seekers toward resume fraud or greater search effort under different clock-based, event-based, and market-based search pressures.
 
+**Hypotheses / Propositions**
+- H1A: Temporal-based pressure strengthens the positive relationship between job search envy and resume fraud.
+- H1B: Lower temporal-based pressure strengthens the positive relationship between job search envy and job search effort.
+- H2A: Scarce employment opportunities strengthen the positive relationship between job search envy and resume fraud.
+- H2B: Plentiful employment opportunities strengthen the positive relationship between job search envy and job search effort.
+- H3A: Job search envy relates most strongly and positively to resume fraud when temporal- and market-based pressures are both higher.
+- H3B: Job search envy relates most strongly and positively to search effort when temporal- and market-based pressures are both lower.
+
 **Mechanism Process**
 - IV(s): Job search envy.
 - DV(s): Resume fraud and job search effort, operationalized partly as employment applications submitted.
@@ -60,6 +73,16 @@ How does job search envy translate into deviant or normative job-search behavior
 - Moderators: Temporal-based pressure, measured as job search length in Study 1 and internship versus post-graduation search event in Study 2; market-based pressure, measured as perceived employment opportunities; and their interactions.
 
 The proposed mechanism is that upward social comparison during job search produces envy, and the pressure context shapes whether that envy is appraised as a challenge or a threat. Under higher temporal pressure, search situations seem less changeable or more critical, making resume fraud a more likely response. Under lower temporal pressure, especially when opportunities appear plentiful, envy is more likely to be channeled into increased search effort.
+
+**Data & Measures**
+Study 1 used a final sample of 334 unemployed job seekers. Job search envy was measured with four items, temporal pressure with job-search length in months, perceived employment opportunities with a two-item scale, and resume fraud with a six-item commissive-fraud scale. The authors tested H1A, H2A, and H3A with standardized moderated regressions.
+
+Study 2 followed 49 eligible graduate human-resources students across internship and post-graduation job-search events. Event-specific regression samples were 45 and 40 for internship and post-graduation resume fraud, respectively, and 37 and 35 for the corresponding search-effort models. Envy and perceived opportunities were measured at Times 1 and 4; resume fraud at Times 3 and 5; and effort as internship applications at Time 4 and job applications at Time 5. Moderated regressions and seemingly unrelated estimation compared coefficients across events.
+
+**Key Findings**
+- Study 1: H1A was supported: envy related positively to resume fraud after longer searches (interaction b = .22, p < .01). H2A was not supported (b = .02, n.s.). The H3A interaction was significant (b = .20, p < .05) but opposite the predicted direction: after longer searches, envy related positively to fraud when opportunities were plentiful, not scarce.
+- Study 2: H1A was supported because the envy–fraud relationship was significantly stronger during the post-graduation job search than during the internship search (cross-event p < .05). H2A was not supported: the envy-by-opportunities interaction was significant only in the post-graduation search (b = .32, p < .01), but plentiful rather than scarce opportunities strengthened the relationship. H3A's predicted direction was likewise not supported, although the contrary pattern from Study 1 replicated across events (cross-event p < .05).
+- Study 2 effort results: H1B was not supported. H2B received partial support: plentiful opportunities strengthened the envy–effort relationship during the internship search (b = .42, p < .05) but not during the post-graduation search (b = -.10, n.s.). H3B was supported because this interaction was significantly stronger during the internship event (cross-event p < .05).
 
 **Theoretical Contribution**
 The paper introduces job search envy as a socio-emotional link between social comparisons and job-search behavior. It extends envy and job-search theory by showing that envy can transmute into both deviant and normative behaviors, and that this transmutation depends on clock-based time, event criticality, and perceived employment opportunities. It also adds a temporal lens to social comparison theory by showing that the same comparative emotion can have different behavioral associations at different stages of a search.

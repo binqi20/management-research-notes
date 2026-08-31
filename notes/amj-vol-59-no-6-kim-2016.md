@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Kim 2016 Challenges for Global Supply Ch
 text_path: "library/AMJ/vol-59-no-6/text/Kim 2016 Challenges for Global Supply Chain Sustainability Evidence from Conflict Minerals Reports.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["global supply chains", "supply chain sustainability", "conflict minerals", "supply chain visibility", "corporate social responsibility"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "One of the central tenets of organization theory"
   methods_overview: "ordered logit model"
   keywords_source: "global supply chains across many industries"
+  hypotheses_source: "stronger reputations have more to lose"
+  measures_overview: "We used an ordered logit model to estimate the"
+  findings_overview: "We did not find support for Hypothesis 3"
 ---
 
 # Challenges for Global Supply Chain Sustainability: Evidence from Conflict Minerals Reports
@@ -51,6 +56,15 @@ The vertically integrated corporation of the 20th century has been replaced by d
 **Research Question**
 What organizational factors distinguish corporations that are able to vouch for their supply chains from those that are not? The paper examines why some SEC-filing companies could determine whether their products were free of DRC conflict minerals while most could not.
 
+**Hypotheses / Propositions**
+- H1a: More industrially diversified companies are less effective at determining whether their products are conflict-mineral-free.
+- H1b: More internationally diversified companies are less effective at determining whether their products are conflict-mineral-free.
+- H2: Companies with more complex supply chains are less effective at determining whether their products are conflict-mineral-free.
+- H3: Companies with greater power over suppliers are more effective at determining whether their products are conflict-mineral-free.
+- H4: Companies that are more visible to stakeholders are more effective at determining whether their products are conflict-mineral-free.
+- H5: Companies with stronger reputations are more effective at determining whether their products are conflict-mineral-free.
+- H6: Companies that voluntarily participate in sustainability-related programs are more effective at determining whether their products are conflict-mineral-free.
+
 **Mechanism Process**
 - IV(s): Organizational complexity, supply chain complexity, power over suppliers, visibility, reputation, and voluntary CSR participation.
 - DV(s): Conflict-free status in SEC conflict minerals reports, coded ordinally from unable to determine to conflict-free beyond reasonable doubt.
@@ -59,6 +73,12 @@ What organizational factors distinguish corporations that are able to vouch for 
 
 The core mechanism is supply chain visibility under organizational complexity. International diversification and larger supplier bases expand the number of geographies, suppliers, and indirect relationships that firms must trace, reducing their ability to know the origin of conflict minerals. Power over direct suppliers offers limited help because the relevant information often lies several tiers away, while reputation matters only after accounting for supply chain complexity.
 
+**Data & Measures**
+The main cross-sectional analysis used 1,179 companies' 2015 conflict minerals reports from the SEC’s EDGAR database. Conflict-free status was coded ordinally as unable to determine (0), no reason to believe the products contained minerals originating from the Congo area (1), or conflict-free beyond reasonable doubt (2), using semi-automated regular-expression coding followed by independent review by three research assistants. Organizational complexity measures covered entropy-based product diversification, percentage of foreign sales, and logged country scope, using Compustat segment files and the LexisNexis Directory of Corporate Affiliations. Supply chain complexity was measured by logged supplier count and the percentage of cost of goods sold spent on the five main suppliers, using the Bloomberg Supply Chain Function. Power over suppliers was proxied by inventory turnover from Compustat; visibility by logged news-article volume; reputation by presence on Fortune’s Most Admired Companies list; and voluntary CSR participation by 2014 Carbon Disclosure Project (CDP) survey participation. Ordered logit models used one-year-lagged predictors and robust standard errors clustered by four-digit SIC codes.
+
+**Key Findings**
+H1a was not supported: related and unrelated diversification were not significant. H1b was supported through country scope; firms with high country scope (about 18 countries) were 29% less likely than firms with average country scope (about five countries) to have reason to believe their products were conflict-free, while percentage of foreign sales was not significant in the fully specified model. H2 received partial support: a high supplier count (about 49 versus 10 suppliers) was associated with a 19% lower likelihood of declaring reason to believe products were conflict-free, but supplier concentration was not significant in the fully specified model. H3, H4, and H6 were not supported. H5 received model-sensitive support: reputation became positive and significant only after supply chain complexity was included, and the authors treated this result tentatively. Descriptively, 79% of 2015 filers were unable to determine mineral origin, while only 1% declared themselves conflict-free beyond reasonable doubt.
+
 **Theoretical Contribution**
 The paper extends organization theory and CSR research by showing how disaggregated supply chains create a responsibility paradox: demands for corporate accountability rise while firms' capacity to monitor dispersed production shrinks. It contributes systematic large-sample evidence to a domain previously dominated by cases and anecdotes, identifying organizational and supply chain complexity as central barriers to accountability beyond firm boundaries.
 
@@ -66,10 +86,10 @@ The paper extends organization theory and CSR research by showing how disaggrega
 Managers should not assume that CSR motivation, visibility, or resources are sufficient to verify supply chain sustainability when supplier networks are broad and multi-tiered. The study suggests that stronger enforcement, collective verification infrastructure, and industry-certified sources may be needed because individual firms often cannot cheaply trace each direct and indirect supplier.
 
 **Limitations**
-The authors note that the two-period disclosure sample does not support a strong panel design, so the main analysis uses cross-sectional models. They are also tentative about the reputation finding because it is sensitive to inclusion of two admired companies that declared their products conflict-free with great certainty. The study observes firms' disclosure outcomes rather than independently auditing the material origins of every supply chain.
+The authors note that the two-period disclosure sample does not support a strong panel design, so the main analysis uses cross-sectional models. They are also tentative about the reputation finding because it is sensitive to inclusion of two admired companies that declared their products conflict-free with great certainty.
 
 **Future Research**
-Future research could examine how regulatory enforcement, collective supplier-verification systems, and market reactions alter firms' ability and incentives to achieve supply chain accountability. The paper also points to unresolved questions about when reputation operates as a burden that motivates verification rather than as a buffer against stakeholder scrutiny.
+Not reported in paper
 
 **APA 7th Citation**
 Kim, Y. H., & Davis, G. F. (2016). Challenges for global supply chain sustainability: Evidence from conflict minerals reports. *Academy of Management Journal*, 59(6), 1896-1916. https://doi.org/10.5465/amj.2015.0770

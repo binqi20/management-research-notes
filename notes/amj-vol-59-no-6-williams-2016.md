@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Williams 2016 Building Resilience or Pro
 text_path: "library/AMJ/vol-59-no-6/text/Williams 2016 Building Resilience or Providing Sustenance Different Paths of Emergent Ventures in the Aftermath of the Haiti Earthquake.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["emergent organizations", "suffering", "resilience", "disaster response", "local ventures", "venture creation"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "resilience to adversity"
   methods_overview: "qualitative inductive methodology"
   keywords_source: "emergent organizations in responding to suffering"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we conducted 82 interviews."
+  findings_overview: "ventures we found that two distinctive groups emerged in terms of their identification of"
 ---
 
 # Building Resilience or Providing Sustenance: Different Paths of Emergent Ventures in the Aftermath of the Haiti Earthquake
@@ -51,6 +56,9 @@ Disaster events threaten the lives, economies, and wellbeing of those they impac
 **Research Question**
 The paper asks how post-disaster new ventures acquire, combine, and use resources, and how venture creation facilitates community members' resilience after disaster. It focuses on why some Haitian-led local ventures after the 2010 earthquake became more effective than others in moving victims beyond immediate survival.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: potential opportunities to alleviate suffering; social resources; founding mindset; resourcefulness; sustaining versus transforming paths.
 - Process / phases: locals first act on immediate suffering, identify opportunities, mobilize social and material resources, and then follow either a sustaining path of continued relief or a transforming path of staged recovery.
@@ -59,6 +67,12 @@ The paper asks how post-disaster new ventures acquire, combine, and use resource
 - Boundary conditions: the model is induced from Haitian-led ventures in a least developed country after a major natural disaster, where weak institutions, outside aid, property-right uncertainty, and local social ties shaped venture paths.
 
 The process model links venture founders' social resources and mindset to the kinds of opportunities they recognize and the resourcefulness practices they enact. Sustaining ventures interpret opportunity as long-term relief and resource claims, which keeps victims in a basic-needs cycle. Transforming ventures interpret opportunity as an obligation to help people progress through recovery stages, using relationships and staged investments to support resilience and self-reliance.
+
+**Data & Measures**
+This qualitative inductive multiple-case study examined six Haitian-led ventures created after the 2010 Haiti earthquake. Primary data collection spanned nearly two years. The corpus included 82 interviews conducted in Haitian Creole and translated into English, 510 pages of interview transcripts, 105 pages of field notes, 110 pages of secondary and follow-up data, direct observation, and case-level timelines. The authors followed the Gioia and colleagues (2013) method: NVivo-assisted open coding produced 120 first-order codes, which were clustered into 22 second-order themes and five overarching theoretical dimensions; a second coder rated one-third of the cases with 93% agreement.
+
+**Key Findings**
+All six ventures initially acted on immediate survival needs, but three sustaining and three transforming ventures diverged over time. Sustaining ventures emphasized ongoing food, water, and shelter, relied on transactional external-resource exchanges and enduring or deviant resourcefulness, and left victims dependent on the venture for basic needs. Transforming ventures used strong and weak local and international ties, a prosocial mindset, temporary use of non-owned resources, creative but legal resourcing, and staged transitions toward investment; they addressed evolving physical and psychological needs and moved victims toward autonomy and self-reliance. The model links social resources and founding mindset to opportunity identification, then to resourcefulness practices and distinct resilience outcomes.
 
 **Theoretical Contribution**
 The paper develops a venturing model of disaster resilience that distinguishes survival-oriented sustaining from autonomy-oriented transforming. It extends resilience, disaster-response, and entrepreneurship research by showing how emergent ventures' social ties, founding mindsets, and resourcefulness practices shape different gradients of post-disaster functioning.

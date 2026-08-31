@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/Jourdan 2017 Too Much of a Good Thing Th
 text_path: "library/AMJ/vol-60-no-1/text/Jourdan 2017 Too Much of a Good Thing The Dual Effect of Public Sponsorship on Organizational Performance.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["public sponsorship", "market performance", "resource accumulation", "resource allocation", "horizontal scope", "market orientation", "resource profile"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Drawing on the resource-based view and nascent"
   methods_overview: "relied on firm-level panel data"
   keywords_source: "public sponsorship and market performance."
+  hypotheses_source: "Hypothesis 1. There is an inverted U-shaped"
+  measures_overview: "a firm’s annual return on investment as a ratio of"
+  findings_overview: "and in the expected directions, supporting Hypothesis 1."
 ---
 
 # Too Much of a Good Thing? The Dual Effect of Public Sponsorship on Organizational Performance
@@ -51,6 +56,12 @@ Existing research provides contradictory insights regarding the effect of public
 **Research Question**
 The paper asks how cumulative public sponsorship affects sponsored organizations' market performance and why prior research finds both positive and negative effects. It examines whether sponsorship improves performance through resource accumulation while eventually impairing performance through weaker resource allocation discipline, and whether horizontal scope, market orientation, and resource profile condition this relationship.
 
+**Hypotheses / Propositions**
+- H1: The cumulative amount of public sponsorship received has an inverted U-shaped relationship with market performance: performance increases at low sponsorship levels and declines past a certain point.
+- H2: Horizontal scope strengthens the inverted U-shaped relationship between cumulative public sponsorship and market performance.
+- H3: Market orientation attenuates the inverted U-shaped relationship between cumulative public sponsorship and market performance.
+- H4: Reliance on external idiosyncratic resources strengthens the inverted U-shaped relationship between cumulative public sponsorship and market performance.
+
 **Mechanism Process**
 - IV(s): Cumulative amount of public sponsorship received, modeled both linearly and with a squared term.
 - DV(s): Market performance, measured as annual return on investment based on theatrical revenues over production costs.
@@ -58,6 +69,12 @@ The paper asks how cumulative public sponsorship affects sponsored organizations
 - Moderators: Horizontal scope, market orientation, and reliance on external idiosyncratic resources in the firm's resource profile.
 
 The mechanism is a dual resource-management logic. At low to moderate levels, public sponsorship expands the sponsored firm's resource pool and buffers it from uncertainty, improving market performance. As sponsorship accumulates, however, the non-market nature of the resource provision weakens price, residual-claim, and monitoring discipline, so resource allocation can become less efficient and performance can decline. The curve is steeper for firms with broader horizontal scope and more external idiosyncratic resources, and flatter for firms with stronger market orientation.
+
+**Data & Measures**
+The longitudinal panel covers the entire population of executive producers in the French film industry from 1998 to 2008: 1,386 firm-year observations from 567 firms. Data combine proprietary state sponsorship agency records, 17,707 production contracts from the public film and broadcasting registry, Cine Box Office and Le Film Français market data, and AlloCiné consumer ratings. Market performance is annual return on investment—theatrical revenues divided by production costs—natural-log transformed and standardized. Sponsorship is the natural log of cumulative public resources received under the GPS scheme through the preceding year, counted from 1994, with a squared term for curvilinearity. Scope is one minus a Herfindahl–Hirschman index across 15 genres; market orientation is average consumer ratings; and resource profile is the average number of cast members among the five highest-grossing actors in the preceding three years. The moderators were orthogonalized with a modified procedure, and the fixed-effect panel regressions used robust standard errors clustered by firm.
+
+**Key Findings**
+H1 was supported: sponsorship was positive (.133, p < .001) and sponsorship squared was negative (−.012, p < .001), producing the predicted inverted U-shaped relationship. In the full model, the squared-term interactions for scope and resource profile were both negative (−.003, p < .05), strengthening the curve as predicted by H2 and H4, while the market-orientation interaction was positive (.003, p < .05), attenuating it as predicted by H3. Predicted effects were substantively larger for generalists than specialists (1.20 versus .59 at the curve apex) and for firms relying on two star performers rather than none (1.41 versus .65); the market-orientation moderation was statistically significant but limited in size. Linear and restricted cubic spline checks also indicated an inverted U-shape, and the serial-correlation and endogeneity checks did not overturn the results.
 
 **Theoretical Contribution**
 The paper contributes to nascent sponsorship theory by conceptualizing public sponsorship as external resource provision outside value-based market exchange, rather than treating it as generic support. It reconciles contradictory findings by theorizing and testing an inverted U-shaped sponsorship-performance relationship rooted in opposing resource accumulation and resource allocation effects. It also extends sponsorship research beyond start-up survival by showing how internal resource-management contingencies shape performance effects in an established industry.

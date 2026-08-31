@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Vakili 2016 Health Care’s Grand Challe
 text_path: "library/AMJ/vol-59-no-6/text/Vakili 2016 Health Care’s Grand Challenge Stimulating Basic Science on Diseases that Primarily Afflict the Poor.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["Grand Challenge", "neglected diseases", "Trade-Related Intellectual Property Rights (TRIPS)", "basic science", "managerial institutions", "intellectual property protections"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "application of managerial theories"
   methods_overview: "panel OLS regressions with country-disease and year fixed effects"
   keywords_source: "neglected diseases” such as malaria and tuberculosis"
+  hypotheses_source: "We expect a positive effect of TRIPS compliance"
+  measures_overview: "The dependent variable is the log-normalized, citation-weighted number of publications"
+  findings_overview: "basic science on neglected diseases and in applied science on nonneglected diseases"
 ---
 
 # Health Care’s Grand Challenge: Stimulating Basic Science on Diseases that Primarily Afflict the Poor
@@ -51,13 +56,26 @@ Perhaps the most compelling Grand Challenge in health care is addressing disease
 **Research Question**
 The paper asks whether intellectual property protections under TRIPS stimulated research on neglected diseases, especially the basic science needed before drug development can occur. It also asks why the scientific response to TRIPS differs between neglected and nonneglected diseases and between global and local scientific communities.
 
+**Hypotheses / Propositions**
+The paper states four predictions:
+- Implementing TRIPS in a country increases global research on diseases prevalent there.
+- It increases global basic research on neglected diseases and global applied research on nonneglected diseases prevalent there.
+- It increases local research on diseases prevalent there.
+- It increases local basic research on neglected diseases and local applied research on nonneglected diseases prevalent there.
+
 **Mechanism Process**
 - IV(s): TRIPS compliance and the resulting expansion of intellectual property protections in WTO member countries.
 - DV(s): Citation-weighted scientific publications on diseases, separated into global and local publication responses and into basic, basic-applied, and applied science.
-- Mediators: Development of scientific and managerial institutions that support funding, technical codification, collaboration, and local scientific capacity.
-- Moderators: Disease type (neglected versus nonneglected), country income level, disease prevalence measured by DALYs, and whether publications are authored by local scientists.
+- Mediators: Not directly measured or tested; the paper theorizes institutional mechanisms involving funding, technical codification, collaboration, and local scientific capacity.
+- Moderators: Not modeled as formal moderators. Disease type and country-income strata define comparisons, DALYs proxy disease prevalence and protected market size, and local authorship defines the local publication response.
 
 The mechanism is that TRIPS changed the expected returns to science by increasing the protected market for diseases prevalent in compliant countries, but the response depended on the institutional readiness of scientific communities. For nonneglected diseases, prior basic science and commercialization institutions made applied research more responsive. For neglected diseases in low-income countries, the response appeared mainly in basic science, because drug development required earlier-stage knowledge and institutional development before clinical or commercial outcomes could emerge.
+
+**Data & Measures**
+Data cover 82 WHO-identified diseases and publication observations from 1990–2010. Disease burden and protected market size are operationalized as log-normalized Disability-Adjusted Life Years (DALYs) by disease and country. Scientific activity is the log-normalized, citation-weighted number of peer-reviewed publications in Scopus, organized globally by disease-year and locally by country-disease-year. OLS models include year fixed effects globally and country-disease plus year fixed effects locally. CHI Research Inc. journal categories separate basic, basic–applied, and applied science.
+
+**Key Findings**
+Global-response results show that publication activity responded to disease prevalence in TRIPS-compliant countries, with relatively stronger effects on applied science for nonneglected diseases and basic science for neglected diseases. In the local response, TRIPS was associated with significant increases in nonneglected-disease publications in non-low-income countries and neglected-disease publications in low-income countries; it had no significant local relationship with neglected-disease science in non-low-income countries or nonneglected-disease science in low-income countries. The basic-science effect on neglected diseases was twice the effect on nonneglected diseases in each income group, and the largest estimate was for neglected diseases in low-income countries.
 
 **Theoretical Contribution**
 The paper extends economic accounts of intellectual property by showing that incentives alone are insufficient to explain scientific responses to grand challenges. It contributes to management theory by positioning TRIPS as a managerial institution of science whose effects depend on scientific infrastructure, institutional development, collaboration, and capability building. It also argues that management theories of institutions, innovation, and entrepreneurship are relevant to health-care grand challenges, not only to corporations.

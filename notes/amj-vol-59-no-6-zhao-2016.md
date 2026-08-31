@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Zhao 2016 Not All Inequality Is Equal De
 text_path: "library/AMJ/vol-59-no-6/text/Zhao 2016 Not All Inequality Is Equal Deconstructing the Societal Logic of Patriarchy to Understand Microfinance Lending to Women.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["institutional logics", "patriarchy", "microfinance organizations", "lending to women", "societal logics", "social outreach", "gender inequality"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "we apply and extend the institutional logics perspective"
   methods_overview: "generalized least squares models"
   keywords_source: "patriarchy affects lending to women by microfinance"
+  hypotheses_source: "served by MFOs will be lower when patriarchy"
+  measures_overview: "number of women borrowers served (logged), to test"
+  findings_overview: "practices in the family, religion, professions, and state that suppress this outreach."
 ---
 
 # Not All Inequality Is Equal: Deconstructing the Societal Logic of Patriarchy to Understand Microfinance Lending to Women
@@ -51,6 +56,13 @@ Many social problems reflect sets of beliefs and practices—or “institutional
 **Research Question**
 The paper asks how patriarchy, understood as a societal-level institutional logic, affects microfinance organizations' outreach to women. It specifically examines whether patriarchy suppresses lending through family, religion, professions, and state sectors, and whether uneven patriarchy across sectors can instead catalyze support for women's lending.
 
+**Hypotheses / Propositions**
+H1: The number of women borrowers served by MFOs will be lower when patriarchy strongly influences the family, religion, professional, and state sectors.
+H2: Greater gender equality in the professional sector will interact with high patriarchy in the family and religion to increase the proportion of female managers and loan officers employed by MFOs.
+H3: Greater gender equality in the state sector will interact with high patriarchy in the family and religion to increase local funding for MFOs.
+H4a: Greater gender equality in the professional sector will interact with high patriarchy in the family and religion to increase the number of women borrowers served by MFOs.
+H4b: Greater gender equality in the state sector will interact with high patriarchy in the family and religion to increase the number of women borrowers served by MFOs.
+
 **Mechanism Process**
 - IV(s): Patriarchy in family/religion, gender equality in professions, gender equality in state, and their interaction terms.
 - DV(s): Number of women borrowers served, proportion of female employees, and local funding received by MFOs.
@@ -58,6 +70,12 @@ The paper asks how patriarchy, understood as a societal-level institutional logi
 - Moderators: Gender equality in professions and gender equality in state moderate the relationship between patriarchy in family/religion and MFO outreach to women.
 
 Patriarchy in family and religion can reduce the supply of women borrowers by shaping gender roles, domestic authority, and women's self-perception as economic actors. Patriarchy in professions and the state can reduce the supply of female employees and local subsidies needed for women-focused outreach. However, when women gain ground in professions or the state while patriarchy persists in family and religion, the resulting institutional contrast makes gender inequality more visible, motivates redress efforts, and increases resources for MFOs that lend to women.
+
+**Data & Measures**
+Using MIX self-report data from 1995 to 2013, the analysis covers 2,326 MFOs in 115 developing countries. The three MFO-year dependent variables are the logged number of women borrowers served, the proportion of female employees (managers and loan officers), and logged local funding. The country-level predictors were formed by standardizing 11 indicators and using exploratory and confirmatory factor analyses to derive patriarchy in family/religion, gender equality in professions, and gender equality in state. The study estimated generalized least squares models with country fixed effects and used selection corrections for the employee and funding analyses.
+
+**Key Findings**
+H1 received qualified support: higher patriarchy in family/religion reduced the number of women borrowers, and greater state equality increased it, while the professions coefficient had the predicted direction but was not significant in a two-tailed test. H2 was supported, although the interaction coefficient was marginally significant. H3 received strong support, and the result remained strong after the selection correction. H4a and H4b received strong support separately and when both interaction terms were included together: professional and state equality each combined with high family/religion patriarchy to increase lending to women.
 
 **Theoretical Contribution**
 The paper extends institutional logics research by showing that societal logics should not be treated only as uniform national characteristics or single aggregate indexes. By deconstructing patriarchy across societal sectors, it shows that a logic's organizational effects depend on where and how strongly it manifests. The study also adds to research on prosocial organizations by showing that the institutional causes of a social problem can constrain or support organizations that try to address it.
@@ -69,7 +87,7 @@ MFOs seeking to serve women in highly patriarchal countries may need to rely mor
 The analysis includes major MFOs covered by MIX but not the entire population of MFOs in every country. The paper cannot directly test all mechanisms because it lacks data on female loan applications and cannot observe discrimination in lending decisions directly. The cross-national design also relies on coarse country-level indicators, and the employee and local-funding analyses are constrained by more limited data coverage.
 
 **Future Research**
-Future research should directly study female loan applications, borrower access, and discrimination in lending decisions to better test the mechanisms through which patriarchy affects MFOs. Case-based research could add detail on how professional women, state actors, and other groups support microfinance under uneven patriarchy. The authors also suggest extending the cross-sector societal-logics approach to other forms of categorical inequality, including class, race, religion, sexual orientation, and environmental degradation.
+Future research should directly study female loan applications, borrower access, and discrimination in lending decisions to better test the mechanisms through which patriarchy affects MFOs. Case-based research could add detail on how professional women, state actors, and other groups support microfinance under uneven patriarchy. The authors also suggest extending the cross-sector societal-logics approach to other categorical inequalities such as social class, race, and religion and, separately, to other social issues such as race, sexual orientation, and environmental degradation.
 
 **APA 7th Citation**
 Zhao, E. Y., & Wry, T. (2016). Not all inequality is equal: Deconstructing the societal logic of patriarchy to understand microfinance lending to women. *Academy of Management Journal*, 59(6), 1994-2020. https://doi.org/10.5465/amj.2015.0476

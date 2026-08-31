@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/Liu 2017 Why and When Leaders’ Affecti
 text_path: "library/AMJ/vol-60-no-1/text/Liu 2017 Why and When Leaders’ Affective States Influence Employee Upward Voice.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["leaders’ positive affect", "leaders’ negative affect", "employee upward voice", "psychological safety", "emotional contagion", "signaling process", "leader–member exchange", "experience sampling method"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "We draw on the emotion-as-social-information"
   methods_overview: "We used an event-contingent version of the ESM"
   keywords_source: "emotional contagion and signaling"
+  hypotheses_source: "employee’s positive affect mediates the positive"
+  measures_overview: "the seven-item LMX scale suggested by Graen and"
+  findings_overview: "leaders’ positive affect was positively related to employees’ voice behavior."
 ---
 
 # Why and When Leaders’ Affective States Influence Employee Upward Voice
@@ -53,6 +58,21 @@ Although researchers have argued that employees often carefully examine social c
 **Research Question**
 The paper asks whether, why, and when leaders’ affective states influence employees’ upward voice during leader-member interaction episodes. It tests whether leaders’ positive affect affects voice through employees’ own positive affect, employees’ assessments of leaders’ positive affect, and psychological safety, whether LMX changes these indirect paths, and whether leaders’ negative affect shows parallel effects.
 
+**Hypotheses / Propositions**
+H1: In an interaction episode, employee positive affect mediates the positive relationship between leader positive affect and employee psychological safety.
+
+H2: Employee positive affect and psychological safety sequentially mediate the positive relationship between leader positive affect and employee upward voice.
+
+H3: Employee assessment of leader positive affect mediates the positive relationship between leader positive affect and employee psychological safety.
+
+H4: Employee assessment of leader positive affect and psychological safety sequentially mediate the positive relationship between leader positive affect and employee upward voice.
+
+H5: LMX moderates the indirect relationship between employee positive affect and upward voice through psychological safety, such that the relationship is stronger when LMX is low.
+
+H6: LMX moderates the indirect relationship between employee assessment of leader positive affect and upward voice through psychological safety, such that the relationship is stronger when LMX is low.
+
+Leaders’ negative affect was examined through three research questions rather than directional hypotheses.
+
 **Mechanism Process**
 - IV(s): Leaders’ positive affect and leaders’ negative affect during interaction episodes; employees’ own affect and employees’ assessments of leaders’ affect as mechanism variables.
 - DV(s): Employee upward voice during the interaction, reported by leaders; employee psychological safety as the proximal attitudinal outcome.
@@ -60,6 +80,16 @@ The paper asks whether, why, and when leaders’ affective states influence empl
 - Moderators: Leader-member exchange quality, tested as a cross-level moderator of the paths from employees’ own positive affect and employees’ assessments of leaders’ positive affect to psychological safety.
 
 The mechanism is grounded in the EASI model: leaders’ affect provides social information that can influence employees through emotional contagion and signaling. The supported positive-affect pathway is that leaders’ positive affect increases employees’ own positive affect, which increases psychological safety and then upward voice. The signaling path from employees’ assessments of leaders’ positive affect to psychological safety is not supported as a direct mediation, but both the employee-affect path and the assessment path are stronger when LMX is low. Leaders’ negative affect is positively related to voice, but the tested contagion and signaling mechanisms do not explain that effect.
+
+**Data & Measures**
+The data comprise 640 paired interaction responses from 85 leader–employee dyads involving 36 leaders and 85 employees in five IT enterprises in China. Across event-contingent mobile surveys, leaders reported their episode-specific positive and negative affect and employees’ upward voice; employees reported their own affect, assessments of leader affect, and psychological safety.
+
+Positive and negative affect each used four high-activation items; psychological safety and upward voice each used three items; LMX was measured at baseline with seven items. The analyses used confirmatory factor analyses, three-level HLM, and Monte Carlo confidence intervals for indirect effects.
+
+**Key Findings**
+H1 and H2 were supported: leader positive affect predicted employee positive affect, which predicted psychological safety, and the sequential indirect path to upward voice was positive and significant. H3 was not supported, so H4 was not tested.
+
+H5 and H6 were supported: the positive indirect paths from employee positive affect and employee assessment of leader positive affect to upward voice through psychological safety were significant when LMX was low but not when it was high. Leader negative affect positively predicted upward voice and both negative-affect mechanism variables, but neither mechanism variable predicted psychological safety or upward voice.
 
 **Theoretical Contribution**
 The paper contributes to voice research by treating upward voice as an episodic, within-individual behavior rather than only as a stable individual or relational tendency. It shows that leaders’ momentary affective states are meaningful antecedents of voice during leader-member interactions.

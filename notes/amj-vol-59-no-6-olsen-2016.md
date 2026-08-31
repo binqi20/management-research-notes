@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Olsen 2016 Coordinated Exploration for G
 text_path: "library/AMJ/vol-59-no-6/text/Olsen 2016 Coordinated Exploration for Grand Challenges The Role of Advocacy Groups in Search Consortia.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["grand challenges", "search consortia", "advocacy groups", "stakeholder theory", "coordinated exploration", "joint search", "legitimacy"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "search by integrating mechanisms from stakeholder theory"
   methods_overview: "Second stage OLS. We use a fixed-effects ordinary"
   keywords_source: "search consortia to engage in joint search"
+  hypotheses_source: "Hypothesis 4: There is a positive relationship"
+  measures_overview: "index of IPC classes as a measure of dispersion"
+  findings_overview: "advocacy groups benefit search consortia, particularly when consortia exhibit a high"
 ---
 
 # Coordinated Exploration for Grand Challenges: The Role of Advocacy Groups in Search Consortia
@@ -53,6 +58,12 @@ Grand challenges are among the most complex problems for modern societies. Many 
 **Research Question**
 The paper asks why search consortia include advocacy groups and how advocacy groups help consortia obtain funding to implement proposed solutions to grand challenge problems. It focuses on whether stakeholder-related task environments make advocacy group inclusion more likely and whether advocacy group involvement improves proposal evaluation through search and legitimacy mechanisms.
 
+**Hypotheses / Propositions**
+- H1: The likelihood that a search consortium includes advocacy groups increases as its grand challenge task environment contains more elements related to stakeholder acceptance or support.
+- H2: Advocacy group involvement is positively related to a search consortium's likelihood of receiving funding.
+- H3: This positive relationship is stronger when the consortium's technological knowledge is more dispersed.
+- H4: This positive relationship is stronger when the consortium lacks experience.
+
 **Mechanism Process**
 - IV(s): Stakeholder elements of the task environment for advocacy group inclusion; advocacy group involvement for funding likelihood.
 - DV(s): Advocacy group inclusion; likelihood of receiving funding, measured by expert evaluation score.
@@ -60,6 +71,12 @@ The paper asks why search consortia include advocacy groups and how advocacy gro
 - Moderators: Knowledge dispersion within the consortium and lack of experience of the consortium leader.
 
 The mechanism is that advocacy groups bring stakeholder knowledge into coordinated exploration and help consortia identify solutions that are more acceptable to affected stakeholders. Their involvement can also signal legitimacy to evaluators because credible advocacy groups are unlikely to lend their reputation to proposals that ignore stakeholder interests. These benefits are theorized and found to be stronger when technological knowledge is highly dispersed, increasing coordination difficulty, and when the consortium lacks experience, increasing the value of legitimacy.
+
+**Data & Measures**
+The data comprise all 35,249 consortium applications to the “Cooperation” part of FP7 from 2007 to 2013, covering 2,349 calls in 192 problem areas. Advocacy group inclusion is identified from organization industry codes, while likelihood of receiving funding is measured by each proposal's 0–100 expert evaluation score. Stakeholder elements are measured as the fractional word count from a validated 66-word call-text dictionary; advocacy group involvement is the number of advocacy groups; knowledge dispersion is the inverse Herfindahl index of three-digit IPC patent classes; and lack of experience is a dummy for a consortium leader's first FP7 application. The observational design uses a first-stage probit selection model and problem-area fixed-effects OLS with an inverse Mills ratio; robustness checks include alternative measures, past-performance controls, and coarsened exact matching.
+
+**Key Findings**
+All four hypotheses receive support. Stakeholder-oriented call-text elements positively predict advocacy group inclusion, and the number of advocacy groups is positively associated with evaluation scores. Advocacy group involvement mitigates the negative association of knowledge dispersion with funding likelihood and the negative association of leader inexperience with funding likelihood; both interaction effects are positive and significant. One additional advocacy group is associated with almost one additional evaluation point, close to 3% of the mean score of 37, and the reported sensitivity and matched-sample checks are consistent with the main results.
 
 **Theoretical Contribution**
 The paper extends coordinated exploration theory by showing that useful search partners need not contribute primarily through technological expertise. Advocacy groups can shape joint search by contributing stakeholder understanding, coordination, and legitimacy. It also extends stakeholder theory by modeling advocacy groups as active partners in innovation-oriented search rather than only as external actors who pressure firms through resistance, protest, or political intervention.
@@ -71,7 +88,7 @@ For governments and foundations, the findings imply that the wording of grand ch
 The study observes expert evaluations of grant applications rather than whether funded consortia ultimately solved the underlying grand challenge problems. The authors use multiple approaches to address endogeneity in advocacy group inclusion, but they do not observe an exogenous shock that would create a natural experiment. The data also do not systematically capture heterogeneity among advocacy groups, such as size, power, public attention, agenda conflict, or network position.
 
 **Future Research**
-Future work could connect ex-ante proposal evaluations to ex-post project outcomes to test whether advocacy group involvement improves actual solution development and implementation. Studies in similar grant-application settings could exploit exogenous shocks to advocacy group availability or inclusion rules to strengthen causal identification. Additional research could examine how differences among advocacy groups affect coordination, legitimacy, information flow, and conflict within search consortia.
+Future work could connect ex-ante proposal evaluations to ex-post project outcomes to test whether advocacy group involvement improves actual solution development and implementation. Studies in similar grant-application settings could exploit an exogenous shock or natural experiment to strengthen causal identification. Additional research could examine how differences among advocacy groups affect coordination, legitimacy, information flow, and conflict within search consortia.
 
 **APA 7th Citation**
 Olsen, A. Ø., Sofka, W., & Grimpe, C. (2016). Coordinated exploration for grand challenges: The role of advocacy groups in search consortia. *Academy of Management Journal*, 59(6), 2232-2255. https://doi.org/10.5465/amj.2015.0730

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/Bakker 2017 Pull the Plug or Take the Pl
 text_path: "library/AMJ/vol-60-no-1/text/Bakker 2017 Pull the Plug or Take the Plunge Multiple Opportunities and the Speed of Venturing Decisions in the Australian Mining Industry.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["opportunity-evaluation decisions", "venture termination", "venture advancement", "decision speed", "attentional orientation", "project portfolio", "environmental dynamism", "Australian mining industry"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "behavioral decision-making literature"
   methods_overview: "Cox competing risks regressions"
   keywords_source: "speed of opportunity-evaluation decisions"
+  hypotheses_source: "venture termination decisions, but (b) decreases"
+  measures_overview: "price variability of a mineral (i.e., its amplitude around"
+  findings_overview: "later, and that such firms are also slower to advance on potential opportunities at all"
 ---
 
 # Pull the Plug or Take the Plunge: Multiple Opportunities and the Speed of Venturing Decisions in the Australian Mining Industry
@@ -51,6 +56,16 @@ Effectively capturing opportunities requires rapid decision making. We investiga
 **Research Question**
 The paper asks what determines the speed at which firms make opportunity-evaluation decisions when they are pursuing multiple potential opportunities at the same time. It focuses on whether a firm's attentional orientation toward earlier-stage exploration makes it faster or slower to terminate or advance ventures at prospecting and developing stages, and whether environmental dynamism changes those relationships.
 
+**Hypotheses / Propositions**
+- H1a: At the prospecting stage, stronger attentional orientation toward earlier-stage exploration increases venture-termination speed.
+- H1b: At the prospecting stage, stronger attentional orientation toward earlier-stage exploration decreases venture-advancement speed.
+- H2a: At the developing stage, stronger attentional orientation toward earlier-stage exploration decreases venture-termination speed.
+- H2b: At the developing stage, stronger attentional orientation toward earlier-stage exploration decreases venture-advancement speed.
+- H3a: At the prospecting stage, environmental dynamism weakens the positive relationship between earlier-stage orientation and venture-termination speed.
+- H3b: At the prospecting stage, environmental dynamism strengthens the negative relationship between earlier-stage orientation and venture-advancement speed.
+- H4a: At the developing stage, environmental dynamism strengthens the negative relationship between earlier-stage orientation and venture-termination speed.
+- H4b: At the developing stage, environmental dynamism strengthens the negative relationship between earlier-stage orientation and venture-advancement speed.
+
 **Mechanism Process**
 - IV(s): Orientation toward earlier stages of opportunity advancement, proxied by the firm's venture portfolio; environmental dynamism; interaction between attentional orientation and environmental dynamism.
 - DV(s): Decision speed, measured as duration until a mining venture is advanced or terminated at the prospecting stage or developing stage.
@@ -58,6 +73,12 @@ The paper asks what determines the speed at which firms make opportunity-evaluat
 - Moderators: Environmental dynamism, with separate tests for prospecting-stage and developing-stage decisions.
 
 The mechanism is stage- and decision-specific. Firms that focus attention on earlier-stage exploration develop experience, routines, and confidence for early fault detection, so they terminate prospecting ventures faster. The same orientation makes advancement decisions slower because advancement requires assessing upside potential, feasibility, scaling, and later-stage exploitation issues for which exploration-focused firms have weaker domain-specific routines and confidence. Environmental dynamism weakens or intensifies these effects at the initial prospecting stage because dynamic markets make existing knowledge and information less reliable, but the paper does not find significant moderation at the developing stage.
+
+**Data & Measures**
+The study links annual venture and company records from the Register of Australian Mining to monthly mineral-price data. The sample comprises 3,269 ventures during 2002–2011 (6,563 venture-year observations). Decision speed is the duration until advancement or termination at either the prospecting or developing stage. Earlier-stage attentional orientation is a reversed, investment-weighted mean of the stages represented in the firm's venture portfolio. Environmental dynamism is the preceding 12 months' mineral-price variability around its trend. The authors estimate separate Cox competing-risks models for the two stages using the stcrreg module in Stata 13, with one-year-lagged time-varying covariates and robust standard errors clustered by mineral identifier.
+
+**Key Findings**
+H1a and H1b were supported: at prospecting, earlier-stage orientation increased the termination hazard (b = .04, p < .001; a 1% increase raised it 2.05%) and decreased the advancement hazard (b = −.06, p < .001; a 1% increase lowered it 2.99%). H2a and H2b were supported: at developing, the orientation decreased both termination (b = −.08, p < .001; 3.98% lower hazard per 1% increase) and advancement hazards (b = −.07, p < .001; 3.49% lower). H3a and H3b were supported: high environmental dynamism weakened the positive prospecting-stage termination effect and strengthened the negative prospecting-stage advancement effect. H4a and H4b were not supported because the developing-stage interactions were small and nonsignificant.
 
 **Theoretical Contribution**
 The paper extends opportunity-evaluation research by moving beyond the assumption that firms evaluate one opportunity at a time. It shows that a firm's internal portfolio of active potential opportunities shapes how quickly it evaluates a focal venture, and it highlights prospecting, developing, and exploiting as analytically distinct stages.

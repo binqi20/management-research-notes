@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-1/pdfs/O’Neill 2017 Is Love All You Need The 
 text_path: "library/AMJ/vol-60-no-1/text/O’Neill 2017 Is Love All You Need The Effects of Emotional Culture, Suppression, and Work–family Conflict on Firefighter Risk-Taking and Health.txt"
 ingested_at: "2026-07-02"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-mixed"
 keywords: ["emotional culture", "masculine organizational culture", "joviality", "companionate love", "emotion suppression", "work–family conflict", "risk-taking", "health problems", "firefighters"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "build and test theory about the emotional cultures of prototypically"
   methods_overview: "Using both qualitative and quantitative data"
   keywords_source: "emotion suppression, work–family"
+  hypotheses_source: "Hypothesis 4. There is a cross-level interaction"
+  measures_overview: "used seven items from the Center for Disease Control"
+  findings_overview: "associated with a lower likelihood of auto accidents"
 ---
 
 # Is Love All You Need? The Effects of Emotional Culture, Suppression, and Work–family Conflict on Firefighter Risk-Taking and Health
@@ -51,6 +56,12 @@ In this paper, we build and test theory about the emotional cultures of prototyp
 **Research Question**
 The paper asks how emotional culture operates inside prototypically masculine organizations and whether different emotional cultures exacerbate or attenuate problems associated with masculinity. More specifically, it examines how unit-level cultures of joviality and companionate love interact with individual emotion suppression and work–family conflict to shape firefighters' risk-taking behavior, health problems, and unit performance.
 
+**Hypotheses / Propositions**
+H1: At the unit level, a strong culture of joviality complemented by a strong culture of companionate love will decrease individual risk-taking and health problems.
+H2: At the individual level, greater emotion suppression and greater work–family conflict will interact to increase risk-taking and health problems.
+H3: At the cross level, a stronger culture of companionate love will attenuate the relationship of emotion suppression and work–family conflict with risk-taking and health problems.
+H4: At the cross level, a stronger culture of joviality will strengthen the relationship of emotion suppression and work–family conflict with risk-taking and health problems.
+
 **Mechanism Process**
 - IV(s): Unit-level culture of joviality, unit-level culture of companionate love, individual emotion suppression, and individual work–family conflict.
 - DV(s): Individual risk-taking behavior outside work, individual health problems, and exploratory unit performance indicators including coordination time, auto accidents, and property loss.
@@ -58,6 +69,12 @@ The paper asks how emotional culture operates inside prototypically masculine or
 - Moderators: Culture of joviality and culture of companionate love interact with each other for risk-taking, while each emotional culture conditions the suppression-and-work-family-conflict pattern most clearly for health problems; suppression and work-family conflict also interact at the individual level.
 
 The process begins with the observation that masculine organizational culture is not simply unemotional; in firefighting units, it is often organized around both joviality and companionate love. Risk-taking outside work is lowest where joviality and companionate love are both strong, suggesting that relational sensitivity can temper high-energy joking. Separately, firefighters who suppress negative emotions while experiencing high work-family conflict report more risk-taking outside work. For health problems, companionate love helps attenuate the suppression-and-work-family-conflict pattern through support and sensitivity, whereas joviality can intensify it when joking, teasing, and high activation make vulnerability harder.
+
+**Data & Measures**
+Study 1 involved semistructured group interviews and observation with 100 firefighters across all 27 fire stations, yielding 85.25 interview/observation hours and 276 pages of field notes. The qualitative material was analyzed using grounded-theory principles, constant comparison, emotion-prototype coding, and coding of cultural manifestations. In Study 2, 324 firefighters nested in 68 station shifts completed paper-and-pencil surveys, while supervisors rated unit emotional culture. Joviality was measured with four emotion items and companionate love with three; firefighters completed a modified Gross (1998) suppression subscale, the Netemeyer, Boles, and McMurrian (1996) work-to-family subscale, five attitudes-toward-physical-risks items, and seven physical-symptom items. Unit outcomes were coordination time, auto accidents, and property loss during the one-month period beginning two months after survey collection. Hypotheses were tested with SAS PROC MIXED multilevel models; exploratory unit analyses used ordinary least squares for coordination time and Poisson regression for the count outcomes.
+
+**Key Findings**
+Study 1 identified joviality and companionate love as the two major unit-level emotional-culture dimensions, alongside individual-level emotion suppression, work–family conflict, risk-taking, and health problems. Study 2 provided partial support for every hypothesis: H1 and H2 were supported for risk-taking but not health problems, whereas H3 and H4 were supported for health problems but not risk-taking. Risk-taking was lowest when both joviality and companionate love were strong; among firefighters high in both suppression and work–family conflict, companionate love ameliorated health problems whereas joviality exacerbated them. Exploratory unit-level analyses associated stronger joviality with faster coordination but more auto accidents and property loss; companionate love was associated with fewer auto accidents but not with coordination time or property loss.
 
 **Theoretical Contribution**
 The paper contributes to masculinity research by showing that a prototypically masculine occupation can be characterized by companionate love as well as joviality, challenging the assumption that masculine cultures are simply detached, stoic, or unemotional. It extends organizational culture theory by treating emotional culture as multidimensional and by showing that discrete positive emotions can have different, interacting effects on individual and unit outcomes. It also contributes to research on emotion suppression and work–family conflict by showing that their consequences depend on the emotional culture surrounding the individual.

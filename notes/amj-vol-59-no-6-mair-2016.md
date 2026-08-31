@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-6/pdfs/Mair 2016 Scaffolding A Process of Trans
 text_path: "library/AMJ/vol-59-no-6/text/Mair 2016 Scaffolding A Process of Transforming Patterns of Inequality in Small-Scale Societies.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["social inequality", "small-scale societies", "development programs", "scaffolding", "patterns of inequality"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "literature in social anthropology"
   methods_overview: "A qualitative case study"
   keywords_source: "entrenched patterns of inequality"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "The more than 100 documents we collected"
+  findings_overview: "We identify “scaffolding” as a process that enables and organizes the transformation of behavior and interaction patterns."
 ---
 
 # Scaffolding: A Process of Transforming Patterns of Inequality in Small-Scale Societies
@@ -52,6 +57,9 @@ This study advances research on organizational efforts to tackle multidimensiona
 **Research Question**
 The paper asks how development programs can be used as organizing tools to transform entrenched patterns of inequality in small-scale societies. It focuses on how Gram Vikas's water and sanitation program reshapes behavior and interaction patterns in rural Indian villages.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: entrenched inequality in caste, class, and gender; manifest goals of water and sanitation; concealed goals of transforming local social order.
 - Process / phases: rationalizing interaction by coopting local norms and power structures; routinizing interaction by redesigning local governance structures; solidifying interaction through collective construction.
@@ -60,6 +68,12 @@ The paper asks how development programs can be used as organizing tools to trans
 - Boundary conditions: scaffolding varies across caste and tribal villages and depends on local heterogeneity, resource availability, consensus around inclusion, and active organizational planning.
 
 The process operates by keeping villagers focused on the manifest goal of clean water and sanitation while Gram Vikas organizes conditions for a deeper shift in interaction patterns. Mobilizing resources unlocks participation across social groups, stabilizing protects emerging routines from reversal, and concealing limits resistance from groups that would oppose the social-order transformation if it were foregrounded.
+
+**Data & Measures**
+The qualitative case study draws on a decade of interviews, more than 100 internal and external documents, film material, participant observation, shadowing, and consultation with other research teams. The analysis moved iteratively between data and emerging theory and used several rounds of coding by multiple analysts. In two major steps, the authors first compared local inequality patterns before and after the focal program and then coded resources, resistance and conflict, and cross-village variation to specify the transformation process.
+
+**Key Findings**
+The study identifies scaffolding as the process through which entrenched interaction and behavior patterns are transformed. It operates through three interrelated mechanisms: mobilizing institutional, social organizational, and economic resources; stabilizing new interaction patterns through enforcement and sanctions; and concealing contested transformation goals by focusing attention on an uncontested program goal. The process requires active planning and cannot rely on self-organizing. It remained robust across villages but varied in pace and was adjusted to differences in social structures and available resources.
 
 **Theoretical Contribution**
 The paper specifies scaffolding as a process that enables and organizes institutional transformation rather than using it only as a metaphor. It links organizational efforts to alleviate social problems with the transformation of social systems, showing how manifest and concealed goals can jointly support local social change.
