@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Liu 2017 Human Resource Systems, Employe
 text_path: "library/AMJ/vol-60-no-3/text/Liu 2017 Human Resource Systems, Employee Creativity, and Firm Innovation The Moderating Role of Firm Ownership.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["employee-experienced HR systems", "employee creativity", "firm innovation", "firm ownership", "domain-relevant skills", "state-owned enterprises", "privately owned enterprises"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "P-O fit theory and SHRM research"
   methods_overview: "linear modeling (HLM) because these hypotheses"
   keywords_source: "This inter-human resource (HR) systems research investigates whether, how, and when"
+  hypotheses_source: "Hypothesis 4. Firm ownership moderates the"
+  measures_overview: "measured firm innovation as the number of new"
+  findings_overview: "Finally, aggregated employee creativity had a stronger positive relationship with firm"
 ---
 
 # Human Resource Systems, Employee Creativity, and Firm Innovation: The Moderating Role of Firm Ownership
@@ -53,6 +58,12 @@ This inter-human resource (HR) systems research investigates whether, how, and w
 **Research Question**
 The paper asks whether, how, and when employee-experienced performance-oriented and maintenance-oriented HR systems jointly influence employee creativity and firm innovation. It specifically examines whether domain-relevant skills mediate the HR systems-creativity relationship and whether firm ownership conditions both the HR systems-skill pathway and the aggregate creativity-firm innovation link.
 
+**Hypotheses / Propositions**
+- H1: Employee-experienced maintenance-oriented HR systems strengthen the positive relationship between employee-experienced performance-oriented HR systems and employee domain-relevant skills.
+- H2: Maintenance-oriented HR systems and firm ownership jointly moderate that positive relationship, such that the augmentation is stronger in POEs than in SOEs.
+- H3: Performance-oriented HR systems, maintenance-oriented HR systems, and firm ownership interact to affect domain-relevant skills, which in turn lead to employee creativity.
+- H4: Firm ownership moderates the positive relationship between aggregate employee creativity and firm innovation, such that the relationship is stronger in POEs than in SOEs.
+
 **Mechanism Process**
 - IV(s): Employee-experienced performance-oriented HR systems; employee-experienced maintenance-oriented HR systems; firm ownership, coded as POE versus SOE.
 - DV(s): Employee domain-relevant skills, employee creativity, and firm innovation measured as new products introduced after the employee creativity measurement.
@@ -60,6 +71,12 @@ The paper asks whether, how, and when employee-experienced performance-oriented 
 - Moderators: Maintenance-oriented HR systems moderate the performance-oriented HR systems-domain-relevant skills relationship; firm ownership further moderates that interaction. Firm ownership also moderates the aggregate employee creativity-firm innovation relationship.
 
 The mechanism is that performance-oriented HR systems support higher-order needs for skill development, career advancement, and opportunity, while maintenance-oriented HR systems support lower-order needs for job security and status equality. Drawing on person-organization fit theory and SHRM, the paper argues that employees respond more strongly to performance-oriented HR systems when maintenance-oriented systems make the pursuit of domain-relevant skills less risky and more need-congruent. Because POE employees lack the same external institutional protections available to SOE employees, internal maintenance-oriented HR systems matter more in POEs, strengthening the performance-oriented HR systems-domain-relevant skills pathway. Domain-relevant skills then support employee creativity, and aggregate employee creativity translates more strongly into firm innovation in POEs because those firms rely more on internal employee creativity.
+
+**Data & Measures**
+The study used four phases of multisource field data. In phases 1 and 2, core knowledge employees reported their experienced HR systems and then their domain-relevant skills; in phase 3, R&D department heads rated employee creativity; one year later, firm R&D departments reported new-product data. Performance-oriented and maintenance-oriented HR systems used Gong, Law, et al.'s 36-item and 12-item measures, respectively; domain-relevant skills used Youndt et al.'s five-item measure; employee creativity used Zhou and George's 13-item supervisor-rated measure. The psychological measures used a 7-point Likert scale. Firm ownership was coded 0 for POEs and 1 for SOEs; aggregate employee creativity was the firm mean of supervisor ratings; firm innovation was the number of new products introduced in the year after phase 3. Hypotheses 1–3 were tested with hierarchical linear modeling, Hypothesis 4 with OLS regression, and the mediated moderation was cross-verified with Monte Carlo bootstrapping.
+
+**Key Findings**
+All four hypotheses received support. For H1, the performance-oriented HR systems × maintenance-oriented HR systems interaction predicted domain-relevant skills (γ = 0.16, p < .05), with a positive slope when maintenance-oriented systems were high (γ = 0.30, p < .01) but not low (γ = −0.02, ns). For H2, the three-way interaction with firm ownership was significant (γ = −0.10, p < .05), and maintenance-oriented systems augmented the focal relationship more strongly in POEs than in SOEs. For H3, domain-relevant skills predicted creativity (γ = 0.17, p < .01), the direct three-way interaction became nonsignificant after adding the mediator (γ = −0.09, ns), and the bootstrapped indirect-effect confidence interval excluded zero. For H4, the aggregate creativity × ownership interaction predicted firm innovation (b = −1.56, p < .05): aggregate creativity was positively related to innovation in POEs (b = 1.32, p < .01) but not in SOEs (b = −0.24, ns).
 
 **Theoretical Contribution**
 The paper extends strategic human resource management by moving from an intra-HR systems view to an inter-HR systems view, showing that performance-oriented and maintenance-oriented HR systems can work synergistically rather than only as separate bundles. It contributes to creativity research by positioning domain-relevant skills, not only intrinsic motivation, as a mechanism linking HR systems to employee creativity. It also advances multilevel SHRM and creativity theory by connecting employee-experienced HR systems, firm ownership, employee creativity, and objective firm innovation in one cross-level model.

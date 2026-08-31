@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Reay 2017 Getting Leopards to Change the
 text_path: "library/AMJ/vol-60-no-3/text/Reay 2017 Getting Leopards to Change their Spots Co-creating a New Professional Role Identity.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["professional role identity", "institutional logics", "social interactions", "primary health care", "identity work"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "We draw on institutional theory"
   methods_overview: "We followed a process theory approach"
   keywords_source: "collective professional role identity of family physicians"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "entered it into NVivo (qualitative"
+  findings_overview: "identified four mechanisms that occurred through social interactions and collectively"
 ---
 
 # Getting Leopards to Change their Spots: Co-creating a New Professional Role Identity
@@ -53,6 +58,9 @@ We investigated how professional role identity change can be accomplished in hig
 **Research Question**
 The paper asks how social actors can facilitate changes in collective professional role identity by reinterpreting institutional logics and their relationships. Empirically, it examines how family physicians in a highly institutionalized health care setting shifted from an "autonomous expert" role identity to a "head of team" role identity during primary health care reform.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / starting point: Physicians initially understood themselves as autonomous experts guided by a strong professional logic, with market, state, and corporate logics low or hidden.
 - Process / mechanisms: The change unfolded through revealing the influence of a hidden market logic, reinforcing the conflict between professional and corporate logics, reframing the professional logic around informed team leadership, and re-embedding the new logic constellation in routines and standards.
@@ -60,6 +68,12 @@ The paper asks how social actors can facilitate changes in collective profession
 - Emergent outcome: The physician role identity shifted toward "head of team," supported by a strong but reframed professional logic, moderate market and state logics, and a corporate logic kept separate from physician identity.
 
 The process centers on identity work performed collectively, especially by managers charged with leading the reform. Private interactions made taboo issues such as financial incentives discussable, while more public group and workplace interactions allowed physicians and other professionals to renegotiate what counted as professional work. The new role identity became durable when standardized care, evidence-based protocols, patient access, clinic revenues, and professional responsibility were linked into a coherent arrangement of institutional logics.
+
+**Data & Measures**
+The study draws on 162 semi-structured, open-ended interviews conducted at four time points from 2005 to 2008 with physicians, managers, and other health professionals involved in Primary Care Networks, plus observational notes and archival documents from government, the Alberta Medical Association, Primary Care Network sites, and newspapers. Interview transcripts and observational notes were entered into NVivo and analyzed alongside archival data through open coding, constant comparison, ideal-type comparison of professional, market, corporate, and state logics, and iterative development of first- and second-order themes. The authors compared role identity and the strength of the relevant logics at the beginning and end of the study, then used an interpretive process analysis to explain how the change was accomplished.
+
+**Key Findings**
+The analysis identifies four mechanisms that collectively rearranged the constellation of logics guiding physicians' professional role identity: revealing the influence of a hidden market logic, reinforcing conflict between professional and corporate logics, reframing the dominant professional logic, and re-embedding the new arrangement of logics. These mechanisms emerged through private and public interactions among managers, renegade physicians, other physicians, nurses, and other health professionals; managers instigated and orchestrated many of them. Physicians moved from an "autonomous expert" identity toward a "head of team" identity guided by a strong but reframed professional logic, moderately strong market and state logics, and separation from the corporate logic, although the sequence involved overlap, backtracking, and variation in pace.
 
 **Theoretical Contribution**
 The paper contributes to professional role identity research by showing that collective professional role identity change can be orchestrated partly by actors outside the focal profession, not only by professionals themselves. It contributes to institutional logics theory by showing how a hidden logic can be revealed, how relationships among logics can be reinterpreted, and how social interactions in private and public spaces make that reinterpretation possible. It also connects relational identity work with institutional context, showing how macro-level logics and local workplace interactions jointly shape professional identity change.

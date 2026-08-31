@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Ridge 2017 Beyond Lobbying Expenditures 
 text_path: "library/AMJ/vol-60-no-3/text/Ridge 2017 Beyond Lobbying Expenditures How Lobbying Breadth and Political Connectedness Affect Firm Outcomes.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["lobbying expenditures", "lobbying breadth", "political connectedness", "government contracts", "firm economic performance", "resource allocation"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "resource allocation and political connections"
   methods_overview: "Tobit specification"
   keywords_source: "lobbying breadth and political connectedness"
+  hypotheses_source: "Hypothesis 4. Political connectedness will have"
+  measures_overview: "market value of the firm divided by total assets."
+  findings_overview: "Hypothesis 5 finds support in"
 ---
 
 # Beyond Lobbying Expenditures: How Lobbying Breadth and Political Connectedness Affect Firm Outcomes
@@ -52,6 +57,14 @@ The extant lobbying literature largely focuses on the effects of firm aggregate 
 **Research Question**
 How do lobbying breadth and political connectedness, beyond aggregate lobbying expenditures, affect the firm outcomes associated with corporate political activity? The paper asks whether targeting more governmental entities and possessing more political connections improve government contract value and firm performance, and whether those benefits diminish at high levels of lobbying breadth.
 
+**Hypotheses / Propositions**
+- H1: Lobbying breadth has a diminishingly positive association with government contract value: the relationship is most positive at low breadth and weakens at high breadth.
+- H2: Lobbying breadth has a diminishingly positive association with firm performance: the relationship is most positive at low breadth and weakens at high breadth.
+- H3: Political connectedness is positively related to government contract value.
+- H4: Political connectedness is positively related to firm performance.
+- H5: Political connectedness weakens the diminishingly positive relationship between lobbying breadth and government contract value as connectedness increases.
+- H6: Political connectedness weakens the diminishingly positive relationship between lobbying breadth and firm performance as connectedness increases.
+
 **Mechanism Process**
 - IV(s): Lobbying breadth, lobbying breadth squared, political connectedness, and cumulative versions of lobbying breadth and political connectedness.
 - DV(s): Government contract value and firm performance measured as Tobin's Q.
@@ -59,6 +72,12 @@ How do lobbying breadth and political connectedness, beyond aggregate lobbying e
 - Moderators: Political connectedness moderates the curvilinear relationship between lobbying breadth and both government contract value and firm performance.
 
 The mechanism is a resource-allocation and influence process. Firms gain benefits when lobbying is spread across a broader portfolio of agencies, legislative acts, and government issues because broader targeting increases the chance of influencing valuable decisions. Those benefits eventually diminish because additional targets become more tangential and dilute the attention, time, and lobbying resources directed to each target. Political connectedness supplies access, information, legitimacy, and influence, but its marginal value also weakens when firms spread lobbying across very broad sets of government targets.
+
+**Data & Measures**
+The panel covers U.S. firms in the 2004 S&P 500 from 2004 through 2009. Lobbying and political-activity data came from the Center for Responsive Politics; contract data from usaspending.gov; government-experience links from BoardEx; and other firm variables from Compustat. Government contracts were the log of annual federal-contract value, and performance was Tobin’s Q (market value divided by total assets). Lobbying breadth summed standardized counts of targeted legislative acts and federal agencies/entities. Political connectedness summed standardized counts of revolving-door lobbyists, directors with government experience, and congressional campaigns receiving firm donations, scaled by operating segments. Contract models used random-effects Tobit; performance models used two-step Arellano-Bond dynamic panel GMM.
+
+**Key Findings**
+H1 and H2 were supported: lobbying breadth had positive linear and negative squared terms for both government contracts and Tobin’s Q, indicating diminishingly positive relationships. H3 was not supported, whereas H4 was supported: political connectedness did not significantly predict government contracts but positively predicted firm performance. H5 and H6 were supported: at higher political connectedness, the diminishing relationships between lobbying breadth and both outcomes were more pronounced. Cumulative specifications produced analogous support patterns.
 
 **Theoretical Contribution**
 The paper extends corporate political activity research by moving beyond aggregate lobbying expenditures to theorize lobbying breadth and political connectedness as distinct dimensions of lobbying strategy. It contributes to resource-allocation theory by showing a diminishing positive relationship between breadth and firm outcomes, and to political-connections research by examining several forms of connectedness collectively rather than treating one connection type in isolation. It also broadens lobbying outcomes by studying both directly visible government contracts and broader firm performance.

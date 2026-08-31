@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-08-29"
-version: "0.59.0"
+date-released: "2026-08-31"
+version: "0.60.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,34 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.59.0
+  a published rubric) gates every note into the library. Version 0.60.0
+  (2026-08-31) continues the v3 backfill with Academy of Management Journal
+  volume 60 issues 3 and 2 — 32 notes, all v2 augmentations. A backfill adds no
+  papers, so the record total remains 1,167; the version-tier census shifts to
+  61 v1, 400 v2, and 706 v3 notes. All 32 notes passed the validator and a
+  fresh full independent 9-field rubric-v2 audit; the final augmentation guard
+  passes 28 notes and flags exactly the four notes with documented legacy prose
+  repairs. The final state is 286 of 288 prose-field verdicts SUPPORTED, 2
+  verified-faithful PARTIAL, 0 UNSUPPORTED, and 0 CONTRADICTED. Round one
+  returned 281 of 288 SUPPORTED and 7 PARTIAL. Source verification produced
+  five scoped repairs across five notes, and all five repaired notes returned
+  45 of 45 SUPPORTED in fresh blind full-note re-audits. The two accepted
+  PARTIALs are Gomulya's limitations and future-research fields: exact fitted-
+  text reconstruction proves that interleaved-reference stripping hid their
+  supporting passages, and read-after-proof review confirms both fields are
+  faithful. Before audit dispatch, literal-anchor checks corrected two two-
+  column-splice anchors, per-phase review corrected Heaphy's interview counts,
+  and exact named-entity verification narrowed six source or scale names to
+  literal raw-text forms. The two anchor failures shared one cause but remained
+  below the stop threshold of three; the Heaphy issue was distinct. Bibliographic
+  frontmatter and paper types are unchanged, and the BibTeX file regenerated
+  byte-identically. This batch ran end-to-end on gpt-5.6-sol for augmentation
+  and audit, the eighth such backfill batch. Provenance eras are batches 01–07
+  claude-opus-4-8, 08–15 claude-opus-5, 16–19 gpt-5.6-sol, 20–23
+  claude-opus-5, and 24–27 gpt-5.6-sol. The recurring cross-family spot-audit
+  most recently ran at batch 24's workshop review with 27/27 agreement,
+  matching batch 16; none is scheduled for batch 27, and the next calibration
+  is expected at batch 28's workshop review. Version 0.59.0
   (2026-08-29) continues the v3 backfill with Academy of Management Journal
   volume 60 issues 5 and 4 — 32 notes, all v2 augmentations. A backfill adds no
   papers, so the record total remains 1,167; the version-tier census shifts to
@@ -704,7 +731,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.59.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.60.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

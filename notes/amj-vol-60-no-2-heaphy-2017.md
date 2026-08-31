@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Heaphy 2017 “Dancing on Hot Coals” H
 text_path: "library/AMJ/vol-60-no-2/text/Heaphy 2017 “Dancing on Hot Coals” How Emotion Work Facilitates Collective Sensemaking.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["emotion work", "collective sensemaking", "sensegiving", "empathetic account", "emotion dynamics", "patient advocates", "client conflicts", "mediating work"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "sensemaking and emotions"
   methods_overview: "a multi-method qualitative study"
   keywords_source: "emotion work triggers emotion"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Consistent with a grounded theory approach, analysis"
+  findings_overview: "emotion dynamics are critically interconnected."
 ---
 
 # “Dancing on Hot Coals”: How Emotion Work Facilitates Collective Sensemaking
@@ -49,6 +54,9 @@ While organizations and researchers have traditionally conceptualized customers 
 
 **Research Question**
 The paper asks how mediators engage in emotion work to intervene in collective sensemaking around client conflicts. It studies patient advocates as hospital employees who mediate conflicts among patients, families, and staff without direct authority over the parties.
+
+**Hypotheses / Propositions**
+Not reported in paper
 
 **Mechanism Process**
 - Tabula rasa interactions: Mediators encourage emotion-rich accounts from clients while maintaining emotional neutrality, listening, asking questions, taking notes, and ending interactions before negative emotions amplify.
@@ -61,11 +69,17 @@ The paper asks how mediators engage in emotion work to intervene in collective s
 
 The process is not a variable-based causal model but a qualitative process model of interaction sequences. Mediators first generate and interpret emotional and discursive cues across multiple parties, then pivot from sensemaking to sensegiving once the account is empathetic enough to support action. Emotion work matters because it shapes whether interactions produce provisional accounts, elaborated accounts, updating, or derailment.
 
+**Data & Measures**
+Data collection proceeded in two phases over eighteen months. Phase 1 used over 1,000 pages of documents, 18 key-informant interviews, and seven days of observation at patient-advocacy conferences. Phase 2 used 31 semi-structured interviews with patient advocates at 17 hospitals and 120 hours of shadowing eight advocates at two hospitals. The narrative reports 202 interview accounts and 92 shadowing episodes; Table 2 separately lists 39 Phase 1 and 163 Phase 2 interview-derived episodes, plus 92 shadowing episodes. Analysis proceeded inductively through open coding, focused coding of sensemaking and sensegiving activities, emotion coding, and comparison of interaction patterns; a research assistant also coded the mediating episodes for sensemaking and sensegiving activities.
+
+**Key Findings**
+The study develops a process model in which mediators cycle through tabula rasa and exclaiming interactions to construct empathetic accounts, then pivot from sensemaking to sensegiving through directing or re-narrating interactions. Emotion work generates, interprets, and influences emotional dynamics that can support account development and updating: abridged accounts and emotion mitigation facilitate directing, while empathetic re-narration can provoke surprise and updating when clients resist. Inflaming interactions can instead amplify negative emotions and derail the mediator's intervention during either sensemaking or sensegiving.
+
 **Theoretical Contribution**
 The paper contributes to research on organizational responsiveness to client conflicts by showing how employees can respond through sensemaking-intensive mediation rather than routinized control. It extends sensemaking theory by identifying how emotion work and emotion dynamics shape the creation, plausibility, and deployment of accounts. It also contributes to emotion and compassion research by showing that empathy can become embedded in accounts and used selectively as a sensegiving resource.
 
 **Practical Implication**
-The study suggests that employees who mediate conflicts need skills in emotion work, not only procedures for complaint handling. Organizations can improve responsiveness by institutionalizing mediating capacity that helps constituents express emotion-rich accounts, develop shared understanding, and update interpretations. The findings also imply that ignoring or minimizing emotion may undermine conflict handling in settings where sensemaking is needed.
+The study suggests that employees who mediate conflicts need skills in emotion work, not only procedures for complaint handling. Organizations can improve responsiveness by institutionalizing mediating capacity to engage in sensemaking and emotion work among constituents. The findings also imply that ignoring or minimizing emotion may undermine conflict handling in settings where sensemaking is needed.
 
 **Limitations**
 The author notes that patient advocacy in hospitals is a highly emotional setting where advocates expect to handle conflict and emotion as part of their role, so the process may differ in lower-emotion contexts. The study focuses mainly on the patient advocates' perspective, supplemented by observation of clients, leaving less direct evidence on how clients themselves experience and shape the dyadic process.

@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Kyratsis 2017 Health Systems in Transiti
 text_path: "library/AMJ/vol-60-no-2/text/Kyratsis 2017 Health Systems in Transition Professional Identity Work in the Context of Shifting Institutional Logics.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["professional identity", "professional identity threats", "identity work", "institutional logics", "professional logic", "generalism", "narrow specialism"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "identities are rooted in logics"
   methods_overview: "We conducted an inductive study"
   keywords_source: "professional identity threats"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We drew on three main sources of qualitative data,"
+  findings_overview: "professional values conflict, status loss, and social identity conflict. In addition, we identified three forms of identity work—authenticating, reframing"
 ---
 
 # Health Systems in Transition: Professional Identity Work in the Context of Shifting Institutional Logics
@@ -54,6 +59,9 @@ We investigate how established professionals manage their identities in the face
 **Research Question**
 The paper asks how professionals manage their professional identities when a contested shift in the professional logic of their field threatens an established professional identity. It studies this question among physicians in five European transition countries where primary health care moved from Soviet-era narrow specialism toward Western-style generalism and family medicine.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Field-level trigger: A professional logic shift from narrow specialism to generalism changed expectations about expertise, patient relationships, clinical tasks, and the organization of primary care.
 - Identity threats: Physicians experienced professional values conflict, status loss, and social identity conflict as the new logic challenged their existing professional selves.
@@ -62,6 +70,12 @@ The paper asks how professionals manage their professional identities when a con
 - Boundary conditions: The process was shaped by physicians' tenure, professional status concerns, national and ethnic identities, and political associations with Soviet, European, and Western models of health care.
 
 The process is cross-level rather than a variable-based causal test. A macro-level change in professional logic created micro-level threats to physicians' sense of who they were, what counted as legitimate medical expertise, and how they should relate to patients and society. Authenticating connected family medicine to enduring medical values, reframing rebuilt the status content of the family physician role, and cultural repositioning linked the new professional identity to valued national or Western cultural narratives.
+
+**Data & Measures**
+The qualitative corpus comprised 113 semi-structured, in-depth physician interviews across five countries, unstructured naturalistic observations and field notes, and documentary and archival data. Interviews were purposively sampled across physician roles and experience levels, lasted 45 minutes to 1.5 hours, and were taped and transcribed. Analysis proceeded iteratively from open coding of identity-related data fragments to first-order themes, axial coding and second-order theoretical categories, and aggregate theoretical dimensions, followed by reexamination of the data's fit with the emergent framework.
+
+**Key Findings**
+The shift from narrow specialism to generalism generated three identity threats: professional values conflict, status loss, and social identity conflict. Physicians who successfully adopted the new professional identity addressed these threats through authenticating, reframing, and cultural repositioning, respectively; performed effectively together, these forms of identity work aligned professional identity with the new logic and resolved the threats. Other physicians resisted the pressure to construct a new identity and remained aligned, to varying degrees, with the old logic; the model focuses on those who successfully enacted the identity work.
 
 **Theoretical Contribution**
 The paper contributes to professional identity research by explaining how established professionals, not only entrants to a profession, reconstruct identities when field-level logics shift. It also contributes to institutional theory by showing how local enactment of a new institutional logic depends on micro-level identity work, especially when the new logic is contested and incompletely supported. The model links professional values conflict, status loss, and social identity conflict to authenticating, reframing, and cultural repositioning as distinct identity-work responses.

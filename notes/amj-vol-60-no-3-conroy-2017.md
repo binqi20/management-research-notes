@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Conroy 2017 The Meaning of My Feelings D
 text_path: "library/AMJ/vol-60-no-3/text/Conroy 2017 The Meaning of My Feelings Depends on Who I Am Work-Related Identifications Shape Emotion Effects in Organizations.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["discrete emotions", "anger", "guilt", "pride", "work-related identifications", "organizational identification", "occupational identification", "turnover intentions"]
@@ -46,6 +48,9 @@ evidence:
   theories_overview: "building on appraisal theory and social identity theory"
   methods_overview: "experience sampling methodology"
   keywords_source: "anger, guilt, and pride"
+  hypotheses_source: "Hypothesis 6. The relationship between pride"
+  measures_overview: "surveys using the three-item scale from Cropanzano,"
+  findings_overview: "Therefore, Hypothesis 3 was supported."
 ---
 
 # The Meaning of My Feelings Depends on Who I Am: Work-Related Identifications Shape Emotion Effects in Organizations
@@ -56,6 +61,14 @@ Theory and research on affect in organizations has mostly approached emotions fr
 **Research Question**
 The paper asks how discrete work emotions affect turnover intentions when employees differ in organizational and occupational identification. It specifically examines whether anger, guilt, and pride increase or decrease turnover intentions depending on the identity context in which employees appraise those emotions.
 
+**Hypotheses / Propositions**
+- H1: Anger intensity is positively related to turnover intentions when organizational identification is low and negatively related when it is high.
+- H2: Guilt intensity is positively related to turnover intentions when organizational identification is low and negatively related when it is high.
+- H3: Pride intensity is positively related to turnover intentions when organizational identification is low and negatively related when it is high.
+- H4: Organizational and occupational identification jointly condition the anger–turnover-intentions relationship; under low organizational identification, its positive slope strengthens as occupational identification increases.
+- H5: Organizational and occupational identification jointly condition the guilt–turnover-intentions relationship; the predicted slopes vary across the four combinations of identification levels.
+- H6: Organizational and occupational identification jointly condition the pride–turnover-intentions relationship; under low organizational identification, occupational identification changes a positive slope to a weakly negative one.
+
 **Mechanism Process**
 - IV(s): Within-person intensity of anger, guilt, and pride elicited by work-related organizational and job events.
 - DV(s): Turnover intentions, with supplemental evidence linking turnover intentions to objective turnover.
@@ -63,6 +76,12 @@ The paper asks how discrete work emotions affect turnover intentions when employ
 - Moderators: Organizational identification and occupational identification.
 
 The mechanism is that emotions do not carry fixed organizational consequences based on valence alone. Work-related identifications shape secondary appraisals by defining who is included in the self, where blame or credit is directed, and whether the current organization seems like a viable context for coping and future goal pursuit. High organizational identification generally turns anger and pride into lower turnover intentions, while occupational identification modifies these patterns by making the occupational group a competing or complementary identity frame.
+
+**Data & Measures**
+The study used an initial online survey and repeated event-contingent follow-up surveys from 135 pilot instructors, yielding 334 usable follow-up surveys. Anger, guilt, and pride were each reported with a single emotion word on a 0–4 scale and summed across work events within each survey. Turnover intentions used a three-item scale; organizational identification used a six-item scale; occupational identification used three items from the Luhtanen & Crocker social identity importance and centrality scale. Random coefficient models in HLM tested within-person emotion effects and cross-level moderation, controlling for baseline turnover intentions, age, tenure, and marital status.
+
+**Key Findings**
+H1 and H3 were supported: anger and pride each predicted higher turnover intentions at low organizational identification and lower turnover intentions at high organizational identification. H2 received marginal support because guilt predicted lower turnover intentions at high organizational identification but was not significantly different from zero at low identification. The main all-event analysis found little evidence for H4, moderate support for H5, and support for H6; the job-event supplemental analysis supported the H4 interaction and changed some conditional guilt results. Turnover intentions also predicted objective turnover in the supplemental survival analysis (b = .59, p < .01).
 
 **Theoretical Contribution**
 The paper integrates emotion appraisal theory with social identity theory to explain why the same discrete emotion can lead to different work outcomes. It challenges the symmetrical assumption that positive emotions are organizationally beneficial and negative emotions are harmful, showing that anger, guilt, and pride depend on employees' identification context. It also advances identity research by showing how organizational and occupational identifications condition the meaning of affective events.

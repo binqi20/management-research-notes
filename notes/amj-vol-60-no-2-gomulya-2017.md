@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Gomulya 2017 Signaler Credibility, Signa
 text_path: "library/AMJ/vol-60-no-2/text/Gomulya 2017 Signaler Credibility, Signal Susceptibility, and Relative Reliance on Signals How Stakeholders Change their Evaluative Processes After Violation of Expectations and Rehabilitative Efforts.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["violation of expectations", "signaling and screening theory", "financial restatements", "stakeholder evaluation", "CEO replacement", "earnings", "book value"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Drawing from signaling and screening theory"
   methods_overview: "employed an OLS model"
   keywords_source: "financial restatements"
+  hypotheses_source: "Hypothesis 5. Following rehabilitative efforts,"
+  measures_overview: "obtained from Compustat."
+  findings_overview: "Hypothesis 1 does not seem to receive any support."
 ---
 
 # Signaler Credibility, Signal Susceptibility, and Relative Reliance on Signals: How Stakeholders Change their Evaluative Processes After Violation of Expectations and Rehabilitative Efforts
@@ -52,6 +57,16 @@ Prior studies have shown that a firm’s violation of expectations might lead to
 **Research Question**
 Do stakeholders change the process by which they evaluate a firm after the firm violates expectations, and are those process changes reversed after credible rehabilitative efforts? The paper examines this question in the context of investors' reliance on earnings and book value after financial restatements and subsequent CEO replacement.
 
+**Hypotheses / Propositions**
+- H1: Following a violation, stakeholders will decrease their relative reliance on stronger proxies that are more susceptible to errors and manipulations.
+- H2: Following a violation, stakeholders will increase their relative reliance on weaker proxies that are less susceptible to errors and manipulations.
+- H3: Following a more severe violation, the H1 decrease will be greater.
+- H4: Following a more severe violation, the H2 increase will be greater.
+- H5: Following rehabilitative efforts, stakeholders will increase their relative reliance on stronger proxies that are more susceptible to errors and manipulations.
+- H6: Following rehabilitative efforts, stakeholders will decrease their relative reliance on weaker proxies that are less susceptible to errors and manipulations.
+- H7: Following rehabilitative efforts after a more severe violation, the H5 increase will be greater.
+- H8: Following rehabilitative efforts after a more severe violation, the H6 decrease will be greater.
+
 **Mechanism Process**
 - IV(s): Violation of stakeholder expectations through financial earnings restatements; violation severity distinguished by downward versus upward restatements; rehabilitative effort through incumbent CEO replacement.
 - DV(s): Investors' relative reliance on firm signals, operationalized through the association between stock price and earnings per share or book value of equity per share.
@@ -59,6 +74,12 @@ Do stakeholders change the process by which they evaluate a firm after the firm 
 - Moderators: Signal susceptibility to errors and manipulation, captured through the contrast between earnings as a flow signal and book value as a stock signal; severity of the restatement.
 
 The mechanism is that financial restatements reduce the credibility of the firm as signaler, making investors more skeptical of signals that are more susceptible to errors or manipulation. Earnings are treated as a stronger but more susceptible flow signal, while book value is treated as a weaker but more resistant stock signal. After restatements, investors shift toward book value; after CEO replacement, a visible and costly rehabilitative action, they partially shift back toward earnings. The shifts are stronger after downward restatements because more severe violations make signaler credibility more salient.
+
+**Data & Measures**
+The study uses earnings-restatement announcements from the U.S. Government Accountability Office database, matched nonrestating firms, financial variables from Compustat, and CEO-replacement evidence from Lexis-Nexis news and SEC filings. Stock price at fiscal year-end is the dependent variable, calculated per share. Earnings per share is net income before extraordinary items divided by fiscal year-end shares outstanding; book value of equity per share is fiscal year-end stockholders' equity divided by shares outstanding. Restatement, downward-restatement, post-restatement, and post-CEO-replacement indicators distinguish violation status, severity, and periods. OLS value-relevance models estimate three-way interactions; hypothesis tests triangulate model interactions, interaction plots, and simple-slope differences, with clustered robust standard errors.
+
+**Key Findings**
+H1 was not supported: shareholders did not decrease reliance on earnings after a restatement. H2 was supported: reliance on book value increased (three-way interaction b = 0.89, p < 0.001), with a $1 book-value change associated with a $0.33 stock-price change before and $1.04 after restatement. H3 and H4 were supported: changes in reliance on earnings and book value were stronger for downward than upward restatements. H5 and H6 were supported: after CEO replacement, reliance on earnings increased (b = 3.31, p < 0.05) and reliance on book value decreased (b = -0.94, p < 0.01). H7 and H8 were supported: these reversals were stronger after downward restatements (earnings b = 2.45, p < 0.05; book value b = -0.96, p < 0.01).
 
 **Theoretical Contribution**
 The paper extends research on violation of expectations by showing that stakeholders' reactions are not limited to more or less favorable evaluations; the underlying evaluative process itself can change. It contributes to signaling and screening theory by distinguishing noise from the signal itself from noise attributable to the signaler's behavior, and by showing that compromised signaler credibility can alter the relative usefulness of otherwise familiar signals. It also shows that rehabilitative actions can reverse these shifts, making evaluative reliance historically contingent rather than fixed.

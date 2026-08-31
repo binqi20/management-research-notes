@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Hekman 2017 Does Diversity-Valuing Behav
 text_path: "library/AMJ/vol-60-no-2/text/Hekman 2017 Does Diversity-Valuing Behavior Result in Diminished Performance Ratings for Non-White and Female Leaders.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["diversity-valuing behavior", "performance ratings", "competence judgments", "glass ceiling", "tokenism", "workplace discrimination"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "attribution theory would"
   methods_overview: "Following the full-cycle research approach"
   keywords_source: "glass ceiling, tokenism, and workplace discrimination"
+  hypotheses_source: "Hypothesis 1. Leader diversity-valuing behavior"
+  measures_overview: "adaptation of the Miville–Guzman’s measure"
+  findings_overview: "Hypothesis 1 is supported."
 ---
 
 # Does Diversity-Valuing Behavior Result in Diminished Performance Ratings for Non-White and Female Leaders?
@@ -54,6 +59,11 @@ We seek to help solve the puzzle of why top-level leaders are disproportionately
 **Research Question**
 Does leader diversity-valuing behavior produce lower performance ratings for non-White and female leaders than for White and male leaders, and is this penalty explained by lower perceived competence?
 
+**Hypotheses / Propositions**
+H1: Leader diversity-valuing behavior will be more negatively related to performance ratings for leaders belonging to low-status demographic groups (non-White and female) than for leaders belonging to high-status demographic groups (White and male).
+
+H2: Perceived competence will mediate the interactive effect of leader demographics and diversity-valuing behavior on performance ratings.
+
 **Mechanism Process**
 - IV(s): Leader diversity-valuing behavior, operationalized as behavior that promotes demographic balance, including hiring or promoting ethnic minorities and women.
 - DV(s): Leader performance ratings.
@@ -61,6 +71,16 @@ Does leader diversity-valuing behavior produce lower performance ratings for non
 - Moderators: Leader race and leader sex, distinguishing low-status demographic groups from White and male leaders.
 
 The proposed mechanism is that diversity-valuing behavior makes non-White and female leaders' low-status demographic categories salient. Observers may interpret the same behavior as nepotistic, socially competitive, or warm in ways that activate competence stereotypes for low-status leaders. Those lower competence judgments then translate into worse performance ratings for non-White and female leaders, while White and male leaders are not penalized in the same way.
+
+**Data & Measures**
+Study 1 used a usable field sample of 350 executives from an entire calendar-year cohort at the Center for Creative Leadership. Peers rated diversity-valuing behavior with three five-point items adapted from the Miville–Guzman measure; bosses rated leader performance with three five-point items adapted from Sadri, Weber, and Gentry and perceived competence with four six-point items adapted from Fiske and colleagues. The authors tested the interactions with hierarchical moderated regressions and tested moderated mediation with Sobel tests and 1,000 bootstrap samples.
+
+Study 2 used a 2 × 2 × 2 between-subjects experiment with 307 employed adults, manipulating hiring-manager sex, race, and diversity-valuing behavior. Participants rated performance with the same three performance items used in Study 1 and competence with Cuddy et al.'s six-item five-point scale. The authors used univariate ANOVA for the interactions and the PROCESS macro with 1,000 bootstrap samples for moderated mediation.
+
+**Key Findings**
+In Study 1, H1 was supported for both sex and race: diversity-valuing behavior was negatively associated with boss-rated performance for female and non-White leaders, but not for male or White leaders. H2 was also supported for both sex and race, with perceived competence mediating these interactive effects on performance ratings.
+
+Study 2 replicated both patterns experimentally. Diversity-valuing behavior lowered performance ratings for female managers (M = 3.65 versus 3.96) and non-White managers (M = 3.61 versus 4.10), but not for male or White managers; perceived competence mediated both the sex-based and race-based interactions. Thus, H1 and H2 were supported in both studies.
 
 **Theoretical Contribution**
 The paper extends glass ceiling research by identifying a mechanism through which the ceiling can be maintained even when organizations promote diversity initiatives. It formally introduces and tests the diversity-valuing behavior construct and shows that its consequences depend on leader demographics. The paper also contributes to tokenism and workplace discrimination research by explaining why non-White and female leaders may avoid advocating for demographically similar others: doing so can damage their perceived competence and performance evaluations.

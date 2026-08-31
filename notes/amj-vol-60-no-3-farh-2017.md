@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Farh 2017 Resource-Based Contingencies o
 text_path: "library/AMJ/vol-60-no-3/text/Farh 2017 Resource-Based Contingencies of When Team–Member Exchange Helps Member Performance in Teams.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["team–member exchange", "member performance", "social exchange theory", "social capital theory", "felt obligation to utilize teammates’ resources", "resource quality", "team decision-making"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "social exchange theory with social capital theory"
   methods_overview: "two complementary studies that focus on individual performance"
   keywords_source: "felt obligation to utilize teammates’ resources"
+  hypotheses_source: "Hypothesis 1a. The relationship between TMX"
+  measures_overview: "was operationalized as his or her Wonderlic score,"
+  findings_overview: "Thus, Hypothesis 2a was supported."
 ---
 
 # Resource-Based Contingencies of When Team–Member Exchange Helps Member Performance in Teams
@@ -52,6 +57,12 @@ We integrate social exchange theory with social capital theory to present a reso
 **Research Question**
 The paper asks when team–member exchange improves individual member performance in teams. It tests whether TMX is more beneficial when teammates provide high-quality resources or when leaders provide low-quality resources, and whether felt obligation to utilize teammates’ resources explains these contingent effects.
 
+**Hypotheses / Propositions**
+- H1a: The TMX–individual performance relationship is more positive when teammates provide higher- rather than lower-quality resources.
+- H1b: The indirect TMX–individual performance relationship through felt obligation to utilize teammates’ resources is more positive when teammates provide higher- rather than lower-quality resources.
+- H2a: The TMX–individual performance relationship is more positive when the leader provides lower- rather than higher-quality resources.
+- H2b: The indirect TMX–individual performance relationship through felt obligation to utilize teammates’ resources is more positive when the leader provides lower- rather than higher-quality resources.
+
 **Mechanism Process**
 - IV(s): Team–member exchange.
 - DV(s): Individual member task performance.
@@ -59,6 +70,16 @@ The paper asks when team–member exchange improves individual member performanc
 - Moderators: Quality of teammates’ resources and quality of leaders’ resources, operationalized as cognitive ability in Study 1 and manipulated information quality in Study 2.
 
 The mechanism integrates social exchange theory and social capital theory. Strong TMX creates obligations to use teammates’ resources, but those obligations improve performance only when the resources inside the TMX relationship are high quality or when alternative leader resources are low quality. When teammate resources are low quality or leader resources are high quality, the same obligation can constrain members into using inferior information or underusing superior leader information. The two studies support this resource-contingent account through a simulated team field setting and a decision-making scenario experiment.
+
+**Data & Measures**
+Study 1 collected multisource data from 179 team members and 41 leaders nested within 41 simulated teams; the multilevel analyses used 168 complete Level 1 observations and 41 Level 2 teams. Leader and teammate resource quality was represented by Wonderlic Personnel Test cognitive-ability scores; teammate quality was the teammates’ average excluding the leader and focal member. Members rated TMX with the ten-item Seers (1989) scale, and leaders rated member task performance with four items. Random-slopes hierarchical linear models tested the cross-level interactions.
+
+Study 2 randomly assigned 436 undergraduate business majors in a 2 x 2 x 2 scenario experiment manipulating TMX and leader and teammate information quality. Perceived TMX used the ten-item Seers (1989) scale; felt obligation used four adapted items; performance was the reverse-coded absolute deviation of participants’ rankings from the Coast Guard standard, controlling initial performance. Conditional indirect effects were estimated in Mplus.
+
+**Key Findings**
+Study 1 supported H1a and H2a. TMX predicted higher performance when teammates’ cognitive ability was high (B = 0.30, p < .05), but not low (B = -0.23, ns), and when leader cognitive ability was low (B = 0.22, p < .05), but not high (B = -0.16, ns).
+
+Study 2 supported H1b and H2b. The conditional indirect effect of TMX through felt obligation was positive when teammate information quality was high (B = 0.14, p < .05), but not when it was low (B = -0.10, ns); it was also positive when leader information quality was low (B = 0.11, p < .05), but not when it was high (B = -0.07, ns).
 
 **Theoretical Contribution**
 The paper contributes to TMX research by challenging the assumption that stronger horizontal exchange relationships are uniformly performance enhancing. It shows that the performance value of TMX depends on the quality and configuration of resources available from teammates and leaders.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Criscuolo 2017 Evaluating Novelty The Ro
 text_path: "library/AMJ/vol-60-no-2/text/Criscuolo 2017 Evaluating Novelty The Role of Panels in the Selection of R&D Projects.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-mixed"
 keywords: ["R&D project selection", "project novelty", "selection panels", "panel workload", "panel expertise diversity"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "theories of innovation search"
   methods_overview: "We test our hypotheses using a Tobit model"
   keywords_source: "fund projects with intermediate levels of novelty"
+  hypotheses_source: "H1: Inverted U-Shape"
+  measures_overview: "Total amount of money awarded divided by total amount of money"
+  findings_overview: "results strongly support Hypothesis 1"
 ---
 
 # Evaluating Novelty: The Role of Panels in the Selection of R&D Projects
@@ -53,6 +58,12 @@ Building on a unique, multi-source, and multi-method study of R&D projects in a 
 **Research Question**
 When do organizations fund novel R&D projects, and how do selection-panel characteristics shape the evaluation of project novelty? The paper asks whether panels favor intermediate novelty and whether workload, expertise diversity, and panel-applicant shared location change that preference.
 
+**Hypotheses / Propositions**
+H1: Selection panels approve a higher share of requested funding for proposals with intermediate novelty than for proposals with low or high novelty (an inverted U-shaped relationship).
+H2: Higher panel workload shifts the inverted U-shaped relationship to the left, reducing selectors' likelihood of funding novel projects.
+H3: Higher panel expertise diversity shifts the inverted U-shaped relationship to the right, increasing selectors' likelihood of funding novel projects.
+H4: Panel-applicant shared location shifts the inverted U-shaped relationship to the right, increasing selectors' likelihood of funding novel projects.
+
 **Mechanism Process**
 - IV(s): Project novelty, measured as novel combinations of expertise keywords in R&D proposals relative to the firm's expertise-location system.
 - DV(s): Share of requested funding awarded to an R&D project application.
@@ -60,6 +71,12 @@ When do organizations fund novel R&D projects, and how do selection-panel charac
 - Moderators: Panel workload, panel expertise diversity, and panel-applicant shared location.
 
 The central mechanism is attentional and evaluative. Some novelty helps selectors see the project as useful for search and future capability development, but high novelty is harder to categorize, defend, and assess, so panels become less willing to fund it. High workload reduces available attention and shifts panels toward less novel projects; expertise diversity helps panels appreciate novelty from multiple angles; shared location increases support mainly for less novel local proposals rather than for highly novel ones.
+
+**Data & Measures**
+The quantitative analysis combines 556 applications from the R&D project management system with R&D department internal records, the R&D roadmap, the Expertise location system, and Human resource records; interviews and panel observations ground the theorizing and interpretation. The dependent variable is the amount awarded divided by the amount requested. Project novelty is the proportion of possible keyword pairs in a proposal that had never appeared in the firm's expertise location system. Panel workload is the character count of all other proposals evaluated in the meeting; panel expertise diversity is based on Euclidean distances among selectors' engineering-domain profiles; panel-applicant shared location is a dummy for whether the applicant and at least one selector shared an office. Hypotheses are tested with a Tobit model and robust standard errors clustered by applicant and panel of selectors.
+
+**Key Findings**
+H1 was strongly supported: project novelty had an inverted U-shaped relationship with the share of requested funding awarded, peaking at a novelty value of 0.256. H2 was supported: greater panel workload shifted the curve left and reduced preference for novelty. H3 was strongly supported: greater panel expertise diversity shifted the curve right and increased preference for novelty. H4 was not supported: shared location helped at low novelty levels, but more novel projects were not more likely to be funded when applicant and panel member shared an office.
 
 **Theoretical Contribution**
 The paper contributes to innovation search and organizational selection theory by examining both funded and rejected R&D proposals rather than only visible innovation outcomes. It shifts attention from idea generators to selection panels, showing that the social and cognitive conditions of evaluators shape whether novelty receives resources. It also qualifies the assumption that organizations simply seek novelty by showing an inverted U-shaped relationship between novelty and funding.

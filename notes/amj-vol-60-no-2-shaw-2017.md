@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Shaw 2017 New Ways of Seeing Elaboration
 text_path: "library/AMJ/vol-60-no-2/text/Shaw 2017 New Ways of Seeing Elaboration on a Theme.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "editorial"
 keywords: ["new ways of seeing", "theory development", "streetlight effect", "cross-disciplinary dialogue", "sustainable development", "well-being"]
@@ -52,6 +54,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how management research can move beyond familiar theoretical assumptions and develop "new ways of seeing" major phenomena. It focuses on why the field should import, develop, or recombine theoretical perspectives from inside and outside management.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial theme: The piece elaborates the 21st AMJ editorial team's "new ways of seeing" theme as a challenge to reconsider theoretical bases, assumptions, and cross-disciplinary collaborations.
 - Diagnostic concern: Shaw, Bansal, and Gruber warn that management research may overuse a narrow set of theories and logics-in-use, creating a streetlight effect in which scholars search where existing theories already illuminate.
@@ -60,6 +65,12 @@ The editorial asks how management research can move beyond familiar theoretical 
 - Editorial invitation: The essay encourages original theory development, theory importation from other domains, and recombination of disparate ideas while preserving methodological rigor.
 
 The process logic is editorial and agenda-setting rather than empirical. Shaw, Bansal, and Gruber use the streetlight effect to argue that refinement of existing theories can be valuable but may also reinforce familiar assumptions. Their central claim is that management scholarship can deepen insight by looking beyond current theoretical lampposts and engaging more seriously with alternative disciplinary perspectives.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new theory. Its contribution is to clarify the New Ways of Seeing theme as an argument for theoretical departure, interdisciplinary borrowing, and de novo theory development in management research.

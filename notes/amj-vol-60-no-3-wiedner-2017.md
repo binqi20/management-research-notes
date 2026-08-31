@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Wiedner 2017 The Emergence of Change in 
 text_path: "library/AMJ/vol-60-no-3/text/Wiedner 2017 The Emergence of Change in Unexpected Places Resourcing across Organizational Practices in Strategic Change.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["strategic change", "resourcing", "resources", "organizational practices", "resourcing space"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "resourcing literature"
   methods_overview: "in-depth case study"
   keywords_source: "resourcing across practices in strategic change"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "700 hours of direct observation, 66 semi-structured"
+  findings_overview: "change emerged in a practice that was not treated as a priority and that"
 ---
 
 # The Emergence of Change in Unexpected Places: Resourcing across Organizational Practices in Strategic Change
@@ -52,6 +57,9 @@ In our longitudinal, in-depth case study of strategic change within the National
 **Research Question**
 The paper asks how strategic change initiatives shape the use of resources across multiple organizational practices, and why change can emerge in practices that were not prioritized by senior managers. Empirically, it examines divergent developments in hospital, mental health, and community care contract management following strategic change at MgmtAgency in the English NHS.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Potential resources, valued resources, resource revaluations, resource redistributions, agents' interests, coordination costs, scrutiny, willingness to challenge, and resourcing space.
 - Process / phases: Strategic change initiators redirect valued resources and attention toward designated change agents and prioritized practices; this redistributes interests across practices; those interests shape coordination costs and scrutiny; change emerges where willing agents can use available resources with low interference.
@@ -59,6 +67,12 @@ The paper asks how strategic change initiatives shape the use of resources acros
 - Emergent outcome: The most substantial change emerged in mental health contract management, the practice least expected to become the strategic change showpiece.
 
 The process account argues that strategic change initiatives do more than allocate resources to targeted practices. They also revalue and redistribute resources across a field of practices, pulling attention toward some sites and away from others. Where low interest reduces scrutiny and coordination costs, skilled agents may gain resourcing space that allows mutual adjustment and practical change, even without large budgets, staffing, or formal priority.
+
+**Data & Measures**
+The longitudinal case corpus comprised more than 700 hours of direct observation, 66 semi-structured interviews, and over 20 GB of archival data. Observation included meetings, events, and two three-month shadowing studies; interviews involved MgmtAgency managers, health care provider members, GP representatives, and members of other public health care service-related organizations; archival materials included meeting records, contracts, strategy materials, correspondence, managers' diaries, and public organizational information. The authors compared clinical involvement before and after change initiation across the three contract-management practices, coded facilitating and inhibiting conditions and stakeholders' interests and strategies, compiled an event-history database, constructed a detailed narrative, and developed the process model through abstraction informed by resourcing theory and Bourdieu's relational framework.
+
+**Key Findings**
+The most profound change emerged in mental health contract management, although it was not prioritized and experienced withdrawal of administrative support. Hospital contract management received the greatest executive attention and substantial resources but changed little because GP representatives were reluctant to challenge hospital doctors and because coordination costs and scrutiny remained high. Community care attracted willingness to challenge but also broad, conflicting interests and high negotiation costs, whereas limited interest in mental health reduced interference and enabled a small group of GP representatives, clinicians, and the responsible manager to coordinate changes. The resulting model identifies resourcing space—low coordination costs and scrutiny combined with willingness to challenge—as a favorable condition through which resource revaluations and redistributions can generate change in unexpected practices.
 
 **Theoretical Contribution**
 The paper contributes to strategic change research by shifting attention from whether resources enable change to how strategic change initiatives shape what counts as valuable and where resources, attention, and power become concentrated. It extends resourcing theory by showing that resource use is conditioned by cross-practice redistributions of value, interest, coordination costs, and scrutiny, not only by local skillful use within a single practice. The concept of resourcing space explains how favorable conditions for change can arise in neglected practices because limited attention can reduce interference.
@@ -70,7 +84,7 @@ For managers, the study cautions that allocating more resources and formal autho
 The authors state that, despite multiple data sources, they cannot rule out all alternative explanations for the dynamics identified. Some parts of the analysis rely on data not captured in real time. The single-case design and intra-case comparisons limit generalization beyond the English NHS setting.
 
 **Future Research**
-The paper calls for more research on dynamics across practices, including practices that do not feature prominently on the executive agenda. Future work could examine how strategic change initiatives generate resource revaluations and resourcing space in settings with different occupations, power relations, and degrees of participation. Comparative studies could also investigate when neglected practices become sites of experimentation versus sites of stagnation.
+The paper calls for more research on dynamics across practices, including practices that do not feature prominently on the executive agenda, to deepen understanding of the complex dynamics triggered by strategic change and how change may emerge in unexpected places.
 
 **APA 7th Citation**
 Wiedner, R., Barrett, M., & Oborn, E. (2017). The emergence of change in unexpected places: Resourcing across organizational practices in strategic change. *Academy of Management Journal*, 60(3), 823-854. https://doi.org/10.5465/amj.2014.0474

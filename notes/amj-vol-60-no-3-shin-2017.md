@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Shin 2017 Multinational Enterprises with
 text_path: "library/AMJ/vol-60-no-3/text/Shin 2017 Multinational Enterprises within Cultural Space and Place Integrating Cultural Distance and Tightness–Looseness.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["cultural distance", "tightness–looseness", "expatriate parent-country nationals", "transaction cost economics", "Japanese MNEs"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "drawing from TCE logic"
   methods_overview: "We applied a generalized least squares (GLS)"
   keywords_source: "cultural distance and tightness–looseness"
+  hypotheses_source: "Hypothesis 1. Cultural distance forms a U-shaped"
+  measures_overview: "number of expatriates by the total number of employees"
+  findings_overview: "find support for a convex relationship between cultural distance and the proportion of"
 ---
 
 # Multinational Enterprises within Cultural Space and Place: Integrating Cultural Distance and Tightness–Looseness
@@ -52,6 +57,11 @@ Prior research into the effects of cultural differences between multinational en
 **Research Question**
 The paper asks why, when, and in which direction cultural distance between an MNE's home and host country affects the proportion of expatriate parent-country nationals in foreign subsidiaries. It also asks whether host-country tightness–looseness amplifies the curvilinear cultural distance-staffing relationship.
 
+**Hypotheses / Propositions**
+H1: Cultural distance has a U-shaped relationship with the proportion of expatriate PCNs: the proportion decreases from low to moderate distance and increases from moderate to high distance.
+
+H2: Cultural tightness–looseness moderates this U-shaped relationship such that tightness–looseness amplifies it.
+
 **Mechanism Process**
 - IV(s): Cultural distance between Japan and host countries; host-country tightness–looseness.
 - DV(s): Proportion of expatriate parent-country nationals in a subsidiary.
@@ -59,6 +69,12 @@ The paper asks why, when, and in which direction cultural distance between an MN
 - Moderators: Host-country tightness–looseness moderates the curvilinear relationship between cultural distance and expatriate PCN proportion.
 
 The mechanism is grounded in transaction cost economics. At low to medium cultural distance, rising ex ante costs of expatriate deployment make local staffing more attractive, reducing the expatriate PCN proportion. At medium to high cultural distance, rising ex post costs from monitoring and opportunism make expatriate PCNs more valuable for coordination and control, increasing their proportion. Tight host-country norms amplify this pattern because they make expatriate adjustment costlier at lower distance levels and make control concerns more salient at higher distance levels.
+
+**Data & Measures**
+The study uses the Shinshutsu Kigyou Souran, Kuni-Betsu dataset ("Japanese Overseas Investments, by Country") from Toyo Keizai Inc. The final GLS models contain 17,658 subsidiary-year observations from 3,022 wholly owned subsidiaries of Japanese MNEs. The dependent variable is the number of expatriates divided by total subsidiary employees. Cultural distance is Kogut and Singh’s (1988) index based on Hofstede’s four original dimensions; tightness–looseness uses Gelfand et al.’s (2011) country scores from a six-item Likert scale. The authors estimate GLS random-effects models with robust estimates, with country-, parent-firm-, and subsidiary-level controls.
+
+**Key Findings**
+H1 was partially supported: the cultural-distance squared term was positive and significant (p < .05), but the negative slope below the inflection point was not significant (p = .12), so the observed relationship was convex rather than fully U-shaped. H2 was partially supported: the squared cultural distance × tightness–looseness interaction was positive and significant (p < .05), steepening the curve at higher tightness, but at sufficiently low tightness the curve flipped to an inverted U-shape. Alternative cultural-values measures and stricter ownership thresholds produced consistent results.
 
 **Theoretical Contribution**
 The paper contributes to cross-cultural management theory by replacing a simple linear cultural distance prediction with a transaction-cost account of a convex, partly U-shaped relationship between cultural distance and expatriate PCN staffing. It reconciles prior positive, negative, and mixed findings by distinguishing ex ante and ex post cost logics across the cultural-distance continuum.

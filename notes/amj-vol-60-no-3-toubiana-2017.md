@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Toubiana 2017 The Message is on the Wall
 text_path: "library/AMJ/vol-60-no-3/text/Toubiana 2017 The Message is on the Wall Emotions, Social Media and the Dynamics of Institutional Complexity.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["emotions", "social media", "institutional complexity", "institutional logics", "emotional register", "Facebook", "shaming", "shunning"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "emotional register of a logic"
   methods_overview: "Our data analysis occurred in multiple stages."
   keywords_source: "Facebook acted as an emotional echo chamber"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Our data analysis occurred in multiple stages."
+  findings_overview: "leading to destabilization and eventual resettlement"
 ---
 
 # The Message is on the Wall? Emotions, Social Media and the Dynamics of Institutional Complexity
@@ -51,6 +56,9 @@ In this paper, we explore how emotions influence organizations in situations of 
 **Research Question**
 How are organizations that face institutional complexity affected by emotions when they confront disruptive events? The paper examines this question through the conflict between the DDF, an anonymized Canadian nonprofit federation, and members whose expectations were violated when the organization prioritized a research logic over a care logic after a controversial treatment emerged.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Institutional complexity between research and care logics; different emotional registers attached to those logics; members' expectations of care-based advocacy; leaders' research-based, nonemotive response.
 - Process / phases: Activation of different logics and investment of hope; members' betrayal and shaming while leaders justified authority; members' anger and shunning; DDF regret and mollification.
@@ -59,6 +67,12 @@ How are organizations that face institutional complexity affected by emotions wh
 - Boundary conditions: The case involves serious illness, a nonprofit advocacy setting, high emotional investment, and social media activity that may not represent all members.
 
 The process is cross-level. A disruptive treatment activated members' care logic and their hope that the DDF would advocate for access; the DDF instead enacted a research logic grounded in evidence, safety, and professional expertise. Facebook amplified members' betrayal and anger, turning emotion into shaming and then shunning that destabilized the organization through lost support, legitimacy pressure, and public conflict. Resettlement began when DDF leaders expressed regret and communicated in ways that acknowledged members' care logic and emotions.
+
+**Data & Measures**
+The qualitative corpus comprised 1,849 unique Facebook comments from 472 unique members, 11,293 likes, 116 media stories, 13 recorded and transcribed interviews with DDF leaders, and organizational communications and documents. The authors tracked pivotal events; inductively derived dictionaries for care and research logics and then coded logic activation; coded media coverage, organizational responses, emotions, and influence activities; and cross-checked findings across sources. For member responses, they inductively identified emotions and influence activities, used a 2012 LIWC dictionary to cross-check emotion keywords, coded comments in context, and aggregated the coded data into the four-phase process model.
+
+**Key Findings**
+The disruptive event activated members' care logic and hope, but the DDF's research-logic response violated members' expectations. Betrayal and shaming escalated into anger and shunning when the DDF rebuffed members' efforts; Facebook amplified these emotions and influence activities as an emotional echo chamber, contributing to organizational destabilization. Members' shunning and its material consequences eventually triggered leaders' regret, greater activation of the care logic in communications, mollification, adaptation, and partial resettlement.
 
 **Theoretical Contribution**
 The paper contributes to institutional theory by showing that institutional logics differ not only in goals, means, and sources of legitimacy, but also in emotional registers that prescribe legitimate emotional expression and reasoning. It extends research on institutional complexity by explaining how disruptive events can surface emotional incompatibilities between logics and destabilize an organizational settlement. It also theorizes social media as an emotional echo chamber that amplifies discrete emotions and converts them into influence activities such as shaming and shunning.

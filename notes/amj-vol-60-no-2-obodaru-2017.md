@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Obodaru 2017 Forgone, but not Forgotten 
 text_path: "library/AMJ/vol-60-no-2/text/Obodaru 2017 Forgone, but not Forgotten Toward a Theory of Forgone Professional Identities.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["forgone professional identities", "professional identity", "alternative selves", "real enactment", "imagined enactment", "vicarious enactment", "unfulfilled values"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "drawn primarily from identity theory"
   methods_overview: "Through an inductive, qualitative study"
   keywords_source: "forgone professional identities are linked to unfulfilled values"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "I performed ten rounds of coding"
+  findings_overview: "people use to enact foregone professional identities: (1) real enactment"
 ---
 
 # Forgone, but not Forgotten: Toward a Theory of Forgone Professional Identities
@@ -50,6 +55,9 @@ Through an inductive, qualitative study, I developed a process model of how peop
 **Research Question**
 The paper asks whether forgone professional identities can remain part of the self-concept, why people would want to retain them, and how people can hold on to a professional identity without occupying the associated work role. It examines how people deal with the professional "roads not taken" in contemporary careers.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Triggering condition: A career fork-in-the-road leads a person to take one work role and forgo another.
 - Core construct: A forgone professional identity is retained when it is tied to values that remain unfulfilled in the person's actual professional identity.
@@ -57,6 +65,12 @@ The paper asks whether forgone professional identities can remain part of the se
 - Strategy contingencies: The use of these enactment strategies varies with characteristics of the forgone identity, individual differences such as segmenting versus integrating work and nonwork, and situational constraints.
 
 The process model argues that people do not necessarily forget professional identities attached to forgone work roles. When the forgone identity embodies an unfulfilled value, people experience negative emotions around letting it go and seek ways to make it feel real and self-descriptive. Real, imagined, and vicarious enactment let people retain the identity even when the formal work role is absent.
+
+**Data & Measures**
+The unified qualitative corpus comprised 347 responses to an open-ended survey question and 33 in-depth semi-structured interviews. The author initially coded survey responses to identify forgone professional identities, then iteratively coded the combined corpus using grounded-theory procedures, constant comparison, memos, a coding dictionary, ten coding rounds, and a first-order/second-order data structure; two research assistants independently coded the interview data as a reliability check.
+
+**Key Findings**
+Forgone professional identities linked to fulfilled values were more readily discarded, whereas those linked to important unfulfilled values motivated efforts to retain them in the self-concept. Participants enacted retained forgone identities through real enactment (job or leisure crafting), imagined enactment (an alternate present or future), and vicarious enactment (observing and imagining close others), with identity characteristics, individual differences, and situational constraints shaping strategy use.
 
 **Theoretical Contribution**
 The paper expands professional identity theory by showing that people may define themselves not only through work roles they formally hold, but also through professional identities they have forgone. It also expands identity enactment beyond real activities and social interactions by theorizing imagined enactment and vicarious enactment as routes through which identities can become self-descriptive. These constructs reposition alternative selves as potential self-definitions, not only self-comparisons.

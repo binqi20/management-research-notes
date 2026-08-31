@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Miller 2017 How Organizations Respond to
 text_path: "library/AMJ/vol-60-no-3/text/Miller 2017 How Organizations Respond to Information Disclosure Testing Alternative Longitudinal Performance Trajectories.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["information disclosure programs", "institutional waves", "motor carrier safety", "mixed-effects models", "warning fatigue"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Chandler’s (2014) theory of institutional waves"
   methods_overview: "mixed-effects models to our panel data"
   keywords_source: "Information disclosure programs (IDPs)"
+  hypotheses_source: "Hypothesis 3b. Larger organizations will display"
+  measures_overview: "The BASIC score for HOS Compliance and"
+  findings_overview: "we find mixed support for Hypothesis 3."
 ---
 
 # How Organizations Respond to Information Disclosure: Testing Alternative Longitudinal Performance Trajectories
@@ -52,6 +57,15 @@ Information disclosure programs (IDPs) are an increasingly common aspect of orga
 **Research Question**
 How do organizations' performance trajectories on disclosed metrics evolve after implementation of a normative information disclosure program? The paper asks whether improvement tapers over time, whether poor initial performers show greater tapering, and whether organizational size changes initial improvement and later tapering.
 
+**Hypotheses / Propositions**
+H1: Organizations will improve most rapidly immediately after an information disclosure program is implemented, with their rate of change tapering over time.
+
+H2: Organizations with poor initial performance will display greater tapering in their rates of change as time elapses after the start of an information disclosure program.
+
+H3a: Larger organizations will improve less rapidly on disclosed metrics following information disclosure program implementation.
+
+H3b: Larger organizations will display less tapering in their rates of change as time elapses after the start of an information disclosure program.
+
 **Mechanism Process**
 - IV(s): Time since CSA program implementation, poor initial safety performance, organizational size, initial warning status, and middle warning status in the post-hoc analysis.
 - DV(s): Motor carrier safety performance measured by Hour-of-Service Compliance and Unsafe Driving BASIC scores, where higher scores indicate worse safety.
@@ -59,6 +73,12 @@ How do organizations' performance trajectories on disclosed metrics evolve after
 - Moderators: Initial performance, organizational size, initial warning status, and middle warning status.
 
 The mechanism is based on changing institutional pressure after information disclosure. At rollout, disclosed safety information is novel and salient, so external actors such as shippers, brokers, regulators, and the public pressure poorly performing carriers to improve. As time passes, the disclosed metrics lose salience, external pressure wanes, and carriers' improvement slows or reverses. Poor initial performers taper more because they respond strongly when pressure is high but are less likely to sustain safety prioritization once that pressure declines; larger carriers improve less rapidly at first because of inertia and power, but may show less tapering because visibility keeps institutional pressure from fading as much.
+
+**Data & Measures**
+The panel combines semiannual safety scores from the FMCSA with carrier lists, the most recent MCS filed with the DOT, carrier websites, and the Hoovers database. The dependent variables are BASIC scores for HOS Compliance and Unsafe Driving, where higher scores indicate worse safety; models use 481 carriers for HOS Compliance and 475 for Unsafe Driving after outlier removal. Occasion measures time since the CSA program began. Size is the natural logarithm of total power units from the most recent MCS; Initial Warning indicates a warning at rollout, and the post-hoc Middle Warning measure indicates a warning before the estimated transition point. The authors fit mixed-effects spline models, estimating transition points with PROC NLMIXED in SAS Version 9.4 and then fixing them for PROC MIXED models with the reported covariates.
+
+**Key Findings**
+H1 received strong support for both safety measures: scores initially declined, indicating improved safety, but improvement tapered and reversed after the estimated transition points. H2 was supported for both measures: poor initial performance correlated with more pronounced tapering (r = 0.48 for Unsafe Driving; r = 0.47 for HOS Compliance). H3 received mixed support: H3a and H3b were supported for Unsafe Driving, but size did not moderate initial change or tapering for HOS Compliance. The post-hoc analysis also found warning fatigue: carriers warned both initially and before the transition point later became less safe despite having the lowest average safety performance.
 
 **Theoretical Contribution**
 The paper extends research on information disclosure programs by moving from average post-disclosure improvement to longitudinal performance trajectories. It uses the institutional waves concept to explain why disclosure-driven improvement can be rapid initially but taper over time. It also offers a temporal reconciliation of structural inertia, resource dependence, and new institutional theory by distinguishing size effects on initial improvement from size effects on later tapering.

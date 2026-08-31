@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Leslie 2017 Why and When Does the Gender
 text_path: "library/AMJ/vol-60-no-2/text/Leslie 2017 Why and When Does the Gender Gap Reverse Diversity Goals and the Pay Premium for High Potential Women.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["gender pay gap", "female premium", "diversity goals", "high-potential women", "diversity value perceptions", "strategic human resource management"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "economic principle of supply and demand with theory from the field of strategic human resource management"
   methods_overview: "Two field studies (Studies 1 and 3) and two laboratory experiments"
   keywords_source: "gender pay gap; women earn less than men"
+  hypotheses_source: "gender on pay; women earn more than men, all"
+  measures_overview: "Pay. Pay reflected total compensation, given that"
+  findings_overview: "revealed that women earned 122% of what men"
 ---
 
 # Why and When Does the Gender Gap Reverse? Diversity Goals and the Pay Premium for High Potential Women
@@ -52,6 +57,14 @@ Abundant research has documented a gender pay gap; women earn less than men, all
 **Research Question**
 The paper asks why a female pay premium emerges against the backdrop of an overall gender pay penalty and when the gender gap reverses. It tests whether organizational diversity goals create demand for high-potential women, whether perceived diversity value explains pay rewards, and whether the premium grows stronger when diversity goals are stronger.
 
+**Hypotheses / Propositions**
+- H1: Potential moderates the effect of gender on pay; women earn more than men, all else equal, only when potential is high.
+- H2: Potential moderates the effect of gender on diversity value; women are perceived as higher in diversity value than men only when potential is high.
+- H3: Gender and potential have an indirect effect on pay through diversity value perceptions; high-potential women are perceived as higher in diversity value and receive higher pay.
+- H4: Among high-potential employees, industry moderates the effect of gender on pay; the female premium is more likely in consumer than manufacturing industries.
+- H5: Among high-potential employees, diversity goals moderate the effect of gender on diversity value perceptions; the difference is larger when diversity goals are stronger.
+- H6: Among high-potential employees, gender and diversity goals have an indirect effect on pay through diversity value and retention perceptions; the effect is larger when diversity goals are stronger.
+
 **Mechanism Process**
 - IV(s): Employee gender, employee potential, and the strength or context of organizational diversity goals.
 - DV(s): Pay rewards, total compensation, and career rewards.
@@ -59,6 +72,12 @@ The paper asks why a female pay premium emerges against the backdrop of an overa
 - Moderators: Potential moderates the gender-pay relationship; industry and manipulated diversity goals moderate the female premium among high-potential employees.
 
 The mechanism is cross-level. Organizational diversity goals and the scarcity of women in upper echelons increase perceived demand for high-potential women. Managers and evaluators therefore see high-potential women as more valuable for achieving diversity goals, infer stronger retention expectations, and allocate higher pay or rewards. The premium is bounded: it appears for high-potential women, not low-potential women, and is larger where diversity goals are stronger.
+
+**Data & Measures**
+Study 1 combined an employee survey with organizational records. Gender was a dummy variable; supervisors rated potential and performance; pay was the natural log of base salary plus variable pay. Study 2 manipulated target gender and potential. It measured diversity value perceptions with three original items, alternative mechanisms with competence, agency, warmth, and uniqueness measures, and outcomes with pay and career rewards. Study 3 combined ExecuComp and COMPUSTAT North America with other archival data. Gender and consumer-goods and consumer-services industry indicators were dummy variables; pay was total compensation; the analysis used human-capital, organizational, and industry controls. Study 4 manipulated target gender and organizational goals among working adults. It measured diversity value perceptions, retention perceptions, alternative mechanisms, and pay and career rewards, and tested moderated mediation with hierarchical regression.
+
+**Key Findings**
+Study 1 supported H1: high-potential women earned 107% of high-potential men's pay, whereas low-potential women earned 92% of low-potential men's pay and moderate-potential employees showed no gender difference. Study 2 supported H2 and H3: only in the high-potential condition were women perceived as higher in diversity value, and gender indirectly affected pay and career rewards through diversity value perceptions. Study 3 supported H4: women earned 120% of men's pay in the combined consumer industries, while manufacturing showed no gender gap; the consumer-services-only premium was not significant at the traditional level. Study 4 supported H5 and H6: diversity goals strengthened the gender difference in diversity value, and the indirect effects through diversity value and retention perceptions were larger under diversity goals than under the control conditions.
 
 **Theoretical Contribution**
 The paper challenges the assumption that the gender pay gap uniformly disadvantages women by showing that a female penalty can reverse for high-potential women. It contributes a mechanism, perceived diversity value, that explains why a premium can arise, and a boundary condition, high potential, that explains when it arises. It also develops a meso-level account linking macro organizational diversity goals to micro evaluator perceptions and pay decisions.

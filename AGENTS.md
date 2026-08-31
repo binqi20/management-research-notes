@@ -140,31 +140,32 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-08-29):
+**Current main-branch audit state (2026-08-31):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 26 upgraded 32 notes (AMJ vol-60-no-5 + vol-60-no-4, all v2
+batch 27 upgraded 32 notes (AMJ vol-60-no-3 + vol-60-no-2, all v2
 augmentations) to v3. Its final audit is **286/288 prose-field verdicts
 SUPPORTED**, with 2 verified-faithful `PARTIAL`, 0 `UNSUPPORTED`, and 0
-`CONTRADICTED`. Round 1 returned 283/288 `SUPPORTED` and 5 `PARTIAL`. Source
-verification led to nine legacy-field repairs across eight notes; all repaired
-notes cleared fresh blind full-note re-audits at 72/72 `SUPPORTED`. The two
-remaining `PARTIAL`s are documented interleaved-reference strip-loss cases:
-the fitted audit inputs omitted Lee's managerial-guidance passage and
-Schaumberg's leadership-efficacy future-research passage, while the recovered
-raw text confirms both note fields are faithful. All 32 final reports have
-current hashes. A pre-audit sweep corrected Lawrence's normalized anchor; the
-independent pre-publication provenance review then caught a nonliteral Malesky
-data-source phrase, which was narrowed to the exact raw-text name `PCI survey`
-and returned 9/9 `SUPPORTED` in a fresh blind full-note audit. These were
-distinct causes, and no repeated new-field or validation cause reached the stop
-threshold. This batch ran end-to-end on `gpt-5.6-sol` for augmentation and
-audit, the seventh such backfill batch. The recurring cross-family spot-audit
-most recently ran at batch 24's workshop review with 27/27 agreement, matching
-batch 16; none is scheduled for batch 26. The pre-batch census was 61 v1, 464
-v2, and 642 v3; the corpus now contains 61 legacy v1 notes, 432 v2 notes, and
-674 v3 notes with evidence anchors. Provenance eras are batches 01–07
-`claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23
-`claude-opus-5`, and 24–26 `gpt-5.6-sol`. New notes are produced at extraction
+`CONTRADICTED`. Round 1 returned 281/288 `SUPPORTED` and 7 `PARTIAL`. Source
+verification led to five scoped repairs across five notes; all repaired notes
+cleared fresh blind full-note re-audits at 45/45 `SUPPORTED`. The two remaining
+`PARTIAL`s are Gomulya's limitations and future-research fields: exact fitted-
+text reconstruction proves that interleaved-reference stripping omitted their
+supporting passages, while read-after-proof review of the recovered raw text
+confirms both fields are faithful. All 32 final reports have current hashes.
+Before audit dispatch, literal-anchor checks corrected two two-column-splice
+anchors, a per-phase review corrected Heaphy's interview counts, and named-
+entity verification narrowed six new-field source or scale names to literal
+raw-text forms. The two anchor failures shared one cause but remained below the
+stop threshold of three; the Heaphy issue was distinct. This batch ran end-to-
+end on `gpt-5.6-sol` for augmentation and audit, the eighth such backfill batch.
+The recurring cross-family spot-audit most recently ran at batch 24's workshop
+review with 27/27 agreement, matching batch 16; none is scheduled for batch 27,
+and the next calibration is expected at batch 28's workshop review. The pre-
+batch census was 61 v1, 432 v2, and 674 v3; the corpus now contains 61 legacy
+v1 notes, 400 v2 notes, and 706 v3 notes with evidence anchors. Provenance eras
+are batches 01–07 `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19
+`gpt-5.6-sol`, 20–23 `claude-opus-5`, and 24–27 `gpt-5.6-sol`. New notes are
+produced at extraction
 **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -187,7 +188,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-08-29.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-08-31.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -198,7 +199,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.59.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.60.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

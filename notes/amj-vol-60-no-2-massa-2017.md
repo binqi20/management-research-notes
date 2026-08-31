@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Massa 2017 Emotions Uncorked Inspiring E
 text_path: "library/AMJ/vol-60-no-2/text/Massa 2017 Emotions Uncorked Inspiring Evangelism for the Emerging Practice of Cool-Climate Winemaking in Ontario.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["institutional evangelism", "emerging practices", "organizational rituals", "institutionalized templates", "emotional experiences", "receptive identities", "proselytizing", "organizing"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Institutional evangelism is a process"
   methods_overview: "longitudinal, inductive study"
   keywords_source: "ritualized interactions with organizations"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "using a constant comparison technique (Corbin &"
+  findings_overview: "“provenance,” “hedonic,” and “glory”—to craft rituals designed to convert these audience members. These rituals led to inspiring emotional experiences among audience"
 ---
 
 # Emotions Uncorked: Inspiring Evangelism for the Emerging Practice of Cool-Climate Winemaking in Ontario
@@ -53,6 +58,9 @@ This paper examines how organizations create evangelists, members of key audienc
 **Research Question**
 The paper asks how organizational actors engender institutional evangelism among audience members. It examines how Ontario wineries converted some external audience members from spectators into advocates for the emerging practice of cool-climate winemaking.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Institutionalized templates: Wineries drew on provenance, hedonic, and glory templates to interpret and present cool-climate winemaking.
 - Organizational rituals: Wineries translated those templates into ceremonies, artifacts, and accounts during tastings, tours, dinners, events, and other interactions.
@@ -62,6 +70,12 @@ The paper asks how organizational actors engender institutional evangelism among
 - Evangelistic behaviors: Converted audience members proselytized by retelling stories and recreating experiences, and organized by founding events, societies, campaigns, and support structures.
 
 The process model is qualitative and multilevel rather than a variable-based causal test. Organizational actors craft ritualized interactions from institutionalized templates; audience members' salient identities shape whether those interactions become inspiring emotional experiences; and those experiences motivate proselytizing and organizing that disseminate the emerging practice. The paper emphasizes that evangelism can spread through a recursive cycle in which converted audience members recreate rituals and convert others.
+
+**Data & Measures**
+The study draws on 86 recorded and verbatim-transcribed semi-structured interviews with winery actors and members of six external audience groups, more than 250 hours of winery-based observations, and archival materials including books, articles, public documents, websites, newsletters, blogs, reviews, press items, and social media. The authors iteratively analyzed interview, observational, and archival data using constant comparison and open coding, aggregated first-order codes into second-order themes and theoretical dimensions, and used the two-dimensional circumplex model of emotions (Larsen & Diener, 1992) to guide emotion coding. Each author prepared a tentative data structure; the authors resolved coding differences through discussion and, when needed, consultation with interviewees.
+
+**Key Findings**
+The study develops an inductive, multilevel process model in which wineries draw on provenance, hedonic, and glory templates to craft rituals involving ceremonies, artifacts, and accounts. For audience members with receptive regional or gourmand identities, these rituals inspire reverence, elation, or awe, which motivate proselytizing and organizing; salient professional or consumer identities can instead yield no emotional resonance and failed conversion. Converted audience members can recreate rituals and convert others, producing a recursive cycle that disseminates the emerging practice.
 
 **Theoretical Contribution**
 The paper contributes a process model of institutional evangelism that explains how external audience members become devoted advocates for an emerging practice. It extends work on audiences, institutional change, and evangelism by showing that organizational rituals can convert outsiders, not only reinforce insiders' commitment. It also advances emotion and identity research by specifying reverence, elation, and awe as emotional experiences whose effects depend on receptive gourmand and regional identities.

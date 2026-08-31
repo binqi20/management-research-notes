@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Aranda 2017 Organizational Learning in T
 text_path: "library/AMJ/vol-60-no-3/text/Aranda 2017 Organizational Learning in Target Setting.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["organizational learning", "target setting", "aspiration levels", "experiential learning", "vicarious learning", "performance feedback"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Performance feedback theory (Cyert & March, 1963)"
   methods_overview: "fixed effect estimation19 with panel robust"
   keywords_source: "organizational learning in a target setting"
+  hypotheses_source: "in targets and relative target setting is stronger"
+  measures_overview: "increase or decrease in a branch’s target relative"
+  findings_overview: "a branch’s past performance and decrease the weight of comparable branches’ performance as the branch matures."
 ---
 
 # Organizational Learning in Target Setting
@@ -52,6 +57,13 @@ This paper examines organizational learning in a target setting. Organizations c
 **Research Question**
 How does organizational learning affect the way managers set explicit quantitative targets for operational units as those units mature? The paper asks how managers change their use of a branch's own past performance and comparable branches' performance when forming aspirations over the branch life cycle.
 
+**Hypotheses / Propositions**
+- H1: The relationship between target change and current-year performance deviation is weaker for young units than for mature units.
+- H2: The relationship between target change and relative target setting is stronger for young units than for mature units.
+- H3: The relationship between target change and current-year performance deviation is weaker for unfavorable deviations of young units than for those of mature units.
+- H4: The relationship between target change and current-year performance deviation is weaker for large unfavorable deviations of young units than for those of mature units.
+- H5: The relationship between target change and relative target setting depends more strongly on current-year performance deviation for young units than for mature units.
+
 **Mechanism Process**
 - IV(s): Branch maturity, prior performance deviation, relative target setting, favorable versus unfavorable deviation, and large versus small deviation.
 - DV(s): Change in budgeted guided sales targets for each branch-year.
@@ -60,11 +72,17 @@ How does organizational learning affect the way managers set explicit quantitati
 
 The mechanism is an information-use process in which managers initially rely more on vicarious learning from comparable branches because they know less about a new branch's own productivity. As branches mature, managers accumulate experiential knowledge and increase the weight placed on the branch's own past performance while decreasing the weight placed on peer performance. Early in a branch's life, managers also interpret success and failure asymmetrically and combine experiential and vicarious cues when revising targets.
 
+**Data & Measures**
+The study uses yearly proprietary data from 421 travel-retail branches over four years, yielding 1,105 branch-year observations. The dependent variable is the percentage change in budgeted guided sales from the prior year's target. Past performance deviation is prior-year actual guided sales minus budgeted guided sales, scaled by budgeted guided sales. Relative target setting compares a branch's expected guided sales per employee with the average actual guided sales per employee of branches in its region. Young branches have two to three full years of operation; mature branches have more than three. Controls cover changes in budgeted employees, competition, branch director, and regional manager, plus year dummies; models use branch fixed effects and panel-robust standard errors.
+
+**Key Findings**
+H1 and H2 were supported: young branches placed less weight on their own past performance and more weight on relative target setting than mature branches. H3 was supported: for unfavorable deviations, the weight on past performance was lower for young branches (-0.30) than mature branches (0.62), while favorable-deviation weights did not differ significantly. H4 was supported for large unfavorable deviations: the coefficient was -1.84 for young branches versus 0.31 for mature branches; large favorable-deviation differences across ages were insignificant. H5 was not supported in the aggregate interaction model, but the split model found significant cross-learning interactions for young branches after distinguishing favorable from unfavorable deviations; neither slope differed from zero for mature branches.
+
 **Theoretical Contribution**
 The paper extends organizational learning and aspiration-level research by showing how learning changes an internal managerial routine rather than only subsequent organizational outcomes. It contributes to performance feedback and target-setting literatures by documenting a dynamic shift from vicarious to experiential learning as units mature, and by showing that success, failure, and deviation magnitude shape learning differently in young units.
 
 **Practical Implication**
-The findings imply that early-stage units benefit from benchmark and peer information because vicarious learning is central before unit-specific experience accumulates. They also suggest that target-setting systems should present managers with multiple information sources and encourage critical assessment of learning during periods of success and failure.
+The findings imply that early-stage units benefit from benchmark and peer information because vicarious learning is central before unit-specific experience accumulates. They also suggest that target-setting systems should present managers with multiple information sources and encourage critical assessment of learning during periods of success.
 
 **Limitations**
 The study uses a single case design in one travel retail organization, which limits claims about how different organizational characteristics, compensation systems, strategies, or business-model replicability affect learning dynamics. The design captures learning through managers' evolving use of information, but it does not directly assess whether that learning improves organizational outcomes.

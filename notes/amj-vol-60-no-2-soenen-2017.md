@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Soenen 2017 To Shift or Not to Shift Det
 text_path: "library/AMJ/vol-60-no-2/text/Soenen 2017 To Shift or Not to Shift Determinants and Consequences of Phase Shifting on Justice Judgments.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["fairness heuristic theory", "dual-process theories of cognition", "phase shifting", "justice judgments", "organizational change", "merger", "anticipatory justice", "dispositional resistance to change"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Building on fairness heuristic theory and dual-process theories of cognition"
   methods_overview: "used the multi-group procedure proposed by Rigdon"
   keywords_source: "organizational justice and organizational change"
+  hypotheses_source: "Hypothesis 1. The relationship between time 1"
+  measures_overview: "measured at time 1 with Oreg’s (2003) 17-item scale."
+  findings_overview: "together predict 74% of employees’ perceptions of the merger as a phase-shifting event."
 ---
 
 # To Shift or Not to Shift? Determinants and Consequences of Phase Shifting on Justice Judgments
@@ -52,6 +57,14 @@ Building on fairness heuristic theory and dual-process theories of cognition, we
 **Research Question**
 The paper asks whether employees' perceptions of an organizational change as a phase-shifting event alter how prior overall justice judgments shape later justice judgments. It also asks which situational and individual antecedents predict whether employees perceive a merger as phase shifting.
 
+**Hypotheses / Propositions**
+H1: Perceived phase shifting weakens the relationship between time 1 and time 2 overall justice.
+H2: Perceived phase shifting moderates the relationship between time 1 overall justice and time 2 anticipatory justice facets, such that the relationship holds without perceived phase shifting but not with it.
+H3: Greater perceived change magnitude makes perceived phase shifting more likely.
+H4: Greater managerial exemplarity makes perceived phase shifting less likely.
+H5: Greater social support for change makes perceived phase shifting less likely.
+H6: Greater dispositional resistance to change makes perceived phase shifting less likely.
+
 **Mechanism Process**
 - IV(s): Time 1 overall justice judgments for the consequences model; magnitude of change, managerial exemplarity, coworker support for change, and dispositional resistance to change for the antecedents model.
 - DV(s): Time 2 overall justice judgments, time 2 anticipatory justice facets, and perceived phase shifting.
@@ -59,6 +72,12 @@ The paper asks whether employees' perceptions of an organizational change as a p
 - Moderators: Perceived phase shifting moderates the relationship between time 1 overall justice and later justice judgments.
 
 The mechanism is a cognitive shift from the use phase to the judgment phase in fairness heuristic theory, interpreted through dual-process cognition. When employees see the merger as phase shifting, they shift from relying on prior overall justice heuristics toward analytic reevaluation, weakening the link between earlier and later justice judgments. Greater perceived change magnitude increases phase-shifting perceptions, while coworker support and dispositional resistance to change reduce the likelihood of such reevaluation; managerial exemplarity shows the same negative pattern but is reported as only marginally significant.
+
+**Data & Measures**
+The field study matched 115 employees across two survey waves six months apart. Time 1 measured overall justice with a three-item scale and dispositional resistance to change with a 17-item scale. Time 2 measured overall justice with the same three-item scale, four anticipatory justice facets with adapted multi-item scales, and perceived phase shifting with two items dichotomized into perceived versus no perceived phase shifting; change magnitude, managerial exemplarity, and social support for change used single-item measures. Multi-group partially latent structural equation modeling tested H1–H2, and binary logistic regression tested H3–H6; these observational analyses are associational. A supplementary scenario-based experiment manipulated phase shifting, used a yes–no version of the two-item measure, and assessed response time and overall justice judgments; its sample size and fuller design details are not reported in the paper text.
+
+**Key Findings**
+H1 was supported: the time 1-to-time 2 overall-justice path was weaker with perceived phase shifting (.43) than without it (.86). H2 was partially supported: the procedural, informational, and interpersonal anticipatory-justice paths differed between groups, but the distributive-justice path did not. Greater change magnitude predicted greater odds of perceived phase shifting (H3: b = 1.03, odds ratio = 2.82, p = .01); social support (H5: b = −0.71, odds ratio = 0.49, p = .01) and dispositional resistance to change (H6: b = −0.47, odds ratio = 0.62, p = .05) predicted lower odds. Managerial exemplarity had the hypothesized negative sign but was only marginally significant (H4: b = −0.41, odds ratio = 0.66, p = .10), although the authors reported H3–H6 as supported. The logistic model classified 74% of cases. In the supplementary experiment, participants perceiving phase shifting took longer to respond (t = −2.26, p < .05), and the overall-justice change was replicated.
 
 **Theoretical Contribution**
 The paper contributes to organizational justice research by treating phase shifting as an individual perception rather than as an objective property of an event. It extends fairness heuristic theory by explicitly linking it to dual-process theories of cognition and by identifying event, situational, and individual antecedents of phase-shifting perceptions. Empirically, it provides a direct longitudinal test of how phase shifting changes the dynamics of overall and anticipatory justice judgments.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Litrico 2017 The Evolution of Issue Inte
 text_path: "library/AMJ/vol-60-no-3/text/Litrico 2017 The Evolution of Issue Interpretation within Organizational Fields Actor Positions, Framing Trajectories, and Field Settlement.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-mixed"
 keywords: ["contentious issues", "organizational fields", "field settlement", "framing trajectories", "buffering versus integrating", "environmental issues"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "institutional theory emphasized the development of"
   methods_overview: "We adopted an inductive approach"
   keywords_source: "framing trajectories over time"
+  hypotheses_source: "actors transition from buffering-dominant to"
+  measures_overview: "changing ratio of integrating"
+  findings_overview: "terclockwise toward increasingly integrating frames"
 ---
 
 # The Evolution of Issue Interpretation within Organizational Fields: Actor Positions, Framing Trajectories, and Field Settlement
@@ -51,6 +56,14 @@ In this study, we seek to understand how actors’ interpretations of contentiou
 **Research Question**
 How does issue interpretation evolve over time within organizational fields, and how do fields reach settlement around contentious issues? The paper studies this question through civil aviation actors' shifting interpretations of aircraft noise and emissions between 1996 and 2010.
 
+**Hypotheses / Propositions**
+H1: Backstage actors maintain either buffering-dominant or integrating-dominant framing over the issue cycle.
+H2a: Middle-stage actors tend to use an equal mix of buffering and integrating frames over the issue cycle.
+H2b: Mixed framing by middle-stage actors puts pressure on front-stage actors to adopt integrating framing.
+H3: Front-stage actors tend to express buffering-dominant frames during issue emergence, mitigating against settlement.
+H4: Negative moral judgments, external-regulation threats, and within-industry pressure lead front-stage actors to transition from buffering-dominant to integrating-dominant framing.
+H5: A shift by front-stage actors from buffering to integrating frames is an antecedent to field settlement surrounding a contentious issue.
+
 **Mechanism Process**
 - Key constructs / frames: Buffering frames, integrating frames, actor framing trajectories, contentious issue salience, and field settlement.
 - Actor positions: Front-stage actors are directly linked to an issue and in direct contact with concerned audiences; middle-stage actors contact concerned audiences without being directly linked to the issue; backstage actors are neither directly linked nor directly exposed.
@@ -59,6 +72,14 @@ How does issue interpretation evolve over time within organizational fields, and
 - Emergent outcomes: Four framing trajectories: integrating dominant, buffering dominant, mixed buffering/integrating, and buffering to integrating.
 
 The process account is that actor position shapes how organizations interpret a contentious issue as it rises and falls in salience. Backstage actors maintain relatively stable buffering- or integrating-dominant frames, middle-stage actors use mixed framing, and front-stage actors initially buffer because they are under threat. As public moral judgment, regulatory threat, and peer pressure accumulate, front-stage actors can shift toward integrating frames, treating the issue as part of normal field activity. This shift is theorized as an antecedent to field settlement because it enables a common framework for action even without full consensus.
+
+**Data & Measures**
+The first stage used observations at four practitioner-oriented conferences, documentation and informal interviews from those events, and 35 semi-structured interviews conducted in 2008–2009. The authors coded idea elements, compared themes and inconsistencies, iteratively identified six frames, and checked the frame list and definitions with an experienced industry informant.
+
+The second stage used 1,092 Aviation Daily articles from 1996–2010 retrieved through Factiva. Two research assistants coded actor-attributed statements for actor group, environmental issue, and frame; pilot coding and reliability checks preceded consensus coding of the full dataset. Framing trajectory was operationalized as the changing ratio of integrating to buffering frames over time, with yearly actor-group positions and linked sequences used to compare trajectories.
+
+**Key Findings**
+Four trajectories emerged: buffering dominant, integrating dominant, mixed buffering/integrating, and a shift from buffering to integrating. Backstage collective actors remained buffering dominant while suppliers remained integrating dominant; middle-stage actors used mixed framing. Front-stage airports shifted toward integrating framing as noise became salient, and front-stage airlines showed the same shift as emissions became salient. The analysis attributes these shifts to negative moral judgments, threatened external regulation, and peer pressure, and treats the front-stage shift toward integrating framing as an antecedent to field settlement.
 
 **Theoretical Contribution**
 The paper contributes a longitudinal framework for studying issue framing as trajectories rather than static positions. It distinguishes buffering and integrating frames and shows how these categories capture whether actors resist an issue as external disruption or accept it as part of core operations.

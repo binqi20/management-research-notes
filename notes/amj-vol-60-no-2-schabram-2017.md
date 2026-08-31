@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Schabram 2017 Negotiating the Challenges
 text_path: "library/AMJ/vol-60-no-2/text/Schabram 2017 Negotiating the Challenges of a Calling Emotion and Enacted Sensemaking in Animal Shelter Work.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["callings", "workplace challenges", "emotion", "enacted sensemaking", "burnout", "thriving", "animal shelter work"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "emotion and enacted sensemaking"
   methods_overview: "Interviews were 45–120 minutes"
   keywords_source: "callings and employee responses to workplace challenges"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "used constant comparative analysis to aggregate"
+  findings_overview: "build trajectories of thriving or burnout."
 ---
 
 # Negotiating the Challenges of a Calling: Emotion and Enacted Sensemaking in Animal Shelter Work
@@ -51,6 +56,9 @@ An important and underexamined issue in the study of callings concerns the chall
 **Research Question**
 The study asks how the ways individuals negotiate the challenges of a calling vary across individuals and over time. It focuses on animal shelter workers because this setting makes the emotional, identity, and sensemaking dynamics of pursuing a prosocial calling transparently observable.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: challenges of animal shelter work, accounts of self and purpose, emotional responses, enacted sensemaking, calling paths, burnout, thriving.
 - Process / phases: workers enter with passion and purpose, encounter similar challenges, interpret those challenges through accounts of self and purpose, respond through cycles of emotion and enacted sensemaking, and gradually enact divergent work environments and outcomes.
@@ -58,6 +66,12 @@ The study asks how the ways individuals negotiate the challenges of a calling va
 - Emergent outcomes: identity and contribution paths tend toward broken or defeated burnout and exit from shelter work, while the practice path tends toward learning, growth, continued animal welfare work, and community building.
 
 The process is recursive rather than linear. Initial accounts of self and purpose frame how workers interpret challenges; emotional responses then energize enacted sensemaking, including experimenting with tasks, relationships, roles, and boundaries. These actions change the work environment and generate new cues, so small early differences in framing and enactment accumulate into distinct calling paths.
+
+**Data & Measures**
+The study used 45–120-minute narrative interviews with 50 current and former animal shelter workers. Interviews were recorded and transcribed into 907 single-spaced pages. The authors used open coding and constant comparative analysis, grouped more than 295 first-order concepts into second-order themes, and temporally bracketed narratives into early, middle, and late periods before developing a model of framing, enactment, and the three calling paths.
+
+**Key Findings**
+Workers entered with similar passion and purpose and encountered similar challenges, yet their framing, emotions, and enacted sensemaking diverged into three paths. Identity-oriented workers treated challenges as threats to special gifts and moved toward broken burnout; contribution-oriented workers treated them as obstacles to impact and moved toward defeated burnout. Practice-oriented workers treated challenges as opportunities to learn, built supportive relationships, and followed a trajectory of thriving and growth. The recursive interplay of emotion, sensemaking, framing, and enactment amplified small early differences into divergent work environments and outcomes.
 
 **Theoretical Contribution**
 The paper extends callings research by showing that a calling is not a unitary work orientation with uniform consequences. It identifies three calling paths and explains how people pursuing the same calling can end up thriving, leaving in a defeated state, or leaving with a broken sense of fit. It also contributes to research on workplace challenges by theorizing how emotion and enacted sensemaking recursively shape burnout and thriving trajectories over time.

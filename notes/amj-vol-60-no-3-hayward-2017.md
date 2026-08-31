@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Hayward 2017 Pseudo-Precision Precise Fo
 text_path: "library/AMJ/vol-60-no-3/text/Hayward 2017 Pseudo-Precision Precise Forecasts and Impression Management in Managerial Earnings Forecasts.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["earnings guidance precision", "organization impression management (OIM)", "earnings forecasts", "organizational setbacks", "investors"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "impression management (in our case OIM)"
   methods_overview: "two-step Heckman model"
   keywords_source: "earnings guidance precision as a mechanism"
+  hypotheses_source: "Hypothesis 2b. The positive relationship between"
+  measures_overview: "We measure precision as the range in"
+  findings_overview: "precision remains a significant and positive predictor of the cumulative abnormal return."
 ---
 
 # Pseudo-Precision? Precise Forecasts and Impression Management in Managerial Earnings Forecasts
@@ -51,6 +56,15 @@ We examine earnings guidance precision as a mechanism of organization impression
 **Research Question**
 The paper asks how organizational impression management considerations explain the precision of managers' earnings forecasts, and what effects such precision has on investors' responses. It examines whether managers use precise earnings guidance after organizational setbacks to convey authority and control over firm performance.
 
+**Hypotheses / Propositions**
+- H1a: After an earnings miss, subsequent earnings guidance will be more precise.
+- H1b: The positive relationship between a preceding earnings miss and subsequent guidance precision will strengthen when guidance represents an earnings increase.
+- H2a: After below-industry-average performance, subsequent earnings guidance will be more precise.
+- H2b: The positive relationship between preceding below-industry-average performance and subsequent guidance precision will strengthen when guidance represents an earnings increase.
+- H3a: After a negative market reaction to an M&A announcement, subsequent earnings guidance will be more precise.
+- H3b: The positive relationship between a preceding negative market reaction to an M&A announcement and subsequent guidance precision will strengthen when guidance represents an earnings increase.
+- H4: Earnings-guidance precision will be positively related to the stock market's reaction to the guidance announcement.
+
 **Mechanism Process**
 - IV(s): Prior-year earnings miss, below-industry-average market performance, and negative market reaction to an M&A announcement.
 - DV(s): Precision of subsequent annual earnings guidance; cumulative abnormal market-adjusted return around the guidance announcement.
@@ -58,6 +72,12 @@ The paper asks how organizational impression management considerations explain t
 - Moderators: Upward guidance, defined as guidance that projects an earnings increase relative to the previous year's EPS.
 
 The central mechanism is that, after setbacks damage impressions of managerial credibility and control, more precise earnings guidance works as a quantitative OIM tactic. The paper argues that precision invokes faster, more automatic Type 1 processing than verbal accounts, allowing leaders to convey control and authority while reducing skepticism. Empirically, prior earnings misses, below-industry-average returns, and negative M&A reactions are associated with more precise guidance; the upward-guidance moderation is supported for earnings misses and negative M&A reactions, but not for below-industry performance.
+
+**Data & Measures**
+The study uses annual earnings guidance from the First Call database for fiscal years 2005–2011, augmented with Compustat accounting data, Compustat Executive CEO-compensation data, CRSP share-price data, and Raven Pack company announcements. Guidance precision is the negative of the announced EPS range in cents, so higher values indicate greater precision. The setback indicators are a prior-year earnings miss, below-industry-average market performance based on three-digit Standard Industrial Classification codes, and a negative abnormal return to an M&A announcement; upward guidance is the proportional increase over the prior year's EPS. The market-reaction outcome is cumulative abnormal market-adjusted return from one day before through one day after the guidance announcement. A two-step Heckman procedure addresses selection into issuing guidance; the hypothesis models use OLS with clustered errors, and H4 uses an event-study model.
+
+**Key Findings**
+H1a, H2a, and H3a were supported: prior-year earnings misses, below-industry-average returns, and negative M&A announcement returns each positively predicted guidance precision. H1b and H3b were supported, but H2b was not: upward guidance strengthened the precision relationship after an earnings miss and after a negative M&A reaction, but not after below-industry performance. H4 was supported: precision positively predicted announcement-window abnormal return (b = 0.058, p < .05). In substantive terms, precision increased by 2.9 cents after an earnings miss, 1.9 cents after below-industry-average returns, and 4 cents after a negative M&A reaction; a one-cent precision increase corresponded to about a 0.06% abnormal return.
 
 **Theoretical Contribution**
 The paper extends OIM theory by identifying forecast precision as a quantitative impression-management tactic, rather than the verbal accounts, categorizations, symbolic behavior, or physical markers emphasized in prior work. It also contributes to earnings-guidance research by showing that precision is not explained only by predictability, confidence, or persuasion; organizational setbacks also predict precision in ways consistent with OIM.

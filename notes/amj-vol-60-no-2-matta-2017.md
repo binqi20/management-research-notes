@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Matta 2017 Is Consistently Unfair Better
 text_path: "library/AMJ/vol-60-no-2/text/Matta 2017 Is Consistently Unfair Better than Sporadically Fair An Investigation of Justice Variability and Stress.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["organizational justice", "justice variability", "uncertainty management theory", "stress", "fair treatment", "supervisor self-control", "experience-sampling"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "Drawing on uncertainty management theory"
   methods_overview: "a multilevel experience-sampling study in the field"
   keywords_source: "justice variability and stress"
+  hypotheses_source: "Hypothesis 3. There are positive indirect effects"
+  measures_overview: "Stress. Work stress was measured by adapting the"
+  findings_overview: "daily stress mediated the effects of justice variability on daily job dissatisfaction and emotional exhaustion."
 ---
 
 # Is Consistently Unfair Better than Sporadically Fair? An Investigation of Justice Variability and Stress
@@ -55,6 +60,14 @@ Research on organizational justice has predominantly focused on between-individu
 **Research Question**
 Does variability in fair treatment over time create employee stress beyond the effects of average fairness, and can consistently unfair treatment be less stressful than unpredictably fair treatment? The paper also asks whether justice variability strengthens the daily uncertainty-stress relationship, transmits effects to job dissatisfaction and emotional exhaustion, and reflects supervisor self-control.
 
+**Hypotheses / Propositions**
+- H1: Justice variability is positively associated with stress.
+- H2: Justice variability moderates the positive relationship between general workplace uncertainty and stress, which is weaker at low variability and stronger at high variability.
+- H3: Justice variability has positive indirect effects on job dissatisfaction, emotional exhaustion, and CWB via stress.
+- H4: Justice variability moderates the positive indirect effects of general workplace uncertainty on job dissatisfaction, emotional exhaustion, and CWB via stress; the effects are weaker at low variability and stronger at high variability.
+- H5: Supervisor self-control is negatively associated with justice variability.
+- H6: Supervisor self-control has a negative indirect effect on stress via justice variability.
+
 **Mechanism Process**
 - IV(s): Justice variability in supervisor fair treatment; daily general workplace uncertainty; supervisor self-control as an antecedent.
 - DV(s): Physiological and perceived stress, job dissatisfaction, emotional exhaustion, and counterproductive work behavior.
@@ -62,6 +75,16 @@ Does variability in fair treatment over time create employee stress beyond the e
 - Moderators: Justice variability moderating the daily relationship between general workplace uncertainty and stress.
 
 The mechanism is grounded in uncertainty management theory: employees use fairness to manage uncertainty, but variable fair treatment makes fairness itself uncertain. When fair treatment fluctuates, employees lose predictability about how they will be treated, so variability becomes stressful even when average fairness is not low. That daily stress carries justice variability into job dissatisfaction and emotional exhaustion, although the hypothesized CWB mediation is not supported. Supervisor self-control matters because supervisors with more self-discipline and impulse control are better able to provide stable fair treatment over time.
+
+**Data & Measures**
+Study 1 randomly assigned participants to always fair, always unfair, or variably fair supervisor-feedback conditions in a stock-price simulation. Overall fairness was checked with the Colquitt et al. (2015) three-item scale, and physiological stress was operationalized as heart rate measured with Omron HEM-637 monitors and averaged across rounds 4–12.
+
+Study 2 used 995 daily observations from 97 employee–supervisor dyads. Daily overall fairness used the Colquitt et al. (2015) three-item scale; justice variability was each employee's standard deviation in overall fairness across three weeks, with mean fairness controlled. General workplace uncertainty used a four-item scale, daily stress adapted the Motowidlo, Packard, and Manning (1986) four-item scale, job dissatisfaction reverse-coded a five-item daily version of the Brayfield and Rothe (1951) scale, and emotional exhaustion used a five-item scale. CWB used the six-item Dalal and colleagues (2009) supervisor-targeted scale, while supervisor self-control used the Tangney et al. (2004) 10-item scale. Multilevel path analysis in Mplus 7 used robust maximum-likelihood estimation and a parametric bootstrap for indirect effects.
+
+**Key Findings**
+Study 1 supported H1: the variably fair condition produced higher heart rate than both the always fair and always unfair conditions. For heart-rate variability, the variably fair condition exceeded the always fair condition, but its difference from the always unfair condition was not statistically significant.
+
+Study 2 supported H1 and H2: justice variability was positively associated with daily stress and strengthened the positive daily uncertainty–stress relationship. H3a and H3b were supported for job dissatisfaction and emotional exhaustion, but H3c was not supported for CWB. H4a and H4b were supported for the conditional indirect effects on job dissatisfaction and emotional exhaustion, but H4c was not supported for CWB. H5 and H6 were supported: supervisor self-control was negatively associated with justice variability, and its negative indirect effect on stress through justice variability excluded zero.
 
 **Theoretical Contribution**
 The paper introduces justice variability as a distinct construct that captures between-person differences in the stability of fairness over time. It challenges the dominant justice assumption that more fairness is always better by showing that variably fair treatment can be more stressful than consistently unfair treatment. It also extends uncertainty management theory by showing that uncertainty about justice can intensify, rather than buffer, the effects of general workplace uncertainty.

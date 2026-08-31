@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-60-no-3/pdfs/Farooq 2017 The Multiple Pathways throug
 text_path: "library/AMJ/vol-60-no-3/text/Farooq 2017 The Multiple Pathways through which Internal and External Corporate Social Responsibility Influence Organizational Identification and Multifoci Outcomes The Moderating Role of Cultural and Social Orientations.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["corporate social responsibility", "organizational identification", "perceived prestige", "perceived respect", "social identity theory"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "we use a social identity theory perspective"
   methods_overview: "The hypotheses were tested using SEM"
   keywords_source: "corporate social responsibility (CSR) influence employee identification"
+  hypotheses_source: "Hypothesis 4a. External CSR will predict loyalty"
+  measures_overview: "measured using a five-item version of the Mael and"
+  findings_overview: "Results supported Hypothesis 1a"
 ---
 
 # The Multiple Pathways through which Internal and External Corporate Social Responsibility Influence Organizational Identification and Multifoci Outcomes: The Moderating Role of Cultural and Social Orientations
@@ -52,6 +57,19 @@ In this paper, we use a social identity theory perspective to study the mechanis
 **Research Question**
 How do internal and external CSR influence employee organizational identification and citizenship outcomes, and through which identity-based mechanisms? The paper also asks when these effects are stronger by testing employees' local, cosmopolitan, individualist, and collectivist orientations as boundary conditions.
 
+**Hypotheses / Propositions**
+H1a: Perceived external prestige mediates the positive relationship between external CSR and organizational identification.
+H1b: Perceived internal respect mediates the relationship between internal CSR and organizational identification.
+H1c: These target-similar indirect effects remain and are stronger than the corresponding cross-target effects.
+H2a: Cosmopolitan orientation strengthens the indirect effect of external CSR on identification via prestige.
+H2b: Local orientation strengthens the indirect effect of internal CSR on identification via respect.
+H3a: Collectivist orientation strengthens the indirect effect of external CSR on identification via prestige.
+H3b: Individualist orientation strengthens the indirect effect of internal CSR on identification via respect.
+H4a: External CSR predicts loyalty boosterism via prestige and identification.
+H4b: Internal CSR predicts interpersonal helping via respect and identification.
+H4c: Internal CSR predicts personal industry via respect and identification.
+H4d: These target-similar indirect effects on citizenship outcomes remain and are stronger than the corresponding cross-target effects.
+
 **Mechanism Process**
 - IV(s): Internal CSR; external CSR targeted at community, environment, and consumers.
 - DV(s): Organizational identification; loyalty boosterism; interpersonal helping; personal industry.
@@ -59,6 +77,12 @@ How do internal and external CSR influence employee organizational identificatio
 - Moderators: Cosmopolitan orientation, local orientation, collectivist orientation, and individualist orientation.
 
 The core mechanism is target-specific identification. External CSR is expected to signal that outsiders hold the organization in high regard, increasing perceived external prestige and then organizational identification. Internal CSR is expected to signal that employees are valued by the organization, increasing perceived internal respect and then organizational identification. Identification then predicts citizenship behaviors, with mostly stronger target-similar paths: external CSR via prestige is especially relevant for loyalty boosterism, while internal CSR via respect is especially relevant for internally focused citizenship behaviors.
+
+**Data & Measures**
+Study 1 used two-wave, single-source employee surveys; Study 2 used matched employee, coworker, and supervisor surveys. Both studies measured internal and three facets of external CSR with the Farooq, Payaud, et al. measure adapted from Turker, identification with a five-item organizational-identification measure, prestige with the Riordan et al. measure, respect with the Tyler and Blader scale, and local/cosmopolitan orientation with the Goldberg scale. Study 2 additionally measured individualism/collectivism with the Triandis et al. instrument and loyalty boosterism, interpersonal helping, and personal industry with the Moorman and Blakely scale; employees reported loyalty, coworkers reported helping, and supervisors reported personal industry. The authors used CFA and SEM with bootstrapped indirect effects, and the PROCESS macro in SPSS, using Hayes’s (2013) Model 58, for moderated mediation; they describe both studies as cross-sectional surveys rather than causal-sequence designs.
+
+**Key Findings**
+Study 1 partially supported H1a: community- and consumer-focused CSR, but not environment-focused CSR, predicted identification via prestige; it fully supported H1b. H2a was partial because the consumer-facet interaction ran contrary to prediction, whereas H2b was fully supported. Study 2 supported H1a and H1b, H1c, H2a and H2b, H3a and H3b, H4a and H4b, and H4d. H4c received only moderate support because internal and external CSR were both positively associated with personal industry with only a slight difference in effect sizes.
 
 **Theoretical Contribution**
 The paper contributes to micro CSR research by separating internal and external CSR rather than treating CSR as a single omnibus construct. It extends social identity theory by showing that prestige is not the only route to organizational identification; perceived internal respect can also be a central identity pathway. It further specifies social and cultural orientations as boundary conditions that explain why different employees respond more strongly to different CSR targets.

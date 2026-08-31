@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Ellis 2017 Imprinting through Inheritanc
 text_path: "library/AMJ/vol-60-no-2/text/Ellis 2017 Imprinting through Inheritance A Multi-Genealogical Study of Entrepreneurial Proclivity.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["organizational lineage inheritance", "imprinting effects", "era-based imprinting", "entrepreneurial proclivity", "genealogical approach", "lineage-based transmissions", "heredity processes", "entrepreneurial tenure gap"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "organizational lineage inheritance theoretical framework"
   methods_overview: "we ran a negative binomial panel time-varying data"
   keywords_source: "Adopting a genealogical approach"
+  hypotheses_source: "Hypothesis 2a. The greater the entrepreneurial"
+  measures_overview: "used a count of the number of start-ups founded by"
+  findings_overview: "Era-based initial conditions strongly influence the entrepreneurial proclivity of the first generation of firms"
 ---
 
 # Imprinting through Inheritance: A Multi-Genealogical Study of Entrepreneurial Proclivity
@@ -53,6 +58,14 @@ We offer an organizational lineage inheritance theoretical framework for underst
 **Research Question**
 The paper asks how era-based imprinting effects on entrepreneurial proclivity persist across time, organizations, and generations of founders. It examines whether competitive versus cooperative founding eras shape ancestral founders' entrepreneurial proclivity, whether that proclivity is inherited by later generations, and when transmission weakens because founders' and prospective founders' mental models diverge.
 
+**Hypotheses / Propositions**
+- H1: Founding parents beginning entrepreneurial activity in the competitive era have greater entrepreneurial proclivity than those beginning in the cooperative era.
+- H2a: Greater entrepreneurial proclivity among founding parents predicts greater entrepreneurial proclivity in the second generation.
+- H2b: Greater second-generation entrepreneurial proclivity predicts greater third-generation entrepreneurial proclivity.
+- H3a: First-generation entrepreneurial proclivity mediates the effect of era-based initial conditions on second-generation entrepreneurial proclivity.
+- H3b: Second-generation entrepreneurial proclivity mediates the effect of first-generation entrepreneurial proclivity on third-generation entrepreneurial proclivity.
+- H4: Founding parents' entrepreneurial proclivity has a greater positive impact on second-generation entrepreneurial proclivity earlier rather than later in the parents' entrepreneurial tenure.
+
 **Mechanism Process**
 - IV(s): Era-based initial environmental conditions; entrepreneurial proclivity of the first generation; entrepreneurial proclivity of the second generation; entrepreneurial tenure gap.
 - DV(s): Entrepreneurial proclivity of the first, second, and third generations, measured as counts of start-ups founded in a given year.
@@ -60,6 +73,12 @@ The paper asks how era-based imprinting effects on entrepreneurial proclivity pe
 - Moderators: Entrepreneurial tenure gap moderates transmission from ancestral founders to the second generation.
 
 The mechanism is an agency-based lineage inheritance process. Competitive founding eras imprint entrepreneurial proclivity onto ancestral founders, who then transmit tacit entrepreneurial knowledge to organization members through direct work interaction. Employees who leave to found new ventures reproduce and modify that inherited knowledge in the next generation, but transmission weakens when the founder's accumulated entrepreneurial experience creates a mental-model gap with novice prospective entrepreneurs.
+
+**Data & Measures**
+The authors construct 14 organizational genealogies containing 443 start-ups from Israel Venture Capital (IVC) records, LinkedIn.com, firm websites, newspaper archives, and interviews with 65 CEOs and founders. Entrepreneurial proclivity is the yearly count of start-ups founded by each generation; first- and second-generation proclivity are also used as cumulative, normalized predictors. Competitive era equals 1 when an ancestral firm was founded from 1977 through 1985 (cooperative-era formation, through 1977, is the omitted category), and entrepreneurial tenure is the natural log of years since a founder's first venture. The analyses use negative binomial time-varying panel models for the generational count outcomes and a first-stage Logit panel model for second-generation formation, with a Huber–White sandwich estimator; the first- and second-generation analyses have 492 observations and the third-generation analysis has 181.
+
+**Key Findings**
+H1, H2a, and H2b were supported: competitive-era ancestral founders had greater entrepreneurial proclivity, first-generation proclivity positively predicted second-generation proclivity, and second-generation proclivity positively predicted third-generation proclivity. H3a and H3b were also supported: first-generation proclivity fully mediated the era effect on second-generation proclivity, and second-generation proclivity mediated the first-generation effect on third-generation proclivity; the reported Sobel tests were significant (p < .003 and p < .02, respectively), with additional Aroian, Goodman, and 5,000-replication bootstrap checks. H4 was supported by a significant negative interaction: a greater entrepreneurial tenure gap reduced the positive transmission from ancestral founders to the second generation.
 
 **Theoretical Contribution**
 The paper contributes to organizational imprinting theory by showing that imprinting longevity need not depend only on inertia, institutionalization, or path dependence within a single organization. It theorizes and tests a lineage inheritance process in which imprinted entrepreneurial knowledge travels across organizational boundaries through employees-turned-founders.
@@ -69,7 +88,7 @@ It also contributes to entrepreneurship and industry-evolution research by linki
 **Practical Implication**
 For entrepreneurial ecosystems, the findings imply that founding-era conditions and early entrepreneurial role models can shape later venture creation through work-based learning and founder-employee interaction. The study also suggests that such transmission depends on the fit between founders' entrepreneurial experience and prospective entrepreneurs' own founding challenges, because large tenure gaps can weaken inherited entrepreneurial knowledge.
 
-For founders and managers, the study suggests that entrepreneurial knowledge is not transmitted automatically through organizational membership. As founders become more experienced, their knowledge may become less useful to novice employees unless they bridge the mental-model gap that separates expert and novice entrepreneurial practice.
+For founders and managers, the study suggests that entrepreneurial knowledge is not transmitted automatically through organizational membership. As founders become more experienced, their knowledge may become less useful to novice employees; larger entrepreneurial-tenure gaps weaken founders’ influence on employees’ entrepreneurial proclivity.
 
 **Limitations**
 The authors note that the study focuses on entrepreneurial knowledge in the Israeli ITC industry, so other industries may have different evolutionary speeds, generation structures, and inheritance dynamics. They also acknowledge that the Israeli case is one national setting and call for examination in other institutional environments, including Western Europe, the United States, emerging economies, and socially oriented economies such as China.

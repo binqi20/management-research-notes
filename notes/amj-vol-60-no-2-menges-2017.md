@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Menges 2017 When Job Performance is All 
 text_path: "library/AMJ/vol-60-no-2/text/Menges 2017 When Job Performance is All Relative How Family Motivation Energizes Effort and Compensates for Intrinsic Motivation.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-quantitative"
 keywords: ["family motivation", "intrinsic motivation", "job performance", "energy", "stress", "prosocial motivation", "action identification", "work-family dynamics"]
@@ -47,6 +49,9 @@ evidence:
   theories_overview: "Drawing on theories of prosocial motivation and action identification"
   methods_overview: "The proposed model consists of a 2–1–1 multilevel"
   keywords_source: "family motivation increases job performance by enhancing energy and reducing stress"
+  hypotheses_source: "we propose that family motivation increases job performance by enhancing energy and reducing stress"
+  measures_overview: "We used four items for energy:"
+  findings_overview: "family motivation was positively related to energy"
 ---
 
 # When Job Performance is All Relative: How Family Motivation Energizes Effort and Compensates for Intrinsic Motivation
@@ -57,6 +62,16 @@ Supporting one’s family is a major reason why many people work, yet surprising
 **Research Question**
 The paper asks whether family motivation, defined as the desire to expend effort to benefit one’s family, improves job performance and whether it is especially important when intrinsic motivation is low. It further asks whether energy and stress explain how family motivation compensates for low intrinsic motivation.
 
+**Hypotheses / Propositions**
+H1: Family motivation is positively associated with job performance.
+H2: Intrinsic motivation moderates the family motivation–job performance relationship, such that the positive association is stronger when intrinsic motivation is low rather than high.
+H3a: Intrinsic motivation moderates the family motivation–energy relationship, such that the positive association is stronger when intrinsic motivation is low rather than high.
+H3b: Energy is positively related to job performance.
+H3c: The indirect effect of family motivation on job performance through energy is moderated by intrinsic motivation.
+H4a: Intrinsic motivation moderates the family motivation–stress relationship, such that family motivation is more negatively associated with stress when intrinsic motivation is low rather than high.
+H4b: Stress is negatively related to job performance.
+H4c: The indirect effect of family motivation on job performance through stress is moderated by intrinsic motivation.
+
 **Mechanism Process**
 - IV(s): Family motivation, measured with items such as caring about supporting and helping one’s family.
 - DV(s): Objective daily job performance, calculated from the number of coupons processed relative to employee-specific target scores.
@@ -64,6 +79,12 @@ The paper asks whether family motivation, defined as the desire to expend effort
 - Moderators: Intrinsic motivation; the paper predicts and finds stronger family-motivation effects when intrinsic motivation is low.
 
 The proposed mechanism is that family motivation reframes monotonous work as serving the meaningful purpose of supporting family members. This higher-level action identification supplies energy when intrinsic enjoyment of the task is weak, which helps employees sustain effort and performance. The evidence supports the energy pathway: family motivation predicted performance when intrinsic motivation was low, and the conditional indirect effect through energy was significant. The stress pathway was not supported; stress did not predict performance, and family motivation increased stress when intrinsic motivation was high.
+
+**Data & Measures**
+The analyses used 97 employees and 791 daily ratings. Family and intrinsic motivation were assessed in a survey with adapted 7-point measures: five family-motivation items (α = .86) and three intrinsic-motivation items (α = .90); external motivation was a three-item control (α = .61). During ten working days, morning diaries measured energy with four items (α = .85) and stress with three items (α = .81), each on a 7-point scale. The company’s automated performance monitoring system recorded coupons processed each day; daily job performance was coupons processed divided by the employee-specific target and multiplied by 100 (α = .84). The authors tested a 2–1–1 multilevel moderated mediation model using multilevel analysis for H1–H2 and multilevel structural equation modeling with manifest variables and robust maximum-likelihood standard errors for H3–H4 in Mplus 7.0; conditional indirect-effect confidence intervals used a 20,000-replication Monte Carlo simulation.
+
+**Key Findings**
+H1 was supported: family motivation was positively associated with job performance (standardized estimate = .24, p < .05). H2 was supported: family motivation predicted performance when intrinsic motivation was low (b = 4.47, p < .01) but not high (b = −.39, ns). H3a–H3c were supported: family motivation predicted energy only when intrinsic motivation was low (b = .19, p < .05), energy predicted performance (standardized estimate = .28, p < .05), and the conditional indirect effect through energy was significant when intrinsic motivation was low (.51, 95% CI [.01, 1.28]) but not high (−.24, 95% CI [−1.01, .37]). H4a–H4c were not supported: contrary to H4a, family motivation increased stress when intrinsic motivation was high (b = .40, p < .01) but was unrelated to stress when intrinsic motivation was low (b = −.13, ns); stress did not predict performance, ruling out the hypothesized indirect effect through stress.
 
 **Theoretical Contribution**
 The paper introduces family motivation as a distinct and potent form of prosocial motivation whose beneficiaries are outside the workplace but are affected by employment itself. It challenges the assumption that prosocial and intrinsic motivations mainly operate synergistically, showing instead a compensatory pattern in which family motivation can substitute for low intrinsic motivation. It also extends work-family research by identifying family as a source of work energy and objective performance, not only as a source of conflict or enrichment.

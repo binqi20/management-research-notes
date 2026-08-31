@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-60-no-2/pdfs/Pine 2017 Artful and Contorted Coordinat
 text_path: "library/AMJ/vol-60-no-2/text/Pine 2017 Artful and Contorted Coordinating The Ramifications of Imposing Formal Logics of Task Jurisdiction on Situated Practice.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-08-31"
 
 paper_type: "empirical-qualitative"
 keywords: ["coordination", "task jurisdiction", "situated practice", "formal logics of action", "electronic health records", "artful coordinating", "contorted coordinating"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "integrating conditions for coordination"
   methods_overview: "using ethnographic methods"
   keywords_source: "artful coordinating"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "read-throughs of data and line-by-line coding"
+  findings_overview: "between formal logics and situated practice into an unproductive disconnect"
 ---
 
 # Artful and Contorted Coordinating: The Ramifications of Imposing Formal Logics of Task Jurisdiction on Situated Practice
@@ -51,6 +56,9 @@ Ongoing coordination is the backbone of work process and organizational effectiv
 **Research Question**
 The paper asks how the introduction of a digital work process system affects the way integrating conditions for ongoing coordinating are realized in practice and the form of coordinating that emerges. It also asks how work-system design, especially design that assumes alignment between formal delineations of action and situated practice, affects organizational outcomes.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: formal logics of task jurisdiction; situated practice; common understanding; predictability; formal and informal accountability.
 - Process / forms: pre-EHR artful coordinating, where formal logics remained resources for situated action, and post-EHR contorted coordinating, where EHR permissions imposed formal accountability directly on everyday work.
@@ -59,6 +67,12 @@ The paper asks how the introduction of a digital work process system affects the
 - Boundary conditions: the argument is developed in complex, time-sensitive, uncertain work where formal work systems cannot fully anticipate local contingencies.
 
 The process is that pre-EHR clinicians used formal rules, local context, and situated contingencies together to coordinate ordering work. Because nurses could flexibly alter, manage, or support orders under tacit norms, common understanding also generated informal accountability and predictability. After the EHR embedded strict permissions, clinicians had to coordinate both the patient-care task and the system workaround; this made formal accountability more visible but undermined the local negotiations that had previously made work predictable.
+
+**Data & Measures**
+The study draws on 16 consecutive months of participant observation in one labor and delivery unit (55 observations), 32 semi-structured interviews with caregivers in the unit, and 28 additional interviews outside the focal hospital before unit observation began. Ordering instances were identified through careful read-throughs and line-by-line coding; the authors also used constant comparison, narrative maps, and triangulation of observational and interview data.
+
+**Key Findings**
+Before EHR implementation, artful coordinating let specialists use formal logics, local context, and situated contingencies together, generating informal accountability and predictability. After implementation, formal permissions engendered contorted coordinating: clinicians spent time and effort working around the system, interoccupational relations were strained, and predictability declined. The EHR thereby transformed a productive disconnect between formal logics and situated practice into an unproductive disconnect, while the two forms of coordinating served different organizational goals.
 
 **Theoretical Contribution**
 The paper extends coordination research by showing that Okhuysen and Bechky's integrating conditions can combine in different ways and produce different forms of coordinating. It distinguishes formal accountability from informal accountability and argues that formal accountability can undermine, rather than support, predictability when it is imposed through a heavy-handed work system. It also reframes workarounds as an integral feature of contorted coordinating, not merely a temporary implementation problem.
