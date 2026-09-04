@@ -211,7 +211,11 @@ the issue and the user has asked for publication —
      are exempt. Named line checks alone do not close the class: a "current
      v0.47.0 snapshot" sentence in CITATION.cff's abstract survived nine
      releases and two runtimes because the stale-line check named only the
-     README tier sentence and AGENTS §6.
+     README tier sentence and AGENTS §6. Absolute guarantee sentences ("has
+     never produced…", "zero…") must be re-read the first time their
+     underlying event occurs: batch 28's first-ever round-one CONTRADICTED
+     verdict (repaired before publication) left AGENTS §5 asserting the
+     library had "never produced" one.
 2. **Stage public artifacts only** — the issue's `notes/*.md`, its
    `library/.../manifest.tsv`, the rebuilt `index/` files, and any docs/tooling
    changes. Never `incoming/`, `pdfs/`, `text/`, or worklogs. Verify:
@@ -257,7 +261,13 @@ Propositions, Data & Measures, and Key Findings. Two tiers, two treatments:
   krause note drew the backfill's first UNSUPPORTED verdict when its Data &
   Measures draft named five data sources the paper never mentions; the blind
   audit caught it, but the class is writer-side fabrication and must be
-  blocked at the writer.
+  blocked at the writer. **Per-study attribution (batch-28 lesson):** literal
+  membership is necessary, not sufficient. For multi-study papers, verify each
+  named entity WITHIN the Methods lines of the study it is attributed to
+  (line-level column view), not merely anywhere in the paper. Batch 28's desai
+  draft drew the backfill's first CONTRADICTED verdict with participant names,
+  a recruitment source, and an item count that all exist in the paper — but
+  belong to other studies.
   **`tools/verify_augmentation.py`** (the diff-guard, Layer 0 of the backfill)
   mechanically proves the do-not-touch guarantee against the git HEAD version
   after every augmentation, before the audit.

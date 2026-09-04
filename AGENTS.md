@@ -168,9 +168,11 @@ audit at augmentation time (a mechanical diff-guard,
 `tools/verify_augmentation.py`, proves the original audited content was
 untouched before any explicitly documented audit repair). `PARTIAL`
 verdicts (stylistic compressions that don't rise to a faithfulness failure)
-are flagged for human review but do not block publication. The library has
-never produced a `CONTRADICTED` verdict — no claim in any note actively
-contradicts its source paper.
+are flagged for human review but do not block publication. No published note
+has ever carried a `CONTRADICTED` verdict — the single one ever returned in
+auditing (batch 28, a draft Data & Measures section) was repaired and
+re-audited before publication — so no claim in any note actively contradicts
+its source paper.
 
 Agents querying the data can rely on the following:
 
