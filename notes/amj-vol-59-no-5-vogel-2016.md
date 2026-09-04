@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Vogel 2016 Engaged and Productive Misfit
 text_path: "library/AMJ/vol-59-no-5/text/Vogel 2016 Engaged and Productive Misfits How Job Crafting and Leisure Activity Mitigate the Negative Effects of Value Incongruence.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["value incongruence", "misfit", "job crafting", "leisure activity", "job engagement", "job performance"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "motivational role of need fulfillment and work/nonwork"
   methods_overview: "1,000 bootstrapped estimates"
   keywords_source: "job crafting and leisure activity do indeed act as a buffer"
+  hypotheses_source: "will be weaker when leisure activity is high than"
+  measures_overview: "Job crafting. Job crafting was measured with"
+  findings_overview: "provide full support for Hypotheses 2(a) and 2(b) and"
 ---
 
 # Engaged and Productive Misfits: How Job Crafting and Leisure Activity Mitigate the Negative Effects of Value Incongruence
@@ -52,6 +57,12 @@ The work life of “misfits”—employees whose important values are incongruen
 **Research Question**
 The paper asks what proactive behaviors can buffer the performance detriments of value incongruence for organizational misfits. It examines whether job crafting and leisure activity mitigate the negative effects of value incongruence on job engagement, task performance, and citizenship behavior.
 
+**Hypotheses / Propositions**
+- H1: The negative effect of value incongruence on job engagement will be weaker when job crafting is high rather than low.
+- H2a–b: The negative indirect effects of value incongruence on task performance and citizenship behavior through job engagement will be weaker when job crafting is high rather than low.
+- H3: The negative effect of value incongruence on job engagement will be weaker when leisure activity is high rather than low.
+- H4a–b: The negative indirect effects of value incongruence on task performance and citizenship behavior through job engagement will be weaker when leisure activity is high rather than low.
+
 **Mechanism Process**
 - IV(s): Value incongruence between employees' personal values and organizational values, focused on each employee's most important work value.
 - DV(s): Job engagement, supervisor-rated task performance, and supervisor-rated citizenship behavior directed at the organization.
@@ -59,6 +70,12 @@ The paper asks what proactive behaviors can buffer the performance detriments of
 - Moderators: Job crafting and leisure activity moderate the value incongruence-engagement relationship and the indirect effects of value incongruence on performance outcomes.
 
 The mechanism is that value incongruence deprives employees of fundamental need fulfillment, making them less willing to invest themselves in work. Job crafting can substitute for unmet needs by reshaping task and social aspects of work, while leisure activity can provide nonwork sources of autonomy, competence, belonging, meaning, and psychological availability. The results indicate that job crafting and leisure activity buffer the negative engagement and performance consequences of value incongruence for misfits.
+
+**Data & Measures**
+The associational field study used three time points and two sources. At time 1, full-time employees recruited through online classified advertisements reported personal and organizational values, job crafting, and leisure activity; three weeks later they reported job engagement; three weeks after that, supervisors rated task performance and citizenship behavior. The final matched sample contained 193 respondents. Value incongruence used the three items for each employee's top-ranked value from a 24-item, eight-value instrument; job crafting used four items; leisure activity used seven items; job engagement used nine items; task performance used six dimensions; and citizenship behavior used eight items, all on 5-point scales. Polynomial regression and response surfaces were integrated with moderated path analysis, with 1,000 bootstrap estimates.
+
+**Key Findings**
+H1 and H2a–b were supported: when job crafting was low, value incongruence was associated with lower engagement and, indirectly through engagement, lower task performance and citizenship behavior; at high job crafting, these response surfaces were flat. H3 and H4a–b were also supported: low leisure activity produced the predicted negative effects of incongruence, while high leisure activity mitigated them. At high leisure activity, the remaining slopes were asymmetric rather than flat, indicating higher engagement and performance for misfits whose personal values were lower than their organization's values; this additional pattern was not hypothesized.
 
 **Theoretical Contribution**
 The paper extends person-environment fit and value congruence research by focusing on misfit rather than only fit, and by showing that misfits are not necessarily passive recipients of their environment. It adds nuance to the attraction-selection-attrition model by showing that proactive behavior can suppress the negative effects of value incongruence. It also brings a cross-domain work/nonwork perspective into value congruence theory by showing that leisure activity can compensate for unmet needs at work.

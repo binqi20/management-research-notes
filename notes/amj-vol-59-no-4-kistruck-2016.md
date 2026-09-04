@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Kistruck 2016 Cooperation vs. Competitio
 text_path: "library/AMJ/vol-59-no-4/text/Kistruck 2016 Cooperation vs. Competition Alternative Goal Structures for Motivating Groups in a Resource Scarce Environment.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-mixed"
 keywords: ["cooperative goal structures", "competitive goal structures", "resource scarcity", "base-of-the-pyramid", "group motivation", "inter-group familiarity", "goal attainment"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "by social interdependence theory (Deutsch, 1949"
   methods_overview: "a quasi-experimental field study"
   keywords_source: "resource scarcity is extremely high"
+  hypotheses_source: "Hypothesis 1. Competitive goal structures will"
+  measures_overview: "a three-item group-motivation scale (a 5 .96), and"
+  findings_overview: "competitive goal structures generally lead to"
 ---
 
 # Cooperation vs. Competition: Alternative Goal Structures for Motivating Groups in a Resource Scarce Environment
@@ -55,6 +60,13 @@ There is a growing consensus that cooperative goal structures are more effective
 **Research Question**
 The paper asks whether cooperative or competitive goal structures better motivate groups when resources are scarce and opportunity costs are high. It also asks whether inter-group familiarity changes how goal structure affects group motivation and subsequent goal attainment in a base-of-the-pyramid field setting.
 
+**Hypotheses / Propositions**
+- H1: Competitive goal structures will produce higher group motivation than cooperative goal structures in a BOP field setting.
+- H2: Inter-group familiarity will moderate the degree to which competitive goal structures produce higher group motivation than cooperative goal structures in a BOP field setting.
+- H3a: Higher group motivation will produce higher goal attainment in a BOP field setting.
+- H3b: Group motivation will mediate the relationship between goal structure and goal attainment in a BOP field setting.
+- H3c: Inter-group familiarity will moderate the indirect effect of goal structure on goal attainment through group motivation in a BOP field setting.
+
 **Mechanism Process**
 - Design / treatment: Rural Sri Lankan communities building schools were paired and assigned to competition or cooperation conditions around their community contribution targets.
 - Focal process: Goal structure shapes group motivation, which in turn predicts goal attainment.
@@ -62,6 +74,16 @@ The paper asks whether cooperative or competitive goal structures better motivat
 - Follow-up explanation: Focus groups distinguish intrinsic excitement from competition, opportunity costs of cooperation, and extrinsic knowledge benefits from cooperating with unfamiliar groups.
 
 The paper argues that resource scarcity changes the motivational implications of cooperation and competition. Competition can feel aspirational and emotionally energizing in a context where scarce-resource competition is part of daily life, whereas cooperation can impose costly inter-group coordination unless it provides access to rare knowledge. Quantitative results support higher motivation under competition on average, but the qualitative follow-up shows that cooperation with unfamiliar communities can also motivate because unfamiliar partners offer new information.
+
+**Data & Measures**
+Field experiment: Edubuild paired 44 rural Sri Lankan communities and randomly assigned the pairs to competition (24 communities) or cooperation (20 communities). Group motivation was the EAs' three-item rating of how motivated, engaged, and determined each community was on 0-100 scales (alpha = .96). Inter-group familiarity was a baseline one-item 1-5 rating from 452 construction-committee members, aggregated to the community after within-group agreement (RWG = .71). Goal attainment was the monetary value of labor, materials, and cash contributed divided by the amount the community had committed to provide. The mixed-linear models used an EA random intercept and controlled for group financial similarity, third-party contributions, project size, geographic distance, and community size; indirect effects used 20,000 Monte Carlo simulations in R.
+
+Qualitative follow-up: The researchers selected 14 communities across the four goal-structure-by-familiarity quadrants and conducted 28 community focus groups plus four Edubuild employee focus groups, with approximately 200 participants in total. Transcripts were entered into NVivo version 10 and open-coded; themes were consolidated into 22 categories and independently recoded, yielding intercoder reliability of kappa = .846.
+
+**Key Findings**
+H1 was supported: competition predicted higher group motivation than cooperation (b = 18.34, SE = 5.76, p = .003). H2's interaction test was statistically supported (p = .012), but the observed pattern differed from the theorized direction: familiarity had a nonsignificant positive slope under competition and a significant negative slope under cooperation. H3a was supported: motivation positively predicted goal attainment (B = .007, SE = .002, p < .001). H3b was supported by an indirect effect whose 95% Monte Carlo confidence interval excluded zero [.03, .23]. H3c was supported conditionally: the indirect effect was significant at high familiarity [.06, .40] but not at low familiarity.
+
+The qualitative follow-up attributed competition's motivational advantage to excitement and to competition being part of daily life under scarcity. Cooperation was constrained by time and opportunity costs, but unfamiliar partners supplied rare knowledge; with familiar partners, awareness of negative traits and the lack of new information reduced motivation to cooperate.
 
 **Theoretical Contribution**
 The study extends social interdependence theory by identifying resource scarcity as a boundary condition for the usual claim that cooperative goal structures outperform competitive ones. It also shows that inter-group familiarity is not uniformly beneficial for cooperation: familiarity can expose negative traits and reduce willingness to cooperate, while unfamiliarity can make cooperation valuable as a route to new knowledge. Beyond social interdependence theory, the paper contributes to institutional economics in base-of-the-pyramid contexts by showing how organizations can use relational mechanisms among existing actors when formal enforcement is weak.

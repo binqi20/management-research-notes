@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Liang 2016 Why Are Abusive Supervisors A
 text_path: "library/AMJ/vol-59-no-4/text/Liang 2016 Why Are Abusive Supervisors Abusive A Dual-system Self-control Model.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-mixed"
 keywords: ["abusive supervision", "subordinate performance", "supervisor hostility", "hostile attribution bias", "mindfulness", "self-control"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "self-control framework"
   methods_overview: "we employed an experimental-causal-chain"
   keywords_source: "abusive supervision is a reaction to subordinates"
+  hypotheses_source: "Hypothesis 4. Supervisor mindfulness moderates"
+  measures_overview: "measured using the 15-item scale developed by"
+  findings_overview: "Hypothesis 1 was not supported."
 ---
 
 # Why Are Abusive Supervisors Abusive? A Dual-system Self-control Model
@@ -55,6 +60,13 @@ Building on prior work which has shown that abusive supervision is a reaction to
 **Research Question**
 Why and when does subordinate poor performance lead supervisors to engage in abusive supervision? The paper asks whether supervisor hostility explains this relationship and whether hostile attribution bias and mindfulness shape the two stages of the self-control process.
 
+**Hypotheses / Propositions**
+H1: Subordinate performance is negatively related to supervisor hostility toward the subordinate.
+H2: Supervisor hostility toward a subordinate is positively related to abusive supervision.
+H3: Supervisor hostile attribution bias moderates the negative relationship between subordinate performance and supervisor hostility, such that the relationship is stronger when hostile attribution bias is high.
+H4: Supervisor mindfulness moderates the positive relationship between supervisor hostility and abusive supervision, such that the relationship is weaker when mindfulness is high.
+H5: Hostile attribution and mindfulness jointly moderate the indirect effect of subordinate performance on abusive supervision through supervisor hostility, such that the indirect effect is strongest when hostile attribution is high and mindfulness is low.
+
 **Mechanism Process**
 - IV(s): Subordinate performance, manipulated in Study 1 and supervisor-rated in Study 3; supervisor emotion toward the subordinate, manipulated in Study 2.
 - DV(s): Supervisor hostility toward the subordinate in Study 1; abusive supervision intentions in Study 2; subordinate-rated abusive supervision in Study 3.
@@ -62,6 +74,12 @@ Why and when does subordinate poor performance lead supervisors to engage in abu
 - Moderators: Supervisor hostile attribution bias strengthens the subordinate-performance-to-hostility link; supervisor mindfulness weakens the hostility-to-abusive-supervision link.
 
 The mechanism is a dual-system self-control account. Poor-performing subordinates are theorized as provocateurs who trigger supervisor hostility; this hostility creates an impulse to behave abusively, while reflective control can constrain whether the impulse becomes abusive supervision. Study 1 supports the effect of poor performance and hostile attribution on hostility, Study 2 supports the effect of hostility on abusive-supervision intentions especially under low mindfulness, and Study 3 supports the conditional indirect effect in the field when hostile attribution is high and mindfulness is low.
+
+**Data & Measures**
+Study 1 analyzed 92 full-time supervisors recruited online in the United States or Canada. It manipulated recalled subordinate performance (good versus poor) and, for poor performance, hostile versus non-hostile attribution; supervisor hostility was measured with the six-adjective PANAS-X hostility subscale. Study 2 analyzed 101 full-time supervisors recruited online, manipulated recalled hostility versus joviality, measured trait mindfulness, and measured abusive-supervision intentions with a five-item scale. Study 3 used two-wave, multi-source data from 50 supervisors and 206 subordinates at four financial institutions in China. Supervisors rated subordinate performance with a seven-item in-role behavior scale, hostile attribution bias with the California Psychological Inventory hostile-attribution subscale, hostility with the Study 1 instrument, and mindfulness with the Study 2 instrument; subordinates rated abusive supervision with a 15-item scale. The field data were analyzed using multilevel structural equation modeling, with interpersonal justice and psychological contract violation as controls.
+
+**Key Findings**
+Study 1 supported H1 and H3: good subordinate performance produced less supervisor hostility than poor performance, and hostile attribution increased hostility within the poor-performance condition. Study 2 supported H2 (b = .35, p < .01) and H4 (interaction b = -.23, p < .05); hostility increased abusive-supervision intentions when mindfulness was low, but not when it was high. Study 3 did not support the H1 or H2 main effects, but supported H3 (interaction γ = -.28, p < .01) and H4 (interaction γ = -.87, p < .05). It also supported H5: the indirect effect was significant only when hostile attribution was high and mindfulness was low (indirect effect = -.13, 95% CI [-.29, -.02]).
 
 **Theoretical Contribution**
 The paper advances abusive-supervision research by specifying why victim-precipitating subordinate behavior can elicit abuse: poor performance can generate supervisor hostility that becomes abusive behavior when self-control fails. It also integrates subordinate behavior with supervisor traits, showing that victimization processes depend on both the subordinate's performance and the supervisor's attributional and mindfulness tendencies. More broadly, it contributes to self-control theory by modeling both the strength of hostile desire and the regulation of that desire.

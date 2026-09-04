@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/George 2016 Big Data and Data Science Me
 text_path: "library/AMJ/vol-59-no-5/text/George 2016 Big Data and Data Science Methods for Management Research.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "editorial"
 keywords: ["big data", "data science", "data scope", "data granularity", "management theory", "data collection", "data storage", "data processing", "data analysis", "reporting and visualization"]
@@ -54,6 +56,9 @@ Not reported in paper
 **Research Question**
 Not reported in paper
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Big data and data science can help management scholars produce better answers to existing questions and develop new questions by using greater data scope and data granularity.
 - Key constructs: Big data; data science; data scope; data granularity; volume; velocity; variety.
@@ -63,6 +68,12 @@ Not reported in paper
 - Boundary conditions: The authors caution that the field is evolving rapidly and that privacy, data rights, construct validity, causal inference, robustness, and reporting transparency remain central challenges.
 
 The process logic is editorial and methodological rather than empirical. George, Osinga, Lavie, and Scott argue that data science can expand management theory by improving the precision of answers to established questions and opening questions that were previously constrained by data access or analysis limits. They connect this opportunity to concrete methods, including sensors, web scraping, communications monitoring, SQL and NoSQL storage, text mining, variable selection, cross-validation, field experiments, parallelization, sequential updating, and visualization.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial does not develop a new named theory. Its contribution is to translate big data's volume, velocity, and variety into management-research concepts of data scope and data granularity, then explain how those concepts can support theory testing, theory development, refined units of analysis, and clearer attention to mechanisms.

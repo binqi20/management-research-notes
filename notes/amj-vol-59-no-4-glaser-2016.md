@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Glaser 2016 Managing the Risks of Proact
 text_path: "library/AMJ/vol-59-no-4/text/Glaser 2016 Managing the Risks of Proactivity A Multilevel Study of Initiative and Performance in the Middle Management Context.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["personal initiative tendency", "risk propensity", "job autonomy", "performance management context", "job performance"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Drawing on theories of behavioral decision making and situational strength"
   methods_overview: "We used hierarchical linear modeling (HLM)"
   keywords_source: "personal initiative tendency and job performance"
+  hypotheses_source: "Hypothesis 1. The positive relationship between"
+  measures_overview: "seven-item scale from Gibson and Birkinshaw (2004)."
+  findings_overview: "These results provide support for our Hypothesis 1."
 ---
 
 # Managing the Risks of Proactivity: A Multilevel Study of Initiative and Performance in the Middle Management Context
@@ -52,6 +57,11 @@ Drawing on theories of behavioral decision making and situational strength, we d
 **Research Question**
 The paper asks how middle managers' personal initiative tendency translates into job performance when proactive action is risky. It specifically examines whether risk propensity weakens the initiative-performance relationship and whether job autonomy and business-unit performance management context respectively amplify or attenuate that risk.
 
+**Hypotheses / Propositions**
+- H1: The positive relationship between personal initiative tendency and job performance is weaker for middle managers with high rather than low risk propensities.
+- H2: Job autonomy moderates the negative interaction of personal initiative tendency and risk propensity on job performance, such that the interaction occurs only when autonomy is high.
+- H3: Business-unit performance management context moderates the negative interaction of personal initiative tendency and risk propensity on job performance, such that the interaction occurs only in weak performance management contexts.
+
 **Mechanism Process**
 - IV(s): Personal initiative tendency.
 - DV(s): Middle managers' job performance from year-end supervisor appraisal records.
@@ -59,6 +69,12 @@ The paper asks how middle managers' personal initiative tendency translates into
 - Moderators: Individual risk propensity, individual job autonomy, and business-unit performance management context.
 
 The mechanism is a cross-level alignment argument. Personal initiative can improve middle managers' performance, but proactive managers with high risk propensities may underestimate downside risks, invest less in risk adjustment, and pursue initiatives that are poorly timed, misaligned, or difficult to control. High job autonomy creates a weaker situation that lets those risk tendencies shape behavior more strongly, while a strong performance management context supplies shared ambition, discipline, feedback, and accountability that help risk-seeking proactive managers channel initiative toward valued outcomes.
+
+**Data & Measures**
+Primary survey data were collected in mid-2010 from 383 middle managers and 72 executives across 34 business units; internal company records supplied year-end performance appraisals seven months later. Personal initiative tendency, risk propensity, job autonomy, and business-unit performance management context used seven-, four-, nine-, and seven-item scales, respectively; middle managers reported the first three, while executives rated performance management context, which was averaged within business units. Job performance was the supervisors' overall year-end appraisal across 11 competencies, recoded from E-A to 1-5. The authors tested the nested data using hierarchical linear modeling; the observational design and mostly cross-sectional predictors do not establish causality.
+
+**Key Findings**
+H1 was supported: the interaction between personal initiative tendency and risk propensity was negative (gamma = -.16, p < .01); initiative was positively related to performance at low risk propensity but not at high risk propensity. H2 was supported: the three-way interaction with job autonomy was negative (gamma = -.10, p < .01), and the negative initiative-by-risk interaction occurred mainly under high autonomy; under high autonomy, initiative predicted performance for low-risk but not high-risk managers, while neither slope was significant under low autonomy. H3 was supported: the three-way interaction with performance management context was positive (gamma = .18, p < .01), and the negative initiative-by-risk interaction occurred only in weak contexts; the low-risk and high-risk slopes differed significantly in weak contexts but not in strong contexts.
 
 **Theoretical Contribution**
 The study qualifies the common view that proactivity and autonomy are uniformly beneficial by showing that personal initiative's performance payoff depends on individual risk propensity and organizational control. It integrates behavioral decision theory with situational strength theory to explain why proactive employees differ in their need for control. It also distinguishes formal job-level autonomy from informal business-unit performance management context as control mechanisms with different implications for low- and high-risk-propensity managers.

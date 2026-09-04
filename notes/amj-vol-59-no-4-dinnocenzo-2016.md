@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/D’Innocenzo 2016 Empowered to Perform 
 text_path: "library/AMJ/vol-59-no-4/text/D’Innocenzo 2016 Empowered to Perform A Multilevel Investigation of the Influence of Empowerment on Performance in Hospital Units.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["psychological empowerment", "unit empowerment", "unit voice climate", "job performance", "multi-level systems theory", "hospital units"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "multi-level systems theory"
   methods_overview: "a three-stage multi-level structural equation modeling approach"
   keywords_source: "unit empowerment evidenced a synergistic interaction with individual-level psychological empowerment"
+  hypotheses_source: "Hypothesis 1. Unit empowerment will positively"
+  measures_overview: "voice climate using eight items modified from"
+  findings_overview: "effect [Hypothesis 1: g 5 .07, SE 5 .03, p , .05]."
 ---
 
 # Empowered to Perform: A Multilevel Investigation of the Influence of Empowerment on Performance in Hospital Units
@@ -54,6 +59,11 @@ Psychological empowerment has been studied extensively over the past few decades
 **Research Question**
 The paper asks how empowerment operates across levels in hospital units: whether unit empowerment conditions the relationship between individual psychological empowerment and job performance, and whether unit voice climate builds unit empowerment that in turn enhances individual psychological empowerment. The study focuses on the unique and synergistic effects of unit- and individual-level empowerment in a dynamic healthcare setting.
 
+**Hypotheses / Propositions**
+H1: Unit empowerment positively moderates the relationship between individual psychological empowerment and performance, such that psychological empowerment is more positively related to performance when unit empowerment is higher.
+
+H2: Unit voice climate relates positively to unit empowerment and thereby has a positive cross-level indirect relationship with individual psychological empowerment.
+
 **Mechanism Process**
 - IV(s): Unit empowerment, individual psychological empowerment, and unit voice climate.
 - DV(s): Individual job performance, measured through subsequent HR performance evaluations.
@@ -61,6 +71,12 @@ The paper asks how empowerment operates across levels in hospital units: whether
 - Moderators: Unit empowerment moderates the relationship between individual psychological empowerment and individual job performance.
 
 The mechanism is cross-level and contextual. Unit voice climate creates a collective forum for speaking up, which fosters shared unit empowerment. Unit empowerment then both raises individual psychological empowerment and creates the conditions, or zones of discretion, under which individually empowered employees can translate motivation into improved job performance. The performance benefits of psychological empowerment were significant when unit empowerment was high, but not when it was low.
+
+**Data & Measures**
+The analytical sample comprised 544 employees in 78 units across two hospitals. Data came from two employee surveys approximately 13 months apart and hospital personnel archives. Unit voice climate was measured in the first survey with eight items covering voice efficacy and voice safety. Individual psychological empowerment was measured in the second survey with 12 items covering meaning, competence, self-determination, and impact; unit empowerment was measured in that survey with an adapted 12-item unit-referent measure covering potency, meaning, autonomy, and impact. Individual performance came from immediate-supervisor evaluations before and after the second survey, using weighted ratings for generic system-wide factors (40%) and job-specific standards (60%). The models controlled for prior performance, job level, organizational tenure, age, and sex. The temporally lagged design controlled for prior performance, but the authors noted that reciprocal relationships could remain.
+
+**Key Findings**
+H1 was supported: unit empowerment positively moderated the individual psychological empowerment–performance relationship (γ = .07, SE = .03, p < .05). The simple slope was positive and significant at high unit empowerment (γ = .16, SE = .07, p < .05) but nonsignificant at low unit empowerment (γ = .03, SE = .03); the corresponding indirect effect was significant at high empowerment (95% CI [.019, .205]) but not at low empowerment (95% CI [−.025, .063]). H2 was supported: unit voice climate related positively to unit empowerment (γ = .39, SE = .10, p < .001), which related positively to mean psychological empowerment (γ = .71, SE = .08, p < .001); the indirect-effect 95% CI was [.137, .417]. Psychological empowerment also related positively to subsequent job performance (β = .07, SE = .03, p < .05), controlling for prior performance and the other covariates.
 
 **Theoretical Contribution**
 The study advances a multi-level theory of empowerment by showing that unit empowerment is not only a higher-level antecedent of individual psychological empowerment, but also a contextual condition that changes how individual empowerment relates to performance. It extends empowerment research beyond a simple linear cause-and-effect model by identifying a cross-level moderated mediation process. It also introduces unit voice climate as a contextual antecedent of unit empowerment in hospital units.

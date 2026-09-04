@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Duran 2016 Doing More with Less Innovati
 text_path: "library/AMJ/vol-59-no-4/text/Duran 2016 Doing More with Less Innovation Input and Output in Family Firms.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["family firms", "innovation input", "innovation output", "family CEO", "founder CEO", "meta-analysis", "MASEM", "MARA"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "behavioral agency theory"
   methods_overview: "We used MASEM"
   keywords_source: "innovation input into output"
+  hypotheses_source: "Family firms have lower innovation input"
+  measures_overview: "Innovation input variables include (1) R&D/sales, (2) R&D/assets, (3) R&D/total investment"
+  findings_overview: "founder, innovation input is higher and, contrary to our initial expectations, innovation output is lower than that in other firms"
 ---
 
 # Doing More with Less: Innovation Input and Output in Family Firms
@@ -53,6 +58,14 @@ Family firms are often portrayed as an important yet conservative form of organi
 **Research Question**
 The paper asks how family firm status affects innovation input and innovation output, and why family firms can appear conservative in R&D investment while still producing substantial innovation output. It also asks how these relationships differ when a family CEO or founder CEO leads the firm and whether country-level institutions condition the input-output relationship.
 
+**Hypotheses / Propositions**
+H1a: Family firms have lower innovation input than nonfamily firms.
+H1b: Family firms have higher innovation output than nonfamily firms.
+H2a: Family firms with a family CEO have even lower innovation input than those without a family CEO.
+H2b: Family firms with a family CEO have higher innovation output than those without a family CEO.
+H3a: Family firms with a founder CEO have higher innovation input than those without a founder CEO.
+H3b: Family firms with a founder CEO have higher innovation output than those without a founder CEO.
+
 **Mechanism Process**
 - IV(s): Family firm status, family CEO presence, and founder CEO presence.
 - DV(s): Innovation input and innovation output.
@@ -60,6 +73,12 @@ The paper asks how family firm status affects innovation input and innovation ou
 - Moderators: CEO type and post hoc country-level institutional factors, especially minority shareholder protection and workforce tertiary education.
 
 The mechanism is that family control, wealth concentration, and nonfinancial goals reduce willingness to invest in uncertain innovation projects, but also strengthen monitoring, resource orchestration, tacit knowledge, routines, and trusted network access. These same idiosyncrasies therefore reduce innovation input while improving conversion of input into innovation output. Later-generation family CEOs intensify the output advantage, whereas founder CEOs increase input but are associated with lower output, which the authors attribute to less developed routines, tacit knowledge, and trusted network access.
+
+**Data & Measures**
+The meta-analysis covers 108 primary studies, including 71 published and 37 unpublished manuscripts, from 42 countries during 1981–2012. Family firm status follows the primary studies' classifications; family CEO and founder CEO indicators use reported founder presence and family generations. Innovation input comprises R&D scaled by sales, assets, total investment, or market value, R&D-focused employees relative to total employees, and external R&D expenses relative to sales. Innovation output comprises new-product sales or introductions, patents, patent citations, and patent or citation counts scaled by R&D investment. Random-effects HOMA supplies the correlations for MASEM path models controlling for firm size, while post hoc weighted-least-squares MARA models methodological and country-level moderators.
+
+**Key Findings**
+H1a was supported: family firm status was negatively related to innovation input (b = −0.03, p < .01). H1b was supported: family firm status was positively related to innovation output controlling for input (b = 0.03, p < .01; corrected overall effect = 0.026). H2a received weak support: the family-CEO coefficient was negative (b = −0.04, p < .01), but its difference from the baseline coefficient was nonsignificant (z = −1.17, p = .24). H2b was supported (b = 0.09, p < .01; z = 10.21, p < .01; corrected overall effect = 0.084). H3a was supported (b = 0.06, p < .01; z = 2.75, p < .01). H3b was rejected because founder CEOs were negatively, rather than positively, related to innovation output (b = −0.09, p < .01; z = −43.71, p < .01; corrected overall effect = −0.082). Post hoc MARA results showed that minority shareholder protection strengthened the negative family-firm–innovation-input association, while workforce tertiary education strengthened the positive family-firm–innovation-output association (both p < .05).
 
 **Theoretical Contribution**
 The study separates innovation input from innovation output and shows that family control can affect them in opposite directions. It extends innovation research by shifting attention from the level of R&D investment to the conversion rate between innovation input and output. It also contributes to family business research by explaining heterogeneous effects of family CEOs and founder CEOs and by linking family firm innovation to institutional context.

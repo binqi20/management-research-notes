@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Courtright 2016 My Family Made Me Do It 
 text_path: "library/AMJ/vol-59-no-5/text/Courtright 2016 My Family Made Me Do It A Cross-Domain, Self-Regulatory Perspective on Antecedents to Abusive Supervision.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["abusive supervision", "family-work conflict", "ego depletion", "resource drain theory", "gender", "situation control"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "Drawing on resource drain theory"
   methods_overview: "Study 2 is an experience sampling study"
   keywords_source: "family–work conflict (FWC) as an alternative theoretical perspective"
+  hypotheses_source: "Hypothesis 1a. Supervisor FWC is positively"
+  measures_overview: "ego depletion with a 4-item scale"
+  findings_overview: "supervisors who experienced FWC displayed more abusive behaviors toward subordinates"
 ---
 
 # My Family Made Me Do It: A Cross-Domain, Self-Regulatory Perspective on Antecedents to Abusive Supervision
@@ -54,6 +59,14 @@ Drawing on resource drain theory, we introduce self-regulatory resource (ego) de
 **Research Question**
 The paper asks whether family-work conflict helps explain why supervisors behave abusively toward subordinates. It examines whether FWC predicts abusive supervision through ego depletion and whether gender and situation control condition the strength and stage of this process.
 
+**Hypotheses / Propositions**
+- H1a: Supervisor FWC is positively associated with abusive supervision.
+- H1b: Ego depletion mediates the positive relationship between supervisor FWC and abusive supervision.
+- H2a: Gender moderates the positive relationship between supervisor FWC and abusive supervision, such that the relationship is stronger for female supervisors.
+- H2b: Gender moderates the indirect positive effect of supervisor FWC on abusive supervision through ego depletion, such that the FWC–ego depletion path is stronger for female supervisors.
+- H3a: Situation control moderates the positive relationship between supervisor FWC and abusive supervision, such that the relationship is stronger for supervisors with higher situation control.
+- H3b: Situation control moderates the indirect positive effect of FWC on abusive supervision through ego depletion, such that the ego depletion–abusive supervision path is stronger for supervisors with higher situation control.
+
 **Mechanism Process**
 - IV(s): Supervisor family-work conflict, measured as general FWC in Study 1 and daily FWC in Study 2.
 - DV(s): Abusive supervision, rated by subordinates in Study 1 and self-reported daily by supervisors in Study 2.
@@ -61,6 +74,14 @@ The paper asks whether family-work conflict helps explain why supervisors behave
 - Moderators: Gender and situation control; Study 1 uses job autonomy for situation control, while Study 2 uses perceived sanctions for aggressive behavior.
 
 The mechanism is that competing family and work demands drain supervisors' finite self-regulatory resources. When ego depletion reduces supervisors' capacity to restrain aggressive impulses, abusive supervision becomes more likely. The paper finds that gender matters mainly because daily FWC is more strongly associated with ego depletion for female supervisors, while situation control matters because ego depletion is more strongly associated with abusive supervision when external sanctions are weaker.
+
+**Data & Measures**
+Study 1 used lagged electronic surveys from 134 supervisors and 580 subordinates in one financial services organization. Supervisors reported FWC with a 4-item scale, job autonomy with a 3-item scale, and gender by self-report; subordinates rated abusive supervision with a shortened 5-item scale, and ratings were averaged for each supervisor. Study 2 used an online supervisor panel with 92 supervisors and 857 daily observations: an initial survey measured person-level variables, followed by 10 consecutive workday surveys. Daily FWC used the same 4-item scale, daily ego depletion used a 4-item 7-point scale, and daily abusive supervision used the same 5-item scale as a supervisor self-report; gender was self-reported and perceived sanctions were measured with a 4-item 7-point scale. The analyses were associational: Study 1 used moderated regression, whereas Study 2 used random coefficient models with daily observations nested within supervisors and restricted maximum likelihood estimation.
+
+**Key Findings**
+Study 1 supported H1a: FWC was positively related to abusive supervision (b = .07, p ≤ .05). It also supported H2a: the FWC×gender interaction was positive (b = .16, p ≤ .01), with a positive slope for female supervisors (b = .14, p ≤ .01) but not male supervisors (b = −.01, ns). H3a was supported (interaction b = .12): the slope was positive under high situation control (b = .11, p ≤ .05) but not low situation control (b = −.04, ns). Study 1 did not test H1b, H2b, or H3b.
+
+Study 2 supported H1a (g = .06, p < .01) and H1b: the indirect effect of daily FWC on daily abusive supervision through daily ego depletion was significant (ab = .02, 95% CI [.01, .04]). H2a was not supported (daily FWC×gender g = .03, ns), whereas H3a was supported (daily FWC×perceived sanctions g = −.07, p ≤ .05): the FWC slope was positive under high situation control (b = .16, p < .05) but not low situation control (b = −.00, ns). H2b and H3b were supported: gender strengthened the daily FWC–ego depletion path (g = .17, p ≤ .05), and perceived sanctions weakened the daily ego depletion–abusive supervision path (g = −.07, p ≤ .01). Conditional indirect effects were significant under high situation control for women (.12, p < .01) and men (.04, p < .05), stronger for women, but were not significant under low situation control.
 
 **Theoretical Contribution**
 The paper contributes to abusive supervision research by shifting attention from work-domain antecedents, social learning, displaced aggression, and moral exclusion toward a cross-domain self-regulatory explanation. It argues that abusive supervision can arise from depleted self-control caused by family-work conflict, not only from purposeful targeting, learned behavior, or workplace frustration. It also extends resource drain theory by showing a maladaptive work-domain outcome of FWC and by specifying gender and situation control as distinct moderators in the ego-depletion process.

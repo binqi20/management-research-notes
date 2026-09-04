@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Hallen 2016 When Do Entrepreneurs Accura
 text_path: "library/AMJ/vol-59-no-5/text/Hallen 2016 When Do Entrepreneurs Accurately Evaluate Venture Capital Firms’ Track Records A Bounded Rationality Perspective.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-mixed"
 keywords: ["bounded rationality", "firm reputation", "track record", "venture capital firms", "entrepreneurs", "evaluative accuracy", "prominence"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "we draw on bounded rationality"
   methods_overview: "We use hybrid research methods"
   keywords_source: "evaluating VCs"
+  hypotheses_source: "Hypothesis 4a. The greater a VC’s prominence,"
+  measures_overview: "We measured Web traffic as the 30-day average"
+  findings_overview: "VC track record is positive and highly significant in"
 ---
 
 # When Do Entrepreneurs Accurately Evaluate Venture Capital Firms’ Track Records? A Bounded Rationality Perspective
@@ -52,6 +57,17 @@ There has been substantial research on the value of young firms engaging high-qu
 **Research Question**
 The paper asks when entrepreneurs are more or less accurate in evaluating a venture capital firm's track record. It examines how evaluator characteristics, especially network centrality and motivation to search, combine with evaluated-firm characteristics, especially objective track record and prominence, to shape the match between entrepreneurs' perceptions and VC track-record quality.
 
+**Hypotheses / Propositions**
+- H1: Entrepreneurs with more central network positions will perceive a VC’s track record more accurately.
+- H2a: Entrepreneurs not shown summaries of others’ ratings of a VC will perceive its track record more accurately.
+- H2b: Entrepreneurs receiving an offer from a VC will perceive its track record more accurately.
+- H3a: Entrepreneurs will perceive the track records of VCs with stronger track records more accurately.
+- H3b: Greater entrepreneur centrality will amplify the positive relationship between a VC’s track record and evaluative accuracy.
+- H3c: Greater entrepreneur motivation will amplify the positive relationship between a VC’s track record and evaluative accuracy.
+- H4a: Greater VC prominence will reduce the accuracy of entrepreneurs’ perceptions of its track record.
+- H4b: Greater entrepreneur centrality will dampen the negative relationship between VC prominence and evaluative accuracy.
+- H4c: Greater entrepreneur motivation will dampen the negative relationship between VC prominence and evaluative accuracy.
+
 **Mechanism Process**
 - Focal relationship: Entrepreneur evaluations of VC track records in an information-sparse fundraising context.
 - Evaluator-side factors: Entrepreneur network centrality and motivation to search for information, operationalized through absence of prior community ratings and receipt of an offer.
@@ -60,6 +76,12 @@ The paper asks when entrepreneurs are more or less accurate in evaluating a vent
 - Process: Bounded rationality leads entrepreneurs to conserve effort, rely on accessible information, and use heuristics such as social proof, halo effects, and prominence cues.
 
 The process is cross-level and dyadic: entrepreneurs do not simply read firm quality from an objective track record. They evaluate a VC through the information they can access, the effort they are motivated to expend, and the salience of VC-level cues. Centrality and motivation generally improve accuracy, stronger VC track records make accurate evaluation easier, and prominence can reduce accuracy by making incomplete or biased cues more available.
+
+**Data & Measures**
+The quantitative data comprise 1,278 track-record ratings of 153 early-stage U.S. VCs by 785 entrepreneurs on TheFunded.com between 2007 and 2010, supplemented with the Lee–Pollock–Jin (LPJ) VC reputation index, Alexa web traffic, and VentureXpert controls. Evaluation accuracy equals 4 minus the absolute difference between the entrepreneur’s 1–5 rating and the LPJ score converted from its 100-point scale to a matched-distribution five-point scale, yielding an ordinal 0–4 outcome. Entrepreneur centrality is a residualized variant of closeness centrality built from entrepreneur–VC meetings and VC syndication ties; motivation is captured by indicators for no prior community ratings and receipt of an offer; VC track record is the LPJ index; and prominence is the logged 30-day average of daily VC-website page views. Ordered logit models use robust standard errors clustered by entrepreneur. The qualitative fieldwork comprised a first wave of 71 interviews with entrepreneurs and investors and a second wave of eight entrepreneur interviews plus two VC interviews; interviews were recorded, transcribed, and typically lasted 60–90 minutes.
+
+**Key Findings**
+The qualitative evidence indicates that entrepreneurs often gathered limited information, staged their evaluations as investment became more likely, and relied on halo, social-proof, and prominence heuristics. In the quantitative analysis, H1 was supported: higher centrality increased the predicted probability of perfect accuracy from 9.8% to 27.7% (p = .001). H2a was supported (20.0% to 25.4%, p = .049), while H2b received weak support (20.5% to 25.2%, p = .076). H3a was supported (16.3% to 37.4%, p = .008). H3b was not supported as predicted: the significant interaction ran in the opposite direction, with centrality dampening the positive track-record effect (p = .017). H3c received weak support: the no-prior-ratings and received-offer interactions were marginally significant (p = .089 and .076, respectively). H4a was supported: greater prominence reduced perfect accuracy from 29.0% to 17.3% (p = .079 in the direct-effects model; p = .003 in the full model). H4b and H4c were not supported because none of the prominence interactions with centrality or motivation was significant.
 
 **Theoretical Contribution**
 The paper contributes to firm reputation research by shifting attention from collective perceptions in information-rich settings to individual evaluative accuracy in information-sparse settings. It argues that reputation-relevant perceptions vary across evaluators and are shaped by both evaluator access/motivation and target-firm attributes. It also separates track record from prominence: stronger track records can improve accuracy by making information easier to pull, whereas high prominence can impair accuracy by pushing biased or incomplete cues.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Jung 2016 The Quest for Originality A Ne
 text_path: "library/AMJ/vol-59-no-5/text/Jung 2016 The Quest for Originality A New Typology of Knowledge Search and Breakthrough Inventions.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["knowledge search", "original search", "search boundary", "path-breaking novelty", "high-impact breakthrough", "nanotechnology patents"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "technological uncertainty"
   methods_overview: "We used three different regression methods"
   keywords_source: "search target and search boundary"
+  hypotheses_source: "Hypothesis 1a. Original search increases the"
+  measures_overview: "citations to identify a highly impactful breakthrough."
+  findings_overview: "Hypothesis 1b was strongly supported."
 ---
 
 # The Quest for Originality: A New Typology of Knowledge Search and Breakthrough Inventions
@@ -51,6 +56,12 @@ We re-examine firm exploration leading to breakthrough inventions by focusing on
 **Research Question**
 How does the target of knowledge search, especially original knowledge, reshape the relationship between search boundary and breakthrough inventions? The paper asks whether original search affects two distinct inventive outcomes: path-breaking novelty and high-impact breakthrough.
 
+**Hypotheses / Propositions**
+H1a. Original search increases the likelihood of generating a path-breaking novelty.
+H1b. Original search increases the likelihood of developing a high-impact breakthrough.
+H2a. When search targets original knowledge, boundary-spanning search is more likely than local search to generate a path-breaking novelty.
+H2b. When search targets original knowledge, local search is more likely than boundary-spanning search to develop a high-impact breakthrough.
+
 **Mechanism Process**
 - IV(s): Original search, search proximity, local original search, boundary-spanning original search, local ordinary search, boundary-spanning ordinary search, and proximity-weighted versions of these search types.
 - DV(s): Path-breaking novelty, path-breaking novelty within nanotechnology, high-impact breakthrough, high-impact breakthrough path, forward citation counts, and forward citations per year in the post hoc uncertainty-reduction analysis.
@@ -58,6 +69,14 @@ How does the target of knowledge search, especially original knowledge, reshape 
 - Moderators: Search boundary, distinguishing local from boundary-spanning search, conditions the effect of original search on novelty and high-impact breakthroughs.
 
 The mechanism is that original knowledge carries unresolved technological uncertainty because it represents first-ever recombinations that remain primitive or underdeveloped. Searching original knowledge can produce path-breaking novelty by pushing firms toward new recombinations, and it can produce high-impact breakthroughs when subsequent inventions resolve uncertainty and make the searched knowledge useful to later inventors. The paper finds the strongest and most robust evidence for local original search producing high-impact breakthroughs; boundary-spanning original search is theorized to favor path-breaking novelty, but that comparison is weak in the main analysis and receives stronger support in robustness tests.
+
+**Data & Measures**
+The study uses 1,848 nanotechnology patents granted to 504 U.S. firms from 1980 to 2006 under United States Patent and Trademark Office (USPTO) Class 977 (Nanotechnology). Patent assignees were matched with Nanobank organization identifiers, and citation, subclass, and assignee data came from the Kauffman COMETS database; the post hoc mechanism analysis uses 7,006 patent-cited-year observations.
+
+Path-breaking novelty is a dummy for the first combination of two subclasses across the patent population, with an alternative restricted to Class 977. High-impact breakthrough is a dummy for patents in the top 5% of the normalized forward-citation distribution; an alternative also requires path-breaking novelty. Original search counts first-ever combined subclass pairs in cited patents. Search boundary is measured through patent-class technological proximity, and the four search types are operationalized with normalized intensity and proximity-weighted measures. The authors estimate logit, negative binomial, and OLS models with robust standard errors clustered by firm; the post hoc test uses first local citation timing and annual forward-citation counts.
+
+**Key Findings**
+H1a received strong support: original search was positively associated with path-breaking novelty, although significance weakened when novelty was restricted to nanotechnology. H1b was strongly supported across high-impact breakthrough and forward-citation specifications. H2a was not supported in the main intensity-based analysis; the proximity-weighted analysis provided weak support (coefficient difference p < .10), and age-restricted robustness tests provided stronger support. H2b was strongly supported: local original search was positive and significantly larger than boundary-spanning original search across high-impact breakthrough definitions. In the post hoc mechanism test, the interaction between post-local citation and a patent containing original knowledge was positive (coefficient = 0.165, p < .05).
 
 **Theoretical Contribution**
 The paper extends knowledge-search theory by adding search target, original versus ordinary knowledge, to the conventional local versus boundary-spanning typology. It distinguishes path-breaking novelty from high-impact breakthrough and shows that their antecedents can differ. It also contributes to recombinant-knowledge research by separating the generation of new recombinations from the search and assimilation of prior original knowledge.

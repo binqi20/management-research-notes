@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Almandoz 2016 When Experts Become Liabil
 text_path: "library/AMJ/vol-59-no-4/text/Almandoz 2016 When Experts Become Liabilities Domain Experts on Boards and Organizational Failure.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["domain experts", "board composition", "decision uncertainty", "bank failure", "organizational failure"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "on domain experts and decision-making groups"
   methods_overview: "competing-risks regression models"
   keywords_source: "proportion of domain expert directors"
+  hypotheses_source: "Hypothesis 1. The higher a bank’s asset growth"
+  measures_overview: "a bank failure occurs when the FDIC"
+  findings_overview: "results support Hypothesis 1, Hypothesis 2a, and"
 ---
 
 # When Experts Become Liabilities: Domain Experts on Boards and Organizational Failure
@@ -51,6 +56,12 @@ How does the presence of domain experts on a corporate board—directors whose p
 **Research Question**
 How does the presence of domain experts on a corporate board affect organizational outcomes? The paper asks whether a higher proportion of directors with primary professional experience in the focal industry increases the probability of organizational failure under conditions of decision uncertainty.
 
+**Hypotheses / Propositions**
+H1: The higher a bank's asset growth rate, the stronger the relationship between the proportion of banking expert directors and bank mortality.
+H2a: The greater a bank's involvement in non-standard real estate lending, the stronger the relationship between the proportion of banking expert directors and bank mortality.
+H2b: The greater a bank's involvement in non-standard real estate lending, the stronger the relationship between the proportion of real estate expert directors and bank mortality.
+H3: The greater the number of locally based banks in the focal bank's geographic area, the stronger the relationship between the proportion of banking expert directors and bank mortality.
+
 **Mechanism Process**
 - IV(s): Proportion of banking expert directors and, for real estate lending hypotheses, proportion of real estate expert directors.
 - DV(s): Bank mortality, defined as FDIC intervention because a bank is unable to satisfy depository obligations.
@@ -58,6 +69,12 @@ How does the presence of domain experts on a corporate board affect organization
 - Moderators: Asset growth rate, involvement in non-standard real estate lending, and number of locally based banks in the focal bank's geographic area.
 
 The mechanism is that expert-heavy boards can become less effective strategic decision-making groups when uncertainty is high. Domain experts may bring cognitive entrenchment, group overconfidence, and reduced task conflict, while non-experts may be less able or willing to challenge high-status experts. Empirically, the domain-expert failure relationship is stronger under rapid asset growth and non-standard real estate lending; local competition is theorized as another uncertainty source, but its interaction is not statistically significant in the reported models.
+
+**Data & Measures**
+Board biographies came from regulatory filings and SNL Financial; bank-failure records came from SNL Financial. The estimation sample contained 1,307 banks and 9,957 bank-year observations. Bank failure was FDIC intervention when a bank could not satisfy its depository obligations. The time-varying focal predictors were the annual proportions of directors with substantial banking experience and with real estate backgrounds. Moderators were one-year-lagged asset growth, one-year-lagged non-standard real estate loans in millions of dollars, and the time-varying count of locally based banks in the focal bank's county. Additional analyses measured non-current loans as a percentage of assets and non-performing assets as a percentage of equity capital. Competing-risks models used bank-clustered robust standard errors and state dummies; IPTW adjusted for observable differences in the propensity to have an expert-heavy board.
+
+**Key Findings**
+H1, H2a, and H2b were supported. In the full model, the banking experts × asset growth interaction was positive (.11, p < .01), the banking experts × non-standard real estate lending interaction was positive (4.48, p < .05), and the real estate experts × non-standard real estate lending interaction was positive (5.68, p < .05). H3 was not supported: the banking experts × number of locally based banks interaction was positive (.07) but not statistically significant. The proportions of banking and real estate experts had no significant main effects on failure. Supplementary analyses suggested that financial-trouble indicators almost completely mediated the relationship between domain-expert proportions and failure, and found no systematic relationship with return on average equity or return on average assets.
 
 **Theoretical Contribution**
 The paper shifts board-composition research from broad professional diversity to the relative representation of domain experts versus non-experts. It develops a contingency argument in which decision uncertainty determines when directors' professional backgrounds become consequential for organizational survival. The study also specifies cognitive entrenchment, group overconfidence, and reduced task conflict as mechanisms through which board composition can affect strategic decision making and organizational failure.

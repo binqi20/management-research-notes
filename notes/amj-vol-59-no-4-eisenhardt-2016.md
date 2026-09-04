@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Eisenhardt 2016 Grand Challenges and Ind
 text_path: "library/AMJ/vol-59-no-4/text/Eisenhardt 2016 Grand Challenges and Inductive Methods Rigor without Rigor Mortis.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "editorial"
 keywords: ["grand challenges", "inductive methods", "grounded theory building", "theoretical sampling", "qualitative research"]
@@ -52,6 +54,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how inductive methods can help management scholars address grand challenges while producing rigorous theory. It focuses on why methods such as theory building from cases, interpretivist studies, and ethnography fit problems that are complex, uncertain, socially consequential, and not easily handled by conventional deductive approaches.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core argument: Inductive methods are especially useful for grand challenges because they generate theory from rich data in settings where existing theory is limited and clear answers are unavailable.
 - Methodological elements: Deep immersion in focal phenomena, theoretical sampling, and grounded theory building.
@@ -60,6 +65,12 @@ The editorial asks how inductive methods can help management scholars address gr
 - Rigor mortis risks: Forced writing formats, rigid analytic recipes, and excessive process transparency that distract from theory.
 
 The process argument is that inductive methods combine openness to emergent insight with disciplined data collection, sampling, and analysis. Because grand challenges involve uncertain, evolving mixes of technical and social elements, the authors argue that inductive work can reveal concepts, relationships, processes, and boundary conditions that deductive designs may overlook. Rigor comes from strong theory grounded in rich evidence, not from mechanical adherence to a single qualitative template.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial positions inductive methods as central to AMJ's grand-challenges agenda. It contributes by specifying how case-based theory building, interpretivist research, and ethnography can generate novel theory about complex social and organizational problems. It also clarifies quality criteria for inductive work by separating genuine rigor from template-driven "rigor mortis."
@@ -71,7 +82,7 @@ For authors, the editorial advises matching the research design, analysis, and p
 The piece is an editorial commentary rather than an empirical study, so it does not test its claims with a new sample or formal comparative evidence. Its examples are drawn from published inductive work and are used to illustrate methodological possibilities rather than establish systematic prevalence. The authors also caution that conventions such as data structures, process detail, and presentation formats can support some studies while constraining others.
 
 **Future Research**
-The editorial points researchers toward inductive studies of grand challenges that surface novel ideas, processes, configurations, hard-to-measure constructs, and extreme cases. It also invites methodological reflection on how to preserve internal coherence, strong data grounding, and unexpected insight without imposing rigid qualitative templates. Future work could therefore examine how particular inductive designs and presentation choices help or hinder theory development in grand-challenge research.
+The editorial points researchers toward inductive studies of grand challenges that surface novel ideas, processes, configurations, hard-to-measure constructs, and extreme cases. Its broader aim is to further the grand-challenges agenda by clarifying how inductive methods can avoid false rigor and generate strong theory that is grounded in rich data and achieves insight.
 
 **APA 7th Citation**
 Eisenhardt, K. M., Graebner, M. E., & Sonenshein, S. (2016). Grand challenges and inductive methods: Rigor without rigor mortis. *Academy of Management Journal*, 59(4), 1113-1123. https://doi.org/10.5465/amj.2016.4004

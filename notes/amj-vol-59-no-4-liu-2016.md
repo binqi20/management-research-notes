@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Liu 2016 Local Partnering in Foreign Ven
 text_path: "library/AMJ/vol-59-no-4/text/Liu 2016 Local Partnering in Foreign Ventures Uncertainty, Experiential Learning, and Syndication in Cross-Border Venture Capital Investments.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["local partnering", "foreign ventures", "cross-border venture capital", "uncertainty", "experiential learning", "syndication", "venture-level uncertainty", "country-level uncertainty"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "ganizational learning literature"
   methods_overview: "a sequential logit model"
   keywords_source: "cross-border VC investments"
+  hypotheses_source: "country-level uncertainty increases the difficulty of partnering with local firms and decreases the likelihood"
+  measures_overview: "Risk Guide’s law and order index"
+  findings_overview: "country are both statistically significant and positive"
 ---
 
 # Local Partnering in Foreign Ventures: Uncertainty, Experiential Learning, and Syndication in Cross-Border Venture Capital Investments
@@ -51,6 +56,13 @@ If partnering with local firms is an intuitive strategy with which to mitigate u
 **Research Question**
 Why do firms not always partner with local firms in uncertain foreign ventures, despite the intuitive value of local partnering for mitigating uncertainty? The paper asks how venture-level uncertainty, country-level uncertainty, and corresponding forms of international experience shape VC firms' propensity to syndicate cross-border investments with local VC partners.
 
+**Hypotheses / Propositions**
+- H1: Venture-level uncertainty is positively related to VC firms' propensity to partner with local VC firm(s), rather than invest alone or only with foreign VC firm(s), in a foreign venture.
+- H2: Country-level uncertainty is negatively related to that propensity to partner with local VC firm(s).
+- H3: International experience managing venture-level uncertainty in foreign ventures is negatively related to that propensity to partner with local VC firm(s).
+- H4: International experience managing country-level uncertainty in foreign ventures is negatively related to that propensity to partner with local VC firm(s).
+- H5: International experience in the host country is positively related to that propensity to partner with local VC firm(s).
+
 **Mechanism Process**
 - IV(s): Venture-level uncertainty, country-level uncertainty, international experience in managing venture-level uncertainty, international experience in managing country-level uncertainty, and international experience in the host country.
 - DV(s): VC firms' partnering choice in first-round investments: domestic investment, foreign investment alone, foreign investment with only other foreign VC firms, or foreign investment with at least one local VC firm.
@@ -58,6 +70,12 @@ Why do firms not always partner with local firms in uncertain foreign ventures, 
 - Moderators: No formal moderator is estimated in the main hypotheses.
 
 The mechanism contrasts the need for local partnering with the feasibility of forming local partnerships. Venture-level uncertainty increases the value of local information and therefore increases local syndication. Country-level uncertainty also creates a need for local knowledge, but weak institutional environments make dependable local partners and enforceable cooperation harder to secure, reducing local partnering. Experience generally reduces the need for partners, but host-country experience increases local embeddedness and makes local partnering more feasible.
+
+**Data & Measures**
+Using VentureXpert, the study analyzes 30,395 first-round VC firm–venture dyads (2,673 VC firms and 20,885 ventures) from 1984–2011. Model 1 uses the full sample; Models 2–3 use 3,858 cross-border observations, and Model 4 uses 3,392 observations for 1991–2011. The dependent variable classifies each investment as domestic, foreign alone, foreign with only other foreign VC firm(s), or foreign with at least one local VC firm. Venture-level uncertainty is the venture's maturity stage, coded 4 for Startup/Seed, 3 for Early Stage, 2 for Expansion, and 1 for Later Stage. Country-level uncertainty is a reverse-coded annual law-and-order index ranging from 0 to 6, with higher values indicating greater uncertainty. The three experience measures respectively count prior early-stage foreign ventures, prior ventures in foreign countries with high country-level uncertainty, and prior ventures in the host country; each uses 30% annual depreciation and a natural-log transformation. The observational analyses use sequential logit models, cross-border multinomial logit models, firm-clustered robust standard errors, and robustness tests.
+
+**Key Findings**
+H1 was supported: venture-level uncertainty increased partnering rather than investing alone and local rather than exclusively foreign partnering (Model 1: b = 0.28 and 0.25, respectively; both p < .001). H2 was supported: country-level uncertainty reduced partnering and local partnering (Model 1: b = -0.11, p < .10; b = -0.27, p < .001). H3 received weak support: experience managing venture-level uncertainty reduced preference for local over exclusively foreign partners (Model 1 third stage: b = -0.17, p < .10; similar in Model 2), with the relevant coefficient difference significant at 5% in Model 3 and 10% in Model 4. H4 was not supported for the predicted relative partner comparison: the experience reduced local partnering versus investing alone in Model 3 (b = -0.32, p < .001), but not significantly more than it reduced partnering with other foreign firms. H5 was supported: host-country experience increased local partnering (Model 1: b = 0.16, p < .05, and b = 0.61, p < .001), with similar results in Model 2 and significant differences between local and exclusively foreign partnering in Models 3–4.
 
 **Theoretical Contribution**
 The paper contributes to cross-border VC and international business research by unbundling uncertainty into venture-level and country-level sources with different effects on local partnering. It extends organizational learning arguments by showing that experience does not simply reduce reliance on partners: host-country experience can increase local partnering by improving feasibility, legitimacy, and local network access. Methodologically, it treats local partnering as a multilayered market-entry and partner-choice decision rather than a single binary choice.

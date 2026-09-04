@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Ferguson 2016 Misfit and Milestones Stru
 text_path: "library/AMJ/vol-59-no-4/text/Ferguson 2016 Misfit and Milestones Structural Elaboration and Capability Reinforcement in the Evolution of Entrepreneurial Top Management Teams.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["top management team misfit", "underqualification", "overqualification", "capability reinforcement", "structural elaboration", "firm development", "developmental milestones"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "upper echelons"
   methods_overview: "panel-Poisson random effects regression analyses"
   keywords_source: "TMT misfit was calculated by comparing"
+  hypotheses_source: "Hypothesis 6. The positive effect of TMT overqualification on new TMT roles will depend on"
+  measures_overview: "TMT underqualification is a count of the roles"
+  findings_overview: "Results reveal that underqualified TMTs hire new managers to"
 ---
 
 # Misfit and Milestones: Structural Elaboration and Capability Reinforcement in the Evolution of Entrepreneurial Top Management Teams
@@ -53,6 +58,14 @@ We examine how “top management team (TMT) misfit,” or discrepancies between 
 **Research Question**
 How and when do entrepreneurial top management teams adjust people and roles in response to TMT misfit? The paper also asks how responses to misfit vary with the resources available as firms pass developmental milestones such as venture capital financing and IPO.
 
+**Hypotheses / Propositions**
+H1: TMT underqualification will positively predict TMT hiring.
+H2: TMT underqualification will negatively predict new TMT roles.
+H3: TMT overqualification will negatively predict TMT hiring.
+H4: TMT overqualification will positively predict new TMT roles.
+H5: The positive effect of TMT underqualification on TMT hiring will be stronger with greater firm development.
+H6: The positive effect of TMT overqualification on new TMT roles will be stronger with greater firm development.
+
 **Mechanism Process**
 - IV(s): TMT underqualification, TMT overqualification, and firm development measured through venture capital funding and initial public offering milestones.
 - DV(s): TMT hiring and new TMT roles.
@@ -60,6 +73,12 @@ How and when do entrepreneurial top management teams adjust people and roles in 
 - Moderators: Firm development, operationalized as the number of developmental milestones achieved.
 
 The mechanism is that underqualification represents a capability need relative to formal TMT roles, so firms should reinforce capabilities by hiring managers into existing roles. Overqualification represents unused capability relative to the current role structure, so firms should elaborate the structure by adding roles that make fuller use of existing managers. The study argues that these responses require attention and resources, making developmental milestones a contingency: before such milestones, even misfit teams may make few changes.
+
+**Data & Measures**
+The analysis uses 17,659 firm-month observations from 167 high-technology entrepreneurial firms, covering 1,452 executives and 1,918 TMT roles. TMT underqualification counts role requirements for which the team lacks prior functional experience, whereas TMT overqualification counts functional experience above what the team’s current roles require, each summed across 11 functions and lagged 12 months. Firm development is the sum of two milestone indicators—venture capital funding and an initial public offering—ranging from zero to two. TMT hiring counts managers who newly appear in the team, and new TMT roles count job titles not previously present in the firm; both outcomes are calculated over subsequent 12-month windows, updated monthly, and modeled with random-effects count regressions.
+
+**Key Findings**
+H1 and H2 were supported in the main-effects models: each unit of TMT underqualification corresponded to a 7% increase in the incident rate of hiring and a 12% decrease in the incident rate of new roles. H3 and H4 were also supported: each unit of TMT overqualification corresponded to a 3% decrease in hiring and a 3% increase in new roles. H5 was supported, but the underqualification–hiring relationship was negative with no milestones and positive after one or two milestones. H6 was supported in the focal model: the overqualification–new-role relationship was negative with no milestones, nonsignificant with one, and positive with two; however, this interaction was not supported in three robustness checks.
 
 **Theoretical Contribution**
 The paper contributes to entrepreneurship theory by separating TMT composition from TMT role structure and modeling their misfit rather than treating people and roles as interchangeable. It identifies asymmetric responses to underqualification and overqualification, showing that capability needs are a stronger and more robust driver of TMT change than opportunities created by excess capability. It also contributes to upper-echelons, role-structure, and fit research by theorizing misfit at the team level and linking it to both change and inertia.

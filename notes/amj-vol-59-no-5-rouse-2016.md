@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Rouse 2016 Beginning’s End How Founder
 text_path: "library/AMJ/vol-59-no-5/text/Rouse 2016 Beginning’s End How Founders Psychologically Disengage From Their Organizations.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-qualitative"
 keywords: ["founder psychological disengagement", "founder work orientations", "identity", "entrepreneurial exit", "serial path", "portfolio path"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "multiple identifications"
   methods_overview: "I employed grounded theory analysis"
   keywords_source: "founder psychological disengagement"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "I employed grounded theory analysis"
+  findings_overview: "orientations relate to the disengagement paths that founders follow when leaving one"
 ---
 
 # Beginning’s End: How Founders Psychologically Disengage From Their Organizations
@@ -51,6 +56,9 @@ Exit is a critical part of the entrepreneurial process. At the same time, resear
 **Research Question**
 The paper asks how founders manage psychological disengagement from their organizations when they choose to leave them. It also examines how psychological disengagement processes influence how founders begin again.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Focal process: Founder psychological disengagement during voluntary successful exit from one organization and movement toward another.
 - Work orientations: Self-fortifying founders prioritize their own ideas, personal development, money, learning, and ego-gratification; stewarding founders prioritize people, organizational sustainability, customers, and social contribution.
@@ -59,6 +67,12 @@ The paper asks how founders manage psychological disengagement from their organi
 - Emotional dynamics: The portfolio path is associated with excitement and enthusiasm around the next opportunity, whereas the serial path involves sadness, pain, loss, and later movement toward more positive emotions.
 
 The process model links founders' work orientations to different behavioral tactics, identification dynamics, and emotional experiences during exit. Self-fortifying founders psychologically move forward by building attachment to future ideas before fully leaving the current organization. Stewarding founders psychologically separate by protecting the current organization, making room for successors, and only later searching for the next opportunity.
+
+**Data & Measures**
+The data comprise initial semi-structured narrative interviews with 34 founders associated with a start-up office facility serving technology and life science ventures. Follow-up interviews one year later with 26 participants yielded 60 interviews in total. The focal analysis used accounts of voluntary, successful exits from 30 organizations and five experiences of founders working for an acquirer. The author used an adapted identification diagram as an interview probe, then field notes, contact summary forms, research memos, preliminary first-order coding, second-order categories, axial coding, and iterative model development.
+
+**Key Findings**
+The analysis produced two founder work orientations and two related disengagement paths. Founders with a self-fortifying orientation tended to stockpile ideas and develop side businesses before leaving; on the portfolio path, anticipatory identification with the next organization was more salient than deidentification, and positive emotions predominated. Founders with a stewarding orientation tended to empower others and recruit replacements before leaving, then search for ideas afterward; on the serial path, deidentification, sadness, and loss were initially salient, with more positive emotions emerging later.
 
 **Theoretical Contribution**
 The paper develops an experience-based process theory of psychological disengagement that integrates behavior, cognition, and emotion before and after physical exit. It extends identification and role-transition theory by showing how deidentification and anticipatory identification vary in timing and salience. It also contributes to entrepreneurship research by explaining differences between serial and portfolio habitual founders through founder work orientations rather than only formal patterns of ownership or involvement.

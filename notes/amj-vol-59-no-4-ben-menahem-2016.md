@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Ben-Menahem 2016 Coordinating Knowledge 
 text_path: "library/AMJ/vol-59-no-4/text/Ben-Menahem 2016 Coordinating Knowledge Creation in Multidisciplinary Teams Evidence from Early-Stage Drug Discovery.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-qualitative"
 keywords: ["multidisciplinary teams", "knowledge creation", "formal coordination structures", "informal coordination practices", "early-stage drug discovery", "conjectural interdependencies", "sub-teams"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "structural contingency theory"
   methods_overview: "Data analysis was done in three stages."
   keywords_source: "formal and informal coordination mechanisms"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "managed our data using NVivo 9, a software tool for"
+  findings_overview: "among knowledge domains, in turn, promote structural adaptation."
 ---
 
 # Coordinating Knowledge Creation in Multidisciplinary Teams: Evidence from Early-Stage Drug Discovery
@@ -53,6 +58,9 @@ Based on a multi-year field study of early-stage drug discovery project teams at
 **Research Question**
 The paper asks how multidisciplinary teams engaged in knowledge creation combine formal and informal coordination mechanisms when they face unpredictable interdependencies among specialists' knowledge domains. It focuses on early-stage drug discovery teams, where uncertainty makes it difficult to know in advance which specialist domains must coordinate and when.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core context: Multidisciplinary drug discovery teams work under high task uncertainty and unpredictable interdependencies among knowledge domains.
 - Formal structuring: Project teams create and revise self-managed sub-teams around conjectural and later revealed interdependencies.
@@ -61,6 +69,12 @@ The paper asks how multidisciplinary teams engaged in knowledge creation combine
 - Structural adaptation: Newly revealed interdependencies trigger the inclusion or exclusion of knowledge domains in sub-team structures.
 
 The process is recursive rather than linear. Formal sub-team structures reduce complexity, allocate responsibility, and make interdependencies visible enough for specialists to coordinate informally. Informal coordination then exposes new knowledge-domain interdependencies, which prompts project teams to redesign formal structures. Knowledge creation therefore depends on the mutual constitution of formal coordination structures and informal coordination practices.
+
+**Data & Measures**
+The longitudinal, single-site study purposively sampled informants from five project teams that varied in target novelty, trajectory stage, therapeutic area, and number of research sites. The 68 interviews included three interviews with project team leaders conducted before the five projects were selected; the corpus also comprised 55 non-participant observations, 930 pages of interview transcripts, 167 pages of field notes, and archival materials. Researchers managed the data in NVivo 9, open-coded interview data, used field notes and secondary data for context, aggregated first-order categories into second-order themes through axial coding, and developed and checked an emergent model against the full data set and key informants.
+
+**Key Findings**
+Across the five project teams, formal structuring assigned specialists to self-managed sub-teams around conjectural interdependencies, with insiders directly responsible for knowledge creation and outsiders questioning assumptions and suggesting alternatives. Within sub-teams, anticipatory conforming, workflow synchronizing, and cross-domain triangulating helped specialists manage known interdependencies and integrate their work. These informal practices also revealed new interdependencies, prompting project teams to include or exclude knowledge domains and restructure sub-teams. The emergent model therefore identifies formal coordination structures and informal coordination practices as mutually constitutive under unpredictable interdependence.
 
 **Theoretical Contribution**
 The paper integrates organizational design and practice-based coordination perspectives by showing how formal structures and informal practices co-evolve in multidisciplinary knowledge work. It extends structural contingency theory by replacing the image of an omniscient designer with a process in which specialists use conjectural representations of interdependence and adapt structures as new interdependencies are revealed. It also contributes to practice-based coordination research by showing that informal practices depend on formal sub-team structures that reduce complexity and create shared awareness.

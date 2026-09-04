@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Boivie 2016 Come Aboard! Exploring the E
 text_path: "library/AMJ/vol-59-no-5/text/Boivie 2016 Come Aboard! Exploring the Effects of Directorships in the Executive Labor Market.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["board service", "directorships", "executive labor market", "certification", "promotion to CEO", "executive compensation"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "third-party certification"
   methods_overview: "we employ propensity score matching"
   keywords_source: "executive labor market"
+  hypotheses_source: "gain directorships will be more likely to be promoted to CEO both inside and outside"
+  measures_overview: "was measured using the TDC1 variable"
+  findings_overview: "in title. Thus, Hypothesis 6 receives support."
 ---
 
 # Come Aboard! Exploring the Effects of Directorships in the Executive Labor Market
@@ -53,6 +58,15 @@ In this study, we examine the following question: What do executives gain from s
 **Research Question**
 What do executives gain from serving on boards? The paper asks whether first-time board appointments benefit non-CEO executives in the executive labor market by increasing promotion to CEO, promotion in title, and pay at the executive's home firm.
 
+**Hypotheses / Propositions**
+- H1: A non-CEO executive's first board appointment is associated with an increased probability of subsequently attaining a CEO position.
+- H2: An inside-director appointment is associated with an increased probability of inside promotion to CEO.
+- H3: An inside-director appointment is associated with an increased probability of promotion to CEO at an outside firm.
+- H4: An outside-director appointment is associated with an increased probability of promotion to CEO at an outside firm.
+- H5: An outside-director appointment is associated with an increased probability of inside promotion to CEO.
+- H6: Appointment to a board is associated with an increased probability of promotion in title.
+- H7: Appointment to a board is associated with higher pay at the executive's employing firm.
+
 **Mechanism Process**
 - IV(s): Any first-time board appointment, inside director appointment, and outside director appointment.
 - DV(s): Promotion to CEO, inside promotion to CEO, outside promotion to CEO, promotion in title, and executive pay level.
@@ -60,6 +74,16 @@ What do executives gain from serving on boards? The paper asks whether first-tim
 - Moderators: Not reported in paper.
 
 The mechanism is that a first-time board appointment acts as a visible third-party certification of executive quality in an information-poor labor market. Board service also gives non-CEO executives access to board-level knowledge, governance experience, and social connections. These certification and capital-building benefits make executives more attractive for CEO and title promotions and may lead home firms to raise compensation to retain them.
+
+**Data & Measures**
+BoardEx identified first-time public-company directorships from 1996 to 2007; Execucomp supplied executive career and compensation data, and Compustat supplied firm-level data. In this matched observational design, propensity-score matching in Stata 13 paired 1,052 newly appointed directors with 1,052 non-director counterfactual executives, and career outcomes were tracked for five years, through 2012.
+
+Any board appointment, inside-director appointment, and outside-director appointment were binary predictors. Promotion to CEO was a yearly binary outcome and was split into inside and outside CEO promotion; title promotion captured advancement to COO or CFO and then to president; pay was logged TDC1 total compensation. Cox event-history analysis tested H1, multinomial logit models tested H2-H5, the Anderson-Gill multiple-failure event-history model tested H6, and OLS regression tested H7.
+
+**Key Findings**
+H1 was supported: any board appointment increased the hazard of CEO promotion (HR = 1.44, p < .01); inside and outside appointments had HRs of 1.35 (p < .10) and 1.53 (p < .01), respectively. H2 and H3 received marginal support: inside-director appointments predicted inside CEO promotion (b = .34, p < .10) and outside CEO promotion (b = .87, p < .10). H4 and H5 were supported: outside-director appointments predicted outside CEO promotion (b = 1.06, p < .05) and inside CEO promotion (b = .43, p < .05).
+
+H6 was supported: any board appointment increased the hazard of title promotion (HR = 2.06, p < .001), with HRs of 2.26 for inside and 1.94 for outside appointments (both p < .001). H7 was supported: any board appointment predicted higher pay (b = .09, p < .01); the outside-director coefficient was positive (b = .11, p < .01), while the inside-director coefficient was positive and marginally significant (b = .07, p < .10).
 
 **Theoretical Contribution**
 The paper contributes to executive labor market research by theorizing and testing board service as a predictor of non-CEO executives' promotion and compensation outcomes. It extends certification theory beyond CEOs by showing that directorships can certify non-CEO executive quality. It also contributes to corporate governance research by identifying career benefits that may help explain why busy executives accept board appointments.

@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Vries 2016 Managing Coordination in Mult
 text_path: "library/AMJ/vol-59-no-5/text/Vries 2016 Managing Coordination in Multiteam Systems Integrating Micro and Macro Perspectives.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["multiteam systems", "horizontal coordination", "vertical coordinated action", "intrapersonal functional diversity", "aspirational behavior", "multiteam system performance"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "organizational behavior and organization theory"
   methods_overview: "hierarchical linear regressions"
   keywords_source: "horizontal coordination"
+  hypotheses_source: "Hypothesis 1 predicted that the indirect, positive"
+  measures_overview: "higher values (less modification) represent greater"
+  findings_overview: "relationship was positive at higher levels of vertical"
 ---
 
 # Managing Coordination in Multiteam Systems: Integrating Micro and Macro Perspectives
@@ -54,6 +59,11 @@ Multiteam systems (i.e., teams of teams) are frequently used to deal with comple
 **Research Question**
 How does intrapersonal functional diversity shape multiteam system performance through horizontal coordination and aspirational behavior? The paper asks whether vertical coordinated action by an integration team enables multiteam systems to capture IFD's coordination benefits while reducing its downside for aspirational behavior.
 
+**Hypotheses / Propositions**
+H1: Vertical coordinated action moderates the positive indirect relationship between IFD and multiteam system performance through horizontal coordination; this relationship is accentuated when vertical coordinated action is higher and attenuated when it is lower.
+
+H2: Vertical coordinated action moderates the negative indirect relationship between IFD and multiteam system performance through aspirational behavior; this relationship is accentuated when vertical coordinated action is lower and attenuated when it is higher.
+
 **Mechanism Process**
 - IV(s): Intrapersonal functional diversity in the multiteam system.
 - DV(s): Multiteam system performance in the third Leadership Development Simulation session.
@@ -61,6 +71,16 @@ How does intrapersonal functional diversity shape multiteam system performance t
 - Moderators: Vertical coordinated action between the integration team and component teams.
 
 The mechanism is a moderated mediation model. IFD gives members broader knowledge across functional domains, which can help component teams coordinate horizontally, but it can also reduce specialized task focus and thereby constrain aspirational behavior. Vertical coordinated action supplies top-down integration: when high, it strengthens the IFD-to-horizontal-coordination path and attenuates the negative IFD-to-aspirational-behavior path; when low, IFD's negative performance implications through reduced aspirational behavior become more salient.
+
+**Data & Measures**
+The analysis uses behavioral logs from the third and final simulation session for 236 fourteen-person multiteam systems. IFD is the proportion of members who acquired experience across different functional domains during the first two sessions. Horizontal coordination is the number of point-team missions based on support-team intelligence from preceding rounds and captured on the shared information map; aspirational behavior is the number of operations missions sent to the remote half of the environment in pursuit of high-value targets. Vertical coordinated action is the reverse-coded number of lower-level decisions modified, and performance is points gained from successfully engaging targets minus points lost through hostile attacks.
+
+The authors estimate hierarchical linear regressions at the multiteam-system level and bootstrap conditional indirect relationships at higher and lower levels of vertical coordinated action, controlling for prior performance. Because IFD was neither manipulated nor randomly assigned, the design supports associational rather than causal inference.
+
+**Key Findings**
+H1 was supported. The IFD-by-vertical-coordinated-action interaction positively predicted horizontal coordination (B = 1.84, p < .05); the indirect relationship through horizontal coordination was positive and significant when vertical coordinated action was higher (20.99; 95% bootstrap CI [3.90, 55.22]) but nonsignificant when it was lower (-6.55; 95% bootstrap CI [-34.49, 9.91]).
+
+H2 was supported. The interaction positively predicted aspirational behavior (B = 2.57, p < .05); the indirect relationship through aspirational behavior was negative and significant when vertical coordinated action was lower (-19.59; 95% bootstrap CI [-59.20, -1.25]) but nonsignificant when it was higher (10.68; 95% bootstrap CI [-3.24, 37.98]). Horizontal coordination and aspirational behavior each positively predicted performance (B = 7.50, p < .01; B = 5.90, p < .05).
 
 **Theoretical Contribution**
 The paper integrates micro-level organizational behavior and macro-level organization theory perspectives on multiteam systems. It shows that IFD is not simply beneficial or harmful; instead, its performance implications depend on whether vertical coordinated action helps component teams use broad functional knowledge while sustaining complex, specialized activities. The contribution is a cross-level account of how bottom-up component-team capacities and top-down integration-team action jointly shape multiteam system effectiveness.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Argyres 2016 Knowledge Inheritance, Vert
 text_path: "library/AMJ/vol-59-no-4/text/Argyres 2016 Knowledge Inheritance, Vertical Integration, and Entrant Survival in the Early U.S. Auto Industry.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["knowledge inheritance", "vertical integration", "employee spinoffs", "strategic positioning", "entrant survival", "early U.S. auto industry"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "transaction cost economics"
   methods_overview: "we estimated our three equations using a multistage"
   keywords_source: "knowledge inheritance, vertical integration"
+  hypotheses_source: "Hypothesis 2(a). The integration of a key activity"
+  measures_overview: "Log Price, which is the log of the"
+  findings_overview: "provides support for Hypothesis 2(a)."
 ---
 
 # Knowledge Inheritance, Vertical Integration, and Entrant Survival in the Early U.S. Auto Industry
@@ -51,6 +56,12 @@ A key finding in the literature on industry evolution and strategy is that knowl
 **Research Question**
 How does knowledge inherited from parent firms shape employee spinoffs' early vertical integration choices, strategic positioning, and survival in the early U.S. auto industry? The paper asks whether parent-firm integration of a key activity, engine production, makes spinoffs more likely to integrate that activity and whether this helps them establish defensible positions away from low-price competition.
 
+**Hypotheses / Propositions**
+H1(a): A spinoff whose parent integrates a key activity is more likely to integrate that activity than a non-spinoff firm.
+H1(b): A spinoff whose parent integrates a key activity is more likely to integrate that activity than a spinoff whose parent did not integrate it.
+H2(a): Integration of a key activity stimulated by the spinoff's knowledge inheritance contributes to establishing a defensible strategic position.
+H2(b): Strategic positioning made defensible by integration of a key activity stimulated by knowledge inheritance increases survival time.
+
 **Mechanism Process**
 - IV(s): Parent Engine In-House; Parent Engine Outsourced; transaction-cost proxies including Relative HP and No. of Large Engine Suppliers.
 - DV(s): Engine In-House, Log Price as strategic positioning, Log Survival Years, and Long Survivor.
@@ -59,11 +70,17 @@ How does knowledge inherited from parent firms shape employee spinoffs' early ve
 
 The mechanism is that parent firms' in-house production of a key value chain activity signals and transmits activity-specific knowledge to employee spinoffs. Spinoffs inheriting engine-production knowledge are more likely to vertically integrate engine production, and this integration supports differentiated, higher-price market positioning. Such defensible positioning is then associated with longer entrant survival.
 
+**Data & Measures**
+The analysis combined a historical database covering virtually every U.S. auto firm with Steven Klepper's spinoff data and Lester-Steele (1960) component data. Engine In-House indicated engine integration at entry; Parent Engine In-House and Parent Engine Outsourced captured parent sourcing; Relative HP and No. of Large Engine Suppliers proxied transaction costs. Log Price operationalized strategic positioning, while Log Survival Years and Long Survivor (five years or more, the top 25% of the sample) operationalized survival. The multistage design used probit, linear-probability and OLS, Tobit, and probit estimations with predicted values for endogenous regressors; Models 1–4 used 60 entrants and Model 5 used 56.
+
+**Key Findings**
+H1(a) and H1(b) were supported: Parent Engine In-House was positive and significant, inheriting spinoffs were 59% more likely than non-spinoffs to integrate engine production, and its coefficient differed significantly from Parent Engine Outsourced. H2(a) was supported: predicted vertical integration was positive and significant for Log Price, indicating positioning in higher-price segments. H2(b) was supported: predicted Log Price was positive and significant in the survival models, indicating that entrants choosing higher-price segments survived longer on average.
+
 **Theoretical Contribution**
 The paper links knowledge inheritance, vertical integration, and strategic positioning, which prior work often treated separately. It contributes to the literature on firm boundaries by showing that early boundary choices can reflect inherited capabilities, not only contemporaneous transaction costs. It also refines spinoff-performance explanations by identifying a mechanism through which lineage affects strategic choices and survival.
 
 **Practical Implication**
-For entrants in technologically progressive industries, inherited knowledge is most valuable when it concerns a value chain activity that becomes strategically central. Founders and investors should attend not only to whether a founding team comes from a strong incumbent, but to whether the inherited know-how maps onto activities that support defensible positioning. The findings also imply that early make-or-buy decisions can have long-run survival consequences.
+For entrants in technologically progressive industries, inherited knowledge is most valuable when it concerns a value chain activity that becomes strategically central. The findings also imply that early make-or-buy decisions can have long-run survival consequences.
 
 **Limitations**
 The empirical setting is historically specific: early U.S. automobile manufacturing during 1917-1931, with engine production as the key activity and price segment as the positioning proxy. The authors note that the data do not conclusively distinguish all types of de alio entrants and that right-censored acquisitions reduce the survival-estimation sample. They also state that the empirical context tests whether integration enables differentiation, not whether a similar mechanism supports cost leadership.

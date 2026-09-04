@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Ferris 2016 An Approach–Avoidance Fram
 text_path: "library/AMJ/vol-59-no-5/text/Ferris 2016 An Approach–Avoidance Framework of Workplace Aggression.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["workplace aggression", "approach–avoidance principles", "abusive supervision", "supervisor undermining", "workplace ostracism", "anger", "anxiety", "counterproductive workplace behaviors"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "is via approach–avoidance principles"
   methods_overview: "Our hypotheses were tested with SEM, using"
   keywords_source: "workplace aggression constructs"
+  hypotheses_source: "Hypothesis 5. Anger will mediate the indirect"
+  measures_overview: "ostracism with Ferris et al.’s (2008) measure."
+  findings_overview: "supervision was significantly related to anger (B 5 .56,"
 ---
 
 # An Approach–Avoidance Framework of Workplace Aggression
@@ -54,6 +59,16 @@ The number of constructs developed to assess workplace aggression has flourished
 **Research Question**
 The paper asks whether workplace aggression constructs that often appear empirically similar can be differentiated through an approach–avoidance framework. It examines whether abusive supervision, supervisor undermining, and workplace ostracism differentially elicit anger or anxiety and, through those emotions, different types of counterproductive workplace behavior.
 
+**Hypotheses / Propositions**
+H1: Abusive supervision will be positively related to anger at work.
+H2: Workplace ostracism will be positively related to anxiety at work.
+H3: Anger at work will be positively related to approach-oriented counterproductive workplace behaviors.
+H4: Anxiety at work will be positively related to avoidance-oriented counterproductive workplace behaviors.
+H5: Anger will mediate the indirect effect of abusive supervision on approach-oriented counterproductive workplace behaviors.
+H6: Anxiety will mediate the indirect effect of workplace ostracism on avoidance-oriented counterproductive workplace behaviors.
+H7: Supervisor undermining will be positively related to anger at work.
+H8: Anger will mediate the indirect effect of supervisor undermining on approach-oriented counterproductive workplace behaviors.
+
 **Mechanism Process**
 - IV(s): Abusive supervision and workplace ostracism in Study 1; supervisor undermining and workplace ostracism in Study 2.
 - DV(s): Approach-oriented counterproductive workplace behaviors and avoidance-oriented counterproductive workplace behaviors.
@@ -61,6 +76,12 @@ The paper asks whether workplace aggression constructs that often appear empiric
 - Moderators: Not reported in paper.
 
 The mechanism is that workplace aggression involving clear negative intent and responsibility, such as abusive supervision or supervisor undermining, elicits anger, an approach-oriented emotion, which then predicts approach-oriented counterproductive workplace behaviors. Workplace ostracism is theorized as more ambiguous about whether harm occurred and who is responsible, so it elicits anxiety, an avoidance-oriented emotion, which then predicts avoidance-oriented counterproductive workplace behaviors. The two studies test these differentiated indirect paths rather than treating workplace aggression constructs as interchangeable indicators of mistreatment.
+
+**Data & Measures**
+Study 1 used three online survey waves, approximately four months apart, from 257 employees in five companies in China. At wave 1, abusive supervision was measured with 13 items retained from a 15-item measure and workplace ostracism with a past-year five-point measure; at wave 2, anger was measured with 14 items and anxiety with 20 items over the prior four months; at wave 3, eight approach-oriented and four avoidance-oriented counterproductive workplace behavior items were measured on a seven-point frequency scale over the prior four months. Study 2 used three online survey waves, approximately two months apart, from 357 employees in six companies in China; it replaced abusive supervision with an 11-item supervisor-undermining measure, used supervisor-referenced ostracism, and changed the mediator and outcome time frames to two months. Both studies controlled for age, gender, tenure with the supervisor, position rank, and education level and tested partial-mediation structural equation models using maximum-likelihood estimation and 1,000-resample bias-corrected 99% confidence intervals.
+
+**Key Findings**
+Study 1 supported H1–H6: abusive supervision predicted anger (B = .56, p < .01), workplace ostracism predicted anxiety (B = .54, p < .01), anger predicted approach-oriented counterproductive workplace behavior (B = .17, p < .01), and anxiety predicted avoidance-oriented counterproductive workplace behavior (B = .37, p < .01). Anger partially mediated the abusive-supervision path (indirect B = .10, p < .01, 99% CI [.02, .22]), while anxiety fully mediated the ostracism path (indirect B = .20, p < .01, 99% CI [.04, .43]). Study 2 supported the corresponding predictions, including H7 and H8: supervisor undermining predicted anger (B = .34, p < .001), workplace ostracism predicted anxiety (B = .36, p < .001), anger predicted approach-oriented counterproductive workplace behavior (B = .40, p < .001), and anxiety predicted avoidance-oriented counterproductive workplace behavior (B = .61, p < .001). Anger partially mediated the supervisor-undermining path (indirect B = .13, p < .01, 99% CI [.05, .28]), while anxiety fully mediated the ostracism path (indirect B = .36, p < .001, 99% CI [.16, .55]); no other indirect effects were significant.
 
 **Theoretical Contribution**
 The paper contributes an approach–avoidance model of workplace aggression that explains when aggression constructs should have distinct nomological consequences. It extends workplace aggression research by linking specific forms of mistreatment to distinct emotions and action tendencies rather than relying only on negative affect or broad CWB categories. It also contributes to emotion and CWB research by showing that negative emotions with different approach–avoidance properties predict different behavioral responses.

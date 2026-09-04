@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Vincent 2016 Creative, Rare, Entitled, a
 text_path: "library/AMJ/vol-59-no-4/text/Vincent 2016 Creative, Rare, Entitled, and Dishonest How Commonality of Creativity in One’s Group Decreases an Individual’s Entitlement and Dishonesty.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["creative role identity", "psychological entitlement", "dishonesty", "unethical behavior", "rarity of creativity", "prevalence of creativity"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "role identity theory"
   methods_overview: "measurement of mediation and experimental causal chain approaches"
   keywords_source: "creative role identity causes entitlement and unethical"
+  hypotheses_source: "identities are more likely to engage in dishonest"
+  measures_overview: "a measure of a generalized sense of entitlement."
+  findings_overview: "reported higher psychological entitlement and engaged in more unethical behaviors."
 ---
 
 # Creative, Rare, Entitled, and Dishonest: How Commonality of Creativity in One’s Group Decreases an Individual’s Entitlement and Dishonesty
@@ -51,6 +56,13 @@ We examine when and why creative role identity causes entitlement and unethical 
 **Research Question**
 When and why does creative role identity lead individuals to feel entitled and engage in dishonest or unethical behavior? The paper asks whether this relationship depends on whether creativity is perceived as rare rather than common in the relevant group.
 
+**Hypotheses / Propositions**
+H1a: Individuals with salient creative identities will report greater psychological entitlement than individuals with salient non-creative identities.
+H1b: Individuals with salient creative identities are more likely to engage in dishonest behaviors than individuals with salient non-creative identities.
+H1c: Increased psychological entitlement mediates the relationship between creative identities and dishonesty.
+H2a: Perceiving creativity as rare rather than common moderates the effect of creative identities on dishonesty; the effect is positive when strong creative identity is paired with perceived rarity, but much weaker and nonsignificant when paired with perceived commonness.
+H2b: The indirect relationship between creative identity and unethical behavior through entitlement is moderated by perceived creativity prevalence, such that the indirect relationship is stronger when prevalence is low rather than high.
+
 **Mechanism Process**
 - IV(s): Creative identity or creative role identity, manipulated or measured across studies.
 - DV(s): Psychological entitlement, behavioral dishonesty or theft, deceptive message choice, and supervisor-rated unethical behavior.
@@ -58,6 +70,12 @@ When and why does creative role identity lead individuals to feel entitled and e
 - Moderators: Perceived rarity or prevalence of creativity in the relevant group; comparison identity conditions such as logical or practical identity.
 
 The mechanism is that creative identity can derive value from creativity being viewed as rare, special, and unique. When individuals see their creative identity as rare in their group, that perceived rarity increases psychological entitlement, which then increases willingness to lie, steal, or engage in unethical behaviors. When creativity is framed as common in the group, the entitlement pathway and the link between creative identity and dishonesty are reduced.
+
+**Data & Measures**
+Study 1 randomly assigned 139 students at a large university in the United States to creative- or logical-identity primes, then measured psychological entitlement with a nine-item scale and creative identity with an adapted scale. Study 2 randomly assigned 131 students in a 2 × 2 entitlement-by-identity design; theft was the excess money taken after a number-search task, and creative identity and psychological entitlement were measured afterward. Study 3 assigned 153 MBA students to rare-creativity, common-creativity, or control feedback after seven Remote Associates Task problems; the behavioral outcome was truthful versus deceptive message choice in a monetary deception game, with psychological entitlement and creative identity also measured. The pilot study had 104 MBA students rate nine attributes for rarity and value and make pairwise rarity choices. Study 4 assigned 202 MBA students in a two-part design, at least one week apart, to a 2 × 2 rarity-by-identity manipulation (rare/common × creative/practical); outcomes were number-search theft, perceived rarity, creative identity, and psychological entitlement. Study 5 used 83 employee-supervisor pairs recruited through StudyResponse: employees reported creative role identity, perceived creativity prevalence, and perceived organizational valuing of creativity, while supervisors rated 17 unethical behaviors; the moderated-regression evidence is correlational.
+
+**Key Findings**
+Study 1 supported H1a: the creative-identity condition reported greater psychological entitlement than the logical-identity condition (4.06 vs. 3.25, p < .001). In Study 2, identity and entitlement interacted for theft (p = .04): under high entitlement, creative-identity participants stole more than logical-identity participants ($1.61 vs. $0.92, p = .02), whereas under low entitlement the difference was nonsignificant ($0.26 vs. $0.29, p = .87), supporting the entitlement pathway. In Study 3, rare-creativity participants reported greater entitlement and chose the deceptive message more often (86%) than common-creativity (40%) or control participants (32%); entitlement had a significant indirect effect, supporting H2a and H2b. The pilot study found creativity was rated rarer and more valuable than each comparison attribute. In Study 4, rarity increased entitlement and theft for creative identity but not practical identity; the creative-rare condition also showed a significant indirect effect through entitlement. In Study 5, creative identity correlated positively with supervisor-rated unethical behavior (r = .31, p = .004), and its interaction with perceived rarity was significant (b = .41, p = .017): the slope was positive when creativity was perceived as rare (1.32, p < .001) but nonsignificant when perceived as common (.10, p = .76), supporting H2a in the field sample.
 
 **Theoretical Contribution**
 The paper extends creative role identity theory by showing that creative identity can have negative moral consequences, not only positive links to creative behavior. It distinguishes creative identity from creative ability: prior work emphasized cognitive flexibility and rationalization, whereas this study theorizes entitlement as the pathway from creative identity to dishonesty. It also contributes to identity theory by showing that altering a defining component of an identity, here the rarity of creativity, can change the identity's behavioral implications.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Bunderson 2016 Different Views of Hierar
 text_path: "library/AMJ/vol-59-no-4/text/Bunderson 2016 Different Views of Hierarchy and Why They Matter Hierarchy as Inequality or as Cascading Influence.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["hierarchy", "inequality", "cascading relations of dyadic influence", "acyclicity", "process conflict", "task complexity", "group performance", "member satisfaction"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "we build on the ethological and social network traditions"
   methods_overview: "a team member survey and"
   keywords_source: "hierarchy as cascading relations of dyadic influence"
+  hypotheses_source: "Hypothesis 1. The acyclicity of influence relations"
+  measures_overview: "using a dyadic rating approach. Specifically,"
+  findings_overview: "acyclicity was negatively related to process"
 ---
 
 # Different Views of Hierarchy and Why They Matter: Hierarchy as Inequality or as Cascading Influence
@@ -53,6 +58,20 @@ Hierarchy is a reality of group life, for humans and for most other group-living
 **Research Question**
 The paper asks whether the mixed findings on hierarchy in task groups reflect different conceptualizations of hierarchy rather than only contextual contingencies. It compares hierarchy as inequality in member influence, operationalized as centralization and steepness, with hierarchy as cascading dyadic influence relations, operationalized as acyclicity.
 
+**Hypotheses / Propositions**
+- H1: Acyclicity of influence relations will be negatively associated with process conflict.
+- H2a: Centralization of influence relations will be positively associated with process conflict.
+- H2b: Steepness of influence relations will be positively associated with process conflict.
+- H3: Task complexity will strengthen the negative relationship between acyclicity and process conflict.
+- H4a: Task complexity will strengthen the positive relationship between centralization and process conflict.
+- H4b: Task complexity will strengthen the positive relationship between steepness and process conflict.
+- H5: Acyclicity will have a positive indirect effect on group performance through process conflict.
+- H6a: Centralization will have a negative indirect effect on group performance through process conflict.
+- H6b: Steepness will have a negative indirect effect on group performance through process conflict.
+- H7: Acyclicity will have a positive indirect effect on member satisfaction through process conflict.
+- H8a: Centralization will have a negative indirect effect on member satisfaction through process conflict.
+- H8b: Steepness will have a negative indirect effect on member satisfaction through process conflict.
+
 **Mechanism Process**
 - IV(s): Acyclicity, centralization, and steepness of team influence relations.
 - DV(s): Group performance and member satisfaction.
@@ -61,11 +80,17 @@ The paper asks whether the mixed findings on hierarchy in task groups reflect di
 
 The mechanism is that acyclical influence relations clarify whose voice should carry weight when disagreements arise, reducing process conflict and improving team outcomes. By contrast, centralized or steep influence structures create inequality that can foster rivalry, jockeying, and conflict, especially when complex tasks produce more occasions for disagreement. Process conflict then transmits these hierarchy effects to group performance and member satisfaction.
 
+**Data & Measures**
+Data came from 457 respondents in 75 work teams across 56 organizations. Members reported dyadic influence, task complexity, process conflict, and job satisfaction; supervisors rated team performance. Acyclicity was calculated from dichotomized dyadic influence relations, centralization from degree centralization, and steepness as the within-team standard deviation of influence centrality. Task complexity used eight reverse-coded seven-point items, process conflict three seven-point items, team performance five supervisor-rated criteria, and job satisfaction four items. Regressions controlled for team size, reachable connectedness, and efficiency, and conditional indirect effects were tested with 1,000 bootstrap samples.
+
+**Key Findings**
+H1, H2a, and H2b were supported: acyclicity was negatively related to process conflict, whereas centralization and steepness were positively related. H3 was not supported for process conflict. H4a was supported: centralization predicted more process conflict only when task complexity was high. H4b received marginal support (interaction p = .07), although the simple slope for steepness was positive and significant only at high task complexity. H5 and H7 were supported: acyclicity had positive indirect effects on performance and satisfaction at all levels of task complexity, but these effects were not conditional on task complexity. H6a, H8a, and H8b were supported at average and high task complexity. H6b was not significant at 95% confidence but received cautious support at 90% confidence at average and high task complexity.
+
 **Theoretical Contribution**
 The study clarifies that hierarchy has been conceptualized in distinct ways and that those conceptualizations can have divergent implications for group process and performance. It challenges the dominant inequality view of hierarchy in organization and management research by showing that centralization and steepness can capture dysfunctions rather than benefits. It also advances hierarchy-as-acyclicity as a relational conceptualization that better captures how ordered influence can help task groups coordinate and resolve conflict.
 
 **Practical Implication**
-Managers should distinguish between clear chains of influence and unequal concentrations of influence or status. The findings imply that teams may benefit when influence relations are ordered enough to settle disagreements, but may suffer when influence is concentrated or sharply unequal, particularly under complex task conditions. Team design and leadership interventions should therefore focus on clarifying influence and deference relations without simply increasing inequality among members.
+The paper identifies an ideal relational structure in which influence relations are cascading while communication relations are dense.
 
 **Limitations**
 The study measured influence through member ratings rather than direct behavioral indicators of influence or deference. Its cross-sectional design means causal ordering among hierarchy, conflict, performance, and satisfaction remains theory-based rather than conclusively established. The authors also note that the study did not examine a broader set of mediators or outcomes, such as information sharing, innovation, turnover, or citizenship behavior.

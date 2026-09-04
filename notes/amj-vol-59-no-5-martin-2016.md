@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Martin 2016 Stories about Values and Val
 text_path: "library/AMJ/vol-59-no-5/text/Martin 2016 Stories about Values and Valuable Stories A Field Experiment of the Power of Narratives to Shape Newcomers’ Actions.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["narratives", "organizational newcomers", "organizational values", "social identity", "behavioral contagion", "helping behaviors", "deviance behaviors"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "social identity theories of behavioral contagion"
   methods_overview: "This study employed a field experiment"
   keywords_source: "This study draws on social identity theories of behavioral contagion"
+  hypotheses_source: "characters will be associated with less deviance"
+  measures_overview: "using five items (a 5.82) adapted from"
+  findings_overview: "Thus, Hypotheses 2a and b were supported."
 ---
 
 # Stories about Values and Valuable Stories: A Field Experiment of the Power of Narratives to Shape Newcomers’ Actions
@@ -50,13 +55,27 @@ This study draws on social identity theories of behavioral contagion and researc
 **Research Question**
 The paper asks how organizational narratives shape newcomers' enactment of organizational values. Specifically, it examines whether stories about high- versus low-level organizational characters, and values-upholding versus values-violating behavior, influence newcomers' helping and deviance behaviors.
 
+**Hypotheses / Propositions**
+- H1a: For values-upholding narratives, low-level characters will be associated with more helping behavior than high-level characters.
+- H1b: For values-violating narratives, low-level characters will be associated with less helping behavior than high-level characters.
+- H2a: For values-upholding narratives, low-level characters will be associated with less deviance behavior than high-level characters.
+- H2b: For values-violating narratives, low-level characters will be associated with more deviance behavior than high-level characters.
+
 **Mechanism Process**
 - IV(s): Character level in the narrative, distinguishing high-level organizational members from low-level organizational members; narrative type, distinguishing values-upholding from values-violating stories.
 - DV(s): Peer-rated helping behaviors and peer-rated deviance behaviors among organizational newcomers.
 - Mediators: Not reported in paper.
-- Moderators: Character level and narrative type are theorized and tested as interacting narrative features.
+- Moderators: Not reported in paper.
 
 The mechanism is that narratives convey normative information about organizational values through characters whose social distance from newcomers affects whether the story is interpreted as an in-group behavioral guide or as an out-group signal of injunctive norms. Low-level characters are expected to be socially closer to newcomers and to show what people like them do, while high-level characters are expected to be more socially distant and to signal formal values. The results only partly match the predicted interaction: helping behavior showed main effects rather than the hypothesized interaction, while deviance behavior showed the predicted interaction between character level and narrative type.
+
+**Data & Measures**
+The field experiment used one cohort of 632 newcomers at ITECH. Four groups containing 290 people were randomly assigned to the four narrative conditions, while 342 people initially served as controls; the outcome analyses used the 307 respondents with peer evaluations (condition counts: 42, 28, 26, 49, and 162). Character level (high versus low) and narrative type (values-upholding versus values-violating) were manipulated. Helping was aggregated from teammates' ratings on five items adapted from the Altruism dimension of an organizational citizenship behavior scale (1-5); deviance was aggregated from teammates' ratings on eight items from a 12-item deviance scale (1-7). No mediator measure was reported.
+
+**Key Findings**
+H1 was not supported: the character-level-by-narrative-type interaction for helping was not significant (F[1, 302] = .07, p = .79). Values-upholding stories about low-level characters nevertheless corresponded to more helping than values-upholding stories about high-level characters or the control, whereas values-violating stories about high-level characters corresponded to less helping than values-violating stories about low-level characters or the control.
+
+H2a and H2b were supported: the interaction for deviance was significant (F[1, 302] = 30.87, p < .01). Values-upholding stories about low-level characters corresponded to less deviance than values-upholding stories about high-level characters and the control; values-violating stories about low-level characters corresponded to more deviance than values-violating stories about high-level characters and the control. The post-hoc content analysis found that values-upholding stories about high-level characters contained more formal ITECH values, values-upholding stories about low-level characters contained more self-transcendent values, low-level-character stories contained more social and affect words, and values-violating stories about low-level characters contained more conservation values.
 
 **Theoretical Contribution**
 The paper integrates organizational narrative research with social identity theory and behavioral contagion to explain how stories can transmit values without direct observation of behavior. It contributes by showing that character level and story valence matter for whether narratives shape values-upholding or values-violating newcomer behavior. It also extends business and behavioral ethics research by treating stories as durable mechanisms for making values salient in organizational socialization.

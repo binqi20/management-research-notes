@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-08-31"
-version: "0.61.0"
+date-released: "2026-09-04"
+version: "0.62.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,31 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.61.0
+  a published rubric) gates every note into the library. Version 0.62.0
+  (2026-09-04) continues the v3 backfill with Academy of Management Journal
+  volume 59 issues 5 and 4 — 32 notes, all v2 augmentations — and repairs two
+  legacy fields in the already-v3 Luo (2017) note after the batch-28 workshop
+  calibration. A backfill adds no papers, so the record total remains 1,167;
+  the version-tier census shifts to 61 v1, 336 v2, and 770 v3 notes. All 33
+  touched notes passed a fresh full independent 9-field rubric-v2 audit; the
+  final state is 297 of 297 prose-field verdicts SUPPORTED, 0 PARTIAL, 0
+  UNSUPPORTED, and 0 CONTRADICTED. Round one returned 294 of 297 SUPPORTED and
+  3 PARTIAL. Source verification produced four scoped legacy repairs across
+  four batch notes: an invented practitioner audience, categorical treatment
+  of post hoc or marginal interactions, an inferred future-research agenda,
+  and manipulated factors mislabeled as moderators. All repaired notes passed
+  fresh blind full-note re-audits; Bunderson required a second repair round.
+  The two batch-28 calibration divergences in Luo's Practical Implication and
+  Future Research were adjudicated against raw text as scope drift, repaired
+  without changing provenance, and returned 9 of 9 SUPPORTED. Bibliographic
+  frontmatter and paper types are unchanged, and the BibTeX file regenerated
+  byte-identically. This batch ran end-to-end on gpt-5.6-sol for augmentation
+  and audit, the tenth such backfill batch. Provenance eras are batches 01–07
+  claude-opus-4-8, 08–15 claude-opus-5, 16–19 gpt-5.6-sol, 20–23
+  claude-opus-5, and 24–29 gpt-5.6-sol. Cross-family spot-audits scored 27/27
+  for batch 16, 27/27 for batch 24, and 25/27 for batch 28; the two batch-28
+  divergences were repaired in this release, and no spot-audit is scheduled
+  for batch 29's review. Earlier, version 0.61.0
   (2026-08-31) continues the v3 backfill with Academy of Management Journal
   volume 60 issue 1 and volume 59 issue 6 — 32 notes, all v2 augmentations. A
   backfill adds no papers, so the record total remains 1,167; the version-tier
@@ -748,7 +772,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.61.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.62.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Sun 2016 The Dark Side of Board Politica
 text_path: "library/AMJ/vol-59-no-5/text/Sun 2016 The Dark Side of Board Political Capital Enabling Blockholder Rent Appropriation.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["board political capital", "blockholder rent appropriation", "principal-principal agency", "resource dependence theory", "corporate political strategy", "China"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "resource dependence and agency theories"
   methods_overview: "Poisson regression model"
   keywords_source: "board political capital can further exacerbate"
+  hypotheses_source: "Hypothesis 1. Board political capital will increase"
+  measures_overview: "percentage of all directors on the board who had"
+  findings_overview: "ORECTA is positively and significantly associated"
 ---
 
 # The Dark Side of Board Political Capital: Enabling Blockholder Rent Appropriation
@@ -52,6 +57,12 @@ Resource dependence theorists argue that boards of directors with political capi
 **Research Question**
 The paper asks whether board political capital has a downside by enabling controlling blockholders to appropriate more firm wealth from minority shareholders. It also asks when this enabling effect is stronger or weaker across ownership-, industry-, and environment-level contingencies.
 
+**Hypotheses / Propositions**
+- H1: Board political capital will increase the severity of blockholder rent appropriation.
+- H2: This effect will be heightened when the controlling blockholder is a private entity rather than a government entity.
+- H3: This effect will be heightened in heavily regulated industries.
+- H4: This effect will be weakened in regions with more developed institutional environments.
+
 **Mechanism Process**
 - IV(s): Board political capital, measured as the percentage of all directors with political experience and, in robustness tests, the percentage of independent directors with political experience.
 - DV(s): Blockholder rent appropriation, proxied by other receivables over total assets (ORECTA).
@@ -59,6 +70,12 @@ The paper asks whether board political capital has a downside by enabling contro
 - Moderators: Controlling blockholder identity, industry regulation, and subnational institutional development.
 
 The mechanism is that political capital on the board can be used not only to secure resources for the firm but also to increase the bargaining power of controlling blockholders over minority shareholders. Politically connected boards can buffer blockholders from legal and regulatory oversight and can provide alternative financing channels, thereby reducing constraints that would otherwise discipline appropriation. The effect is expected to be stronger for private blockholders and regulated industries, and weaker in provinces with more developed market-supporting institutions.
+
+**Data & Measures**
+The unbalanced panel contains 1,046 listed manufacturing firms and 2,854 firm-year observations from 2008 to 2011. Financial and governance data came from three CSMAR databases; provincial data came from the National Bureau of Statistics and National Economic Research Institute (NERI). Board political capital was measured by Board PC Ratio, the percentage of all directors with political experience, and Outside Board PC Ratio, the percentage of independent directors with political experience. Blockholder rent appropriation was other receivables divided by total assets (ORECTA); moderators were Private, Regulated Industry, and the NERI index of marketization. Fixed-effects hierarchical regressions used lagged predictors and a Heckman two-stage correction; robustness analyses used Poisson regression for regulatory-sanction counts and examined debt financing and subsequent firm performance.
+
+**Key Findings**
+H1 was supported: Board PC Ratio was positively associated with ORECTA (b = 0.015, p < .05). H2 was supported (interaction b = 0.03, p < .05, and b = 0.04, p < .01). H3 received qualified support only (interaction b = 0.02, p < .10 in both models). H4 received strong support (interaction b = -0.01, p < .05, and b = -0.01, p < .01). Using Outside Board PC Ratio produced the same overall pattern, although H4 was significant only in the full model. Supplementary analyses associated board political capital with fewer regulatory sanctions and more debt financing; ORECTA predicted lower subsequent firm performance, while board political capital had no significant direct performance association.
 
 **Theoretical Contribution**
 The paper contributes to resource dependence theory by identifying a condition under which board cooptation can impose costs rather than simply provide resources for the whole firm. It integrates resource dependence and agency theory by asking "resource provision for whom" and showing how board capital can aggravate principal-principal agency conflicts. It also contributes to corporate political strategy research by specifying a mechanism through which political ties may become detrimental.

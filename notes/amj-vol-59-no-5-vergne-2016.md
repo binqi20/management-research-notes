@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Vergne 2016 How do Firms Adapt A Fuzzy-S
 text_path: "library/AMJ/vol-59-no-5/text/Vergne 2016 How do Firms Adapt A Fuzzy-Set Analysis of the Role of Cognition and Capabilities in U.S. Defense Firms’ Responses to 911.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-mixed"
 keywords: ["firm adaptation", "managerial attention", "asset reconfiguration", "dynamic capabilities", "fuzzy-set qualitative comparative analysis", "strategic non-adaptation", "U.S. defense firms", "9/11"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "cognition and capabilities literatures"
   methods_overview: "mixed methods (survey and fuzzy-set qualitative"
   keywords_source: "How do firms adapt?"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "We use a new measure of adaptation, based on a survey"
+  findings_overview: "capabilities nor superior cognition must be present for firms to adapt."
 ---
 
 # How do Firms Adapt? A Fuzzy-Set Analysis of the Role of Cognition and Capabilities in U.S. Defense Firms’ Responses to 9/11
@@ -52,6 +57,9 @@ How do firms adapt? In recent years, this old question has attracted new answers
 **Research Question**
 In an industry experiencing an environmental shift, how do managerial attention and asset reconfiguration contribute to firm adaptation or lack of adaptation? The paper asks whether cognition and dynamic capabilities explain adaptation as competing, complementary, necessary, or substitutable conditions.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / causal conditions: Defense dependence, attention timing, attention intensity, reconfiguration scope, and reconfiguration intensity.
 - Outcome: Firm adaptation to post-9/11 industry conditions, calibrated from expert assessments.
@@ -60,6 +68,12 @@ In an industry experiencing an environmental shift, how do managerial attention 
 - Boundary conditions: The U.S. defense sector is a research- and technology-intensive, business-to-government setting shaped by Pentagon demand and the post-9/11 environmental shift.
 
 The process argument is conjunctural rather than linear: attention and reconfiguration matter in different combinations, and neither superior cognition nor dynamic capabilities alone is required for adaptation. Anticipative adapters use early, intense attention with relatively lower-intensity reconfiguration; responsive adapters reconfigure substantially after later attention; opportunistic adapters leverage existing assets; and decisive adapters respond with broader and more intense post-shift reconfiguration. Strategic non-adaptation is possible when managers may be aware of change but judge adaptation as a low priority given the firm's revenue profile.
+
+**Data & Measures**
+Data come from 17 publicly traded defense firms based in the United States and observed from 1998 to 2005. The corpus includes 137 letters to shareholders, annual reports, executive communications, industry media, 17 preliminary interviews, acquisition and divestment records, and an online adaptation survey completed by five experts. Firm adaptation was rated for 2002 to 2005 on a 1-to-7 scale and calibrated around the crossover point of 4. Defense dependence is the mean share of revenue from defense in 1998 to 2001. Managerial attention timing and intensity derive from coded letter fragments; reconfiguration scope is the post- versus pre-9/11 change in the proportion of business units affected by acquisitions and divestitures, and reconfiguration intensity is the change in the balance of major versus minor events, using $500 million as the threshold. Fuzzy-set qualitative comparative analysis assessed necessary and sufficient conditions and configurations.
+
+**Key Findings**
+No single causal condition was necessary for adaptation. Four equifinal configurations were sufficient: anticipative, responsive, opportunistic, and decisive. Anticipative adapters combined early, intense attention with lower reconfiguration intensity; responsive adapters increased reconfiguration scope after delayed attention; opportunistic adapters redeployed existing assets; and decisive adapters increased both scope and intensity after delayed attention. A haphazard non-adaptation configuration combined low defense dependence, delayed low-intensity attention, higher-intensity reconfiguration, and no increase in scope. Overall solution consistency and coverage were .97 and .74 for adaptation, and .99 and .61 for non-adaptation. Thus, neither superior cognition nor dynamic capabilities was required for adaptation, and adaptation and non-adaptation were asymmetric.
 
 **Theoretical Contribution**
 The paper integrates cognition and capabilities perspectives by comparing their explanatory power in the same empirical setting. It shows that adaptation can occur without superior cognition and without intensified dynamic capabilities, recasting these literatures as sometimes substitutable and sometimes complementary rather than universally necessary. It also contributes a taxonomy of adaptation and non-adaptation paths and argues that adaptation and non-adaptation are asymmetric outcomes.

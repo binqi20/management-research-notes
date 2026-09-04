@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Zhang 2016 The Impact of CEO Succession 
 text_path: "library/AMJ/vol-59-no-5/text/Zhang 2016 The Impact of CEO Succession with Gender Change on Firm Performance and Successor Early Departure Evidence from China’s Publicly Listed Companies in 1997–2010.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["Female corporate leadership", "CEO succession with gender change", "post-succession firm performance", "successor early departure", "organizational attitudes toward female leadership"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Drawing upon social identity theory"
   methods_overview: "used the mlogit command in STATA to run"
   keywords_source: "CEO succession with gender change"
+  hypotheses_source: "Hypothesis 2a. The impact of male-to-female"
+  measures_overview: "average of a firm’s return on assets (ROA) in the two"
+  findings_overview: "We also find that the negative (positive) impact of male-tofemale succession on firm performance (the likelihood of successor early departure)"
 ---
 
 # The Impact of CEO Succession with Gender Change on Firm Performance and Successor Early Departure: Evidence from China’s Publicly Listed Companies in 1997–2010
@@ -51,6 +56,16 @@ Female corporate leadership has drawn increasing attention from academia and pra
 **Research Question**
 How does CEO succession with gender change affect post-succession firm performance and the likelihood of successor early departure? The paper also asks whether other female leaders in the upper echelon and the successor's inside origin weaken the negative consequences of male-to-female succession.
 
+**Hypotheses / Propositions**
+- H1a: Compared with same-gender succession, CEO succession with gender change will negatively affect post-succession firm performance.
+- H1b: Compared with same-gender succession, CEO succession with gender change will increase the likelihood of successor early departure.
+- H2a: A higher proportion of female directors will weaken the impact of male-to-female succession on post-succession firm performance.
+- H2b: A higher proportion of female directors will weaken the impact of male-to-female succession on successor early departure.
+- H3a: A higher proportion of females in the top management team will weaken the impact of male-to-female succession on post-succession firm performance.
+- H3b: A higher proportion of females in the top management team will weaken the impact of male-to-female succession on successor early departure.
+- H4a: The impact of male-to-female succession on post-succession firm performance will be weaker for inside than outside succession.
+- H4b: The impact of male-to-female succession on successor early departure will be weaker for inside than outside succession.
+
 **Mechanism Process**
 - IV(s): Male-to-female CEO succession, female-to-male CEO succession, and same-gender CEO succession as the comparison category.
 - DV(s): Post-succession firm performance measured by subsequent ROA, successor early non-routine departure, and successor early routine departure.
@@ -58,6 +73,16 @@ How does CEO succession with gender change affect post-succession firm performan
 - Moderators: Proportion or presence of other female directors, proportion or presence of other female top managers, and inside versus outside successor origin.
 
 The mechanism is that CEO succession is already disruptive, and a change in the CEO's gender may add disruption by changing gender-linked leadership styles and by making the successor more salient as an out-group member relative to the predecessor's established leadership context. This should harm post-succession performance and increase early departure risk. For male-to-female succession, the presence of other female leaders and inside origin are expected to reduce the female successor's gender-based status liability and make the transition less disruptive.
+
+**Data & Measures**
+The study analyzes 3,320 CEO successions in publicly listed firms in China from 1997 to 2010. Firm financials come from WIND; CEO changes and executive characteristics come from CSMAR. Post-succession performance is the average ROA across the two half-year periods after the half-year in which succession occurred. Early departure means that the successor no longer held the CEO position at the end of the second subsequent half-year; routine and non-routine departures are separate binary categories.
+
+Male-to-female and female-to-male succession are dummy variables compared with same-gender succession. The moderators are the proportions of female directors and female top managers, each excluding a female CEO successor, and an inside-successor dummy. The design is associational; the paper uses Heckman two-stage selection corrections, GLS models for performance, and multinomial-logistic models for departure with observations clustered at the firm level, implemented in STATA.
+
+**Key Findings**
+H1a was partially supported: relative to same-gender succession, male-to-female succession was associated with 1.57 percentage points lower ROA (b = -1.57, p < .01), whereas female-to-male succession was not significant. H1b was supported for early non-routine departure: male-to-female succession increased the odds by 176% and female-to-male succession by 129%; neither main predictor was significant for early routine departure.
+
+H2a and H3a were supported: higher proportions of female directors and female top managers weakened the negative male-to-female performance effect (interaction b = 0.10, p < .001, and b = 0.07, p < .01, respectively). H4a was supported: outside male-to-female succession was associated with 2.52 percentage points lower ROA than same-gender succession, whereas the inside comparison was not significant. H2b, H3b, and H4b were supported for early non-routine departure: without other female directors or female top managers, male-to-female succession increased the odds by 2,436% and 2,614%, respectively; outside succession increased the odds by 798%, while the corresponding gaps were absent with other female leaders or an inside successor. The three moderating hypotheses were also supported for early routine departure, despite nonsignificant main succession predictors.
 
 **Theoretical Contribution**
 The paper contributes to CEO succession research by theorizing and testing a gender-change effect rather than treating successor gender alone as the focal explanatory variable. It also extends female leadership research by showing how gender inequality in CEO appointments may persist partly because firms anticipate disruption from gender change at the top. The study adds successor early departure as an outcome in CEO succession research and ties it to social identity and social categorization arguments.

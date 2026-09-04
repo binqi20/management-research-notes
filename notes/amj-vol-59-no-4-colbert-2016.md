@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-4/pdfs/Colbert 2016 Flourishing via Workplace R
 text_path: "library/AMJ/vol-59-no-4/text/Colbert 2016 Flourishing via Workplace Relationships Moving Beyond Instrumental Support.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-mixed"
 keywords: ["positive work relationships", "relationship functions", "employee flourishing", "meaningful work", "positive emotions at work", "life satisfaction", "Relationship Functions Inventory"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "social exchange lens"
   methods_overview: "In a series of qualitative and quantitative studies"
   keywords_source: "employee flourishing"
+  hypotheses_source: "Hypothesis 1a. The six relationship functions"
+  measures_overview: "with the 18-item RFI, using the same instructions"
+  findings_overview: "task assistance was most strongly associated with job satisfaction"
 ---
 
 # Flourishing via Workplace Relationships: Moving Beyond Instrumental Support
@@ -52,6 +57,13 @@ In a series of qualitative and quantitative studies, we developed a model of the
 **Research Question**
 How do positive workplace relationships support employee flourishing beyond instrumental support? The paper asks what functions good work relationships serve and whether distinct functions predict distinct flourishing-consistent outcomes.
 
+**Hypotheses / Propositions**
+- Study 1, Phase 3, H1a: The six relationship functions are positively associated with job satisfaction.
+- Study 1, Phase 3, H1b: The six relationship functions explain unique incremental variance in job satisfaction after controlling for coworker satisfaction.
+- Study 2, H2: Giving to others is positively related to meaningful work.
+- Study 2, H3a–b: Friendship and giving to others are each positively related to positive emotions at work.
+- Study 2, H4a–c: Personal growth, friendship, and giving to others are each positively related to life satisfaction.
+
 **Mechanism Process**
 - Key constructs / functions: Task assistance, career advancement, emotional support, friendship, personal growth, and giving to others.
 - Process / scale development: Critical incident descriptions were coded into six functions, converted into the Relationship Functions Inventory, and validated through item-assignment, exploratory factor analysis, and confirmatory factor analysis.
@@ -59,6 +71,17 @@ How do positive workplace relationships support employee flourishing beyond inst
 - Boundary / design features: The Study 2 evidence is cross-sectional and uses self and partner reports for several outcomes, with positive affectivity controlled in regressions.
 
 The process argument is that positive work relationships provide multiple resources and identity-relevant experiences, not only task help or career advice. Giving to others is theorized to make work more meaningful by reinforcing caring identities and prosocial impact; friendship is expected to support positive emotions through closeness and enjoyable interaction; and personal growth can extend beyond the work role into broader life satisfaction. The empirical tests show differential associations rather than one uniform relationship-quality effect.
+
+**Data & Measures**
+- Study 1, Phase 1: An online survey collected critical incidents from 287 participants; 283 dyadic stories remained for coding. Two authors developed and refined a six-function codebook from two sets of 20 stories, and trained undergraduate psychology students rated each function on a 0–3 scale. Phase 2 began with 55 items; seven graduate psychology students assessed assignment, clarity, fit, and overlap, yielding an 18-item RFI with three items per function.
+- Study 1, Phase 3: The sample was 177 part-time and full-time MBA students at two universities. Relationship functions used the 18-item RFI on a five-point scale; job satisfaction used five items on the same scale, and coworker satisfaction used 18 items on a three-point scale. Analyses used exploratory factor analysis and hierarchical regression. Additional measurement-invariance tests used samples of 252 nonprofit employees and 76 employed students, yielding target-specific groups of 137 respondents rating a coworker and 148 rating a supervisor.
+- Study 2: The Study Response Project supplied working adults and their partners. Of 267 first-survey respondents, 252 completed the second survey and 227 partner surveys were returned, producing 210 matched pairs; the reported analyses used the 151 pairs who passed all instructed-response items. The first focal survey measured the six functions with the 18-item RFI, positive affectivity, and demographics; partners responded about three weeks later, and the second focal survey followed approximately one month after the first. Job satisfaction used five items, meaningful work three items, positive emotions at work nine mood terms, life satisfaction five items, and positive affectivity ten items. Job satisfaction, meaningful work, and life satisfaction averaged self and partner ratings; positive emotions used self-reports. Analyses used confirmatory factor analysis, regressions controlling positive affectivity, and relative-weights analysis.
+
+**Key Findings**
+- Study 1, Phase 1 identified six functions: task assistance, career advancement, emotional support, friendship, personal growth, and giving to others. Phase 3 supported a six-factor RFI: all items loaded above .60 with no cross-loading above .20.
+- Study 1, Phase 3 gave mixed component-level support for H1a: task assistance (r = .31), career advancement (r = .35), personal growth (r = .26), and giving to others (r = .39) correlated significantly with job satisfaction, while emotional support and friendship did not, although the authors summarized H1a as supported. H1b was supported: the six functions explained 18% incremental variance after coworker satisfaction; when considered together, only giving to others and career advancement were significant.
+- Study 2 supported H2: giving to others was the only significant relationship-function predictor of meaningful work (β = .34). H3 was partially supported: friendship predicted positive emotions at work (β = .21), but giving to others did not. H4 was partially supported: personal growth predicted life satisfaction (β = .26), but friendship and giving to others did not. Task assistance was the only significant relationship-function predictor of job satisfaction (β = .31).
+- Study 2 relative weights showed that, among the six functions, task assistance contributed most to job satisfaction (32%), giving to others to meaningful work (28%), friendship to positive emotions at work (12%), and personal growth to life satisfaction (22%).
 
 **Theoretical Contribution**
 The paper expands relationship theory by developing a six-function taxonomy of positive workplace relationships that includes personal growth, friendship, and giving to others alongside task assistance, career advancement, and emotional support. It contributes precision by showing that different functions align with different flourishing outcomes rather than treating relationship quality as a single broad predictor. It also introduces and validates the Relationship Functions Inventory as a measurement tool for future research.

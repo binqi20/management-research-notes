@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-5/pdfs/Plummer 2016 Better Together Signaling I
 text_path: "library/AMJ/vol-59-no-5/text/Plummer 2016 Better Together Signaling Interactions in New Venture Pursuit of Initial External Capital.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-5.6-sol"
+augmented_at: "2026-09-04"
 
 paper_type: "empirical-quantitative"
 keywords: ["initial external capital", "new ventures", "third-party affiliations", "venture development organizations", "signaling theory", "sensemaking", "managerial experience", "product introduction", "commercial property"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Signaling theory describes how signalers"
   methods_overview: "we use a logit model to test the hypotheses"
   keywords_source: "initial external capital"
+  hypotheses_source: "positively interacts with VDO affiliation."
+  measures_overview: "variable, Capital Received, which is equal to 1 if"
+  findings_overview: "commercial property increases the probability of investment by about 15 percent."
 ---
 
 # Better Together? Signaling Interactions in New Venture Pursuit of Initial External Capital
@@ -52,6 +57,11 @@ After new ventures have exhausted the limited financial resources of founders, f
 **Research Question**
 The paper asks how third-party affiliation signals interact with other startup signals during the pursuit of initial external capital. Specifically, it examines whether affiliation with a venture development organization helps potential investors interpret otherwise ambiguous signals: founder managerial experience, product introduction, and operation from commercial property.
 
+**Hypotheses / Propositions**
+- H1: Founder managerial experience increases the probability that a new venture receives external capital only when the venture also has a VDO affiliation.
+- H2: Having at least one product introduced to the market increases the probability that a new venture receives external capital only when the venture also has a VDO affiliation.
+- H3: Operating from commercial property increases the probability that a new venture receives external capital only when the venture also has a VDO affiliation.
+
 **Mechanism Process**
 - IV(s): VDO affiliation, founder managerial experience, product introduction, and commercial property.
 - DV(s): Receipt of initial external equity capital.
@@ -59,6 +69,12 @@ The paper asks how third-party affiliation signals interact with other startup s
 - Moderators: VDO affiliation moderates the relationship between each pedestrian signal and the likelihood of receiving external capital.
 
 The mechanism is that early stage financing is noisy, uncertain, and ambiguous, so ordinary startup characteristics and actions may not be noticed or may invite multiple interpretations. VDO affiliation serves as a third-party signal that endorses the venture and provides substantive benefits. Through investor sensemaking, this affiliation helps investors interpret managerial experience, product introduction, and commercial property as positive signals of venture quality, viability, and commitment.
+
+**Data & Measures**
+The study analyzes 986 nascent high-technology start-ups initiated from 1995 to 2010 in Oklahoma; 142 received external capital. The core data came from a VDO database, supplemented by annual surveys and public records. Capital Received is dummy-coded 1 when a venture secured equity investment and 0 otherwise. VDO Affiliation is dummy-coded 1 when the venture paid a VDO client fee. Managerial Experience counts the other Oklahoma businesses the founders owned or principally managed, based on matches to the Oklahoma file of the National Establishment Time Series (NETS). Product Introduction is dummy-coded 1 for firms with products on the market. Commercial Property is dummy-coded 1 for firms in commercial or non-residential areas, based on matched public real estate records. The authors estimate logit models with county-clustered robust standard errors and interpret average marginal effects; bivariate probit models check selection and endogeneity.
+
+**Key Findings**
+VDO affiliation had an average marginal effect of .25, described as increasing the probability of receiving external capital by 25 percent. H1 was supported in Model 3: the managerial-experience interaction was positive (average marginal effect = .04, p < .05), and the difference between high and low experience was 5.4 percent without VDO affiliation versus nearly 44 percent with it; in the simultaneous Model 6, this interaction was only marginal (average marginal effect = .03, p < .10). H2 was supported: product introduction had less than a 1 percent effect without VDO affiliation versus nearly 27 percent with it (interaction average marginal effect = .27 in Model 4 and .26 in Model 6, both p < .01). H3 was supported: commercial property increased the probability by a little more than 1 percent without VDO affiliation versus about 15 percent with it (interaction average marginal effect = .14 in Model 5 and .13 in Model 6, both p < .01).
 
 **Theoretical Contribution**
 The paper extends signaling theory by showing that signals in early stage financing are not merely additive or independent. It argues that third-party affiliations can activate weaker signals that would otherwise remain ambiguous or unnoticed. It also brings sensemaking into entrepreneurial signaling theory to explain how receivers interpret bundles of signals under high information asymmetry and noise, shifting attention from IPO-stage signaling to the earlier milestone of securing any external funding.
