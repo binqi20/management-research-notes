@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-2/pdfs/Wang 2016 Corporate Social Responsibilit
 text_path: "library/AMJ/vol-59-no-2/text/Wang 2016 Corporate Social Responsibility An Overview and New Research Directions.txt"
 ingested_at: "2026-07-04"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "editorial"
 keywords: ["corporate social responsibility", "CSR research", "stakeholder claims", "institutional environments", "multinational enterprises", "employee engagement", "organizational purpose"]
@@ -54,6 +56,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how CSR research in AMJ has evolved and what new research directions can better capture the complexity of corporate social responsibility. It aims to move attention from whether firms should engage in CSR toward how firms conceptualize, organize, implement, and evaluate their societal obligations across stakeholders and institutional contexts.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial purpose: The authors introduce a thematic issue on CSR and position its seven studies as exemplars of broader shifts in CSR scholarship.
 - Literature overview: They classify AMJ CSR articles from 1958 through 2015 by antecedent, outcome, and process focus, and by shifts in outcomes, CSR dimensions, and country settings.
@@ -62,6 +67,12 @@ The editorial asks how CSR research in AMJ has evolved and what new research dir
 - Practical problem: Managers face difficulties measuring CSR impact, balancing stakeholder claims, allocating scarce resources, and adapting CSR across national institutional environments.
 
 The process is agenda-setting rather than hypothesis-testing. Wang and colleagues synthesize prior AMJ CSR research and the thematic issue to argue that CSR scholarship should study the organization and implementation of CSR, not only its antecedents or financial consequences. Their central logic is that CSR operates across firms, stakeholders, communities, institutions, multinational structures, and employees, so future research needs multi-level accounts of tradeoffs, motives, and context.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes by organizing AMJ's CSR literature into historical research trends and by reframing CSR as a multi-level phenomenon involving stakeholder claims, institutional variation, organizational purpose, and individual engagement. It pushes CSR scholarship beyond aggregate CSR-performance questions toward richer theorizing about processes, mechanisms, interdependencies, and boundary conditions. It also links the thematic issue's articles to broader opportunities for theory building in stakeholder, institutional, hybrid-organization, and employee-level CSR research.

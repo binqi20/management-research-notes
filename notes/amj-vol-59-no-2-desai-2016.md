@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-59-no-2/pdfs/Desai 2016 Under the Radar Regulatory Co
 text_path: "library/AMJ/vol-59-no-2/text/Desai 2016 Under the Radar Regulatory Collaborations and their Selective Use to Facilitate Organizational Compliance.txt"
 ingested_at: "2026-07-04"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-quantitative"
 keywords: ["regulatory mandates", "regulatory collaborations", "organizational compliance", "organizational search and learning", "organizational visibility"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "theories regarding how organizations search for and learn from information under uncertainty"
   methods_overview: "I used feasible generalized least squares regression"
   keywords_source: "organizational search and learning"
+  hypotheses_source: "Hypothesis 3. Social visibility increases the likelihood of engaging in regulatory collaboration."
+  measures_overview: "accident costs per mile"
+  findings_overview: "more negative as conference participation increases."
 ---
 
 # Under the Radar: Regulatory Collaborations and their Selective Use to Facilitate Organizational Compliance
@@ -50,6 +55,13 @@ Why do organizations vary in complying with regulatory mandates? While some may 
 **Research Question**
 The paper asks why organizations vary in complying with regulatory mandates when managers may intend to comply but face uncertainty about what to change or how to change it. It specifically examines whether organizations use voluntary collaborations with regulators as a learning tool after enforcement actions, and which organizations select into or avoid those collaborations.
 
+**Hypotheses / Propositions**
+- H1a: Regulatory collaboration negatively moderates the relationship between enforcement actions and the organization's subsequent rate of performance problems.
+- H1b: Regulatory collaboration positively moderates the relationship between enforcement actions and the organization's subsequent compliance efforts.
+- H2: Regulatory visibility increases the likelihood of engaging in regulatory collaboration.
+- H3: Social visibility increases the likelihood of engaging in regulatory collaboration.
+- H4: Political engagement increases the likelihood of engaging in regulatory collaboration.
+
 **Mechanism Process**
 - IV(s): Regulatory enforcement penalties; regulatory visibility through inspections; social visibility through high consequence area mileage; political engagement through lobbying expenses.
 - DV(s): Accident rate, pipeline assessments, and regulatory conference participation.
@@ -58,11 +70,28 @@ The paper asks why organizations vary in complying with regulatory mandates when
 
 The mechanism is a reciprocal search-and-learning process under regulatory uncertainty. Regulatory collaborations reduce information asymmetry by giving organizations richer knowledge about mandates and regulators better visibility into organizational practices, which should increase compliance investments and reduce performance problems after enforcement. However, firms with less visible practices may avoid these collaborations because sharing private information with regulators could raise future enforcement risk.
 
+**Data & Measures**
+The observational panel covers U.S. natural gas-transmission pipeline operators in existence during 2010–2013, with 2010 observations used to construct initial lags. Tables 2 and 3 report 2,961 operator–year observations. The author reviewed conference agendas, meeting notes, and related materials from the PHMSA meeting website; 31 meetings occurred during 2010–2013.
+
+- Performance problems: accident rate is total annual damage costs from accidents involving the operator's pipelines divided by pipeline network miles; this ratio is logged.
+- Compliance efforts: pipeline assessments are the miles of pipeline segments assessed for corrosion or other defects during the year.
+- Enforcement actions: monetary fines levied against the operator during the year, measured in thousands of dollars.
+- Regulatory collaboration: the annual count of conferences in which an operator participated materially, such as by presenting, hosting a session, or facilitating a formal discussion, moderates enforcement penalties in H1a and H1b. For H2–H4, the outcome is a binary indicator of any such material conference participation.
+- Regulatory visibility: the number of on-site regulatory inspections during the year. Social visibility: the share of system mileage crossing high consequence areas (HCAs). Political engagement: lobbying expenditures in millions of dollars.
+
+Control and predictor variables were lagged one period, and all models included year effects. The study used feasible generalized least squares for accident rates, random-effects Tobit for assessment mileage, and random-effects logistic regression for binary conference participation. These are associational panel analyses; the lags were intended to reduce possible reverse causality.
+
+**Key Findings**
+- H1a supported: the enforcement penalties × regulatory conferences interaction is negative for accident rates (Table 2, Model 3: b = −0.005, SE = 0.002, p < .05). The relationship between enforcement penalties and subsequent accident rates becomes more negative as conference participation increases.
+- H1b supported: the same interaction is positive for pipeline assessments (Table 2, Model 6: b = 0.403, SE = 0.062, p < .001), indicating a more positive relationship between enforcement penalties and subsequent compliance investments at higher conference participation.
+- H2 and H3 supported in the full conference-participation model: regulatory inspections (b = 0.161, SE = 0.056, p < .01) and the HCA mileage ratio (b = 1.953, SE = 0.707, p < .01) are positively associated with participation (Table 3, Model 5).
+- H4 not supported in the full model: lobbying expenditures have a positive but nonsignificant coefficient (Table 3, Model 5: b = 0.195, SE = 0.121).
+
 **Theoretical Contribution**
 The paper integrates organizational search and learning theory with the literature on regulatory compliance, showing that compliance can depend on whether organizations search for information through regulators after enforcement pressure. It also contributes to organizational learning theory by distinguishing reciprocal learning from more familiar unidirectional search, because collaboration exposes both regulators and firms to new private information. The study identifies a selection effect: firms that may need to learn the most may avoid the learning channel because of disclosure risk.
 
 **Practical Implication**
-For regulators, the findings imply that voluntary knowledge-sharing forums can improve compliance after enforcement actions, but may disproportionately attract already visible firms. Regulatory agencies may need additional strategies to reach less visible or more opaque operators that avoid collaboration despite potentially greater compliance needs.
+The findings link regulator-hosted industry collaboration with subsequent compliance improvement, while suggesting that less visible or engaged operators may avoid this learning channel and forgo its benefits.
 
 **Limitations**
 The paper notes that regulatory collaboration is a relatively new construct and that the study cannot directly observe managers' motives for participating in conferences. It also cannot directly observe the specific content, quality, or richness of knowledge exchanges during those conferences. The empirical window is short, and the natural gas-transmission setting has fixed infrastructure and technological features that may limit direct generalization.

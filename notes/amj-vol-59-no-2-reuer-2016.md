@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-2/pdfs/Reuer 2016 Mechanisms of Hybrid Governan
 text_path: "library/AMJ/vol-59-no-2/text/Reuer 2016 Mechanisms of Hybrid Governance Administrative Committees in Non-Equity Alliances.txt"
 ingested_at: "2026-07-04"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-quantitative"
 keywords: ["hybrid governance", "administrative committees", "steering committees", "non-equity alliances", "coordinated adaptation", "technological uncertainty", "interdependence", "technology overlap"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Transaction cost theory identifies the uncertainty"
   methods_overview: "we specify probit models to test"
   keywords_source: "governance of hybrid organizational forms"
+  hypotheses_source: "a non-equity alliance is positively related to the"
+  measures_overview: "patent assigned to a firm is represented as a vector,"
+  findings_overview: "Technological Uncertainty                                             7.365***                                              7.593***"
 ---
 
 # Mechanisms of Hybrid Governance: Administrative Committees in Non-Equity Alliances
@@ -51,6 +56,11 @@ Recent research on the governance of hybrid organizational forms has investigate
 **Research Question**
 The paper asks how frequently steering committees appear in contracts for non-equity alliances and how alliance transactional attributes affect their inclusion. It focuses on whether technological uncertainty, partner interdependence, and technology overlap explain when partners delegate authority to an administrative committee.
 
+**Hypotheses / Propositions**
+- H1: The likelihood that partners establish an administrative committee within a non-equity alliance is positively related to technological uncertainty.
+- H2: The likelihood that partners establish an administrative committee within a non-equity alliance is positively related to the degree of interdependence between partners.
+- H3: The likelihood that partners establish an administrative committee within a non-equity alliance is positively related to partners' technology overlap.
+
 **Mechanism Process**
 - IV(s): Technological uncertainty, reciprocal and sequential interdependence between partners, and partners' technology overlap.
 - DV(s): Whether the non-equity alliance contract establishes a steering committee.
@@ -59,11 +69,17 @@ The paper asks how frequently steering committees appear in contracts for non-eq
 
 The mechanism is that non-equity alliances face adaptive limits because contracts cannot fully anticipate future contingencies and lack the administrative fiat of hierarchies. Steering committees create a dedicated interface for information processing, joint decision making, coordination, and dispute prevention. Partners are therefore more likely to contract for such committees when technological uncertainty increases sequential adaptation needs, when interdependence raises coordination costs, and when technology overlap increases concerns about managing know-how access and leakage.
 
+**Data & Measures**
+The archival study covers 524 non-equity biopharmaceutical alliances formed during 1990–2010, involving 525 unique firms (305 R&D firms and 220 client firms). Both partners had to have patented at least once with the USPTO during the sampling period. Alliance and contract data from Thomson Reuters’ Recap were combined with SDC alliance histories and patent records. The dependent variable equals 1 when the alliance contract establishes a steering committee and 0 otherwise. Technological uncertainty is the reciprocal of therapeutic-category clinical approval success rates from DiMasi et al. (2010). Interdependence is classified from alliance deal types: reciprocal for shared upstream R&D activities, sequential when partners perform designated activities across functions, and pooled for licensing, marketing, promotion, and distribution agreements. Reciprocal and sequential indicators are compared with pooled interdependence; alliances spanning multiple deal types receive the highest level of interdependence. Technology overlap uses the Jaffe (1986) angular measure based on the distribution of each partner's pre-alliance patents across three-digit USPTO patent classes, ranging from 0 to 1. Probit models include firm and alliance controls and phase, therapeutic-area, technology-area, and year fixed effects, with robust standard errors clustered on both partners. These observational models estimate conditional associations rather than establish causal effects.
+
+**Key Findings**
+Steering committees appear in 33% of the sampled agreements. Table 2's full model supports H1: technological uncertainty is positively associated with committee establishment (b = 7.593, p < .001). H2 is supported: reciprocal interdependence is positive (b = 0.830, p < .001), while sequential interdependence is positive but only marginally significant (b = 0.451, p < .10), relative to pooled interdependence. The reported comparison indicates a larger coefficient for reciprocal than sequential interdependence (p < .01). H3 is supported: technology overlap is positively associated with committee establishment (b = 0.527, p < .05). In the supplementary bivariate probit analysis, technological uncertainty is positively associated with both steering committees and incentive payments; reciprocal and sequential interdependence and technology overlap are positively significant in the committee equation but not in the incentive-payment equation. These results concern the adoption of governance mechanisms, not their subsequent performance consequences.
+
 **Theoretical Contribution**
 The paper extends research on interorganizational contracts by showing that partners can create administrative controls in non-equity alliances through contractually delegated steering committees, not only through equity-based governance. It contributes to the theory of hybrid governance by separating administrative control from incentive alignment and by identifying conditions under which non-equity alliances can incorporate more hierarchical governance features. It also adds a structural-planning mechanism to work on contractual contingency planning and decision-right allocation.
 
 **Practical Implication**
-For executives designing alliance contracts, the findings suggest that steering committees are most useful when partners anticipate substantial coordinated adaptation needs. Managers should consider these committees when alliances involve uncertain technologies, reciprocal or otherwise interdependent activities, and overlapping technological resources. The paper also implies that firms should weigh the committee's contracting and governance costs against whether a non-equity alliance can cope with disturbances without moving to a more hierarchical form.
+For executives designing alliance contracts, the findings suggest that steering committees are more likely to be adopted when partners anticipate substantial coordinated adaptation needs. Managers should consider these committees when alliances involve uncertain technologies, reciprocal or otherwise interdependent activities, and overlapping technological resources. The paper also implies that firms should weigh the committee's contracting and governance costs against whether a non-equity alliance can cope with disturbances without moving to a more hierarchical form.
 
 **Limitations**
 The analysis is limited to biopharmaceutical alliances, a context with complex collaboration and potentially distinctive contracting conditions. The study examines alliance structuring decisions at inception rather than how committees evolve during implementation. It also studies antecedents of steering committees rather than their consequences for alliance performance, conflict resolution, new products, or knowledge transfer.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/LePine 2016 Turning their Pain to Gain C
 text_path: "library/AMJ/vol-59-no-3/text/LePine 2016 Turning their Pain to Gain Charismatic Leader Influence on Follower Stress Appraisal and Job Performance.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-quantitative"
 keywords: ["charismatic leader behaviors", "challenge stressors", "hindrance stressors", "challenge appraisals", "hindrance appraisals", "task performance", "transactional theory of stress"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Based on the transactional theory of stress"
   methods_overview: "multilevel structural equation modeling analyses"
   keywords_source: "charismatic leader behaviors moderate"
+  hypotheses_source: "relationship is more positive for those whose"
+  measures_overview: "We used two three-item measures for challenge"
+  findings_overview: "thus Hypothesis 2b is not supported."
 ---
 
 # Turning their Pain to Gain: Charismatic Leader Influence on Follower Stress Appraisal and Job Performance
@@ -53,6 +58,16 @@ We develop and test a theoretical model that explores how individuals appraise d
 **Research Question**
 The paper asks whether and how unit-level charismatic leader behaviors alter followers' stress appraisal and reaction processes, thereby changing the effects of challenge and hindrance stressors on task performance. It focuses on whether charismatic leaders amplify the positive performance pathway from challenge stressors through challenge appraisals and buffer the negative pathway from hindrance appraisals to performance.
 
+**Hypotheses / Propositions**
+- H1a: Challenge appraisals mediate the relationship between challenge stressors and task performance.
+- H1b: Hindrance appraisals mediate the relationship between hindrance stressors and task performance.
+- H2a: Charismatic leadership strengthens the positive relationship between challenge stressors and challenge appraisals.
+- H2b: Charismatic leadership weakens the positive relationship between hindrance stressors and hindrance appraisals.
+- H3a: Charismatic leadership strengthens the positive relationship between challenge appraisals and task performance.
+- H3b: Charismatic leadership weakens the negative relationship between hindrance appraisals and task performance.
+- H4a: The positive indirect relationship between challenge stressors and task performance through challenge appraisals is more positive when leaders are more charismatic.
+- H4b: The negative indirect relationship between hindrance stressors and task performance through hindrance appraisals is less negative when leaders are more charismatic.
+
 **Mechanism Process**
 - IV(s): Challenge stressors and hindrance stressors.
 - DV(s): Task performance.
@@ -60,6 +75,16 @@ The paper asks whether and how unit-level charismatic leader behaviors alter fol
 - Moderators: Unit-level charismatic leader behaviors, measured by superiors in Study 1 and by focal Marines in Study 2.
 
 The mechanism is a dual-stage moderated mediation model. Transactional stress theory implies that demands affect performance through primary appraisals, and the challenge-hindrance framework distinguishes demands with potential for growth from demands that obstruct growth. Charismatic leaders are theorized to manage meaning, optimism, efficacy, and emotional resources so that followers appraise challenge stressors as more challenging and respond more productively to challenge and hindrance appraisals. The evidence supported stronger challenge stressor-to-appraisal and appraisal-to-performance pathways under more charismatic leadership, while charismatic leadership buffered the negative performance implications of hindrance appraisals without reducing hindrance appraisals themselves.
+
+**Data & Measures**
+- Study 1: Surveys of 149 enlisted members of the U.S. Marine Corps measured stressors and appraisals; task-performance ratings obtained approximately three months later yielded 74 Marines with ratings from 33 unit leaders for the hypothesis tests. Challenge and hindrance stressors were measured with 10 items each, rated for frequency from 1 (never) to 5 (extremely often). Challenge and hindrance appraisals each used three items assessing whether job demands promoted or thwarted personal growth, goals, and accomplishment, rated on five-point agreement scales. Unit leaders rated task performance with four items on a seven-point agreement scale; performance scores were power-transformed. Charismatic leadership combined four behavioral idealized-influence items and four inspirational-motivation items from the MLQ-5X, rated by each unit leader's superior from 1 (never) to 5 (always). Four hierarchical linear models tested the pathways and interactions, controlling for rank and education and estimating stressor–appraisal cross-links and their moderation.
+- Study 2: A separate cohort of 270 enlisted members of the U.S. Marine Corps supplied surveys, with matched task-performance ratings from 92 unit leaders approximately three weeks later. The same focal items were used, but Marines rated their direct supervisor's charismatic leadership, modeled at the unit level. Positive and negative affect were each measured with 10 PANAS items and modeled as alternative mediators allowed to covary with cognitive appraisals. Rank and education were initially considered but excluded from subsequent analyses because neither related to the endogenous variables. An integrated multilevel structural equation model used average item composites and transformed performance scores to test the proposed relationships simultaneously.
+
+Both studies were observational: stressors and appraisals were measured cross-sectionally, so the lagged performance ratings do not establish the causal direction between stressors and appraisals.
+
+**Key Findings**
+- Study 1: H1a was not supported: the average indirect relationship of challenge stressors with performance through challenge appraisals was nonsignificant (−.01). H1b was supported: the corresponding hindrance pathway was negative (−.33, p < .05). Charismatic leadership strengthened the challenge stressor–appraisal relationship (H2a; standardized interaction = .29, p < .05) but did not moderate the hindrance stressor–appraisal relationship (H2b; .04, p > .05). H3a and H3b were supported (interactions = .34 and .54, respectively, both p < .05): leadership strengthened the challenge appraisal–performance relationship and weakened the negative hindrance appraisal–performance relationship. The challenge-appraisal slope was unexpectedly negative under low charismatic leadership. The authors interpreted conditional indirect effects as supporting H4a and H4b: the challenge pathway was .23 under high versus −.06 under low leadership, and the hindrance pathway was −.11 under high versus −.97 under low leadership. Only the high-leadership challenge pathway and low-leadership hindrance pathway were significant. No significance test of the difference between conditional indirect effects is reported for Study 1.
+- Study 2: H1a again was not supported (average challenge indirect effect = .03, p > .05), whereas H1b was supported (average hindrance indirect effect = −.05, p < .05). H2a was supported (.14, p < .05), H2b was not (−.12, p > .05), and H3a and H3b were supported (.21 and .12, respectively, both p < .05). H4a and H4b were supported by significant differences between conditional indirect effects. Table 5 reports challenge-path indirect effects of .14 under high versus −.02 under low leadership, with a significant .16 difference; hindrance-path indirect effects were −.01 under high versus −.11 under low leadership. Thus, the positive challenge pathway appeared under high charismatic leadership, while the negative hindrance pathway appeared under low charismatic leadership; the other conditional effects were nonsignificant.
 
 **Theoretical Contribution**
 The study embeds the stress process in a multilevel leadership context by showing that unit-level leader behavior can shape how individual followers appraise and respond to stressful demands. It extends the challenge-hindrance stressor framework by separating stressors from appraisals and testing cognitive appraisals as mediating mechanisms rather than assuming that demand categories automatically produce their expected meanings. It also contributes to charismatic leadership theory by identifying stress appraisal and stress-response processes as channels through which charismatic leaders affect follower task performance.

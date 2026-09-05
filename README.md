@@ -549,6 +549,55 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.63.0 v3 backfill batch 30 (2026-09-05, 1,167 notes):**
+  Upgrades **AMJ volume 59 issues 3 and 2, 31 notes total** to the v3
+  schema, all through v2 augmentation. The record total remains **1,167**;
+  the corpus shifts from 61 v1 / 336 v2 / 770 v3 to **61 v1 / 305 v2 / 801
+  v3**. All 31 notes validate. The initial augmentation guard passed all 31;
+  the final guard passes 16 and flags exactly the 18 documented legacy-field
+  repairs across 15 notes. All three new sections, augmentation provenance,
+  and protected frontmatter remain unchanged during those repairs.
+
+  The first full blind 9-field rubric-v2 audit returned **268 SUPPORTED, 10
+  PARTIAL, and 1 UNSUPPORTED** out of 279 verdicts. Parent source review
+  produced **18 legacy-field repairs across 15 notes**, including 11 fields
+  initially scored SUPPORTED: moderator and mediation roles, the
+  hypothesized model, an unmeasured cognitive explanation,
+  practical-implication audiences and scope, limitations, and inferred
+  future-research agendas. Fresh blind full-note re-audits of all 15
+  repaired notes returned **134 SUPPORTED and 1 accepted PARTIAL out of
+  135**. The **final state is 275 SUPPORTED and 4 accepted PARTIALs out of
+  279**, with **0 UNSUPPORTED and 0 CONTRADICTED**; all 31 notes pass
+  overall with current note and source hashes. The accepted PARTIALs are
+  Bertrand's Future Research and Key Findings, Holloway's Data & Measures,
+  and Khanna's Future Research: reconstructed audit inputs omit the relevant
+  discussion or appendix passages, while parent reading of the recovered raw
+  text confirms that the claims are faithful. Those fields remain unchanged.
+  Tracey's initially PARTIAL Limitations was likewise retained after source
+  verification and scored SUPPORTED in the full re-audit required by its
+  separate Future Research repair.
+
+  **Desai (2016), AMJ 59-3, is retracted.** Its new Key Findings section
+  explicitly opens: “This article has been retracted; the following
+  summarizes its originally reported findings.” The note is retained as a
+  record of the retracted article; see the publisher's [retraction
+  notice](https://journals.aom.org/doi/10.5465/amj.635Retraction).
+  Bibliographic frontmatter and paper types are unchanged; scoped CrossRef
+  was skipped after field-by-field byte comparisons against the baseline.
+  Sequential SQLite, CSV, and BibTeX rebuilds reconcile to 1,167 records;
+  BibTeX is byte-identical, with only SQLite and CSV changed. Full-library
+  validation passed 1,167/1,167, and the direct regressions passed 22/22 for
+  PDF-text fitting and 15/15 for augmentation verification.
+
+  This is the **first backfill batch run end-to-end on `gpt-6-astra` (GPT-6
+  Astra)** for augmentation and audit, opening stamp era 30. Provenance eras
+  are batches 01–07 `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19
+  `gpt-5.6-sol`, 20–23 `claude-opus-5`, 24–29 `gpt-5.6-sol`, and 30
+  `gpt-6-astra`. Cross-family spot-audits scored 27/27 for batch 16, 27/27
+  for batch 24, and 25/27 for batch 28; both batch-28 divergences were
+  repaired in v0.62.0. Batch 30's workshop review will run the next
+  spot-audit as a new-model calibration; no result is yet available.
+
 - **v0.62.0 v3 backfill batch 29 (2026-09-04, 1,167 notes):**
   Upgrades **AMJ volume 59 issues 5 and 4, 32 notes total** to the v3 schema —
   all v2 augmentations — and carries one calibration-driven repair to the
@@ -1574,7 +1623,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 336 v2 notes, and 770 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 305 v2 notes, and 801 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -1707,7 +1756,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.62.0},
+  version      = {0.63.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

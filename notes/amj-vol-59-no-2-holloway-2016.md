@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-2/pdfs/Holloway 2016 Friends and Profits Don’
 text_path: "library/AMJ/vol-59-no-2/text/Holloway 2016 Friends and Profits Don’t Mix The Performance Implications of Repeated Partnerships.txt"
 ingested_at: "2026-07-04"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-quantitative"
 keywords: ["repeated partnerships", "partner selection", "relational governance", "revenue", "profitability", "bridge construction"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "relational governance"
   methods_overview: "We used a logit estimation model"
   keywords_source: "repeated partnerships"
+  hypotheses_source: "the lower the prime contractor’s profitability."
+  measures_overview: "Approved Bid Cost-Actual Construction Cost"
+  findings_overview: "with no support for Hypothesis 2a"
 ---
 
 # Friends and Profits Don’t Mix: The Performance Implications of Repeated Partnerships
@@ -51,6 +56,12 @@ Firms use repeated partnerships to gain benefits of shared experience such as im
 **Research Question**
 For a given level of outsourcing, how do repeated partnerships affect prime contractors' revenue and profitability? The paper asks whether the proportion of repeated partners and the depth of those repeated relationships have distinct implications for winning bids versus earning margins.
 
+**Hypotheses / Propositions**
+- H1a: For a given level of outsourcing, the greater the proportion of repeated partners, the greater the prime contractor's revenue.
+- H1b: For a given level of outsourcing, the deeper the relationships with repeated partners, the greater the prime contractor's revenue.
+- H2a: For a given level of outsourcing, the greater the proportion of repeated partners, the lower the prime contractor's profitability.
+- H2b: For a given level of outsourcing, the deeper the relationships with repeated partners, the lower the prime contractor's profitability.
+
 **Mechanism Process**
 - IV(s): Percent Repeated Partners; Deep Partner Relationships.
 - DV(s): Revenue, measured as whether the prime contractor won the bid; profitability, measured as Percent Margin between approved bid cost and actual construction cost.
@@ -58,6 +69,16 @@ For a given level of outsourcing, how do repeated partnerships affect prime cont
 - Moderators: Not reported in paper.
 
 The paper argues that repeated partnerships create shared routines, richer collaboration, and better adaptation under uncertainty, which help prime contractors configure partner systems that win bids. The same relational depth can reduce profitability because known partners may have bargaining power, weaker efficiency incentives, and may crowd out cheaper or technically superior alternatives. The results support the depth-based predictions: deep repeated relationships increase the likelihood of winning bids but reduce percent margin, while the simple proportion of repeated partners is not significant in the main revenue or profitability models.
+
+**Data & Measures**
+The observational study uses Oregon Department of Transportation (ODOT) records for 2000–2007. The Subcontractor Disclosure Form (SDF) lists participants performing more than 5% of a project's work; bid tabulations provide proposal costs, partners, and scheduled tasks. The final sample retains onsite construction from raw materials with specified environmental regulations: the revenue models report 580 bid proposals, and profitability models report the 144 winning bids. Revenue (Won Bid) is an indicator that the proposal has the lowest cost and wins the contract. Percent Margin equals approved bid cost minus actual construction cost, divided by approved bid cost. Percent Repeated Partners is the number of current partners also used on the prime contractor's most recent previous job divided by the total number of current partners. Deep Partner Relationships sums, across current partners, how many times each was used over the prime contractor's previous five projects.
+
+Controls cover prime contractor size and age, annual project frequency and dollar volume, environmental uncertainty measured by pages of environmental provisions, and project duration in calendar days. To address self-selection in the degree of outsourcing, the authors use a three-level ordered probit first stage, with % DBE as an instrument, and a manual two-stage Heckman selection correction using Inverse Mills ratios. The second-stage models use logit for winning bids and Tobit for margins, both clustered by prime contractor. These are observational estimates with a correction for governance choice. A supplementary losing-bid analysis measures overbidding as proposed project cost divided by winning bid cost.
+
+**Key Findings**
+- H1a is unsupported: Percent Repeated Partners is not significant in the full revenue model (Table 3, Model 5: coefficient = −0.471). H1b is supported: deeper relationships are positively associated with winning bids (coefficient = 0.089, p < .05).
+- H2a is unsupported: Percent Repeated Partners is not significant in the full profitability model (Table 4, Model 5: coefficient = 0.004). H2b is supported: deeper relationships are negatively associated with Percent Margin (coefficient = −0.002, p < .05). Both tables report one-tailed tests.
+- In the supplementary analysis of losing bids, the proportion of repeated partners is positively and significantly associated with overbidding, while relationship depth is not significant. The main findings distinguish the performance implications of relationship depth from the simple proportion of repeated partners.
 
 **Theoretical Contribution**
 The study contributes to research on repeated partnerships by separating revenue from profitability and showing that relational benefits can improve one performance dimension while harming another. It adds nuance to relational governance research by distinguishing the system-level proportion of repeated partners from dyadic relationship depth, showing that depth matters more than mere familiarity. It also extends transaction cost economics by demonstrating that partner identity affects performance after the outsourcing choice has been made.

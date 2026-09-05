@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/Bertrand 2016 Partners in Crime The Effe
 text_path: "library/AMJ/vol-59-no-3/text/Bertrand 2016 Partners in Crime The Effects of Diversity on the Longevity of Cartels.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-quantitative"
 keywords: ["organizational misconduct", "cartels", "diversity theory", "longevity of cartels", "uncertainty avoidance", "power disparity"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Drawing upon the research on diversity theories"
   methods_overview: "proportional hazard model"
   keywords_source: "organizational misconduct"
+  hypotheses_source: "Hypothesis 3. A cartel’s longevity is positively"
+  measures_overview: "we used the Gini coefficient of the firms’ size."
+  findings_overview: "the longevity of cartels tends to be increased by the level of variety of age-based experience and power disparity"
 ---
 
 # Partners in Crime: The Effects of Diversity on the Longevity of Cartels
@@ -51,6 +56,11 @@ Despite the importance of organizational misconduct, still not much is known abo
 **Research Question**
 The paper asks how different facets of diversity between firms participating in a cartel influence cartel longevity. It focuses on whether the profile of cartel partners helps explain how collective organizational misconduct is maintained in secret over time.
 
+**Hypotheses / Propositions**
+- H1: A cartel’s longevity is positively related to the variety of age-based experience of its members.
+- H2: A cartel’s longevity is negatively related to the separation in uncertainty avoidance of its members.
+- H3: A cartel’s longevity is positively related to the power disparity of its members.
+
 **Mechanism Process**
 - IV(s): Variety of age-based experience, separation in uncertainty avoidance, and power disparity among cartel members.
 - DV(s): Cartel longevity, modeled through the hazard rate of cartel termination.
@@ -58,6 +68,19 @@ The paper asks how different facets of diversity between firms participating in 
 - Moderators: Leniency reform is used in additional analysis as an exogenous regulatory shift interacting with the three diversity dimensions.
 
 The mechanism links interfirm diversity to the information exchange, coordination, and control needed to sustain secret collective misconduct. Variety of age-based experience gives cartel members different pools of knowledge and experience that can help organize concealed activity. Separation in uncertainty avoidance makes coordination harder because partners differ in tolerance for risk and formalization, while power disparity can create a leader capable of enforcing the agreement, limiting opportunism, and stabilizing the group.
+
+**Data & Measures**
+The archival study combines European Commission prosecution decisions with Amadeus and Orbis firm data. The sample comprises 41 cartels prosecuted during 2001–2011, involving 463 firms; Table 2 reports 195 cartel-year observations in each model. Cartel longevity is measured from formation to termination, with the hazard of termination as the modeled outcome. Variety of age-based experience is the entropy of member firms’ age categories, using five-year intervals from 1–5 through 46–50 and a final category for ages 51 and above. Separation in uncertainty avoidance is the mean Euclidean distance between cartel members using home-country cultural-values scores from the Globe study. Power disparity is the Gini coefficient of members’ total assets.
+
+Baseline associations are estimated with Cox proportional hazard models, robust standard errors clustered by cartel, and time-varying explanatory variables lagged one year. Controls cover average firm characteristics, cartel membership count, industry concentration, country institutions, average uncertainty avoidance, and leniency reform. The reform indicator is coded 1 after 2002 and 0 before that year. Supplementary tests interact this indicator with the three diversity dimensions; the authors describe this analysis as following the logic of a difference-in-difference approach using an exogenous regulatory shift.
+
+**Key Findings**
+Table 2, Model 5 supports all three hypotheses. The reported coefficients refer to cartel termination hazard, so negative coefficients indicate longer survival:
+- H1 supported: Variety of age-based experience is negatively associated with termination hazard (b = −0.17, p < .05). A one-standard-deviation increase corresponds to a 7.54% decrease in the hazard rate.
+- H2 supported: Separation in uncertainty avoidance is positively associated with termination hazard (b = 0.49, p < .01). A one-standard-deviation increase corresponds to a 7.61% increase in the hazard rate.
+- H3 supported: Power disparity is negatively associated with termination hazard (b = −0.43, p < .01). A one-standard-deviation increase corresponds to a 7.34% decrease in the hazard rate.
+
+The supplementary regulatory-shift analysis reports that leniency reform increased detection probability less for cartels with greater age-based variety, lower separation in uncertainty avoidance, or greater power disparity. Appendix A reports robustness to alternative measures, additional controls, and selection weighting, while noting that the alternative experience measure based on industry diversification was more sensitive to specification.
 
 **Theoretical Contribution**
 The paper extends organizational misconduct research by shifting attention from individual or intraorganizational wrongdoing to coordinated misconduct among independent firms. It also refines diversity theory by showing that distinct dimensions of diversity can have different effects in the same empirical setting: age-based variety and power disparity increase cartel longevity, while separation in uncertainty avoidance decreases it.

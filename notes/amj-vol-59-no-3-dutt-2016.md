@@ -20,7 +20,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/Dutt 2016 How Open System Intermediaries
 text_path: "library/AMJ/vol-59-no-3/text/Dutt 2016 How Open System Intermediaries Address Institutional Failures The Case of Business Incubators in Emerging-Market Countries.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-mixed"
 keywords: ["open system intermediaries", "institutional failures", "business incubators", "emerging-market countries", "market infrastructure development", "business capability development"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "institutional theory, which"
   methods_overview: "using ordinary least squares and generalized linear"
   keywords_source: "emerging-market countries place on developing markets"
+  hypotheses_source: "place the greatest emphasis on MID services"
+  measures_overview: "ratios for each of the MID and BCD subconstructs:"
+  findings_overview: "partial support for Hypothesis 2b."
 ---
 
 # How Open System Intermediaries Address Institutional Failures: The Case of Business Incubators in Emerging-Market Countries
@@ -55,6 +60,12 @@ In emerging-market countries, commercial institutions do not always develop suff
 **Research Question**
 How do open system intermediaries remedy institutional failures in emerging-market countries, and how do country-level commercial institutions and incubator sponsors shape their relative emphasis on market infrastructure development versus business capability development? The empirical setting is business incubators in emerging markets.
 
+**Hypotheses / Propositions**
+- H1: Greater market development in a country is associated with greater emphasis by incubators as OSIs on BCD services relative to MID services.
+- H2a: Among incubator sponsors, private sponsors place the greatest emphasis on MID services providing financial capital.
+- H2b: Academic and government sponsors place the greatest emphasis on MID services providing space.
+- H2c: Academic and NGO sponsors place the greatest emphasis on BCD services providing management education through training and consulting.
+
 **Mechanism Process**
 - IV(s): Market development in the country; sponsor type, including private, academic, government, and NGO sponsorship.
 - DV(s): Relative emphasis on business capability development versus market infrastructure development, plus specific MID-Finance, MID-Space, BCD-Training, and BCD-Consulting service ratios.
@@ -62,6 +73,22 @@ How do open system intermediaries remedy institutional failures in emerging-mark
 - Moderators: Exploratory interactions between market development and sponsor type, especially private sponsorship.
 
 The mechanism is that open system intermediaries respond to institutional voids by balancing services that build broader market infrastructure with services that develop specific firms. When commercial institutions are weaker, incubators have stronger reasons to provide MID services that make entrepreneurship feasible; when institutions are more developed, incubators can place relatively more emphasis on BCD services because client firms have a better chance of succeeding. Sponsor identity shapes this service mix because private, academic, government, and NGO sponsors carry different motivations, skills, and resource endowments.
+
+**Data & Measures**
+The qualitative component comprised semi-structured interviews with incubators and incubatees, including those in Russia, Kazakhstan, Chile, Argentina, South Africa, Nigeria, and India. Interviews conducted in 2012 and 2013 informed the concepts and hypotheses; Table 3 presents examples from five countries. The paper does not report an interview count or a formal coding protocol. The quantitative component used the World Bank's infoDev network survey: 133 incubators in 68 countries, with data gathered from 2008 through 2010 and survey collection reported as beginning in 2006. Every model in Table 4a reports 133 observations and 68 countries.
+
+- Outcomes: Confirmatory factor analysis of service categories produced four factors with three items each. MID-Space comprises shared workshops, shared laboratories, and office space; MID-Finance comprises seed capital, equity financing, and venture capital; BCD-Training comprises mentoring/coaching, financial management training, and training in business management; BCD-Consulting comprises pre-incubation services and incubation programs for resident and non-resident clients. Each category counts 0–3 services. BCD-Ratio is the proportion of the 12 classified services an incubator offers that belong to the two BCD categories; four further outcomes are the respective service-category shares. Industry-wide MID activities such as lobbying are not measured.
+- Predictors: Market Development combines standardized labor-market, capital-market, and legal-transparency dimensions. These derive from World Bank “Ease of Doing Business” rankings and tertiary-education data: labor combines employment flexibility and tertiary education (2004–2005); capital combines investor protection and access to credit (2005–2006); legal transparency combines property registration and contract enforcement (2004–2005). Higher values indicate fewer commercial institutional voids. Sponsor types are survey-reported academic, NGO, government, and private categories, analyzed with mean-effects coding; exploratory interactions use 0–1 sponsor indicators.
+- Analysis: Cross-sectional Tobit regressions with robust standard errors clustered by country estimate associations, with ordinary least squares and generalized linear models as sensitivity analyses. Controls include founding year, client count, agricultural specialization, ICT services, and the number of services outside MID and BCD. No causal identification strategy is reported.
+
+**Key Findings**
+Interview examples suggest that incubators facing greater institutional voids emphasize MID, while those in more developed markets offer substantial BCD alongside complementary MID. The quantitative results distinguish full from partial hypothesis support:
+
+- H1 supported: Market Development is positively associated with BCD-Ratio (Model 1a: b = 0.121, p < .05). Among its dimensions, only labor-market development is significant (Model 1b: b = 0.137, p < .01).
+- H2a supported: Private sponsorship is positively associated with MID-Finance (Models 2a/2b: b = 0.126/0.122, both p < .05).
+- H2b partially supported: Academic sponsorship is positively associated with MID-Space (Models 3a/3b: b = 0.112/0.111, both p < .01); government sponsorship is nonsignificant.
+- H2c partially supported: NGO sponsorship is positively associated with BCD-Training (Models 4a/4b: b = 0.086/0.088, both p < .01), but not significantly associated with BCD-Consulting. Academic sponsorship has a positive consulting coefficient that is nonsignificant in Model 5a (b = 0.078) and marginally significant in Model 5b (b = 0.080, p < .10). Contrary to prediction, its training coefficients are negative (Models 4a/4b: b = −0.072/−0.070; p < .10/nonsignificant, respectively).
+- Exploratory interaction: Market Development × private sponsorship is negatively associated with MID-Finance (Table 4b: b = −0.203, reported p < .01), indicating a weaker private-sponsorship emphasis on finance in more developed commercial environments.
 
 **Theoretical Contribution**
 The paper clarifies the concepts of institutional intermediaries, open system intermediaries, and the distinction between MID and BCD services. It extends institutional entrepreneurship and institutional voids research by showing how business incubators can create benefits beyond focal clients in emerging-market settings. It also contributes to sponsorship research by theorizing how sponsor motivations and skills affect the kinds of institutional-intermediation services incubators provide.

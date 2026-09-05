@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/Desai 2016 The Behavioral Theory of the 
 text_path: "library/AMJ/vol-59-no-3/text/Desai 2016 The Behavioral Theory of the (Governed) Firm Corporate Board Influences on Organizations’ Responses to Performance Shortfalls.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-quantitative"
 keywords: ["Behavioral Theory of the Firm", "performance feedback", "corporate boards", "organizational change", "corporate governance"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "The Behavioral Theory of the Firm provides"
   methods_overview: "tional fixed-effects poisson regression"
   keywords_source: "performance feedback and corporate governance"
+  hypotheses_source: "Hypothesis 1. There is a negative relationship"
+  measures_overview: "measure turnover through the percent of the board"
+  findings_overview: "less negative as board size increases."
 ---
 
 # The Behavioral Theory of the (Governed) Firm: Corporate Board Influences on Organizations’ Responses to Performance Shortfalls
@@ -75,6 +80,12 @@ mentum for organizational change.
 **Research Question**
 The paper asks what board characteristics moderate the relationship between performance feedback and organizational change, and through what processes those moderating influences occur. It focuses on whether board size, board turnover, and board equity ownership shape how organizations respond when performance falls below aspiration levels.
 
+**Hypotheses / Propositions**
+- H1: Performance, when below the aspiration level, is negatively related to organizational change.
+- H2: This relationship becomes less negative as board size increases.
+- H3: This relationship becomes less negative as board turnover increases.
+- H4: This relationship becomes less negative as board equity ownership increases.
+
 **Mechanism Process**
 - IV(s): Performance relative to historical aspiration when below aspiration.
 - DV(s): Annual count of service line divestitures.
@@ -82,6 +93,17 @@ The paper asks what board characteristics moderate the relationship between perf
 - Moderators: Board size, board turnover, and board equity ownership.
 
 The mechanism is that performance shortfalls increase both managerial search for change and board monitoring, advising, and resource-provision influence. Boards with divergent interests can force compromises, provide conflicting advice, compel reconsideration, or withhold resources, limiting the extent of organizational change. The results support moderation by board size and board equity ownership, but not by board turnover.
+
+**Data & Measures**
+The longitudinal observational panel uses state hospital data for for-profit hospitals in California during 2005–2011. The estimation sample contains 607 hospital-year observations, representing roughly 86 hospitals per year. Organizational change is the annual count of service lines offered in the previous year but abandoned or discontinued in the focal year. The focal predictor is return on assets minus a historical aspiration, calculated as an exponentially weighted average of past performance with an aspiration-updating parameter of 0.21. The below-aspiration variable retains negative shortfalls and equals zero above aspiration; a separate above-aspiration spline serves as a control. Board size is the number of governing-board members, normalized to a 0–1 range; turnover is the percentage of the board that has turned over since the previous year; equity ownership is the average percentage of hospital equity held by each board member. Each board measure is interacted with the below-aspiration performance variable. Predictors and controls are lagged one period. Conditional fixed-effects poisson regressions with robust standard errors account for stable hospital differences and include service-line, hospital, financial-slack, and calendar-year controls. This is an associational design; board decision-making processes are not directly observed.
+
+**Key Findings**
+This article has been retracted; the following summarizes its originally reported findings.
+
+- H1 was not supported: the below-aspiration performance coefficient was negative but nonsignificant in Table 2, Model 2 (b = −1.201). Negative conditional relationships at low levels of board size or equity ownership did not establish the hypothesized overall main effect.
+- H2 was supported: the board-size interaction was positive in Model 4 (b = 18.606, p < .05) and Model 7 (b = 21.752, p < .01), making the performance–change relationship less negative as board size increased.
+- H3 was not supported: the board-turnover interaction was nonsignificant in both Model 5 (b = 1.376) and Model 7 (b = 1.506).
+- H4 was supported: the board-equity interaction was positive in Model 6 (b = 34.029, p < .05) and Model 7 (b = 41.527, p < .05), making the performance–change relationship less negative as equity ownership increased. The models and partial-effect plots indicated that the relationship turned positive at high board-size or equity-ownership values: larger performance shortfalls were then associated with fewer divestitures.
 
 **Theoretical Contribution**
 The paper connects the Behavioral Theory of the Firm with corporate governance research by showing that responses to performance feedback may depend on interactions between managerial and board coalitions rather than a single dominant coalition. It contributes to performance feedback theory by offering board structure as a reason why the direct relationship between poor performance and change can appear mixed or non-significant. It also contributes to board research by showing how boards may limit, rather than promote, aggressive change during performance shortfalls.

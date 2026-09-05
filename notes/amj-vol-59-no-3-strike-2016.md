@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/Strike 2016 Mediated Sensemaking.pdf"
 text_path: "library/AMJ/vol-59-no-3/text/Strike 2016 Mediated Sensemaking.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-qualitative"
 keywords: ["mediated sensemaking", "adaptive sensemaking", "Most Trusted Advisors", "family firms", "pause", "doubt", "voice and knowledge"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "sensemaking contributes to our understanding"
   methods_overview: "We conducted an inductive multi-case study of six"
   keywords_source: "introduce the concept of mediated sensemaking"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "and coded the data into 23 first-order codes"
+  findings_overview: "MTAs facilitate\n                          adaptive sensemaking by regulating the pacing and temporality of FBEs’ sensemaking."
 ---
 
 # Mediated Sensemaking
@@ -51,6 +56,9 @@ We use a multi-case analysis of nine Most Trusted Advisors (MTAs) in six family 
 **Research Question**
 The paper asks how outsiders in the broader context influence local sensemaking, specifically how Most Trusted Advisors slow down Family Business Entrepreneurs and help them doubt sense already made. It examines what social position, skills, and tactics enable mediated sensemaking and how these processes are associated with adaptive sensemaking.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key actors: Most Trusted Advisors, Family Business Entrepreneurs, family members, board members, employees, and other stakeholders in family firms.
 - Mediation structure: MTAs occupy trusted inside-outside positions across family and business boundaries, giving them access to FBEs and to marginal or weak cues.
@@ -59,6 +67,16 @@ The paper asks how outsiders in the broader context influence local sensemaking,
 - Adaptive sensemaking outcomes: FBEs lower commitment to entrapped frames, attend to alternative perspectives, and expand their frames.
 
 The process starts when FBEs move quickly within an entrapped frame and have little motive to slow down or question their own sensemaking. MTAs use their trusted boundary-spanning position to create pause, introduce doubt through questions and red flags, and bring forward voices or knowledge that might otherwise remain unheard. These actions recursively slow the FBE, lower commitment to the initial frame, and support a broader frame through reflection and integration of additional cues.
+
+**Data & Measures**
+The inductive multi-case study covered six family firms and nine MTAs in two North American cities. Its primary data were 45 open-ended interviews with 21 informants, lasting 60–120 minutes and recorded and transcribed verbatim. Interviews were triangulated with participant observation at three private MTA symposiums and public and private documents, including websites, archival information, symposium materials, mission statements, annual reports, board minutes, and internal memos. Access began in 2001, main fieldwork occurred in 2005 and 2007, site visits continued during 2008–2010, and final data collection occurred in March 2013.
+
+Analysis combined multiple case studies (the “Eisenhardt method”) with in-depth inductive case research (the “Gioia method”). An insider–outsider author arrangement, constant comparison, and within- and across-case checks supported the development of 23 first-order codes grounded in informants’ language; axial coding produced nine second-order concepts, subsequently integrated into four aggregate themes: mediation structure, disposition to mediate, actions of mediation, and adaptive sensemaking. Interviews were refined as concepts emerged, and member checks assessed the emerging framework. The pacing analysis distinguished pending initiatives from already implemented or established initiatives, and classified pending initiatives by intended action timing: immediately (that day), very quickly (within the next day), or quickly (within the week).
+
+**Key Findings**
+The grounded process model links MTAs’ trusted social position, prosocial orientation, and social skills to their ability to induce pause, insert doubt, and mediate voice and knowledge. These actions helped FBEs question entrapped frames, lower commitment to them, and integrate overlooked cues and other people’s perspectives. The process involved intertwined self-doubt, self-pause, and reinforcing voice loops that supported reflection and expanded frames, rather than a fixed linear sequence.
+
+Pacing differed by initiative. Pending initiatives began with inducing pause; established initiatives began with inserting doubt. For pending initiatives moving immediately, a future meeting typically delayed action by two to three days. For initiatives moving very quickly, gathering information or seeking additional advice could delay action by up to a week; bringing quickly moving initiatives to a family or board forum could create delays of up to three weeks. Doubt was inserted through pointed questions or red flags when little time was available, and through subtler seed planting when more time was available. MTAs also spoke for unheard stakeholders or coached them to approach the FBE, increasing attention to their voices and cues. The study developed a qualitative process explanation without tracing precise performance outcomes or testing a causal link to results.
 
 **Theoretical Contribution**
 The paper introduces mediated sensemaking as an overlooked form of adaptive sensemaking that unfolds across boundaries rather than only inside a local sensemaking group. It shows that mediators' social position, prosocial disposition, and skilled actions shape whether outsiders can redirect sensemaking. It also contributes to sensemaking theory by foregrounding pacing, temporality, pause, and doubt as mechanisms through which actors can simultaneously know, doubt, and still mobilize action.

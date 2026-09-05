@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/Granqvist 2016 Temporal Institutional Wo
 text_path: "library/AMJ/vol-59-no-3/text/Granqvist 2016 Temporal Institutional Work.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-qualitative"
 keywords: ["temporal institutional work", "timing norms", "institutional change", "entraining", "constructing urgency", "enacting momentum", "temporality"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "temporal institutional work—that is"
   methods_overview: "We draw on an inductive study"
   keywords_source: "actors engage in temporal institutional work"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we iteratively coded these temporal activities"
+  findings_overview: "produce windows of opportunity, synchronicity, and irreversibility as shared beliefs"
 ---
 
 # Temporal Institutional Work
@@ -51,6 +56,9 @@ Time is inherently present in empirical research on institutional change—most 
 **Research Question**
 How do actors engage in temporal institutional work during institutional change? The paper asks how actors construct, navigate, and capitalize on timing norms, and how those activities shape shared temporal beliefs that affect the unfolding of a wider institutional reform.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Temporal institutional work, timing norms, entrainment, constructed urgency, enacted momentum, windows of opportunity, synchronicity, irreversibility, and the tension between top-down timing norms and bottom-up issue construction.
 - Process / phases: Actors first constructed urgency and entrained the Innovation University proposal with openings in wider reform, producing a perceived window of opportunity. They then enacted momentum and entrained the project with democratic and reform schedules, creating synchronicity between the project and university reform. In parallel, they used speed, prioritization, symbolic progress, and selective participation to create a perception of irreversibility.
@@ -59,6 +67,14 @@ How do actors engage in temporal institutional work during institutional change?
 - Boundary conditions: The case concerns a nested political-institutional setting with a foundation-based university project tightly coupled to national university-sector reform.
 
 The process is temporal and interpretive rather than a simple causal-variable model. Actors did not merely adapt to external schedules; they framed some timing norms as openings, used project pacing to modify wider reform rhythms, and transformed a future possibility into a current belief that change was already unavoidable. These temporal beliefs then organized participation, resistance, and the pace of institutional change.
+
+**Data & Measures**
+The inductive case study examines the Innovation University project and its links to wider university reform. The data-collection account reports 44 semi-structured interviews conducted from March 2008 to March 2010 with university leaders and staff, government actors, industry and labor-union representatives, students, and opponents, plus three supplementary interviews in autumn 2013 about earlier failed proposals. Table 3 lists 18 speeches and pamphlets, 46 preparation and project reports, 10 legislative and policy documents, and 641 news stories. News came from Nation Daily, Regional, and Capital; the paper states that all empirical names are pseudonyms.
+
+Analysis began with event chronologies and a historical narrative. Interview passages were open-coded for temporal activities, iteratively grouped into themes with check-coding for consistency, and axially coded into three forms of temporal institutional work using the Gioia approach. Recoding their occurrence over time and comparison with the chronology identified partially overlapping sequences and the shared temporal beliefs they produced. Complementary media analysis treated each individual's statement in a news story as one observation, yielding 749 observations, and coded both support/neutrality/opposition and whether the university would be established/not established, with a neutral category. A random 10% sample of 65 articles was second-coded by an external researcher; intraclass correlations were 0.63 for positive/negative opinion and 0.57 for establishment expectations. This is an interpretive process study, without a causal identification design.
+
+**Key Findings**
+The analysis identifies entraining as a top-down, routinized, reproductive form of temporal institutional work, and constructing urgency and enacting momentum as bottom-up, issue-driven, generative forms. Their combinations produced three shared temporal beliefs. In Sequence I, constructing urgency and entraining the proposal with openings in timing norms created a window of opportunity that mobilized action. In Sequence IIa, enacting momentum and entraining activities with democratic schedules produced synchronicity: the project itself became a pacing influence on wider reform. Ten of the Nyberg Report's 14 action points, including all required legislative changes, were executed on schedule. In the partly overlapping Sequence IIb, urgency through restricted preparation time and prioritization, together with momentum through visible progress and preempted resistance, produced a perception of irreversibility. Media analysis showed that after publication of the Nyberg Report in February 2007, stories treated the project as going forward even while criticism continued. Thus, anticipated realization and approval were distinct: a shared belief in inevitability could emerge despite continuing opposition.
 
 **Theoretical Contribution**
 The paper develops temporal institutional work as a perspective for explaining how temporality enters institutional work and institutional change. It identifies entraining, constructing urgency, and enacting momentum as forms of work through which actors produce shared temporal beliefs. It also reconceptualizes windows of opportunity, synchronicity, and irreversibility as socio-temporal constructs rather than external givens.

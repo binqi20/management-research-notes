@@ -140,26 +140,28 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-09-04):
+**Current main-branch audit state (2026-09-05):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 29 upgraded 32 notes (AMJ vol-59-no-5 + vol-59-no-4, all v2
-augmentations) to v3 and repaired two legacy fields in the already-v3 Luo
-(2017) note after the batch-28 workshop calibration. Its final audit is
-**297/297 prose-field verdicts SUPPORTED**, with 0 `PARTIAL`, 0 `UNSUPPORTED`,
-and 0 `CONTRADICTED` across all 33 touched notes. Source verification produced
-four scoped legacy repairs across four batch notes; Bunderson required a second
-repair round. Luo's Practical Implication and Future Research were narrowed to
-the paper's own research framing and explicit agenda, then returned 9/9
-`SUPPORTED` in a fresh blind audit. All 33 final reports have current hashes
-within scope. This batch ran end-to-end on `gpt-5.6-sol` for augmentation and
-audit, the tenth such backfill batch. Cross-family spot-audits scored 27/27 for
-batch 16, 27/27 for batch 24, and 25/27 for batch 28; the two batch-28
-divergences were repaired in this release, and no calibration is scheduled for
-batch 29. The pre-batch census was 61 v1, 368 v2, and 738 v3; the corpus now
-contains 61 legacy v1 notes, 336 v2 notes, and 770 v3 notes with evidence
-anchors. Provenance eras are batches 01–07 `claude-opus-4-8`, 08–15
-`claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23 `claude-opus-5`, and 24–29
-`gpt-5.6-sol`. New notes are produced at extraction
+batch 30 upgraded 31 notes (AMJ vol-59-no-3 + vol-59-no-2, all v2
+augmentations). Its final audit has **275 SUPPORTED and 4 accepted PARTIAL
+verdicts out of 279**, with 0 `UNSUPPORTED` and 0 `CONTRADICTED` across
+all 31 touched notes. The accepted PARTIALs concern Bertrand's Future Research
+and Key Findings, Holloway's Data & Measures, and Khanna's Future Research;
+fitted audit inputs omitted relevant passages, and parent raw-text review confirmed the claims' fidelity.
+Source verification produced 18 scoped legacy-field repairs across 15 notes,
+including 11 fields initially scored SUPPORTED; fresh blind full-note
+re-audits returned 134 SUPPORTED and 1 accepted PARTIAL out of 135. All 31
+final reports have current note and source hashes within scope. Desai (2016), AMJ 59-3, is retained with an
+explicit retraction statement at the start of its new Key Findings section.
+This is the first batch run end-to-end on `gpt-6-astra` for augmentation and
+audit. Cross-family spot-audits scored 27/27 for batch 16, 27/27 for batch 24,
+and 25/27 for batch 28; both batch-28 divergences were repaired in v0.62.0.
+Batch 30's workshop review will run the next spot-audit as a new-model
+calibration; its result is pending. The pre-batch census was 61 v1, 336 v2,
+and 770 v3; the corpus now contains 61 legacy v1 notes, 305 v2 notes, and
+801 v3 notes. Provenance eras are batches 01–07 `claude-opus-4-8`, 08–15
+`claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23 `claude-opus-5`, 24–29
+`gpt-5.6-sol`, and 30 `gpt-6-astra`. New notes are produced at extraction
 **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -169,8 +171,9 @@ fields were written by `extraction_model`, the three v3 sections by
 audit at augmentation time (a mechanical diff-guard,
 `tools/verify_augmentation.py`, proves the original audited content was
 untouched before any explicitly documented audit repair). `PARTIAL`
-verdicts (stylistic compressions that don't rise to a faithfulness failure)
-are flagged for human review but do not block publication. No published note
+verdicts (minor compression or claims whose supporting source passages are
+missing from the fitted audit input) require documented review and do not
+block publication when source verification confirms fidelity. No published note
 has ever carried a `CONTRADICTED` verdict — the single one ever returned in
 auditing (batch 28, a draft Data & Measures section) was repaired and
 re-audited before publication — so no claim in any note actively contradicts
@@ -184,9 +187,9 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-09-04.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-09-05.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
-- `PARTIAL` verdicts indicate minor paraphrastic drift or compression; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
+- `PARTIAL` verdicts can indicate minor paraphrastic drift, compression, or missing source context in the fitted audit input; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
 ---
 
@@ -195,7 +198,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.62.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.63.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

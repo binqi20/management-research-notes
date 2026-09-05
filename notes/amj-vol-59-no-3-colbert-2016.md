@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/Colbert 2016 The Digital Workforce and t
 text_path: "library/AMJ/vol-59-no-3/text/Colbert 2016 The Digital Workforce and the Workplace of the Future.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "editorial"
 keywords: ["digital workforce", "digital natives", "digital fluency", "technology usage", "work redesign", "virtual collaboration", "gamification"]
@@ -52,6 +54,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how the increasing prevalence of technology and the entrance of digital natives into the workforce may change how people approach work, relate to others, and collaborate in organizations. It also asks how jobs and organizations might be redesigned to leverage digital workforce competencies while limiting the downsides of constant connectivity and technologically mediated interaction.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core phenomenon: The emergence of a digital workforce whose members develop digital fluency, technology-mediated communication habits, and experience with online games, virtual worlds, and social media.
 - Potential benefits: Digital fluency, virtual collaboration skills, comfort with technology-based instruction, risk taking through trial-and-error learning, and familiarity with gamified motivation systems.
@@ -59,6 +64,12 @@ The editorial asks how the increasing prevalence of technology and the entrance 
 - Work-redesign agenda: Organizations can redesign jobs, communication norms, meeting practices, technology policies, gamification systems, and virtual collaboration tools to use technology more mindfully and effectively.
 
 The process argument is that technology changes both worker competencies and the conditions under which work is coordinated. Digital fluency and online-world experience can help organizations train, collaborate, innovate, and motivate, but the same technologies can fragment attention, weaken relational quality, and extend work into nonwork time. The editorial therefore frames future work design as a balancing problem: organizations need to leverage digital capabilities while creating norms and systems that preserve focused work, recovery, face-to-face connection, and effective collaboration.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes by setting a research agenda on the digital workforce as an emerging management topic, linking individual-level technology experiences to organizational-level work design and collaboration challenges. It highlights digital fluency, online identity development, technology-mediated communication, gamification, mindful technology use, and immersive virtual collaboration as areas where management scholars can develop stronger theory. The article also extends prior AMJ editorials on digital platforms, information and attention, and design by focusing on the individual worker and the future workplace.
@@ -70,7 +81,7 @@ Managers should not treat digital technology only as an efficiency tool; they al
 The editorial is agenda-setting rather than empirical, so it does not test its claims or provide a single bounded sample, design, or causal estimate. It relies on examples and prior studies from multiple domains, including technology use, gaming, empathy, email overload, work-nonwork boundaries, and virtual teams. The authors also note that digital natives are only beginning to enter the workforce and that technology itself is constantly shifting, so the implications for work remain incomplete and provisional.
 
 **Future Research**
-Future research should examine how digital fluency influences job performance, career progression, conflict, and collaboration across occupations and age-diverse groups. Scholars should study how technology use shapes identity development, authenticity, empathy, communication styles, relationship quality, work-family conflict, recovery, and mindful usage norms. The editorial also calls for research on gamification, immersive virtual collaboration, virtual reality, avatars, and other technological advances that may reshape how teams coordinate and experience presence.
+Future research should examine how digital fluency influences job performance, career progression, conflict, and collaboration across occupations and age-diverse groups. Scholars should study how digitally mediated communication shapes empathy, communication styles, relationship quality, and collaboration preferences, and how mindful technology usage and its norms influence engagement and effectiveness. The editorial also calls for research on gamification, immersive virtual collaboration, virtual reality, avatars, and other technological advances that may reshape how teams coordinate and experience presence.
 
 **APA 7th Citation**
 Colbert, A., Yee, N., & George, G. (2016). The digital workforce and the workplace of the future. *Academy of Management Journal*, 59(3), 731-739. https://doi.org/10.5465/amj.2016.4003

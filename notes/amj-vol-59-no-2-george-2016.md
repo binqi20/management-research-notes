@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-59-no-2/pdfs/George 2016 Bringing Africa In Promising
 text_path: "library/AMJ/vol-59-no-2/text/George 2016 Bringing Africa In Promising Directions for Management Research.txt"
 ingested_at: "2026-07-04"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "editorial"
 keywords: ["Africa", "management scholarship", "institutional voids", "building capabilities", "enabling opportunities", "leadership and governance", "natural resources", "organizational and social resilience"]
@@ -55,6 +57,9 @@ Not reported in paper
 **Research Question**
 The editorial asks why Africa should be brought into mainstream management research and theories. It aims to show how African contexts can both influence existing theories and generate new theory in management research.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Contextual premise: Africa combines fast growth, demographic change, institutional voids, resource constraints, weak infrastructure, informal markets, and sociopolitical heterogeneity.
 - Literature overview: The authors review management scholarship on Africa and group the existing literature into navigating institutional voids, developing capabilities, and enabling opportunities.
@@ -63,6 +68,12 @@ The editorial asks why Africa should be brought into mainstream management resea
 - Audience and purpose: The editorial invites management scholars to adopt Africa as a research context and to produce evidence useful to business executives and policy makers.
 
 The process is editorial and agenda-setting rather than causal. George and colleagues use Africa's institutional, economic, demographic, cultural, and ecological diversity to argue that management research can learn from contexts where firms must design around voids, build capabilities under resource constraints, and operate in informal or fragile institutions. The article turns a thematic overview of prior work into a research agenda for extending existing theory and building new theory from African phenomena.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes by reframing Africa as a theoretically generative context rather than only a setting for social-development concerns. It identifies how management theories about institutions, resources, governance, entrepreneurship, leadership, CSR, informal markets, and cross-cultural management can be tested, extended, or reworked through African evidence. It also organizes the existing literature into three broad categories and links them to future research domains.

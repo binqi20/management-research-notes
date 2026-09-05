@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-09-04"
-version: "0.62.0"
+date-released: "2026-09-05"
+version: "0.63.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,33 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.62.0
+  a published rubric) gates every note into the library. Version 0.63.0
+  (2026-09-05) continues the v3 backfill with Academy of Management Journal
+  volume 59 issues 3 and 2 — 31 notes, all v2 augmentations. The record
+  total remains 1,167; the tier census shifts from 61 v1, 336 v2, and 770 v3
+  to 61 v1, 305 v2, and 801 v3. All 31 notes validate and pass the full
+  independent 9-field rubric-v2 audit overall, with current hashes in scope.
+  First-pass verdicts were 268 SUPPORTED, 10 PARTIAL, and 1 UNSUPPORTED.
+  Parent source review produced 18 legacy-field repairs across 15 notes,
+  including 11 fields initially scored SUPPORTED. Fresh blind full-note
+  re-audits returned 134 SUPPORTED and 1 accepted PARTIAL out of 135. Final
+  verdicts are 275 SUPPORTED and 4 accepted PARTIALs out of 279, with 0
+  UNSUPPORTED and 0 CONTRADICTED. Bertrand's Future Research and Key
+  Findings, Holloway's Data & Measures, and Khanna's Future Research remain
+  unchanged: reconstructed audit inputs omit the supporting passages, while
+  parent reading of the recovered raw text confirms fidelity. Desai (2016),
+  AMJ 59-3, is retained with an explicit retraction statement opening Key
+  Findings. Bibliographic frontmatter and paper types are unchanged; SQLite,
+  parsed CSV, and BibTeX reconcile to 1,167 records, and BibTeX is
+  byte-identical. Full-library validation passed 1,167 of 1,167. This is the
+  first batch run end-to-end on gpt-6-astra (GPT-6 Astra) for augmentation
+  and audit, opening stamp era 30. Provenance eras are batches 01–07
+  claude-opus-4-8, 08–15 claude-opus-5, 16–19 gpt-5.6-sol, 20–23
+  claude-opus-5, 24–29 gpt-5.6-sol, and 30 gpt-6-astra. Cross-family
+  spot-audits scored 27/27 for batch 16, 27/27 for batch 24, and 25/27 for
+  batch 28; both batch-28 divergences were repaired in v0.62.0. Batch 30's
+  workshop review will run the next spot-audit as a new-model calibration;
+  no result is yet available. Earlier, version 0.62.0
   (2026-09-04) continues the v3 backfill with Academy of Management Journal
   volume 59 issues 5 and 4 — 32 notes, all v2 augmentations — and repairs two
   legacy fields in the already-v3 Luo (2017) note after the batch-28 workshop
@@ -772,7 +798,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.62.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.63.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

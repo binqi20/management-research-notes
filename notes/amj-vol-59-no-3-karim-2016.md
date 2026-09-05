@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/Karim 2016 Delaying Change Examining How
 text_path: "library/AMJ/vol-59-no-3/text/Karim 2016 Delaying Change Examining How Industry and Managerial Turbulence Impact Structural Realignment.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-quantitative"
 keywords: ["structural realignment", "structural recombination", "industry turbulence", "industry growth", "managerial turbulence", "top management team", "decision avoidance", "contingency theory"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "contingency theory and studies of organization design"
   methods_overview: "fixed-effects Poisson models"
   keywords_source: "structural realignment through business"
+  hypotheses_source: "form of executive TMT growth—has a negative"
+  measures_overview: "number of unit boundary changes"
+  findings_overview: "they reduce their recombination efforts during periods of industry turbulence"
 ---
 
 # Delaying Change: Examining How Industry and Managerial Turbulence Impact Structural Realignment
@@ -52,13 +57,36 @@ This paper examines when firms pursue structural realignment through business un
 **Research Question**
 The paper asks how and when firms align their structures with environmental changes. It examines when firms initiate structural realignment through business unit recombination under industry growth, industry turbulence, declining turbulence, and managerial turbulence in the top management team.
 
+**Hypotheses / Propositions**
+- H1: Industry growth experienced by a firm is positively related to its degree of structural recombination.
+- H2: Industry turbulence experienced by a firm is negatively related to its degree of structural recombination.
+- H3a: Reductions in industry turbulence are positively related to a firm's degree of structural recombination.
+- H3b: Reductions in industry turbulence dampen the negative relationship between industry turbulence and structural recombination.
+- H4: Industry growth dampens the negative relationship between industry turbulence and structural recombination.
+- H5a: Managerial turbulence in the form of TMT turnover is negatively related to structural recombination.
+- H5b: Managerial turbulence in the form of executive TMT growth is negatively related to structural recombination.
+
 **Mechanism Process**
 - IV(s): Industry growth or munificence, industry turbulence or dynamism, reductions in industry turbulence, TMT turnover, and increases in corporate team size.
 - DV(s): Degree of structural recombination, measured as a count of unit boundary changes within a period.
 - Mediators: Not reported in paper.
-- Moderators: Reduction in industry turbulence and the interaction of industry growth with industry turbulence are tested as contingent environmental conditions.
+- Moderators: Reduction in industry turbulence and industry growth are tested as contingent environmental conditions.
 
 The mechanism combines contingency theory with decision avoidance and group dynamics. Industry growth signals opportunities and encourages recombination, but industry turbulence makes cause-and-effect relationships harder to assess, leading decision makers to delay structural realignment. Declining turbulence makes recombination more likely because managers can process information and evaluate structural changes more effectively. Growth in TMT size also reduces recombination because a changing executive team has more difficulty reaching consensus around organizational design choices.
+
+**Data & Measures**
+The longitudinal archival study uses six editions of *The medical & healthcare marketplace guide* (1978, 1983, 1986, 1989, 1993, and 1997), covering firms operating in the U.S. medical marketplace, and annual Compustat industry data for 1973–1997. The final sample contains 171 firm-period observations from 46 firms in medical devices and pharmaceuticals. Table 4 reports 132 observations from 34 firms in Model 1 and 131 observations from 34 firms in Models 2–3; the paper states that 12 firms were dropped from the regressions for lacking variation in the dependent variable. The DV, degree of recombination, counts business-unit boundary changes within a period: combining two units or moving activities between two units counts as two events. Acquisitions and divestitures during that period are excluded, but subsequent recombination of previously acquired units is counted.
+
+Industry growth is the time slope from regressing industry sales on time, divided by mean industry sales; turbulence is the standard error of that slope divided by mean industry sales, entered in the models as logged dynamism. Measures for 28 four-digit NAICS market segments are averaged for each firm, weighting by its product-market participation. Dynamism reduction is earlier-period dynamism minus later-period dynamism; a positive value indicates declining turbulence. The paper also tests a dummy equal to one when dynamism declines. TMT turnover counts executives added to and removed from headquarters; growth in corporate team size is the net change in the number of headquarters executives. Interaction terms test whether dynamism reduction and industry growth moderate the turbulence–recombination relationship. Quasi maximum likelihood fixed-effects Poisson models use lagged predictors, firm controls, and period dummies, with conventional and robust standard errors. This is an associational panel design; lagging predictors addresses the authors' concern about reverse causality without establishing experimental identification.
+
+**Key Findings**
+- H1 receives qualified support: industry growth is positively associated with recombination in Table 4 Model 3 (b = 6.430, p < .05 with conventional standard errors; p < .10 with robust standard errors), but loses significance when dynamism reduction is included in Table 5.
+- H2 is supported: industry turbulence is negatively associated with recombination (Table 4 Model 3: b = −2.332, p < .01 with robust standard errors).
+- H3a is supported: declining turbulence predicts more recombination, including when controlling for the level of turbulence (Table 5 Model 5: b = 11.157, p < .01 with robust standard errors).
+- H3b has only weak support. The continuous reduction-by-turbulence interaction in Table 5 Model 6 is not significant. Using a reduction dummy in Model 7 yields a positive interaction (b = 2.336, p < .05 with conventional standard errors), which is not significant with robust standard errors.
+- H4 has only weak support: the growth-by-turbulence interaction is positive (Table 6 Model 8: b = 11.837, p < .05 with conventional standard errors) but not significant with robust standard errors.
+- H5a is not supported: TMT turnover is not significantly related to recombination. H5b is supported: growth in corporate team size is negatively associated with recombination (Table 4 Model 3: b = −0.086, p < .01 with robust standard errors). Additional checks find that team size itself is not significant.
+- Further analyses find no evidence of a U-shaped relationship or a tipping point at which greater industry turbulence becomes positively associated with recombination. The authors interpret the pattern as firms waiting for better environmental conditions before realigning; the study does not test the performance consequences of doing so.
 
 **Theoretical Contribution**
 The paper refines contingency theory by showing that environmental change does not automatically prompt structural realignment; turbulent conditions can delay action even when realignment might be expected. It contributes to organization design research by explaining when firms recombine business units, not only how recombination changes structure. It also links external industry turbulence and internal managerial turbulence as parallel constraints on decision makers' capacity to pursue structural change.

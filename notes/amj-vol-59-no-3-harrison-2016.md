@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/Harrison 2016 Spilling Outside the Box T
 text_path: "library/AMJ/vol-59-no-3/text/Harrison 2016 Spilling Outside the Box The Effects of Individuals’ Creative Behaviors at Work on Time Spent with their Spouses at Home.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-quantitative"
 keywords: ["creative behaviors", "work-family conflict", "resource allocation theory", "time spent with spouse", "idea validation", "openness to experience"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "work–family conflict and resource allocation"
   methods_overview: "coefficient obtained in HLM"
   keywords_source: "problem identification, information searching, idea generation"
+  hypotheses_source: "Hypothesis 2. Engaging in idea validation during"
+  measures_overview: "hours you spent with your spouse/significant other"
+  findings_overview: "variance-focused creative behaviors (problem identification, information searching, idea generation) predict less time spent with a spouse at home."
 ---
 
 # Spilling Outside the Box: The Effects of Individuals’ Creative Behaviors at Work on Time Spent with their Spouses at Home
@@ -51,6 +56,14 @@ Most research on creativity describes it as a net positive: producing new produc
 **Research Question**
 How do employees' daily creative behaviors at work affect the time they spend with their spouses at home and their spouses' evening affect? The paper asks whether variance-focused creative behaviors and selection-focused idea validation have distinct downstream consequences for home relationships.
 
+**Hypotheses / Propositions**
+- H1: Engaging in variance-focused behaviors at work on a given day is negatively related to time spent with one's spouse at home that evening.
+- H2: Engaging in idea validation at work on a given day is positively related to time spent with one's spouse at home that evening.
+- H3: Engaging in variance-focused behaviors at work is positively related to spousal negative affect at home that evening.
+- H4: Engaging in idea validation at work is negatively related to spousal negative affect at home that evening.
+- H5a–b: Openness to experience strengthens the negative relationship of variance-focused behaviors and the positive relationship of idea validation with time spent with one's spouse that evening.
+- H6a–b: Openness to experience strengthens the positive relationship of variance-focused behaviors and the negative relationship of idea validation with the spouse's negative affect that evening.
+
 **Mechanism Process**
 - IV(s): Variance-focused creative behaviors, including problem identification, information searching, and idea generation; selection-focused creative behavior, measured as idea validation.
 - DV(s): Time spent with spouse that evening; spouse evening negative affect.
@@ -59,17 +72,26 @@ How do employees' daily creative behaviors at work affect the time they spend wi
 
 The mechanism is that variance-focused creative behaviors absorb cognitive resources and can keep employees mentally engaged with work after they leave the workplace, reducing time allocated to spouses at home. Idea validation narrows possibilities and helps employees leave work cognitively bounded, making more resources available for spousal interaction and support. Openness to experience strengthens the time-allocation effects because highly open employees are especially engaged by variance-focused work and especially able to benefit from idea validation.
 
+**Data & Measures**
+The associational diary study recruited 139 working adults in Singapore; 108 worker–spouse couples supplied complete entry data and at least one matched diary day, yielding 685 fully matched days over two workweeks. Employees reported creative behaviors before leaving work and affect before bed; spouses completed paper surveys before bed. Analyses included only days with all three surveys. Problem identification, information searching, and idea generation used three, three, and five items, respectively, from Zhang and Bartol (2010), rated from 1 (strongly disagree) to 5 (strongly agree). These three behaviors formed a second-order variance-focused factor. Idea validation was a separate factor measured with five newly developed items about seeking opinions, explaining ideas to coworkers, assessing appropriateness, and obtaining feasibility feedback, using the same response scale. Spouses reported hours spent with the employee that evening and five negative-affect items from the ten-item Positive and Negative Affects Schedule (PANAS) short form; the other five items assessed positive affect. Employee evening affect used the same measure. Openness to experience was measured on the entry survey with ten items from the IPIP mapping of the NEO-PI-R. HLM accounted for days nested within dyads, with person-mean-centered daily predictors and grand-mean-centered openness. Spouse-negative-affect models controlled for time spent together. Cognitive resource depletion and availability were not directly measured.
+
+**Key Findings**
+- H1 and H2 were supported: variance-focused behaviors predicted less time with one's spouse (Table 4, Model 1: B = −0.45, p < .01), whereas idea validation predicted more time together (B = 0.25, p < .05).
+- H3 was unsupported: variance-focused behaviors were not significantly related to spouse negative affect (Table 5, Model 1: B = 0.07, p > .10). H4 was supported: idea validation predicted lower spouse negative affect (B = −0.06, p < .05), controlling for time together.
+- H5a and H5b were supported: openness strengthened the negative variance-focused-behavior association with time together (interaction B = −0.41, p < .05) and the positive idea-validation association (interaction B = 0.49, p < .01). Both associations were significant for highly open employees and not significantly different from zero for employees low in openness.
+- H6a and H6b were unsupported: openness did not significantly moderate either creative-behavior association with spouse negative affect. Table 5 reports interaction coefficients of 0.11 for variance-focused behaviors and 0.00 for idea validation. The regression tables report unstandardized coefficients and one-tailed significance tests. These diary associations do not directly establish the proposed cognitive-resource mechanism.
+
 **Theoretical Contribution**
-The paper shifts creativity research from treating creative ideas as the endpoint to examining the relational aftereffects of creative behaviors. It distinguishes variance-focused and selection-focused creative behaviors, showing that they can have opposite consequences for home relationships. It also extends work-family conflict and resource allocation theory by showing that desirable work behaviors can create or conserve resources that spill into the home domain.
+The paper shifts creativity research from treating creative ideas as the endpoint to examining the relational aftereffects of creative behaviors. It distinguishes variance-focused and selection-focused creative behaviors, showing that they can have opposite consequences for home relationships. It also extends work-family conflict and resource allocation theory by proposing cognitive resource availability as an explanation for how desirable work behaviors relate to home outcomes.
 
 **Practical Implication**
 Organizations and managers should consider the relational costs of creative work rather than assuming creativity is uniformly beneficial. Workers may benefit from ending the workday with idea validation or feedback-seeking practices that delimit open-ended creative work before going home. The findings also suggest that job design and creative-process norms should help employees manage transitions between intensive creative work and home life.
 
 **Limitations**
-The study does not directly measure the cognitive resources that are central to its theoretical mechanism, so resource depletion and availability are inferred from behavior and moderation patterns. The results may not generalize to all forms of highly engaging work, all occupations, or all spouse characteristics because the study focuses on creative behaviors in a Singapore worker-spouse sample. The design also does not observe the quality of feedback during idea validation or the qualitative nature of time spent with spouses.
+The study does not directly measure the cognitive resources that are central to its theoretical mechanism, so resource depletion and availability are inferred from behavior and moderation patterns. The study leaves open whether its patterns extend to other forms of highly engaging work, and it does not examine spouse attributes that may affect the work-family interface. The design also does not observe the quality of feedback during idea validation or the qualitative nature of time spent with spouses.
 
 **Future Research**
-Future research could directly measure cognitive mediators and test whether similar patterns occur in other forms of highly engaging work. Studies could examine spouse attributes, spouse employment status, and whether spouses join or interrupt employees' continuing creative thought processes. Qualitative or observational work could also clarify what employees and spouses actually do during additional time together after idea validation.
+Future research could directly measure cognitive mediators and test whether similar patterns occur in other forms of highly engaging work. Studies could examine spouse attributes, spouse employment status, and whether spouses join employees' continuing creative thought processes. Qualitative or observational work could also clarify what employees and spouses actually do during additional time together after idea validation.
 
 **APA 7th Citation**
 Harrison, S. H., & Wagner, D. T. (2016). Spilling outside the box: The effects of individuals’ creative behaviors at work on time spent with their spouses at home. *Academy of Management Journal*, 59(3), 841-859. https://doi.org/10.5465/amj.2013.0560

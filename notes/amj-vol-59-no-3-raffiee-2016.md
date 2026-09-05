@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-3/pdfs/Raffiee 2016 Micro-Foundations of Firm-S
 text_path: "library/AMJ/vol-59-no-3/text/Raffiee 2016 Micro-Foundations of Firm-Specific Human Capital When Do Employees Perceive Their Skills to be Firm-Specific.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-quantitative"
 keywords: ["firm-specific human capital", "perceived firm-specificity", "organizational tenure", "on-the-job training", "organizational commitment", "cognitive bias"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Drawing on human capital theory"
   methods_overview: "using maximum likelihood estimation"
   keywords_source: "firm-specific human capital as a source of sustained competitive advantage"
+  hypotheses_source: "Hypothesis 1b. Organizational tenure will be"
+  measures_overview: "Organizational tenure in years (log)"
+  findings_overview: "tenure is negatively related to FSHCPerceived"
 ---
 
 # Micro-Foundations of Firm-Specific Human Capital: When Do Employees Perceive Their Skills to be Firm-Specific?
@@ -51,6 +56,16 @@ Drawing on human capital theory, strategy scholars have emphasized firm-specific
 **Research Question**
 When do employees perceive their skills to be firm-specific? The paper asks whether perceptions of firm-specific human capital follow strategy theory's assumptions about tenure, employer-provided on-the-job training, and organizational commitment, or whether they instead reflect cognitive biases in employee judgment.
 
+**Hypotheses / Propositions**
+- H1a: Organizational tenure is positively related to employee perceptions of firm-specific human capital (FSHC).
+- H2a: Employer-provided on-the-job training (OJT) is positively related to employee perceptions of FSHC.
+- H3a: Organizational commitment is positively related to employee perceptions of FSHC.
+- H1b: Organizational tenure is negatively related to employee perceptions of FSHC.
+- H2b: Employer-provided OJT is negatively related to employee perceptions of FSHC.
+- H3b: Organizational commitment is negatively related to employee perceptions of FSHC.
+
+The a-hypotheses follow the strategy literature's information-efficiency assumptions; the competing b-hypotheses draw on cognitive psychology and concern ex-post perceptions. The authors disclose that the cognitive-bias hypotheses were developed after observing that perceptions did not follow the expected patterns, rather than ex ante.
+
 **Mechanism Process**
 - IV(s): Organizational tenure, employer-provided on-the-job training, and organizational commitment or job satisfaction.
 - DV(s): Employees' perceived firm-specific human capital.
@@ -58,6 +73,18 @@ When do employees perceive their skills to be firm-specific? The paper asks whet
 - Moderators: Not reported in paper.
 
 The mechanism is that existing strategy theory assumes informational efficiency: employees should recognize when tenure, OJT, and commitment are associated with firm-specific investments. Raffiee and Coff relax that assumption and argue that ex-post assessments may be shaped by cognitive dissonance, choice-supportive bias, recall bias, availability bias, false consensus bias, and projection bias. These biases can lead longer-tenured and more committed employees to perceive their skills as more general and transferable, even if actual firm-specific human capital has accumulated.
+
+**Data & Measures**
+The study uses two independent employee samples: an unbalanced KLIPS panel from 2002–2007 (5,419 individuals; 16,580 individual-year observations) and the 1994 NLSY79 cross-section (2,438 individuals). In both samples, organizational tenure is the natural log of years with the firm. The analyses estimate associations using ordered probit models with demographic, employment, firm-size, industry, and location controls, plus year controls for KLIPS; KLIPS standard errors are clustered by individual.
+
+- KLIPS: Perceived FSHC measures the usefulness of knowledge or skills learned in the current job at another workplace in the same industry and occupation. The analysis retains three ordered categories, from equally useful to hardly useful, and excludes respondents reporting no knowledge or skills learned. OJT is logged days of employer-initiated training intended to improve job skills and conducted on the job. Organizational commitment averages agreement ratings on items adapted from the Organizational Commitment Questionnaire (OCQ), using a 5-point scale (α = .91).
+- NLSY79: Respondents who lacked some required job skills when hired reported how they acquired those skills and how many would be useful doing the same work for another employer. Perceived FSHC uses five ordered response categories, from all or almost all transferable to none or almost none. OJT is the logged sum of hours spent learning through supervisors, coworkers, and self-guided instruction. A single-item, 4-point job-satisfaction measure proxies organizational commitment; the paper cautions that the constructs are theoretically distinct.
+
+**Key Findings**
+- KLIPS: H1b is supported over H1a: tenure is negatively associated with perceived FSHC (Table 4, full model 5: b = −.06, p < .01). H3b is supported over H3a: organizational commitment is negatively associated with perceived FSHC (b = −.37, p < .001). Initial support for H2b in model 3 (OJT b = −.06, p < .05) does not persist in the full model (b = −.04, p = .11); H2a is not supported.
+- NLSY79: Neither H1a nor H1b is supported, because tenure's negative coefficient is nonsignificant (Table 5, full model 13: b = −.02). Neither H2a nor H2b is supported; OJT is nonsignificant (rounded b = .00). Job satisfaction, used as the commitment proxy, is negatively associated with perceived FSHC (b = −.15, p < .001), supporting H3b over H3a subject to that measurement qualification.
+
+The negative tenure association therefore does not generalize across both samples, and the OJT results provide no stable support for either proposed direction. The commitment results remain negative in the reported survivorship checks, but the study cannot confirm particular cognitive biases or determine the accuracy of perceptions without objective FSHC measures.
 
 **Theoretical Contribution**
 The paper develops a micro-foundational account of firm-specific human capital by distinguishing objective specificity from employees' perceived specificity. It challenges resource-based and human-capital arguments that treat firm-specific skills as observable and similarly understood by employees, firms, and other labor-market actors. It also extends transaction cost economics and strategy research by showing that assumptions about asset specificity may depend on biased and potentially misaligned perceptions.

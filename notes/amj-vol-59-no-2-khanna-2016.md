@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-2/pdfs/Khanna 2016 Fail Often, Fail Big, and Fa
 text_path: "library/AMJ/vol-59-no-2/text/Khanna 2016 Fail Often, Fail Big, and Fail Fast Learning from Small Failures and R&D Performance in the Pharmaceutical Industry.txt"
 ingested_at: "2026-07-04"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-mixed"
 keywords: ["small failures", "experimentation", "R&D output", "R&D output quality", "organizational learning"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Building on organizational learning literature"
   methods_overview: "Arellano–Bond model"
   keywords_source: "small failures in experimentation"
+  hypotheses_source: "R&D output quality will increase."
+  measures_overview: "R&D output (patent count)"
+  findings_overview: "a decrease in R&D output (patent count) but an increase in the quality of the R&D output"
 ---
 
 # Fail Often, Fail Big, and Fail Fast? Learning from Small Failures and R&D Performance in the Pharmaceutical Industry
@@ -52,13 +57,30 @@ Do firms learn from their failed innovation attempts? Answering this question is
 **Research Question**
 The paper asks whether firms learn from failed innovation attempts and under what conditions small failures in experimentation affect subsequent R&D performance. It focuses on whether the number, importance, and timing of voluntary patent expirations shape firms' later R&D output and R&D output quality.
 
+**Hypotheses / Propositions**
+- H1a: As a firm's small failure experience increases, its subsequent R&D output will increase.
+- H1b: As a firm's small failure experience increases, its subsequent R&D output quality will increase.
+- H2a: As a firm experiences small failures of higher importance, its subsequent R&D output will increase.
+- H2b: As a firm experiences small failures of higher importance, its subsequent R&D output quality will increase.
+- H3a: As a firm experiences small failures earlier in the R&D process, its subsequent R&D output will increase.
+- H3b: As a firm experiences small failures earlier in the R&D process, its subsequent R&D output quality will increase.
+
 **Mechanism Process**
 - IV(s): Number of small failures, importance of small failures, and timing of small failures measured through premature patent expirations after 4, 8, or 12 years.
 - DV(s): R&D output measured as successful patent applications and R&D output quality measured as citations to successful patents.
 - Mediators: Not reported in paper.
-- Moderators: Timing and importance of failures are modeled as conditions shaping learning from small failures.
+- Moderators: Not reported in paper.
 
 The mechanism is a multilevel learning process in pharmaceutical R&D. Patent non-renewals give firms negative feedback about the value of prior R&D bets, allowing IP offices to adapt portfolio-selection filters and improve the quality of selected patents. Idea generation adapts more slowly because individual scientists receive limited direct feedback, search is path dependent, and personal incentives may make negative feedback difficult to absorb; this produces fewer patents in the short run but higher-quality patent output.
+
+**Data & Measures**
+The quantitative analysis uses USPTO patent-expiration data for pharmaceutical patent classes 514 and 424, retaining 97 firms active in patenting. Variables cover 1980–2002, with expirations observed during 1985–2002; the assembled panel has 2,015 firm-year observations. The estimation samples are smaller: Model 3 contains 849 observations from 81 firms for R&D output and 805 from 80 firms for output quality; the corresponding full models (Model 7) contain 447 observations from 71 firms and 451 from 71 firms, respectively. R&D output is the annual count of successful patent applications, excluding patents that were prematurely discontinued; output quality is total forward citations to successful patents, rather than average citations per patent. Both outcomes are log-transformed. Small-failure quantity is the annual number of patents discontinued for nonpayment of maintenance fees; timing is captured by separate counts discontinued after 4, 8, or 12 years from application; importance is citations accumulated by discontinued patents up to expiration, aggregated at the firm-year level. The observational dynamic panel uses Arellano–Bond estimation, first differencing, lagged outcome and failure variables, and lagged instruments to address endogeneity and firm-specific effects. The qualitative follow-up consists of informal interviews with patent attorneys and unstructured, in-depth interviews with four scientists who had worked and patented in sampled firms. Questions addressed patenting, nonrenewal decisions, and scientists' awareness and reactions; the paper reports no formal coding protocol.
+
+**Key Findings**
+- H1a was not supported: more failures were associated with lower R&D output (Table 3, Model 3: b = −0.002, p < .05). H1b was supported: failures were positively associated with output quality (Table 4, Model 3: b = 0.003, p < .01, using the table's significance marker).
+- H2a was not supported: failure importance was negatively associated with output (Table 3, Model 7: b = −0.003, p < .001). H2b was supported: importance was positively associated with output quality (Table 4, Model 7: b = 0.004, reported as significant at p < .001 in the results text).
+- H3a was not supported: in the full output model, failures after 4 and 12 years were not significant, while failures after 8 years were negatively associated with output (b = −0.01, p < .001). The authors report support for H3b: in the full quality model, failures after 4 years were positively associated with quality, although only at p < .10 (b = 0.004); the 8-year coefficient was not significant, and the 12-year coefficient was negative (b = −0.01, p < .01).
+- The exploratory interviews suggest that firm-level patent selection through the IP office adapts to failure feedback faster than scientists' idea generation. Supplementary lag analyses found a more immediate output decline and a more gradual quality increase, consistent with this proposed multilevel explanation; the interviews do not directly test the mechanism.
 
 **Theoretical Contribution**
 The paper extends organizational learning research by separating small failures in experimentation from catastrophic or operational failures. It shows that learning from failure can have opposite effects on different dimensions of innovation performance, decreasing patent output while increasing patent quality. It also contributes a multilevel account in which firm-level selection mechanisms respond faster to failure feedback than individual-level idea-generation mechanisms.

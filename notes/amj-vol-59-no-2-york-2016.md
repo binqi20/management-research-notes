@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-59-no-2/pdfs/York 2016 Converging Winds Logic Hybridi
 text_path: "library/AMJ/vol-59-no-2/text/York 2016 Converging Winds Logic Hybridization in the Colorado Wind Energy Field.txt"
 ingested_at: "2026-07-04"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-05"
 
 paper_type: "empirical-qualitative"
 keywords: ["logic hybridization", "field-level logics", "hybrid organizations", "wind energy", "social movement organizations", "economizing logic", "ecologizing logic"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "literature on institutional logics"
   methods_overview: "We engaged in an inductive study"
   keywords_source: "logic hybridization resulted"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we consolidated our 96 first-order codes to 13 themes."
+  findings_overview: "Electric utility firms and policy makers then formalized and embedded the new\n                          hybridized logic in the field."
 ---
 
 # Converging Winds: Logic Hybridization in the Colorado Wind Energy Field
@@ -52,6 +57,9 @@ This study explores the hybridization of field-level logics, a process that inte
 **Research Question**
 How can organizational responses to logic incompatibility and evolving field conditions lead to field-level logic hybridization? The paper asks how hybrid organizations contribute to that process and what distinguishes hybridization from blending, assimilation, and replacement.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Incompatibility between economizing and ecologizing logics; dominant and subordinate field logics; field centralization; social movement organizations; hybrid organizations; wind energy practices and governance arrangements.
 - Process / phases: Compromise through the Windsource program elaborated the dominant economizing logic; reframing around the Lamar wind farm assimilated wind energy into least-cost economizing criteria; contestation through Amendment 37 reduced power concentration; clean energy SMOs and wind firms legitimated hybrid frames and practices; utilities and policy makers embedded the hybridized logic through strategy and governance.
@@ -60,6 +68,15 @@ How can organizational responses to logic incompatibility and evolving field con
 - Boundary conditions: The process is most applicable to centralized fields with a dominant logic and high perceived incompatibility between logics.
 
 The process is recursive: organizational responses alter field-level conditions, and those altered conditions enable later responses. Compromise and assimilation do not end conflict because they preserve the dominant logic's goals, but they give subordinate actors legitimacy, learning, and broader public reach. Once contestation decentralizes the field, hybrid organizations can instantiate new frames, practices, and governance arrangements that make previously incompatible goals appear jointly achievable.
+
+**Data & Measures**
+The inductive historical case examines the Colorado wind energy field during 1999–2008. The corpus includes 34 semi-structured interviews with 30 participants, yielding 379 pages of transcripts, and naturalistic observation through site visits and meetings. Table 1 reports 546 newspaper articles accessed through LexisNexis, 58 pages of Colorado Public Utilities Commission (CPUC) press releases, 31 archived utility press releases, 10 resource plans totaling 364 pages, additional archival documents and reports, and 12 videos totaling 32 minutes. Interviews primarily informed actors' logics, motivations, and strategies; newspaper articles primarily informed changes in field-level logics, with archival materials providing further triangulation. The Denver Post articles were coded for economizing, ecologizing, and hybrid logic usage; regulatory and utility records informed changes in logic relationships and field centralization. Using NVivo 10, constant comparison, and informant validation of a timeline and narrative, two authors developed in-vivo first-order codes; all three discussed emerging themes, with one maintaining an outsider role. They consolidated 96 first-order codes into 13 second-order themes to develop the process model.
+
+**Key Findings**
+- Compromise through Windsource elaborated the dominant economizing logic and left logic incompatibility unresolved. Although it did not significantly change field centralization, it increased environmental SMOs' public credibility and helped them learn to use economizing arguments.
+- Reframing the Lamar wind farm as a least-cost option led to assimilation: wind energy became an accepted means to economizing goals, while ecologizing goals remained unacknowledged and power remained concentrated with utilities and regulators.
+- Frustration with these outcomes prompted contestation. The successful Amendment 37 campaign expanded the coalition to include the electorate, legitimized ecologizing at the state level, and reduced power concentration, opening opportunities for wind energy firms and clean energy SMOs.
+- These hybrid organizations linked economic and environmental goals through new frames, practices, and governance arrangements. Wind developers demonstrated economic viability, while clean energy SMOs legitimated the emerging hybridized logic; utilities and policy makers then embedded it across the field. The resulting model portrays hybridization as an emergent, recursive process in which organizational responses and field conditions shape each other, including through unintended consequences.
 
 **Theoretical Contribution**
 The paper defines field-level logic hybridization as the emergence of rules of action, interaction, and interpretation that integrate the goals of previously incompatible logics through material forms, practices, and governance arrangements. It distinguishes hybridization from blending, where elements coexist, and assimilation, where subordinate means serve dominant goals. It also extends institutional logics and hybrid organizing research by showing how compromise, reframing, contestation, legitimation, and embedding unfold as a field-level process rather than only as organizational responses.
