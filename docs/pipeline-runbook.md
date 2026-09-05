@@ -271,6 +271,19 @@ Propositions, Data & Measures, and Key Findings. Two tiers, two treatments:
   **`tools/verify_augmentation.py`** (the diff-guard, Layer 0 of the backfill)
   mechanically proves the do-not-touch guarantee against the git HEAD version
   after every augmentation, before the audit.
+- **Retracted papers (batch-30 desai-2016 precedent; user-approved 2026-09-05):**
+  a paper whose PDF or publisher record shows it was RETRACTED is RETAINED as a
+  note, never silently summarized as current knowledge. Required handling:
+  (a) the first line of Key Findings (v3) — or Research Question on v1/v2 —
+  states "This article has been retracted; the following summarizes its
+  originally reported findings."; (b) the README changelog and the GitHub
+  Release name the retraction and link the publisher's notice; (c) an
+  observations-queue entry records it; (d) bibliographic fields are NOT
+  edited — the note stays a faithful record of what was published, and no
+  acquisition/status field is repurposed as a retraction flag. Evidence for
+  the retraction is the PDF stamp in the extracted text and/or the publisher
+  notice; if neither can be verified, say so rather than asserting it. This
+  applies to new-issue ingestion and backfill alike.
 - **v1 notes → FULL RE-EXTRACTION** with the standard pipeline (they have no
   anchors to preserve; augmenting them cannot reach v3's 10-anchor bar). Same
   `paper_id`, note replaced. Regenerate bundles with
