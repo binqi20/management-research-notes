@@ -284,6 +284,29 @@ Propositions, Data & Measures, and Key Findings. Two tiers, two treatments:
   the retraction is the PDF stamp in the extracted text and/or the publisher
   notice; if neither can be verified, say so rather than asserting it. This
   applies to new-issue ingestion and backfill alike.
+- **Full-raw-text audit exception (batch-31 eggers precedent; user-approved
+  2026-09-06):** when a NEW-field verdict is UNSUPPORTED or CONTRADICTED
+  solely because the fitted audit text cannot show content the parent has
+  verified in the raw text (an appendix or passage lost to the interleaved-
+  references cut), the remedy is NOT to edit faithful content out and NOT to
+  reclassify the verdict. STOP and ask the user; if approved, dispatch a fresh
+  blind full nine-field audit whose only input is the UNABRIDGED raw text,
+  assemble it with the audit tool's own functions, and record `input_mode`,
+  the prompt sha256, and the authorization string in both the sidecar
+  provenance and the official report's `audit_context` (with the standard
+  fitting diagnostic kept alongside). The original verdicts stay in the
+  ledger; the release notes disclose the exception. This is a per-note,
+  user-gated path — never a default — and it lapses when the cut-point fix
+  lands.
+- **Limitations scope boundary (batch-31 decision; harrison b30 / ramus b26
+  precedents):** a Limitations field states the limitations the paper states
+  or acknowledges. Design facts (sample, setting, period, measures) may be
+  reported, but generalizability targets the paper does not name — "may not
+  generalize to other national media systems / private firms / later
+  institutional periods…" — are analyst inference and are REPAIRED, not
+  accepted, even when hedged and unattributed. Two blind PARTIAL verdicts on
+  such a sentence are agreement, not a "subjective split"; the two-round
+  convergence bound covers wording residue, not enumerated inferred scope.
 - **v1 notes → FULL RE-EXTRACTION** with the standard pipeline (they have no
   anchors to preserve; augmenting them cannot reach v3's 10-anchor bar). Same
   `paper_id`, note replaced. Regenerate bundles with

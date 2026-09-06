@@ -416,7 +416,7 @@ source: "{source}"                      # e.g., NBS/2026-02
 pdf_path: "{pdf_path}"                  # from trusted metadata
 text_path: "{text_path}"                # from trusted metadata
 ingested_at: "{YYYY-MM-DD}"             # from trusted metadata
-extraction_model: "{model}"             # COPY VERBATIM from the bundle — controlled provenance field; current Codex default is gpt-5.6-sol
+extraction_model: "{model}"             # COPY VERBATIM from the bundle — controlled provenance field; current Codex default is gpt-6-astra (gpt-5.6-sol through batch 29)
 extraction_version: "v3"                # v3 = adds Hypotheses / Data & Measures / Key Findings + their anchors
 
 paper_type: "{one of the 8 types}"
@@ -507,7 +507,7 @@ evidence:
 - Do not change anything inside the trusted bibliographic block. This explicitly
   includes `extraction_model`: copy the bundle's value verbatim. It records which
   model the *pipeline* was configured for, not your own self-assessment. The
-  current Codex pipeline default is `gpt-5.6-sol`, but older bundles may carry
+  current Codex pipeline default is `gpt-6-astra` (`gpt-5.6-sol` through batch 29), but older bundles may carry
   historical Claude model values; do not "correct" either direction while writing
   a new note.
 - Do not invent volumes, issues, or page numbers. If they are not in the trusted block,
