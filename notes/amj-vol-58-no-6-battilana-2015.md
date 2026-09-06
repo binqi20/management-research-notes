@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-58-no-6/pdfs/Battilana 2015 Harnessing Productive Ten
 text_path: "library/AMJ/vol-58-no-6/text/Battilana 2015 Harnessing Productive Tensions in Hybrid Organizations The Case of Work Integration Social Enterprises.txt"
 ingested_at: "2026-07-07"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-mixed"
 keywords: ["hybrid organizations", "work integration social enterprises", "social imprinting", "economic productivity", "social performance", "spaces of negotiation"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "founders’ imprinting on organizations"
   methods_overview: "generalized least squares (GLS) (random effects)"
   keywords_source: "work integration social enterprises (WISEs)"
+  hypotheses_source: "WISEs: Although social imprinting directly enhances a WISE’s social performance,"
+  measures_overview: "Accordingly, we coded social imprinting as “1” if"
+  findings_overview: "social imprinting also indirectly weakens social performance by negatively affecting\n                          economic productivity."
 ---
 
 # Harnessing Productive Tensions in Hybrid Organizations: The Case of Work Integration Social Enterprises
@@ -53,6 +58,11 @@ We examine the factors that influence the social performance of hybrid organizat
 **Research Question**
 The paper asks whether work integration social enterprises can sustainably achieve their social mission despite dependence on commercial customers and the risk of neglecting beneficiaries. It further asks how social imprinting and economic productivity jointly shape social performance, and how socially imprinted WISEs may mitigate the productivity costs of that imprint.
 
+**Hypotheses / Propositions**
+- H1: In WISEs, social imprinting at founding is positively associated with social performance.
+- H2: In WISEs, economic productivity is positively associated with social performance.
+- H3: In WISEs, social imprinting is negatively associated with economic productivity.
+
 **Mechanism Process**
 - IV(s): Social imprinting at founding, measured through social versus industry-specific APE codes; economic productivity, measured as standardized sales per employee.
 - DV(s): Social performance, measured as the positive graduation rate, or the share of beneficiaries who find regular jobs after completing their term at the WISE.
@@ -60,6 +70,16 @@ The paper asks whether work integration social enterprises can sustainably achie
 - Moderators / process conditions: The qualitative analysis identifies financial crisis as a partial unfreezing condition and spaces of negotiation, common understanding of the superordinate goal, and awareness of mutual interdependence as conditions that help socially imprinted WISEs manage the social-economic tension.
 
 The mechanism is paradoxical. Social imprinting keeps WISEs focused on beneficiaries by shaping hiring, routines, and social-mission-oriented systems, which improves social performance. The same imprint can reduce economic productivity because socially oriented staff and routines may underemphasize commercial discipline, thereby lowering the resources and signals that support beneficiary placement. The case comparison shows that structural differentiation alone does not resolve the paradox; it becomes productive when paired with spaces of negotiation that force social counselors and production supervisors to coordinate trade-offs while maintaining their distinct commitments.
+
+**Data & Measures**
+The quantitative component uses annual CNEI member surveys of WISEs in France for 2003–2007, yielding 641 establishment-year observations with complete information. The sample excludes establishments with fewer than 10 employees, founding-year observations, and temporary-work WISEs. Social performance is the percentage of beneficiaries completing their term in a given year who found a regular job with a contract lasting more than six months. Social imprinting is a proxy based on incorporation activity classifications: 1 for a social APE code and 0 for an industry-specific APE code. Economic productivity is annual sales divided by employees, including permanent staff and beneficiaries, standardized as deviations from the sector median in standard-deviation units. The observational panel analyses estimate associations using random-effects GLS with establishment effects, all independent and control variables lagged one year, year/region/sector dummies, and robust standard errors clustered by WISE. Controls cover organizational size, age and legal status; supervision and beneficiary demographics; subsidies, wages and founding periods.
+
+The qualitative component compares two socially imprinted, not-for-profit recycling WISEs, ALPHA and BETA, selected from the quantitative sample for different postcrisis productivity levels. Their histories were traced from founding through 2008. The corpus includes 20 onsite interviews, four follow-up phone interviews with case informants, 11 interviews with the broader WISE community, and archival materials such as by-laws and annual reports. Interviews were conducted in French, transcribed and translated to English. Within-case reports organized interview and archival evidence around nine emergent topics and tracked changes in responsibilities, work organization, rules, routines and governance. Cross-case analysis compared workforce composition, human resource policies, task design and organizational design; follow-up interviews with the executive directors checked the preliminary interpretations.
+
+**Key Findings**
+The authors report support for H1–H3, with different significance levels across specifications. For H1, social imprinting is positively associated with social performance in Table 2, Model 2 (b = 0.031, p < .10), and in the joint model including productivity (Model 4: b = 0.037, p < .05). For H2, economic productivity is positively associated with social performance (Model 3: b = 0.020, p < .05; Model 4: b = 0.022, p < .05). For H3, social imprinting is negatively associated with economic productivity (Table 3, Model 2: b = −0.334, p < .01). The tables use one-tailed tests for hypothesized relationships. Three mediation tests indicate a negative indirect relationship between social imprinting and social performance through economic productivity (all p < .05), alongside a positive direct relationship. These are results from an observational panel.
+
+The case comparison suggests how the negative productivity relationship may be mitigated. Both organizations responded to their 2003 financial crises by hiring leaders with social and business experience and separating social counseling from production responsibilities. ALPHA relied on its executive director to arbitrate tensions; conflicts persisted and productivity remained below the comparison-group average. BETA combined differentiation with mandatory meetings, joint work planning and beneficiary appraisal processes that created spaces of negotiation. These arrangements were associated with higher productivity while retaining a social focus. A shared understanding of the superordinate goal and awareness of mutual interdependence, sustained through socialization, enabled tensions to become productive rather than disappear. The two-case analysis identifies a possible coordination process, rather than an experimentally established effect.
 
 **Theoretical Contribution**
 The paper contributes to hybrid organizing by identifying social imprinting and economic productivity as empirically supported antecedents of social performance in WISEs. It advances the imprinting literature by showing that founding social imprints can have contradictory effects: directly supporting social performance while indirectly weakening it through lower productivity. It also contributes to coordination research by theorizing spaces of negotiation as formal arenas through which structurally differentiated groups in hybrid organizations can maintain productive tension rather than collapse into unresolved conflict.

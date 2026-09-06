@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-1/pdfs/Dineen 2016 Third Party Employment Brand
 text_path: "library/AMJ/vol-59-no-1/text/Dineen 2016 Third Party Employment Branding Human Capital Inflows and Outflows Following “Best Places to Work” Certifications.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-quantitative"
 keywords: ["Best Places to Work", "third party employment branding", "collective turnover", "applicant pool quality", "signaling theory", "employment branding"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "features grounded in signaling theory"
   methods_overview: "archival and survey data from 624 BPTW participants"
   keywords_source: "third party employment branding occurrences relate to key human capital outcomes"
+  hypotheses_source: "negatively associated with collective turnover"
+  measures_overview: "the number of certifications (0, 1, or 2) organizations"
+  findings_overview: "certifications are associated with lower turnover rates"
 ---
 
 # Third Party Employment Branding: Human Capital Inflows and Outflows Following “Best Places to Work” Certifications
@@ -52,6 +57,15 @@ evidence:
 **Research Question**
 How do single and repeated third party employment branding signals, specifically BPTW certifications, relate to firm-level human capital outflows and inflows? The paper asks whether certification lowers collective turnover, whether repeated certification follows a crystallization or celebrity pattern, and whether company size and industry job openings condition applicant pool quality effects.
 
+**Hypotheses / Propositions**
+- H1: Third party employment branding, in the form of BPTW certifications, will be negatively associated with collective turnover rates.
+- H2: Firm size will moderate this negative relationship: weaker in larger firms and stronger in smaller firms.
+- H3: Industry job openings will moderate this negative relationship: weaker when openings are scarcer and stronger when openings are more plentiful.
+- H4A (crystallization): Turnover will be relatively higher with zero or one certifications and relatively lower with repeated certifications.
+- H4B (celebrity, competing with H4A): Turnover will be relatively higher with zero certifications and relatively lower with one or more certifications.
+- H5: Company size will moderate the certification–applicant pool quality relationship: negative for smaller companies and positive for larger companies.
+- H6: Industry job openings will moderate the certification–applicant pool quality relationship: negative when openings are more plentiful and positive when openings are scarcer.
+
 **Mechanism Process**
 - IV(s): BPTW certifications, operationalized as the number of certifications achieved during the 2011-2012 competition cycles, plus supplemental analyses of certification ranking.
 - DV(s): 2013 voluntary collective turnover rates and key informant perceptions of 2013 applicant pool quality.
@@ -59,6 +73,20 @@ How do single and repeated third party employment branding signals, specifically
 - Moderators: Company size and industry job openings.
 
 The proposed mechanism is that third party certifications provide credible and comparable employment-branding signals. For incumbents, certification strengthens identification and makes leaving seem less attractive relative to uncertified alternatives, lowering collective turnover. For job seekers, certification affects applicant pool quality through competing heuristic and sorting logics, with the observed effects stronger for smaller firms and when job openings are scarcer.
+
+**Data & Measures**
+The single archival and survey study used 2011–2013 data from an independent organizer of annual BPTW competitions. Of 1,815 initial participants with at least one outcome in 2011, 834 participated in all three years and supplied at least one 2013 outcome, across 15 programs in the United States and one in Canada. Industry matching and other missing data yielded 624 cases used in at least one analysis. Tables 3–4 report 617 turnover cases; Table 5 reports 466 applicant pool quality cases. These are competition entries, with some companies entering multiple competitions; duplicate entries reporting identical firm-wide turnover were removed according to the paper's stated criterion.
+
+The focal predictor was the organizer-supplied number of certifications achieved in 2011–2012 (0, 1, or 2). Voluntary collective turnover was the employer representative's reported percentage for the last fiscal year, with standardized instructions covering full- and part-time payroll employees. Applicant pool quality was a four-item, five-point agreement measure adapted from Collins and Han (2004), assessing applicants' skills relative to company needs, overall pool quality, interview suitability, and skills/abilities relative to position requirements; alphas were .89 in 2011 and .86 in 2013. Neither outcome was used in the certification algorithm. Company size was the natural log of the 2013 full- plus part-time employee count. Industry job openings were the average of the 12 monthly 2013 BLS industry job opening rates, matched to participants' industries.
+
+Regressions controlled for geographic region, certification status as of 2011, the corresponding 2011 outcome, and industry-standardized salary, diversity, and HR-practice indices for 2011 and 2013. Weighted effects-coded contrasts compared zero certifications with one or two, and two certifications with zero or one; those models also included industry dummy controls. Supplemental analyses used average 2011–2012 certification rank and favorable percentage changes in rank. The design estimates associations and does not directly establish causation.
+
+**Key Findings**
+H1 was supported: certifications were negatively associated with 2013 turnover (Table 3, Model 2: standardized β = −.10, p < .05; ΔR² = .01). Neither firm size nor industry job openings significantly moderated this relationship, so H2 and H3 were unsupported. The competing contrast tests supported H4B, not H4A: turnover was higher with zero certifications than with one or two (Table 4: b = 4.36, SE = 1.63, p < .01), whereas the two-versus-zero-or-one contrast was nonsignificant (b = .10, SE = .57). Turnover was lower with one certification than none and essentially the same with one or two.
+
+For applicant pool quality, the size interaction was significant but counter to H5 (Table 5: β = −.22, p < .05). Certifications were positively associated with quality among smaller companies (simple-slope t = 2.10, p < .05), with no significant relationship among larger companies. H6 received partial support: the job-openings interaction was marginally significant (Table 5: β = −.15, p < .10), with a marginal positive relationship when openings were scarcer (t = 1.73, p < .09) and no significant relationship when openings were more plentiful.
+
+Supplemental analyses among certified companies associated better average rankings with lower 2013 turnover and favorable percentage changes in rankings with higher 2013 applicant pool quality (each ΔR² = .01, p < .05). The proposed individual-level identification, signal interpretation, and other mediating processes were not directly measured.
 
 **Theoretical Contribution**
 The paper extends signaling theory by treating third parties as signal transmitters whose certifications add credibility and comparability to employment-branding claims. It broadens employment branding research beyond applicant attraction by showing that external branding signals can also matter for incumbent retention and collective turnover. It also develops the crystallization-versus-celebrity distinction for repeated signals, finding evidence more consistent with diminishing marginal turnover benefits after the initial certification.

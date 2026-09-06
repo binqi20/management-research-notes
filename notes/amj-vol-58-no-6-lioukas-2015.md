@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-6/pdfs/Lioukas 2015 Isolating Trust Outcomes fr
 text_path: "library/AMJ/vol-58-no-6/text/Lioukas 2015 Isolating Trust Outcomes from Exchange Relationships Social Exchange and Learning Benefits of Prior Ties in Alliances.txt"
 ingested_at: "2026-07-07"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-quantitative"
 keywords: ["social exchange theory", "trust", "prior ties", "strategic alliances", "learning", "partner knowledge", "institutionalization-based trust", "affect-based trust", "market overlap", "cultural similarity"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Social exchange theory is a broad theory"
   methods_overview: "We used a combination of partial least squares"
   keywords_source: "prior ties generally lead to learning about a partner’s anticipated behavioral patterns"
+  hypotheses_source: "have a positive effect on affect-based trust."
+  measures_overview: "affect-based trust developed by McAllister (1995)."
+  findings_overview: "prior ties generally lead to learning about a partner’s anticipated behavioral patterns,"
 ---
 
 # Isolating Trust Outcomes from Exchange Relationships: Social Exchange and Learning Benefits of Prior Ties in Alliances
@@ -51,6 +56,16 @@ Social exchange theory is a broad theory that has been used to explain trust as 
 **Research Question**
 The paper asks whether prior alliance ties between firms generate the trust outcomes presumed by social exchange theory, or whether they more generally generate learning about a partner's anticipated behavior. It also asks when prior ties are more likely to produce institutionalization-based and affect-based trust, focusing on market overlap and cultural similarity as boundary conditions.
 
+**Hypotheses / Propositions**
+- H1: Prior ties between alliance partners have a positive effect on trust based on institutionalization of norms of reciprocity and equity.
+- H2: Prior ties between alliance partners have a positive effect on affect-based trust.
+- H3: Prior ties between alliance partners have a positive effect on knowledge about a partner's anticipated patterns of behavior.
+- H4: The effects of prior ties on institutionalization-based and affect-based trust are less pronounced than their effect on knowledge about a partner's anticipated patterns of behavior.
+- H5a: The positive influence of prior ties on institutionalization-based trust is more pronounced when partners have lower market overlap.
+- H5b: The positive influence of prior ties on affect-based trust is more pronounced when partners have lower market overlap.
+- H6a: The positive influence of prior ties on institutionalization-based trust is more pronounced when partners have greater similarity in their organizational cultures.
+- H6b: The positive influence of prior ties on affect-based trust is more pronounced when partners have greater similarity in their organizational cultures.
+
 **Mechanism Process**
 - IV(s): Prior ties between alliance partners.
 - DV(s): Institutionalization-based trust, affect-based trust, and partner knowledge about anticipated behavioral patterns.
@@ -59,11 +74,21 @@ The paper asks whether prior alliance ties between firms generate the trust outc
 
 The mechanism separates social exchange from learning. Prior ties create opportunities for reciprocal benefits and emotional attachments, but those trust-building processes require stronger behavioral conditions than repeated contact alone. Repeated alliances more readily create partner knowledge because firms observe how partners behave across circumstances and learn to anticipate opportunism and coordination needs. The results support this distinction: prior ties predict partner knowledge overall, while affect-based trust emerges from prior ties mainly when market overlap is low and cultural similarity is high.
 
+**Data & Measures**
+The cross-sectional web survey targeted ASAP members, mostly representing U.S. firms, and alumni of an executive program on strategic alliances at a major European business school. Each respondent selected one alliance agreement and served as its single key informant. The survey yielded 230 agreements (104 ASAP members and 126 executive-program alumni); five exclusions left 225 agreements, and listwise deletion produced the 189 observations used in all models in Table 3. The design estimates associations between prior ties and the three trust and learning outcomes.
+
+The survey used five-point Likert-type agreement scales. Institutionalization-based trust comprised four items about established norms of avoiding damaging demands, acting in the alliance's interest, responding flexibly, and treating partners fairly beyond formal obligations (α = .79). Affect-based trust used five items based on McAllister (1995), covering reciprocal sharing of feelings and problems, listening and caring, emotional loss if colleagues left, and friendship above material self-interest (α = .77). Partner knowledge comprised four items on predicting reactions, knowing goals and priorities rather than fearing hidden agendas (reverse-coded item), recognizing lying or withheld information, and predicting future moves (α = .70). Prior ties was the reported number of earlier alliance agreements with the same partner, transformed as ln(1 + number of agreements). Market overlap multiplied three five-point items on pre-alliance overlap in product markets, geographic markets, and customer segments (range 1–125). Cultural similarity comprised three five-point items on organizational cultures, management and operating styles, and decision-making processes at the outset of collaboration (α = .84). Partial least squares assessed measurement reliability and validity and supplied factor scores; seemingly unrelated regression estimated the three outcomes jointly, including interactions, sector fixed effects, and controls for environmental uncertainty, asset specificity, link versus scale alliance, equity joint venture, international alliance, alliance age, and firm size.
+
+**Key Findings**
+In Table 3, Model 2, prior ties was positively associated with partner knowledge (b = .53, p < .05), supporting H3, but its associations with institutionalization-based trust (b = .47) and affect-based trust (b = .14) were nonsignificant, leaving H1 and H2 unsupported. The authors interpret this contrast as support for H4: partner knowledge was the only outcome significantly associated with prior ties on an overall basis.
+
+The interactions of prior ties with market overlap and cultural similarity were nonsignificant for institutionalization-based trust, leaving H5a and H6a unsupported. For affect-based trust, the prior ties × market overlap interaction was negative (Model 3: b = −.03, p < .05), supporting H5b; the estimated association of prior ties with affect-based trust was positive below a market-overlap value of 29.67 and negative at higher overlap. The prior ties × cultural similarity interaction was positive (Model 4: b = .24, p < .05), supporting H6b, with the positive association appearing only at high cultural similarity. Model 5 retained both affect-based trust interactions (market overlap: b = −.03; cultural similarity: b = .26; both p < .05). Thus, the supported contingencies concern affect-based trust, while the general association with partner knowledge is distinct from the unsupported general trust predictions.
+
 **Theoretical Contribution**
 The paper tightens social exchange theory by showing that repeated exchange should not automatically be treated as evidence of trust. It distinguishes trust rooted in reciprocity from learning-based knowledge about a partner's future behavior, thereby separating social exchange outcomes from learning and knowledge-based outcomes in strategic alliances. It also identifies partner competition and cultural fit as boundary conditions for when the trust predictions of social exchange theory apply.
 
 **Practical Implication**
-Researchers and managers should be cautious about treating prior ties as a simple proxy for trust in alliance relationships. Prior collaborations may give partners useful knowledge about how the other firm will behave, including when opportunism or coordination problems may arise, without necessarily producing institutionalized or affective trust. Alliance managers seeking trust from repeated ties should attend to competitive overlap and cultural similarity because these conditions shape whether reciprocal, trust-building behavior is likely to develop.
+Researchers using secondary alliance data should be cautious about treating prior ties as a simple proxy for trust. Prior collaborations may give partners useful knowledge about how the other firm will behave, including when opportunism or coordination problems may arise, without necessarily producing institutionalized or affective trust. Studies using prior ties as a trust proxy may benefit from inspecting their alliance samples and the specific conditions applying to those alliances, including competitive overlap and cultural similarity.
 
 **Limitations**
 The authors note that they focus only on prior ties, leaving other routes to trust or partner knowledge, such as common third-party ties, industrial clusters, or technical committees, for future work. The study also uses a cross-sectional design, which limits tests of mediation from prior ties through trust and learning outcomes to alliance performance. Its survey design relies on single key informants for alliance agreements, although the authors use procedural and statistical checks to mitigate common method concerns.

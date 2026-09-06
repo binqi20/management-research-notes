@@ -549,6 +549,55 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.64.0 v3 backfill batch 31 (2026-09-06, 1,167 notes):**
+  Upgrades **AMJ volume 59 issue 1 and volume 58 issue 6, 29 notes total**
+  to v3, all through v2 augmentation. The record total remains **1,167**;
+  the census shifts from 61 v1 / 305 v2 / 801 v3 to **61 v1 / 276 v2 /
+  830 v3**. All 29 notes validate. The initial augmentation guard passed
+  all 29; the final guard passes 12 and flags exactly the registered legacy
+  sections repaired in 17 notes. Protected frontmatter, historical extraction
+  provenance, and the three new v3 sections are unchanged during repairs.
+
+  First-pass blind 9-field audits returned **249 SUPPORTED, 11 PARTIAL,
+  and 1 UNSUPPORTED** out of 261 judgments. Parent source review produced
+  **24 legacy-field repairs across 17 notes**, including **17 fields
+  initially scored SUPPORTED**. Repairs correct variable roles, theoretical
+  versus empirical support, and unsupported practical or future-research
+  scope. Every repaired note received a fresh blind full-note audit; all
+  24 repaired fields are now SUPPORTED. The **final state is 257 SUPPORTED
+  and 4 accepted PARTIALs out of 261**, with **0 UNSUPPORTED and 0
+  CONTRADICTED**. All 29 notes pass overall with current note and source
+  hashes. Graffin's Limitations and Lanzolla's Future Research retain
+  faithful claims whose supporting passages are absent from fitted audit
+  inputs. Shani's and Ayyagari's Limitations retain source-grounded sample
+  scope qualifications after two-round framing disagreements at 0% strip.
+  All four acceptances have reconstruction proofs and subsequent source
+  readings in the private ledger.
+
+  Eggers's Data & Measures received UNSUPPORTED in two standard audits
+  because fitting removed three appendix methods facts at a 12% strip
+  ratio. With explicit user approval, a fresh blind auditor received the
+  complete raw source and returned **9/9 SUPPORTED**. The official report
+  was assembled with the audit tool's functions and explicit unabridged-input
+  provenance; the original verdicts remain preserved. The faithful note,
+  tools, and workflow documents were unchanged by this exception.
+
+  Bibliographic frontmatter is byte-identical to the HEAD baseline, so
+  scoped CrossRef was skipped. Sequential SQLite, CSV, and BibTeX rebuilds
+  reconcile to **1,167 records**, with unchanged paper types and byte-identical
+  BibTeX. Full-library validation passed **1,167/1,167**; direct regressions
+  passed **22/22** for PDF-text fitting and **15/15** for augmentation.
+
+  This is the **second batch run end-to-end on `gpt-6-astra` (GPT-6 Astra)**
+  for augmentation and audit. Provenance eras are batches 01–07
+  `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23
+  `claude-opus-5`, 24–29 `gpt-5.6-sol`, and 30–31 `gpt-6-astra`.
+  Cross-family calibration scored **27/27** for batch 16, **27/27** for
+  batch 24, **25/27** for batch 28 (both divergences repaired in v0.62.0),
+  and **26/27** for batch 30 (the divergence adjudicated faithful under
+  strip blindness). No spot-audit is scheduled for this batch's review;
+  the next calibration runs at **batch 32's workshop review**.
+
 - **v0.63.0 v3 backfill batch 30 (2026-09-05, 1,167 notes):**
   Upgrades **AMJ volume 59 issues 3 and 2, 31 notes total** to the v3
   schema, all through v2 augmentation. The record total remains **1,167**;
@@ -1623,7 +1672,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 305 v2 notes, and 801 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 276 v2 notes, and 830 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -1756,7 +1805,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.63.0},
+  version      = {0.64.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

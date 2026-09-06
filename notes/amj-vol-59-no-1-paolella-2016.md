@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-1/pdfs/Paolella 2016 Category Spanning, Evaluat
 text_path: "library/AMJ/vol-59-no-1/text/Paolella 2016 Category Spanning, Evaluation, and Performance Revised Theory and Test on the Corporate Law Market.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-quantitative"
 keywords: ["category spanning", "evaluation", "performance", "clients’ theory of value", "inclusive category combination", "corporate legal services", "goal-based view"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "goal-based view starts with what audiences"
   methods_overview: "clustered-robust standard errors"
   keywords_source: "category-spanning organizations receive lower evaluation"
+  hypotheses_source: "Hypothesis 3. A producer’s evaluation mediates"
+  measures_overview: "that is, 1 minus the sum of the squared GoMs of each"
+  findings_overview: "category spanners receive a better evaluation"
 ---
 
 # Category Spanning, Evaluation, and Performance: Revised Theory and Test on the Corporate Law Market
@@ -51,6 +56,11 @@ Studies suggest that category-spanning organizations receive lower evaluation an
 **Research Question**
 The paper asks when category spanning harms or helps organizational evaluation and performance. It examines whether clients’ theory of value in complex corporate legal-service markets makes category-spanning law firms more positively evaluated, especially when their category combinations are more inclusive, and whether evaluation mediates the category spanning-performance relationship.
 
+**Hypotheses / Propositions**
+- H1: When outcome requirements are complex, category spanning will be associated with more positive evaluation.
+- H2: The adoption of a more inclusive category combination will positively influence the relationship between category spanning and evaluation.
+- H3: A producer’s evaluation partially mediates the relationship between category spanning and performance.
+
 **Mechanism Process**
 - IV(s): Category spanning by law firms; inclusive category combination of the spanned practice areas.
 - DV(s): Evaluation in professional legal directories and performance measured through branch-office revenue estimates.
@@ -58,6 +68,19 @@ The paper asks when category spanning harms or helps organizational evaluation a
 - Moderators: Inclusive category combination positively moderates the category spanning-evaluation relationship.
 
 The mechanism is that complex, high-stakes, nonrecurrent client problems shift valuation from a prototype-based view toward a goal-based view. Under this theory of value, clients evaluate category-spanning producers as more capable of handling complex legal requirements rather than as confusing departures from a single category. More inclusive category combinations make the span more salient and coherent, increasing evaluation; higher evaluation then transfers partly into revenue performance.
+
+**Data & Measures**
+The single longitudinal study covers corporate law firms ranked in at least one practice by at least one of three directories: Chambers & Partners, The Legal 500, and PLC Which Lawyer. Table 2 reports 2,180 observations for 377 firm–location dyads belonging to 288 worldwide firms in London, New York City, and Paris. Data were collected for 2000–2010; outcomes begin in 2001, with independent and control variables lagged one year. Complementary financial and organizational data came from The Lawyer for London, American Lawyer for New York City, and Juristes et Associés for Paris.
+
+Evaluation, the outcome for H1–H2 and mediator for H3, averages normalized directory rankings across guides within each ranked practice and then across the branch office’s ranked practices. Performance estimates branch-office revenue by multiplying worldwide revenue per lawyer by the branch office’s number of lawyers, expressed in hundreds of millions of international dollars adjusted for purchasing power parity using World Bank estimates. Category spanning equals one minus the sum of squared grades of membership across eight practice categories, ranging from 0 for specialists to .875 for firms covering all eight. Inclusive category combination, the moderator, is the logged sum of the frequencies of the lower-degree category combinations contained within a firm’s portfolio in its location and year; specialists receive zero.
+
+The main analysis uses random-effects GLS with standard errors clustered at the worldwide-firm level and controls for categorical consensus and contrast, tenure in guides, size, age, internationalization, advertising, and category, nationality, guide, year, and location indicators. This observational panel estimates associations. Robustness analyses include a spanners-only subset (Table 3: 1,592 observations, 291 firm–location dyads, 217 worldwide firms) and random-effects two-stage least squares on the full sample.
+
+**Key Findings**
+- H1 is supported: category spanning is positively associated with evaluation (Table 2, Model 3: b = .07, SE = .019, p < .001).
+- H2 is supported: inclusive category combination strengthens the positive spanning–evaluation relationship (Model 3 interaction: b = .01, SE = .005, p < .01).
+- H3 receives support for partial mediation. Evaluation is positively associated with performance (Model 4: b = .94, SE = .169, p < .001); the reported product-of-coefficients indirect estimate is .069 (SE = .021, p < .01), and the authors report that evaluation mediates 37% of the total spanning–performance effect. The remaining direct category-spanning coefficient is positive but only marginally significant under the table’s notation (b = .11, p < .10).
+- In the spanners-only subset, category spanning and its interaction with inclusiveness remain positively associated with evaluation (Table 3, Model 5: b = .05, p < .05, and b = .01, p < .01, respectively). Evaluation remains positively associated with performance (Model 6: b = 1.69, p < .001), while the direct spanning–performance coefficient is not significant (b = −.13).
 
 **Theoretical Contribution**
 The paper revises category-spanning theory by showing that audience penalties are contingent on the audience’s theory of value rather than inherent to category spanning. It links category spanning, evaluation, and performance in one model and shows that evaluation mediates part of the effect of spanning on performance. It also adds category-combination inclusiveness to category research, arguing that audiences assess configurations within a whole category system rather than isolated category distances alone.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-6/pdfs/Kish-Gephart 2015 You Don’t Forget You
 text_path: "library/AMJ/vol-58-no-6/text/Kish-Gephart 2015 You Don’t Forget Your Roots The Influence of CEO Social Class Background on Strategic Risk Taking.txt"
 ingested_at: "2026-07-07"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-quantitative"
 keywords: ["CEO social class background", "social class origins", "strategic risk taking", "upper echelons", "imprinting theory", "elite education", "general management functional background"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "Drawing on imprinting theory"
   methods_overview: "squared (2SLS) instrumental variable regressions"
   keywords_source: "firm risk taking"
+  hypotheses_source: "origins engage in higher levels of strategic risk"
+  measures_overview: "a single composite indicator of firm risk taking."
+  findings_overview: "thus failing to support Hypothesis 3a."
 ---
 
 # You Don’t Forget Your Roots: The Influence of CEO Social Class Background on Strategic Risk Taking
@@ -51,6 +56,14 @@ Social class is increasingly recognized as a powerful force in people’s lives.
 **Research Question**
 The paper asks whether CEOs' perceived childhood social class origins shape firm-level strategic risk taking after they have reached the corporate elite. It further asks whether later career experiences, specifically elite education and general management functional background, strengthen or weaken the influence of those social class imprints.
 
+**Hypotheses / Propositions**
+- H1: Compared with their middle class counterparts, CEOs of upper social class origins engage in higher levels of strategic risk taking.
+- H2: Compared with their middle class counterparts, CEOs of lower social class origins engage in higher levels of strategic risk taking.
+- H3a: Elite education moderates the relationship between upper social class origins and risk taking, amplifying these CEOs' tendency to engage in risk taking.
+- H3b: Elite education moderates the relationship between lower social class origins and risk taking, reducing these CEOs' tendency to engage in risk taking.
+- H4a: A general management functional background moderates the relationship between upper social class origins and risk taking, amplifying these CEOs' tendency to engage in risk taking.
+- H4b: A general management functional background moderates the relationship between lower social class origins and risk taking, amplifying these CEOs' tendency to engage in risk taking.
+
 **Mechanism Process**
 - IV(s): CEO perceived social class origins, modeled as upper social class origins and lower social class origins relative to middle social class origins.
 - DV(s): Strategic risk taking, measured as a composite of R&D expenditures, capital expenditures, and long-term debt at a one-year lag.
@@ -58,6 +71,19 @@ The paper asks whether CEOs' perceived childhood social class origins shape firm
 - Moderators: Elite education and general management functional background.
 
 The proposed mechanism is an imprinting process linking childhood social class experiences to later executive risk preferences. Upper-class origins provide safety nets, perceived control, and opportunity orientation, while lower-class origins can make middle-class status maintenance less central and increase willingness to accept downside risk; both are theorized to produce more strategic risk taking than middle-class origins. Elite education reduces risk taking among lower-class-origin CEOs in the main endogeneity-corrected models, while general management functional background amplifies the risk-taking tendency for CEOs from both upper and lower social class origins by broadening networks, experience, and perceived strategic options.
+
+**Data & Measures**
+An August 2012 mail survey of current S&P1500 CEOs elicited responses from 272 executives, seven of whom declined participation. CEO background data came from Execucomp, company websites and annual reports, Businessweek.com, and Forbes.com; firm data came from the Center for Research in Security Prices (CRSP) and Compustat. The panel comprised 265 executives and 308 unique CEO-firm combinations over 2002–2011. The Methods text reports 1,042 final regression observations, whereas Table 2 reports N = 1,032 for each of its five models; the paper does not explain this discrepancy.
+
+Perceived childhood social class was measured by asking CEOs to classify their family's socioeconomic situation while growing up into lower, lower-middle, middle, upper-middle, or upper class. The lower two and upper two categories were combined into lower-origin and upper-origin indicators, with middle origins as the comparison category. In a validation subset of 31 interviewed CEOs, coded parental occupation and education correlated with perceived origins at 0.68 and 0.63, respectively (both p < .001). Strategic risk taking was a single factor-based composite of unscaled R&D expenditures, capital expenditures, and long-term debt, measured at t + 1; the factor explained 53% of variance, with loadings of 0.66, 0.81, and 0.71, respectively.
+
+Elite education was coded 0 for no formal four-year degree, 1 for a nonelite undergraduate degree, 2 for an elite undergraduate degree, and 3 when both degrees were from elite universities, using the elite-university list reported in Finkelstein (1992). General management functional background was an indicator for careers that did not fit the throughput, output, or peripheral functional categories (39% of CEOs); peripheral background was the regression baseline. The authors estimated endogeneity-corrected 2SLS panel models, instrumenting elite education with an honorary PhD indicator and the number of external board appointments. Controls included prior risk taking, firm and CEO characteristics, industry conditions, industry experience, and year indicators. The design combines retrospective self-reports with archival outcomes and does not directly observe executive decision processes.
+
+**Key Findings**
+- H1 and H2 were supported in Table 2's main-effects Model 2: compared with middle-origin CEOs, upper-origin CEOs had higher strategic risk taking (coefficient = 0.09, p < .001), as did lower-origin CEOs (0.03, p < .05). Post hoc tests also found greater risk taking among upper-origin than lower-origin CEOs (p < .001).
+- H3a was not supported in Model 3: the upper-origin × elite education interaction was nonsignificant. H3b was supported: the lower-origin × elite education interaction was negative (−0.14, p < .05), indicating reduced risk taking with elite education among lower-origin CEOs. The full model retained this moderation pattern.
+- H4a and H4b were supported in Model 4: general management functional background positively moderated the upper-origin relationship (0.10, p < .01) and the lower-origin relationship (0.10, p < .001). Both interactions remained positive and significant in the full model (0.07 and 0.06, respectively, both p < .05).
+- The elite-education results were sensitive to the correction used: in the Heckman maximum likelihood self-selection model, H3a became supported and H3b was no longer supported, while the other hypothesis conclusions were substantively unchanged. The authors retained the models correcting elite-education endogeneity as their primary analyses.
 
 **Theoretical Contribution**
 The paper contributes to upper echelons theory by directly testing CEO social class background as an early-life managerial characteristic that predicts firm strategy, rather than treating elite education as a proxy for class origin. It integrates imprinting theory with social class theorizing to argue that childhood access to resources and societal rank can persist into executive decision making. It also contributes to research on executive risk taking by showing that social class origins and later career experiences jointly condition firm-level strategic risk preferences.

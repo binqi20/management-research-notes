@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-58-no-6/pdfs/Bednar 2015 Paying the Price The Impact 
 text_path: "library/AMJ/vol-58-no-6/text/Bednar 2015 Paying the Price The Impact of Controversial Governance Practices on Managerial Reputation.txt"
 ingested_at: "2026-07-07"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-quantitative"
 keywords: ["controversial governance practices", "managerial reputation", "reputational penalties", "poison pill", "stock analysts", "peer executives", "media coverage", "firm performance", "prior adoptions"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "we draw on attribution theory"
   methods_overview: "GLS) cross-sectional time series regression"
   keywords_source: "engage in controversial governance practices"
+  hypotheses_source: "having a poison pill will do less damage"
+  measures_overview: "profitability is the return on book assets"
+  findings_overview: "For executives, the penalty remains small"
 ---
 
 # Paying the Price? The Impact of Controversial Governance Practices on Managerial Reputation
@@ -53,6 +58,15 @@ This study directly examines the reputational penalties that managers pay when t
 **Research Question**
 The paper asks whether managers pay reputational penalties when their firms use controversial governance practices, and whether those penalties differ across evaluating audiences. It examines poison pills to test when stock analysts and peer executives penalize managerial reputation and how media coverage, firm performance, and prior adoption shape those penalties.
 
+**Hypotheses / Propositions**
+- H1: Having a poison pill will do more damage to the reputation of the firm's managers in the eyes of analysts than in the eyes of peer-firm executives.
+- H2a: Having a poison pill will do more damage to managerial reputation the more media coverage the poison pill receives.
+- H2b: The media-coverage effect in H2a will be stronger for executives than for analysts.
+- H3a: When analysts are the evaluators, having a poison pill will do more damage to managerial reputation when the firm is performing well.
+- H3b: When executives are the evaluators, having a poison pill will do less damage to managerial reputation when the firm is performing well.
+- Prior-adoption hypothesis (printed as H4; called H4a in the results): Having a poison pill will do less damage to managerial reputation as more poison pills are adopted.
+- Audience difference in the prior-adoption effect (printed as H4a; called H4b in the results): The reduction in reputational damage as poison pills spread will be stronger for analysts than for executives.
+
 **Mechanism Process**
 - IV(s): Poison pill use; media coverage of poison pill; firm profitability; prior adoptions of poison pills.
 - DV(s): Managerial reputation as rated by stock analysts and by peer executives in Fortune's Most Admired Companies survey; audience-difference score between executive and analyst ratings.
@@ -60,6 +74,17 @@ The paper asks whether managers pay reputational penalties when their firms use 
 - Moderators: Evaluating audience, media coverage, firm profitability, and prior adoptions.
 
 The mechanism is an audience-specific attribution process. Analysts, positioned as investor-oriented outsiders, are expected to interpret poison pills as signs of managerial self-interest and impose stronger reputational penalties, especially when firms are performing well and when few peers have adopted poison pills. Peer executives, positioned closer to the managerial in-group, are expected to attribute poison pills more to external pressures and impose weaker penalties, although negative media coverage can make specific managers appear more self-serving. The findings support stronger analyst penalties, media-related executive penalties, stronger analyst penalties for high-performing firms, and dissipation of analyst penalties as poison pills diffuse.
+
+**Data & Measures**
+The associational panel study covers publicly traded large U.S. industrial firms appearing on the 1980 or 1985 Fortune 500 lists during 1985–1989. The sample passage reports 266 firms and 1,108 firm-years; Table 1 reports 1,107 firm-years for descriptive statistics, and Tables 2–3 report 266 firms and 1,103 firm-years for the regressions. Governance records were provided by Jerry Davis, financial data came from COMPUSTAT, and media data came from the Wall Street Journal. Managerial reputation was measured separately using executives' and analysts' management-quality ratings in the Fortune survey. Each audience's ratings were regressed on firm-performance measures, and the residuals became the dependent variables; an additional outcome subtracts analysts' ratings from executives' ratings to test audience differences.
+
+Poison pill is an annual indicator equal to one when a pill was announced or in force by the end of November. Media coverage counts annual Wall Street Journal articles mentioning the focal firm together with “poison pill,” with a trained coder checking the reference. Profitability is return on book assets, centered on the sample mean; prior adoptions is the centered cumulative number of sample firms that had adopted poison pills. Interactions of poison pill with profitability and prior adoptions test the corresponding contingencies. Models include governance and takeover-risk controls, year and industry indicators, and an inverse mills ratio from a first-stage probit predicting poison-pill use from other anti-takeover provisions. Generalized-least-square cross-sectional time-series regressions in STATA model first-order error autocorrelation and correct for heteroskedasticity. Causal attributions were not directly measured.
+
+**Key Findings**
+- H1 was supported: poison-pill use was associated with a larger reputation penalty among analysts (Table 2, Model 2b: b = −.153, p < .001) than executives (Model 2a: b = −.053, p < .10). The audience-difference model also showed a significant difference (Table 3, Model 7: b = .109, p < .01).
+- H2a received partial support. In the full models, media coverage was negatively associated with executives' ratings (Table 3, Model 6a: b = −.045, p < .05), but its association with analysts' ratings was not significant (Model 6b: b = −.058). H2b was unsupported: the audience-difference coefficient was not significant (Model 7: b = .023). These values and significance thresholds follow Table 3.
+- H3a was supported: the poison pill × profitability interaction was negative for analysts (Model 6b: b = −.021, p < .01), indicating stronger penalties at higher profitability. H3b was unsupported: the interaction for executives was positive but not significant (Model 6a: b = .003). The interaction differed significantly between audiences (Model 7: b = .023, p < .001).
+- The authors report support for the two prior-adoption hypotheses (called H4a and H4b in the results). The poison pill × prior adoptions interaction was positive for analysts (Table 3, Model 6b: b = .003, p < .05), but not significant for executives (Model 6a: b = .000); the audience difference was significant (Model 7: b = −.004, p < .01). Thus, analysts' penalties diminished as adoption spread, while executives' penalties remained small and relatively stable. The audience-specific penalties nearly converged at the highest observed prior-adoption level, although their actual point of convergence was outside the observed data range.
 
 **Theoretical Contribution**
 The study contributes to corporate governance research by directly testing the assumption that controversial governance practices damage managerial reputation. It shows that reputational sanctions are not uniform: they vary by audience, media attention, firm performance, and diffusion of the practice. It also extends reputation-as-social-control theory by showing that audience heterogeneity and causal attributions help explain when reputational penalties are meaningful and when they dissipate.

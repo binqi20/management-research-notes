@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-59-no-1/pdfs/Neeley 2016 Unearned Status Gain Evidenc
 text_path: "library/AMJ/vol-59-no-1/text/Neeley 2016 Unearned Status Gain Evidence from a Global Language Mandate.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-qualitative"
 keywords: ["unearned status gain", "status dynamics", "language mandate", "lingua franca", "intergroup contact", "status rationalization", "status stability appraisal"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "According to status characteristics theory"
   methods_overview: "using NVivo Qualitative Research Software"
   keywords_source: "We define “unearned status gain” as"
+  hypotheses_source: "chance on status stability appraisals will be stronger"
+  measures_overview: "showing the first-order codes, second-order themes,"
+  findings_overview: "Native speakers who have regular interaction with nonnative speakers exhibit these three categories of responses."
 ---
 
 # Unearned Status Gain: Evidence from a Global Language Mandate
@@ -51,14 +56,32 @@ Theories of status rarely address “unearned status gain,” defined as an unex
 **Research Question**
 How do people experience and respond to unearned status gain? The paper examines this question through native English speakers' responses to an organizational English mandate that elevated English fluency as a valued status characteristic without requiring effort or achievement from them.
 
+**Hypotheses / Propositions**
+The inductively developed model advances unnumbered propositions for subsequent testing:
+- Organizational action that selects and elevates a characteristic leads its holders to experience unearned status gain, encompassing attribution to chance, a sense of belonging, anticipation of advancement, and access to expanded networks.
+- Attributing unearned status gains to chance leads recipients to take the perspective of those who did not benefit; those with regular contact with non-holders of the elevated characteristic engage in greater perspective taking than those without such contact.
+- Attributing status gains to chance leads recipients to rationalize those gains; those with regular contact with non-holders are more likely to engage in status rationalization than those without such contact.
+- Attributing status gains to chance leads holders to appraise the stability of their gains; this relationship is stronger among those who interact with non-holders than among those who do not.
+- Attribution to chance mediates the effects of organizational action on perspective taking, status rationalization, and status stability appraisal.
+
 **Mechanism Process**
 - Organizational trigger: GlobalMoves designated English as the company-wide business language, making native English fluency a newly valued organizational characteristic.
 - Unearned status gain experience: Native English-speaking employees attributed their elevated standing to chance, felt greater belonging, anticipated career advancement, and gained access to expanded information and people networks.
 - Contact condition: Employees with limited Japanese contact mainly reported optimistic benefits, while those with regular Japanese contact also observed nonnative speakers' hardship.
-- Response processes: Regular contact produced perspective taking, status rationalization, and status stability appraisal.
+- Response processes: Regular contact was associated with perspective taking, status rationalization, and status stability appraisal.
 - Supplemental context: Japanese informants generally saw English as strategically necessary but reported career anxiety, productivity loss, and communication stress under the mandate.
 
-The process begins with organizational action that selects and elevates a characteristic outside employees' control. Native English speakers interpret the resulting status gain as lucky and beneficial, but regular contact with Japanese coworkers makes the unequal distribution of costs salient. This salience produces sympathy and counterfactual awareness, rationalization that Japanese employees can earn benefits through effort, and recurring appraisal of whether the English-based status advantage will endure.
+The proposed process begins with organizational action that selects and elevates a characteristic outside employees' control. Native English speakers interpret the resulting status gain as lucky and beneficial, but regular contact with Japanese coworkers makes the unequal distribution of costs salient. In this proposed process, the salience is associated with sympathy and counterfactual awareness, rationalization that Japanese employees can earn benefits through effort, and recurring appraisal of whether the English-based status advantage will endure.
+
+**Data & Measures**
+The primary sample comprised 90 native English-speaking American employees in two subsidiaries of GlobalMoves, a pseudonym for a Japanese high-tech organization. Semi-structured interviews occurred over 15 months; informants had worked at the company for at least one year before the language mandate. Table 1 reports 33 and 57 for the two subsidiaries. The sample included 54 men and 36 women; 22 informants were interviewed twice and four a third time. Job-related contact distinguished 67 employees with regular Japanese interactions from 23 with limited contact. Supplemental data comprised 66 interviews: the CEO, five Japanese executives, eight Japanese expatriates in the United States, and 52 Japanese headquarters employees who worked with U.S. subsidiary members. The 52 headquarters informants were structurally equivalent counterparts, not dyadic matches to the primary informants.
+
+Interviews lasted 45–75 minutes and were recorded and transcribed verbatim. Organizational websites, artifacts, informant-provided materials, and informal observations triangulated the interviews. Iterative analysis using NVivo Qualitative Research Software developed first-order codes, refined second-order themes to theoretical saturation, and aggregated theoretical dimensions. For example, removal of barriers and organizational identification captured sense of belonging; increased access to information and people captured expanded networks. Sympathy and awareness of the counterfactual captured perspective taking, effort and achievement benefits captured status rationalization, and questioning and affirming durability captured status stability appraisal.
+
+**Key Findings**
+Native English speakers perceived a rise in their organizational worth without having earned it, attributing the gain to chance. They reported stronger belonging, anticipated career advancement, and expanded access to information and people. Their relative rise did not reverse the status hierarchy: they remained lower in status than their Japanese colleagues. Responses differed with intergroup contact. Informants with limited contact expressed optimistic, abstract views with little change in daily work; those with regular contact also expressed sympathy and counterfactual awareness, rationalized the benefits Japanese colleagues could earn through learning English, and questioned then affirmed the durability of their own advantage, sometimes within the same interview.
+
+Supplemental Japanese accounts largely endorsed the strategic need for English while describing anxiety about career evaluation and demotion, reduced productivity, and inhibited communication. These accounts corroborated the hardships observed by native speakers. The emergent model connects attribution to chance with perspective taking, status rationalization, and status stability appraisal, conditioned by contact with non-holders of the elevated characteristic. These relationships are propositions grounded in qualitative patterns; the interviews do not test mediation or establish causal effects.
 
 **Theoretical Contribution**
 The paper introduces unearned status gain as a dynamic status phenomenon distinct from earned status and from stable privilege. It extends status theory by showing that the origin of status gain matters: gains produced by organizational action can generate both positive outcomes and discomfort because recipients know the gain was not earned. It also links status dynamics to intergroup contact, arguing that contact with those disadvantaged by the same organizational action shapes perspective taking, rationalization, and stability concerns.
@@ -70,7 +93,7 @@ Organizations should recognize that strategic changes such as language mandates 
 The study centers on U.S.-based workers in one Japanese company, where meritocratic assumptions about earned status are important to how unearned gain is interpreted. The authors note that the model may not apply in societies where status ascription is more normative or where status mobility through achievement is less expected. The qualitative design supports theory building but does not test causal mechanisms, and the long-term status dynamics remain uncertain as Japanese employees' English proficiency changes.
 
 **Future Research**
-Future research should examine unearned status gain across other countries, organizations, and types of organizational change beyond language mandates. Longitudinal studies could test how these dynamics evolve as disadvantaged employees acquire the newly valued characteristic or as organizational priorities shift again. Quantitative field and laboratory studies could test the proposed mechanisms linking organizational action, attribution to chance, perspective taking, status rationalization, and status stability appraisal.
+Future research should examine unearned status gain across other countries, organizations, and types of organizational change beyond language mandates. Longitudinal studies could test how these dynamics evolve as disadvantaged employees acquire the newly valued characteristic. Quantitative field and laboratory studies could test the proposed mechanisms linking organizational action, attribution to chance, perspective taking, status rationalization, and status stability appraisal.
 
 **APA 7th Citation**
 Neeley, T. B., & Dumas, T. L. (2016). Unearned status gain: Evidence from a global language mandate. *Academy of Management Journal*, 59(1), 14-43. https://doi.org/10.5465/amj.2014.0535

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-1/pdfs/Zavyalova 2016 Reputation as a Benefit a
 text_path: "library/AMJ/vol-59-no-1/text/Zavyalova 2016 Reputation as a Benefit and a Burden How Stakeholders’ Organizational Identification Affects the Role of Reputation Following a Negative Event.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-quantitative"
 keywords: ["organizational reputation", "negative event", "organizational identification", "stakeholder support", "legislative references"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "stakeholders’ level of organizational identification helps"
   methods_overview: "hypotheses using multilevel linear"
   keywords_source: "legislative references associated with National Collegiate Athletic Association"
+  hypotheses_source: "less subsequent support from low-identification"
+  measures_overview: "top-50 universities in the USNWR rankings"
+  findings_overview: "is negative and significant (b 5 –0.030, p , .01)."
 ---
 
 # Reputation as a Benefit and a Burden? How Stakeholders’ Organizational Identification Affects the Role of Reputation Following a Negative Event
@@ -53,13 +58,30 @@ Research about the effects of an organization’s general reputation following a
 **Research Question**
 The paper asks why prior studies find high organizational reputation to be either a benefit or a burden after a negative event. It examines whether stakeholders' level of organizational identification explains when reputation buffers organizations from withdrawal of support and when it amplifies negative reactions.
 
+**Hypotheses / Propositions**
+- H1: As the volume of wrongdoing associated with a negative event increases, a high-reputation organization will experience less subsequent support from low-identification stakeholders compared to organizations without a high reputation.
+- H2: As the volume of wrongdoing associated with a negative event increases, a high-reputation organization will experience more subsequent support from high-identification stakeholders compared to organizations without a high reputation.
+
 **Mechanism Process**
 - IV(s): Volume of wrongdoing associated with a negative event, measured as legislative references in NCAA major infractions; high reputation, measured by top-50 U.S. News and World Report ranking.
 - DV(s): Subsequent stakeholder support, measured as inflation-adjusted donations from non-alumni and undergraduate alumni.
-- Mediators: Not modeled as mediators.
+- Mediators: Not modeled in the main hypotheses; supplemental analyses tested media coverage as a mediator of stakeholder reactions to wrongdoing and found no significant mediation.
 - Moderators: Stakeholder organizational identification, proxied by non-alumni versus undergraduate alumni donor status.
 
 The mechanism is that high reputation activates competing forces after wrongdoing. For low-identification stakeholders, greater attention and violation of expectations dominate because their cognitive and emotional connection to the organization is weak, making withdrawal less costly. For high-identification stakeholders, social capital and a reservoir of goodwill dominate at lower levels of wrongdoing because the organization is tied to their self-concept, although exploratory results suggest this benefit declines once wrongdoing becomes more severe.
+
+**Data & Measures**
+One longitudinal archival study examines four-year, degree-granting U.S. universities that were NCAA members during 1999–2009. Data from the National Center for Education Statistics were merged with self-reported university donations from the CAE and its annual Voluntary Support of Education survey. The nested sample contains 7,368 university-stakeholder group-year observations, 1,118 university-stakeholder groups, and 658 universities (Table 2), comprising 4,262 university-year observations of non-alumni donations and 3,106 of undergraduate alumni donations.
+
+Stakeholder support is the natural logarithm of inflation-adjusted donations, in 1999 U.S. dollars, in the subsequent year (t + 1). Non-alumni donors have no direct university ties; undergraduate alumni represent the high-identification group. High identification is coded 1 for undergraduate alumni observations and 0 for non-alumni observations, serving as a proxy rather than a direct identification measure. Volume of wrongdoing is the sum of legislative references associated with a focal university's major infraction in a given year, obtained from the Legislative Services Database maintained by the NCAA. High reputation is coded 1 for universities in the USNWR top 50 in a given year and 0 otherwise.
+
+The focal tests use multilevel linear regressions with a three-way interaction among wrongdoing, high reputation, and high identification, maximum likelihood estimation, university-clustered standard errors, random intercepts for university and stakeholder group, and year fixed effects, estimated in Stata 14. An exploratory fixed-effects ordinary least squares analysis of alumni donations at high-reputation universities uses 307 observations from 42 universities (Table 3). The observational design does not establish causality; instrumental-variable and matching checks address potential endogeneity without ruling out all alternative explanations.
+
+**Key Findings**
+- H1 was supported: in Table 2, Model 3, the wrongdoing × high reputation interaction is negative (b = −0.030, p < .01). The authors interpret each additional legislative reference as reducing non-alumni donations to a top-50 university by 3% more than donations to other universities.
+- H2 was supported: the three-way interaction is positive (b = 0.083, p < .01); combining it with the two-way interaction gives a positive conditional interaction for alumni donations (b = 0.053, p < .05). The reported interpretation is that each additional legislative reference increases alumni donations to a top-50 university by 5.3% more than donations to other universities.
+- The exploratory high-reputation alumni subsample shows an inverted-U relationship: Table 3, Model 6 reports a positive linear term (b = 0.434, p < .01) and a negative squared term (b = −0.096, p < .01). Figure 3 locates the turning point at 2.25 legislative references, with significant positive and negative slopes one reference below and above it, respectively (both p < .01). This exploratory result suggests a limit to the benefit of high reputation.
+- Supplemental analyses found no significant mediating effect of media coverage. Both hypotheses remained supported with the top-45 reputation cutoff; with the top-55 cutoff, H2 remained supported but H1 lost significance (p = .15). Neither of the two alternative reputation measures incorporating athletic rankings supported the hypotheses.
 
 **Theoretical Contribution**
 The paper extends reputation research by showing that high reputation can be both a benefit and a burden after a negative event, depending on stakeholder identification. It specifies which mechanisms dominate for low- versus high-identification stakeholders: attention and violated expectations for the former, and social capital and goodwill for the latter. It also adds a boundary condition by showing that support from high-identification stakeholders may decline when the volume of wrongdoing becomes too high.

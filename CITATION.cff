@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-09-05"
-version: "0.63.0"
+date-released: "2026-09-06"
+version: "0.64.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -54,7 +54,37 @@ abstract: >-
   index with FTS5, a CSV export, and a BibTeX file from the notes, and a
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library. Version 0.63.0
+  a published rubric) gates every note into the library. Version 0.64.0
+  (2026-09-06) augments 29 existing v2 notes from Academy of Management
+  Journal volume 59 issue 1 and volume 58 issue 6 to v3. The record total
+  remains 1,167; the census shifts from 61 v1, 305 v2, and 801 v3 to
+  61 v1, 276 v2, and 830 v3. First-pass independent nine-field audits
+  returned 249 SUPPORTED, 11 PARTIAL, and 1 UNSUPPORTED out of 261.
+  Parent source review produced 24 legacy-field repairs across 17 notes,
+  including 17 fields initially scored SUPPORTED. Every repaired note
+  received a fresh blind full-note audit, and all repaired fields are now
+  SUPPORTED. Final verdicts are 257 SUPPORTED and 4 accepted PARTIALs,
+  with 0 UNSUPPORTED and 0 CONTRADICTED; all 29 notes pass overall with
+  current note and source hashes. Graffin's Limitations and Lanzolla's
+  Future Research remain faithful despite omitted source context in fitted
+  inputs. Shani's and Ayyagari's Limitations retain accurate sample scope
+  qualifications after two-round framing disagreements at 0% strip. All
+  acceptances have reconstruction proofs and subsequent source readings.
+  Eggers's two standard audits could not see three appendix methods facts;
+  a user-authorized fresh blind audit of the complete raw text returned
+  9/9 SUPPORTED, with explicit unabridged-input provenance and assembly
+  using the audit tool's functions. Bibliographic frontmatter and paper
+  types are unchanged. Notes, SQLite, parsed CSV, and BibTeX reconcile to
+  1,167 records; BibTeX is byte-identical. Full-library validation passed
+  1,167/1,167; direct regressions passed 22/22 and 15/15. This is the second
+  batch run end-to-end on gpt-6-astra (GPT-6 Astra). Provenance eras are
+  batches 01–07 claude-opus-4-8, 08–15 claude-opus-5, 16–19 gpt-5.6-sol,
+  20–23 claude-opus-5, 24–29 gpt-5.6-sol, and 30–31 gpt-6-astra.
+  Cross-family calibration scored 27/27 for batch 16, 27/27 for batch 24,
+  25/27 for batch 28 (both divergences repaired in v0.62.0), and 26/27 for
+  batch 30 (the divergence adjudicated faithful under strip blindness).
+  No spot-audit is scheduled for this batch; the next calibration runs at
+  batch 32's workshop review. Earlier, version 0.63.0
   (2026-09-05) continues the v3 backfill with Academy of Management Journal
   volume 59 issues 3 and 2 — 31 notes, all v2 augmentations. The record
   total remains 1,167; the tier census shifts from 61 v1, 336 v2, and 770 v3
@@ -798,7 +828,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.63.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.64.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-58-no-6/pdfs/George 2015 The Management of Natural Re
 text_path: "library/AMJ/vol-58-no-6/text/George 2015 The Management of Natural Resources An Overview and Research Agenda.txt"
 ingested_at: "2026-07-07"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "editorial"
 keywords: ["natural resources", "natural resource scarcity", "sustainability", "resource scarcity", "management research", "grand challenges"]
@@ -53,14 +55,23 @@ Not reported in paper
 **Research Question**
 The editorial asks why management scholarship has paid limited attention to natural resources despite the centrality of resource scarcity, sustainability, and resource access to organizations, governments, industries, and societies. It develops a research agenda for studying how natural resource scarcity reshapes business models, regulation, stakeholder engagement, technology adoption, governance, and sustainability.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial frame: The article positions natural resources as a grand challenge for management research and argues that AMJ has used "resources" extensively while paying scant attention to physical and natural resources.
 - Review of AMJ work: The authors distinguish people as resources, organizational assets as resources, and interorganizational and societal resources, then show that natural resources usually appear only as context rather than as focal theoretical objects.
-- Scarcity reframing: The editorial treats scarcity as causally ambiguous and shaped by technology, regulation, market imperfections, supply risks, environmental externalities, and social conflict rather than only by biophysical depletion.
+- Scarcity reframing: The editorial treats scarcity as causally ambiguous and shaped by technology, regulation, market imperfections, supply risks, and environmental externalities rather than only by biophysical depletion.
 - Managerial and institutional responses: It organizes examples around organizational responses to scarcity, government intervention, social impacts of natural resources, and the movement from scarcity to sustainability.
 - Practice-based agenda: Discussions with Teng Lit Liak are used to identify future research themes around attitudes and behaviors, technology substitution and adoption, agenda shaping, leadership and governance, and pragmatic experimentation.
 
 The process is editorial and agenda-setting rather than empirical. George, Schillebeeckx, and Liak argue that natural resource scarcity creates constraints and opportunities that cut across firms, governments, civil society, and individuals. They call for management scholars to examine how organizations innovate, collaborate, govern, and lead under resource constraints, and how scholarship can help shift attention from scarcity toward sustainable management of natural resources.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial's contribution is to make natural resources a focal domain for management theory rather than a background context. It argues that existing resource theories have emphasized human, relational, knowledge, and organizational assets, while physical and natural resources require more explicit attention to scarcity, externalities, regulation, market imperfection, social impact, and cross-sector governance.

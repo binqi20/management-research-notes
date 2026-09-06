@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-59-no-1/pdfs/George 2016 Reputation and Status Expand
 text_path: "library/AMJ/vol-59-no-1/text/George 2016 Reputation and Status Expanding the Role of Social Evaluations in Management Research.txt"
 ingested_at: "2026-07-03"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "editorial"
 keywords: ["reputation", "status", "social evaluations", "social approval assets", "future research directions"]
@@ -53,6 +55,9 @@ Not reported in paper
 **Research Question**
 How has AMJ research examined reputation, status, and related social evaluations, and what unresolved questions should guide future work? The editorial asks how organizations and individuals seek, leverage, lose, repair, create, avoid, and respond to social evaluations across levels, domains, and audiences.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial purpose: The article introduces an AMJ thematic issue on reputation and status and takes stock of social evaluation research in the journal.
 - Review focus: It maps constructs such as reputation, status, image, network centrality, and publicity/public relations across units of analysis and theoretical lenses.
@@ -60,6 +65,12 @@ How has AMJ research examined reputation, status, and related social evaluations
 - Future directions: It identifies unresolved problems around multiple levels and domains, actors outside the public eye, stability and loss of social evaluations, creation and consumption of social evaluations, and the benefits and burdens of high status or reputation.
 
 The process logic is editorial and agenda-setting rather than causal hypothesis testing. George, Dahlander, Graffin, and Sim argue that social evaluations shape organizational life through stakeholder perceptions of quality, standing, legitimacy, trust, and accountability. Their synthesis emphasizes that the field has focused heavily on positive effects and high-status or high-reputation actors, leaving open questions about negative fallout, repair, under-the-radar actors, cross-level mechanisms, multiple audiences, and the conditions under which reputation and status become burdens rather than assets.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial contributes by positioning reputation, status, and adjacent constructs as a broader social evaluations literature with substantial theoretical plurality. It clarifies that AMJ research has used lenses such as signaling theory, social identity theory, social network theory, impression management, organizational identity, and sociocognitive theories across individual, dyadic, team, firm, and organizational contexts. Its main contribution is not new theory but a research agenda that broadens the field beyond positive effects, single domains, static hierarchies, and highly visible actors.

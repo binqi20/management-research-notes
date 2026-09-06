@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-58-no-6/pdfs/Matta 2015 Does Seeing “Eye To Eye” 
 text_path: "library/AMJ/vol-58-no-6/text/Matta 2015 Does Seeing “Eye To Eye” Affect Work Engagement and Organizational Citizenship Behavior A Role Theory Perspective on LMX Agreement.txt"
 ingested_at: "2026-07-07"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-quantitative"
 keywords: ["leader–member exchange (LMX) agreement", "LMX quality", "role theory", "work engagement", "organizational citizenship behavior (OCB)", "polynomial regression", "response surface methodology"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Using role theory as a"
   methods_overview: "polynomial regression and response surface methodology"
   keywords_source: "leader–member exchange (LMX) agreement"
+  hypotheses_source: "higher the subordinate’s work engagement."
+  measures_overview: "of LMX quality using the seven-item LMX-7 scale"
+  findings_overview: "was positively associated with OCBI (B 5 .23, p , .01)."
 ---
 
 # Does Seeing “Eye To Eye” Affect Work Engagement and Organizational Citizenship Behavior? A Role Theory Perspective on LMX Agreement
@@ -53,6 +58,12 @@ Despite meta-analytic evidence demonstrating that leader–member exchange (LMX)
 **Research Question**
 The paper asks whether agreement versus disagreement between leader and subordinate perceptions of LMX quality affects employee work engagement and subsequent organizational citizenship behavior. It further asks whether agreement at high LMX quality differs from agreement at low LMX quality, and whether the two forms of disagreement differ depending on whether the leader or subordinate rates the relationship more positively.
 
+**Hypotheses / Propositions**
+- H1: Greater agreement (congruence) between leader and subordinate perceptions of LMX quality is associated with higher subordinate work engagement.
+- H2: Subordinate work engagement is higher when leader and subordinate agree at a high level of LMX quality than when they agree at a low level.
+- H3: Subordinate work engagement is lower when the leader perceives higher LMX quality than the subordinate than when the subordinate perceives higher LMX quality than the leader.
+- H4: Subordinate work engagement mediates the relationship between the interplay of LMX agreement and LMX quality and OCBO.
+
 **Mechanism Process**
 - IV(s): Supervisor-rated LMX quality, employee-rated LMX quality, and their agreement or disagreement captured through polynomial terms.
 - DV(s): Employee work engagement and supervisor-rated organizational citizenship behavior directed toward the organization; coworker-rated OCBI is examined in supplemental analyses.
@@ -60,6 +71,20 @@ The paper asks whether agreement versus disagreement between leader and subordin
 - Moderators: The paper does not estimate conventional moderators; LMX quality level and direction of disagreement are modeled as response-surface contrasts.
 
 The mechanism is a role-theoretic congruence process. When leaders and subordinates agree about LMX quality, role consensus reduces expectation discrepancies and allows employees to invest physical, cognitive, and emotional energy in their work roles. When they disagree, misaligned expectations around socio-emotional versus transactional roles consume attention and resources, reducing engagement. Engagement then carries these dyadic role effects into OCBO by broadening how employees enact discretionary work roles.
+
+**Data & Measures**
+The study pooled 280 matched employee–supervisor dyads from three online survey collections recruited through students at a large Midwestern university. The first and third collections targeted working adults (29.3% and 51.4% of the pooled sample); the second targeted working students employed at least 20 hours per week (19.3%). Collection indicators controlled for recruitment differences. The survey design is associational and cannot establish causal ordering.
+
+Supervisor and employee perceptions of LMX quality were measured separately with the seven-item LMX-7 scale (Graen & Uhl-Bien, 1995; α = .83 and .89, respectively). Employees reported work engagement using the nine-item scale developed by Schaufeli, Bakker, and Salanova (2006; α = .90); supervisors rated OCBO using the eight-item scale developed by Lee and Allen (2002; α = .89). Employee and supervisor responses used five-point Likert scales. Analyses controlled for gender, age, and ethnicity similarity, dyadic tenure, supervisor liking, and employee conscientiousness. Polynomial regression and response surfaces modeled the two LMX ratings, their squares, and their interaction; mediation used an LMX polynomial block variable and bootstrapping in MPlus 6.12.
+
+Supplemental OCBI data came only from the third collection: 139 focal employees were rated by an average of 2.46 coworkers using the eight-item scale developed by Lee and Allen (2002). Coworker ratings were aggregated (mean interrater agreement = .94; intraclass correlation = .27; α = .91). The supplemental mediation analysis used full information maximum likelihood to retain all available cases for each path, with 1,000 bootstrap samples.
+
+**Key Findings**
+- H1 was supported: work engagement declined as LMX ratings diverged in either direction (incongruence-line curvature = −.56, p < .05), and ridge tests were consistent with engagement being maximized along the congruence line.
+- H2 was supported: agreement at high LMX quality was associated with greater engagement than agreement at low quality (congruence-line slope = .51, p < .01).
+- H3 was not supported: the lateral shift was −.15, but its 95% confidence interval included zero [−.850, .133]; the incongruence-line slope was also nonsignificant (−.17).
+- H4 was supported: work engagement was positively associated with OCBO (B = .13, p < .05), and the unstandardized indirect effect of the LMX polynomial block variable through engagement was .13 (95% bias-corrected bootstrap CI [.022, .248]).
+- In the supplemental analysis, engagement was positively associated with coworker-rated OCBI (B = .23, p < .01); the indirect effect was .23 (95% bias-corrected bootstrap CI [.066, .452]). Conditional indirect-effect comparisons for both OCBO and OCBI favored high–high agreement over low–low agreement, and low–low agreement over either disagreement condition. These survey associations do not establish the proposed causal sequence.
 
 **Theoretical Contribution**
 The study challenges the common LMX practice of treating either leader or subordinate ratings as sufficient to describe the relationship. It contributes by showing that LMX agreement is substantively important beyond LMX quality, and that even low-quality agreement can be associated with better engagement and citizenship than disagreement. Methodologically, it advances LMX research by using polynomial regression and response surface methodology rather than dichotomized agreement categories or difference scores.

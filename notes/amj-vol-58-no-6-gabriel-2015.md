@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-6/pdfs/Gabriel 2015 Emotional Labor Dynamics A 
 text_path: "library/AMJ/vol-58-no-6/text/Gabriel 2015 Emotional Labor Dynamics A Momentary Approach.txt"
 ingested_at: "2026-07-07"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-06"
 
 paper_type: "empirical-quantitative"
 keywords: ["emotional labor", "within-episode emotional labor dynamics", "surface acting", "deep acting", "felt emotions", "vocal tone", "customer incivility", "call center simulation", "continuous measures"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "self-regulatory view of emotional labor"
   methods_overview: "a call center simulation to examine how shifts in customer incivility"
   keywords_source: "felt emotions, surface acting, deep acting, and vocal tone"
+  hypotheses_source: "felt emotions become more positive"
+  measures_overview: "along a 20-point scale every 200 milliseconds."
+  findings_overview: "deep acting negatively predicted vocal tone"
 ---
 
 # Emotional Labor Dynamics: A Momentary Approach
@@ -52,6 +57,17 @@ Emotional labor has been described as a dynamic self-regulatory process that unf
 **Research Question**
 The paper asks whether emotional labor varies moment to moment within a single customer interaction and how shifts in customer incivility shape felt emotions, surface acting, deep acting, and vocal tone. It also examines the within-episode causal ordering among felt emotions, emotion regulation, and vocal tone, including whether surface acting and deep acting are used as alternatives or simultaneously.
 
+**Hypotheses / Propositions**
+- H1: Felt emotions, surface acting, deep acting, and vocal tone exhibit variability within a single emotional labor episode.
+- H2: A within-episode increase in customer incivility makes felt emotions more negative, increases surface acting and deep acting, and makes vocal tone more negative.
+- H3: A within-episode change from customer incivility to further incivility makes felt emotions more negative, increases surface acting and deep acting, and makes vocal tone more negative.
+- H4: A within-episode change from customer incivility to civility makes felt emotions more positive, decreases surface acting and deep acting, and makes vocal tone more positive.
+- H5: Within an emotional labor episode, momentary felt emotions are negatively related to momentary surface acting and deep acting; more negative feelings accompany greater use of both strategies.
+- H6: Within an emotional labor episode, momentary felt emotions are positively related to momentary vocal tone; as feelings become more negative, vocal tone also becomes more negative.
+- H7: Within an emotional labor episode, momentary surface acting is negatively related to momentary vocal tone.
+- H8: Within an emotional labor episode, momentary deep acting is positively related to momentary vocal tone.
+- H9: Within an emotional labor episode, momentary surface acting is positively related to momentary deep acting.
+
 **Mechanism Process**
 - IV(s): Within-episode customer behavior, including shifts from neutral civility to incivility and then to either service failure or service recovery; momentary felt emotions; momentary surface acting; momentary deep acting.
 - DV(s): Momentary felt emotions, surface acting, deep acting, and vocal tone, depending on the hypothesis and lagged path.
@@ -59,6 +75,18 @@ The paper asks whether emotional labor varies moment to moment within a single c
 - Moderators: Service failure versus service recovery condition in Phase III.
 
 The mechanism is a self-regulatory emotional labor process. Customer incivility signals a discrepancy from the goal of satisfying the customer and creates a mismatch between felt emotions and display rules, leading employees to regulate through surface acting and deep acting while trying to maintain positive vocal tone. Lagged models show that felt emotions primarily precede regulation and vocal tone, surface acting and vocal tone influence each other reciprocally, and surface acting tends to precede later deep acting. The findings also show that surface and deep acting co-occur within moments rather than operating only as mutually exclusive strategies.
+
+**Data & Measures**
+The study recruited 84 undergraduate students for a laboratory call center simulation; eight failed poststudy checks of the manipulated customer civility, leaving 76 participants. Participants provided telephone assistance on creating Microsoft PowerPoint presentations while following a positive emotional display rule. After a practice call, each participant handled one recorded call with a male confederate. All calls began with neutral customer behavior in Phase I and incivility in Phase II. Participants were randomly assigned to service recovery (n = 38), with a civil customer in Phase III, or service failure (n = 38), with heightened incivility in Phase III.
+
+Immediately after the call, participants listened to its recording three times and continuously rated felt emotions, surface acting, and deep acting separately; the order of the two regulation ratings was counterbalanced. Felt emotions used a 20-point scale from very negative (1), through neutral (10), to very positive (20). Surface acting captured emotional suppression through the extent to which participants hid their emotions from the customer; deep acting captured effort to change their emotions to feel positively and express positive emotions. Both regulation measures used 20-point scales from none to a very large extent. Two trained assistants, blind to condition and hypotheses, rated vocal tone on the same scale as felt emotions using recordings with the confederate's voice removed; their ratings were averaged. Mouse-position ratings were captured every 200 milliseconds and aggregated to one-second averages, yielding an average of 264.75 observations per participant. Multilevel growth models tested phase changes, and within-person path models included concurrent relationships, stability paths, customer-treatment growth factors, and lagged relationships at T, T-10 seconds, and T-20 seconds. Customer treatment was experimentally manipulated; directionality among the measured emotional labor variables was assessed with lagged within-person models.
+
+**Key Findings**
+H1 was supported: within-person variability accounted for 56.63% of total variance in felt emotions, 62.47% in surface acting, 55.73% in deep acting, and 58.16% in vocal tone. H2 was supported: from Phase I to Phase II, mean felt emotions fell from 12.49 to 9.28, surface acting rose from 4.82 to 10.28, deep acting rose from 5.27 to 9.85, and vocal tone fell from 11.22 to 10.27 (Table 3). H3 and H4 were also supported: further incivility in the service failure condition intensified those changes, whereas service recovery made felt emotions and vocal tone more positive and reduced both regulation strategies. Table 3 shows that surface acting and deep acting in the recovery condition nevertheless remained significantly higher in Phase III than in Phase I.
+
+H5, H6, H7, and H9 were supported. In the full model at T, felt emotions were negatively related to surface acting (γ = −.37) and deep acting (γ = −.31), and positively related to vocal tone (γ = .15); surface acting was negatively related to vocal tone (γ = −.13) and positively related to deep acting (γ = .37; all p < .001). H8 was not supported: deep acting was negatively, rather than positively, related to vocal tone (γ = −.10, p < .01). The lagged paths to vocal tone were likewise negative for surface acting (γ = −.04, p < .05) and deep acting (γ = −.03, p < .05).
+
+Lagged felt emotions predicted subsequent regulation and vocal tone, while reverse paths from those variables to felt emotions were nonsignificant. Surface acting and vocal tone showed reciprocal negative lagged relationships. Surface acting positively predicted subsequent deep acting (γ = .08, p < .01), but the reverse path was nonsignificant; participants reported using both strategies to some extent during approximately 72.7% of the call. The total indirect effect from felt emotions at T-20 to vocal tone at T was significant (estimate = .112, p < .001), but the specific indirect effects through surface acting (.004, p = .076) and deep acting (.003, p = .072) were not conventionally significant when modeled together with the other pathways.
 
 **Theoretical Contribution**
 The study contributes to emotional labor theory by providing a direct within-episode test of a process that prior theory had described dynamically but prior empirical work usually measured at the person, day, or interaction level. It shows that customer behavior can causally alter trajectories of employee feelings, regulation, and vocal tone during a single interaction. It also refines emotion regulation theory by showing that surface acting and deep acting can be complementary, simultaneously used strategies, with surface acting sometimes preceding deep acting.
