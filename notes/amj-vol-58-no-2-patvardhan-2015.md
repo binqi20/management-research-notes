@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-58-no-2/pdfs/Patvardhan 2015 Weathering a Meta-Level 
 text_path: "library/AMJ/vol-58-no-2/text/Patvardhan 2015 Weathering a Meta-Level Identity Crisis Forging a Coherent Collective Identity for an Emerging Field.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-qualitative"
 keywords: ["collective identity", "meta-level identity crisis", "coherent identity", "consensual identity", "identity-work processes", "emerging field"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "social construction view of identity"
   methods_overview: "We employed a qualitative, grounded-theory"
   keywords_source: "collective identity beyond the organizational level"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "identified 84 first-order codes."
+  findings_overview: "coherent identity, rather than a consensual identity."
 ---
 
 # Weathering a Meta-Level Identity Crisis: Forging a Coherent Collective Identity for an Emerging Field
@@ -53,6 +58,9 @@ We employed a longitudinal, grounded-theory approach to investigate the occurren
 **Research Question**
 By what processes do organizations in an emerging field develop a collective identity? The paper examines how organization-level and collective-level identity formation co-evolve in the iSchools field, why these dynamics precipitated a meta-level identity crisis, and how the crisis was resolved through coherent rather than consensual identity.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: legacy identities, nested identities, optimal distinctiveness, collective identity claims, meanings of claims, field boundaries, identity crisis, consensual identity, and coherent identity.
 - Process / phases: member schools first reconfigured local identities around the iSchool label; the collective then pursued consensus on common identity claims and meanings; disagreements over meanings, core identity, and boundaries produced an identity crisis; deans later reframed identity around shared problems, interests, practices, and coherence.
@@ -61,6 +69,12 @@ By what processes do organizations in an emerging field develop a collective ide
 - Boundary conditions: the authors emphasize emerging issue-oriented fields, collectives with strong legacy and nested identities, and collectives linked by shared fate more than by shared task interdependence.
 
 The process is interpretive rather than variable-causal. Patvardhan and colleagues show that member schools used the iSchool label to gain local legitimacy and distinctiveness, but they filled that label with meanings shaped by legacy fields and nested institutional settings. These local identity adaptations made consensus at the collective level harder, especially when the field tried to define its common core and membership boundaries. The crisis became manageable when actors shifted from trying to discover common meanings to creating coherence through shared problem domains, mutual interests, ongoing interaction, and acceptance of ambiguity.
+
+**Data & Measures**
+The longitudinal qualitative study combined 74 formal interviews and many informal interviews with archival material, attendance at three iConferences, non-participant observation at one member school, and a diary of field notes and researcher discussions. Primary collection comprised phases in 2004–2007 and 2009–2011, including interviews with the dean of every school in the population of 31 at collection end; archives covered earlier field formation and triangulated retrospective accounts. Archival sources included the iSchools website, member-school websites, and peer-reviewed and media articles. Sampling moved from purposeful and snowball sampling to theoretical sampling until saturation. Open coding of interview and archival thought units produced 84 first-order codes, explicitly distinguished as member-level or collective-level processes; axial coding yielded 23 level-specific second-order themes, and theoretical coding generated eight overarching dimensions. Eleven themes and four dimensions concerned the identity crisis. Sequential and interactive relationships across levels formed the grounded process model, with member checks used to affirm findings.
+
+**Key Findings**
+The grounded model shows organization-level and collective-level identities evolving in tandem: local identity reconfiguration helped member schools secure distinctiveness and legitimacy while making agreement at the collective level harder. Legacy identities, nested institutional affiliations, and local optimal distinctiveness shaped divergent meanings beneath shared identity labels. Consensus on identity claims therefore did not ensure consensus on their meanings; attempts to define common meanings, a common core, and membership boundaries precipitated and intensified the meta-level identity crisis. Its workable resolution involved pursuing a coherent identity through shared problems, interests, practices, and continued interaction, accepting ambiguity as normal, and growing identification among younger cohorts. This was an emergent reorientation rather than full consensus on meanings: by 2012, references to an identity crisis were less prevalent, although a definitive collective identity remained unfinished.
 
 **Theoretical Contribution**
 The paper contributes a cross-level grounded model of collective identity formation in an emerging field, showing that organization-level and field-level identities evolve in tandem rather than in a simple sequence. It extends identity research beyond individual and organizational levels by conceptualizing a meta-level identity crisis and specifying how legacy identities, nested identities, and local optimal distinctiveness can destabilize collective identity formation. It also advances the distinction between consensual and coherent identity, arguing that meta-level collectives may require coherence around shared domains and practices rather than full consensus on identity meanings.
@@ -72,7 +86,7 @@ For leaders of emerging fields, the findings suggest that forcing early consensu
 The authors note that the study ended before the iSchools achieved a definitive collective identity, so the ultimate identity outcome remained a work in progress. They also studied an emerging issue-oriented academic field rather than an industry-oriented organizational field, and they caution that identity formation may differ in collectives with more concrete category features, stronger task interdependence, or entirely greenfield organizations. The case therefore supports theoretical elaboration and transferability judgments rather than statistical generalization.
 
 **Future Research**
-The paper calls for deeper study of identity as a process of becoming rather than as a stable thing. It also points to future work on identity crises in other emerging fields, especially fields formed by breakaway groups with strong legacy identities or collectives held together by shared fate rather than shared task interdependence. Further research could compare issue-oriented and industry-oriented fields, examine greenfield collectives, and investigate how coherent identities later evolve into more explicit consensus or remain fluid.
+The paper calls for deeper study of identity as a process of becoming rather than as a stable thing.
 
 **APA 7th Citation**
 Patvardhan, S. D., Gioia, D. A., & Hamilton, A. L. (2015). Weathering a meta-level identity crisis: Forging a coherent collective identity for an emerging field. *Academy of Management Journal*, 58(2), 405-435. https://doi.org/10.5465/amj.2012.1049

@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-58-no-3/pdfs/Lam 2015 The Threshold Effect of Partici
 text_path: "library/AMJ/vol-58-no-3/text/Lam 2015 The Threshold Effect of Participative Leadership and the Role of Leader Information Sharing.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["participative leadership", "employee performance", "information sharing", "leadership effectiveness", "implicit leadership theory", "adaptive resonance theory"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Drawing on implicit leadership theory (Brown & Lord, 2001; Eden & Leviatan, 1975)"
   methods_overview: "we used a multilevel analytical strategy"
   keywords_source: "participative leadership and employee performance is curvilinear (J-shaped)"
+  hypotheses_source: "Hypothesis 2. Information sharing moderates"
+  measures_overview: "“This team leader is a good leader”"
+  findings_overview: "indeed significant and positive (B 5 .21, p , .05),"
 ---
 
 # The Threshold Effect of Participative Leadership and the Role of Leader Information Sharing
@@ -52,6 +57,11 @@ Drawing on implicit leadership theory (Brown & Lord, 2001; Eden & Leviatan, 1975
 **Research Question**
 The paper asks whether participative leadership has a threshold, J-shaped relationship with employee performance rather than a simple positive linear effect. It also asks whether leader information sharing strengthens this curvilinear relationship and whether perceived leadership effectiveness explains its effect on objective performance.
 
+**Hypotheses / Propositions**
+- H1: Participative leadership has a curvilinear relationship with employee task performance such that moderate to high levels of participative leadership are more conducive to higher performance; the proposed pattern is J-shaped.
+- H2: Information sharing moderates this J-shaped relationship: employees who perceive high leader information sharing perform better in response to moderate to high participative leadership, whereas performance is unrelated to participative leadership when information sharing is low.
+- H3: Participative leadership has an indirect, curvilinear relationship with employees' objective performance through leadership effectiveness, and this relationship is more pronounced when information sharing is higher rather than lower.
+
 **Mechanism Process**
 - IV(s): Participative leadership, including its squared term to test the J-shaped relationship.
 - DV(s): Supervisor-rated task performance in Study 1; objective work performance from monthly salary records in Study 2.
@@ -59,6 +69,16 @@ The paper asks whether participative leadership has a threshold, J-shaped relati
 - Moderators: Leader information sharing.
 
 Drawing on implicit leadership theory, the paper argues that low or moderate participative leadership may not activate employees' participation schema because it does not sufficiently match a participative-leader prototype. When participative leadership passes a threshold, employees are more likely to interpret the leader as genuinely participative and respond with higher performance. Adaptive resonance theory extends this logic: high information sharing provides consistent cues that reinforce the participative-leader prototype, whereas low information sharing creates ambiguity and weakens the performance response. In Study 2, leadership effectiveness is the cognitive pathway through which high participative leadership combined with high information sharing predicts objective work performance.
+
+**Data & Measures**
+Study 1 used surveys from 625 subordinates and 203 supervisors, drawn from office and call-center employees in a textile manufacturing company headquartered in Hong Kong and a state-owned telecommunication services company in China. Subordinates rated participative leadership with six items about encouraging ideas and participation (five-point agreement scale; α = .86) and information sharing with six items about explaining decisions and actions (five-point agreement scale; α = .93). Supervisors rated task performance with five items covering the quality and quantity of subordinates' performance and fulfillment of job duties (seven-point agreement scale; α = .77). Controls were gender, age, education, organizational tenure, group size, and organization.
+
+Study 2 used 148 subordinates and 19 supervisors in a garment-manufacturing firm in southern China. Participative leadership and information sharing used the same measures as Study 1 (α = .76 and .80, respectively). Subordinates rated leadership effectiveness with six items assessing their supervisor's overall effectiveness (seven-point scale from not successful to very successful; α = .87). Objective performance was monthly salary based on production output under a piece-rate pay system, obtained one month after the surveys. Controls included the demographic and group-size variables from Study 1, plus leader–member exchange and negative affectivity. Both studies used multilevel analyses of employees nested within supervisors/groups, including linear and squared participative leadership and their interactions with information sharing; Study 1 specified random-intercept models. Study 2 tested conditional indirect relationships through leadership effectiveness using simple slopes and simulation-based confidence intervals. These were correlational designs and do not establish causality.
+
+**Key Findings**
+Study 1 did not support H1: the squared participative-leadership term was nonsignificant (B = .03; Table 2, Model 3). H2 was supported: the squared-term interaction with information sharing was positive (B = .07, p < .01; Table 2, Model 6). At high information sharing, simple slopes for low, medium, and high participative leadership were −.07 (nonsignificant), .15 (p < .01), and .37 (p < .001), respectively; all three slopes were nonsignificant at low information sharing (Table 3). Thus, the J-shaped performance association depended on information sharing rather than appearing as an unconditional quadratic effect.
+
+Study 2 found no significant unconditional quadratic association with leadership effectiveness (B = .01; Table 6, Model 3), but its squared-term interaction with information sharing was positive (B = .15, p < .001; Model 6). At high information sharing, the leadership-effectiveness slopes at low, medium, and high participative leadership were .02 (nonsignificant), .42, and .80 (both p < .001; Table 7). Leadership effectiveness was positively associated with objective performance (B = .21, p < .05; Table 6, Model 7a). H3 was supported: at high information sharing, conditional indirect associations with objective performance were .00 at low participative leadership (95% CI [−.05, .06]), .09 at medium levels (95% CI [.01, .20]), and .17 at high levels (95% CI [.01, .36]); all three indirect associations were nonsignificant at low information sharing (Table 8). This supports the proposed conditional indirect pattern, without establishing a causal mediation process.
 
 **Theoretical Contribution**
 The paper contributes to participative leadership research by theorizing and testing a threshold effect: participative leadership becomes performance-relevant mainly after it exceeds a moderate level and is paired with high information sharing. It extends implicit leadership theory and adaptive resonance theory by showing how multiple leader behaviors jointly activate leader prototypes and participation schemas. It also identifies perceived leadership effectiveness as a proximal cognitive mechanism linking the moderated curvilinear pattern to objective employee performance.

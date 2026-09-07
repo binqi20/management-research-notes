@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-58-no-2/pdfs/Chen 2015 Modernizing without Westernizi
 text_path: "library/AMJ/vol-58-no-2/text/Chen 2015 Modernizing without Westernizing Social Structure and Economic Action in the Indian Financial Sector.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["embedded network ties", "caste", "regional language", "school ties", "business groups", "multinational corporations", "analyst forecast accuracy"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "embeddedness perspective should be broadened"
   methods_overview: "two-way clustering analysis"
   keywords_source: "caste and regional language with contemporary institutions"
+  hypotheses_source: "will be weaker for postreform-generation CEOs."
+  measures_overview: "“1” if the CEO was born after 1967."
+  findings_overview: "we find only some support for Hypothesis 2a."
 ---
 
 # Modernizing without Westernizing: Social Structure and Economic Action in the Indian Financial Sector
@@ -52,6 +57,13 @@ To better understand whether the transition by Asian countries toward market eco
 **Research Question**
 The paper asks whether Asia's transition toward market economies follows the Western path of disembedded market relations, or whether economic action remains shaped by historically specific social structures. Empirically, it examines how caste, regional-language, and school ties between Indian equity analysts and CEOs affect analysts' EPS forecast accuracy, and whether CEO generation and organizational form change which ties matter.
 
+**Hypotheses / Propositions**
+- H1: An equity analyst is likely to make more accurate annual EPS forecasts when sharing (a) a caste tie, (b) a language tie, or (c) a school tie with the firm's CEO.
+- H2a: The effect of same-caste or same-language ties between CEO and analyst will be weaker for postreform-generation CEOs.
+- H2b: The effect of a shared school tie between CEO and analyst will be stronger for postreform-generation CEOs.
+- H3: The main effect of caste, language, or school ties on analyst EPS forecasts will be mitigated when the focal firm is an Indian subsidiary of a Western MNC.
+- H4: The main effect of caste, language, or school ties on analyst EPS forecasts will be amplified when the focal firm is affiliated to an Indian BG.
+
 **Mechanism Process**
 - IV(s): CEO-analyst caste tie, CEO-analyst language tie, and CEO-analyst school tie.
 - DV(s): Analyst forecast accuracy, calculated from the absolute difference between forecasted annual EPS and actual annual EPS, normalized by share price and multiplied by -1.
@@ -60,11 +72,21 @@ The paper asks whether Asia's transition toward market economies follows the Wes
 
 The mechanism is that shared caste, language, or school affiliation can create trust and mutual understanding between analysts and CEOs, making private information more likely to flow and improving forecast accuracy. The macro institutional shift after India's 1991 reforms changes the salient basis of affiliation: prereform-generation CEOs are expected to rely more on caste and language ties, while postreform-generation CEOs rely more on school ties. The micro organizational context further shapes the process because BGs legitimate particularistic information exchange, whereas Western MNC subsidiaries dampen such transfers.
 
+**Data & Measures**
+The archival panel combines I/B/E/S “Detail History” forecasts for firms reporting in Indian rupees during 2001–2010 with Prowess financial and ownership data and hand-collected CEO and analyst backgrounds. It retains firm-years with more than three analyst forecasts and, for each analyst–firm–year, the forecast closest to the earnings announcement. The final sample comprises 1,552 forecasts by 296 analysts covering 141 firms and 191 CEOs. Two senior equity analysts also provided semistructured interviews as anecdotal evidence. The design is associational: OLS models include year dummies and controls for firm, analyst, brokerage-house, forecast-horizon, and missing-education characteristics, with robust standard errors clustered in two dimensions using firm–CEO and analyst identifiers.
+
+Forecast accuracy equals the negative absolute difference between forecast and actual annual EPS divided by the previous year-end share price; higher values mean greater accuracy. Caste and language ties are joint probabilities of CEO and analyst membership in the same category, summing products of their surname-derived probabilities across ten categories for each measure. Probabilities come from approximately 2.1 million matrimonial-agency records; non-Indian CEOs receive zero probabilities. School tie equals one when the CEO and analyst graduated from the same school system, regardless of campus or undergraduate/postgraduate degree; unavailable educational background is coded as no tie. CEO education comes from annual reports, while analyst education primarily comes from Zoominfo.com and supplementary online sources. Postreform-generation CEO equals one for birth after 1967. The MNC indicator identifies foreign controlling ownership using Prowess; all sampled MNCs are Western MNCs with locally listed subsidiaries. BG affiliation also comes from Prowess, with the principal moderation test using the log of summed revenues of all firms in the group, rescaled by dividing by ten; a binary affiliation measure is a robustness alternative. Private information transfer and relationship development are inferred, not directly measured.
+
+**Key Findings**
+Table 2 reports unstandardized coefficients and one-tailed tests, with 1,552 observations in every model. H1 receives general support: in Model 2, caste and language ties positively predict accuracy (b = .007 and .005, respectively, both p < .05), while the school-tie coefficient is only marginally significant (b = .004, p < .10). In full Model 6, all three coefficients are positive and significant: .006 (p < .05), .006 (p < .01), and .003 (p < .05), respectively.
+
+H2a receives only some support: the caste-tie × postreform-generation interaction is negative but marginal in Model 3 (b = −.014, p < .10) and Model 6 (b = −.012, p < .10); the language interaction is nonsignificant. H2b is supported: the school-tie × postreform-generation interaction is positive in Model 3 (b = .015, p < .05) and Model 6 (b = .020, p < .01). H3 receives moderate, incomplete support: in Model 4, MNC status negatively moderates language ties (b = −.012, p < .01) and school ties (b = −.017, p < .001), with no significant caste interaction. In Model 6, the language interaction loses significance and the school interaction is only marginal (b = −.008, p < .10). H4 is supported for language and school ties, but not caste ties: their BG interactions in Model 5 are positive (b = .010 and .011, both p < .01), remaining significant in Model 6 (b = .007 and .009, both p < .05). The authors describe this as good support for H4. These patterns are consistent with the proposed private-information mechanism but do not directly establish its operation.
+
 **Theoretical Contribution**
 The paper extends the embeddedness perspective by showing that the institutional bases of network ties are not fixed and that economic action in transitional economies can remain embedded in historically specific social structures. It contributes to business group research by portraying BGs as repositories and carriers of behavioral norms that blend modern management practices with particularistic social patterns. It also broadens relational demography by examining caste, language, and school similarity across a market interface rather than only within hierarchical organizational relationships.
 
 **Practical Implication**
-For financial-market actors in emerging economies, analyst forecast accuracy may depend on social access to CEOs, not only on formal disclosure infrastructure or analyst skill. Firms and regulators should recognize that weak public disclosure can make private interpersonal pathways consequential for capital-market information flows. The findings also imply that BGs and Western MNC subsidiaries can create different expectations about whether executives should engage with external market intermediaries through particularistic ties.
+For financial-market actors in emerging economies, analyst forecast accuracy may depend on social access to CEOs, not only on formal disclosure infrastructure or analyst skill. The authors interpret the findings as suggesting that analysts draw on private interpersonal networks to improve forecasts where public disclosure regulation is weak. The findings also imply that BGs and Western MNC subsidiaries can create different expectations about whether executives should engage with external market intermediaries through particularistic ties.
 
 **Limitations**
 The authors state that the study is based on archival sources and does not directly observe private information flowing from CEOs to analysts or the development of interpersonal relationships. They also lack data on the total pool of caste and language groups, cannot test brokerage-house location based assortative matching, and infer caste and language ties from last names using a relatively novel methodology with unknown bias. The final sample is biased toward larger firms and more experienced analysts because public information was easier to find for them.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-3/pdfs/Stanko 2015 Watching You Watching Me Bou
 text_path: "library/AMJ/vol-58-no-3/text/Stanko 2015 Watching You Watching Me Boundary Control and Capturing Attention in the Context of Ubiquitous Technology Use.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-qualitative"
 keywords: ["boundary control", "individual attention", "situational controls", "monitoring", "contextualization", "deflection", "work–nonwork interactions", "ubiquitous technology use"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "We look to the research on boundary control"
   methods_overview: "A grounded theory-building approach was used"
   keywords_source: "boundary control, and we detail the understudied situational controls"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "rounds focused on open coding, with no preconceived"
+  findings_overview: "Cooperation (elicited by artful use of situational controls)"
 ---
 
 # Watching You Watching Me: Boundary Control and Capturing Attention in the Context of Ubiquitous Technology Use
@@ -51,6 +56,9 @@ As information communication technologies proliferate in the workplace, organiza
 **Research Question**
 How do organizations attempt to shape individual attention and divert attention from nonwork activities in the face of ubiquitous ICT use? The paper asks how boundary control operates when work and nonwork interactions are continually interwoven by communication technologies.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core attention problems: Nonwork ICT use during work creates productivity problems when attention shifts away from work and security problems when employees forget organizational rules and norms.
 - Situational controls: The Navy monitors employees to track attention, contextualizes technology use to cultivate attention, and deflects access to restrict attention.
@@ -58,6 +66,12 @@ How do organizations attempt to shape individual attention and divert attention 
 - Control dynamics: Effective boundary control is dynamic, layered across global and situational controls, and only temporarily effective because new threats to attention continually emerge.
 
 The process account shows organizations trying to capture attention rather than merely regulate employees' physical presence or time at work. Monitoring identifies where attention is going, contextualization keeps organizational norms salient during technology use, and deflection removes or limits access when productivity or security risks require stronger intervention. These controls work best when combined transparently and flexibly: too little control invites rejection, while excessive monitoring or restriction without contextualization damages morale and trust.
+
+**Data & Measures**
+The qualitative study combines 73 semistructured interviews concerning ICT use in the U.S. Navy with more than 15 years of primary and secondary archival materials, including rules, manuals, newsletters, websites, and surveys (Tables 1–2). Interviews were conducted in fall 2003, spring 2004, spring 2010, and spring 2013, lasted 60–90 minutes, and included sailors, officers, information professionals, and spouses. The Table 1 footnote reports 71 individuals, with one couple interviewed twice. The fourth round comprised 10 interviews with high-level officers and information professionals to clarify the reasons for controls and verify the controls described earlier. Both authors coded transcribed interviews in NVivo through two rounds of open coding, a third round of selective coding, and a fourth round of axial coding into second-order constructs and aggregate dimensions. Attention problems were distinguished through accounts of time spent on nonwork activities, nonwork interruptions, and security problems involving sensitive information or network breaches. The resulting model organizes problems of attention, situational controls, and individual responses; Tables 3–4 provide construct descriptions and illustrative quotations.
+
+**Key Findings**
+The emergent model identifies monitoring as tracking attention, contextualization as cultivating attention, and deflection as restricting attention. These situational controls operate across organizational levels and are layered on global rules and norms; monitoring identifies problems and prompts other controls but does not necessarily change attention by itself. Artful use combines expanding monitoring, evolving and proactive contextualization, and intermittent deflection, eliciting cooperation through simultaneity, rule accommodation, and refocusing. Underuse elicits rejection through work-arounds, dismissal, and desensitization, including when contextualizing messages remain static despite frequent repetition. Overuse combines extensive monitoring and deflection with limited contextualization, producing forced compliance accompanied by disconnection, powerlessness, and morale or trust problems (Table 4). The process model treats effective boundary control as temporary: even after cooperation, new threats to attention emerge and control efforts must keep evolving (Figure 1).
 
 **Theoretical Contribution**
 The paper redefines boundary control as the ways managers at multiple organizational levels capture and shape employee attention during the daily flow of work–nonwork interactions. It develops situational controls as a core organizational-control concept, identifying monitoring, contextualization, and deflection as mechanisms that track, cultivate, and restrict attention in the moment. It also contributes a process model showing how different configurations of situational controls generate cooperation, rejection, or forced compliance.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-58-no-3/pdfs/Knippenberg 2015 Information, Attention,
 text_path: "library/AMJ/vol-58-no-3/text/Knippenberg 2015 Information, Attention, and Decision Making.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "editorial"
 keywords: ["information", "attention", "decision making", "information age", "information overload", "bounded rationality"]
@@ -54,6 +56,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how management in the information age challenges existing theories of information processing, attention, and decision making. It focuses on how expanded information access, information overload, and scarce attention reshape individual, group, organizational, and institutional behavior.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial frame: The article introduces a thematic issue on information, attention, and decision making and positions the information age as a context that may require management scholars to revisit established theoretical assumptions.
 - Information abundance and attention scarcity: The authors argue that information now scales faster than human and organizational attention, creating overload, bias, distraction, and costly information-management demands.
@@ -62,6 +67,12 @@ The editorial asks how management in the information age challenges existing the
 - Theoretical refresh: The closing argument encourages scholars to revisit bounded rationality, managerial attention, absorption, and information processing in an information-rich, networked world.
 
 The process is editorial and agenda-setting rather than empirical. The authors connect classic bounded rationality and attention arguments to a changed information context in which digital technologies, big data, social media, and ubiquitous communication expand information access while intensifying demands on scarce attention. They use the thematic issue's articles to show that these pressures operate across levels and to organize a future research agenda for management scholarship.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial's contribution is to reposition information, attention, and decision making as a renewed management research agenda for the information age. It argues that classic assumptions about bounded rationality and managerial attention remain important but need to be refreshed for contexts marked by information abundance, digital technologies, open information systems, and cross-level information flows.

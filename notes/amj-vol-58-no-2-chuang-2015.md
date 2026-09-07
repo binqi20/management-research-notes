@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-58-no-2/pdfs/Chuang 2015 Does West “Fit” with Eas
 text_path: "library/AMJ/vol-58-no-2/text/Chuang 2015 Does West “Fit” with East In Search of a Chinese Model of Person–Environment Fit.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-qualitative"
 keywords: ["person-environment fit", "Chinese model of PE fit", "Confucian relationalism", "selfhood", "appropriateness", "qualitative study"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Confucian relationalism, selfhood, and appropriateness"
   methods_overview: "using a qualitative study"
   keywords_source: "person–environment fit (PE fit)"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we analyzed each episode line by line (i.e.,"
+  findings_overview: "We identified five themes of Chinese PE fit: (1)"
 ---
 
 # Does West “Fit” with East? In Search of a Chinese Model of Person–Environment Fit
@@ -53,6 +58,9 @@ Extant theorizing concerning person–environment fit (PE fit) is culture bound 
 **Research Question**
 The paper asks how Chinese individuals interpret their experiences of person-environment fit at work. It specifically examines whether PE fit theories developed largely in Western contexts can explain fit experiences in a Chinese cultural setting.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Cultural grounding: Confucian relationalism, selfhood, and appropriateness.
 - PE fit themes: Competence at work, harmonious connections at work, balance among life domains, cultivation, and realization.
@@ -61,6 +69,12 @@ The paper asks how Chinese individuals interpret their experiences of person-env
 - Core tension: Western PE fit emphasizes congruence, while the Chinese model emphasizes appropriateness and can include incongruence-yet-fit.
 
 The process account argues that Chinese informants interpret fit not only as a match between personal attributes and work demands, but as appropriate engagement with work, relationships, life domains, self-cultivation, and environmental transformation. Relation-related fit provides a foundation for task-related fit because Chinese workers understand the self as embedded in multiple relationships. Cultivation and realization extend PE fit beyond static congruence by showing how individuals can experience fit while learning from incongruence or transforming work environments.
+
+**Data & Measures**
+The qualitative corpus comprised interviews with 30 Chinese working adults in Taiwan, recruited through personal contacts using purposive sampling followed by theoretical sampling. Interviews averaged approximately one hour, were recorded and transcribed verbatim, and were collected over 15 weeks until theoretical saturation. Semi-structured interviews elicited ordinary work activities, concrete fit incidents using the critical incident technique, and informants’ own meanings of fit using cognitive mapping; interviewers supplied no definition of PE fit. The analytic unit was an episode: an internally coherent story, event, or specific activity explaining fit. Independent line-by-line open coding and iterative comparison identified five themes. Of 649 episodes, 38 with irreconcilable coding disagreements were discarded, leaving 611; reported interrater reliabilities were .98, .97, and .99. Further open and axial coding using NVivo 9.0 identified first- and second-order codes and the shared input–throughput–output framework.
+
+**Key Findings**
+Five themes emerged: competence at work (193 episodes, 31.6%), harmonious connections at work (132, 21.6%), balance among life domains (75, 12.3%), cultivation (93, 15.2%), and realization (118, 19.3%; Table 1). Informants experienced fit through fulfilling work demands with personal capabilities, coordinating or affectively connecting with others, and mutual support between work and other life domains. Cultivation involved learning novel experiences toward positive personal transformation; realization involved reformulating work toward positive environmental transformation. Unlike the first three themes, cultivation and realization allowed fit during both throughput and output, including experiences of incongruence. Retrospective and prospective temporal frames in these two themes provided evidence of psychological time; their developmental meanings also suggested diachronic time. The integrated model interprets relation-related fit as a possible foundation for task-related fit and proposes appropriateness as an explanation for Chinese fit experiences, including incongruence-yet-fit; these are qualitative interpretations, not tested causal relationships.
 
 **Theoretical Contribution**
 The paper contributes a contextualized Chinese model of PE fit that challenges the assumption that fit is best understood as congruence between separable person and environment attributes. It extends PE fit theory by introducing relationalism, selfhood, and appropriateness as cultural foundations and by identifying cultivation and realization as fit themes that are underdeveloped or absent in Western PE fit models. It also contributes temporal theorizing by providing empirical evidence for psychological time and proposing diachronic time as relevant to PE fit.

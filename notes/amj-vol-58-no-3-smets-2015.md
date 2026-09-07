@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-58-no-3/pdfs/Smets 2015 Reinsurance Trading in Lloyd�
 text_path: "library/AMJ/vol-58-no-3/text/Smets 2015 Reinsurance Trading in Lloyd’s of London Balancing Conflicting-yet-Complementary Logics in Practice.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-qualitative"
 keywords: ["institutional complexity", "institutional logics", "market logic", "community logic", "segmenting", "bridging", "demarcating", "practice lens"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "market and community logics as a theoretical"
   methods_overview: "field observations, interviews, and documentary"
   keywords_source: "segmenting, bridging, and demarcating"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we then clustered the micro-practices we identified"
+  findings_overview: "competing logics are balanced through fluid iterations"
 ---
 
 # Reinsurance Trading in Lloyd’s of London: Balancing Conflicting-yet-Complementary Logics in Practice
@@ -53,6 +58,9 @@ Drawing on a yearlong ethnographic study of reinsurance trading in Lloyd’s of 
 **Research Question**
 The paper asks how actors facing long-standing institutional complexity enact both the contradiction and the interdependence between coexisting logics in everyday work. It studies how Lloyd’s reinsurance underwriters balance market and community logics while trading risks as both employees of profit-seeking firms and members of the Lloyd’s community.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key logics: Market logic emphasizes profitability, share price, firm performance, and competitive status; community logic emphasizes Lloyd’s membership, trust, reciprocity, reputation, and long-term relationships.
 - Segmenting: Underwriters assign market-oriented analytic work to the office and community-oriented broker interaction to the Lloyd’s trading floor, reinforced by schedules, spaces, dress codes, and privacy practices.
@@ -61,6 +69,12 @@ The paper asks how actors facing long-standing institutional complexity enact bo
 - Process relationship: Segmenting creates distinct logics, bridging reconnects them in particular situations, and demarcating reasserts their boundaries when bridging risks slippage.
 
 The process is not a variable-based causal model. Individuals maintain market and community logics as conflicting-yet-complementary by iteratively separating and integrating them in practice. The balance shifts across tasks and situations, so the paper theorizes dynamic, moment-by-moment balancing rather than a fixed organizational settlement.
+
+**Data & Measures**
+The yearlong ethnography covered seven reinsurance firms in Lloyd’s across the 2009–2010 reinsurance cycle. Three researchers spent 180 days in the field, shadowing 26 underwriters and generating 350 extensive fieldnotes; the corpus also included 62 recorded and transcribed formal interviews, 386 team emails, and documents from Lloyd’s and participating firms. Interviews predominantly involved underwriters, with brokers and Lloyd’s representatives providing additional perspectives. Abductive analysis used NVivo and insider/outsider coding with collective resolution of discrepancies. Observed micro-practices were clustered into thematic practice categories, layered with location codes, and cross-coded against the elemental building blocks of market and community logics. Practices navigating the relationship between logics were then abstracted into second-order balancing mechanisms; a composite day-in-the-life narrative comprising 15 representative vignettes supported analysis of their moment-by-moment relationships.
+
+**Key Findings**
+The study identified segmenting, bridging, and demarcating as a dynamic, cyclical system for balancing conflicting-yet-complementary logics (Tables 2a–2c, Table 3, and Figure 1). Segmenting assigned practices to different locales and referent audiences; bidirectional bridging brought community knowledge into commercial decisions and commercial reasoning into community interactions; demarcating used self-monitoring and peer monitoring to check excessive privileging of either logic and reinforce their distinction. The mechanisms operated within and across tasks, permitting situational shifts in the balance rather than an equal balance in every decision. The authors found that degrees of conflict and complementarity resided in how practices brought logics together and argued that, in this persistent hybrid, managing institutional complexity could itself become institutionalized in routine everyday work.
 
 **Theoretical Contribution**
 The paper contributes to institutional complexity research by moving attention from structural organizational responses to frontline actors’ everyday practices. It theorizes segmenting, bridging, and demarcating as a cyclic system through which individuals keep coexisting logics distinct enough to remain conflicting and connected enough to become complementary. It also shows that, in a long-standing hybrid context, institutional complexity can itself become institutionalized and routinely enacted in practice.

@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-58-no-2/pdfs/Barkema 2015 West Meets East New Concept
 text_path: "library/AMJ/vol-58-no-2/text/Barkema 2015 West Meets East New Concepts and Theories.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "conceptual"
 keywords: ["new concepts and theories", "East and the West", "institutions", "philosophies", "cultural values", "construct equivalence", "construct salience", "construct infusion", "agentic view"]
@@ -45,6 +47,9 @@ evidence:
   theories_overview: "construct salience"
   methods_overview: "We draw on insights from Colquitt and"
   keywords_source: "new concepts and theories"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Not reported in paper"
+  findings_overview: "Not reported in paper"
 ---
 
 # West Meets East: New Concepts and Theories
@@ -55,6 +60,9 @@ Management scholarship has grown tremendously over the past 60 years. Most of ou
 **Research Question**
 Why have Eastern contexts generated relatively few new concepts and theories in leading management journals despite substantial differences between East and West in institutions, philosophies, cultural values, and management practices? How can researchers, journals, and management schools reduce normal-science bias and create theories grounded in new management puzzles from Eastern contexts?
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core problem: Management research has internationalized in authorship and samples, but still often applies Western concepts and theories to Eastern settings rather than generating new theory from those settings.
 - Contextual foundations: Eastern institutions, philosophies, cultural values, and contemporary management practices differ from Western contexts and may surface distinct management puzzles.
@@ -63,6 +71,12 @@ Why have Eastern contexts generated relatively few new concepts and theories in 
 - Agentic actors: Researchers, journals, and management schools can deliberately select, support, review, and publish work on novel management problems and social concerns.
 
 The process argument is conceptual rather than variable-causal. Barkema and colleagues argue that management theory becomes more novel and globally relevant when scholars actively attend to the worldviews embedded in particular institutions, philosophies, and cultural beliefs, then use inductive and phenomenon-focused research to explain puzzles those contexts make visible. The paper positions construct equivalence, salience, and infusion as diagnostic criteria for judging whether an Eastern concept merely renames a Western construct, highlights an especially important attribute in an Eastern context, or adds new theoretical nuance. It also argues that journal and school-level choices can reduce normal-science pressures that otherwise keep theoretical contributions close to existing Western paradigms.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The article contributes a conceptual account of how Eastern contexts can enrich management theory rather than only supply new empirical settings for Western theories. It synthesizes contextual differences between East and West, historical patterns in AMJ theory development, and the six special research forum papers to articulate construct equivalence, construct salience, and construct infusion as contribution criteria. It also advances an agentic view of theory creation in which researchers, journals, and management schools deliberately create variation in the field by supporting research on new puzzles, problems, and worldviews.

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-3/pdfs/Carnabuci 2015 Social Networks, Cognitiv
 text_path: "library/AMJ/vol-58-no-3/text/Carnabuci 2015 Social Networks, Cognitive Style, and Innovative Performance A Contingency Perspective.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["social networks", "cognitive style", "innovative performance", "structural holes", "closed networks", "social capital", "complementary fit", "adaption-innovation theory"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Based on a “complementary fit” argument"
   methods_overview: "Results of OLS Regression Models of Innovative Performance"
   keywords_source: "cognitive style is a critical"
+  hypotheses_source: "Hypothesis 1. The more brokering (closed)"
+  measures_overview: "The instrument comprises 32 questions."
+  findings_overview: "These results corroborate Hypothesis 3."
 ---
 
 # Social Networks, Cognitive Style, and Innovative Performance: A Contingency Perspective
@@ -52,6 +57,11 @@ Integrating insights from cognitive psychology into current network theory on th
 **Research Question**
 The paper asks which workplace network structure is most conducive to individual employee innovative performance once employees' cognitive styles are taken into account. It examines whether brokering versus closed networks have opposite performance implications for adaptors and innovators.
 
+**Hypotheses / Propositions**
+- H1: The more brokering (closed) an employee's workplace social network, the higher (lower) his or her innovative performance.
+- H2: The more innovative (adaptive) an employee's cognitive style, the higher (lower) his or her innovative performance.
+- H3: The more innovative (adaptive) an individual's cognitive style, the more a closed (brokering) workplace social network will enhance his or her innovative performance.
+
 **Mechanism Process**
 - IV(s): Workplace social network brokerage versus closure; employees' adaptive-innovative cognitive style.
 - DV(s): Supervisor-rated employee innovative performance.
@@ -59,6 +69,12 @@ The paper asks which workplace network structure is most conducive to individual
 - Moderators: Cognitive style moderates the relationship between network brokerage and innovative performance.
 
 The mechanism is a complementary fit between social capital and information-processing style. Brokering networks supply heterogeneous information and compensate for adaptors' weaker idea generation, while adaptors' implementation orientation helps them turn these ideas into innovations. Closed networks supply coordination, consensus, and support, which compensate for innovators' implementation weakness while allowing their stronger idea-generation capability to translate into implemented innovation.
+
+**Data & Measures**
+The cross-sectional study surveyed all 68 organizational members of ItalianSofa, an anonymized sofa design and manufacturing firm in Italy, with a 100% response rate. A roster questionnaire recorded directed advice ties and their frequency; a separate questionnaire went to 25 supervisors. Innovative-performance ratings and the regressions cover 67 employees because the chief executive had no supervisor. Cognitive style was measured with the 32-item Adaption–Innovation Inventory (KAI): five-point responses were summed so that higher scores indicate a more innovative style (theoretical range 32–160; observed 68–108; alpha = .64). Network brokerage was a constraint-based index for the weighted, directed advice network, coded from 0 (maximal closure) to 1 (maximal brokerage). The moderation term multiplied mean-centered cognitive style and brokerage. The dependent variable summed supervisors' ratings of the four innovation items from the RBPS, covering idea creation and implementation on five-point response scales (total range 4–20). OLS regressions controlled for demographic, organizational, psychological, friendship, and supervisor-relationship characteristics; additional models used clustered standard errors, department indicators, and random intercepts and coefficients. The design estimates associations and cannot conclusively rule out endogeneity.
+
+**Key Findings**
+Table 3, Model 2 supports H1 and H2: brokerage is positively associated with innovative performance (b = 6.38, p < .05), as is a more innovative cognitive style (b = .11, p < .05). Model 3 supports H3 through a negative cognitive-style–brokerage interaction (b = −1.78, p < .01); adding it raises R² from .41 to .53. The predicted margins show opposite brokerage associations for adaptors and innovators: greater brokerage predicts higher performance for adaptors but lower performance for innovators. The interaction remains significant with standard errors clustered by department or supervisor (Table 3, Models 4–5), although brokerage's main effect is only marginal in these models (p < .10 in the table). With selected department indicators, the cognitive-style main effect becomes nonsignificant (b = .01, p = .77), while brokerage remains positive (b = 4.30, p < .05) and the interaction remains negative (b = −1.30, p < .01; Table A1, Model 3). The additional random-intercept and random-coefficient models retain the brokerage and interaction results but provide no significant cognitive-style main effect (Table A1, Models 4–7); the authors caution that these multilevel results rely on few, small groups. Thus, support for the contingency hypothesis is more robust than support for a general advantage of an innovative cognitive style.
 
 **Theoretical Contribution**
 The paper contributes to social network theory by showing that the innovation value of brokerage and closure depends on employee cognitive style rather than operating uniformly across actors. It integrates the brokerage and closure views of social capital in a single contingency explanation, arguing that social networks shape information access while cognitive style shapes what information individuals need and how they process it. It also advances psychologically informed network research by identifying adaptive-innovative cognitive style as a key contingency in employee innovation.

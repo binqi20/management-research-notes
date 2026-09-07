@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-58-no-2/pdfs/Yang 2015 Asymmetric Learning Capabiliti
 text_path: "library/AMJ/vol-58-no-2/text/Yang 2015 Asymmetric Learning Capabilities and Stock Market Returns.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["alliance learning", "specific learning capability", "learning race", "stock market returns", "equity alliance governance", "market similarity", "R&D alliances", "cumulative abnormal returns"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "Drawing on the alliance learning literature"
   methods_overview: "We calculated CAR using the market model"
   keywords_source: "learning race phenomenon and its performance consequences"
+  hypotheses_source: "Hypothesis 3. Market similarity between allisuch situations are thus highly motivated to outance partners strengthens the positive"
+  measures_overview: "percentage of equity in each alliance.1"
+  findings_overview: "p ⬍ .10), lending marginal support to Hypothesis 2"
 ---
 
 # Asymmetric Learning Capabilities and Stock Market Returns
@@ -53,6 +58,11 @@ Drawing on the alliance learning literature, we propose that a firm’s relative
 **Research Question**
 The paper asks whether a firm's superior alliance learning capability relative to its partner yields higher stock market returns, and under what conditions those market returns vary with the learning capability gap. It focuses on whether asymmetric partner-specific learning capability creates performance gains through the learning race in R&D alliances.
 
+**Hypotheses / Propositions**
+- H1: A positive difference between a focal firm's specific learning capability (SLC) and its partner's SLC is positively associated with the focal firm's abnormal stock returns.
+- H2: Equity alliance governance negatively moderates the positive relationship between the SLC gap and the focal firm's abnormal stock returns.
+- H3: Market similarity between alliance partners strengthens the positive relationship between the SLC gap and the focal firm's abnormal stock returns.
+
 **Mechanism Process**
 - IV(s): Specific learning capability gap between the focal firm and its alliance partner.
 - DV(s): Cumulative abnormal returns around R&D alliance announcements.
@@ -61,14 +71,22 @@ The paper asks whether a firm's superior alliance learning capability relative t
 
 The mechanism is that a focal firm with higher partner-specific learning capability than its partner is expected to extract more private benefits from the alliance and signal stronger future learning-race performance to the stock market. Equity governance weakens this effect because equity stakes align interests, discourage opportunism, and shift attention toward common alliance benefits. Market similarity strengthens the effect because partners competing in similar product and knowledge markets face greater private-benefit incentives, making superior learning capability more valuable to investors.
 
+**Data & Measures**
+The event study concerns public firms forming R&D alliances in the U.S. computing and biopharmaceutical industries during 1984–2003. The methods report 610 alliances with complete data; Tables 1 and 2 report 1,140 firm-level observations. Alliance databases, including rDNA, were combined with Lexis/Nexis and Factiva announcement searches, stock-return data, Compustat and Bioscan firm information, and patent data. The dependent variable is cumulative abnormal returns (CAR) over days [−1, 0] around the announcement, using a market model estimated over 255 trading days ending 46 trading days before the event. This is an observational analysis of market responses, with a Heckman two-stage selection correction: a first-stage alliance-formation probit uses matched non-events and industry uncertainty as an exclusion restriction, and the second-stage ordinary least squares regressions include the inverse Mills ratio and robust standard errors clustered by firm.
+
+SLC is the focal firm's citations to its partner's patents divided by total citations received by that partner, excluding the partner's self-citations, over a five-year moving window ending in the alliance year; patent citations are standardized by technical class and grant year. The SLC gap is focal-firm SLC minus partner SLC. Equity alliance governance is the actual percentage of equity in the alliance. Market similarity is coded 1, .75, .5, .25, or 0 according to whether partners share four, three, two, one, or no leading digits of their four-digit SIC codes. Controls include relative assets, prior R&D alliance experience and its between-partner gap, both firms' knowledge stocks, technological distance and its squared term, repeated ties, focal-firm SLC, sector, and year.
+
+**Key Findings**
+Table 2 supports H1: the SLC gap is positively associated with CAR (Model 2: coefficient = 1.05, p < .05; Model 5: 0.80, p < .05). H2 receives only marginal support: the equity alliance × SLC gap interaction is negative (Model 3: −5.02, p < .10; Model 5: −5.06, p < .10). H3 is supported: the market similarity × SLC gap interaction is positive (Models 4 and 5: 1.66, p < .05). The full model has R² = .067 and 1,140 observations. Post-hoc checks retain the positive SLC-gap association with a [−1, +1] event window (coefficient = .45, p < .05); an alternative relative-CAR outcome also retains the positive main association and the negative, marginal equity interaction and positive market-similarity interaction. These findings concern expected market returns around announcements rather than direct measurement of subsequent competitive learning or realized long-term performance.
+
 **Theoretical Contribution**
-The paper contributes to alliance learning research by conceptualizing and operationalizing specific learning capability as a competitive, partner-specific capability distinct from partner-specific absorptive capacity. It empirically links asymmetric learning capabilities to stock market performance, showing that the market rewards firms whose specific learning capability exceeds that of their partners. It also clarifies boundary conditions for the learning race by showing that equity governance attenuates, while market similarity amplifies, the performance effect of the learning capability gap.
+The paper contributes to alliance learning research by conceptualizing and operationalizing specific learning capability as a competitive, partner-specific capability distinct from partner-specific absorptive capacity. It empirically links asymmetric learning capabilities to stock market performance, showing that the market rewards firms whose specific learning capability exceeds that of their partners. It also offers marginal evidence that equity governance attenuates the performance effect of the learning capability gap, while finding that market similarity amplifies it.
 
 **Practical Implication**
 For managers forming R&D alliances, the findings imply that relative learning capability matters for investor expectations, not only general alliance experience or partner resources. Firms with weaker learning capability may benefit from equity governance as a protective arrangement, whereas stronger learners may face market penalties when equity governance constrains their ability to appropriate private benefits. The results also warn managers that alliances with market-similar partners intensify competitive learning pressures.
 
 **Limitations**
-The authors state that the sample is limited to public firms in two knowledge-intensive sectors, which may limit generalizability to private firms or other industries. They also note that cumulative abnormal returns capture only one dimension of performance and that patents provide a conservative measure because they cannot capture the full extent of interfirm learning in alliances. Potential endogeneity in alliance governance remains difficult to address because instrumenting interaction terms is both econometrically and theoretically challenging.
+The authors state that the sample is limited to public firms in two knowledge-intensive sectors, which may limit generalizability to private firms. They also note that cumulative abnormal returns capture only one dimension of performance and that patents provide a conservative measure because they cannot capture the full extent of interfirm learning in alliances. Potential endogeneity in alliance governance remains difficult to address because instrumenting interaction terms is both econometrically and theoretically challenging.
 
 **Future Research**
 The authors suggest testing whether the conclusions hold for private firms and for alternative performance outcomes such as new product introduction or new market entry. They call for research on whether firms' learning rates change after previous alliances and how those changes affect innovation and alliance instability. They also encourage work on cross-national alliances, alliance portfolios, network-level contingencies, and how competitive learning can be reconciled with trust and relational capability in interfirm relationships.

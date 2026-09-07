@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-3/pdfs/Piezunka 2015 Distant Search, Narrow Att
 text_path: "library/AMJ/vol-58-no-3/text/Piezunka 2015 Distant Search, Narrow Attention How Crowding Alters Organizations’ Filtering of Suggestions in Crowdsourcing.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["distant search", "crowding", "organizational attention", "distant knowledge", "crowdsourcing"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "attention-based view (Ocasio, 1997)"
   methods_overview: "We used the Cox proportional hazard models"
   keywords_source: "attention, search, and crowdsourcing"
+  hypotheses_source: "(b) amplified by an increase in crowding."
+  measures_overview: "Weighted degree centrality in the one-mode"
+  findings_overview: "does not amplify the effect of personal distance"
 ---
 
 # Distant Search, Narrow Attention: How Crowding Alters Organizations’ Filtering of Suggestions in Crowdsourcing
@@ -51,6 +56,11 @@ In their search for innovation, organizations often invite suggestions from exte
 **Research Question**
 The paper asks whether organizations that solicit suggestions from external contributors in order to access distant knowledge actually pay attention to suggestions that are distant. It also asks whether crowding makes organizations more or less likely to attend to distant knowledge during suggestion filtering.
 
+**Hypotheses / Propositions**
+- H1: The effect of content distance on organizations’ attention is (a) negative and (b) amplified by an increase in crowding.
+- H2: The effect of structural distance on organizations’ attention is (a) negative and (b) amplified by an increase in crowding.
+- H3: The effect of personal distance on organizations’ attention is (a) negative and (b) amplified by an increase in crowding.
+
 **Mechanism Process**
 - IV(s): Content distance, structural distance, personal distance, crowding, and the interactions between crowding and each distance dimension.
 - DV(s): Organizational attention to a suggestion, operationalized as whether the organization assigned the suggestion the status "selected."
@@ -58,6 +68,16 @@ The paper asks whether organizations that solicit suggestions from external cont
 - Moderators: Crowding moderates the effects of content distance and structural distance on organizational attention; the personal-distance interaction is weaker and loses significance in the full model.
 
 The mechanism is an attention-filtering process under bounded organizational attention. When crowding increases, organizations simplify and rationalize filtering, which steers attention toward suggestions that are familiar in content, structurally connected to other supported suggestions, or submitted by contributors with prior attention from the organization. The evidence most strongly supports crowding as amplifying the negative effects of content and structural distance, while personal distance has a negative main effect but less robust moderation by crowding.
+
+**Data & Measures**
+The longitudinal, observational dataset came from a private software company providing a website-embedded suggestion tool, supplemented with organization characteristics from ZoomInfo and CrunchBase. After removing spam, blank and non-English suggestions, organizations’ own submissions, and organizations without matched characteristics, the main sample comprised 105,127 suggestions to 922 organizations between November 2007 and June 2011. Table 3 reports 10,629 selection events and 5,039,413 weekly risk-set observations. Attention was the weekly indicator that an organization assigned a suggestion “selected” status; suggestions entered at submission and exited at selection, with pending suggestions right censored. Crowding was the number of suggestions awaiting a status change in the organization’s community in week t.
+
+Content distance used word-frequency and inverse-frequency weighting, cosine similarities, and a row sum multiplied by −1; Table 1 specifies comparison with previously accepted suggestions. Structural distance was weighted degree centrality in the one-mode projection of the contributor-vote network, normalized by community size and multiplied by −1. Personal distance used a contributor’s prior suggestions multiplied by −1, but the paper gives inconsistent definitions: the Methods text specifies previously implemented suggestions, whereas Table 1 specifies previously selected or rejected suggestions. Cox proportional hazard models with time-varying weekly covariates and Huber–White standard errors clustered by individual estimated associations with selection timing. Controls covered suggestion length and its square, suggestion and comment sentiments, vote share, comment count, contributor tenure and anonymity, and organization characteristics. Continuous-variable coefficients were standardized.
+
+**Key Findings**
+Table 3 supports H1a, H2a, and H3a: all three distance measures were negatively associated with attention. In the full Model 10, content, structural, and personal distance coefficients were −0.0797, −0.7013, and −0.3414, respectively (all p < .01). H1b and H2b were supported: crowding interacted negatively with content distance (b = −0.0367, p < .01) and structural distance (b = −0.8506, p < .01). The reported structural-distance illustration translates a one-standard-deviation increase into a 50% lower selection hazard at mean crowding and a 79% lower hazard at crowding one standard deviation above the mean. As a baseline result, a one-standard-deviation increase in crowding corresponded to a 33% lower selection hazard in Model 2.
+
+H3b was not supported in the full model: the personal-distance interaction was negative and significant in Model 9 (b = −0.1694, p < .05) but nonsignificant in Model 10 (b = −0.1216). Table 4 shows that this moderation result varied across robustness checks: the median-split crowding interaction was significant (b = −0.2573, p < .01), the model without controls was marginal (b = −0.1465, p < .10), and the web-company subsample was nonsignificant (b = −0.1168). Content- and structural-distance main effects and moderation remained negative and significant in these checks.
 
 **Theoretical Contribution**
 The paper contributes to attention research by showing that crowding changes what organizations attend to, not only how much attention any single suggestion receives. It contributes to search research by separating access to distant knowledge from attention to distant knowledge, showing that organizations may collect distant suggestions but filter them out when the pool becomes crowded. It also contributes to crowdsourcing research by shifting attention from the solicitation stage to the filtering stage and by distinguishing content, structural, and personal distance empirically.
@@ -69,7 +89,7 @@ Organizations using crowdsourcing should not assume that larger suggestion pools
 The authors state that their theory depends on settings in which all suggestions and ideas are visible to the organization and to external contributors. It also depends on social mechanisms that allow external contributors to vote, comment, or refine suggestions; a simple suggestion box without these mechanisms would not provide the same relationship cues for filtering suggestions.
 
 **Future Research**
-Future research could examine how crowding affects organizations' relationships with ignored or rejected contributors, including whether disappointed contributors publicly harm organizational reputation or future search efforts. The authors also point to settings such as suggestion boxes, where social mechanisms among external contributors are absent, as contexts where the theory's assumptions may not hold in the same way.
+Future research could examine how crowding affects organizations' relationships with ignored or rejected contributors, including whether disappointed contributors publicly harm organizational reputation or future search efforts.
 
 **APA 7th Citation**
 Piezunka, H., & Dahlander, L. (2015). Distant search, narrow attention: How crowding alters organizations’ filtering of suggestions in crowdsourcing. *Academy of Management Journal*, 58(3), 856-880. https://doi.org/10.5465/amj.2012.0458

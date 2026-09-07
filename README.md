@@ -549,6 +549,66 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.66.0 v3 backfill batch 33 (2026-09-07, 1,167 notes):**
+  Upgrades **AMJ volume 58 issues 3 and 2, 13 notes each**, from v2 to v3.
+  No new notes, v1 re-extractions, already-v3 skips, or calibration
+  repairs were needed. The record total remains **1,167**; the census
+  shifts from 61 v1 / 250 v2 / 856 v3 to **61 v1 / 224 v2 / 882 v3**.
+  Paper types are unchanged.
+
+  All 26 notes validate. All augmentation guards passed before legacy
+  repairs; final guard differences match exactly the **15 registered
+  legacy fields across 12 notes**. Bibliographic frontmatter, historical
+  extraction provenance, and original evidence remain unchanged. The three
+  new v3 sections and their anchors are unchanged during repairs;
+  augmentation provenance records `gpt-6-astra` and 2026-09-07.
+
+  First-pass blind nine-field audits returned **226 SUPPORTED and 8
+  PARTIAL out of 234**, with no UNSUPPORTED or CONTRADICTED. All 26
+  first-pass official reports were assembled before any repair. Parent
+  source verification produced 15 legacy-field repairs, including **11
+  fields initially scored SUPPORTED**, narrowing unsupported practical,
+  limitations, and future-research scope, correcting the stage of
+  moderation, and qualifying marginal evidence. Every changed note
+  received a fresh blind full-note audit; the 12 re-audits returned
+  **108/108 SUPPORTED**.
+
+  The **final state is 230 SUPPORTED and 4 accepted PARTIALs out of 234**,
+  with **0 UNSUPPORTED and 0 CONTRADICTED**. All 26 notes pass overall
+  with matching current full-note and source hashes. Of the 78 new v3
+  fields, 77 are SUPPORTED and one is an accepted PARTIAL. All 38 audit
+  returns reconcile with their preserved official reports and sidecars; 26
+  current official report/sidecar pairs match the final notes.
+
+  The four retained PARTIALs are faithful claims whose supporting passages
+  were omitted from fitted audit input: Di Stefano Limitations (14.43%
+  strip), Reyt Data & Measures (18.85%, Appendix 1 validation sample and
+  discriminant validity), and Zhang Practical Implication and Limitations
+  (19.61%, explicit training guidance and sample/common-method
+  qualifications). Each acceptance records raw-presence/fitted-absence
+  reconstruction and a subsequent reading of the complete recovered
+  passage. No faithful text was removed, and no full-raw-text audit
+  exception was needed.
+
+  Scoped CrossRef was skipped only after field-by-field proof of
+  byte-identical bibliographic YAML. Sequential SQLite, parsed CSV, and
+  BibTeX rebuilds reconcile to **1,167 records**, with **byte-identical
+  BibTeX**. Full-library validation passed **1,167/1,167**; direct
+  regressions passed **22/22** for PDF-text fitting and **15/15** for
+  augmentation. All 26 writers and 38 auditors have verified `gpt-6-astra`
+  runtime metadata.
+
+  This is the **fourth batch run end-to-end on `gpt-6-astra` (GPT-6
+  Astra)**. Provenance eras are batches 01–07 `claude-opus-4-8`, 08–15
+  `claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23 `claude-opus-5`, 24–29
+  `gpt-5.6-sol`, and 30–33 `gpt-6-astra`. Cross-family calibration scored
+  **27/27** for batch 16, **27/27** for batch 24, **25/27** for batch 28
+  (both divergences repaired in v0.62.0), **26/27** for batch 30 (the
+  divergence adjudicated faithful), and **26/27** for batch 32 (the
+  divergence explained by a documented input-mode difference). **No
+  spot-audit is scheduled for this batch’s review**; final calibration is
+  expected at batch 34’s workshop review.
+
 - **v0.65.0 v3 backfill batch 32 (2026-09-07, 1,167 notes):**
   Upgrades **AMJ volume 58 issues 5 and 4, 13 notes each**, from v2 to v3,
   and repairs only Limitations in three already-v3 notes: Shani (2016),
@@ -1738,7 +1798,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 250 v2 notes, and 856 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 224 v2 notes, and 882 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -1871,7 +1931,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.65.0},
+  version      = {0.66.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

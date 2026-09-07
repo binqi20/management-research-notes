@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-58-no-2/pdfs/Dodgson 2015 Managing Digital Money.pdf"
 text_path: "library/AMJ/vol-58-no-2/text/Dodgson 2015 Managing Digital Money.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "editorial"
 keywords: ["digital money", "innovation ecosystems", "business models", "inclusive innovation", "trust"]
@@ -55,6 +57,9 @@ Not reported in paper
 **Research Question**
 The editorial asks why digital money matters for management scholarship and what research questions it raises about innovation, entrepreneurship, trust, business models, competitiveness, regulation, and social inclusion. It also asks how digital money may reshape transactions among individuals, organizations, financial institutions, governments, and societies.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Digital money: A dematerialized medium of exchange, measure, and store of value that moves payments, transfers, and receipts from physical to digital environments.
 - Platforms and ecosystems: Apple Pay, Alipay, bitcoin, mobile Internet infrastructure, banks, telecommunications firms, Internet service providers, developers, regulators, and open source communities form competing and evolving digital money ecosystems.
@@ -64,11 +69,17 @@ The editorial asks why digital money matters for management scholarship and what
 
 The process is conceptual and agenda-setting rather than a tested causal model. Dodgson, Gann, Wladawsky-Berger, Sultan, and George argue that digital money dematerializes transactions, reduces frictions, shifts intermediation, and creates new data flows, thereby opening research opportunities across innovation ecosystems, business model innovation, trust, regulation, and competitive advantage.
 
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
+
 **Theoretical Contribution**
 The editorial contributes by positioning digital money as a globally significant phenomenon for management research rather than only a financial-technology topic. It links digital money to innovation ecosystems, transaction cost economics, organizational design, coordination costs, institutional theory, resource-based view, dynamic capabilities, trust, governance, and inclusive innovation as candidate lenses for future empirical and theoretical work.
 
 **Practical Implication**
-Managers, financial institutions, technology firms, and regulators should treat digital money as a strategic and institutional shift, not merely a payments tool. The editorial suggests that organizations will need capabilities for platform partnership, cybersecurity, privacy protection, data analytics, regulatory adaptation, open collaboration, and business model experimentation.
+The authors speculate that competitive advantage in digital-money ecosystems will depend on balancing proprietary positions and openness, with partnerships as a core competitive tool. They suggest that organizations employing multidisciplinary staff and taking a market-facing, collaborative and open approach are likely to be favored. They also anticipate that effective regulators will protect societal interests while encouraging entrepreneurship and experimentation.
 
 **Limitations**
 The editorial does not provide an empirical test, systematic review, or comprehensive research agenda. Its examples and forecasts are illustrative, and the authors repeatedly emphasize uncertainty, technological fluidity, contested regulation, and the unpredictability of digital money's adoption trajectory.

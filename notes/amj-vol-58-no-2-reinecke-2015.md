@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-2/pdfs/Reinecke 2015 When Times Collide Tempora
 text_path: "library/AMJ/vol-58-no-2/text/Reinecke 2015 When Times Collide Temporal Brokerage at the Intersection of Markets and Developments.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-qualitative"
 keywords: ["clock-time orientation", "market-based models for human development", "development temporalities", "temporal brokerage", "temporal structures", "ambitemporality", "process time"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "agentic view of time"
   methods_overview: "ethnography of Fairtrade International"
   keywords_source: "market-based models for human development"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "29 first-order categories"
+  findings_overview: "while retaining certification consistency."
 ---
 
 # When Times Collide: Temporal Brokerage at the Intersection of Markets and Developments
@@ -51,6 +56,9 @@ We study the influence of a pervasive Western organizational mentality—clock-t
 **Research Question**
 The paper asks how organizations positioned between temporally asymmetric worlds negotiate conflicting temporalities. It examines how Fairtrade International handled the collision between market-oriented clock time and development-oriented process time in its attempt to connect Northern ethical markets with Southern producer development.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Clock-time orientation, process-time orientation, temporal structures, temporal conflict, temporal reflexivity, mutual appreciation of interdependencies, temporal brokerage, and ambitemporality.
 - Process / phases: Disrupting the temporal commons through ISO 65 certification; negotiating moving picture versus snapshot, temporal asymmetry versus symmetry, and long versus short temporal depth; reconstituting the temporal commons toward ambitemporality.
@@ -58,6 +66,12 @@ The paper asks how organizations positioned between temporally asymmetric worlds
 - Emergent outcomes: Revised standards and certification practices that made room for producer-owned development plans, more flexible timelines, process-oriented criteria, and certification consistency.
 
 The process begins when FLO-CERT imports product-certification templates and time-bound compliance criteria to make development legible to Northern markets. FLO contests this temporal structuring because it turns development into certifiable snapshots and risks excluding producers whose empowerment unfolds unevenly over longer horizons. Through confrontation, both units become temporally reflexive, recognize that development credibility in the South and market credibility in the North are interdependent, and jointly rework Fairtrade's model toward ambitemporality rather than choosing either clock time or process time alone.
+
+**Data & Measures**
+The inductive qualitative process study centers on a six-month ethnography of Fairtrade International at its secretariat in Bonn, Germany, from July to December 2007: more than 1,100 hours of participant observation recorded in a 400-page field diary, including work routines, meetings, informal conversations, and auditor training. The paper reports 39 in-depth interviews and describes nine follow-up interviews; interviews were recorded and transcribed. Documentary evidence included around 100 media articles from 2006–2008 and standards, committee minutes, press releases, and annual reports from 2006–2012; proprietary internal documents helped validate observations and interview impressions but were excluded from the final analysis. Analysis proceeded through five phases, iterating between data and theory: fieldwork memos and chronological events; an integrated database in NVivo; 92 descriptive codes consolidated into 29 first-order categories; second-order themes contrasting snapshots with moving pictures, temporal symmetry with asymmetry, and short with long temporal depth; and aggregate theoretical dimensions tracing disruption, negotiation, and movement toward ambitemporality. Both authors independently developed and related codes, triangulating observations, interviews, and texts and examining the standards committee meeting as a critical event.
+
+**Key Findings**
+FLO-CERT's ISO 65-driven certification changes translated open-ended development standards into fixed timelines and discrete compliance assessments, intensifying conflict with FLO's process-oriented approach. Negotiations exposed three contrasting temporal structures: snapshot versus moving picture, temporal symmetry versus asymmetry, and short versus long temporal depth (Table 3). The emergent process model identifies temporal reflexivity and mutual appreciation of interdependencies as mechanisms through which the units recognized that development and market credibility depended on each other and began temporal brokerage (Figure 2). Subsequent changes emphasized process-oriented standards and support between audits, scoring average compliance to allow plural development timelines while retaining certification consistency, and producer-owned development plans and self-monitoring. This movement toward ambitemporality accommodated multiple temporalities; it was a working consensus involving continued adaptation, not a final resolution of differences.
 
 **Theoretical Contribution**
 The paper advances an agentic view of time by showing that temporal structures are not merely background conditions but cultural resources that actors can use to frame phenomena as manageable products or unfolding processes. It develops the concept of ambitemporality to explain how organizations can accommodate seemingly contradictory temporal orientations when they broker between discrepant temporal environments. It also contributes to research on market-based development by showing how clock-time assumptions in Western management models can truncate efforts to address complex social problems.
@@ -69,7 +83,7 @@ The paper implies that organizations using market-based models for development s
 The paper is based on an extreme qualitative case: Fairtrade International at a specific moment of ISO 65-driven certification change. The authors use the case because temporal conflict is unusually visible in an organization wrestling with contrasting temporalities of markets and development.
 
 **Future Research**
-Future research could examine temporal brokerage in other pluralistic organizations, including science-industry collaborations, hybrid organizations, sustainability initiatives, and organizations balancing exploitation and exploration. Studies could also investigate how temporal assumptions shape social and environmental performance measurement, where clock-based metrics may miss long-horizon or intangible outcomes, and how organizations use temporal structuring to make emergent processes appear as static objects.
+Future research could examine how organizations juggle different temporalities to manage complex processes while balancing coordination and control with flexibility and responsiveness. Studies could also investigate how temporal assumptions shape social and environmental performance measurement, where clock-based metrics may miss long-horizon or intangible outcomes, and how organizations use temporal structuring to make emergent processes appear as static objects.
 
 **APA 7th Citation**
 Reinecke, J., & Ansari, S. (2015). When times collide: Temporal brokerage at the intersection of markets and developments. *Academy of Management Journal*, 58(2), 618-648. https://doi.org/10.5465/amj.2012.1004

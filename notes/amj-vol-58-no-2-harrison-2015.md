@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-2/pdfs/Harrison 2015 An Inductive Study of Feed
 text_path: "library/AMJ/vol-58-no-2/text/Harrison 2015 An Inductive Study of Feedback Interactions over the Course of Creative Projects.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-qualitative"
 keywords: ["feedback interactions", "creative projects", "creative prototypes", "problem space", "excavations", "adjustments"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "co-construction of problem space"
   methods_overview: "inductive grounded theory approach"
   keywords_source: "creative prototypes"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we began with open coding."
+  findings_overview: "spurs incremental refinements to the prototype."
 ---
 
 # An Inductive Study of Feedback Interactions over the Course of Creative Projects
@@ -52,6 +57,9 @@ While there is a large amount of literature on feedback, it is unclear how well 
 **Research Question**
 How do feedback providers and creative workers interact during creative projects, and how do those feedback interactions influence changes to prototypes over time? The paper asks how feedback content, two-way interaction, and evolving project stage jointly shape whether creative workers make comprehensive excavations or incremental adjustments.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / moves: Feedback providers use personalizing, puzzling, measuring, and prescribing; creative workers use backgrounding, forecasting, and opening.
 - Process / phases: Early feedback interactions tend to emphasize puzzling and backgrounding around retrospective problem space; later interactions tend to emphasize measuring and forecasting around prospective problem space.
@@ -59,6 +67,12 @@ How do feedback providers and creative workers interact during creative projects
 - Boundary conditions: The model is grounded in creative projects with formal feedback meetings, unfinished prototypes, and knowledgeable feedback providers.
 
 The process is interactive rather than one-way. Feedback providers and creative workers jointly make sense of prototypes by co-constructing a problem space; creative workers' openings signal when providers can move from understanding to prescription. Early in projects, puzzling and backgrounding help surface retrospective problem space, making it possible for feedback to legitimate old ideas and trigger excavations. Later in projects, measuring and forecasting help define prospective problem space, allowing prescriptions to refine the prototype through adjustments.
+
+**Data & Measures**
+The inductive study purposefully sampled two settings with established feedback practices. In modern dance, the authors observed four program cycles over 2 years: 53 feedback meetings involving 29 groups, supplemented by access to rehearsals of 7 groups following feedback and 17 interviews with choreographers and dancers. In product design, two teams at OutDesign (a pseudonym) recorded prototype reviews over 8 months: 17 usable meetings for Boot Group and 16 for Helmet Group. The boot recordings covered the second half of an 18-month project; the helmet recordings covered major meetings across a 7-month project. Five informal interviews and a 3-hour focus group with 20 R&D members supplemented the design data. Table 1 reports 53 dance and 33 design meetings; the narrative separately reports 88 feedback interactions without reconciling these counts. Both authors independently open-coded data from the two contexts together, using in vivo codes and discussion to develop first-order concepts, then axial coding to identify second-order themes and aggregation into theoretical dimensions. They compared interactions with and without visible subsequent prototype changes, early and late project stages, and the two contexts; videos, interviews, and participant checks helped trace and interpret feedback-provider moves, creative-worker moves, and prototype revisions.
+
+**Key Findings**
+The emergent model identifies four feedback-provider moves (personalizing, puzzling, measuring, and prescribing), three creative-worker moves (backgrounding, forecasting, and opening), and two subsequent response moves. Excavations substantially reformulated prototypes by returning to previously explored ideas; adjustments incrementally refined prototypes, often using ideas proposed by feedback providers (Table 2). Interactions anchored on puzzling and/or backgrounding, while omitting measuring and forecasting, helped generate excavations; interactions anchored on measuring and/or forecasting, while omitting puzzling and backgrounding, helped generate adjustments. Creative workers' openings enabled more direct prescribing. These were recurring interaction patterns rather than a fixed sequence, and they did not occur in every meeting or always yield prototype changes. Across project stages, excavations occurred early and adjustments later (Table 3). Follow-up interviews suggested that the co-construction of retrospective problem space helped workers reconsider old ideas early, whereas shared exploration of prospective problem space enabled smaller additions later (Figure 3). No observed interaction produced wholesale rejection of a prototype.
 
 **Theoretical Contribution**
 The paper contributes a process theory of feedback interactions in creative work by treating creative workers as active shapers of the feedback they receive rather than passive recipients. It reframes feedback content as a pattern of interaction moves, showing how moves often labeled informational and controlling can work together when creative workers create openings for prescription. It also advances problem-space co-construction as the mechanism linking feedback interactions to prototype change over time.
