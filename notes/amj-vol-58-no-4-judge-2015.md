@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-4/pdfs/Judge 2015 The Person–Situation Debate
 text_path: "library/AMJ/vol-58-no-4/text/Judge 2015 The Person–Situation Debate Revisited Effect of Situation Strength and Trait Activation on the Validity of the Big Five Personality Traits in Predicting Job Performance.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["situation strength", "trait activation", "five-factor model", "job performance", "personality–performance correlations"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "situation strength and trait activation"
   methods_overview: "we used bootstrapped estimates"
   keywords_source: "personality traits are related to job performance"
+  hypotheses_source: "Hypothesis 6. The openness–job performance"
+  measures_overview: "each of these factors ranges from 0 to 100."
+  findings_overview: "Hypotheses 6a and 6b were supported."
 ---
 
 # The Person–Situation Debate Revisited: Effect of Situation Strength and Trait Activation on the Validity of the Big Five Personality Traits in Predicting Job Performance
@@ -51,13 +56,31 @@ Derived from two theoretical concepts—situation strength and trait activation�
 **Research Question**
 The paper asks when Big Five personality traits better predict job performance. It examines whether job-context differences captured by situation strength and trait activation explain variation in personality-performance validity coefficients.
 
+**Hypotheses / Propositions**
+- H1: The relationships of the Big Five traits with job performance will be stronger (more positive) in occupations with low situation strength in terms of (a) work outcomes and (b) work process.
+- H2: The conscientiousness–job performance relationship will be stronger (more positive) in occupations requiring (a) independence and (b) attention to detail.
+- H3: The emotional stability–job performance relationship will be stronger (more positive) in occupations requiring (a) strong social skills and (b) frequently dealing with unpleasant or angry people.
+- H4: The extraversion–job performance relationship will be stronger (more positive) in occupations requiring (a) strong social skills, (b) a strong level of competition, and (c) frequently dealing with unpleasant or angry people.
+- H5: The agreeableness–job performance relationship will be (a) stronger (more positive) in occupations requiring strong social skills, (b) weaker (less positive) in occupations with strong competition requirements, and (c) stronger (more positive) in occupations requiring frequent dealings with unpleasant or angry people.
+- H6: The openness–job performance relationship will be stronger (more positive) in occupations requiring (a) independence and (b) innovation.
+
 **Mechanism Process**
-- IV(s): Big Five personality traits: conscientiousness, emotional stability, extraversion, agreeableness, and openness to experience.
-- DV(s): Personality-job performance validity coefficients across occupationally homogeneous jobs.
+- IV(s): The theory links the Big Five traits—conscientiousness, emotional stability, extraversion, agreeableness, and openness to experience—to job performance. In the study-level regressions, occupational situation-strength and trait-activation measures are the predictors.
+- DV(s): Corrected personality-job performance validity coefficients across occupationally homogeneous jobs in the study-level regressions.
 - Mediators: Not reported in paper.
 - Moderators: Situation strength composites for work outcomes and work process; trait activation variables including independence, attention to detail, social skills, competition, innovation/creativity, and dealing with unpleasant or angry people.
 
 The mechanism is interactionist: personality traits predict performance more strongly when work settings provide discretion and fewer constraining cues, and when the occupational context activates trait-relevant behaviors. Situation strength supplies the general moderation logic, while trait activation supplies trait-specific matching between job demands and the behavioral expression of each Big Five trait.
+
+**Data & Measures**
+The associational study located personality–performance correlations through prior meta-analytic references, a 1989–2012 PsycINFO search, and reverse citation searches. Eligible studies assessed employees in natural job settings within a single codable occupation and used personality measures classifiable within the Big Five; military, laboratory, and training-performance studies were excluded. The Methods section reports 125 codable studies, with 114 for conscientiousness (n = 19,607), 65 for emotional stability (n = 11,616), 74 for extraversion (n = 14,098), 66 for agreeableness (n = 12,747), and 65 for openness (n = 11,369); 41 measured task performance and 84 overall job performance. Direct Big Five measures and classified indirect personality scales supplied trait scores. The regression outcome was each study's personality–job performance correlation corrected for predictor and criterion unreliability; missing reliabilities were generated from distributions based on reported reliabilities, with a .70 mean for single-item performance measures.
+
+O*NET occupation ratings on 0–100 scales supplied the contextual predictors. The outcomes composite averaged impact of decisions on coworkers/results, consequences of error, and responsibility for others' health/safety; higher scores indicate stronger situations. The process composite averaged unstructured work, freedom to make decisions, and variety; higher scores indicate weaker situations. Six individual ratings measured trait activation: independence, attention to detail, social skills, competition, innovation/creativity, and dealing with unpleasant or angry people. A separate reliability exercise obtained ratings from 81 of 96 organizational behavior researchers (84.4% response). The main analyses jointly regressed validity coefficients on the two situation-strength composites and six trait-activation ratings, using 1,000 bootstrap regressions per trait; dominance and relative-weight analyses compared the frameworks' explanatory contributions.
+
+**Key Findings**
+H1b was supported for all five traits: the process composite positively predicted validity (average bootstrapped B = .295, .286, .345, .424, and .199 for conscientiousness, emotional stability, extraversion, agreeableness, and openness, respectively; all p < .05). H1a was supported only for agreeableness (B = −.324, p < .05) and openness (B = −.233, p < .01); outcomes effects for the other three traits were nonsignificant. H2a was supported (independence: B = .233, p < .01), but H2b was not: attention to detail predicted lower conscientiousness validity (B = −.193, p < .05), opposite the hypothesis.
+
+H3a–b were supported: social skills and dealing with unpleasant or angry people positively predicted emotional-stability validity (B = .234 and .220). H4a–c were supported for extraversion (social skills: .243; competition: .252; unpleasant or angry people: .314). H5a–c were supported for agreeableness (social skills: .259; competition: −.400; unpleasant or angry people: .251). H6a–b were supported for openness (independence: .202; innovation/creativity: .332). All these hypothesized coefficients were significant at p < .05 or better. Tables 4–5 report R² = .201, .251, .502, .299, and .205 for conscientiousness, emotional stability, extraversion, agreeableness, and openness, respectively. Trait activation had higher dominance weights than the two situation-strength composites for all five traits; when all six situation-strength facets entered the relative-weight comparison separately, trait activation remained more important for four traits, with situation strength more important for openness. Results were similar with uncorrected or transformed correlations and with study-level controls.
 
 **Theoretical Contribution**
 The paper integrates situation strength theory and trait activation theory into one model of personality-performance validity. It contributes by showing that both general situational weakness and trait-specific activation explain when Big Five traits are more predictive of job performance, while also comparing the relative explanatory power of the two frameworks.

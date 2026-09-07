@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-58-no-4/pdfs/Desai 2015 Learning Through the Distribu
 text_path: "library/AMJ/vol-58-no-4/text/Desai 2015 Learning Through the Distribution of Failures within an Organization Evidence from Heart Bypass Surgery Performance.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["organizational learning", "learning from failures", "failure concentration", "attribution theory", "risk-adjusted mortality rate", "CABG surgery"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "underlie learning, using attribution theory to highlight the way in which decision"
   methods_overview: "feasible generalized least squares"
   keywords_source: "learning from failures"
+  hypotheses_source: "Hypothesis 1. Failure concentration increases"
+  measures_overview: "I ultimately reverse-score the"
+  findings_overview: "this interaction is negative and significant."
 ---
 
 # Learning Through the Distribution of Failures within an Organization: Evidence from Heart Bypass Surgery Performance
@@ -50,6 +55,12 @@ While research has suggested that organizations can improve by investigating and
 **Research Question**
 The paper asks whether organizations with similar overall failure experience learn differently depending on how failures are distributed internally across individuals or units. It also asks whether organizational size and performance relative to aspiration levels intensify or weaken the relationship between failure concentration and subsequent failure rates.
 
+**Hypotheses / Propositions**
+- H1: Failure concentration increases the organization's subsequent failure rate.
+- H2: The relationship between failure concentration and the organization's subsequent failure rate becomes more positive as size increases.
+- H3: This relationship becomes less positive as performance increases above the aspiration level.
+- H4: This relationship becomes less positive as performance decreases, in absolute value, below the aspiration level.
+
 **Mechanism Process**
 - IV(s): Failure concentration, measured through the distribution of patient deaths across surgeons within each hospital-period; interactions with surgery staff size and performance relative to aspiration benchmarks.
 - DV(s): Subsequent risk-adjusted mortality rate for CABG surgeries at the hospital.
@@ -57,6 +68,12 @@ The paper asks whether organizations with similar overall failure experience lea
 - Moderators: Surgery staff size, percentage of surgeons with worse-than-average performance, and percentage of surgeons with better-than-average performance.
 
 The mechanism is that concentrated failures make it easier for organizational decision makers to attribute problems to a narrow set of individuals or units. Those attributions encourage localized responses, such as focusing on culpable surgeons, rather than broader investigations of shared routines, procedures, technologies, or structural conditions. Dispersed failures are harder to explain as the fault of one party, so they are more likely to prompt systemwide learning and process change. The panel results support the main prediction that higher failure concentration predicts higher subsequent risk-adjusted mortality; size strengthens this relationship, performance above aspirations weakens it, and performance below aspirations receives only partial support as a weakening condition.
+
+**Data & Measures**
+The archival panel uses OSHPD biennial hospital and surgeon quality reports for California hospitals offering CABG surgery during 2003–2010: 116–118 hospitals per two-year period and 468 hospital-period observations overall. Tables 1–4 report N = 315. Analyses concern isolated CABG surgeries; the outcome observations cover 2005–2010, with all controls and predictors lagged one period. FGLS regressions estimate associations with subsequent hospital risk-adjusted mortality, rather than experimentally identifying causal effects. The dependent variable is the average risk-adjusted mortality rate across the hospital's CABG surgeries in each two-year period, adjusted for preoperative patient conditions. Failure concentration is a reverse-scored entropy index of patient deaths across surgeons, using each surgeon's proportion of the hospital's patient deaths. Organizational size is the number of surgeons performing CABG surgery at the hospital. Performance above and below aspirations is measured, respectively, by the percentages of surgeons receiving above-average and below-average ratings relative to the statewide risk-adjusted surgical mortality benchmark. These variables and failure concentration are centered before forming their respective interactions. Controls cover accumulated surgical experience, regional experience and hospital density, surgeon departures, CABG revenue share, surgical facilities, trauma level, and period. Supplemental outcomes are the percentage of surgeons departing during the period and the percentage of eligible surgeries using internal mammary artery (IMA) grafts; voluntary hospital response letters provide anecdotal evidence about attributions, which are not directly measured.
+
+**Key Findings**
+H1 is supported: greater failure concentration is associated with higher subsequent risk-adjusted mortality (Table 2, Model 9: b = 0.757, p < .05). H2 is supported: the concentration × surgery staff size interaction is positive in Models 4 and 9 (Model 9: b = 0.596, p < .001). H3 is supported: performance above aspirations weakens the positive concentration–mortality relationship in Models 8 and 9 (Model 9 interaction: b = −87.274, p < .01). H4 receives only partial support: the interaction with performance below aspirations is negative and significant in Model 6 (b = −8.091, p < .05), but not significant in the full Model 9 (b = −5.327). Supplemental analyses associate concentration with more surgeon departures (Table 3, Model 2: b = 0.117, p < .01) and lower IMA graft usage (Table 4, Model 2: b = −3.912, p < .001). Alongside the hospital letters, these patterns provide indirect support for the proposed attribution account, rather than a direct test of managerial attributions.
 
 **Theoretical Contribution**
 The paper contributes to organizational learning theory by showing that the internal distribution of failure events can matter even when organizations have similar aggregate failure rates. It integrates attribution theory with organizational learning by explaining how decision makers' causal interpretations of where failures occur shape whether learning remains localized or becomes systemwide. It also shifts attention from the benefits of experience to the possibility that some patterns of experience generate overly simple or misleading lessons.
@@ -68,7 +85,7 @@ Managers should not assume that repeated failures tied to the same individual or
 The study cannot directly observe managerial attributions, so the proposed attribution mechanism is supported indirectly through archival patterns, anecdotal hospital responses, surgeon turnover, and IMA graft usage. The focal predictor and outcome both concern failure information, which raises the possibility that related information is used on both sides of the model, although the study lags predictors and treats concentration and rate as distinct constructs. The measure of failure location is limited to distribution across surgeons, which is defensible for standardized CABG surgery but less adequate for settings where failures arise through interactions among units, technologies, or complex systems.
 
 **Future Research**
-Future research should test similar processes in settings where failures can originate across units, technologies, routines, or more complex interdependencies. Additional work could examine other micro-processes that shape learning from failure and study the consequences, not only the benefits, of organizational experience.
+Future research should test similar processes in settings where failures can originate across units, technologies, or more complex interdependencies. Additional work could examine other micro-processes that shape learning from failure and study the consequences, not only the benefits, of organizational experience.
 
 **APA 7th Citation**
 Desai, V. (2015). Learning through the distribution of failures within an organization: Evidence from heart bypass surgery performance. *Academy of Management Journal*, 58(4), 1032-1050. https://doi.org/10.5465/amj.2013.0949

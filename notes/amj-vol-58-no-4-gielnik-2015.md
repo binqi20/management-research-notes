@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-58-no-4/pdfs/Gielnik 2015 “I Put in Effort, Therefo
 text_path: "library/AMJ/vol-58-no-4/text/Gielnik 2015 “I Put in Effort, Therefore I Am Passionate” Investigating the Path from Effort to Passion in Entrepreneurship.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["entrepreneurial passion", "entrepreneurial effort", "new venture progress", "free choice", "self-regulation", "self-perception"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "Based on theories of self-regulation and self-perception"
   methods_overview: "fully crossed 2 3 2 3 2 experimental"
   keywords_source: "making new venture progress and free choice"
+  hypotheses_source: "Hypothesis 1. Entrepreneurial effort has a positive"
+  measures_overview: "We combined the 9 items"
+  findings_overview: "This finding provides support for Hypothesis 1."
 ---
 
 # “I Put in Effort, Therefore I Am Passionate”: Investigating the Path from Effort to Passion in Entrepreneurship
@@ -54,6 +59,11 @@ Most theoretical frameworks in entrepreneurship emphasize that entrepreneurial p
 **Research Question**
 Does entrepreneurial effort predict changes in the positive emotion of entrepreneurial passion, and do new venture progress and free choice explain why and under which conditions effort affects passion?
 
+**Hypotheses / Propositions**
+- H1: Entrepreneurial effort has a positive effect on changes in the positive emotion of entrepreneurial passion.
+- H2: New venture progress mediates the effect of entrepreneurial effort on changes in the positive emotion of entrepreneurial passion.
+- H3: Free choice moderates this mediated effect: entrepreneurial effort affects the positive emotion of entrepreneurial passion through new venture progress in cases of free choice, but not in cases of no free choice.
+
 **Mechanism Process**
 - IV(s): Entrepreneurial effort, observed weekly in Study 1 and manipulated as high versus low effort in Study 2.
 - DV(s): Changes in the positive emotion component of entrepreneurial passion.
@@ -61,6 +71,20 @@ Does entrepreneurial effort predict changes in the positive emotion of entrepren
 - Moderators: Free choice over the entrepreneurial task.
 
 The paper argues that effort can generate passion rather than only result from it. From self-regulation theories, effort helps entrepreneurs make progress and achieve small wins, which increases positive affect. From self-perception theory, people infer their emotions from their own behavior when that behavior is experienced as freely chosen. Thus, effort increases entrepreneurial passion most clearly when it produces new venture progress and is invested under free choice.
+
+**Data & Measures**
+Study 1 followed 54 German entrepreneurs in the pre-launch phase weekly for eight weeks, yielding 341 usable observations. Weekly retrospective self-reports measured effort with two five-point items covering immediately required and beyond-immediately-required venture tasks (α = .83). Passion used two five-point items assessing enjoyment of searching for product/service ideas and excitement about establishing a company (α = .89). Fully cross-lagged, person-centered hierarchical linear models predicted the subsequent week's passion from effort while controlling prior passion, age, gender, entrepreneurial experience, and week number. This observational design provides preliminary evidence about temporal direction, rather than establishing causality on its own.
+
+Study 2 used a randomized, fully crossed 2 × 2 × 2 experiment with 136 business administration undergraduates at a university in Singapore. Participants developed a business concept by answering five questions about customers, markets, competitors, suppliers, and regulations. High versus low effort combined 60 versus 30 minutes of work, main-study versus pilot-study framing, and performance-contingent gift cards versus no mentioned incentive. Significant versus no significant venture progress was manipulated through feedback reports. Free choice allowed selection among 12 business ideas or creation of a new idea; no free choice assigned one of five ideas. Passion before and after manipulation combined nine five-point items for inventing and founding (α = .94 and .95). Blind raters also coded open responses for positive and negative entrepreneurial emotions. Manipulation checks used two effort items and report word counts, seven items on progress toward venture-description goals, and four items on internal reasons for behavior. Repeated-measures analyses tested changes in passion using experimental–causal–chain and blockage designs.
+
+A separate experiment with 42 undergraduates at a German university manipulated effort and measured venture progress using Study 2's seven-item measure to test the effort-to-progress link. The reward-contingency experiment separately crossed effort and reward contingency in 111 students from universities in Singapore (60) and Germany (51), using the preceding experiment's procedure and measures. A further university experiment with 158 students varied work time alone (60 versus 30 minutes), keeping importance and incentives constant, to assess the effort manipulation.
+
+**Key Findings**
+Study 1 supported H1: effort positively predicted within-person changes in next-week passion (Table 1: b = 0.16, SE = 0.07, p < .05). The reverse prediction from passion to next-week effort was nonsignificant (Table 2: b = 0.01, SE = 0.08). Study 2 also supported H1: the effort manipulation affected changes in passion (F = 3.93, p < .05). The separate 42-student experiment supported the effort-to-progress link (high-effort M = 2.75 versus low-effort M = 2.40; t = 2.07, p < .05).
+
+Study 2's progress manipulation affected changes in passion (F = 10.35, p < .01), and the three-way effort × progress × free-choice interaction was significant (F = 4.33, p < .05). The effort × progress interaction was significant under free choice (F = 6.21, p < .05), but not under no free choice (F = 0.26, nonsignificant), supporting H2's mediation through the blockage design and H3's restriction of that mediation to free choice. Under free choice, high effort with significant progress increased passion (Table 3: M = 3.52 before and 3.89 after, reported difference = 0.38, t = 3.14, p = .01); low effort with significant progress produced no significant change. Without significant progress, passion decreased at both effort levels, with the high-effort decrease marginally significant.
+
+In the 111-student reward-contingency experiment, effort affected passion change (F = 4.05, p < .05), while reward contingency and its interaction with effort were nonsignificant (F = 0.43 and 0.10). Passion increased under high effort (t = 2.39, p < .05), but did not change significantly under low effort. In the 158-student time-only experiment, reported effort did not differ between conditions (M = 3.34 versus 3.35; t = −0.08, p = .94), indicating that varying time alone did not successfully manipulate effort.
 
 **Theoretical Contribution**
 The paper reverses the dominant passion-to-effort framing in entrepreneurship by showing that entrepreneurial effort can also be an antecedent of entrepreneurial passion. It contributes to work on antecedents and dynamics of entrepreneurial passion by identifying new venture progress and free choice as mechanisms that help explain the effort-to-passion path. It also extends behavior-emotion and self-regulation perspectives by showing that positive entrepreneurial emotion can be shaped by prior action.

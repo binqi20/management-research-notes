@@ -15,7 +15,9 @@ pdf_path: "library/AMJ/vol-58-no-5/pdfs/Berry 2015 Knowledge Inheritance in Glob
 text_path: "library/AMJ/vol-58-no-5/text/Berry 2015 Knowledge Inheritance in Global Industries The Impact of Parent Firm Knowledge on the Performance of Foreign Subsidiaries.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["inherited parent firm knowledge", "foreign operations", "technological knowledge transfers", "managerial knowledge transfers", "subsidiary performance"]
@@ -40,6 +42,9 @@ evidence:
   theories_overview: "Internalization theory"
   methods_overview: "system general method of moments (GMM)"
   keywords_source: "transfers of parent technological and managerial knowledge"
+  hypotheses_source: "knowledge improve the performance of foreign"
+  measures_overview: "Lagged U.S. employees as a percentage of total employees in the foreign operation"
+  findings_overview: "Hypothesis 1 is therefore supported."
 ---
 
 # Knowledge Inheritance in Global Industries: The Impact of Parent Firm Knowledge on the Performance of Foreign Subsidiaries
@@ -50,6 +55,14 @@ This paper analyzes the impact of inherited parent firm knowledge on the perform
 **Research Question**
 The paper asks when inherited parent firm knowledge improves the performance of foreign operations in global industries. It focuses on whether the value of parent technological and managerial knowledge transfers depends on whether home or foreign countries dominate technological innovation in the focal industry.
 
+**Hypotheses / Propositions**
+- H1: When domestic innovation dominates, transfers of superior parent firm technological knowledge improve the performance of foreign subsidiaries.
+- H2: When domestic innovation dominates, transfers of parent firm managerial knowledge improve the performance of foreign subsidiaries.
+- H3: When domestic innovation dominates, higher managerial knowledge transfers strengthen the positive effect of parent firm technology transfers on foreign subsidiary performance.
+- H4: When foreign innovation dominates, investments in local knowledge improve the performance of foreign subsidiaries located in leading technology countries.
+- H5: When foreign innovation dominates, transfers of parent firm managerial knowledge improve the performance of foreign subsidiaries located in leading technology countries.
+- H6: When foreign innovation dominates, higher parent firm managerial knowledge transfers strengthen the positive effect of local technology investments on the performance of foreign subsidiaries located in leading technology countries.
+
 **Mechanism Process**
 - IV(s): Parent technology transfers, parent expatriates as managerial knowledge transfers, and subsidiary R&D intensity as local knowledge investment.
 - DV(s): Subsidiary performance, measured as return on assets.
@@ -57,6 +70,16 @@ The paper asks when inherited parent firm knowledge improves the performance of 
 - Moderators: Domestic versus foreign innovation dominance, leading versus lagging foreign technology countries, parent expatriates interacting with parent technology transfers, and parent expatriates interacting with subsidiary R&D intensity.
 
 The mechanism is that parent technological knowledge improves subsidiary performance when the parent firm's home-country innovation base is stronger than the host-country innovation base, because transferred technology gives foreign operations competitive advantages over local rivals. When foreign innovation dominates, home-country technology is less useful in leading technology countries, and local R&D becomes more important for subsidiary performance. Managerial knowledge transfers through expatriates help subsidiaries in leading technology countries integrate, coordinate, and use locally generated knowledge, especially when combined with local R&D investment.
+
+**Data & Measures**
+The study combines confidential BEA data on U.S. MNC worldwide operations with USPTO patent data, using the 1989, 1994, 1999, and 2004 benchmark surveys because affiliate-level expatriate data are available only in benchmark years and only through 2004. Subsidiary performance is net income divided by total assets. Parent technology transfers are royalty payments to the U.S. parent divided by foreign-operation sales; managerial knowledge transfers are proxied by U.S. employees as a percentage of total foreign-operation employees; local knowledge investment is subsidiary R&D expenditure divided by foreign-country sales. The main independent variables are lagged five years. Domestic innovation dominance means more than 50% of patents in the firm's main technology class originate in the U.S.; foreign dominance means at least 50% originate abroad. Within foreign-dominant technologies, leading countries are the top quartile by their share of non-U.S. patents, with the remaining lower quartiles classified as lagging countries. These categories vary over time.
+
+Table 3 reports 1,801 observations for domestic innovation dominance, 804 for foreign-dominant leading technology countries, and 1,871 for foreign-dominant lagging technology countries. Firm fixed-effects OLS and dynamic system GMM models address unobserved heterogeneity and potential endogeneity; GMM uses lagged instruments and lagged performance. The observational design and these corrections do not remove all identification concerns. Controls cover subsidiary size and product transfers; parent R&D, debt, size, product diversity, and geographical dispersion; and host-country knowledge, intellectual-property protection, growth, political constraint, tax differences, FDI inflows, and distance. Supplemental analyses split firms by whether their industry R&D investments fall in the top quartile; Table 4 reports leader/laggard observation counts of 526/1,275, 218/186, and 489/1,382 in the three country categories, respectively.
+
+**Key Findings**
+H1 is supported: under domestic innovation dominance, parent technology transfers are positively associated with subsidiary ROA (Table 3, OLS Model 1: b = 0.33, p < .01; GMM Model 3: b = 0.46, p < .01). H2 is not supported: expatriates reach only p < .10 in Model 1 and are not significant in the GMM model. H3 is not supported: the expatriates × parent technology transfers interaction is not significant in either OLS or GMM. Under foreign innovation dominance in leading technology countries, H4 and H5 are supported: subsidiary R&D intensity (Model 4: b = 0.26, p < .05) and expatriates (b = 0.34, p < .05) are positively associated with performance. H6 is supported: the expatriates × subsidiary R&D interaction is positive in OLS Model 5 (b = 0.52, p < .01) and GMM Model 6 (b = 0.59, p < .01). Parent technology transfers are not significant in these leading countries, but are positive in lagging countries (Model 7: b = 0.21, p < .05; Model 9: b = 0.42, p < .10).
+
+Supplemental results locate the significant H1, H5, and H6 relationships among top-quartile R&D firms, but the paper reports no statistically significant differences in the focal coefficients between leading and other firms. Local R&D is positively related to performance for both firm groups in leading technology countries, and parent technology transfers are positively related to performance for both groups in lagging technology countries. Dropping subsidiaries in tax havens leaves the main results unchanged.
 
 **Theoretical Contribution**
 The paper extends internalization and knowledge-based arguments by showing that parent firm knowledge is not equally valuable across country environments. It contributes to international management research by distinguishing technological and managerial knowledge transfers and by theorizing their performance effects as contingent on the relative technological strength of home and host countries. It also adds industry-country technological dominance as a boundary condition for when MNCs can rely on inherited home-country knowledge versus local knowledge investment.

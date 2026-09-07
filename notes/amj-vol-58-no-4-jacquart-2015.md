@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-4/pdfs/Jacquart 2015 When Does Charisma Matter 
 text_path: "library/AMJ/vol-58-no-4/text/Jacquart 2015 When Does Charisma Matter for Top-Level Leaders Effect of Attributional Ambiguity.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["charisma", "attributional ambiguity", "top-level leader evaluation", "leader retention", "leader selection", "organizational performance"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "attributional theories of leadership"
   methods_overview: "Using a linear probability model (LPM)"
   keywords_source: "top-level leader evaluation, and, ultimately, leader retention"
+  hypotheses_source: "Hypothesis 2. Charisma will predict leader"
+  measures_overview: "The dependent variable is the Democrat vote share,"
+  findings_overview: "Hypothesis 1 was supported;"
 ---
 
 # When Does Charisma Matter for Top-Level Leaders? Effect of Attributional Ambiguity
@@ -51,13 +56,28 @@ One stream of leadership theory suggests that leaders are evaluated via inferent
 **Research Question**
 When does charisma matter for top-level leader selection and retention? The paper asks how inferential judgments about leader charisma and attributional judgments based on organizational performance jointly shape selection decisions when performance signals are clear versus ambiguous.
 
+**Hypotheses / Propositions**
+- H1: Organizational performance signals will predict leader selection.
+- H2: Charisma will predict leader selection.
+- H3: Clarity of performance signals moderates the effect of charisma on leader selection: the effect will be (a) positive and significant when performance signals are ambiguous and (b) nonsignificant when performance signals are clear.
+
 **Mechanism Process**
 - IV(s): Leader charisma, organizational performance signals, and the clarity versus ambiguity of those performance signals.
 - DV(s): Top-level leader selection or retention, measured as U.S. presidential vote share in Study 1 and CEO reappointment choice in Study 2.
 - Mediators: Not directly tested; the theory distinguishes inferential observer processes from attributional performance-based processes.
 - Moderators: Attributional ambiguity, operationalized as unclear or close-call performance signals, moderates the effect of charisma on selection.
 
-The mechanism is that selectors use performance signals as attributional evidence about a leader's competence when those signals are clearly good or poor. When performance signals are ambiguous, selectors lack a decisive attributional cue and rely more heavily on inferential processes based on whether the leader appears charismatic and leader-like. Thus, charisma has its strongest effect when the performance "litmus test" is inconclusive, while clear positive or negative performance cues reduce, but do not fully eliminate, the role of charisma.
+The mechanism is that selectors use performance signals as attributional evidence about a leader's competence when those signals are clearly good or poor. When performance signals are ambiguous, selectors lack a decisive attributional cue and rely more heavily on inferential processes based on whether the leader appears charismatic and leader-like. Thus, charisma has its strongest effect when the performance "litmus test" is inconclusive, while the theory predicts no significant charisma effect under clear performance signals. The clear-signal charisma slope was nonsignificant in Study 1; Study 2 unexpectedly found positive charisma effects under both clear good and clear poor signals.
+
+**Data & Measures**
+Study 1 used archival data for 24 U.S. presidential elections during 1916–2008 (Table 2), combining Fair's economic and incumbency data with 48 candidate acceptance speeches or letters. The dependent variable was Democrat two-party vote share. Economic indicators captured election-year real per capita GDP growth, inflation, and the number of high-growth quarters during the administration. Two trained coders scored nine verbal charismatic tactics at the sentence level; tactic frequencies were summed and averaged across coders. Relative charisma was the Democrat minus Republican candidate score, controlling for the corresponding difference in speech length. Performance-signal clarity was the absolute distance from 50% of the economic/incumbency model's leave-one-election-out predicted vote share; a smaller predicted margin indicated greater ambiguity. The authors used OLS and forecasting checks, emphasizing the exogenous four-year election cycle, and tested endogeneity with 2SLS that instrumented performance signal and its interaction with charisma using actual absolute victory margin, its square and cube, and their interactions with charisma. These were archival estimates; observer processes were assumed rather than directly measured.
+
+Study 2 used 717 U.S. participants in a 2 × 3 between-subjects video experiment. Participants viewed a business report about a fictitious company and, imagining themselves as board members, chose whether to reappoint or replace its CEO; this binary choice was the focal outcome. High versus low charisma was manipulated through six versus no rhetorical tactics in the CEO statement and through descriptions by the news anchor and a former employee. Good, ambiguous, or poor performance was manipulated through approximately 8% rising, almost constant, or approximately 8% falling quarterly stock prices and corresponding buy, hold, or sell recommendations. Manipulation checks assessed idealized influence, inspirational motivation, and leader effectiveness. Linear probability models with heteroscedasticity-robust variance estimates tested the manipulated factors and their interactions, with ambiguous performance as the reference category. A supplementary outcome asked participants to allocate $1,000 between company stock and low-risk government treasuries.
+
+**Key Findings**
+Study 1 supported H1–H3 in the full OLS model (Table 2, Model 3). Economic variables jointly predicted vote share (F(3, 12) = 33.21, p < .001): growth indicators were positive and inflation negative. Charisma and speech length were jointly significant (F(2, 12) = 5.35, p < .05); charisma's effect at a predicted dead heat was positive (b = .13, SE = .05, p < .05). The performance-signal × charisma coefficient was negative (b = −.02, p < .05). Charisma had a positive simple slope under ambiguous signals (b = .12, p < .05) and a nonsignificant slope under clear signals (b = −.05, p > .10). The full model explained 95.55% of vote-share variance and correctly called 21 of 24 elections out of sample, compared with 17 of 24 for the economic/incumbency model. All hypothesis tests remained supported with 2SLS.
+
+Study 2 supported H1 and H2: negative performance cues reduced, positive cues increased, and charisma increased CEO reappointment likelihood. The interactions were jointly significant (F(2, 711) = 5.46, p < .01). Supporting H3a, the charisma effect under ambiguity (.50 difference in predicted probabilities) exceeded the average effect under the two clear-signal conditions (F(1, 711) = 7.63, p < .01). The positive-cue interaction was significantly negative, whereas the negative-cue interaction was negative but nonsignificant (Table 3, Model 4). H3b's prediction of no charisma effect under clear signals was not supported: charisma increased reappointment probability by .37 under negative cues and .26 under positive cues (both p < .001). Under negative cues, the charismatic CEO's predicted reappointment probability of .53 did not differ significantly from .50. For the supplementary investment outcome, charisma increased stock allocation from 20.27% to 30.58% under ambiguity and from 13.17% to 22.75% under negative signals; it had no effect under positive signals.
 
 **Theoretical Contribution**
 The paper integrates attributional and inferential accounts of top-level leader evaluation instead of treating them as competing explanations. It introduces attributional ambiguity as a boundary condition showing when charisma should matter most for leader selection and distinguishes that condition from Weberian crisis. By testing the argument in both U.S. presidential elections and an experimental CEO-retention setting, it argues that the same basic psychological processes apply across political and business leadership domains.

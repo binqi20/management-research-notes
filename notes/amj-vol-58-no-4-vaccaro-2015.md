@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-4/pdfs/Vaccaro 2015 Values against Violence Ins
 text_path: "library/AMJ/vol-58-no-4/text/Vaccaro 2015 Values against Violence Institutional Change in Societies Dominated by Organized Crime.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-qualitative"
 keywords: ["organized crime", "institutional change", "values", "performative power of values", "values work", "pizzo", "Addiopizzo"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "a key construct of institutional theory"
   methods_overview: "This study relies on the tradition of the inductive"
   keywords_source: "performative power of values"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "Interviews 31 open, 53 focused"
+  findings_overview: "values-based change process based on five"
 ---
 
 # Values against Violence: Institutional Change in Societies Dominated by Organized Crime
@@ -52,6 +57,9 @@ Institutions that are controlled by organized crime are particularly change resi
 **Research Question**
 The paper asks how institutional change initiatives can succeed in social contexts dominated by organized crime. It examines how Addiopizzo, a Sicilian anti-Mafia organization, challenged pizzo as a highly stable Mafia-imposed institution through values-based micro-processes.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / tensions: Pizzo as a Mafia-created institution; values such as dignity, union, security, legality, solidarity, community, denunciation, and critical consumption; moral disengagement; hostile normative environments.
 - Process / phases: Moralizing through hooking, anchoring, and activating individual stakeholders; integrating through securing and uniting groups of stakeholders.
@@ -61,17 +69,23 @@ The paper asks how institutional change initiatives can succeed in social contex
 
 Addiopizzo first used values to gain stakeholders' trust and moral attention, then anchored alternative understandings of the Mafia's impact and activated new anti-Mafia behaviors. The initiative then secured those behaviors in protected spaces and united stakeholders into networks that made resistance less isolated and less risky. The process is not framed as heroic individual defiance, but as incremental institutional change through many small, values-guided actions by powerless actors.
 
+**Data & Measures**
+The inductive longitudinal case study follows Addiopizzo from the second half of 2004 to mid-2012, with data gathering from June 2006 to June 2012. Recursive theoretical sampling combined public sources, interviews with collaborating and noncollaborating entrepreneurs, access to activists and other stakeholders, and information from anti-Mafia experts. The 84 interviews comprised 35 with activists, 9 with collaborating entrepreneurs, 7 with noncollaborating entrepreneurs, 8 with consumers, 11 with students, 7 with teachers and school principals, 5 with anti-Mafia experts and police officials, and 2 with politicians. Table 2 reports 31 open and 53 focused interviews, 21 reports, 434 media articles and Addiopizzo messages, 114 posters, brochures, and books, 80 internal documents, and approximately 20 days of direct observation. Analysis combined source-specific chronological accounts with coding of values and recurrent activities into first-order concepts, six second-order themes (values and five micro-processes), and two aggregate dimensions (moralizing and integrating). A matrix crossed values with micro-processes to check their connections; findings were discussed with key informants.
+
+**Key Findings**
+The case yielded five connected values-based micro-processes. Hooking built trust and moral attention; anchoring developed understanding of the Mafia's impact and Addiopizzo's role; activating combined alternative meanings of values with plans for anti-Mafia behavior. These constituted individual-level moralizing. Group-level integrating comprised securing, which created safe spaces for reinforcing new meanings and initiating activities, and uniting, which connected people within and across stakeholder categories into an alternative anti-Mafia network and reduced participation risks. The same processes recurred across different stakeholder-specific values. Accounts of failed anchoring and activating showed limited understanding or engagement when these processes were poorly managed. The authors interpret the resulting changes as post-heroic institutional change through many small actions by otherwise powerless actors. Success meant establishing and anchoring an alternative practice, not eliminating pizzo: a vast majority of Sicilian businesses still paid it.
+
 **Theoretical Contribution**
 The paper contributes to institutional theory by theorizing the strategic use of values work in institutional change. It shows how the performative power of values can be used not only as an emergent practice but as a deliberate sequence of micro-processes that moralize individual stakeholders and integrate them into new networks. It also contributes to post-heroic institutional change by showing how risk neutralization and safe spaces allow powerless actors to challenge a violent, highly stable institution.
 
 **Practical Implication**
-For reform actors in hostile or violent contexts, the study suggests that challenging entrenched practices requires more than denouncing the institution; it requires building trust, connecting change to stakeholders' own values, and giving them concrete behavioral alternatives. It also implies that anti-corruption and anti-organized-crime initiatives should reduce the physical, economic, and social risks of participation by creating safe spaces and visible networks rather than relying on isolated heroic dissent.
+For reform actors in hostile or violent contexts, the study suggests that challenging entrenched practices requires more than denouncing the institution; it requires building trust, connecting change to stakeholders' own values, and giving them concrete behavioral alternatives. In the case, safe spaces and new social ties helped neutralize the physical, economic, and social risks of participation, allowing change to involve many actors without requiring heroic dissent.
 
 **Limitations**
 The paper does not present a separate formal limitations section. Its own boundary condition is that Addiopizzo's success lies in establishing and anchoring an alternative anti-pizzo practice, not in destroying pizzo; the authors state that a vast majority of Sicilian businesses still pay pizzo. Questions about how far the process travels beyond this longitudinal case are better treated as future-research issues than as formal limitations stated by the paper.
 
 **Future Research**
-The authors call for further research on bottom-up change processes in hostile contexts, including societies dominated by organized crime, terrorist networks, and path-dependent rigid social structures. They also suggest examining values across levels of analysis, including deviant organizations, industries, and recurring corporate fraud scandals. Future work could study struggles over institutional dominance by comparing how challengers and defenders use values strategically across emerging, fragmented, mature, or contested fields.
+The authors call for further research on bottom-up change processes in hostile contexts, including societies dominated by organized crime, terrorist networks, and path-dependent rigid social structures. They also suggest examining values across levels of analysis, including deviant organizations, industries, and recurring corporate fraud scandals. Future work could study struggles over institutional dominance by comparing how challengers and defenders use values strategically across emerging, fragmented, or mature fields.
 
 **APA 7th Citation**
 Vaccaro, A., & Palazzo, G. (2015). Values against violence: Institutional change in societies dominated by organized crime. *Academy of Management Journal*, 58(4), 1075-1101. https://doi.org/10.5465/amj.2012.0865

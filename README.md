@@ -549,6 +549,72 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.65.0 v3 backfill batch 32 (2026-09-07, 1,167 notes):**
+  Upgrades **AMJ volume 58 issues 5 and 4, 13 notes each**, from v2 to v3,
+  and repairs only Limitations in three already-v3 notes: Shani (2016),
+  Ayyagari (2015), and Graffin (2016), following the workshop's batch-31
+  review. These calibration repairs remove generalizability targets the
+  papers do not state while preserving their design facts and acknowledged
+  limitations. The record total remains **1,167**; the census shifts from
+  61 v1 / 276 v2 / 830 v3 to **61 v1 / 250 v2 / 856 v3**.
+
+  All 29 touched notes validate. All 26 augmentation guards passed before
+  legacy repairs; final guard differences match the 21 registered legacy
+  fields across 14 target notes. The three calibration notes independently
+  pass Limitations-only and unchanged-frontmatter checks. Bibliographic
+  frontmatter and historical provenance remain unchanged; augmentation
+  provenance truthfully records `gpt-6-astra` and 2026-09-07.
+
+  First-pass blind nine-field audits returned **251 SUPPORTED, 9 PARTIAL,
+  and 1 UNSUPPORTED** out of 261 judgments. All first-pass official reports
+  were assembled before audit-driven repairs. Parent raw-source review
+  produced **21 further legacy-field repairs across 14 notes**, including
+  **12 fields initially scored SUPPORTED**, correcting directional wording,
+  variable roles, theoretical versus empirical support, and unsupported
+  practical, limitations, and future-research scope. Every repaired note
+  received a fresh blind full-note audit. Together with the three assigned
+  calibration repairs, this release repairs 24 legacy fields across 17 notes.
+
+  The **final state is 260 SUPPORTED and 1 accepted PARTIAL out of 261**,
+  with **0 UNSUPPORTED and 0 CONTRADICTED**. All 29 notes pass overall with
+  current note and source hashes. All 78 newly added fields and the nine
+  existing v3 fields in the calibration notes are SUPPORTED. Shani and
+  Ayyagari returned 9/9 SUPPORTED. Graffin returned 8 SUPPORTED and 1
+  accepted PARTIAL: its Limitations sentence about an inexpensive,
+  effective tactic and unexplained non-use is explicit in raw text but
+  absent from fitted input at 14.15% strip. Reconstruction proof and
+  subsequent reading confirm fidelity; the sentence remains unchanged.
+
+  Kim's legacy Future Research field received UNSUPPORTED in two standard
+  audits because the fitter omitted the explicitly stated aspirations and
+  expectations agenda at 13.88% strip. With explicit per-note user approval,
+  a fresh blind auditor received the complete raw source and returned
+  **9/9 SUPPORTED**. The official report was assembled with the audit tool's
+  own functions, with the input mode, prompt hash, and authorization in both
+  provenance and audit context, alongside the standard fitting diagnostic.
+  Both original verdicts remain preserved; no faithful note text, tool, or
+  workflow document changed for this exception.
+
+  Scoped CrossRef was skipped after field-by-field proof of byte-identical
+  bibliographic frontmatter. Sequential SQLite, parsed CSV, and BibTeX
+  rebuilds reconcile to **1,167 records**, with unchanged paper types and
+  byte-identical BibTeX. Full-library validation passed **1,167/1,167**;
+  direct regressions passed **22/22** for PDF-text fitting and **15/15** for
+  augmentation. All 44 independent audit returns and preserved official
+  reports reconcile, with 29 current official report/sidecar pairs.
+
+  This is the **third batch run end-to-end on `gpt-6-astra` (GPT-6 Astra)**
+  for augmentation and audit. Provenance eras are batches 01–07
+  `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23
+  `claude-opus-5`, 24–29 `gpt-5.6-sol`, and 30–32 `gpt-6-astra`.
+  Cross-family calibration scored **27/27** for batch 16, **27/27** for
+  batch 24, **25/27** for batch 28 (both divergences repaired in v0.62.0),
+  and **26/27** for batch 30 (the divergence adjudicated faithful).
+  The next cross-family spot-audit runs at **this batch's workshop review**,
+  including a **pre-repair probe on preserved baseline prompts**; its result
+  is pending. The three batch-31 Limitations repairs described above ride
+  in this release following that workshop's review.
+
 - **v0.64.0 v3 backfill batch 31 (2026-09-06, 1,167 notes):**
   Upgrades **AMJ volume 59 issue 1 and volume 58 issue 6, 29 notes total**
   to v3, all through v2 augmentation. The record total remains **1,167**;
@@ -1672,7 +1738,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 276 v2 notes, and 830 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 250 v2 notes, and 856 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -1805,7 +1871,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.64.0},
+  version      = {0.65.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

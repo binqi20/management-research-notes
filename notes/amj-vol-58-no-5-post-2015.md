@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-5/pdfs/Post 2015 Women on Boards and Firm Finan
 text_path: "library/AMJ/vol-58-no-5/text/Post 2015 Women on Boards and Firm Financial Performance A Meta-Analysis.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["women on boards", "female board representation", "firm financial performance", "accounting returns", "market performance", "board monitoring", "board strategy involvement", "shareholder protections", "gender parity", "meta-analysis"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "upper echelons theory (UET)"
   methods_overview: "Wilson’s meta-analysis"
   keywords_source: "relationship between women on boards"
+  hypotheses_source: "positively related to firm financial performance."
+  measures_overview: "presence of x number of women, and gender diversity"
+  findings_overview: "thus supporting Hypothesis 1a."
 ---
 
 # Women on Boards and Firm Financial Performance: A Meta-Analysis
@@ -51,6 +56,14 @@ Despite a large body of literature examining the relationship between women on b
 **Research Question**
 The paper asks whether female board representation is related to firm financial performance and whether legal/regulatory and socio-cultural national contexts explain mixed findings in the literature. It also asks whether female board representation is related to board monitoring and strategy involvement as more proximal board activities.
 
+**Hypotheses / Propositions**
+- H1: Female board representation is positively related to (a) accounting returns and (b) market performance.
+- H2: The relationships between female board representation and (a) accounting returns and (b) market performance are more positive in countries with stronger shareholder protections.
+- H3: The relationships between female board representation and (a) accounting returns and (b) market performance are more positive in countries with greater gender parity.
+- H4: Female board representation is positively related to (a) board monitoring activities and (b) board strategy involvement.
+- H5: The relationships between female board representation and (a) board monitoring activities and (b) board strategy involvement are more positive in countries with stronger shareholder protections.
+- H6: The relationships between female board representation and (a) board monitoring activities and (b) board strategy involvement are more positive in countries with greater gender parity.
+
 **Mechanism Process**
 - IV(s): Female board representation, defined as the number, proportion, or presence of women on boards of directors.
 - DV(s): Accounting returns, market performance, board monitoring activities, and board strategy involvement.
@@ -58,6 +71,16 @@ The paper asks whether female board representation is related to firm financial 
 - Moderators: Shareholder protection strength and gender parity in the countries where firms are located.
 
 Drawing on upper echelons theory, the paper argues that female directors may bring different cognitive frames, experiences, knowledge, and values to board decision making. These differences can expand the information considered by boards, increase deliberativeness, and support monitoring and strategy involvement. The relationships are contingent: shareholder protections may motivate boards to leverage diverse perspectives, while gender parity may affect the legitimacy and market interpretation of female board representation.
+
+**Data & Measures**
+The meta-analysis combined 140 studies completed or published by May 2014, comprising 144 independent samples and a reported combined sample of 90,070 firms; the authors caution that some firms may recur across studies. Included studies were in English and conducted at the firm level; sample sizes counted unique firms within each effect size rather than firm-year observations. Female board representation was measured by the number or percentage of women, the presence of a specified number of women, or gender diversity indices. Accounting returns included return on assets, return on equity, employee productivity, and return on invested capital; market performance included market-to-book ratio, Tobin’s Q, stock performance, and shareholder returns. Monitoring measures included meeting length or frequency, reverse-coded attendance problems, audit effort demanded, and control over activities such as CEO compensation. Strategy involvement measures captured strategic control, strategic tasks, and directors’ concern for strategy. Shareholder protection used the World Bank’s 2014 strength of investor protection index, covering transparency, director liability for self-dealing, and shareholders’ ability to sue. Gender parity used the 2012 Global Gender Gap score, covering economic participation, educational attainment, health and survival, and political empowerment. Country scores were averaged for samples spanning five or fewer countries; large multicountry samples could not be coded for these moderators. Correlations were combined using random-effects meta-analysis, with weighted least squares meta-regression for continuous moderators. The design supports associations, not causal claims, and did not test mediation through board activities.
+
+**Key Findings**
+- H1a was supported: female board representation was positively related to accounting returns (r = .047, 95% CI [.033, .061], k = 109 independent effect sizes). H1b was not supported: its association with market performance was near zero (r = .014, 95% CI [−.002, .031], k = 78).
+- H2a was supported: stronger shareholder protections were associated with a more positive female representation–accounting returns relationship (b = .009, SE = .004, p < .05). H3a was not supported (gender parity b = .007, SE = .138, nonsignificant). The accounting-return meta-regression used k = 100.
+- H2b was not supported (shareholder protection b = −.002, SE = .006, nonsignificant), whereas H3b was supported (gender parity b = .461, SE = .184, p < .05; market-performance meta-regression k = 69). Predicted market-performance associations were near zero or negative at low gender parity and positive at high gender parity.
+- H4a and H4b were supported: female board representation was positively related to monitoring (r = .054, 95% CI [.011, .096], k = 27) and strategy involvement (r = .093, 95% CI [.012, .172], k = 4). H5a was supported: the monitoring association was more positive with stronger shareholder protections (b = .024, SE = .007, p < .01). Gender parity did not significantly moderate the monitoring association (b = .237, SE = .225; monitoring meta-regression k = 22). H5b and H6b were not tested: the strategy-involvement analysis contained only four studies from two countries and showed no significant heterogeneity.
+- Exploratory analyses found no significant moderation of the financial-performance associations by lagged versus nonlagged study design or by board independence. These checks did not establish causality.
 
 **Theoretical Contribution**
 The study develops and tests a contingency model of female board representation and firm financial performance. It contributes to women-on-boards and corporate governance research by distinguishing accounting returns from market performance, identifying national shareholder protections and gender parity as moderators, and showing that female board representation relates positively to board monitoring and strategy involvement. The paper also advances upper echelons theory by treating national context as a condition under which board gender diversity is more or less likely to shape firm outcomes.

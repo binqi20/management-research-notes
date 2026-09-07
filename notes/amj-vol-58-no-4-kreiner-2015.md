@@ -19,7 +19,9 @@ pdf_path: "library/AMJ/vol-58-no-4/pdfs/Kreiner 2015 Elasticity and the Dialecti
 text_path: "library/AMJ/vol-58-no-4/text/Kreiner 2015 Elasticity and the Dialectic Tensions of Organizational Identity How Can We Hold Together While We Are Pulling Apart.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-qualitative"
 keywords: ["identity elasticity", "organizational identity", "dialectic tensions", "organizational identity work", "centrality", "endurance", "distinctiveness", "Episcopal Church"]
@@ -44,6 +46,9 @@ evidence:
   theories_overview: "three foundations of organizational identity"
   methods_overview: "We drew upon multiple data sources, including"
   keywords_source: "develop the construct of “identity elasticity”"
+  hypotheses_source: "Proposition 2a: Prioritizing plurality as core to"
+  measures_overview: "was independently coded by two members of the"
+  findings_overview: "expansion, wherein an elastic stance allows"
 ---
 
 # Elasticity and the Dialectic Tensions of Organizational Identity: How Can We Hold Together While We Are Pulling Apart?
@@ -54,6 +59,16 @@ Given the ever-changing nature of contemporary workplaces, members often renegot
 **Research Question**
 The paper asks how organizational leaders and members expand and contract their constructions of organizational identity, what challenges they experience in that process, and what consequences follow. Empirically, it examines how Episcopal Church members negotiated organizational identity after the election of the Church's first openly gay bishop.
 
+**Hypotheses / Propositions**
+The inductive findings generate seven propositions:
+- P1: Organizational identity work facilitates constructions of identity as expanded, static, or constricted.
+- P2a: Prioritizing plurality as core to organizational identity facilitates an elastic stance, thereby expanding identity; diminishing plurality as peripheral facilitates an inelastic stance, thus constricting identity.
+- P2b: Subordinating conflicting identity claims as peripheral facilitates an elastic stance and expansion; emphasizing conflicting claims facilitates an inelastic stance and constriction.
+- P3a: Framing current identity-defining events as consistent with previous ones facilitates an elastic stance and expansion; framing them as inconsistent facilitates an inelastic stance and constriction.
+- P3b: Normalizing identity controversy facilitates an elastic stance and expansion; problematizing identity controversy facilitates an inelastic stance and constriction.
+- P4a: Embracing inclusive external trends facilitates an elastic stance and expansion; eschewing inclusive external trends facilitates an inelastic stance and constriction.
+- P4b: Crafting internal distinctiveness facilitates an elastic stance and expansion; rejecting internal distinctiveness facilitates an inelastic stance and constriction.
+
 **Mechanism Process**
 - Key constructs / tensions: identity elasticity; organizational identity work; social constructions of identity; centrality, endurance, and distinctiveness; dialectic tensions of holding together while pushing apart.
 - Research context: the Episcopal Church after Bishop Gene Robinson's election, where members disagreed over inclusion, tradition, authority, and whether contested identity claims should remain inside the Church.
@@ -63,11 +78,17 @@ The paper asks how organizational leaders and members expand and contract their 
 
 The process is that members confront competing identity claims and perform organizational identity work to classify those claims as central or peripheral, continuous or deviant, and distinctive-enhancing or distinctive-eroding. Elasticity is sustained when members hold oppositional claims in tension, allowing organizational identity to stretch while remaining tied to shared identity anchors. Inelasticity appears when members frame a claim as irreconcilable with the organization's core, history, or distinctiveness, making separation, schism, or identity constriction more likely.
 
+**Data & Measures**
+The 10-year qualitative case study examined the Episcopal Church, located predominantly in the United States. The primary corpus comprised 72 semi-structured interviews (4 initial informants, 37 Church leaders, 18 representative stakeholders, and 13 persons of interest), plus observational and/or interview data from 42 events between 2004 and 2011. Table 1 inventories 21 superordinate authoritative texts, 142 official statements or reports, 2 historical texts, 566 and 370 internal news-service stories, 97 internal video and 24 audio files, and 1,047 mainstream media text/picture files plus 10 video and 17 audio files. Interview questions addressed organizational identity, challenges, and responses, with later questions following emerging elasticity themes and respondents' vantage points. Identity elasticity was treated as actors' social construction rather than an objectively measured state. Archival and observational materials were categorized through field notes, article classifications, researcher memos, and logged quotations. Each interview transcript was independently coded by two researchers, followed by consensus meetings; in-vivo, theoretical, and researcher-generated codes were organized hierarchically as themes developed concurrently. Constant comparison, comparison across data types, and member checks refined the dialectic model; NVivo supported data management and analysis.
+
+**Key Findings**
+Members constructed identity elasticity through simultaneous tensions of holding together and pushing apart, both within shared identity labels and between multiple identity claims. The emergent model links organizational identity work to expanded, static, or constricted constructions of identity through three dialectics: centrality (core versus peripheral), endurance (continuity versus change), and distinctiveness (enhancement versus loss). Expansion accommodated new or changing identity claims; stasis held identity together without expansion or constriction; constriction dismissed some claims. Elasticity involved maintaining opposed claims in ongoing tension rather than necessarily resolving them. Liberal-leaning members tended to construct inclusion more elastically, whereas conservative-leaning members tended to construct it more inelastically; some conservatives nevertheless stayed by negotiating identity tensions, and some liberals stayed within conservative dioceses. Members' stances could differ and change over time. Crafting internal distinctiveness allowed some groups to remain while differentiating themselves; seven national groups described in the findings did so, while others rejected internal distinctiveness and departed. These are qualitative process findings and emergent propositions, not statistical hypothesis tests.
+
 **Theoretical Contribution**
 The paper develops identity elasticity as a construct for explaining how organizational identity can be both fluid and enduring. It contributes to organizational identity research by problematizing the standard central, enduring, and distinctive definition and recasting those dimensions as dialectic tensions: core versus peripheral, continuity versus change, and enhancement versus loss. It also bridges process and characteristic views of organizational identity by showing how organizational identity work changes members' constructions of identity.
 
 **Practical Implication**
-The paper sensitizes leaders in pluralistic organizations to how members classify contested identity claims, not only to the content of those claims. Identity conflict may be more manageable when members can preserve shared core anchors, frame change as connected to the organization's history, and create internally distinctive spaces for disagreement. Conversely, treating contested claims as core, unprecedented, or identity-eroding can make the organization appear inelastic and accelerate exit or fragmentation.
+The paper sensitizes leaders in pluralistic organizations to how members classify contested identity claims, not only to the content of those claims. Identity conflict may be more manageable when members can preserve shared core anchors, frame change as connected to the organization's history, and create internally distinctive spaces for disagreement. Conversely, treating contested claims as core, unprecedented, or identity-eroding can make the organization appear inelastic and contribute to exit or fragmentation.
 
 **Limitations**
 The authors acknowledge transferability concerns that typically accompany inductive case studies. The empirical case is a religious organization facing a distinctive controversy, so future work must examine whether the same elasticity dialectics operate in other settings such as mergers, acquisitions, academic departments, social movements, and organizations with repeated identity shifts. The paper also notes that it does not exhaust all possible dialectics, mentioning organizational structure and language usage as additional tensions not fully developed because of space constraints.

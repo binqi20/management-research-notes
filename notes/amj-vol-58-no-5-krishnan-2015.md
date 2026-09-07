@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-5/pdfs/Krishnan 2015 Status and Corporate Illeg
 text_path: "library/AMJ/vol-58-no-5/text/Krishnan 2015 Status and Corporate Illegality Illegal Loan Recovery Practices of Commercial Banks in India.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["status theory", "corporate illegality", "illegal loan recovery practices", "financial asset quality", "reputation for integrity", "commercial banks"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "A key premise of status theory"
   methods_overview: "negative binomial models with AR1 error structure"
   keywords_source: "illegal loan recovery practices"
+  hypotheses_source: "Hypothesis 1. The higher an organization’s"
+  measures_overview: "the mean Karmayog score of all of a bank’s BSE500"
+  findings_overview: "provides strong support for Hypothesis 1."
 ---
 
 # Status and Corporate Illegality: Illegal Loan Recovery Practices of Commercial Banks in India
@@ -51,6 +56,12 @@ Why might high-status organizations, presumably secure in their positions, resor
 **Research Question**
 The paper asks why high-status organizations, which status theory often treats as relatively secure, engage in corporate illegality. It examines whether insecurity about meeting associates' expectations for quality explains illegal loan recovery practices among commercial banks in India, and whether associates' integrity expectations weaken that tendency.
 
+**Hypotheses / Propositions**
+- H1: The higher an organization's status, the more likely it is to engage in corporate illegality.
+- H2: Any positive association between an organization's status and its level of illegal activity will be stronger when the organization falls short of its historical reputation for quality.
+- H3: Any positive association between an organization's status and its level of illegal activity will be stronger when its reputation for quality falls short of those of its peers.
+- H4: Any positive association between an organization's status and its level of illegal activity will be weaker when its associates are rated higher in terms of reputation for integrity.
+
 **Mechanism Process**
 - IV(s): Organizational status, measured through Bonacich centrality in preferred-banker affiliation networks among BSE500 firms; declines in historically and socially referenced reputation for financial asset quality.
 - DV(s): Corporate illegality, measured as annual loan recovery harassment complaints against each bank in Banking Ombudsman reports.
@@ -58,6 +69,12 @@ The paper asks why high-status organizations, which status theory often treats a
 - Moderators: Decline in historically referenced reputation for quality, decline in socially referenced reputation for quality, and associates' reputation-for-integrity expectations based on Karmayog CSR ratings of BSE500 clients.
 
 The mechanism is that high-status banks face strong expectations to maintain financial asset quality. When their asset quality deteriorates relative to their own past performance or their status peers, potential status loss creates insecurity and makes illegal recovery practices more attractive as a way to reduce bad assets. The results show a positive status-illegality relationship, stronger effects when financial asset quality declines, and weaker effects when associated BSE500 firms place greater emphasis on CSR and integrity.
+
+**Data & Measures**
+The longitudinal observational study covers 82 commercial banks in India, with 396 bank-year observations described in the sample and Table 1; Table 2 reports 393 observations for the regression models. Complaints cover 2005–2009, with independent variables observed in 2004–2008. Corporate illegality is the annual count of loan recovery harassment complaints against each bank in Banking Ombudsman reports. Status is the bank's annual Bonacich centrality in an affiliation network linking banks that share preferred-banker relationships with BSE500 firms, using Prowess data. Financial data come from annual reports in the RBI statistical archives. Historically referenced quality decline is the positive change in the bank's nonperforming-asset (NPA) percentage from the previous year, otherwise zero; socially referenced decline is the positive difference between the bank's annual NPA change and its peers' mean annual NPA change, otherwise zero. Peers are banks sharing its BSE500 clients; banks without such affiliations are compared with other low-status banks. Separate spline variables capture improvements. Associates' integrity expectations equal the mean Karmayog CSR rating of the bank's BSE500 associates divided by the ratings' standard deviation, capturing both level and agreement. Models control for bank age, size, prior financial performance, negative media attention, bad assets securitized, commitment to rural areas, and year effects. Main tests use GEE negative binomial models with AR1 correlation and heteroskedasticity-consistent standard errors. The design estimates associations; additional two-stage least squares instrumental-variable tests address possible status–illegality simultaneity.
+
+**Key Findings**
+H1 was supported: status was positively associated with corporate illegality (Table 2, Model 2: b = .098, p < .001), with a one-unit status increase predicting approximately 10% more complaints. H2 was supported by the positive status × historically referenced quality decline interaction (Model 3: b = .023, p < .05). H3 was supported in Model 5 by the positive interaction with socially referenced quality decline (b = .013, p < .01). H4 was supported by the negative interaction with associates' integrity expectations (Model 7: b = −.021, p < .01). The full Model 8 retained significant effects for H1, H2, and H4, but H3 was nonsignificant; the authors prioritize Models 1–7 because of multicollinearity in the full model. Historically referenced quality improvement weakened the status–illegality association, whereas the status × socially referenced improvement interaction was nonsignificant. Supplemental analyses associated socially, but not historically, referenced growth in bad assets with subsequent status loss; illegal recovery practices also predicted subsequent status loss. These analyses support the proposed account without directly measuring insecurity or loss aversion.
 
 **Theoretical Contribution**
 The study challenges the status-theory assumption that high-status organizations are relatively secure once they occupy privileged positions. It shows that reputation for quality remains consequential for high-status organizations because associates can evaluate whether the organization continues to meet quality expectations. It also extends status and reputation research by showing that affiliates' integrity expectations can condition whether high-status organizations respond to status insecurity through illegal action.

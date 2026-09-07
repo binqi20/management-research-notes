@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-58-no-5/pdfs/Pahnke 2015 Exposed Venture Capital, Com
 text_path: "library/AMJ/vol-58-no-5/text/Pahnke 2015 Exposed Venture Capital, Competitor Ties, and Entrepreneurial Innovation.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "empirical-quantitative"
 keywords: ["competitive information leakage", "venture capital", "indirect ties to competitors", "entrepreneurial innovation", "medical device industry", "product introductions"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "competitive information leakage"
   methods_overview: "zero-inflated Poisson regression models"
   keywords_source: "competitive information leakage"
+  hypotheses_source: "Hypothesis 1. Entrepreneurial firms with more"
+  measures_overview: "the number of rounds a VC has"
+  findings_overview: "high reputation actually exhibits a steeper negative"
 ---
 
 # Exposed: Venture Capital, Competitor Ties, and Entrepreneurial Innovation
@@ -53,13 +58,31 @@ This study investigates the impact of early relationships on innovation at entre
 **Research Question**
 The paper asks how early investment relationships that indirectly expose entrepreneurial firms to competitors through shared venture capital investors affect innovation. It also asks when this competitive exposure becomes more or less damaging, depending on the timing, commitment, proximity, status, and reputation of the intermediary relationship.
 
+**Hypotheses / Propositions**
+- H1: Entrepreneurial firms with more indirect ties to competitors via shared investors will be less innovative than firms with fewer such ties.
+- H2: The negative effect of indirect competitor ties on innovation is greater for entrepreneurial firms that were first among their competitors to form ties with shared investors.
+- H3: The negative effect is greater for entrepreneurial firms with less committed ties than their competitors to shared investors.
+- H4: The negative effect is greater for entrepreneurial firms more geographically distant than their competitors to shared investors.
+- H5: The negative effect is greater for entrepreneurial firms that share high-status VC investors with their competitors.
+- H6: The negative effect is attenuated for entrepreneurial firms as the reputation of their shared VC investors increases.
+
 **Mechanism Process**
 - IV(s): Indirect ties to competitors through shared VC investors; earliest shared VC tie; relative commitment from shared VC; relative distance to shared VC; high-status VC; average VC reputation.
 - DV(s): Innovation, measured primarily as yearly FDA product approvals/product introductions.
 - Mediators: Not reported in paper.
 - Moderators: Earliest tie formation, relative VC commitment, geographic proximity to the shared VC, VC status, and VC reputation.
 
-The mechanism is competitive information leakage: young firms disclose sensitive product, regulatory, and strategic information to powerful intermediaries because they need capital, advice, and legitimacy. When those intermediaries also invest in competitors, they can redirect information flows toward favored portfolio firms and away from less favored ones. Leakage is especially harmful when the focal firm formed the earliest tie, has weaker VC commitment, is farther from the shared VC, or shares a high-status VC; contrary to the authors' expectation, high VC reputation amplifies rather than attenuates the negative effect.
+The mechanism is competitive information leakage: young firms disclose sensitive product, regulatory, and strategic information to powerful intermediaries because they need capital, advice, and legitimacy. When those intermediaries also invest in competitors, they can redirect information flows toward favored portfolio firms and away from less favored ones. The paper predicts greater harm when the focal firm formed the earliest tie, has weaker VC commitment, is farther from the shared VC, or shares a high-status VC. The earliest-tie and high-status predictions receive only partial support: their interactions are significant in separate models but not in the full model. Contrary to the authors' expectation, high VC reputation amplifies rather than attenuates the negative association.
+
+**Data & Measures**
+The archival panel covers 147 VC-backed minimally invasive surgical device firms based in the United States and founded between 1986 and 2007, comprising 1,400 firm-years. Table 2 reports 1,252 firm-years; Table 3 reports 1,131 in every model. Its note attributes the reductions to the lagged patent variable and missing VC reputation data. Semi-structured interviews with 30 informants during 2006–2012 supplement the archival analysis. Innovation is each firm's yearly count of FDA device approvals, using the Premarket Notification and Premarket Approval databases (734 approvals). Competitors share a primary device subsegment; the sample spans 12 subsegments. VentureSource and VentureXpert investment records yield yearly firm–investor networks, with investment ties persisting for three years, excluding the current year. Indirect competitor ties count unique competitors sharing an investor, transformed as log(count + 0.01).
+
+Earliest shared VC tie is a dummy indicating whether the focal firm was ever the first among its competitors to receive investment from any shared VC. Relative commitment averages triad-level comparisons of funding rounds: +1 for more rounds to the focal firm than to its competitor, 0 for equal rounds, and −1 for fewer. Relative distance averages analogous comparisons of firm–investor zip-code distances: +1 when the focal firm is farther from the shared VC, 0 when equally distant, and −1 when nearer. High-status VC indicates investment by one of the top 30 VCs by eigenvector centrality in high-technology investment syndication networks. Average VC reputation is the mean score of shared investors in Lee et al.’s (2011) yearly 0–100 index. The main observational analyses use random-effects zero-inflated Poisson regressions with year dummies and standard errors clustered by year and firm. A supplementary matched difference-in-differences analysis uses 420 firm-years to assess endogeneity; leakage itself is not directly observed.
+
+**Key Findings**
+H1 is supported: indirect competitor ties are negatively associated with product introductions (Table 3, Model 2: coefficient −0.08, p < .01); the text reports approximately 30% fewer introductions when moving from zero to one tie. H2 receives partial support: the earliest-tie interaction is negative and significant in Model 3, but not in the full Model 8. H3 is supported: the positive commitment interaction indicates a stronger negative association for less committed ties. H4 is supported: the negative distance interaction indicates a stronger negative association for more distant firms. The commitment and distance interactions remain significant in Model 8. H5 receives partial support: the high-status interaction is negative and significant in Model 6, but not Model 8. H6 is not supported: higher shared-investor reputation strengthens, rather than attenuates, the negative association in Models 7 and 8. Model 7 predictions for adding one indirect competitor tie indicate 35% fewer introductions at a mean reputation score of 25 and almost 80% fewer at 75.
+
+The supplementary difference-in-differences treatment-by-post interaction is negative and marginally significant (p < .10). Among firms introducing products, mean approval time is approximately four months in years with indirect competitor ties versus three months in years without them. Patent-citation analyses provide complementary evidence consistent with information flows, but do not directly establish informal leakage.
 
 **Theoretical Contribution**
 The paper extends network perspectives on innovation by showing that indirect ties brokered by powerful intermediaries can inhibit, rather than promote, entrepreneurial innovation. It shifts attention from barriers to knowledge inflows to information outflows, theorizing leakage as a mechanism through which connectedness can make young firms more vulnerable. It also contributes to strategic entrepreneurship by identifying intermediary-level contingencies that shape when early relationships help or harm new ventures.

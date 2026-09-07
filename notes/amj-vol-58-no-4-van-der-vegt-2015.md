@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-58-no-4/pdfs/Vegt 2015 Managing Risk and Resilience.p
 text_path: "library/AMJ/vol-58-no-4/text/Vegt 2015 Managing Risk and Resilience.txt"
 ingested_at: "2026-07-06"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-07"
 
 paper_type: "editorial"
 keywords: ["risk", "resilience", "organizational resilience", "disasters", "organizational crises", "supply chain resilience", "tri-sector collaboration"]
@@ -54,14 +56,23 @@ Not reported in paper
 **Research Question**
 The editorial asks why some organizations and societies successfully adjust and even thrive amid adversity while others fail to do so. It frames this question as a grand challenge for management scholars studying the role and functioning of organizations during adverse natural or social events.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Editorial frame: The article uses the AMJ "From the Editors" format to open risk and resilience as a management research agenda rather than to report a single empirical study.
-- Risk landscape: Global networks make adverse events more frequent, larger in impact, and more likely to cascade across organizations, supply chains, infrastructures, and societies.
+- Risk landscape: The annual number of high-risk events has increased. Denser global networks increase their scale and impact and allow effects to cascade across organizations, supply chains, infrastructures, and societies.
 - Resilience shift: The editorial argues that traditional risk management cannot identify or assess all potential disruptions, so scholars and practitioners should also examine capabilities and capacities that help systems absorb, recover from, and learn after shocks.
 - Organizational foundations: Employee characteristics, social relationships, organizational networks, decentralized structures, and interorganizational ties are presented as possible sources of organizational resilience.
 - Research agenda: The authors call for research on individual and social resilience, coordination within and across organizations, network resilience, supply chain resilience, governance, tri-sector collaboration, and multilevel methods for studying resilience.
 
 The process logic is agenda-setting and cross-level. The editorial connects disasters and organizational crises to the capabilities of employees, teams, organizations, networks, supply chains, public agencies, private firms, and civil society. Its central claim is that resilience emerges from interactions among variables at different levels over time, so management research should study both the capacities that make systems robust and the recovery processes that follow disruption.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial's contribution is to position organizational resilience as a management research domain connected to grand challenges rather than only as a disaster-management or socioecological concept. It integrates resilience with organizational structure, social capital, network theory, supply chain research, governance, and multilevel research design to show how organizations mediate between individuals and society during adverse events.

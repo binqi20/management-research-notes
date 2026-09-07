@@ -140,36 +140,48 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-09-06):
+**Current main-branch audit state (2026-09-07):
 1,167 / 1,167 notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The v3 backfill
-batch 31 upgraded 29 notes (AMJ vol-59-no-1 + vol-58-no-6, all v2
-augmentations). Its final audit has **257 SUPPORTED and 4 accepted PARTIAL
-verdicts out of 261**, with 0 `UNSUPPORTED` and 0 `CONTRADICTED` across
-all 29 touched notes. Graffin's Limitations and Lanzolla's Future Research
-retain faithful claims supported by passages omitted from fitted inputs;
-Shani's and Ayyagari's Limitations retain accurate sample scope
-qualifications after two-round framing disagreements at 0% strip.
-All four acceptances have reconstruction proofs and read-after-proof review.
-Source verification produced 24 scoped legacy-field repairs across 17 notes,
-including 17 fields initially scored SUPPORTED. All repaired notes received
-fresh blind full-note audits, and all 24 repaired fields are now SUPPORTED.
-Eggers's Data & Measures failed two standard audits because fitting hid
-three appendix methods facts. A user-authorized fresh blind full-raw-text
-audit returned 9/9 SUPPORTED; its report explicitly records unabridged input
-and assembly with the audit tool's functions. No faithful note text or
-workflow tool was changed for this exception. All 29 final reports have
-current note and source hashes within scope. Desai (2016), AMJ 59-3, remains
+batch 32 upgrades 26 existing v2 notes (AMJ vol-58-no-5 + vol-58-no-4,
+13 each) and repairs only Limitations in three already-v3 batch-31 notes:
+Shani, Ayyagari, and Graffin, following the workshop's review. The final
+scoped audit has **260 SUPPORTED and 1 accepted PARTIAL out of 261**, with
+0 `UNSUPPORTED` and 0 `CONTRADICTED`. All 29 touched notes validate and
+pass overall with current note and source hashes. All 78 newly added v3
+fields and the nine existing v3 fields in the calibration notes are SUPPORTED.
+
+First-pass audits returned 251 SUPPORTED, 9 PARTIAL, and 1 UNSUPPORTED.
+Parent source verification produced 21 further legacy-field repairs across
+14 target notes, including 12 fields initially scored SUPPORTED. Every
+changed note received a fresh blind full-note audit. Shani and Ayyagari
+returned 9/9 SUPPORTED; Graffin returned 8 SUPPORTED and 1 accepted PARTIAL.
+Its retained Limitations sentence about an inexpensive, effective tactic
+and unexplained non-use is explicit in raw text but absent from fitted
+input at 14.15% strip. Reconstruction and read-after-proof review confirm
+fidelity. The three calibration repairs removed only unsupported scope
+qualifications while preserving design facts, stated limitations, and provenance.
+
+Kim's legacy Future Research received UNSUPPORTED in two standard audits
+because fitting removed its explicit agenda on aspirations and expectations
+at 13.88% strip. A user-approved fresh blind full-raw-text audit returned
+9/9 SUPPORTED. Its official report uses the audit tool's own assembly
+functions and records input mode, prompt hash, and the authorization in
+both provenance and audit context, alongside the standard fitting diagnostic.
+Both original verdicts remain preserved; the exception changed no faithful
+note text, tool, or workflow document. Desai (2016), AMJ 59-3, remains
 retained with its explicit retraction statement from batch 30.
-This is the second batch run end-to-end on `gpt-6-astra` (GPT-6 Astra) for
-augmentation and audit. Cross-family calibration scored 27/27 for batch 16,
-27/27 for batch 24, 25/27 for batch 28 (both divergences repaired in
-v0.62.0), and 26/27 for batch 30 (the divergence adjudicated faithful under
-strip blindness). No spot-audit is scheduled for batch 31; the next runs
-at batch 32's workshop review. The pre-batch census was 61 v1, 305 v2,
-and 801 v3; the corpus now contains 61 legacy v1 notes, 276 v2 notes, and
-830 v3 notes. Provenance eras are batches 01–07 `claude-opus-4-8`, 08–15
-`claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23 `claude-opus-5`, 24–29
-`gpt-5.6-sol`, and 30–31 `gpt-6-astra`. New notes are produced at extraction
+
+This is the third batch run end-to-end on `gpt-6-astra` (GPT-6 Astra).
+Cross-family calibration scored 27/27 for batch 16, 27/27 for batch 24,
+25/27 for batch 28 (both divergences repaired in v0.62.0), and 26/27 for
+batch 30 (the divergence adjudicated faithful). The next cross-family
+spot-audit runs at batch 32's workshop review, including a pre-repair probe
+on preserved baseline prompts; its result is pending. The pre-batch census
+was 61 v1, 276 v2, and 830 v3; the corpus now contains 61 legacy v1 notes,
+250 v2 notes, and 856 v3 notes. Provenance eras are batches 01–07
+`claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23
+`claude-opus-5`, 24–29 `gpt-5.6-sol`, and 30–32 `gpt-6-astra`. New notes
+are produced at extraction
 **v3**, which adds hypotheses, data & measures, and key
 findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
 backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
@@ -195,7 +207,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-09-06.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-09-07.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts can indicate minor paraphrastic drift, compression, or missing source context in the fitted audit input; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -206,7 +218,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.64.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.65.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
