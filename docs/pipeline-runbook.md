@@ -216,6 +216,14 @@ the issue and the user has asked for publication —
      underlying event occurs: batch 28's first-ever round-one CONTRADICTED
      verdict (repaired before publication) left AGENTS §5 asserting the
      library had "never produced" one.
+   - **Release-body formatting (batch-32 lesson):** GitHub renders a single
+     newline inside release notes as a visible line break, so the GitHub
+     Release body must be written ONE PARAGRAPH PER LINE and one bullet per
+     line — never paste the README changelog entry verbatim (it is
+     hard-wrapped at ~72 columns for the file); reflow it first. Tables,
+     headings, and code fences are the only multi-line structures. Twenty-
+     seven releases (v0.1.0–v0.19.1, v0.63.0–v0.65.0) rendered as broken
+     lines until the workshop reflowed them on 2026-09-07.
 2. **Stage public artifacts only** — the issue's `notes/*.md`, its
    `library/.../manifest.tsv`, the rebuilt `index/` files, and any docs/tooling
    changes. Never `incoming/`, `pdfs/`, `text/`, or worklogs. Verify:
@@ -285,9 +293,10 @@ Propositions, Data & Measures, and Key Findings. Two tiers, two treatments:
   notice; if neither can be verified, say so rather than asserting it. This
   applies to new-issue ingestion and backfill alike.
 - **Full-raw-text audit exception (batch-31 eggers precedent; user-approved
-  2026-09-06):** when a NEW-field verdict is UNSUPPORTED or CONTRADICTED
-  solely because the fitted audit text cannot show content the parent has
-  verified in the raw text (an appendix or passage lost to the interleaved-
+  2026-09-06; widened to ANY field by the batch-32 kim precedent, user-approved
+  2026-09-07):** when a verdict on any field — new or legacy — is UNSUPPORTED
+  or CONTRADICTED solely because the fitted audit text cannot show content
+  the parent has verified in the raw text (an appendix or passage lost to the interleaved-
   references cut), the remedy is NOT to edit faithful content out and NOT to
   reclassify the verdict. STOP and ask the user; if approved, dispatch a fresh
   blind full nine-field audit whose only input is the UNABRIDGED raw text,
