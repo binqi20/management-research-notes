@@ -253,6 +253,27 @@ currently parked (user decision, 2026-07-10).
 
 ## Backfill batches (v2→v3 augmentation / v1 re-extraction)
 
+> **Status (2026-09-10): the AMJ v3 backfill is COMPLETE.** Batches 01–34
+> (v0.34.0 → v0.67.0, 2026-07-11 → 2026-09-10) upgraded the 67 pre-v3 AMJ
+> issues (856 notes); with the three natively-v3 vol-57 issues, all 895 AMJ
+> notes across 70 issues are v3. Census after batch 34: 61 v1 / 211 v2 /
+> 895 v3 of 1,167 — every remaining v1/v2 note is NBS (2025-12: 82 v2;
+> 2026-01: 113 v2; 2026-02: 61 v1 + 16 v2), pending the NBS backfill
+> decision. The procedure below stays in force as the reference for any
+> future backfill; no rule in this section was retired. Cross-family
+> calibration ledger (3 blind Claude auditors re-scoring the batch's Codex
+> verdicts from the parent-generated prompt files, 27 fields per
+> calibration): b16 27/27, b24 27/27, b28 25/27, b30 26/27, b32 26/27,
+> b34 26/27 — every divergence adjudicated against the raw text (three led
+> to repairs in b29/b32; the b34 one was framing latitude, no repair).
+> Pre-repair probes (b32 reuer/chen/lanaj, b34 godart/hsieh) showed that
+> first-pass gloss leniency is cross-family; the writer-concern + parent
+> raw-text verification channel is the detector. Post-backfill order (user
+> decision 2026-09-10): (1) the interleaved-references cut-point fix session
+> with re-audit of every accepted-PARTIAL note and the eggers/kim
+> full-raw-text exceptions; (2) the NBS v3 backfill decision; (3) the
+> frontmatter cleanup pass.
+
 The 2026 v3 backfill (user decision 2026-07-12, superseding "going-forward
 only") upgrades the pre-v3 corpus **two issues per user-triggered batch**,
 newest issue first, so every note eventually carries Hypotheses /
@@ -399,7 +420,9 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   deliberately NOT fixed mid-backfill — it is global regex behavior under
   the corpus-sweep policy, and by user decision (2026-07-30) the fix is
   scheduled AFTER the AMJ backfill completes (all 67 issues at v3), in a
-  dedicated scoped session alongside the cleanup pass. That session should
+  dedicated scoped session alongside the cleanup pass (the backfill completed
+  2026-09-10 with v0.67.0; by user decision the same day the fix session is
+  the next scheduled Codex session, ahead of any NBS backfill). That session should
   also re-audit the strip-loss accepted PARTIALs accumulated by then (the
   notes are faithful and unchanged, so post-fix fresh audits should convert
   them to SUPPORTED and clear the public record). Until then: detector +
@@ -529,8 +552,10 @@ The corpus is intentionally heterogeneous; tools branch on `extraction_version`:
 - **v2** — 7 evidence anchors; 8 body sections; 6 audited prose fields.
 - **v3** — 10 evidence anchors; 11 body sections; **9** audited prose fields
   (adds Hypotheses / Propositions, Data & Measures, Key Findings). New notes
-  are extracted natively at v3; pre-v3 notes are being upgraded by the
-  backfill above. An **augmented** v3 note carries `augmented_model` /
+  are extracted natively at v3; every AMJ note (895) was upgraded by the
+  backfill above, completed 2026-09-10 — the 272 NBS notes (61 v1 / 211 v2)
+  remain pre-v3 pending the NBS backfill decision. An **augmented** v3 note
+  carries `augmented_model` /
   `augmented_at` frontmatter: its six original prose fields were written by
   `extraction_model`, its three v3 sections by `augmented_model`, and the
   whole note passed a fresh full 9-field rubric-v2 audit at augmentation time.

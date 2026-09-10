@@ -145,7 +145,9 @@ research. Read this file before doing anything in this folder.
    went wrong.
 5. Run the two-layer faithfulness audit with an independent Layer 2 auditor.
    Layer 1 substring-checks the `evidence:` anchors against the PDF text. Layer
-   2 scores the six prose fields against `docs/audit-rubric.md`. The current
+   2 scores the prose fields (six on v1/v2 notes, nine on v3 — every AMJ note
+   since the v3 backfill completed on 2026-09-10) against `docs/audit-rubric.md`.
+   The current
    Codex path uses GPT-6 Astra (`gpt-6-astra`; GPT-5.6 Sol through batch 29) independent audit agents that write
    `incoming/_audits/{paper_id}.layer2.json` with provenance fields, then
    assembles the official report with
