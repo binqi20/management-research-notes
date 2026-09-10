@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-58-no-1/pdfs/Grodal 2015 Help-Seeking and Help-Giving
 text_path: "library/AMJ/vol-58-no-1/text/Grodal 2015 Help-Seeking and Help-Giving as an Organizational Routine Continual Engagement in Innovative Work.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-10"
 
 paper_type: "empirical-qualitative"
 keywords: ["help-seeking", "help-giving", "organizational routine", "cognitive engagement", "emotional engagement", "innovative work", "coordination"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "an organizational routines perspective also reveals"
   methods_overview: "an inductive qualitative study"
   keywords_source: "help-seeking and help-giving can be intertwined behaviors enacted through an organizational routine"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "we identified 28 specific moves used by"
+  findings_overview: "help-giving constituted an organizational routine"
 ---
 
 # Help-Seeking and Help-Giving as an Organizational Routine: Continual Engagement in Innovative Work
@@ -53,6 +58,9 @@ The literature on help-giving behavior identifies individual-level factors that 
 **Research Question**
 How does helping behavior unfold in organizations doing innovative work? The paper asks how help-seeking and help-giving proceed beyond initial consent when work is highly interdependent, innovative, and marked by pervasive helping.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Core process: Help-seeking and help-giving unfold as an organizational routine rather than a discrete exchange.
 - Subroutines: Establishing mutual attention, orienting towards the issue, striving towards a resolution, and concluding the encounter.
@@ -61,6 +69,12 @@ How does helping behavior unfold in organizations doing innovative work? The pap
 - Contextual shaping: Well-defined versus ambiguous tasks, meetings versus impromptu encounters, and face-to-face versus technologically mediated interaction alter how the routine is enacted.
 
 The process begins when a help-seeker and potential help-giver establish mutual attention, then build shared understanding of the issue and work toward resolution. Cognitive and emotional engagement moves keep participants involved, overcome impasses, accelerate interaction, and prepare for future help. Because the routine is recognizable but flexible, participants can recombine moves, involve additional people, and coordinate interdependent work even when the technical problem is ambiguous.
+
+**Data & Measures**
+The inductive field study used three temporary project teams as entry points to AdvanteQ, initially shadowing 19 workers in Silicon Valley and Massachusetts and observing their interactions with additional employees. The corpus comprised 59 site visits, 184 observation hours, 602 pages of field notes, 32 brief semi-structured interviews, and archival documents. Observations were triangulated with interviews and documents. The authors identified 189 task-focused helping interactions, open-coded statements and actions, categorized them into 28 move types, and reconstructed recurring patterns into four subroutines and an overall routine; 2,344 moves were coded in total (Table 1). Each author reviewed the moves, and discrepancies were resolved through discussion. Cognitive engagement moves encouraged continued thoughtful attention and conversational response; emotional engagement moves aligned or elevated affective states to reinforce mutual attention. The analysis also compared task ambiguity, planned meetings versus spontaneous encounters, and face-to-face, telephone, and email interactions.
+
+**Key Findings**
+Helping at AdvanteQ followed a recognizable, flexible routine comprising establishing mutual attention, orienting towards the issue, striving towards a resolution, and concluding the encounter; individual enactments could omit or blend subroutines. Five cognitive and six emotional engagement moves supported joint mobilization, continued engagement, overcoming impasses, accelerating engagement, and preparation for future encounters (Tables 1–2; Figure 3). Disrupted cognitive or emotional engagement could interrupt the routine. Helping also expanded into clusters of three to five people, with help-seeking and help-giving roles blurring as participants recruited additional helpers. Well-defined tasks produced brief encounters, whereas ambiguous tasks extended orienting and striving. Meetings often omitted the initial and final subroutines and exhibited little emotional engagement. Technologically mediated encounters made engagement harder: the reported refusal rates were 3 of 75 face-to-face encounters (4%), 23 of 89 phone encounters (26%), and 7 of 25 email encounters (28%); these are descriptive field observations.
 
 **Theoretical Contribution**
 The paper shifts helping research from an exchange-and-cost framing centered on the initial decision to help toward a process view of joint cognitive and emotional engagement. It shows that helping may be an organizational routine, may involve groups rather than only dyads, and is shaped by work context. It also extends routines research by showing that emotional engagement, not only cognitive scripts or schemas, can be central to routine enactment.
@@ -72,7 +86,7 @@ The paper suggests that managers in innovative and interdependent work settings 
 The authors acknowledge that this is a single case study of AdvanteQ, so transferability to other settings can only be speculated. They note possible limits in newer organizations where helping routines may not yet be established, across occupational boundaries where routines may not be shared, for personal rather than work-related helping, and in settings where routines are more formally articulated and less flexible.
 
 **Future Research**
-Future research could examine how cognitive and emotional engagement across repeated helping encounters contributes to the emergence of organizational routines. The authors also call for comparative work between organizations where helping is prevalent and organizations where it is not, and for studies of how communication technology, meetings, occupational boundaries, and organizational change shape helping routines over time.
+Future research could examine how cognitive and emotional engagement across repeated helping encounters contributes to the emergence of organizational routines. The authors also call for comparative work between organizations where helping is prevalent and organizations where it is not, and for studies of how communication technology and the work context, including meetings, shape helping routines. Further work could examine how changes in the organizational environment shape helping routines over time.
 
 **APA 7th Citation**
 Grodal, S., Nelson, A. J., & Siino, R. M. (2015). Help-seeking and help-giving as an organizational routine: Continual engagement in innovative work. *Academy of Management Journal*, 58(1), 136-168. https://doi.org/10.5465/amj.2012.0552

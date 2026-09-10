@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-1/pdfs/Klingebiel 2015 Real Options Logic Revis
 text_path: "library/AMJ/vol-58-no-1/text/Klingebiel 2015 Real Options Logic Revisited The Performance Effects of Alternative Resource Allocation Regimes.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-10"
 
 paper_type: "empirical-quantitative"
 keywords: ["real options logic", "resource allocation regimes", "sequencing", "low initial commitment", "reallocation", "innovation performance", "new product sales"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "Real options logic differs"
   methods_overview: "ordinary least squares (OLS) regression"
   keywords_source: "We delineate three dimensions of resource allocation behavior"
+  hypotheses_source: "Fit between low initial commitment and reallocation increases innovation performance"
+  measures_overview: "The variable contains 2009 sales"
+  findings_overview: "no significant performance difference between"
 ---
 
 # Real Options Logic Revisited: The Performance Effects of Alternative Resource Allocation Regimes
@@ -52,6 +57,11 @@ We delineate three dimensions of resource allocation behavior that allow us to d
 **Research Question**
 The paper asks whether resource allocation behavior consistent with real options logic improves product innovation performance relative to alternative resource allocation regimes. It specifically examines whether sequencing, low initial commitment, reallocation, and the fit between low commitment and reallocation explain differences in new product sales.
 
+**Hypotheses / Propositions**
+- H1: Sequencing resource allocation increases innovation performance.
+- H2: Fit between low initial commitment and reallocation increases innovation performance.
+- H3: Given sequencing and fit, making tentative bets generates greater innovation performance than making definitive bets.
+
 **Mechanism Process**
 - IV(s): Sequencing of resource allocation, low initial commitment, resource reallocation, fit between low initial commitment and reallocation, and tentative versus definitive betting regimes.
 - DV(s): Innovation performance, operationalized as new product sales.
@@ -60,6 +70,12 @@ The paper asks whether resource allocation behavior consistent with real options
 
 The mechanism is that sequencing gives firms repeated decision points to adapt innovation projects as information about market and technical viability develops. Low initial commitment is valuable only when paired with later resource reallocation, because otherwise firms may escalate weak projects or cull projects without maintaining enough alternatives. The authors find sequencing and fit improve performance, but real options logic as the full Type D regime does not outperform other regimes once sequencing and fit are controlled.
 
+**Data & Measures**
+The observational analysis uses the 2010 Mannheim Innovation Panel, the German edition of the European CIS, covering innovation in 2007–2009. The final sample comprises 436 product-innovating firms with at least 10 employees and more than five innovation projects. Preliminary and follow-up conversations with 28 practitioners at 11 firms informed measures and interpretation. Innovation performance is the natural logarithm of 2009 sales from products introduced during 2007–2009. Sequencing is coded 0 for single-step and 1 for multiple-step resource allocation. Low commitment derives from a five-point Likert item on projects competing for resources rather than all receiving requested resources: the lower two ratings are coded 0 and the upper two 1. Reallocation is proxied by whether any projects were discontinued during the observation period (0 for none, 1 for any). Fit is a reverse-coded absolute difference between the two binary measures, equal to 1 when both or neither are present and 0 when only one is present. Tentative equals 1 when either low commitment or reallocation is present; combining it with sequencing and fit distinguishes the two regimes tested by H3. Ordinary least squares models control for logged firm sales, logged innovation expenditure relative to sales, the proportion of university graduates, continuous research and development, process innovation, and industry dummies. Robustness checks use continuous measures, squared terms, sales ratios, alternative coding, and sample splits. These estimates establish associations rather than causal identification.
+
+**Key Findings**
+H1 is supported: sequencing is positively associated with logged new product sales (Table 6, Model II: b = 0.222, SE = 0.090, p < .05; Model III: b = 0.242, SE = 0.089, p < .01). H2 is supported: fit is positive in the full sample (Model III: b = 0.319, SE = 0.086, p < .01) and among sequential allocators (Model IV, n = 268: b = 0.303, SE = 0.111, p < .01). H3 is not supported: tentative betting has no significant advantage after sequencing and fit are accounted for (Model V: b = 0.110, SE = 0.126); the comparison restricted to firms displaying both sequencing and fit is also insignificant (Model VI, n = 135: b = 0.192, SE = 0.195). Low commitment and reallocation have no significant separate direct associations in Table 7, Model VII (b = 0.062 and 0.049, respectively). A robustness model qualifies H1: the continuous sequencing coefficient is positive and its square negative (Model VIII: b = 0.225, p < .01; b = −0.041, p < .05), suggesting an optimum near three allocation steps and a negative association at six or more. In Table 8, sequencing and fit are significant among firms with development periods longer than one year (Model XIIIb, n = 236), but not among those with shorter periods (Model XIIIa, n = 200).
+
 **Theoretical Contribution**
 The paper clarifies real options logic as a multidimensional resource allocation regime requiring sequencing, low initial commitment, and reallocation rather than any one element alone. It contributes to real options theory by showing that prior mixed performance findings may reflect misidentification of real options logic. It also situates real options logic within broader resource allocation theory by showing that other regimes can combine sequencing and fit to achieve similar innovation performance.
 
@@ -67,7 +83,7 @@ The paper clarifies real options logic as a multidimensional resource allocation
 Managers should not treat a single practice, such as stage-gated sequencing or low initial funding, as sufficient evidence of a real options approach. The results suggest that firms benefit from sequential resource allocation and from aligning initial commitment policies with later reallocation behavior. Low-commitment experimentation without disciplined reallocation, or culling without enough alternative projects, can reduce innovation performance.
 
 **Limitations**
-The study uses survey-based CIS measures and does not provide fine-grained evidence on firms' rationales for adopting or discontinuing projects. The authors also note that they could not control for varying lag effects between innovation investment and returns. Additional limitations include limited observation of reallocation efficiency, formalization, centralization, uncertainty type, and possible inflection points in the number of allocation stages.
+The study uses survey-based CIS measures and does not provide fine-grained evidence on firms' rationales for adopting or discontinuing projects. The authors also note that they could not control for varying lag effects between innovation investment and returns.
 
 **Future Research**
 Future research could inspect firms' reported rationales for adopting or discontinuing product innovation projects in more detail. The authors also identify opportunities to study reallocation efficiency, formalized and routinized resource allocation, centralization, uncertainty conditions, allocation-stage inflection points, and longitudinal lag structures in more narrowly specified settings.

@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-58-no-1/pdfs/Godart 2015 Fashion with a Foreign Flair
 text_path: "library/AMJ/vol-58-no-1/text/Godart 2015 Fashion with a Foreign Flair Professional Experiences Abroad Facilitate the Creative Innovations of Organizations.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-10"
 
 paper_type: "empirical-quantitative"
 keywords: ["foreign professional experiences", "creative innovations", "breadth", "depth", "cultural distance", "fashion houses"]
@@ -43,6 +45,9 @@ evidence:
   theories_overview: "blind variation and selective retention"
   methods_overview: "two-stage least"
   keywords_source: "foreign professional experiences"
+  hypotheses_source: "will have an inverted U-shaped relationship,"
+  measures_overview: "number of points given to the fashion house by the"
+  findings_overview: "depth had a decreasing positive effect on"
 ---
 
 # Fashion with a Foreign Flair: Professional Experiences Abroad Facilitate the Creative Innovations of Organizations
@@ -53,6 +58,11 @@ This research explores whether the foreign professional experiences of influenti
 **Research Question**
 The paper asks whether creative directors' foreign professional experiences predict the creative innovations of the fashion houses they lead. It further asks how three dimensions of those experiences--breadth, depth, and cultural distance--independently and jointly shape firm-level creative output.
 
+**Hypotheses / Propositions**
+- H1: The breadth of an organizational leader's foreign professional experiences has an inverted U-shaped relationship with the firm's creative innovations, with relatively moderate breadth associated with the highest level.
+- H2: The depth of an organizational leader's foreign professional experiences has an inverted U-shaped relationship with the firm's creative innovations, with relatively moderate depth associated with the highest levels.
+- H3: The cultural distance of an organizational leader's foreign professional experiences has an inverted U-shaped relationship with the firm's creative innovations, with relatively moderate cultural distance associated with the highest levels.
+
 **Mechanism Process**
 - IV(s): Breadth of professional foreign experience, depth of professional foreign experience, cultural distance between home and host countries, and their interactions.
 - DV(s): Creative innovations, measured through Journal du Textile buyer ratings of fashion collections.
@@ -60,6 +70,12 @@ The paper asks whether creative directors' foreign professional experiences pred
 - Moderators: The three foreign-experience dimensions jointly moderate one another, especially through the three-way interaction among breadth, depth, and cultural distance.
 
 The mechanism is that foreign professional experiences expose leaders to novel inputs, require psychological adaptation to foreign cultural and work environments, and embed them in diverse professional networks. Moderate breadth and cultural distance provide variety without overwhelming adaptation, while depth supplies sustained exposure, adaptation, and embeddedness. The results indicate that depth is the most critical dimension; breadth and cultural distance matter primarily when depth is low and can substitute for one another as sources of variety.
+
+**Data & Measures**
+The archival panel covers 270 high-end fashion houses over 21 seasons in 2000–2010, with 2,427 house–season observations in Table 2. Creative-director life and career histories came from industry encyclopedias, publications, and websites; more than 30 industry-insider interviews informed operationalization. Breadth is the number of foreign countries worked in, and depth is the number of years worked abroad, including experience before and after becoming a creative director. Home country is where the individual spent the most time before age 18. Cultural distance uses Hofstede cultural scores aggregated with the Kandogan approach; distances from the home country to countries where the director was working are summed in absolute value. Variables are averaged across directors when a house has a team. Creative innovations are measured with Journal du Textile buyers' creativity ratings of finished collections: buyers award up to 20 points per collection, and the regression outcome is the average points awarded to a house in a season. The average inter-rater alpha is .97; a separate journalist ranking correlates .80 with the buyer ranking. The paper uses two-stage least squares with fashion-house and season fixed effects to address reverse causality and omitted variables. The endogenous foreign-experience indicator includes nonprofessional exposure before work; instruments used are intercultural parents and its interaction with per capita GDP at birth, with GDP itself included in the second stage. Squared terms test the formal predictions; interactions among the linear terms are post-hoc analyses. Exposure, psychological adaptation, and network embeddedness are theorized mechanisms, not directly measured mediators.
+
+**Key Findings**
+Table 2 supports the predicted curvature: H1 has a positive breadth term (Model 3: b = 5.38, p < .001) and a negative squared term (b = −1.64, p < .001). For H2, depth is positive (Model 4: b = .21, p < .001) with a negative squared term (reported as −.003, p < .001 in the results prose; rounded to −.00 in the table). The authors call H2 supported, but the plotted depth effect remains positive at high depth rather than turning negative. For H3, cultural distance is positive (Model 5: b = .25, p < .05) with a negative squared term (b = −.06; Table 2 marks p < .01, whereas the prose reports p < .001). Breadth and cultural distance show inverted U-shaped patterns; depth shows diminishing positive benefits. All three quadratic terms remain significant in Model 6, while cultural distance's linear term is nonsignificant; removing the breadth quadratic in Model 7 leaves a marginal positive cultural-distance linear term (p < .10) and a negative quadratic (p < .05). Post-hoc Model 9, which omits quadratic terms, yields a positive breadth × depth × cultural-distance interaction (b = .09, p < .01); the corresponding term is nonsignificant in Model 8 with quadratic terms included, which the authors regard as uninterpretable because of collinearity. Figure 2 indicates that breadth and cultural distance matter mainly at low depth, where they act as substitutes; at high depth they add little. These interaction findings are supplementary, rather than additional formal hypotheses.
 
 **Theoretical Contribution**
 The paper introduces the foreign experience model of creative innovations to connect individual executives' international work histories to organization-level creative output. It integrates blind variation and selective retention, international adjustment, and social embeddedness perspectives to explain why foreign work experience can enhance creative innovations but may show diminishing or negative returns at high levels. It also extends creativity research by demonstrating curvilinear and interactive effects of breadth, depth, and cultural distance in historical field data.
@@ -71,7 +87,7 @@ Organizations seeking creative innovations may benefit from hiring or developing
 The authors note that the archival design cannot directly observe creative teams' thought processes, conversations, or collective cognition. The study assumes that foreign professional experiences affect both idea generation and implementation, but it cannot separate ideas generated from ideas implemented in final collections. The measure of depth is duration abroad, which captures quantity more than the quality of immersion, network intensity, or local cultural learning.
 
 **Future Research**
-Future research could test the model with experiments, surveys, participant observation, or interviews that directly observe exposure, adaptation, embeddedness, and implementation processes. Studies could examine whether the findings generalize to other creative or knowledge-intensive industries such as music, publishing, cinema, art, technology, or pharmaceutical R&D. Future work could also measure depth through language learning, local network size and intensity, and the quality of immersion abroad rather than duration alone.
+Future research could test the model with experiments, surveys, participant observation, or interviews that directly observe exposure, adaptation, embeddedness, and implementation processes. Future work could also measure depth through language learning, local network size and intensity, and the quality of immersion abroad rather than duration alone.
 
 **APA 7th Citation**
 Godart, F. C., Maddux, W. W., Shipilov, A. V., & Galinsky, A. D. (2015). Fashion with a foreign flair: Professional experiences abroad facilitate the creative innovations of organizations. *Academy of Management Journal*, 58(1), 195-220. https://doi.org/10.5465/amj.2012.0575

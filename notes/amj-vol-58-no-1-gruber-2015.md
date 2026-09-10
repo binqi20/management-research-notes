@@ -18,7 +18,9 @@ pdf_path: "library/AMJ/vol-58-no-1/pdfs/Gruber 2015 Managing by Design.pdf"
 text_path: "library/AMJ/vol-58-no-1/text/Gruber 2015 Managing by Design.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-10"
 
 paper_type: "editorial"
 keywords: ["design thinking", "innovation", "new workplace experience", "customer journey", "employee experience"]
@@ -54,6 +56,9 @@ Not reported in paper
 **Research Question**
 The editorial asks how leaders might manage by design: that is, how design thinking can be applied beyond products and services to work itself, workplace systems, physical and virtual environments, and employee experience. It also asks what research opportunities this shift creates for management scholars.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Design thinking: A human-centered, iterative, collaborative, and interdisciplinary approach that starts from observation of users and context, then moves through discovery, definition, ideation, prototyping, testing, and delivery.
 - Service and workplace experience: The editorial argues that managers should frame service and workplace design around customer and employee journeys rather than only workflows, tools, and process optimization.
@@ -61,6 +66,12 @@ The editorial asks how leaders might manage by design: that is, how design think
 - Scholarly agenda: The editorial calls for empirical work and theory development on performance effects, measurement of workplace experience, tensions between experience design and economic pressures, organizational redesign, HR practices, and motivation.
 
 The process is editorial and agenda-setting rather than a tested causal model. Gruber, de Leon, George, and Thompson use design thinking to reframe management work around intentionally designed experiences, arguing that organizations can improve customer and employee outcomes when leaders design the systems, processes, environments, and interactions that shape those experiences.
+
+**Data & Measures**
+Not reported in paper
+
+**Key Findings**
+Not reported in paper
 
 **Theoretical Contribution**
 The editorial extends design thinking from product and service innovation into management science by treating the workplace and employee experience as design objects. Its contribution is to connect design thinking, the experience economy, organizational design, HR practices, motivation, and firm performance as a research agenda for studying the new workplace experience.

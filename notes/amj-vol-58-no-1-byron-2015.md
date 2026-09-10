@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-1/pdfs/Byron 2015 Diplomas, Photos, and Tchotch
 text_path: "library/AMJ/vol-58-no-1/text/Byron 2015 Diplomas, Photos, and Tchotchkes as Symbolic Self-Representations Understanding Employees Individual Use of Symbols.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-10"
 
 paper_type: "empirical-qualitative"
 keywords: ["workspace personalization", "symbolic representations of self", "relationship development", "self-regulation", "physical work environment"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "identity and the symbolic self to self-regulation"
   methods_overview: "grounded theory approach to analyze our data"
   keywords_source: "Most employees personalize their workspaces"
+  hypotheses_source: "Not reported in paper"
+  measures_overview: "in a coding dictionary and engaged in axial coding,"
+  findings_overview: "both aided and impeded self-regulation."
 ---
 
 # Diplomas, Photos, and Tchotchkes as Symbolic Self-Representations: Understanding Employees' Individual Use of Symbols
@@ -51,6 +56,9 @@ Most employees personalize their workspaces with photos, memorabilia, and other 
 **Research Question**
 The paper asks what prompts employees to personalize or not personalize their workspaces, how employees personalize, and what consequences personalization has. It examines workspace objects as symbolic self-representations that may shape both interpersonal relationships and intrapersonal self-regulation at work.
 
+**Hypotheses / Propositions**
+Not reported in paper
+
 **Mechanism Process**
 - Key constructs / distinctions: Workspace personalization, symbolic expressions of self, symbolic reminders of self, work and nonwork identities, future selves, relationship development, and self-regulation.
 - Relational process: Public symbolic expressions of self can initiate conversations, increase role clarity, and encourage self-disclosure, but excessive or norm-violating distinctiveness can create negative impressions.
@@ -58,6 +66,12 @@ The paper asks what prompts employees to personalize or not personalize their wo
 - Boundary conditions: The model is grounded in employees' accounts across varied workspaces and organizations, not in a statistical test of causal effects.
 
 The process model distinguishes symbols used for others from symbols used for the self. Personalization directed toward others helps employees communicate similarity, difference, role identity, and personalistic information, thereby building or sometimes inhibiting relationships. Personalization directed toward the self helps employees remember goals, values, and work-nonwork boundaries, thereby supporting or sometimes impeding regulation of attention, behavior, and emotion.
+
+**Data & Measures**
+The qualitative corpus comprised semi-structured interviews with 28 employees from 14 organizations, workspace inventories, observations, and photographs taken from the perspective of someone entering each workspace. An initial sample of 13 employees in two firms was expanded through theoretical sampling by 15 employees to diversify workspace arrangements, personalization policies, amounts of personalization, client contact, and jobs. Interviews lasted approximately 45 minutes, were professionally transcribed, and were supplemented in several cases by email or phone follow-ups. Guided by employees, the researchers counted and described personalization items in 17 broad inventory categories. They independently coded the initial 13 transcripts, discussed first-order codes to consensus, recorded them in a coding dictionary, used axial coding to combine them into categories, and linked categories and theoretical dimensions in a conceptual model. Photographs, inventories, observations, and interviews informed categorization of objects as conveying shared, distinctive, nonwork, work, or future identities. Goal and value reminders became a category within regulatory processes; affective language in accounts of work–nonwork boundary management was checked against a list of 522 emotional terms.
+
+**Key Findings**
+The emergent model distinguishes symbolic expressions of self, which communicate identity to others, from symbolic reminders of self, which communicate identity to oneself; a single object could serve both purposes. Participants associated symbolic expressions with initiating conversations through shared nonwork identities, increasing role clarity through work identities, and deepening relationships through disclosure of personalistic information. Excessive distinctiveness or norm violations could instead create negative impressions and psychological distance. Symbolic reminders, often hidden from others or carrying meanings others could not discern, represented present and past identities as well as desired future selves. Participants linked these reminders to focusing attention and energy on goals and values and to achieving their preferred integration or segmentation of work and nonwork through affect regulation. Too little personalization could impede focus, while excessive personalization, especially of nonwork identities, could distract attention and prompt negative affect. These are findings from participants’ accounts and the grounded theory analysis, rather than statistical estimates of causal effects.
 
 **Theoretical Contribution**
 The paper extends research on symbols at work by showing that individually chosen physical objects do more than communicate status or distinction to others; they also provide or deplete regulatory resources for the self. It contributes to workplace relationship theory by showing how material objects help employees find common ground, clarify roles, and disclose personalistic information. It also extends self-regulation theory by showing how symbolic self-representations can focus attention, support affect regulation, and shape boundary management.

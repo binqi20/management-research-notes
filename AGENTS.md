@@ -140,53 +140,52 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-09-07, v0.66.0): 1,167 / 1,167
-notes PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** Backfill batch 33 upgrades 26
-existing v2 notes from AMJ vol-58-no-3 and vol-58-no-2 (13 each). Final
-scoped verdicts are **230 SUPPORTED and 4 accepted PARTIALs out of 234**.
-All 26 notes validate and pass overall with current full-note and source
-hashes. All 78 new v3 fields are SUPPORTED except one accepted Reyt Data &
-Measures PARTIAL.
+**Current main-branch audit state (2026-09-10, v0.67.0): 1,167 / 1,167 notes
+PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** Backfill batch 34 upgrades the final
+13 v2 AMJ notes from volume 58 issue 1. Final scoped verdicts are **117/117
+SUPPORTED**, including all 39 new v3 fields. All 13 notes validate and pass
+overall with current full-note and source hashes.
 
-First-pass audits returned 226 SUPPORTED and 8 PARTIAL. All 26 official
+This release completes the AMJ v3 backfill: all 895 AMJ notes across 70
+total issues are now v3. The completed backfill covers 67 issues from volume
+58 issue 1 through volume 69 issue 1; three earlier volume 57 issues were
+already native v3. The only remaining v1/v2 notes are the 272 NBS notes (61
+v1 and 211 v2).
+
+First-pass audits returned 115 SUPPORTED and 2 PARTIAL. All 13 official
 reports were assembled before repairs. Parent source verification produced
-15 legacy-field repairs across 12 notes, including 11 fields initially
-scored SUPPORTED. Fresh blind full-note re-audits returned 108/108
-SUPPORTED. The augmentation guard flags exactly those registered legacy
-fields; protected frontmatter, historical extraction provenance, and the
+10 legacy-field repairs across 9 notes, including 8 fields initially scored
+SUPPORTED; fresh blind full-note re-audits returned 81/81 SUPPORTED. The
+augmentation guard flags exactly those registered legacy fields. Protected
+frontmatter, historical extraction provenance, original evidence, and the
 new v3 sections and anchors remain unchanged during repairs.
 
-Accepted PARTIALs retain source-faithful content omitted by the standard
-fitter: Di Stefano Limitations (14.43% strip), Reyt Data & Measures
-(18.85%, appendix validation evidence), and Zhang Practical Implication
-and Limitations (19.61%, explicit training and sample/common-method
-passages). Each has a reconstruction proof and subsequent complete-passage
-reading. No full-raw-text exception was needed for batch 33. Earlier
-user-authorized Eggers and Kim exceptions remain documented in their
-releases. Desai (2016), AMJ 59-3, retains its explicit retraction
-statement from batch 30.
+No accepted PARTIAL or full-raw-text exception was needed for batch 34.
+Earlier user-authorized Eggers and Kim exceptions remain documented in their
+releases. Desai (2016), AMJ 59-3, retains its explicit retraction statement
+from batch 30.
 
-This is the fourth batch run end-to-end on `gpt-6-astra` (GPT-6 Astra).
+This is the fifth batch run end-to-end on `gpt-6-astra` (GPT-6 Astra).
 Cross-family calibration scored 27/27 for batch 16, 27/27 for batch 24,
 25/27 for batch 28 (both divergences repaired in v0.62.0), 26/27 for batch
 30 (the divergence adjudicated faithful), and 26/27 for batch 32 (the
-divergence explained by a documented input-mode difference). No spot-audit
-is scheduled for batch 33’s review; final calibration is expected at batch
-34’s workshop review.
+divergence explained by a documented input-mode difference). Batch 34’s
+workshop review is scheduled to run the closing cross-family spot-audit,
+including a pre-repair probe. The original augmented notes and exact
+first-pass prompts are preserved; that review has not yet been performed.
 
-The pre-batch census was 61 v1, 250 v2, and 856 v3; the corpus now
-contains 61 legacy v1 notes, 224 v2 notes, and 882 v3 notes. Provenance
-eras are batches 01–07 `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19
-`gpt-5.6-sol`, 20–23 `claude-opus-5`, 24–29 `gpt-5.6-sol`, and 30–33
-`gpt-6-astra`. New notes
-are produced at extraction
-**v3**, which adds hypotheses, data & measures, and key
-findings (see [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). A v3
-backfill is progressively upgrading the pre-v3 corpus: **augmented** v3 notes
-carry `augmented_model` / `augmented_at` frontmatter — the six original prose
-fields were written by `extraction_model`, the three v3 sections by
-`augmented_model`, and the whole note passed a fresh full 9-field rubric-v2
-audit at augmentation time (a mechanical diff-guard,
+The pre-batch census was 61 v1, 224 v2, and 882 v3; the corpus now contains
+61 legacy v1 notes, 211 v2 notes, and 895 v3 notes. Provenance eras are
+batches 01–07 `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19 `gpt-5.6-sol`,
+20–23 `claude-opus-5`, 24–29 `gpt-5.6-sol`, and 30–34 `gpt-6-astra`.
+
+New notes are produced at extraction **v3**, which adds hypotheses, data &
+measures, and key findings (see
+[`docs/pipeline-runbook.md`](docs/pipeline-runbook.md)). **Augmented** v3
+notes carry `augmented_model` / `augmented_at` frontmatter — the six
+original prose fields were written by `extraction_model`, the three v3
+sections by `augmented_model`, and the whole note passed a fresh full
+9-field rubric-v2 audit at augmentation time (a mechanical diff-guard,
 `tools/verify_augmentation.py`, proves the original audited content was
 untouched before any explicitly documented audit repair). `PARTIAL`
 verdicts (minor compression or claims whose supporting source passages are
@@ -205,7 +204,7 @@ Agents querying the data can rely on the following:
 - **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-09-07.
+- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-09-10.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts can indicate minor paraphrastic drift, compression, or missing source context in the fitted audit input; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -216,7 +215,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.66.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.67.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

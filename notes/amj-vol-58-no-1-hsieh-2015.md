@@ -17,7 +17,9 @@ pdf_path: "library/AMJ/vol-58-no-1/pdfs/Hsieh 2015 If They Can Do It, Why Not Us
 text_path: "library/AMJ/vol-58-no-1/text/Hsieh 2015 If They Can Do It, Why Not Us Competitors as Reference Points for Justifying Escalation of Commitment.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-10"
 
 paper_type: "empirical-quantitative"
 keywords: ["escalation of commitment", "competitive market conditions", "competitors as reference points", "competitive dynamics", "overseas expansion"]
@@ -42,6 +44,9 @@ evidence:
   theories_overview: "key reference points"
   methods_overview: "gap time models"
   keywords_source: "competitive market conditions as an important structural determinant of escalation of commitment"
+  hypotheses_source: "have engaged in a high volume of strategic"
+  measures_overview: "average rate of return as the main predictor."
+  findings_overview: "a firm’s escalation behavior is decreased by larger rivals’ negative"
 ---
 
 # If They Can Do It, Why Not Us? Competitors as Reference Points for Justifying Escalation of Commitment
@@ -52,13 +57,30 @@ This study highlights competitive market conditions as an important structural d
 **Research Question**
 The paper asks how competitive market conditions shape firms' escalation of commitment to underperforming initiatives. Specifically, it examines whether larger and smaller competitors function as reference points that enable or disable justification for continued investment in loss-incurring Chinese locations.
 
+**Hypotheses / Propositions**
+- H1: Firms are more inclined to undertake new strategic actions in a loss-incurring location when their larger competitors have engaged in a high volume of strategic actions in that same location.
+- H2: Firms are more inclined to undertake new strategic actions in a loss-incurring location when their smaller competitors have been operating profitably in that same location.
+- H3: Firms are less inclined to undertake new strategic actions in a loss-incurring location when their larger competitors have been operating at a loss in that same location.
+
 **Mechanism Process**
 - IV(s): Larger competitors' action volume, smaller competitors' positive performance, and larger competitors' negative performance in the same Chinese location.
 - DV(s): A focal firm's hazard rate of undertaking new strategic actions in a loss-incurring location.
 - Mediators: Not directly estimated; the theorized process is decision makers' use of competitors as external reference points for justifying further commitment.
-- Moderators: Relative competitor size structures the informational value of competitors' actions and performance.
+- Moderators: Not directly estimated; relative competitor size defines the groups used to construct the predictors.
 
 The proposed mechanism is that competitor cues alter the perceived justification for continuing investment despite negative performance feedback. Larger competitors' high action volume signals opportunities and competitive pressure, while smaller competitors' positive performance suggests that the focal firm should also be capable of succeeding. Larger competitors' negative performance instead provides an unsupportive cue, reducing the expected return to additional commitment.
+
+**Data & Measures**
+The observational archival study traces leading Taiwanese personal computer, mainboard, and network device manufacturers' investments in China during 1998–2011. Investment Commission proposals and quarterly disclosures of actions and performance were reconciled with company reports, yielding 1,595 actions; 680 occurred while the firm's location remained loss-incurring. The main analysis comprises 1,920 firm-location-quarter observations, 131 firm-location histories, 51 firms, and 16 locations (Table 1). Three waves of field interviews informed and illustrated deductive theory development; they were not a separate hypothesis test.
+
+The outcome is the hazard of undertaking at least one new strategic action in a quarter in a province or municipality where the firm had operated at a loss since entry. Actions cover inbound logistics, products, capacity, outbound logistics, technology, and partners. Repeated-event Cox gap time models start each spell at the previous action event or initial entry; observations are censored at first profitability, exit, or the observation period's end. Baseline hazards are stratified by cumulative actions, with firm-clustered robust standard errors and segment, year, and location dummies. These models estimate associations.
+
+Relative size compares average revenues over the preceding two years among Taiwanese rivals in the same product segment. Larger competitors' action volume is the average of each larger rival's two-year action count in the location divided by its log revenues in TWD millions. Smaller competitors' positive performance is the average two-year return on locally invested capital among profitable smaller rivals, coded zero if none is profitable. Larger competitors' negative performance averages the negative returns of loss-making larger rivals and removes the minus sign, so larger values mean larger losses; it is zero if none incurs a loss. Relative size defines predictor groups rather than an interaction term, and the justification mechanism is not directly measured. Controls include the complementary competitor cues, the focal firm's action volume, corporate performance and size, experience and performance in other locations, internationalization, local competitor counts, and multi-location contact.
+
+**Key Findings**
+All three hypotheses receive support in the full model (Table 2, Model 5): larger competitors' action volume is positively associated with action rate (b = 0.574, p = .003; H1), as is smaller competitors' positive performance (b = 1.799, p = .001; H2). Larger competitors' negative performance is negatively associated with action rate (b = −1.645, p = .046; H3); its separate test in Model 4 is marginal (b = −1.422, p = .082). Relative to each predictor's average nonzero scenario, a high value of one standard deviation above the mean corresponds to action-rate changes of +21%, +18%, and −12%, respectively.
+
+The negative-performance result is less robust: it is significant for only the first two alternative performance indicators in Table 3 and becomes nonsignificant in the four-key-location sample and the experience-stratified models. The action-volume and smaller-rival positive-performance results remain significant in those latter analyses. Table 3's best-performer measure for smaller rivals is only marginal (b = 0.705, p < .10), while its other three alternative measures are significant at p < .05 or better. These associations do not directly distinguish rational deliberation from self-serving justification.
 
 **Theoretical Contribution**
 The paper links escalation of commitment research with competitive dynamics by identifying competitive market conditions as structural determinants of escalation behavior. It extends work on competitive relativity and asymmetry by showing that larger and smaller rivals have different informational value as reference points under adverse performance conditions. It also complicates purely bias-based accounts of escalation by showing that unsupportive external cues can reduce commitment.

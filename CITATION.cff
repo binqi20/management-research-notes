@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-09-07"
-version: "0.66.0"
+date-released: "2026-09-10"
+version: "0.67.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -55,6 +55,37 @@ abstract: >-
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
   a published rubric) gates every note into the library.
+  Version 0.67.0 (2026-09-10) augments the final 13 existing v2 AMJ notes
+  from volume 58 issue 1. This release completes the AMJ v3 backfill: all
+  895 AMJ notes across 70 total issues are now v3. The completed backfill
+  covers 67 issues from volume 58 issue 1 through volume 69 issue 1; three
+  earlier volume 57 issues were already native v3. The only remaining v1/v2
+  notes are the 272 NBS notes (61 v1 and 211 v2). The total remains 1,167;
+  the census shifts from 61 v1, 224 v2, and 882 v3 to 61 v1, 211 v2, and 895
+  v3. First-pass blind nine-field audits returned 115 SUPPORTED and 2
+  PARTIAL out of 117. All 13 official reports were assembled before repairs.
+  Parent source verification produced 10 legacy-field repairs across 9
+  notes, including 8 fields initially scored SUPPORTED; fresh blind
+  full-note re-audits returned 81/81 SUPPORTED. The final state is 117/117
+  SUPPORTED, with zero PARTIAL, UNSUPPORTED, or CONTRADICTED and no
+  full-raw-text exception. All 13 notes validate with current full-note and
+  source hashes. Protected bibliographic YAML, historical extraction
+  provenance, original evidence, paper types, and the new v3 sections and
+  anchors remain unchanged during repairs. Notes, SQLite, parsed CSV, and
+  BibTeX reconcile to 1,167 records, with byte-identical BibTeX.
+  Full-library validation passed 1,167/1,167; direct regressions passed
+  22/22 and 15/15. All 13 writers and 22 auditors have verified gpt-6-astra
+  runtime metadata. This is the fifth batch run end-to-end on gpt-6-astra
+  (GPT-6 Astra). Provenance eras are batches 01–07 claude-opus-4-8, 08–15
+  claude-opus-5, 16–19 gpt-5.6-sol, 20–23 claude-opus-5, 24–29 gpt-5.6-sol,
+  and 30–34 gpt-6-astra. Cross-family calibration scored 27/27 for batch 16,
+  27/27 for batch 24, 25/27 for batch 28 (both divergences repaired in
+  v0.62.0), 26/27 for batch 30 (the divergence adjudicated faithful), and
+  26/27 for batch 32 (the divergence explained by a documented input-mode
+  difference). Batch 34’s workshop review is scheduled to run the closing
+  cross-family spot-audit, including a pre-repair probe. The original
+  augmented notes and exact first-pass prompts are preserved; that review
+  has not yet been performed.
   Version 0.66.0 (2026-09-07) augments 26 existing v2 notes from Academy
   of Management Journal volume 58 issues 3 and 2 (13 each). The total
   remains 1,167; the census shifts from 61 v1, 250 v2, and 856 v3 to 61
@@ -898,7 +929,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.66.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.67.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

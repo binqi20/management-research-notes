@@ -549,6 +549,62 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.67.0 v3 backfill batch 34 — AMJ v3 backfill complete (2026-09-10, 1,167 notes):**
+  Upgrades the final **13 existing v2 notes from AMJ volume 58 issue 1** to
+  v3. No new notes, v1 re-extractions, already-v3 skips, calibration
+  repairs, or paper-type changes were needed. The total remains **1,167**,
+  and the census shifts from 61 v1 / 224 v2 / 882 v3 to **61 v1 / 211 v2 /
+  895 v3**.
+
+  This release completes the AMJ v3 backfill: all 895 AMJ notes across 70
+  total issues are now v3. The completed backfill covers 67 issues from
+  volume 58 issue 1 through volume 69 issue 1; three earlier volume 57
+  issues were already native v3. The only remaining v1/v2 notes are the 272
+  NBS notes (61 v1 and 211 v2).
+
+  First-pass blind nine-field audits returned **115 SUPPORTED and 2 PARTIAL
+  out of 117**, with no UNSUPPORTED or CONTRADICTED. All 13 official reports
+  were assembled with current hashes before any repair. Parent source
+  verification produced **10 legacy-field repairs across 9 notes**,
+  including **8 fields initially scored SUPPORTED**. The repairs correct
+  practical and future-research scope, distinguish predictor groups from
+  moderators, remove invented limitations, and clarify planned rather than
+  observed job return.
+
+  Every repaired note received a fresh blind full-note audit; the nine
+  re-audits returned **81/81 SUPPORTED**. The final state is **117/117
+  SUPPORTED**, including all 39 new v3 fields, with **0 PARTIAL, 0
+  UNSUPPORTED, and 0 CONTRADICTED**. No faithful-PARTIAL acceptance or
+  full-raw-text audit exception was needed. All 13 current official
+  report/sidecar pairs match the final note and source hashes; all 22 audit
+  returns, prompts, and preserved report/sidecar pairs reconcile.
+
+  All 13 notes validate. The augmentation guard passed before repairs and
+  now flags exactly the 10 registered legacy fields. Bibliographic YAML
+  bytes, historical extraction provenance, original evidence, and paper
+  types are unchanged; the new v3 sections and anchors are unchanged during
+  repairs. Augmentation provenance records `gpt-6-astra` and 2026-09-10.
+  Scoped CrossRef was skipped only after field-by-field proof of
+  byte-identical bibliographic frontmatter.
+
+  Sequential SQLite, parsed CSV, and BibTeX rebuilds reconcile to **1,167
+  records** with identical record IDs and **byte-identical BibTeX**.
+  Full-library validation passed **1,167/1,167**; direct regressions passed
+  **22/22** for PDF-text fitting and **15/15** for augmentation. All 13
+  writers and 22 auditors have verified `gpt-6-astra` runtime metadata.
+
+  This is the **fifth batch run end-to-end on `gpt-6-astra` (GPT-6 Astra)**.
+  Provenance eras are batches 01–07 `claude-opus-4-8`, 08–15
+  `claude-opus-5`, 16–19 `gpt-5.6-sol`, 20–23 `claude-opus-5`, 24–29
+  `gpt-5.6-sol`, and 30–34 `gpt-6-astra`. Cross-family calibration scored
+  27/27 for batch 16, 27/27 for batch 24, 25/27 for batch 28 (both
+  divergences repaired in v0.62.0), 26/27 for batch 30 (the divergence
+  adjudicated faithful), and 26/27 for batch 32 (the divergence explained by
+  a documented input-mode difference). Batch 34’s workshop review is
+  scheduled to run the closing cross-family spot-audit, including a
+  pre-repair probe. The original augmented notes and exact first-pass
+  prompts are preserved; that review has not yet been performed.
+
 - **v0.66.0 v3 backfill batch 33 (2026-09-07, 1,167 notes):**
   Upgrades **AMJ volume 58 issues 3 and 2, 13 notes each**, from v2 to v3.
   No new notes, v1 re-extractions, already-v3 skips, or calibration
@@ -1798,7 +1854,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | **Total**              | **1,167** |
 
 All notes have passed the semantic audit. The corpus contains 61 legacy v1
-notes, 224 v2 notes, and 882 v3 notes; v2/v3 notes carry an `evidence:` anchor
+notes, 211 v2 notes, and 895 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -1931,7 +1987,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.66.0},
+  version      = {0.67.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}
@@ -1948,7 +2004,7 @@ This project is intended to be a long-running research-infrastructure
 project, not a one-shot data drop. The near-term roadmap:
 
 - **More monthly batches** — extend NBS coverage with each new digest and
-  continue the AMJ backfill into earlier volumes, keeping paper IDs stable
+  extend AMJ coverage into earlier volumes, keeping paper IDs stable
   across updates.
 - **Additional journal sources** — add Web of Science exports and journal
   RSS feeds as parallel `library/{source}/{issue}/` trees, reusing the

@@ -16,7 +16,9 @@ pdf_path: "library/AMJ/vol-58-no-1/pdfs/Joshi 2015 Who Defers to Whom and Why Du
 text_path: "library/AMJ/vol-58-no-1/text/Joshi 2015 Who Defers to Whom and Why Dual Pathways Linking Demographic Differences and Dyadic Deference to Team Effectiveness.txt"
 ingested_at: "2026-07-05"
 extraction_model: "gpt-5.5"
-extraction_version: "v2"
+extraction_version: "v3"
+augmented_model: "gpt-6-astra"
+augmented_at: "2026-09-10"
 
 paper_type: "empirical-quantitative"
 keywords: ["dyadic deference", "demographic differences", "task contributions", "social affinity", "team effectiveness"]
@@ -41,6 +43,9 @@ evidence:
   theories_overview: "basic predictions of status characteristics theory"
   methods_overview: "To test our hypotheses, we used Kenny’s social"
   keywords_source: "two distinct mechanisms—task contributions and social affinity"
+  hypotheses_source: "partner partially mediates the effects of actor–"
+  measures_overview: "socially with this person outside the lab/office.”"
+  findings_overview: "task-based deference was positively"
 ---
 
 # Who Defers to Whom and Why? Dual Pathways Linking Demographic Differences and Dyadic Deference to Team Effectiveness
@@ -51,6 +56,12 @@ We develop and test predictions about how demographic differences influence dyad
 **Research Question**
 The paper asks how demographic differences shape who defers to whom in multidisciplinary research teams, and why those dyadic deference patterns affect team effectiveness. It focuses on whether deference emerges through perceptions of task contributions, social affinity, or both.
 
+**Hypotheses / Propositions**
+- H1: An actor’s perception of a partner’s task contributions partially mediates the interactive effects of actor–partner demographic attributes on dyadic deference: (a) low-status actors defer to higher-status partners through perceived task contributions; (b) high-status actors defer to partners with similar demographic status through perceived task contributions.
+- H2: An actor’s social affinity with a partner partially mediates the effects of actor–partner demographic attributes on dyadic deference: (a) actors defer to partners with similar demographic attributes through social affinity; (b) these effects are stronger among high-status than low-status dyads.
+- H3: The degree to which deference is based on perceptions of task contributions in a team is positively related to team performance.
+- H4: The degree to which deference is based on social affinity in a team is negatively related to team performance.
+
 **Mechanism Process**
 - IV(s): Actor, partner, and actor-partner demographic attributes, especially education, tenure, gender, and ethnicity.
 - DV(s): Directed dyadic deference and team performance.
@@ -58,6 +69,18 @@ The paper asks how demographic differences shape who defers to whom in multidisc
 - Moderators: Demographic status/similarity patterns at the dyad level, including high-status versus low-status dyads.
 
 The paper proposes a dual-pathway model. In the task-contributions pathway, demographic attributes operate as status cues that shape perceived task competence, producing deference toward partners viewed as valuable contributors. In the social-affinity pathway, demographic similarity produces interpersonal affinity and mutual deference. These dyadic processes aggregate upward: task-based deference supports team research productivity, whereas affinity-based deference can divert influence toward socially close partners rather than task-relevant expertise.
+
+**Data & Measures**
+The observational field study combined surveys and archival records from multidisciplinary research laboratories at a large public university. Tables 1–5 report 55 labs, 619 individuals, and 9,430 directed dyadic ratings; performance analyses cover 46 labs. Demographics were self-reported: highest education on six ordered categories from high school through post-doctorate, team tenure in years, gender coded female = 0/male = 1, and ethnicity coded non-White = 0/White = 1. Actor and partner attributes and their interactions represented demographic status and similarity. Roster surveys used single-item, five-point ratings of each teammate’s valuable work contributions, time spent socially together outside the lab/office, and deference to the teammate’s work-related opinions and inputs. A separate online sample of 178 respondents validated these items against three-item scales (correlations of .74, .75, and .79 for task contributions, affinity, and deference, respectively).
+
+The procedure describes demographics at Time 1, interpersonal ratings at Time 2 roughly two months later, and archival performance roughly 18 months after Time 2; however, the individual measure descriptions label task contributions and social affinity as Time 1. The paper therefore contains inconsistent timing descriptions for these mediators. Performance was the summed count of refereed journal articles, books/book chapters, and conference presentations. The social relations model decomposed team, actor, partner, and dyad variation; conditional indirect effects used 5,000 bootstrap samples of entire teams. Team-specific Bayes estimators of the task-contributions–deference and affinity–deference relationships measured the two sources of team deference. Quasi-Poisson models predicted publication output, controlling for lab size, discipline, and demographic aggregates; deference models controlled formal role. This nonexperimental design supports associations and cannot establish causality.
+
+**Key Findings**
+The task-contributions pathway supported H1a for education and H1b for education, gender, and ethnicity, rather than uniformly across attributes. In Table 5, the indirect effect of partner education through task contributions was positive for less educated actors (B = .08, p < .01) and more educated actors (B = .10, p < .01). Corresponding indirect effects were positive for male actors (B = .07, p < .01) and White actors (B = .08, p < .05), but nonsignificant for female and non-White actors; tenure indirect effects were nonsignificant. The ethnicity interaction predicting task contributions itself was only marginal (Table 4, B = .09, p < .10).
+
+The authors describe support for H2a and limited support for H2b. Table 5 shows affinity-mediated homophily for gender (partner-male indirect effects: male actors B = .02, p < .01; female actors B = −.02, p < .05) and ethnicity (partner-White indirect effects: White actors B = .02, non-White actors B = −.01, both p < .01). The education indirect effect was significant only for highly educated actors (B = .01, p < .01); neither tenure indirect effect was significant. Stronger homophily among high-status dyads appeared in the education and tenure affinity slopes, but not gender or ethnicity; thus this slope evidence did not imply significant mediation for tenure. With both pathways included, dyad task contributions (B = .49) and affinity (B = .06) each positively predicted deference (Table 3, Model 5, both p < .001).
+
+H3 and H4 were supported in separate team-performance models using one-tailed tests (Table 7): task-based deference was positively associated with output (Model 2, B = 2.05, p < .05), whereas affinity-based deference was negatively associated with output (Model 3, B = −2.26, p < .05). The reported publication-rate factors per standard-deviation increase were 1.34 and .76, respectively. In the joint model, task-based deference was only marginally significant (Model 4, B = 1.69, p < .10), while affinity-based deference remained negative and significant (B = −1.96, p < .05); pseudo R² was .32.
 
 **Theoretical Contribution**
 The paper extends status research in teams by showing that demographic attributes shape deference not only through competence-based status expectations but also through social affinity. It contributes a multilevel account in which dyadic deference processes become bottom-up mechanisms linking demographic composition to team effectiveness.
