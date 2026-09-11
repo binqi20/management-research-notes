@@ -268,7 +268,111 @@ def run_layer_1(fm: dict) -> dict:
 # --- Layer 2 helpers ----------------------------------------------------------------
 
 
-def _strip_references(text: str) -> tuple[str, int]:
+def _interleaved_reference_cut(
+    text: str, heading_end: int, max_pdf_chars: int
+) -> int | None:
+    """Find a left-column bibliography transition below a right-column heading.
+
+    Keep whole physical lines: editing columns would invalidate the fitter's
+    original-text offsets. A right-column heading is identified by its position
+    relative to the surrounding line widths. The transition needs repeated
+    left-margin author/year entries, not a lone citation inside Discussion.
+    None means no reliable transition: the caller keeps the old heading cut.
+    Never turn an uncertain transition into an unstripped paper; that can
+    trigger sandwich truncation and lose body text the old fitter showed.
+    The user-approved terminal-band exception permits full retention only
+    with positive mixed-column evidence and a complete source within budget.
+    """
+    line_start = text.rfind("\n", 0, heading_end) + 1
+    heading_column = len(text[line_start:heading_end]) - len(
+        text[line_start:heading_end].lstrip(" \t")
+    )
+    following = text[heading_end:].splitlines(keepends=True)[:160]
+    # Some PDFs indent the entire page (Moy: about 117 spaces). Infer the
+    # common left margin rather than assuming reference entries start at 0.
+    # Nearby indentation levels represent paragraph/hanging indents. Require
+    # a dominant cluster; a tied or sparse layout falls back to the old cut.
+    indent_counts: dict[int, int] = {}
+    for line in following:
+        indent = len(line) - len(line.lstrip(" \t"))
+        if line.strip() and indent < heading_column - 25:
+            indent_counts[indent] = indent_counts.get(indent, 0) + 1
+    clusters: list[list[int]] = []
+    for indent in sorted(indent_counts):
+        if clusters and indent - clusters[-1][0] <= 12:
+            clusters[-1][1] += indent_counts[indent]
+        else:
+            clusters.append([indent, indent_counts[indent]])
+    clusters.sort(key=lambda item: (-item[1], item[0]))
+    if not clusters or clusters[0][1] < 3 or (
+        len(clusters) > 1 and clusters[0][1] == clusters[1][1]
+    ):
+        return None
+    left_margin = clusters[0][0]
+    widths = sorted(len(line.rstrip()) for line in following[:30] if line.strip())
+    relative_heading = heading_column - left_margin
+    if not widths or relative_heading < 40 or relative_heading < (widths[len(widths) // 2] - left_margin) * 0.6:
+        return None
+
+    # References wrap over several physical lines. Requiring a year in the
+    # next three lines admits long author lists; requiring three starts in a
+    # 16-line window distinguishes a list from prose citing a single author.
+    author = re.compile(
+        r"^[ \t]{0,12}(?:[^\W\d_][\w’'`.-]*(?:[ \t]+[^\W\d_][\w’'`.-]*){0,3},"
+        r"[ \t]+[A-Z](?:\.|[ \t]*-)|"
+        r"(?:[A-Z][\w’'.-]*[ \t]+){0,5}[A-Z0-9][\w’'.-]*\.[ \t]+(?:18|19|20)\d{2})"
+    )
+    year = re.compile(r"\b(?:18|19|20)\d{2}[a-z]?\b")
+    offsets = []
+    cursor = heading_end
+    for line in following:
+        offsets.append(cursor)
+        cursor += len(line)
+    left = [line[left_margin:max(left_margin + 1, heading_column - 20)] for line in following]
+    starts = [
+        bool(author.match(line)) and bool(year.search(" ".join(left[i:i + 3])))
+        for i, line in enumerate(left)
+    ]
+    for i, is_start in enumerate(starts):
+        if is_start and sum(starts[i:i + 16]) >= 3:
+            return offsets[i]
+
+    # Simsek: a short editorial can end with left-column prose still beside
+    # a right-column bibliography. There is no left transition to find.
+    # Require repeated right reference starts, continuing left prose at EOF,
+    # and room for the ENTIRE source. Otherwise use the old heading cut.
+    if cursor == len(text) and len(text) <= max_pdf_chars:
+        right = []
+        for line in following:
+            segments = [
+                line[gap.end():]
+                for gap in re.finditer(r"[ \t]{3,}", line)
+                if line[:gap.start()].strip()
+                and gap.end() >= left_margin + relative_heading * 0.6
+            ]
+            right.append(segments[0] if segments else "")
+        right_starts = [
+            bool(author.match(line)) and bool(year.search(" ".join(right[i:i + 3])))
+            for i, line in enumerate(right)
+        ]
+        final_line = next(
+            (i for i in range(len(following) - 1, -1, -1) if following[i].strip()),
+            None,
+        )
+        final_left = left[final_line] if final_line is not None else ""
+        if (
+            sum(right_starts) >= 3
+            and not author.match(final_left)
+            and len(re.findall(r"\b[^\W\d_]+\b", final_left)) >= 5
+            and len(final_left) - len(final_left.lstrip(" \t")) <= 12
+        ):
+            return len(text)
+    return None
+
+
+def _strip_references(
+    text: str, max_pdf_chars: int = MAX_PDF_CHARS
+) -> tuple[str, int]:
     """Strip the References/Bibliography section from the end of PDF text.
 
     Academic papers end with a References section (sometimes followed by
@@ -313,12 +417,19 @@ def _strip_references(text: str) -> tuple[str, int]:
         r"\n\s*Literature Cited\b" + prose_guard,
     ]
     last_pos = -1
+    heading_end = -1
     for pat in patterns:
         for m in re.finditer(pat, text):
             if m.start() > last_pos:
                 last_pos = m.start()
+                heading_end = m.end()
 
     if last_pos > 0 and last_pos > len(text) * 0.5:
+        later_cut = _interleaved_reference_cut(text, heading_end, max_pdf_chars)
+        if later_cut is not None:
+            if later_cut == len(text):
+                return text, 0
+            last_pos = max(last_pos, later_cut)
         stripped = text[:last_pos].rstrip()
         return stripped, len(text) - len(stripped)
 
@@ -338,14 +449,13 @@ def _strip_references(text: str) -> tuple[str, int]:
 # offset math (dropped-region scans, ref-window extraction) requires
 # `stripped` to be a byte prefix of the original text, so the retention is
 # assembled downstream, never inside the stripper.
-APPENDIX_RETAIN_CAP = 40_000
+APPENDIX_RETAIN_CAP = 60_000
 
 # Suspicious-strip detector (batch 11: ferns lost 25% of the paper, pamphile
 # 18.5%). In two-column output a REAL "REFERENCES" heading can sit atop
 # column 2 while column 1 still carries Discussion prose — the strip then
-# discards interleaved body text. The cut-point fix is deferred (global regex
-# logic requires a corpus-wide sweep per project policy); until then any
-# strip that removes more than this share of the paper is flagged in
+# discards interleaved body text. Even with the column-aware cut-point guard,
+# any strip that removes more than this share of the paper is flagged in
 # audit_context and called out in the auditor preamble, so a claim missing
 # from the fitted text is treated as suspected strip loss, not fabrication.
 # Threshold 0.15: the two known victims measured 25% (ferns) and 18.5%
@@ -353,12 +463,20 @@ APPENDIX_RETAIN_CAP = 40_000
 # false-positive cost is one caution sentence in the preamble.
 SUSPICIOUS_STRIP_RATIO = 0.15
 
+_UPPERCASE_APPENDIX_HEADING = (
+    r"(?:APPENDIX(?:[ \t]+[A-Z0-9])?|APPENDICES|ONLINE APPENDIX)"
+    r"(?:[ \t]*[:.\-–—][ \t]*[A-Z][A-Z0-9 \t,.;:&()/’'\-–—]*)?"
+)
+
 _APPENDIX_PATTERNS = [
     # Line-initial, matching the REFERENCES heading conventions above.
     # Title-case "Appendix" requires an A–Z/0–9 designator so prose like
     # "Appendix materials are available..." can never start retention;
     # a false positive fails OPEN (keeps extra reference lines), never
     # drops content.
+    # Share the titled-heading recognizer with the right-column path. Keep
+    # the legacy broad patterns too so no formerly retained marker is lost.
+    r"\n[ \t]*" + _UPPERCASE_APPENDIX_HEADING + r"[ \t]*(?=\n|$)",
     r"\n\s*APPENDIX\b",
     r"\n\s*APPENDICES\b",
     r"\n\s*ONLINE APPENDIX\b",
@@ -375,6 +493,15 @@ def _find_appendix_start(text: str, search_from: int) -> int | None:
         m = re.search(pat, region)
         if m is not None and (best is None or m.start() < best):
             best = m.start()
+    # Eggers/Reyt: a right-column heading can share its physical line with
+    # bibliography prose. Require a column gap and a complete uppercase
+    # heading, then retain the WHOLE line (including the harmless left text).
+    for m in re.finditer(
+        r"[ \t]{3,}" + _UPPERCASE_APPENDIX_HEADING + r"[ \t]*(?=\n|$)", region,
+    ):
+        start = max(0, region.rfind("\n", 0, m.start()))
+        if best is None or start < best:
+            best = start
     return None if best is None else search_from + best
 
 
@@ -482,7 +609,7 @@ def fit_pdf_text_for_audit(
     audit report so a later reviewer can see exactly how much source text the
     auditor received and which anchors needed splicing.
     """
-    stripped, refs_removed = _strip_references(pdf_text)
+    stripped, refs_removed = _strip_references(pdf_text, max_pdf_chars)
 
     # Appendix retention: locate the first appendix marker inside the
     # stripped region and carry that tail forward (capped), so the auditor

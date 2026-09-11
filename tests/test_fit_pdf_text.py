@@ -15,6 +15,7 @@ or via pytest:
 from __future__ import annotations
 
 import sys
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -24,6 +25,7 @@ from audit_note import (  # noqa: E402
     SANDWICH_HEAD_RATIO,
     SANDWICH_SEPARATOR_RESERVE,
     SPLICE_TOTAL_BUDGET_CHARS,
+    _strip_references,
     build_auditor_prompt_and_context,
     fit_pdf_text_for_audit,
 )
@@ -350,6 +352,189 @@ def test_suspicious_strip_warns_auditor():
     assert "suspected strip loss" in prompt, (
         "auditor preamble must carry the suspicious-strip caution"
     )
+
+
+def reference_rows() -> str:
+    # Synthetic bibliography around short source-derived layout fixtures.
+    return "".join(
+        f"{name}, A. 2015. A reference title.                              Smith, B. 2016. Another title.\n"
+        "    Journal of Research, 1: 1–10.                                   Journal of Research, 2: 11–20.\n"
+        for name in ("Adams", "Baker", "Clark", "Davis")
+    )
+
+
+def test_real_ferns_interleaved_band_stays_prefix_pure():
+    # Ferns (2022), raw lines 1291–1318: right heading, then left prose.
+    band = (
+        "\n                                                                                       REFERENCES\n"
+        "industry also challenged activists’ analogical work,              350.org. 2012. Do the math.\n"
+        "particularly by attacking activists’ moral positioning               Retrieved from a reference.\n"
+        "proliferate.                                                      350.org. 2015. Another reference.\n"
+    )
+    text = filler(10_000) + band + reference_rows()
+    stripped, removed = _strip_references(text)
+    assert stripped == (filler(10_000) + band).rstrip()
+    assert text.startswith(stripped) and removed == len(text) - len(stripped)
+    assert "industry also challenged activists’ analogical work" in stripped
+    assert "Adams, A." not in stripped
+
+
+def test_real_kim_interleaved_band_below_caution_threshold():
+    # Kim (2015), raw lines 1165–1174. Below-15% bands are the same defect.
+    band = (
+        "\n                                                                                     REFERENCES\n"
+        "expect (expectations) (Cyert & March, 1963). Several               Aiken, L. S. 1991. A reference.\n"
+        "the role of both aspirations and expectations could                  Reference continuation.\n"
+        "add valuable insights to the performance feedback                    Reference continuation.\n"
+    )
+    text = filler(15_000) + band + reference_rows()
+    fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert "the role of both aspirations and expectations could" in fitted
+    assert ctx["references_strip_suspicious"] is False
+    assert 0 < ctx["references_strip_ratio"] < 0.15
+
+
+def test_single_column_reference_heading_keeps_original_cut():
+    text = filler(10_000) + "\n\nREFERENCES\n" + reference_rows()
+    stripped, removed = _strip_references(text)
+    assert stripped == filler(10_000).rstrip()
+    assert removed == len(text) - len(stripped)
+
+
+def test_right_column_without_reference_transition_uses_old_cut():
+    text = (
+        filler(10_000)
+        + "\n                                                                                       REFERENCES\n"
+        + "The discussion continues and gives no reliable cut.              A right-column fragment.\n"
+    )
+    stripped, removed = _strip_references(text)
+    assert stripped == filler(10_000).rstrip()
+    assert removed == len(text) - len(stripped)
+
+
+def test_real_eggers_right_column_appendix_precedes_table_marker():
+    # Eggers (2015), lines 1093, 1115, 1117, 1123. The former TABLE A1
+    # fallback omitted these methods facts above the table.
+    text = (
+        filler(10_000) + "\nREFERENCES\n" + reference_rows()
+        + "       and mode of organizing. Entrepreneurship Theory                                          APPENDIX A\n"
+        + "cover all VC-backed ventures through 2009\n"
+        + "before 2006\nwe use six industry\n"
+        + "\nTABLE A1\nTable contents.\n"
+    )
+    fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    for phrase in ("cover all VC-backed ventures through 2009", "before 2006", "we use six industry"):
+        assert phrase in fitted
+    assert "APPENDIX A" in fitted and "TABLE A1" in fitted
+    assert ctx["appendix_truncated_chars"] == 0 and len(fitted) <= MAX
+
+
+def test_real_reyt_numeric_right_column_appendix():
+    # Reyt (2015), line 1193: numeric marker alongside a reference.
+    text = (
+        filler(10_000) + "\nREFERENCES\n" + reference_rows()
+        + "    think they’re doing? Action identification and human                                     APPENDIX 1\n"
+        + "Appendix methods content.\n"
+    )
+    fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert "APPENDIX 1" in fitted and "Appendix methods content." in fitted
+    assert ctx["appendix_retained_chars"] > 0
+
+
+def test_inline_appendix_prose_does_not_start_retention():
+    text = (
+        filler(10_000) + "\nREFERENCES\n" + reference_rows()
+        + "A reference mentions APPENDIX A in running prose.\n"
+        + "Another reference.       APPENDIX materials are elsewhere.\n"
+    )
+    _fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert ctx["appendix_retained_chars"] == 0
+
+
+def test_real_moy_indented_reference_transition():
+    # Raw 982–1004: left margin 117, right heading 223; bibliography in the
+    # left column starts at Alting, after the interleaved body continuation.
+    fixture = (ROOT / "tests/fixtures/audit_fitter/moy_indented_references.txt").read_text()
+    text = filler(30_000) + "\n" + fixture
+    start = text.index("Alting, T.")
+    cut = text.rfind("\n", 0, start)
+    stripped, removed = _strip_references(text)
+    assert stripped == text[:cut].rstrip()
+    assert "highlight some factors that may mitigate this concern" in stripped
+    assert removed == len(text) - len(stripped)
+
+
+def test_real_zhang_appendix_over_40k_retained_whole():
+    layout = json.loads((ROOT / "tests/fixtures/audit_fitter/zhang_appendix_layout.json").read_text())
+    # Preserve the real marker geometry and measured lengths, replacing
+    # unneeded article content with deterministic filler.
+    app = "\n" + layout["first_marker"] + "\n"
+    app += filler(layout["first_to_old_marker_chars"] - len(app), seed="z")
+    app += "\n" + layout["old_marker"] + "\n"
+    app += filler(layout["appendix_chars"] - len(app) - len(layout["tail_fragment"]), seed="t")
+    app += layout["tail_fragment"]
+    assert len(app) == 45_399
+    text = filler(100_000) + "\nREFERENCES\n" + reference_rows() + app
+    fitted, ctx = fit_pdf_text_for_audit(text)
+    assert app in fitted
+    assert ctx["appendix_retained_chars"] == 45_399
+    assert ctx["appendix_truncated_chars"] == 0
+    assert layout["tail_fragment"] in fitted
+
+
+def test_real_sherf_titled_appendix_heading():
+    fixture = (ROOT / "tests/fixtures/audit_fitter/sherf_titled_appendix.txt").read_text()
+    probes = "The final sample included 202\nThe final sample included 263 managers"
+    text = filler(20_000) + "\nREFERENCES\n" + reference_rows() + "\n" + fixture + probes
+    for separator in (":", "-", "."):
+        fitted, ctx = fit_pdf_text_for_audit(text.replace("A: PILOT", f"A{separator} PILOT"))
+        assert probes in fitted
+        assert ctx["appendix_retained_chars"] > 0
+
+
+def test_real_lee_single_column_references():
+    fixture = (ROOT / "tests/fixtures/audit_fitter/lee_single_column.txt").read_text()
+    text = filler(10_000) + "\n" + fixture
+    expected = text[:text.index("\nREFERENCES")].rstrip()
+    stripped, removed = _strip_references(text)
+    assert stripped == expected
+    assert "00018392261421927#supplementary-materials" in stripped
+    assert "Abi-Esber" not in stripped
+    assert removed == len(text) - len(stripped)
+
+
+def test_real_simsek_terminal_mixed_band_within_budget():
+    fixture = (ROOT / "tests/fixtures/audit_fitter/simsek_terminal_band.txt").read_text()
+    text = filler(10_000) + "\n" + fixture
+    fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert fitted == text
+    assert "tools, and techniques are needed for probing and" in fitted
+    assert ctx["sandwich_truncated"] is False
+    assert _strip_references(text, MAX) == (text, 0)
+
+
+def test_terminal_band_over_budget_uses_old_heading_cut():
+    fixture = (ROOT / "tests/fixtures/audit_fitter/simsek_terminal_band.txt").read_text()
+    body = filler(18_000)
+    text = body + "\n" + fixture
+    assert len(text) > MAX
+    stripped, removed = _strip_references(text, MAX)
+    assert stripped == body.rstrip()
+    assert removed == len(text) - len(stripped)
+    fitted, ctx = fit_pdf_text_for_audit(text, MAX)
+    assert fitted == stripped
+    assert ctx["sandwich_truncated"] is False
+
+
+def test_terminal_exception_rejects_right_column_only_ending():
+    fixture = (ROOT / "tests/fixtures/audit_fitter/simsek_terminal_band.txt").read_text()
+    body = filler(10_000)
+    right_only = " " * 70 + "Zhang, A. 2020. A reference-only final line.\n"
+    text = body + "\n" + fixture + "\n" + right_only * 10
+    assert len(text) < MAX
+    stripped, removed = _strip_references(text, MAX)
+    assert stripped == body.rstrip()
+    assert removed == len(text) - len(stripped)
 
 
 def main() -> int:

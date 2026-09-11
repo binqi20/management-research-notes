@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-09-10"
-version: "0.67.0"
+date-released: "2026-09-11"
+version: "0.68.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -55,6 +55,32 @@ abstract: >-
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
   a published rubric) gates every note into the library.
+  Version 0.68.0 (2026-09-11) fixes the audit fitter's interleaved-reference
+  cut point, recognizes right-column and titled appendix headings, and
+  raises the user-approved appendix cap to 60,000 characters. Two identical
+  1,167-text sweeps classify 528 same, 88 improved, one reference-heading
+  and whitespace addition, and 550 no-match, with zero retained-source
+  losses, zero new sandwich-truncated papers, and zero appendix truncation.
+  All 14 victim papers and 42 scoped field-restoration proofs pass. The
+  existing shared budget and 15-percent caution remain unchanged; 51 tests
+  pass. Thirty-one fresh blind GPT-6 Astra standard-input audits and four
+  source-verified, user-approved repairs yield 276 SUPPORTED and three
+  framing PARTIALs out of 279 fields, with zero UNSUPPORTED or CONTRADICTED.
+  Thirty-nine previously accepted text-loss PARTIALs are now SUPPORTED.
+  Kim and Eggers pass 9/9 under standard input, superseding their historical
+  full-raw-text exceptions. Already-published errors in Kotha's payment
+  direction, Foulk's feedback direction, Shea's task-order scope and Fang's
+  baseline controls are corrected and independently re-audited. Remaining
+  framing verdicts concern Sherf's Future Research, Ferns's Practical
+  Implication and Fang's Future Research; no relevant source remains
+  missing. The broader AMJ inventory contains 25 PARTIAL fields across 22
+  notes, including 11 earlier-batch fields outside this session's scope.
+  All 31 scoped notes validate with current hashes. Bibliographic metadata,
+  original provenance, anchors and all source texts are unchanged. Notes,
+  SQLite, parsed CSV and BibTeX reconcile to 1,167; BibTeX is byte-identical.
+  No NBS note or frontmatter-cleanup entry changed. The runbook codifies
+  fail-safe fallback, bounded terminal-band retention and repeated automated
+  containment gates for future fitter changes.
   Version 0.67.0 (2026-09-10) augments the final 13 existing v2 AMJ notes
   from volume 58 issue 1. This release completes the AMJ v3 backfill: all
   895 AMJ notes across 70 total issues are now v3. The completed backfill
@@ -929,7 +955,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.67.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.68.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

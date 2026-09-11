@@ -549,6 +549,63 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.68.0 audit fitter repair and standard-input re-audit (2026-09-11, 1,167 notes):**
+  The reference cut now preserves body prose interleaved with a right-column
+  bibliography, advancing to a repeated left-column author/year transition
+  and falling back to the old heading cut if no transition is found. A
+  user-approved exception retains a positively identified terminal prose
+  band only when the complete text fits the existing budget. Right-column
+  and titled uppercase appendix headings are recognized, and the approved
+  appendix cap is **60,000 characters**. Source text files are unchanged.
+
+  Two byte-identical sweeps of all **1,167 texts** found **528 same, 88
+  improved, 1 changed-otherwise, and 550 no-match**. The one other change
+  adds only a reference heading and whitespace. Every source interval
+  retained by the old fitter remains present: **zero regressions**, no new
+  sandwich-truncated paper, and no appendix truncation. All **14 victim
+  papers / 28 literal probes** and all **42 scoped field-restoration proofs**
+  pass. The largest fitted source is 246,024 characters; this includes the
+  existing anchor-splice allowance, not an enlarged base budget. The 15%
+  strip-ratio caution remains unchanged. Tests: **51 passed**.
+
+  Fresh blind `gpt-6-astra` audits covered **31 notes / 279 fields** under
+  standard fitted input. The baseline was 239 SUPPORTED / 40 PARTIAL;
+  first pass returned 273 SUPPORTED / 5 PARTIAL / 1 CONTRADICTED. All
+  first-pass official reports were assembled before repairs. With explicit
+  user authorization, four previously published fields were corrected:
+  Kotha (2018) reversed who pays licensing fees; Foulk (2018) reversed the
+  direction of accountability feedback; Shea (2019) omitted the
+  feedback-task-first qualification on Study 3 comparisons; Fang (2022)
+  omitted parental controls from the baseline-model description. These
+  passages were already visible to the old fitter. Fresh full-note audits
+  after repair returned 35 SUPPORTED / 1 framing PARTIAL across 36 fields.
+
+  Final scoped state: **276 SUPPORTED / 3 accepted framing PARTIALs,
+  0 UNSUPPORTED, 0 CONTRADICTED**. **39 of 40** previously accepted
+  text-loss fields are now SUPPORTED. Fang's Future Research remains PARTIAL
+  for a different reason: examples drawn from the controls discussion
+  extend the explicit future agenda; the supporting source is visible.
+  The other framing PARTIALs concern Sherf's Future Research example of
+  objective field performance and Ferns's more definite explanation of
+  Occupy's relative failure. Their wording is unchanged. Kim and Eggers
+  each pass **9/9 under standard fitted input**, superseding both historical
+  full-raw-text audit exceptions; the original exception evidence is kept.
+
+  The live official reports remain **1,167/1,167 PASS**, with zero
+  UNSUPPORTED or CONTRADICTED. AMJ has 25 accepted PARTIAL fields across
+  22 notes: the three above, 11 non-tooling fields retained without fresh
+  audit, and 11 earlier-batch fields outside this session's scope. See
+  [AGENTS §5](AGENTS.md#5-faithfulness-guarantees) for the complete list and
+  the limits of audit assurance. No NBS notes or cleanup-queue entries
+  changed. All 31 scoped notes validate with matching audit hashes;
+  bibliographic frontmatter, historical provenance and anchors are
+  unchanged. SQLite, parsed CSV and BibTeX reconcile to **1,167**; CSV
+  changes exactly four fields and BibTeX is byte-identical. Scoped CrossRef
+  was skipped because bibliographic fields did not change. The v0.68.0
+  census remains **61 v1 / 211 v2 / 895 v3**. The runbook now requires
+  fail-safe fitter changes, real-layout fixtures and repeated containment
+  checks before publication.
+
 - **v0.67.0 v3 backfill batch 34 — AMJ v3 backfill complete (2026-09-10, 1,167 notes):**
   Upgrades the final **13 existing v2 notes from AMJ volume 58 issue 1** to
   v3. No new notes, v1 re-extractions, already-v3 skips, calibration
@@ -1853,7 +1910,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | book-review            |     6 |
 | **Total**              | **1,167** |
 
-All notes have passed the semantic audit. The corpus contains 61 legacy v1
+All notes have passed the semantic audit. The v0.68.0 corpus contains 61 legacy v1
 notes, 211 v2 notes, and 895 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
@@ -1987,7 +2044,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.67.0},
+  version      = {0.68.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

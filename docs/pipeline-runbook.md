@@ -393,15 +393,17 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   by itself proof a claim is absent from the paper.
 - **Appendix-trim PARTIALs are fixed in-tool (batches 09–10: hersel,
   lauriano, xu-2022):** `audit_note.py` now strips only the references block
-  and RE-APPENDS the appendix (capped at 40K chars, seam-marked, announced in
+  and RE-APPENDS the appendix (originally capped at 40K chars; 60K in
+  v0.68.0, seam-marked, announced in
   the auditor preamble), so a note faithfully citing appendix-sourced details
   no longer draws a PARTIAL from an auditor who never saw the appendix. A
   corpus scan found 113 papers (~10%) carry a retainable appendix. For audit
-  reports produced before this change, or if a claim sits beyond the 40K cap
-  (3 papers corpus-wide), the acceptance path above applies: verify in the
+  reports produced before this change, or if a claim sits beyond the cap
+  (three papers exceeded the original 40K cap; none exceed 60K in the
+  v0.68.0 sweep), the acceptance path above applies: verify in the
   RAW text, accept-and-document.
 - **Interleaved-references truncation (batch 11: ferns 25%, pamphile 18.5%
-  of paper lost — class still OPEN):** in two-column output a *real*
+  of paper lost — fixed in v0.68.0):** in two-column output a *real*
   REFERENCES heading can sit atop column 2 while column 1 still carries
   Discussion prose, so the strip discards interleaved body text and faithful
   claims in that region draw PARTIALs. The fitter now records
@@ -427,6 +429,31 @@ uniform guarantee: every v3 note, native or augmented, passed the full audit)
   notes are faithful and unchanged, so post-fix fresh audits should convert
   them to SUPPORTED and clear the public record). Until then: detector +
   accept-and-document, no cut-point edits.
+  Fixed in v0.68.0 (2026-09-11): the cut now advances to the first repeated
+  left-column author/year transition, falls back to the heading offset when
+  none is found, recognizes right-column and titled appendix headings, and
+  `APPENDIX_RETAIN_CAP` is 60,000; corpus sweep 528 same / 88 improved /
+  1 changed-otherwise (reference heading/whitespace only) / 550 no-match,
+  zero regressions, 39 accepted PARTIALs re-audited SUPPORTED.
+  The user-approved terminal-band exception retains prose beside references
+  through EOF only when that layout is positively identified and the complete
+  text fits the existing budget. The shared 240K body-plus-appendix budget
+  and separate anchor-splice allowance remain unchanged.
+- **Fitter changes fail safe (cut-point session lesson, 2026-09-11).** Any
+  change to `_strip_references` / `fit_pdf_text_for_audit` must (1) fall back
+  to the previous cut behaviour when its new heuristic finds nothing, never
+  fail open to 'no strip': an unstripped paper can cross the 240K sandwich
+  budget and lose methods/results the old fitter kept (moy-2026, 49,600
+  chars); the bounded terminal-band exception above requires explicit
+  positive layout evidence and complete-text budget eligibility; (2) pass
+  an automated corpus-wide containment gate: for every text in
+  `library/*/*/text/`, every source interval the OLD fitter showed must be
+  present in the NEW fitted output (reference remnants and whitespace may
+  be added, body prose never removed), run twice with byte-identical
+  results; (3) treat cap and budget constants as user decisions
+  (`APPENDIX_RETAIN_CAP` 40K to 60K on 2026-09-11, after the sweep showed
+  four appendices over 40K and none over 60K); (4) ship with fixtures
+  reconstructed from the real layouts that motivated it.
 - **Model outages during dispatch (batch 12, API 529 storm):** subagent
   waves can die at zero tokens while the parent session keeps working — a
   capacity outage, not a concurrency problem. Never substitute a different

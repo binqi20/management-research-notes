@@ -1,0 +1,46 @@
+[
+  {
+    "fixture": "lee_single_column.txt",
+    "paper_id": "nbs-2026-02-lee-2026-democratic-deviations-organizations",
+    "text_path": "library/NBS/2026-02/text/Lee 2026 Democratic Deviations How Organizations Sustain Decentralization Commitments in the Face of Centralization Pressures.txt",
+    "text_sha256": "4cec60dd781a3eb552f4852afbd6c0b1c504c400bbbf85de67dc26ad1adddce4",
+    "raw_lines": [
+      1824,
+      1835
+    ],
+    "line_numbering": "split newline; form feeds remain within physical lines"
+  },
+  {
+    "fixture": "moy_indented_references.txt",
+    "paper_id": "nbs-2026-02-moy-2026",
+    "text_path": "library/NBS/2026-02/text/Moy 2026 The effects of food insecurity on work outcomes..txt",
+    "text_sha256": "a43096c061cc4152fa1e9d80921d43e27d17e3fa444448723a743aff6dcc114b",
+    "raw_lines": [
+      982,
+      1004
+    ],
+    "line_numbering": "split newline; form feeds remain within physical lines"
+  },
+  {
+    "fixture": "sherf_titled_appendix.txt",
+    "paper_id": "amj-vol-62-no-2-sherf-2019",
+    "text_path": "library/AMJ/vol-62-no-2/text/Sherf 2019 Too Busy to Be Fair The Effect of Workload and Rewards on Managers’ Justice Rule Adherence.txt",
+    "text_sha256": "ad77f39b432c4cf038634e2a64b26b9570403870b8ea7209eb758a2be4796b41",
+    "raw_lines": [
+      1464,
+      1468
+    ],
+    "line_numbering": "split newline; form feeds remain within physical lines"
+  },
+  {
+    "fixture": "simsek_terminal_band.txt",
+    "paper_id": "amj-vol-61-no-6-simsek-2018",
+    "text_path": "library/AMJ/vol-61-no-6/text/Simsek 2018 From the Editors—Seeing Practice Impact in New Ways.txt",
+    "text_sha256": "3b8c104d155ec9236faba778b40d4c9eeca4abca8a031bc9f83df2386ada83a4",
+    "raw_lines": [
+      207,
+      237
+    ],
+    "line_numbering": "split newline; form feeds remain within physical lines"
+  }
+]

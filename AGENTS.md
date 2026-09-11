@@ -16,7 +16,7 @@ focuses on what's portable across agents.
 
 **Management Research Notes** is a file-based academic knowledge base of
 **1,167 curated notes** on peer-reviewed papers in management and business
-sustainability research. The current main-branch snapshot contains 272
+sustainability research. The current v0.68.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
 and 895 Academy of Management Journal pilot notes across 70 recent issues
 (vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
@@ -28,8 +28,8 @@ in bulk and their text layers vary in quality. These notes are a
 distilled, uniform, verbatim-anchored representation that fits in a
 context window, supports structured querying, and carries strong
 faithfulness guarantees (see §5). An agent can load the whole library
-into a 200K-context model, or query SQL/FTS5 for specific slices, without
-worrying about whether a claim was hallucinated.
+into a context window when it fits, or query SQL/FTS5 for specific slices,
+then verify substantive claims against the original paper.
 
 ---
 
@@ -140,44 +140,83 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-09-10, v0.67.0): 1,167 / 1,167 notes
-PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** Backfill batch 34 upgrades the final
-13 v2 AMJ notes from volume 58 issue 1. Final scoped verdicts are **117/117
-SUPPORTED**, including all 39 new v3 fields. All 13 notes validate and pass
-overall with current full-note and source hashes.
+**Current main-branch audit state (2026-09-11, v0.68.0): 1,167 / 1,167
+stored official reports PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** The audit
+fitter repair was checked against all 1,167 immutable source texts in two
+byte-identical sweeps: 528 same, 88 improved, one reference-heading/whitespace
+addition, and 550 no-match. Every OLD retained source interval remains
+visible in NEW, all 14 victim papers and 42 scoped field proofs pass, and
+no paper gains sandwich or appendix truncation. The appendix cap is 60K;
+the existing shared 240K budget and anchor-splice allowance are unchanged.
 
-This release completes the AMJ v3 backfill: all 895 AMJ notes across 70
-total issues are now v3. The completed backfill covers 67 issues from volume
-58 issue 1 through volume 69 issue 1; three earlier volume 57 issues were
-already native v3. The only remaining v1/v2 notes are the 272 NBS notes (61
-v1 and 211 v2).
+Thirty-one notes received fresh blind full nine-field audits on
+`gpt-6-astra` under standard fitted input. Their baseline was 239 SUPPORTED
+and 40 PARTIAL. After four source-verified, user-approved repairs, the final
+state is **276 SUPPORTED / 3 accepted framing PARTIALs**. All 31 notes
+validate, and their official reports and sidecars match the full current
+note and source hashes. **39 previously accepted text-loss PARTIALs are
+now SUPPORTED.** Fang's Future Research retains a PARTIAL for framing,
+with all relevant source visible. Kim and Eggers each pass 9/9 under
+standard fitted input; their historical full-raw-text exceptions are
+superseded, with all original evidence preserved.
 
-First-pass audits returned 115 SUPPORTED and 2 PARTIAL. All 13 official
-reports were assembled before repairs. Parent source verification produced
-10 legacy-field repairs across 9 notes, including 8 fields initially scored
-SUPPORTED; fresh blind full-note re-audits returned 81/81 SUPPORTED. The
-augmentation guard flags exactly those registered legacy fields. Protected
-frontmatter, historical extraction provenance, original evidence, and the
-new v3 sections and anchors remain unchanged during repairs.
+Four already-published fields needed correction: Kotha's Key Findings
+reversed the licensing-fee payment direction (CONTRADICTED in first pass);
+Foulk's Practical Implication reversed the direction of accountability
+feedback; Shea's Key Findings omitted the feedback-task-first condition;
+and Fang's Key Findings omitted parental variables from the baseline
+controls. All four repaired fields now score SUPPORTED. Their source
+passages were visible even before the fitter change. These findings show
+why a passing audit is evidence of review, not proof that every claim is
+correct. No NBS notes, bibliographic frontmatter, historical provenance,
+evidence anchors, or cleanup-queue entries changed.
 
-No accepted PARTIAL or full-raw-text exception was needed for batch 34.
-Earlier user-authorized Eggers and Kim exceptions remain documented in their
-releases. Desai (2016), AMJ 59-3, retains its explicit retraction statement
-from batch 30.
+The **remaining AMJ accepted PARTIAL list in v0.68.0 is 25 fields across
+22 notes**. Three are framing verdicts from this session: Sherf (2019),
+Future Research (objective field-performance example); Ferns (2022),
+Practical Implication (the Occupy explanation is more definite than the
+source); and Fang (2022), Future Research (social-capital/personality
+examples extend the explicit agenda). Their relevant field text is
+unchanged. The other 11 fields within the reviewed ledger inventory are
+non-tooling cases retained without fresh audits; Wang (2021), Future
+Research was adjudicated from raw text. Another 11 earlier-batch fields
+were outside the authorized inventory and remain untouched.
 
-This is the fifth batch run end-to-end on `gpt-6-astra` (GPT-6 Astra).
-Cross-family calibration scored 27/27 for batch 16, 27/27 for batch 24,
-25/27 for batch 28 (both divergences repaired in v0.62.0), 26/27 for batch
-30 (the divergence adjudicated faithful), and 26/27 for batch 32 (the
-divergence explained by a documented input-mode difference). Batch 34’s
-workshop review is scheduled to run the closing cross-family spot-audit,
-including a pre-repair probe. The original augmented notes and exact
-first-pass prompts are preserved; that review has not yet been performed.
+| Note | Remaining PARTIAL fields | Disposition in v0.68.0 |
+|---|---|---|
+| Deken (2018), AMJ 61-5 | Future Research | Prior non-tooling acceptance |
+| Sherf (2019), AMJ 62-2 | Future Research | Framing; source visible |
+| Nigam (2019), AMJ 62-4 | Practical Implication | Prior non-tooling acceptance |
+| Simsek (2019), AMJ 62-4 | Limitations | Prior non-tooling acceptance |
+| Lin (2019), AMJ 62-5 | Future Research | Prior non-tooling acceptance |
+| Wang (2021), AMJ 64-6 | Limitations; Future Research | Framing/locality; raw-text adjudication |
+| Dushnitsky (2022), AMJ 65-1 | Key Findings | Paper-internal inconsistency |
+| Fang (2022), AMJ 65-3 | Future Research | Framing; source visible |
+| Ferns (2022), AMJ 65-4 | Practical Implication | Framing; source visible |
+| Lazar (2022), AMJ 65-4 | Data & Measures | Paper-internal inconsistency |
+| Koppman (2022), AMJ 65-5 | Limitations | Prior non-tooling acceptance |
+| Matusik (2022), AMJ 65-5 | Future Research | Prior non-tooling acceptance |
+| Williams (2022), AMJ 65-5 | Future Research | Prior non-tooling acceptance |
+| Xu (2022), AMJ 65-6 | Data & Measures; Future Research | Earlier batch; outside scope |
+| Chan (2023), AMJ 66-1 | Practical Implication | Earlier batch; outside scope |
+| Dwertmann (2023), AMJ 66-1 | Mechanism Process; Theoretical Contribution | Earlier batch; outside scope |
+| Lauriano (2023), AMJ 66-1 | Data & Measures | Earlier batch; outside scope |
+| Hersel (2023), AMJ 66-2 | Data & Measures | Earlier batch; outside scope |
+| Toivonen (2023), AMJ 66-3 | Practical Implication | Earlier batch; outside scope |
+| Hagtvedt (2024), AMJ 68-1 | Future Research | Earlier batch; outside scope |
+| Trzebiatowski (2024), AMJ 68-1 | Data & Measures | Earlier batch; outside scope |
+| Li (2025), AMJ 68-4 | Limitations | Earlier batch; outside scope |
 
-The pre-batch census was 61 v1, 224 v2, and 882 v3; the corpus now contains
-61 legacy v1 notes, 211 v2 notes, and 895 v3 notes. Provenance eras are
-batches 01–07 `claude-opus-4-8`, 08–15 `claude-opus-5`, 16–19 `gpt-5.6-sol`,
-20–23 `claude-opus-5`, 24–29 `gpt-5.6-sol`, and 30–34 `gpt-6-astra`.
+The v0.68.0 census remains **61 v1 / 211 v2 / 895 v3**, with all 895 AMJ
+notes at v3 across 70 issues; the 272 remaining v1/v2 notes are NBS. All
+four repaired notes are reflected in the rebuilt indexes; notes, SQLite,
+parsed CSV and BibTeX each contain 1,167 records. BibTeX is byte-identical.
+The 272 legacy NBS reports have no stored hash provenance, so their
+correspondence to current files cannot be established from those reports;
+this is not evidence of unequal hashes. The documented Wiedner (2024)
+frontmatter-only hash mismatch remains outside scope. Historical model
+era stamps are preserved. Desai (2016), AMJ 59-3, retains its explicit
+retraction statement. No later cross-family review result is asserted.
 
 New notes are produced at extraction **v3**, which adds hypotheses, data &
 measures, and key findings (see
@@ -190,21 +229,22 @@ sections by `augmented_model`, and the whole note passed a fresh full
 untouched before any explicitly documented audit repair). `PARTIAL`
 verdicts (minor compression or claims whose supporting source passages are
 missing from the fitted audit input) require documented review and do not
-block publication when source verification confirms fidelity. No published note
-has ever carried a `CONTRADICTED` verdict — the single one ever returned in
-auditing (batch 28, a draft Data & Measures section) was repaired and
-re-audited before publication — so no claim in any note actively contradicts
-its source paper.
+block publication when source verification supports the documented
+acceptance. The v0.68.0 official reports contain no remaining `UNSUPPORTED` or
+`CONTRADICTED` verdicts. A CONTRADICTED verdict was returned on a batch-28
+draft and repaired before that release; this session also detected and
+repaired a contradiction in the already-published Kotha note. Audit
+outcomes do not establish that all undetected errors are absent.
 
 Agents querying the data can rely on the following:
 
 - **Every abstract is a verbatim substring of the source PDF.** If your agent quotes an abstract from a note, it is quoting the paper.
 - **Every factual claim in v2 note frontmatter is anchored.** If your agent cites a sample size or a theory from v2 frontmatter, there is a verbatim PDF quote behind it in the `evidence:` block.
 - **Every prose field has passed a semantic audit.** If your agent summarizes a research question, mechanism, or theoretical contribution from a note, it's quoting a claim that was independently cross-checked against the PDF.
-- **Zero `CONTRADICTED` verdicts.** No note in the library makes a claim the source PDF actively refutes.
+- **Zero current `CONTRADICTED` verdicts in v0.68.0.** This describes the stored audit results, not an absolute guarantee that every source contradiction has been detected.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current main-branch audit state was checked locally on 2026-09-10.
+- Notes are a snapshot, not a live database. The current v0.68.0 main-branch audit state was checked locally on 2026-09-11.
 - The audit catches hallucinations and direction-reversals, but cannot catch issues in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts can indicate minor paraphrastic drift, compression, or missing source context in the fitted audit input; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -215,7 +255,7 @@ Agents querying the data can rely on the following:
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.67.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.68.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
