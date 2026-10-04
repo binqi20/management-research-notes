@@ -90,12 +90,12 @@ economics working papers, organization theory, policy analysis, STS, labor
 studies. Fork the repo, point it at your own manifest, and the validator and
 audit layer come along for free.
 
-The current design targets libraries growing from dozens to tens of thousands of
+The current v0.70.0 design targets libraries growing from dozens to tens of thousands of
 papers. Whether the shape holds at that scale is an empirical question rather
 than a settled assumption: some parts — one file per paper, SQLite-derived
 indexes, the controlled-vocabulary topic list, even the extraction prompt's
 field set — may need to evolve as the library grows, new sources appear, or
-research workflows change. Treat the current architecture as a working
+research workflows change. Treat the v0.70.0 architecture as a working
 hypothesis refined by each release, not a frozen spec.
 
 ## Faithfulness audit
@@ -405,7 +405,7 @@ The full library has been swept across releases:
   target, and Ji et al. (2021) removed an unstated national/historical-setting
   limitation. Abstracts, evidence anchors, bibliographic metadata, and
   citations are unchanged. The patch also makes GPT-5.5 the
-  current Codex extraction/audit default in the workflow docs and sets
+  Codex extraction/audit default at that release in the workflow docs and sets
   issue-level parallelism to a fixed 6-agent cap with fallback to 5, 3, or
   serial execution if stability degrades.
 
@@ -549,6 +549,68 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+- **v0.70.0 independent readers, rubric v3 and numeric checks (2026-10-04, 1,167 notes):**
+  Tooling and process release; no published note, official audit report, source
+  text or index changed. The v0.70.0 census remains 61 v1 / 211 v2 / 895 v3,
+  with 25 accepted AMJ PARTIAL fields across 23 notes.
+
+  New ingestion, augmentation and repair re-audits use two fresh blind readers:
+  a holistic rubric-v3 audit and a separate atomic claims-verification pass.
+  The writer context is never a reader. Runtime records verified
+  `gpt-6-astra` for holistic readers and `gpt-5.6-sol` for claims readers.
+  The parent verifies disagreements and non-supported claims against raw text,
+  then assembles all reports before repairs. Claims sidecars have strict hash,
+  schema and verbatim-quotation validation; reports record both readers and
+  extraction, augmentation and any explicitly supplied repair writer model.
+  The Claude CLI remains an unused manual fallback.
+
+  Rubric v3 retains the earlier verdict definitions and adds eight mandatory
+  checks: numbers and units, direction, formula order, item-by-item robustness,
+  study attribution, stated prescriptions and scope, cross-field consistency,
+  and exact source/note quotations for adverse verdicts. Eight worked examples
+  document previously repaired public-note errors. The fitter is unchanged.
+
+  Calibration used preserved Git baselines for seven defective notes (eight
+  fixed target defects) and three deterministic controls. The original control
+  gate **failed**: both holistic readers marked Crossland's Data & Measures
+  CONTRADICTED. Its clause, “year-on-year absolute change across six Winsorized,
+  logged, standardized strategic-choice variables,” leaves the transformation
+  order ambiguous and literally conflicts with raw lines 433–438: compute each
+  absolute difference, log it, standardize the logged measure, then sum.
+  Crossland remains an unchanged diagnostic candidate, including a separate
+  Future Research scope concern at raw lines 736–738 and 764–772.
+
+  With explicit user approval, the next eligible ID, Yam-2017, was added as a
+  supplementary control; Crossland and the original failed gate were retained.
+  The amended controls are Rogan, Zhu and Yam. Yam returned 9/9 SUPPORTED in
+  both holistic arms and 71/71 SUPPORTED claims. Rogan's denominator-year and
+  solo/collective-departure qualifications were accepted as framing; the
+  amended controls have no UNSUPPORTED or CONTRADICTED result.
+
+  | Calibration arm | Non-regression defects caught | Improvement defects caught | Amended control gate |
+  |---|---:|---:|---|
+  | A: holistic rubric v3 | 4/4 | 3/4 | PASS |
+  | B: independent holistic + claims | 4/4 | 3/4 | PASS |
+
+  Arm A missed Fitzsimons's cycle qualification; Arm B caught it through
+  claims but missed DesJardine's exact SEC-attribution clause. Two claims-task
+  revisions and mechanical quotation completions are preserved in private
+  evidence. The user's decision rule selects **one fresh holistic reader plus
+  the numeric check for Stage 1 only**; that pass has not started and requires
+  a separate assignment. Repairs still require both readers again. The
+  purposive calibration does not estimate an error
+  rate or establish a causal model comparison.
+
+  `tools/check_numbers.py` checks numeric presence before dispatch, with
+  thousands-separator, decimal and contextual PDF-glyph normalization. Across
+  all 895 AMJ v3 notes it checked 46,901 token occurrences: 438 notes had no
+  zero-hit token; 457 had 2,728 zero-hit occurrences (298 notes with 1–5,
+  88 with 6–10, 71 with 11 or more). Of those occurrences, 2,399 are negative
+  tokens often requiring glyph/table review. These are advisory candidates,
+  not confirmed defects. No candidate was repaired. All 114 tests pass;
+  bibliographic fields and `library.bib` are byte-identical, so CrossRef and
+  index rebuilding were unnecessary. Private prompts and audits remain local.
+
 - **v0.69.0 second-opinion sample and residual PARTIAL closeout (2026-09-13, 1,167 notes):**
   Forty-five AMJ notes received fresh blind full nine-field gpt-6-astra audits
   under the unchanged standard fitted input: a deterministic random sample of
@@ -652,7 +714,7 @@ The full library has been swept across releases:
   at once.
 
   Final scoped state: 394 SUPPORTED / 11 accepted PARTIALs, zero UNSUPPORTED
-  and zero CONTRADICTED. All 45 official reports and sidecars match current
+  and zero CONTRADICTED. All 45 official reports and sidecars match final
   full-note and source hashes. Of the 32 repaired fields, 30 now score
   SUPPORTED; Kilduff and DesJardine Key Findings retain PARTIALs for different
   wording nuances, while their corrected results and clauses are supported.
@@ -667,7 +729,7 @@ The full library has been swept across releases:
   (Lauriano Data & Measures and Hagtvedt Future Research). Fourteen other
   v0.68.0 PARTIAL fields were outside this authorized residue scope and retain
   their prior acceptances. Nine newly documented framing/paper-internal
-  PARTIALs yield a current v0.69.0 AMJ inventory of 25 fields across 23 notes;
+  PARTIALs yielded the v0.69.0 AMJ inventory of 25 fields across 23 notes;
   the unchanged total masks this turnover. Both inventories are disclosed
   below.
 
@@ -688,7 +750,7 @@ The full library has been swept across releases:
   prioritizing batches 01–07 and their Data & Measures and Key Findings, then
   their legacy mechanism and implication fields. Next cover later-era
   measure/result attribution and legacy scope or prescription risks, including
-  retained PARTIALs under current policy. Keep full-note audits to catch
+  retained PARTIALs under the v0.69.0 review policy. Keep full-note audits to catch
   repeated premises across fields. Zero defects in a 12-note cell does not
   justify exempting that era or field family. This release does not start that
   full pass.
@@ -775,7 +837,7 @@ The full library has been swept across releases:
   | [amj-vol-68-no-1-trzebiatowski-2024](notes/amj-vol-68-no-1-trzebiatowski-2024.md) | Data & Measures | Repaired: SUPPORTED |
   | [amj-vol-68-no-4-li-2025](notes/amj-vol-68-no-4-li-2025.md) | Limitations | Cleared unchanged: SUPPORTED |
 
-  **Current v0.69.0 remaining accepted PARTIALs: 25 fields across 23 notes.**
+  **At v0.69.0 closeout, the remaining accepted PARTIALs were: 25 fields across 23 notes.**
 
   | Note | Field | Acceptance basis |
   |---|---|---|
@@ -809,7 +871,7 @@ The full library has been swept across releases:
   fresh-context restarts are preserved verbatim in the private evidence; the
   only protected-field exception was Trzebiatowski methods. A Lee restart
   dispatch contained one extra character in the operational note hash,
-  corrected before return; the verified sidecar has the exact current hash and
+  corrected before return; the verified sidecar has the exact final hash and
   its analytical input never changed. Hayward’s initial first-pass dispatch
   included a path typo corrected in the same dispatch. No sample redraw, model
   substitution, raw-text audit, fitter/prompt change, NBS work or cleanup-
@@ -890,7 +952,7 @@ The full library has been swept across releases:
 
   First-pass blind nine-field audits returned **115 SUPPORTED and 2 PARTIAL
   out of 117**, with no UNSUPPORTED or CONTRADICTED. All 13 official reports
-  were assembled with current hashes before any repair. Parent source
+  were assembled with final hashes before any repair. Parent source
   verification produced **10 legacy-field repairs across 9 notes**,
   including **8 fields initially scored SUPPORTED**. The repairs correct
   practical and future-research scope, distinguish predictor groups from
@@ -901,7 +963,7 @@ The full library has been swept across releases:
   re-audits returned **81/81 SUPPORTED**. The final state is **117/117
   SUPPORTED**, including all 39 new v3 fields, with **0 PARTIAL, 0
   UNSUPPORTED, and 0 CONTRADICTED**. No faithful-PARTIAL acceptance or
-  full-raw-text audit exception was needed. All 13 current official
+  full-raw-text audit exception was needed. All 13 scoped official
   report/sidecar pairs match the final note and source hashes; all 22 audit
   returns, prompts, and preserved report/sidecar pairs reconcile.
 
@@ -957,10 +1019,10 @@ The full library has been swept across releases:
 
   The **final state is 230 SUPPORTED and 4 accepted PARTIALs out of 234**,
   with **0 UNSUPPORTED and 0 CONTRADICTED**. All 26 notes pass overall
-  with matching current full-note and source hashes. Of the 78 new v3
+  with matching final full-note and source hashes. Of the 78 new v3
   fields, 77 are SUPPORTED and one is an accepted PARTIAL. All 38 audit
   returns reconcile with their preserved official reports and sidecars; 26
-  current official report/sidecar pairs match the final notes.
+  final official report/sidecar pairs match the final notes.
 
   The four retained PARTIALs are faithful claims whose supporting passages
   were omitted from fitted audit input: Di Stefano Limitations (14.43%
@@ -1019,7 +1081,7 @@ The full library has been swept across releases:
 
   The **final state is 260 SUPPORTED and 1 accepted PARTIAL out of 261**,
   with **0 UNSUPPORTED and 0 CONTRADICTED**. All 29 notes pass overall with
-  current note and source hashes. All 78 newly added fields and the nine
+  final note and source hashes. All 78 newly added fields and the nine
   existing v3 fields in the calibration notes are SUPPORTED. Shani and
   Ayyagari returned 9/9 SUPPORTED. Graffin returned 8 SUPPORTED and 1
   accepted PARTIAL: its Limitations sentence about an inexpensive,
@@ -1043,7 +1105,7 @@ The full library has been swept across releases:
   byte-identical BibTeX. Full-library validation passed **1,167/1,167**;
   direct regressions passed **22/22** for PDF-text fitting and **15/15** for
   augmentation. All 44 independent audit returns and preserved official
-  reports reconcile, with 29 current official report/sidecar pairs.
+  reports reconcile, with 29 final official report/sidecar pairs.
 
   This is the **third batch run end-to-end on `gpt-6-astra` (GPT-6 Astra)**
   for augmentation and audit. Provenance eras are batches 01–07
@@ -1074,7 +1136,7 @@ The full library has been swept across releases:
   scope. Every repaired note received a fresh blind full-note audit; all
   24 repaired fields are now SUPPORTED. The **final state is 257 SUPPORTED
   and 4 accepted PARTIALs out of 261**, with **0 UNSUPPORTED and 0
-  CONTRADICTED**. All 29 notes pass overall with current note and source
+  CONTRADICTED**. All 29 notes pass overall with final note and source
   hashes. Graffin's Limitations and Lanzolla's Future Research retain
   faithful claims whose supporting passages are absent from fitted audit
   inputs. Shani's and Ayyagari's Limitations retain source-grounded sample
@@ -1125,7 +1187,7 @@ The full library has been swept across releases:
   repaired notes returned **134 SUPPORTED and 1 accepted PARTIAL out of
   135**. The **final state is 275 SUPPORTED and 4 accepted PARTIALs out of
   279**, with **0 UNSUPPORTED and 0 CONTRADICTED**; all 31 notes pass
-  overall with current note and source hashes. The accepted PARTIALs are
+  overall with final note and source hashes. The accepted PARTIALs are
   Bertrand's Future Research and Key Findings, Holloway's Data & Measures,
   and Khanna's Future Research: reconstructed audit inputs omit the relevant
   discussion or appendix passages, while parent reading of the recovered raw
@@ -2179,7 +2241,8 @@ This main-branch snapshot contains **1,167 curated notes**:
 | book-review            |     6 |
 | **Total**              | **1,167** |
 
-All notes have passed the semantic audit. The v0.69.0 corpus contains 61 legacy v1
+All stored official reports PASS in v0.70.0; the private calibration findings
+are disclosed above without replacing those reports. The v0.70.0 corpus contains 61 legacy v1
 notes, 211 v2 notes, and 895 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.

@@ -142,19 +142,24 @@ research. Read this file before doing anything in this folder.
    what `paper_id` to use and what frontmatter is mandatory.
 4. Run `python tools/validate_note.py notes/{paper_id}.md`. If it fails, fix the
    note OR move it to `incoming/_flagged/` with a `.reason.txt` and report what
-   went wrong.
+   went wrong. Before auditing, run `python tools/check_numbers.py notes/{paper_id}.md`
+   and record parent raw-line verification of every advisory zero-hit token.
 5. Run the two-layer faithfulness audit with an independent Layer 2 auditor.
    Layer 1 substring-checks the `evidence:` anchors against the PDF text. Layer
    2 scores the prose fields (six on v1/v2 notes, nine on v3 — every AMJ note
    since the v3 backfill completed on 2026-09-10) against `docs/audit-rubric.md`.
-   The current
-   Codex path uses GPT-6 Astra (`gpt-6-astra`; GPT-5.6 Sol through batch 29) independent audit agents that write
+   From v0.70.0 the writer is never a reader: use fresh blind holistic rubric-v3
+   and structured claims readers, with runtime-verified OpenAI model diversity
+   when available, and parent raw-text adjudication before assembling every
+   report before repairs (the Stage 1 exception follows the calibration rule).
+   The Codex path uses GPT-6 Astra (`gpt-6-astra`; GPT-5.6 Sol through batch 29) independent audit agents that write
    `incoming/_audits/{paper_id}.layer2.json` with provenance fields, then
    assembles the official report with
    `python tools/audit_note.py notes/{paper_id}.md --layer-2-json
-   incoming/_audits/{paper_id}.layer2.json --flag`. The old Claude CLI path is
-   a manual fallback only: pass an explicit Claude model such as
-   `--auditor-model claude-opus-4-6` if you deliberately use it.
+   incoming/_audits/{paper_id}.layer2.json --claims-json
+   incoming/_audits/{paper_id}.claims.json --flag`; the claims reader receives
+   `--claims-prompt-only` and follows `docs/claims-verification.md`. The old
+   Claude CLI path remains an unused manual fallback in this OpenAI-only workflow.
 6. Run `python tools/build_index.py` to update the SQLite index.
 
 ## Parallel agent slot policy

@@ -39,6 +39,9 @@ Options
     --prompt-only             Print the Layer 2 prompt to stdout and exit 0.
                               Useful when the calling agent wants to dispatch
                               the Task tool directly and needs the prompt text.
+    --claims-prompt-only      Print the claims task with the same fitted input.
+    --claims-json PATH        Attach a validated claims-v1 pass alongside Layer 2.
+    --repair-model MODEL      Record an explicitly supplied repair writer model.
     --layer-2-json PATH       Skip Layer 2 dispatch; read an independent
                               subagent's JSON verdict from PATH. The JSON must
                               include provenance tying it to the current note,
@@ -97,14 +100,17 @@ from validate_note import (  # noqa: E402 — path munging above is intentional
 AUDITS_DIR = SYNAPSE_ROOT / "incoming" / "_audits"
 FLAGGED_DIR = SYNAPSE_ROOT / "incoming" / "_flagged"
 RUBRIC_PATH = SYNAPSE_ROOT / "docs" / "audit-rubric.md"
+CLAIMS_TASK_PATH = SYNAPSE_ROOT / "docs" / "claims-verification.md"
 DEFAULT_AUDITOR_MODEL = "gpt-5.6-sol"
 AUDIT_VERSION = "v1"
-# The single canonical rubric doc (docs/audit-rubric.md) is now v2: it scores the
-# original six prose fields plus the three v3 fields (Hypotheses / Propositions,
-# Data & Measures, Key Findings), instructing the auditor to score only the fields
-# a given note actually contains. New audits of any note therefore read rubric v2;
-# historical audit JSONs stamped "v1" remain valid and are not re-checked.
-RUBRIC_VERSION = "v2"
+# New audits use the current rubric; historical reports keep their original stamps.
+RUBRIC_VERSION = "v3"
+CLAIMS_PASS = "claims-v1"
+CLAIM_TYPE_ENUM = {
+    "number", "unit", "direction", "formula", "robustness", "attribution",
+    "prescription", "scope",
+}
+CLAIM_STATUS_ENUM = {"SUPPORTED", "UNVERIFIED", "CONTRADICTED"}
 
 # Prose fields the Layer 2 subagent verdicts against. Must match the keys in
 # the rubric's output-format example — if the rubric changes, this list must
@@ -217,6 +223,11 @@ def load_rubric() -> str:
     if not RUBRIC_PATH.exists():
         raise FileNotFoundError(f"rubric missing: {RUBRIC_PATH}")
     return RUBRIC_PATH.read_text(encoding="utf-8")
+
+
+def load_claims_task() -> str:
+    """Load the separate claims task without changing the shared audit input."""
+    return CLAIMS_TASK_PATH.read_text(encoding="utf-8")
 
 
 def sha256_text(text: str) -> str:
@@ -1140,6 +1151,74 @@ def parse_auditor_response(
 # --- audit report assembly ---------------------------------------------------------
 
 
+def parse_claims_response(
+    raw: str,
+    *,
+    expected_provenance: dict,
+    note_body: str,
+    pdf_text: str,
+    fitted_pdf_text: str,
+    prose_fields: list[str] | None = None,
+) -> dict:
+    """Validate a separate claims pass; its statuses never replace field verdicts.
+
+    Fragments must occur in both the raw source and the fitted input the reader
+    actually received. Only the validator's whitespace/line-wrap normalization
+    is used; this is a quotation check, not reconstruction or semantic support.
+    Exhaustive coverage still requires the parent's review.
+    """
+    parsed = json.loads(raw)
+    if not isinstance(parsed, dict) or set(parsed) != {"provenance", "claims"}:
+        raise ValueError("claims response must contain only 'provenance' and 'claims'")
+    provenance = parsed["provenance"]
+    required = EXTERNAL_PROVENANCE_REQUIRED_KEYS | {"input_mode", "pass"}
+    if not isinstance(provenance, dict) or set(provenance) != required:
+        raise ValueError("claims provenance must contain exactly the required keys, 'input_mode', and 'pass'")
+    for key in required:
+        if not isinstance(provenance[key], str) or not provenance[key].strip():
+            raise ValueError(f"claims provenance field {key!r} must be a nonempty string")
+    for key in ("note_sha256", "text_sha256"):
+        if re.fullmatch(r"[0-9a-f]{64}", provenance[key]) is None:
+            raise ValueError(f"claims provenance field {key!r} must be a SHA-256 digest")
+    validate_external_provenance(
+        provenance, {
+            **expected_provenance, "input_mode": "standard-fitted", "pass": CLAIMS_PASS,
+        }
+    )
+    claims = parsed["claims"]
+    if not isinstance(claims, list) or not claims:
+        raise ValueError("claims must be a nonempty array; empty coverage requires parent review")
+    fields = set(prose_fields if prose_fields is not None else LAYER_2_PROSE_FIELDS)
+    if not fields <= set(LAYER_2_PROSE_FIELDS_V3):
+        raise ValueError("unknown prose field in claims validation scope")
+    keys = {"field", "note_clause", "claim_type", "status", "source_fragment", "note"}
+    sources = (normalize_ws(pdf_text), normalize_ws(fitted_pdf_text))
+    for index, claim in enumerate(claims):
+        if not isinstance(claim, dict) or set(claim) != keys:
+            raise ValueError(f"claims[{index}] must contain exactly {sorted(keys)}")
+        if any(not isinstance(claim[key], str) for key in keys):
+            raise ValueError(f"claims[{index}] fields must all be strings")
+        if claim["field"] not in fields:
+            raise ValueError(f"claims[{index}] has unknown or absent prose field")
+        if claim["claim_type"] not in CLAIM_TYPE_ENUM:
+            raise ValueError(f"claims[{index}] has invalid claim_type")
+        if claim["status"] not in CLAIM_STATUS_ENUM:
+            raise ValueError(f"claims[{index}] has invalid status")
+        clause = claim["note_clause"]
+        if not clause.strip() or clause not in note_body:
+            raise ValueError(f"claims[{index}].note_clause must be a verbatim note-body substring")
+        fragment = claim["source_fragment"]
+        normalized_fragment = normalize_ws(fragment)
+        if not normalized_fragment:
+            if claim["status"] != "UNVERIFIED":
+                raise ValueError(f"claims[{index}] requires a nonempty source_fragment")
+        elif len(fragment.split()) > 25:
+            raise ValueError(f"claims[{index}].source_fragment exceeds 25 words")
+        elif any(normalized_fragment not in source for source in sources):
+            raise ValueError(f"claims[{index}].source_fragment not found in raw and fitted source")
+    return parsed
+
+
 def combine_audit_result(
     paper_id: str,
     layer_1: dict,
@@ -1149,6 +1228,10 @@ def combine_audit_result(
     note_sha256: str | None = None,
     text_sha256: str | None = None,
     audit_context: dict | None = None,
+    claims: dict | None = None,
+    fm: dict | None = None,
+    writer_models: dict | None = None,
+    repair_model: str | None = None,
 ) -> dict:
     """Merge Layer 1 and Layer 2 results into the canonical audit JSON shape."""
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -1186,7 +1269,42 @@ def combine_audit_result(
     elif layer_2 is not None and layer_2_block.get("overall") == "fail":
         overall = "fail"
 
-    return {
+    if claims is not None and layer_2 is None:
+        raise ValueError("claims evidence requires the holistic Layer 2 verdict")
+    context = dict(audit_context or {})
+    readers = []
+    if layer_2 is not None:
+        provenance = layer_2.get("provenance") or {}
+        readers.append({
+            "model": provenance.get("auditor_model", auditor_model),
+            "dispatch_mode": provenance.get("dispatch_mode", "not_recorded"),
+            "pass": "layer-2",
+        })
+    if claims is not None:
+        provenance = claims["provenance"]
+        readers.append({
+            "model": provenance["auditor_model"],
+            "dispatch_mode": provenance["dispatch_mode"],
+            "pass": CLAIMS_PASS,
+        })
+    context["readers"] = readers
+    writers = {
+        "extraction_model": (fm or {}).get("extraction_model"),
+        "augmented_model": (fm or {}).get("augmented_model"),
+    }
+    if writer_models is not None:
+        unknown = set(writer_models) - {"extraction_model", "augmented_model", "repair_model"}
+        if unknown:
+            raise ValueError(f"unknown writer model keys: {sorted(unknown)}")
+        writers.update(writer_models)
+    if repair_model is not None:
+        writers["repair_model"] = repair_model
+    for key, model in writers.items():
+        if model is not None and (not isinstance(model, str) or not model.strip()):
+            raise ValueError(f"writer model {key!r} must be a nonempty string or null")
+    context["writer_models"] = writers
+
+    report = {
         "paper_id": paper_id,
         "audit_version": AUDIT_VERSION,
         "audited_at": now,
@@ -1196,7 +1314,7 @@ def combine_audit_result(
             "note_sha256": note_sha256,
             "text_sha256": text_sha256,
         },
-        "audit_context": audit_context or {},
+        "audit_context": context,
         "layer_1": layer_1,
         "layer_2": layer_2_block,
         "layer_2_provenance": (layer_2 or {}).get("provenance"),
@@ -1204,6 +1322,17 @@ def combine_audit_result(
         "flagged_claims": flagged,
         "parse_warnings": (layer_2 or {}).get("parse_warnings", []),
     }
+    if claims is not None:
+        table = claims["claims"]
+        report["layer_2_claims"] = table
+        report["layer_2_claims_provenance"] = claims["provenance"]
+        report["layer_2_claims_summary"] = {
+            "claims_total": len(table),
+            "supported": sum(row["status"] == "SUPPORTED" for row in table),
+            "unverified": sum(row["status"] == "UNVERIFIED" for row in table),
+            "contradicted": sum(row["status"] == "CONTRADICTED" for row in table),
+        }
+    return report
 
 
 def write_audit_report(paper_id: str, report: dict) -> Path:
@@ -1259,15 +1388,29 @@ def main() -> int:
                         help="compute audit but do not write JSON report or flag sidecar")
     parser.add_argument("--skip-layer-2", action="store_true",
                         help="run Layer 1 only; no subagent dispatch")
-    parser.add_argument("--prompt-only", action="store_true",
-                        help="print the Layer 2 prompt to stdout and exit")
+    prompts = parser.add_mutually_exclusive_group()
+    prompts.add_argument("--prompt-only", action="store_true",
+                         help="print the Layer 2 prompt to stdout and exit")
+    prompts.add_argument("--claims-prompt-only", action="store_true",
+                         help="print the claims task with the same fitted PDF and exit")
     parser.add_argument("--layer-2-json", type=Path, default=None,
                         help="read Layer 2 verdict from this JSON file instead of dispatching")
+    parser.add_argument("--claims-json", type=Path, default=None,
+                        help="read claims-v1 evidence alongside --layer-2-json")
+    parser.add_argument("--repair-model", default=None,
+                        help="record a repair writer model supplied from the parent ledger")
     parser.add_argument("--force-layer-2", action="store_true",
                         help="run Layer 2 even if Layer 1 failed (debugging only)")
     parser.add_argument("--auditor-model", default=DEFAULT_AUDITOR_MODEL,
                         help=f"auditor model (default: {DEFAULT_AUDITOR_MODEL})")
     args = parser.parse_args()
+    if args.claims_json is not None and (
+        args.layer_2_json is None or args.skip_layer_2
+        or args.prompt_only or args.claims_prompt_only
+    ):
+        parser.error("--claims-json requires --layer-2-json and cannot be combined with skip/prompt-only modes")
+    if args.repair_model is not None and not args.repair_model.strip():
+        parser.error("--repair-model must be a nonempty model name")
 
     note_path = args.note.resolve()
     try:
@@ -1285,10 +1428,10 @@ def main() -> int:
     audit_context: dict | None = None
 
     # --prompt-only: build the prompt, print it, exit. No Layer 1 run.
-    if args.prompt_only:
+    if args.prompt_only or args.claims_prompt_only:
         try:
             pdf_text = load_pdf_text(fm)
-            rubric_text = load_rubric()
+            rubric_text = load_claims_task() if args.claims_prompt_only else load_rubric()
         except Exception as exc:
             print(f"ERROR preparing prompt: {exc}", file=sys.stderr)
             return 2
@@ -1316,10 +1459,15 @@ def main() -> int:
         print(f"  - other: {err}")
 
     layer_2_result: dict | None = None
+    claims_result: dict | None = None
     effective_auditor_model = args.auditor_model
 
     # Short-circuit: skip Layer 2 if Layer 1 failed (unless --force-layer-2)
     if layer_1["overall"] == "fail" and not args.force_layer_2:
+        if args.claims_json is not None:
+            print("ERROR: Layer 1 failed; claims evidence was not consumed. "
+                  "Use --force-layer-2 for explicit debugging assembly.", file=sys.stderr)
+            return 2
         print("Layer 2: skipped (Layer 1 failed; use --force-layer-2 to override)")
     elif args.skip_layer_2:
         print("Layer 2: skipped (--skip-layer-2)")
@@ -1329,7 +1477,7 @@ def main() -> int:
         try:
             pdf_text = load_pdf_text(fm)
             text_digest = sha256_text(pdf_text)
-            _, audit_context = fit_pdf_text_for_audit(
+            fitted_pdf_text, audit_context = fit_pdf_text_for_audit(
                 pdf_text, anchors=anchor_quotes(fm)
             )
             expected_provenance = {
@@ -1345,6 +1493,15 @@ def main() -> int:
                 require_provenance=True,
                 prose_fields=prose_fields,
             )
+            if args.claims_json is not None:
+                claims_result = parse_claims_response(
+                    args.claims_json.read_text(encoding="utf-8"),
+                    expected_provenance=expected_provenance,
+                    note_body=body,
+                    pdf_text=pdf_text,
+                    fitted_pdf_text=fitted_pdf_text,
+                    prose_fields=prose_fields,
+                )
             effective_auditor_model = (
                 layer_2_result.get("provenance", {}).get("auditor_model")
                 or args.auditor_model
@@ -1391,6 +1548,9 @@ def main() -> int:
         note_sha256=note_digest,
         text_sha256=text_digest,
         audit_context=audit_context,
+        claims=claims_result,
+        fm=fm,
+        repair_model=args.repair_model,
     )
 
     if not args.dry_run:

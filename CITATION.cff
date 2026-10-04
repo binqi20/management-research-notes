@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-09-13"
-version: "0.69.0"
+date-released: "2026-10-04"
+version: "0.70.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -55,7 +55,21 @@ abstract: >-
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
   a published rubric) gates every note into the library.
-  Version 0.69.0 (2026-09-13) reports a deterministic second-opinion sample
+  Version 0.70.0 (2026-10-04) adds rubric v3, an independent atomic
+  claims-verification reader with validated sidecar provenance, and an
+  advisory numeric cross-check. Actual runtime models were gpt-6-astra
+  for holistic readers and gpt-5.6-sol for claims readers. The original
+  calibration failed on a previously designated clean control, Crossland;
+  that diagnostic is preserved without editing its note or official report.
+  A user-approved supplementary Yam control yields an amended passing gate:
+  both arms detect 4/4 non-regression and 3/4 improvement defects. The
+  prescribed Stage 1 rule is one fresh holistic reader plus numeric checks;
+  new ingestion, augmentation and repair re-audits use two readers. The
+  numeric sweep checked 46,901 token occurrences in 895 AMJ v3 notes,
+  yielding 2,728 advisory zero-hit occurrences in 457 notes, not confirmed
+  defects. All 114 tests pass. No notes, official audits, texts or indexes
+  changed, and the corpus remains 61 v1 / 211 v2 / 895 v3 of 1,167.
+  Earlier, version 0.69.0 (2026-09-13) reports a deterministic second-opinion sample
   of 36 AMJ notes, 12 per model-era stratum, plus nine residue notes. Frozen
   first-pass source adjudication found 30 defective fields in 20 notes: 23
   substantive and seven precision. Per-era first-pass defective fields were
@@ -68,9 +82,9 @@ abstract: >-
   source lines are disclosed in README and AGENTS. All official reports were
   assembled before their following repair waves; fresh audits and raw-source
   adjudication yield 394 SUPPORTED and 11 accepted PARTIALs across 405
-  scoped fields, zero UNSUPPORTED or CONTRADICTED, with current hashes.
+  scoped fields, zero UNSUPPORTED or CONTRADICTED, with final hashes.
   Three old residue fields cleared unchanged, six were repaired and two
-  remain accepted. AMJ now has 25 accepted PARTIAL fields across 23 notes,
+  remain accepted. At that closeout, AMJ had 25 accepted PARTIAL fields across 23 notes,
   including retained out-of-scope acceptances. All 20 changed notes
   validate; indexes were rebuilt sequentially and reconcile to 1,167
   records, with byte-identical BibTeX. Bibliographic fields, source texts,
@@ -99,7 +113,7 @@ abstract: >-
   Implication and Fang's Future Research; no relevant source remains
   missing. The broader AMJ inventory contains 25 PARTIAL fields across 22
   notes, including 11 earlier-batch fields outside this session's scope.
-  All 31 scoped notes validate with current hashes. Bibliographic metadata,
+  All 31 scoped notes validate with final hashes. Bibliographic metadata,
   original provenance, anchors and all source texts are unchanged. Notes,
   SQLite, parsed CSV and BibTeX reconcile to 1,167; BibTeX is byte-identical.
   No NBS note or frontmatter-cleanup entry changed. The runbook codifies
@@ -118,7 +132,7 @@ abstract: >-
   notes, including 8 fields initially scored SUPPORTED; fresh blind
   full-note re-audits returned 81/81 SUPPORTED. The final state is 117/117
   SUPPORTED, with zero PARTIAL, UNSUPPORTED, or CONTRADICTED and no
-  full-raw-text exception. All 13 notes validate with current full-note and
+  full-raw-text exception. All 13 notes validate with final full-note and
   source hashes. Protected bibliographic YAML, historical extraction
   provenance, original evidence, paper types, and the new v3 sections and
   anchors remain unchanged during repairs. Notes, SQLite, parsed CSV, and
@@ -146,7 +160,7 @@ abstract: >-
   scored SUPPORTED; fresh blind full-note re-audits returned 108/108
   SUPPORTED. The final state is 230 SUPPORTED and 4 accepted PARTIALs,
   with 0 UNSUPPORTED and 0 CONTRADICTED. All 26 notes validate and pass
-  overall with matching current full-note and source hashes. Accepted
+  overall with matching final full-note and source hashes. Accepted
   PARTIALs preserve faithful content omitted from fitted input: Di Stefano
   Limitations at 14.43% strip, Reyt Data & Measures appendix evidence at
   18.85%, and Zhang Practical Implication and Limitations at 19.61%. Each
@@ -181,7 +195,7 @@ abstract: >-
   first-pass official reports were assembled before audit-driven repairs;
   every changed note received a fresh blind full-note audit. The final
   state is 260 SUPPORTED and 1 accepted PARTIAL, with 0 UNSUPPORTED and
-  0 CONTRADICTED. All 29 touched notes pass overall with current note
+  0 CONTRADICTED. All 29 touched notes pass overall with final note
   and source hashes. Shani and Ayyagari returned 9/9 SUPPORTED; Graffin
   retains one faithful Limitations PARTIAL because the standard fitter
   omits its explicit passage on the inexpensive, effective tactic and its
@@ -216,7 +230,7 @@ abstract: >-
   received a fresh blind full-note audit, and all repaired fields are now
   SUPPORTED. Final verdicts are 257 SUPPORTED and 4 accepted PARTIALs,
   with 0 UNSUPPORTED and 0 CONTRADICTED; all 29 notes pass overall with
-  current note and source hashes. Graffin's Limitations and Lanzolla's
+  final note and source hashes. Graffin's Limitations and Lanzolla's
   Future Research remain faithful despite omitted source context in fitted
   inputs. Shani's and Ayyagari's Limitations retain accurate sample scope
   qualifications after two-round framing disagreements at 0% strip. All
@@ -240,7 +254,7 @@ abstract: >-
   volume 59 issues 3 and 2 — 31 notes, all v2 augmentations. The record
   total remains 1,167; the tier census shifts from 61 v1, 336 v2, and 770 v3
   to 61 v1, 305 v2, and 801 v3. All 31 notes validate and pass the full
-  independent 9-field rubric-v2 audit overall, with current hashes in scope.
+  independent 9-field rubric-v2 audit overall, with final hashes in scope.
   First-pass verdicts were 268 SUPPORTED, 10 PARTIAL, and 1 UNSUPPORTED.
   Parent source review produced 18 legacy-field repairs across 15 notes,
   including 11 fields initially scored SUPPORTED. Fresh blind full-note
@@ -979,12 +993,13 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.69.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.70.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts
-  SUPPORTED; the full library has 1,167/1,167 PASS and zero UNSUPPORTED or
-  CONTRADICTED verdicts. An AGENTS.md file provides
+  SUPPORTED; the unchanged v0.70.0 stored official reports have 1,167/1,167 PASS
+  and zero UNSUPPORTED or CONTRADICTED verdicts; the separate calibration
+  diagnostic above remains pending retrospective review. An AGENTS.md file provides
   a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom
   SDK apps) can discover and consume the data with known faithfulness

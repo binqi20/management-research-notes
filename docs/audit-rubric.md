@@ -1,6 +1,6 @@
 # Faithfulness Audit Rubric
 
-**Version:** v2
+**Version:** v3 (from v0.70.0; historical v2 reports retain their original version)
 **Used by:** Layer 2 of `tools/audit_note.py` — the independent-auditor subagent
 that checks whether a generated Synapse note faithfully represents its source
 PDF.
@@ -89,6 +89,94 @@ notes add three more (Hypotheses / Propositions, Data & Measures, Key Findings).
 | **PARTIAL** | The core of the claim is right, but the note omits important nuance, over-generalizes, or adds a minor unstated inference. | Common, not fatal. Use this whenever you'd say "mostly right, but…". |
 | **UNSUPPORTED** | No passage in the PDF supports the claim. The note appears to have invented it, imported it from training data, or confused this paper with another. | The PDF is silent on the claim **and** the claim is specific enough that silence is damning (e.g., a concrete mediator, a specific construct, a number). |
 | **CONTRADICTED** | The PDF text contains a statement that is the **direct opposite** of the note's claim (reversed direction-of-effect, wrong sign, wrong outcome, wrong sample). | Reserved for loud failures. Do **not** use CONTRADICTED for "the PDF doesn't mention this" — that is UNSUPPORTED. Use it only when the PDF affirmatively says the opposite. |
+
+---
+
+## Verification checklist (mandatory before any SUPPORTED)
+
+Apply all eight checks to each field before assigning SUPPORTED. A familiar or
+plausible claim is not verified. Read tables and the surrounding prose, preserving
+per-study distinctions and the order of values reported “respectively.”
+
+1. **Numbers, units and referents.** Locate every number (N, coefficients,
+   p-values, percentages, counts, hours, years and thresholds) in the PDF text and
+   check its unit and referent. Hours are not meetings; an annual rate is not a
+   one-year-ahead rate; a threshold stated per outcome is not one threshold.
+2. **Directions.** Check every direction word against the source sentence:
+   who pays whom, who hides from whom, higher/lower, positive/negative,
+   increases/decreases and upward/downward.
+3. **Formulas and measures.** Check every definition step by step against the
+   paper: what is summed, averaged or multiplied, and in which order. A paraphrase
+   that changes the aggregation is CONTRADICTED, not PARTIAL.
+4. **Universal and robustness claims.** Check every “all,” “every,” “across all,”
+   “held across” and “robust to” claim item by item. If one listed test fails,
+   tests a different hypothesis or changes sign, the field is at best PARTIAL;
+   name the exception. A nonsignificant coefficient does not establish a reversal.
+5. **Study attribution.** Attribute every measure, sample, control and result to
+   the right study in a multi-study paper. A claim that merges studies is PARTIAL;
+   name the merge rather than excusing it as compression.
+6. **Prescriptions and scope.** In Practical Implication and Limitations, a
+   prescription, practitioner audience or generalizability target the paper does
+   not state is UNSUPPORTED for that clause, even when the surrounding field is
+   fine. An analyst's reasonable recommendation is not the paper's implication.
+7. **Cross-field consistency.** The same premise in Mechanism Process, Data &
+   Measures and Key Findings must agree. Report a contradiction on every field
+   carrying it. Agreement between fields does not rescue a shared source error.
+8. **Evidence in the output.** For every PARTIAL, UNSUPPORTED or CONTRADICTED,
+   quote the exact note clause and an exact source fragment of at most 25 words.
+   Use the smallest clause that exposes the problem so the existing 240-character
+   `note` limit is preserved. If the problem is absence, quote the closest relevant
+   source passage and explicitly say what it does not establish; never invent a
+   quotation expressing an absence. A zero-hit search alone does not prove absence.
+
+### Worked checklist examples from published repairs
+
+These are before-repair clauses disclosed in v0.69.0. Raw line references refer
+to each note's immutable `text_path`; extraction glyphs are preserved in quotes.
+
+1. **Hersel (2023), Data & Measures — threshold referents.** The note said
+   “a PRI consistency threshold of 0.70.” Table 2 reports “PRI” followed on the
+   next raw line by “consistency 5 0.70, 0.80” (lines 388–389), respectively for
+   favorable and unfavorable reactions. Check both outcome columns: 0.70 alone
+   omits the unfavorable-reaction threshold of 0.80.
+2. **Kilduff (2024), Key Findings — rivalry perspective.** The note said
+   “from those who saw them as rivals”; the paper says “from those they considered
+   to be rivals” (lines 792–794). The perceiver is reversed: CONTRADICTED.
+3. **Carnabuci (2025), Data & Measures — aggregation.** The note used “the share
+   of a class’s patents that are cross-classified into other primary classes.”
+   The paper first computes each patent's fraction of subclasses outside its
+   primary class, averages those fractions within class-year, then states
+   “Third, we deduct from 1 the” (lines 336–347). A share of patents is not one
+   minus the mean of patent-level fractions: CONTRADICTED.
+4. **Xu (2023), AMJ 66-6, Key Findings — robustness scope.** The note claimed
+   “results held across” checks including “inflection-point sample splits.”
+   The above-peak split reports “(b 5 20.05, p 5 .655)” (line 570), a
+   nonsignificant estimate; several checks test H1 alone. The universal claim is
+   at best PARTIAL even though the main models support the three hypotheses.
+5. **Lee (2025), AMJ 68-6, Data & Measures — studies merged.** The note assigned
+   “incentivized reward-, resource-, time-allocation, and recommendation decisions
+   in Studies 2-3.” Study 3 instead describes “two in-basket decisions embedded
+   in the scenario” (lines 1017–1018). Distinguish its simulated resource/time
+   decisions from Study 2's incentivized reward and recommendation decisions;
+   mark the merged attribution PARTIAL.
+6. **Compagni (2023), Practical Implication — invented prescription.** The note
+   began “Hospitals and other professional organizations should make space for,
+   and legitimate”. The discussion describes how moral emotions lead professionals
+   to “engage in practices that weaken” boundaries (lines 1432–1436); it does
+   not state that organizational prescription. The descriptive finding does not
+   support the added audience and injunction: UNSUPPORTED for that clause.
+7. **DesJardine (2024), Mechanism Process and Data & Measures — shared premise.**
+   Both fields described the “average product of an investor's ownership” summed
+   across common owners. Equation 1 and its explanation first sum ownership on
+   each side, “and then computed the product of the” totals, and “then calculated
+   the average value of the product” across rivals (lines 462–487). Mark the
+   incorrect aggregation in both fields CONTRADICTED; do not let a consistent
+   repetition stand in for source verification.
+8. **Rapp (2023), Data & Measures — exact evidence in the verdict.** A concise
+   PARTIAL explanation is: `Note: "independently coded each interview";
+   source: "coded the vast majority of". The universal qualifier overstates
+   coverage.` The source is at lines 244–245. This names the exact clause and
+   conflict without a generic “mostly supported” explanation.
 
 ---
 

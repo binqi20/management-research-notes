@@ -118,24 +118,70 @@ guidance).
 
 ## Step 2.5 — Independent audit wave (≤6 agents; separate wave)
 
-Dispatch fresh auditor agents that never see the extraction agent's reasoning.
-Each auditor's preferred input is the output of
+**Independent second reader (v0.70.0).** The context that extracted,
+augmented or repaired text is never a reader of it. Use fresh blind contexts
+whose only analytical input is a parent-generated prompt. OpenAI models only
+in the Codex workflow; record each worker's actual model from its runtime turn
+context, never its self-report. Keep at most three workers active when the
+platform provides four slots including the parent.
+
+Before either dispatch, run
+`python tools/check_numbers.py notes/<paper_id>.md`. This advisory checks
+numeric presence in Hypotheses, Data & Measures and Key Findings against the
+raw `text_path`; exit 1 means zero-hit tokens, not an audit failure. Verify
+every zero-hit token against complete raw lines and record the disposition in
+the ledger before dispatch. Glyph matches, number matches and reader agreement
+do not establish correct units, referents, study attribution or meaning.
+
+Reader (a) performs the holistic Layer-2 audit. Its input is the output of
 `python tools/audit_note.py notes/<paper_id>.md --prompt-only` — a single
 self-contained prompt holding the current rubric, the note body, and the
 **anchor-aware fitted PDF text**, so what the auditor reads is exactly what the
-assembled report's `audit_context` records. (Reading the rubric + note + raw
-text file directly is a legacy fallback; on long papers it diverges from the
-recorded fitting metadata.) Each auditor writes
+assembled report's `audit_context` records. Raw-text input requires a separately
+recorded user exception; it is not an interchangeable dispatch path. Reader (a) writes
 `incoming/_audits/<paper_id>.layer2.json` with a `provenance` block
 (`paper_id, note_sha256, text_sha256, rubric_version, auditor_model, generated_at,
-dispatch_mode`; `rubric_version` is **v2**). The parent then assembles:
+dispatch_mode, input_mode`; `rubric_version` is **v3** from v0.70.0,
+`input_mode` is `standard-fitted`). Reader (b) uses
+`python tools/audit_note.py notes/<paper_id>.md --claims-prompt-only`, with
+the identical fitted source, and writes `incoming/_audits/<paper_id>.claims.json`
+under [`claims-verification.md`](claims-verification.md): every atomic claim
+in the three v3 fields, plus every direction, prescription and generalizability
+target in the six legacy fields. Its provenance additionally has
+`pass: "claims-v1"`. Use another OpenAI model for (b) when a runtime-verified
+probe succeeds (v0.70.0: Astra holistic, Sol claims); otherwise use separate
+fresh Astra contexts and record the fallback explicitly.
+
+The parent checks coverage and adjudicates every disagreement and every
+UNVERIFIED or CONTRADICTED claim against the raw text before assembly, recording
+raw lines and disposition in the batch ledger (two-channel verification).
+Layer-2 field verdicts remain the official gate; claims summary counts do not
+replace parent adjudication. Then assemble **all** reports before any repair:
 ```
 python tools/audit_note.py notes/<paper_id>.md \
-  --layer-2-json incoming/_audits/<paper_id>.layer2.json --flag
+  --layer-2-json incoming/_audits/<paper_id>.layer2.json \
+  --claims-json incoming/_audits/<paper_id>.claims.json --flag
 ```
 For v3 notes the auditor scores **9** prose fields (the original six plus
 Hypotheses, Data & Measures, Key Findings). Key Findings is held to the
 sign-reversal `CONTRADICTED` rule — a flipped direction fails the audit.
+The report records both readers and the frontmatter extraction/augmentation
+writer models; pass `--repair-model <actual model>` only when the ledger records
+a repair writer. These are provenance, not family gates. Parent-confirmed
+contradictions are repair-class; after an authorized repair, regenerate both
+prompts and use fresh readers again. The Stage 1 retrospective reader count is
+the explicit exception selected by the v0.70.0 calibration decision rule, not
+an informal waiver. The user-approved amended calibration (Rogan, Zhu and
+supplementary Yam controls; original Crossland failure preserved) passed both
+arms at 4/4 non-regression and 3/4 improvement defects. Its specified outcome
+is **one fresh holistic reader plus `check_numbers.py` for Stage 1 only**.
+This does not start Stage 1; obtain a separate assignment. New ingestion and
+augmentation use both readers, and a repaired note still receives both readers
+again, including during Stage 1. Historical
+reports retain their existing rubric stamps.
+The Claude CLI dispatch path remains an **unused manual fallback**; do not invoke
+it in this OpenAI-only workflow. Prompts stay local in the evidence directory
+with filenames ending `.prompt.txt`, excluded from archive snapshots.
 
 ## Step 3 — Aggregate outcomes + systemic-failure gates
 
@@ -154,7 +200,9 @@ needs a **fresh** independent audit, not a re-run of the old one.
 standard is to **repair every repairable PARTIAL before publishing** — narrow the
 overstated field to the paper's own scope, revalidate, and re-audit **only the
 changed notes** with fresh auditors. Small drift compounds across a literature
-review; every recent release shipped at 0 PARTIAL. If ≥3 PARTIALs in one issue
+review. The current audit-state table and release ledger identify accepted
+framing or source-faithful PARTIALs; do not infer zero PARTIALs from a passing
+report. If ≥3 PARTIALs in one issue
 share a root cause, treat it as prompt drift (fix `docs/extraction-prompt.md`),
 not as per-note repair work.
 
@@ -252,6 +300,17 @@ currently parked (user decision, 2026-07-10).
 ---
 
 ## Backfill batches (v2→v3 augmentation / v1 re-extraction)
+
+> **Process update (v0.70.0, 2026-10-04):** the v0.68.0 fitter fix and
+> v0.69.0 second-opinion sample are complete. The next proposed work is the
+> staged retrospective pass, early era first, before the NBS backfill decision;
+> start it only after a separate user assignment.
+> Apply Step 2.5's numeric check, rubric v3 and independent-reader protocol.
+> The writer is never a reader; the parent verifies and proposes repairs rather
+> than silently applying them. Only the user approves stops, exceptions,
+> frontmatter edits, constants and rule changes. This execution session does
+> not run the archive snapshot or update the handoff repository; the separate
+> review session verifies its report and performs that work.
 
 > **Status (2026-09-10): the AMJ v3 backfill is COMPLETE.** Batches 01–34
 > (v0.34.0 → v0.67.0, 2026-07-11 → 2026-09-10) upgraded the 67 pre-v3 AMJ
@@ -356,12 +415,30 @@ Propositions, Data & Measures, and Key Findings. Two tiers, two treatments:
 tree — the diff-guard diffs against HEAD) → augmentation/re-extraction waves
 (≤5–6 agents, chunked two-phase mode) → per note: `validate_note.py` +
 `verify_augmentation.py` (augmented notes only) → **fresh full 9-field Layer 2
-audits** for every touched note (native machinery, rubric v2 — this is the
+audits** for every touched note (native machinery, rubric v2 through v0.69.0,
+v3 from v0.70.0 — this is the
 uniform guarantee: every v3 note, native or augmented, passed the full audit)
 → assemble ALL official audits before any repair → repairs + scoped re-audits
 → gates → sequential rebuild → ledger → one release per batch.
 
 **Backfill-specific policies:**
+- **Independent second reader (v0.70.0, batches 01–07 lesson):** apply Step
+  2.5 to every new ingestion, augmentation and repair re-audit. Writer contexts
+  never audit their own work. Use the holistic and structured claims tasks in
+  separate fresh blind contexts, with runtime-verified OpenAI model diversity
+  where available. The staged retrospective reader-count exception must cite
+  the calibration decision. Run `check_numbers.py` before either reader; parent
+  raw-line verification of every zero-hit token is mandatory. Parent-adjudicate
+  reader disagreements and non-supported claims, record them, and assemble all
+  reports before any repair. Neither tool matches nor two-reader agreement
+  substitute for source verification. The Claude CLI is an unused manual fallback.
+- **Severity grades (v0.69.0 convention):** a **substantive** repair fixes a
+  direction, number, formula, unit, significance or attribution the paper
+  contradicts, or a claim/prescription the paper does not make; a **precision**
+  repair fixes wording, scope or a qualifier on a claim the paper supports.
+  Grade every repaired field and retain the frozen first-pass defect table
+  separately from repair-round discoveries; show totals with and without
+  precision defects.
 - **Scoped CrossRef is SKIPPED for augmented notes** — their bibliographic
   frontmatter is diff-guard-proven unchanged, so re-checking CrossRef would be
   ritual. Re-extracted v1 notes DO get the scoped check (their frontmatter is
@@ -585,4 +662,5 @@ The corpus is intentionally heterogeneous; tools branch on `extraction_version`:
   carries `augmented_model` /
   `augmented_at` frontmatter: its six original prose fields were written by
   `extraction_model`, its three v3 sections by `augmented_model`, and the
-  whole note passed a fresh full 9-field rubric-v2 audit at augmentation time.
+  whole note passed a fresh full 9-field audit at augmentation time (rubric v2
+  through v0.69.0; rubric v3 from v0.70.0).

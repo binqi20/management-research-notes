@@ -16,7 +16,7 @@ focuses on what's portable across agents.
 
 **Management Research Notes** is a file-based academic knowledge base of
 **1,167 curated notes** on peer-reviewed papers in management and business
-sustainability research. The current v0.69.0 main-branch snapshot contains 272
+sustainability research. The current v0.70.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
 and 895 Academy of Management Journal pilot notes across 70 recent issues
 (vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
@@ -140,7 +140,45 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-09-13, v0.69.0): 1,167 / 1,167 stored official reports PASS, 0 UNSUPPORTED, 0 CONTRADICTED.**
+**Current main-branch audit state (2026-10-04, v0.70.0): 1,167 / 1,167 stored official reports PASS, 0 UNSUPPORTED, 0 CONTRADICTED.**
+
+**Process and calibration update (2026-10-04, v0.70.0).** Rubric v2
+applies through v0.69.0; new audits use rubric v3 from v0.70.0, including the
+mandatory number/unit, direction, formula, robustness, study-attribution,
+prescription/scope, cross-field and quotation checks. Run
+`tools/check_numbers.py` before dispatch and verify each zero-hit token against
+raw lines. The corpus run found 2,728 advisory zero-hit occurrences in 457 of
+895 AMJ v3 notes, not 2,728 proven errors.
+
+The writer context is never a reader. New ingestion, augmentation and repair
+re-audits use fresh blind holistic and claims readers; actual runtime stamps
+verified gpt-6-astra and gpt-5.6-sol respectively. The parent adjudicates every
+disagreement and non-supported claim against raw text before assembly, and
+assembles all reports before repairs. Reports record both readers and writer
+models; there is no family gate. The Claude CLI is an unused manual fallback.
+
+The original ten-note calibration failed its clean-control condition:
+Crossland Data & Measures was CONTRADICTED in both holistic arms. The clause
+“year-on-year absolute change across six Winsorized, logged, standardized
+strategic-choice variables” leaves the operation order ambiguous and on a
+literal reading conflicts with raw lines 433–438 (absolute difference, then
+log, standardize and sum). Future Research also omits the success condition
+on reinforcement (raw lines 736–738 and 764–772). These private diagnostic
+findings do not overwrite the unchanged official report or note.
+
+The user approved adding the next eligible control, Yam-2017, while preserving
+Crossland and the original failed gate. On the amended Rogan/Zhu/Yam controls,
+both arms pass: A and B each catch 4/4 non-regression and 3/4 improvement
+defects; neither has a control UNSUPPORTED or CONTRADICTED. Rogan's denominator
+year and solo/collective-departure claims retain documented framing latitude.
+The specified decision rule selects one fresh holistic reader plus the numeric
+check for **Stage 1 only**; Stage 1 needs a separate assignment. New ingestion and augmentation use both readers; repaired notes also receive
+both readers again, including during Stage 1. The
+calibration is purposive and cannot establish a residual error rate or a
+causal model comparison. No published note, official report, index or source
+changed in v0.70.0; the accepted inventory remains 25 fields across 23 notes.
+
+The following v0.69.0 findings and repair disclosures remain historical:
 
 Forty-five AMJ notes received fresh blind full nine-field gpt-6-astra audits
 under the unchanged standard fitted input: a deterministic random sample of
@@ -244,7 +282,7 @@ completed full-note audits (603 field verdicts), using at most three workers
 at once.
 
 Final scoped state: 394 SUPPORTED / 11 accepted PARTIALs, zero UNSUPPORTED
-and zero CONTRADICTED. All 45 official reports and sidecars match current
+and zero CONTRADICTED. All 45 official reports and sidecars match final
 full-note and source hashes. Of the 32 repaired fields, 30 now score
 SUPPORTED; Kilduff and DesJardine Key Findings retain PARTIALs for different
 wording nuances, while their corrected results and clauses are supported.
@@ -259,7 +297,7 @@ Implication; Trzebiatowski Data & Measures), and two remain accepted
 (Lauriano Data & Measures and Hagtvedt Future Research). Fourteen other
 v0.68.0 PARTIAL fields were outside this authorized residue scope and retain
 their prior acceptances. Nine newly documented framing/paper-internal
-PARTIALs yield a current v0.69.0 AMJ inventory of 25 fields across 23 notes;
+PARTIALs yielded the v0.69.0 AMJ inventory of 25 fields across 23 notes;
 the unchanged total masks this turnover. Both inventories are disclosed
 below.
 
@@ -280,7 +318,7 @@ Recommendation: run a full second-opinion pass before NBS backfill,
 prioritizing batches 01–07 and their Data & Measures and Key Findings, then
 their legacy mechanism and implication fields. Next cover later-era
 measure/result attribution and legacy scope or prescription risks, including
-retained PARTIALs under current policy. Keep full-note audits to catch
+retained PARTIALs under the v0.69.0 review policy. Keep full-note audits to catch
 repeated premises across fields. Zero defects in a 12-note cell does not
 justify exempting that era or field family. This release does not start that
 full pass.
@@ -367,7 +405,7 @@ full-raw-text exceptions remain superseded by v0.68.0; none was used here.
 | [amj-vol-68-no-1-trzebiatowski-2024](notes/amj-vol-68-no-1-trzebiatowski-2024.md) | Data & Measures | Repaired: SUPPORTED |
 | [amj-vol-68-no-4-li-2025](notes/amj-vol-68-no-4-li-2025.md) | Limitations | Cleared unchanged: SUPPORTED |
 
-**Current v0.69.0 remaining accepted PARTIALs: 25 fields across 23 notes.**
+**Current v0.70.0 remaining accepted PARTIALs (unchanged from v0.69.0): 25 fields across 23 notes.**
 
 | Note | Field | Acceptance basis |
 |---|---|---|
@@ -401,7 +439,7 @@ Process deviations and exceptions: the four stop/resume approvals and six
 fresh-context restarts are preserved verbatim in the private evidence; the
 only protected-field exception was Trzebiatowski methods. A Lee restart
 dispatch contained one extra character in the operational note hash,
-corrected before return; the verified sidecar has the exact current hash and
+corrected before return; the verified sidecar has the exact final hash and
 its analytical input never changed. Hayward’s initial first-pass dispatch
 included a path typo corrected in the same dispatch. No sample redraw, model
 substitution, raw-text audit, fitter/prompt change, NBS work or cleanup-
@@ -416,13 +454,14 @@ measures, and key findings (see
 notes carry `augmented_model` / `augmented_at` frontmatter — the six
 original prose fields were written by `extraction_model`, the three v3
 sections by `augmented_model`, and the whole note passed a fresh full
-9-field rubric-v2 audit at augmentation time (a mechanical diff-guard,
+9-field audit at augmentation time (rubric v2 through v0.69.0, v3 from
+v0.70.0; a mechanical diff-guard,
 `tools/verify_augmentation.py`, proves the original audited content was
 untouched before any explicitly documented audit repair). `PARTIAL`
 verdicts (minor compression or claims whose supporting source passages are
 missing from the fitted audit input) require documented review and do not
 block publication when source verification supports the documented
-acceptance. The v0.69.0 official reports contain no remaining `UNSUPPORTED` or
+acceptance. The unchanged v0.70.0 official reports contain no remaining `UNSUPPORTED` or
 `CONTRADICTED` verdicts. A CONTRADICTED verdict was returned on a batch-28
 draft and repaired before that release; v0.68.0 repaired Kotha’s published
 contradiction, and v0.69.0 repaired the contradictions disclosed above. Audit
@@ -433,10 +472,10 @@ Agents querying the data can rely on the following:
 - **Every abstract is a verbatim substring of the source PDF.** If your agent quotes an abstract from a note, it is quoting the paper.
 - **Every factual claim in v2 note frontmatter is anchored.** If your agent cites a sample size or a theory from v2 frontmatter, there is a verbatim PDF quote behind it in the `evidence:` block.
 - **Every prose field has passed a semantic audit.** If your agent summarizes a research question, mechanism, or theoretical contribution from a note, it's quoting a claim that was independently cross-checked against the PDF.
-- **Zero current `CONTRADICTED` verdicts in v0.69.0.** This describes the stored audit results, not an absolute guarantee that every source contradiction has been detected.
+- **Zero current `CONTRADICTED` verdicts in v0.70.0.** This describes the stored audit results, not an absolute guarantee that every source contradiction has been detected.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current v0.69.0 main-branch audit state was checked locally on 2026-09-13.
+- Notes are a snapshot, not a live database. The current v0.70.0 main-branch stored audit state was checked locally on 2026-10-04; the separate calibration findings above must not be confused with official-report changes.
 - The audit can identify hallucinations and direction-reversals, but does not resolve inconsistencies in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts can indicate minor paraphrastic drift, compression, or missing source context in the fitted audit input; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -444,10 +483,14 @@ Agents querying the data can rely on the following:
 
 ## 6. How to cite when your agent surfaces a note
 
+Audit provenance is historical: rubric v2 through v0.69.0, v3 from v0.70.0.
+Cite the original paper and verify material claims; the v0.70.0 reader and
+numeric-check policy does not retrospectively restamp older reports.
+
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.69.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.70.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
