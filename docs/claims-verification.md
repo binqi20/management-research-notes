@@ -7,6 +7,12 @@ holistically audit this note. Your only analytical input is this prompt. Read
 the complete note and supplied PDF text; do not consult other notes, reports,
 repair histories or external sources. Return evidence, not rewritten prose.
 
+Read the final actual `## PDF text (the source of truth)` block and its source
+fence; task instructions can themselves mention that heading. Display and read
+the complete supplied input in bounded chunks; recover any truncated display.
+Byte loading, quote membership and coverage accounting do not establish semantic
+review. Do not generate judgments or repeated placeholder rows by position.
+
 ## Task and coverage
 
 List **every atomic checkable claim** in Hypotheses / Propositions, Data &
@@ -50,7 +56,10 @@ check; a matching phrase is not sufficient evidence. For every claim:
    actor and status: a warning, proposal, recommendation and an already-applied
    requirement are different claims. Check the relative clause as well as the
    main recommendation.
-6. Actively look for source text that limits or conflicts with the claim before
+6. For comparisons, identify comparator, dimension, direction and condition in
+   `note`, with the source basis. Judge comparative qualifiers such as “more”
+   and “narrower” explicitly; mapping the whole sentence is not that judgment.
+7. Actively look for source text that limits or conflicts with the claim before
    accepting it. If the claim and source differ, record UNVERIFIED or
    CONTRADICTED rather than explaining the difference away as broadly accurate.
 

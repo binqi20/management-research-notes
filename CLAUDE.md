@@ -139,11 +139,13 @@ research. Read this file before doing anything in this folder.
    extraction prompt) in `incoming/_bundles/`.
 3. Read the bundle, apply the extraction prompt to the text, and write the resulting
    note to `notes/{paper_id}.md` using the `Write` tool. The bundle tells you exactly
-   what `paper_id` to use and what frontmatter is mandatory.
+   what `paper_id` to use and what frontmatter is mandatory. Use the per-study
+   source checks in `docs/analysis-workflow.md` before drafting.
 4. Run `python tools/validate_note.py notes/{paper_id}.md`. If it fails, fix the
    note OR move it to `incoming/_flagged/` with a `.reason.txt` and report what
    went wrong. Before auditing, run `python tools/check_numbers.py notes/{paper_id}.md`
-   and record parent raw-line verification of every advisory zero-hit token.
+   and record parent raw-line verification of every advisory zero-hit token and
+   every item marked `requires_raw_verification`.
 5. Run the two-layer faithfulness audit with an independent Layer 2 auditor.
    Layer 1 substring-checks the `evidence:` anchors against the PDF text. Layer
    2 scores the prose fields (six on v1/v2 notes, nine on v3 — every AMJ note
@@ -160,22 +162,19 @@ research. Read this file before doing anything in this folder.
    incoming/_audits/{paper_id}.claims.json --flag`; the claims reader receives
    `--claims-prompt-only` and follows `docs/claims-verification.md`. The old
    Claude CLI path remains an unused manual fallback in this OpenAI-only workflow.
-6. Run `python tools/build_index.py` to update the SQLite index.
+6. Complete the hash-bound publication review in `docs/publication-readiness.md`;
+   then rebuild SQLite, CSV and BibTeX sequentially from the eligible note set.
+   Follow `docs/analysis-workflow.md` and the runbook for selective releases.
 
 ## Parallel agent slot policy
 
-When ingesting or auditing a paper issue with parallel agents, keep at most 6
-active subagents per wave. This is the Synapse operating cap for the current
-Codex workflow; do not attempt larger waves unless the user explicitly changes
-the policy after a new cap test. Use separate waves for extraction and Layer 2
-audit: extraction agents may write only `notes/{paper_id}.md`, audit agents may
-write only `incoming/_audits/{paper_id}.layer2.json`, and the parent session
-assembles official audit reports and rebuilds derived indexes.
-
-After any worker returns, record its result and close the completed agent thread
-before spawning another. If spawning hits an active-agent cap, timeout, or
-coordination problem even at 6, fall back to 5, then 3, then serial execution
-while preserving extraction/audit independence.
+Use at most **three active workers** with the current four-slot Codex runtime,
+or a lower observed cap. Writers own only their assigned note; readers own only
+their assigned Layer-2 or claims sidecar. The parent assembles reports and indexes.
+Keep writing and auditing waves separate. Record and re-read every return before
+dispatching another worker. This runtime has no close-agent operation: do not
+assume completed threads free a slot, and never reuse a writer context as a reader.
+Do not silently change models on dispatch failure.
 
 ## Things that should make you stop and ask the user
 

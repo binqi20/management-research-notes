@@ -19,7 +19,7 @@ once, in [`docs/extraction-prompt.md`](extraction-prompt.md) — the sections
 anchors", including the scope-discipline rule, the sign/direction-fidelity rule
 for Key Findings, the ≤25-word verbatim anchor rule, the two-column grep-verify
 procedure, and the `"Not reported in paper"` escape valve. Read that file and
-apply those rules exactly. This file defines only the DELTA mechanics.
+apply those rules exactly, including the v0.71.0 pre-draft per-study source check. The private evidence record does not expand the permitted note delta. This file defines only the DELTA mechanics.
 
 ---
 

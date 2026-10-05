@@ -16,7 +16,7 @@ focuses on what's portable across agents.
 
 **Management Research Notes** is a file-based academic knowledge base of
 **1,167 curated notes** on peer-reviewed papers in management and business
-sustainability research. The current v0.70.0 main-branch snapshot contains 272
+sustainability research. The current v0.71.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
 and 895 Academy of Management Journal pilot notes across 70 recent issues
 (vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
@@ -114,21 +114,13 @@ from [`CLAUDE.md`](CLAUDE.md)):
 
 ## 4.1 Parallel agent slot policy
 
-For issue-level ingestion with parallel agents, Synapse uses a conservative
-Codex operating cap rather than a claimed platform limit. Keep at most **6
-active extraction agents** or **6 active audit agents** per wave. Do not attempt
-larger waves unless the user explicitly changes this policy after a new cap
-test.
-
-Use separate waves for extraction and audit. Extraction agents may write only
-`notes/<paper_id>.md`. Audit agents may write only
-`incoming/_audits/<paper_id>.layer2.json`. The parent session assembles official
-audit reports, handles repairs, and rebuilds SQLite/CSV/BibTeX indexes.
-
-After any worker returns, record its result and close the completed agent thread
-before spawning another. If an active-agent cap, timeout, or coordination
-problem appears even at 6, fall back to 5, then 3, then serial execution while
-keeping extraction and audit roles independent.
+At v0.71.0, use at most **three active workers** with the current four-slot Codex runtime,
+or the lower actual cap. Writers own one assigned note; readers own only their
+assigned Layer-2 or claims sidecar. Keep writing and audit waves separate.
+Record and re-read each return before dispatching the next worker. There is no
+close-agent operation in this runtime; completed threads may still occupy slots.
+Never reuse a writer or repairer context as a reader or silently substitute a
+model. The parent assembles reports and rebuilds indexes.
 
 ---
 
@@ -140,13 +132,12 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Review status — 2026-10-05 (published note baseline: v0.70.0).** Stage 1 wave 1 has completed a first-pass review of 45 notes and is paused at the user's request. That first pass recorded 322 SUPPORTED, 58 PARTIAL, 16 UNSUPPORTED and nine CONTRADICTED field verdicts. These are initial reader judgments, not a count of independently confirmed defects or final publication verdicts.
+**Current review status — v0.71.0, 2026-10-05.** The Stage 1 wave's first-pass review covers 45 notes (322 SUPPORTED / 58 PARTIAL / 16 UNSUPPORTED / 9 CONTRADICTED); those are initial judgments, not final defect counts. Nine approved corrections across six fully reviewed notes are now published, with 54/54 post-repair holistic fields SUPPORTED and 626 SUPPORTED / one source-adjudicated UNVERIFIED claim among 627 claims. Two Zhang comparison-coverage gaps retain separately attributed parent source judgments. See the [full correction and rationale disclosure](docs/releases/v0.71.0.md).
 
-A correction package covering 96 operations across 40 notes has been applied locally and preserved in private recovery evidence; these corrections are not yet published. Twenty post-repair holistic returns, ten claims inventories and ten official reports are retained. Further review remains incomplete, and 14 additional corrections across nine notes remain unapplied proposals. An assembled report does not establish publication readiness while source adjudication or proposed repairs remain open. Public notes and indexes remain the v0.70.0 baseline. Historical audit PASS totals describe that release's stored reports and do not guarantee source fidelity; verify material claims against the original papers.
+The larger wave remains paused. Of 96 applied operations across 40 notes, 87 operations in 34 notes remain unpublished; 14 further operations across nine notes remain unapplied proposals. An assembled report alone is not publication readiness. The [v0.71.0 workflow](docs/analysis-workflow.md) and [publication-evidence gate](docs/publication-readiness.md) require current evidence, resolved dispositions and an explicit selected-note scope. Historical audit PASS totals are not guarantees of source fidelity; verify material claims against the original papers.
 
-**Numeric checker update — 2026-10-05 (after v0.70.0).** The separately published tool patch preserves empirical year-range endpoints that citation masking previously hid and reports ambiguous PDF glyph candidates with raw locations and verification flags. The review's sign-loss bug is corrected: source table values retain their explicit negative sign, including thousands separators, scientific notation and percentages. Spaced year-range interpretation is limited to note prose with an immediate time-range cue; ambiguous source pairs do not manufacture positive literal hits. Candidates never add hits, and legacy glyph-only matches still require raw verification.
+**Numeric checker — v0.71.0 (patch first published 2026-10-05).** Empirical year endpoints, ambiguous glyph candidates and explicit negative signs are handled separately. Candidates never add hits; zero-hit and glyph-only rows require raw verification. The corrected tool reproduced all 895 frozen reports: 46,916 numeric occurrences, 2,721 zero-hit occurrences across 455 notes and 12,266 candidate locations. These are advisory counts, not defect counts. The earlier numeric patch passed 152 tests; the v0.71.0 release adds the separately tested publication-evidence gate.
 
-All 152 tests pass, including the new sign-preservation regressions. The corrected tool reproduces all 895 frozen preflight reports: 46,916 numeric occurrences, 2,721 zero-hit occurrences across 455 notes, and 12,266 candidate locations checked against raw substrings and physical lines. These are advisory counts, not defect counts; numeric presence does not establish the correct unit, referent, study or meaning. Public notes and indexes remain at v0.70.0, the paper review stays paused, and no new tagged release or completed review wave is claimed.
 
 **Release-time stored audit snapshot (2026-10-04, v0.70.0): 1,167 / 1,167 reports PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** These historical results do not describe the unfinished Stage 1 audits reported above.
 
@@ -171,8 +162,8 @@ Crossland Data & Measures was CONTRADICTED in both holistic arms. The clause
 strategic-choice variables” leaves the operation order ambiguous and on a
 literal reading conflicts with raw lines 433–438 (absolute difference, then
 log, standardize and sum). Future Research also omits the success condition
-on reinforcement (raw lines 736–738 and 764–772). These private diagnostic
-findings do not overwrite the unchanged official report or note.
+on reinforcement (raw lines 736–738 and 764–772). Those v0.70.0 diagnostic findings were subsequently repaired and independently
+reviewed; v0.71.0 publishes the corrected note with its source disclosure.
 
 The user approved adding the next eligible control, Yam-2017, while preserving
 Crossland and the original failed gate. On the amended Rogan/Zhu/Yam controls,
@@ -413,7 +404,7 @@ full-raw-text exceptions remain superseded by v0.68.0; none was used here.
 | [amj-vol-68-no-1-trzebiatowski-2024](notes/amj-vol-68-no-1-trzebiatowski-2024.md) | Data & Measures | Repaired: SUPPORTED |
 | [amj-vol-68-no-4-li-2025](notes/amj-vol-68-no-4-li-2025.md) | Limitations | Cleared unchanged: SUPPORTED |
 
-**Current v0.70.0 remaining accepted PARTIALs (unchanged from v0.69.0): 25 fields across 23 notes.**
+**Current v0.71.0 published accepted-PARTIAL inventory (unchanged from v0.69.0): 25 fields across 23 notes.**
 
 | Note | Field | Acceptance basis |
 |---|---|---|
@@ -498,7 +489,7 @@ numeric-check policy does not retrospectively restamp older reports.
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.70.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.71.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
@@ -506,7 +497,7 @@ Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
 ## 7. What this repository is NOT
 
-- **Not a live database.** It's a Git-versioned snapshot. Each commit is a reproducible state; tagged releases are archived on Zenodo with DOIs.
+- **Not a live database.** It's a Git-versioned snapshot. Each commit is a reproducible state; GitHub releases are versioned. Zenodo archiving remains parked, and its existing DOI does not imply that every later tag was deposited.
 - **Not a replacement for reading the papers.** Notes are a distillation, not a substitute. For any claim of academic substance, cite the original.
 - **Not the trusted source for bibliographic metadata.** `library/.../manifest.tsv` is the trusted source (populated from journal TOCs, publisher APIs, and CrossRef). Notes derive from the manifest; if they disagree, the manifest wins.
 - **Not a Python package.** There's no PyPI install; the pipeline ships as scripts in `tools/`. Clone the repo to use it locally.

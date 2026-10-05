@@ -71,6 +71,17 @@ markdown body. The exact format is shown below.
   If not, extract verbatim theoretical constructs and focal variables from the
   abstract and theory section (no paraphrasing, no invention).
 
+### Pre-draft source check (workflow consolidation, v0.71.0)
+
+Before compressing the paper into the note, make a short private per-study evidence record: sample and observation units, dates/waves, design, construct definitions, controls, and results with their table/model and qualification. Follow the reading method in `docs/analysis-workflow.md`; the note schema remains v3.
+
+- Write formula operations in order before paraphrasing; distinguish changes of logged variables from logs of changes, and sums from averages.
+- Keep value, sign, unit, denominator, study, outcome and time window together. Hours are not meetings, interviews are not unique participants, and an annual rate is not a one-year-ahead rate.
+- For each comparison or robustness statement, identify comparator, dimension, direction and condition; check every named model, subgroup, study or cycle. Preserve null, marginal and contrary results.
+- Distinguish author predictions, observations, proposed explanations and recommendations. A conditional argument must retain its condition, and a method described as rare is not necessarily introduced by this paper.
+- Read tables with headers and footnotes alongside prose. If the paper conflicts with itself, represent the discrepancy explicitly; do not invent an explanation or silently prefer one account.
+- Check every sentence tail and parenthetical qualification, then compare repeated premises across fields. Keep implications and future research within the authors' stated scope.
+
 ### Custom analytic fields (mandatory)
 
 You must classify every paper on these three dimensions, using ONLY the allowed values.

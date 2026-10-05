@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-10-04"
-version: "0.70.0"
+date-released: "2026-10-05"
+version: "0.71.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -55,6 +55,20 @@ abstract: >-
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
   a published rubric) gates every note into the library.
+  Version 0.71.0 (2026-10-05) consolidates the analysis workflow and publishes
+  nine approved clause corrections across eight fields in six AMJ 57-3 notes.
+  Post-repair holistic audits score 54 of 54 fields SUPPORTED. Claims readers
+  record 626 SUPPORTED and one source-adjudicated UNVERIFIED out of 627;
+  two comparison-coverage gaps retain separately attributed parent judgments.
+  The remaining 34 changed notes and 14 pending correction proposals stay
+  outside this release. A read-only publication-evidence checker verifies
+  hash-bound records, reader separation, residual dispositions and pending
+  status; it does not establish semantic truth. Canonical workflow and prompt
+  refinements emphasize study attribution, units, ordered formulas, comparison
+  scope and finite evidence-based closure. Counts remain 61 v1 / 211 v2 /
+  895 v3 of 1,167. Publication records completed review and transparent
+  corrections, not a guarantee of flawless accuracy. The full correction
+  record and rationale are in docs/releases/v0.71.0.md.
   Version 0.70.0 (2026-10-04) adds rubric v3, an independent atomic
   claims-verification reader with validated sidecar provenance, and an
   advisory numeric cross-check. Actual runtime models were gpt-6-astra
@@ -993,7 +1007,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.70.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.71.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

@@ -59,6 +59,10 @@ derived indexes.
 
 ---
 
+For the reading, extraction and finite review procedure from **v0.71.0**, follow
+[analysis-workflow.md](analysis-workflow.md). It retains the v3 schema and rubric
+v3, and separates mechanical accounting from semantic source verification.
+
 ## Preconditions (stop if any fails)
 
 1. Folder resolves to `library/<source>/<issue>/pdfs/` with a sibling
@@ -97,7 +101,7 @@ Runs `pdf_to_text.py` then `prepare_paper.py` per PDF, emitting one
 `incoming/_bundles/<paper_id>.bundle.txt` each. Bundles are stamped
 `extraction_version: v3`. **Gate:** any `failed` entry → stop and show the user.
 
-## Step 2 — Extraction wave (≤6 agents; write notes only)
+## Step 2 — Extraction wave (≤3 workers with the current runtime; write notes only)
 
 Each agent reads, in order: `AGENTS.md` → `docs/extraction-prompt.md` →
 `index/topics.json` → its `incoming/_bundles/<paper_id>.bundle.txt`; writes exactly
@@ -116,7 +120,7 @@ extracted text," `grep` the candidate phrase in `library/<source>/<issue>/text/�
 and pick a shorter intra-line substring (see the extraction prompt's two-column
 guidance).
 
-## Step 2.5 — Independent audit wave (≤6 agents; separate wave)
+## Step 2.5 — Independent audit wave (≤3 workers with the current runtime; separate wave)
 
 **Independent second reader (v0.70.0).** The context that extracted,
 augmented or repaired text is never a reader of it. Use fresh blind contexts
@@ -129,7 +133,7 @@ Before either dispatch, run
 `python tools/check_numbers.py notes/<paper_id>.md`. This advisory checks
 numeric presence in Hypotheses, Data & Measures and Key Findings against the
 raw `text_path`; exit 1 means zero-hit tokens, not an audit failure. Verify
-every zero-hit token against complete raw lines and record the disposition in
+every zero-hit token and every `requires_raw_verification` item against complete raw lines and record the disposition in
 the ledger before dispatch. Glyph matches, number matches and reader agreement
 do not establish correct units, referents, study attribution or meaning.
 
@@ -238,6 +242,22 @@ push unless the user explicitly asks.**
 
 ## Publishing a completed issue
 
+**v0.71.0 publication evidence gate.** Complete the hash-bound parent record in
+[publication-readiness.md](publication-readiness.md) and run the read-only checker
+for every changed note after both required readers and raw adjudications. PASS
+alone is insufficient. Missing reader evidence, unresolved coverage or a pending
+repair keeps a note out of the release. Preserve separately attributed parent
+judgments under an explicit applicable exception; do not change reader history.
+
+The user may authorize a completed subset of a paused wave. Freeze selected and
+held IDs; assemble all first-pass reports in the wave before repair decisions as
+usual. Build derived indexes in an isolated checkout of the public baseline plus
+only selected notes, then compare their record content with those selected notes.
+Do not index unfinished worktree changes. Publish a dated scope/correction table
+and remaining-work statement. Retain all private recovery artifacts. This is a
+subset release, not completion of the original wave.
+
+
 Publish **per issue** (policy updated 2026-07-10): when Steps 0–4.5 are clean for
 the issue and the user has asked for publication —
 
@@ -300,6 +320,14 @@ currently parked (user decision, 2026-07-10).
 ---
 
 ## Backfill batches (v2→v3 augmentation / v1 re-extraction)
+
+**Workflow consolidation (v0.71.0, 2026-10-05).** Use the per-study source record,
+qualifier checks and finite closure rules in [analysis-workflow.md](analysis-workflow.md).
+Run numeric checks for zero-hit and glyph-only verification items before dispatch;
+use the publication-evidence gate after required readers/adjudication. The user-
+approved Stage 1 retry/model/coverage exceptions remain scoped to that wave.
+No new note schema, fitter change or budget change is introduced.
+
 
 > **Process update (v0.70.0, 2026-10-04):** the v0.68.0 fitter fix and
 > v0.69.0 second-opinion sample are complete. The next proposed work is the
