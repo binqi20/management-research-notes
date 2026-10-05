@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+from bisect import bisect_right
 import json
 from pathlib import Path
 import re
@@ -23,7 +24,9 @@ except ImportError:  # Direct script execution / tools on sys.path.
 SECTIONS = ("Hypotheses / Propositions", "Data & Measures", "Key Findings")
 ADVISORY = (
     "Counts indicate numeric presence only; they do not establish the correct "
-    "referent, sign, study, threshold or interpretation. Glyph matches are heuristic."
+    "referent, sign, study, threshold or interpretation. Glyph matches are heuristic. "
+    "Candidates never contribute hits; zero-hit and glyph-only rows require raw "
+    "sign, unit, study and referent verification."
 )
 # Decimal and thousands boundaries prevent 27 matching 127, .27 or 27.5.
 NUMBER = re.compile(
@@ -38,6 +41,7 @@ AUTHOR = r"[A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ’'\-]+"
 AUTHORS = rf"{AUTHOR}(?:\s+(?:et\s+al\.|(?:and|&)\s+{AUTHOR}))?"
 CITATION = re.compile(rf"\b{AUTHORS}\s*(?:\(\s*|,\s*)(?:18|19|20)\d{{2}}[a-z]?(?:\s*[,;]\s*(?:18|19|20)\d{{2}}[a-z]?)*")
 YEAR = re.compile(r"\b(?:18|19|20)\d{2}[a-z]?\b")
+YEAR_RANGE = re.compile(r"\b(?:18|19|20)\d{2}\s*[-−–—]\s*(?:18|19|20)\d{2}\b")
 LIST_NUMBER = re.compile(r"(?m)^\s*(?:[-*+]\s+)?(?:\(?\d+\)|\d+\.(?!\d))\s+")
 # Only recognized statistical labels followed by a corrupted operator qualify.
 STAT = r"(?:b|β|beta|r|ρ|t|z|p|N|n|SE|SD|M|F|χ²|R²)"
@@ -46,6 +50,11 @@ GLYPH = re.compile(
     r"(?P<value>[+−\-]?(?:\d+(?:\.\d+)?|\.\d+))"
     r"(?![\w]|\.\d|,\d)"
 )
+# These labels and locations only describe candidates, never establish support.
+CANDIDATE_LABEL = re.compile(
+    rf"(?<!\w)(?P<label>{STAT}|B|g|γ|gamma|estimate|effect)\s*(?:5|=|,)\s*$"
+)
+ALTERNATE_MINUS = "–—‐‑‒﹣－⫺"
 
 
 def _masked(text: str, *, note: bool) -> str:
@@ -53,15 +62,18 @@ def _masked(text: str, *, note: bool) -> str:
     spans = [match.span() for match in DOI.finditer(text)]
     if note:
         spans.extend(match.span() for match in LIST_NUMBER.finditer(text))
+        ranges = [match.span() for match in YEAR_RANGE.finditer(text)]
         for citation in CITATION.finditer(text):
             spans.extend((citation.start() + m.start(), citation.start() + m.end())
-                         for m in YEAR.finditer(citation.group()))
+                         for m in YEAR.finditer(citation.group())
+                         if not any(start <= citation.start() + m.start() < end
+                                    for start, end in ranges))
     for start, end in spans:
         chars[start:end] = " " * (end - start)
     return "".join(chars)
 
 
-def _canonical(match: re.Match) -> str:
+def _canonical(match: re.Match, *, note: bool = False) -> str:
     value = match.group("number").replace(",", "")
     if value.startswith("."):
         value = "0" + value
@@ -70,6 +82,16 @@ def _canonical(match: re.Match) -> str:
         sign = ""
     # A dash between digits denotes a range, not a negative endpoint.
     if sign == "-" and match.start() and match.string[match.start() - 1].isdigit():
+        sign = ""
+    # A spaced year-like pair can instead be a year and a signed table value.
+    # Only note prose with an immediate time-range cue gets this interpretation;
+    # raw source counts always preserve the explicit signed literal.
+    if (note and sign == "-"
+            and re.fullmatch(r"(?:18|19|20)\d{2}", match.group("number"))
+            and not match.group("exponent") and not match.group("percent")
+            and re.search(r"\b(?:years|period|survey|from)[ \t]*[:,(]?[ \t]*"
+                          r"(?:18|19|20)\d{2}[ \t]+$",
+                          match.string[:match.start()], re.I)):
         sign = ""
     return sign + value + (match.group("exponent") or "").lower() + ("%" if match.group("percent") else "")
 
@@ -100,6 +122,63 @@ def _source_counts(raw: str) -> tuple[Counter, Counter]:
     return literal_counts, artifact_counts
 
 
+def _source_candidates(raw: str, targets: set[str]) -> dict[str, list[dict]]:
+    """Locate possible negatives without changing literal/legacy hit counts.
+
+    Offsets are zero-based, end-exclusive Unicode character offsets in the raw
+    text loaded by analyze_note; physical line/column numbers are one-based.
+    Table/CI hints and leading-2 alternatives remain explicitly ambiguous.
+    """
+    found = {token: [] for token in targets}
+    if not targets:
+        return found
+    line_starts = [0] + [m.end() for m in re.finditer(r"\n", raw)]
+    masked = _masked(raw, note=False)
+    for match in NUMBER.finditer(masked):
+        if match.group("sign"):
+            continue
+        value = match.group("number")
+        alternatives = []
+        # Keep the literal +2-prefixed interpretation in _source_counts.
+        if value.startswith("2") and len(value) > 1:
+            parsed = NUMBER.fullmatch("-" + value[1:] + (match.group("exponent") or "")
+                                      + (match.group("percent") or ""))
+            if parsed:
+                alternatives.append((_canonical(parsed), match.start(), "minus_as_2"))
+        prefix = masked[:match.start()]
+        dash = re.search(rf"[{ALTERNATE_MINUS}]\s*$", prefix)
+        if dash and not re.search(r"\d\s*$", prefix[:dash.start()]):
+            alternatives.append(("-" + _canonical(match), dash.start(), "alternate_minus"))
+        for token, start, reason in alternatives:
+            if token not in targets:
+                continue
+            line_index = bisect_right(line_starts, start) - 1
+            line_start = line_starts[line_index]
+            line_end = raw.find("\n", match.end())
+            if line_end < 0:
+                line_end = len(raw)
+            line = raw[line_start:line_end]
+            label = CANDIDATE_LABEL.search(raw[line_start:start])
+            reasons = [reason]
+            if label:
+                reasons.append("contextual_statistic")
+            if re.search(r"\bCI\b|confidence\s+interval", line, re.I) or re.search(r"\[[^\]]*\]", line):
+                reasons.append("ci_location_hint")
+            if len(list(NUMBER.finditer(line))) >= 3 and re.search(r"\S[ \t]{2,}\S", line):
+                reasons.append("table_location_hint")
+            found[token].append({
+                "raw_token": raw[start:match.end()], "raw_start": start,
+                "raw_end": match.end(), "raw_line": line_index + 1,
+                "raw_column": start - line_start + 1,
+                "raw_end_line": bisect_right(line_starts, match.end() - 1),
+                "literal_interpretation": _canonical(match),
+                "candidate_interpretation": token, "reasons": reasons,
+                "statistic_label": label.group("label") if label else None,
+                "ambiguous": True, "requires_raw_verification": True,
+            })
+    return found
+
+
 def _clause(text: str, position: int) -> str:
     """Return a verbatim sentence/semicolon/line span containing the token."""
     start = 0
@@ -122,7 +201,8 @@ def analyze_note(note_path: Path) -> dict:
     if not isinstance(text_value, str) or not text_value.strip():
         raise ValueError("frontmatter text_path must be a nonempty string")
     text_path = (SYNAPSE_ROOT / text_value).resolve()
-    literal, artifacts = _source_counts(text_path.read_text(encoding="utf-8", errors="replace"))
+    raw = text_path.read_text(encoding="utf-8", errors="replace")
+    literal, artifacts = _source_counts(raw)
     sections = parse_body_sections(body)
     if "Hypotheses" in sections and "Hypotheses / Propositions" not in sections:
         sections["Hypotheses / Propositions"] = sections["Hypotheses"]
@@ -130,7 +210,7 @@ def analyze_note(note_path: Path) -> dict:
     for section in SECTIONS:
         content = sections.get(section, "")
         for match in NUMBER.finditer(_masked(content, note=True)):
-            token = _canonical(match)
+            token = _canonical(match, note=True)
             rows.append({
                 "section": section,
                 "token": content[match.start():match.end()],
@@ -141,6 +221,13 @@ def analyze_note(note_path: Path) -> dict:
                 "artifact_hit_count": artifacts[token],
             })
     zero_hits = [row for row in rows if row["hit_count"] == 0]
+    candidates = _source_candidates(raw, {
+        row["normalized_token"] for row in rows
+        if row["literal_hit_count"] == 0 and row["normalized_token"].startswith("-")
+    })
+    for row in rows:
+        row["candidates"] = candidates.get(row["normalized_token"], [])
+        row["requires_raw_verification"] = row["literal_hit_count"] == 0
     return {
         "note_path": str(note_path), "text_path": str(text_path),
         "advisory": ADVISORY,
@@ -178,6 +265,12 @@ def main(argv: list[str] | None = None) -> int:
         print("\nZero-hit tokens\n\n| Section | Token | Verbatim clause |\n|---|---|---|")
         for row in report["zero_hits"]:
             print("| " + " | ".join(_cell(row[key]) for key in ("section", "token", "clause")) + " |")
+        print("\nCandidate locations (not hits; raw verification required)")
+        for row in report["tokens"]:
+            for candidate in row["candidates"]:
+                print(f"- {row['normalized_token']}: line {candidate['raw_line']}, "
+                      f"column {candidate['raw_column']}, {candidate['raw_token']!r}; "
+                      + ", ".join(candidate["reasons"]))
         print(f"\nTotals: {report['totals']}")
         if report["sections_missing"]:
             print("Sections absent (not checked): " + ", ".join(report["sections_missing"]))

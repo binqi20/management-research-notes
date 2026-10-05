@@ -100,6 +100,14 @@ hypothesis refined by each release, not a frozen spec.
 
 ## Faithfulness audit
 
+**Review status — 2026-10-05 (published note baseline: v0.70.0).** Stage 1 wave 1 has completed a first-pass review of 45 notes and is paused at the user's request. That first pass recorded 322 SUPPORTED, 58 PARTIAL, 16 UNSUPPORTED and nine CONTRADICTED field verdicts. These are initial reader judgments, not a count of independently confirmed defects or final publication verdicts.
+
+A correction package covering 96 operations across 40 notes has been applied locally and preserved in private recovery evidence; these corrections are not yet published. Twenty post-repair holistic returns, ten claims inventories and ten official reports are retained. Further review remains incomplete, and 14 additional corrections across nine notes remain unapplied proposals. An assembled report does not establish publication readiness while source adjudication or proposed repairs remain open. Public notes and indexes remain the v0.70.0 baseline. Historical audit PASS totals describe that release's stored reports and do not guarantee source fidelity; verify material claims against the original papers.
+
+**Numeric checker update — 2026-10-05 (after v0.70.0).** The separately published tool patch preserves empirical year-range endpoints that citation masking previously hid and reports ambiguous PDF glyph candidates with raw locations and verification flags. The review's sign-loss bug is corrected: source table values retain their explicit negative sign, including thousands separators, scientific notation and percentages. Spaced year-range interpretation is limited to note prose with an immediate time-range cue; ambiguous source pairs do not manufacture positive literal hits. Candidates never add hits, and legacy glyph-only matches still require raw verification.
+
+All 152 tests pass, including the new sign-preservation regressions. The corrected tool reproduces all 895 frozen preflight reports: 46,916 numeric occurrences, 2,721 zero-hit occurrences across 455 notes, and 12,266 candidate locations checked against raw substrings and physical lines. These are advisory counts, not defect counts; numeric presence does not establish the correct unit, referent, study or meaning. Public notes and indexes remain at v0.70.0, the paper review stays paused, and no new tagged release or completed review wave is claimed.
+
 Every analytic field in every note is checked by a **two-layer faithfulness
 audit** before it is accepted into the library:
 
@@ -548,12 +556,6 @@ The full library has been swept across releases:
   extraction prompt. Manifest lint and scoped CrossRef pass 13/13 with
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
-
-**Review status — 2026-10-05 (published note baseline: v0.70.0).** Stage 1 wave 1 has completed a first-pass review of 45 notes and is paused at the user's request. That first pass recorded 322 SUPPORTED, 58 PARTIAL, 16 UNSUPPORTED and nine CONTRADICTED field verdicts. These are initial reader judgments, not a count of independently confirmed defects or final publication verdicts.
-
-A correction package covering 96 operations across 40 notes has been applied locally and preserved in private recovery evidence; these corrections are not yet published. Twenty post-repair holistic returns, ten claims inventories and ten official reports are retained. Further review remains incomplete, and 14 additional corrections across nine notes remain unapplied proposals. An assembled report does not establish publication readiness while source adjudication or proposed repairs remain open. Public notes and indexes remain the v0.70.0 baseline. Historical audit PASS totals describe that release's stored reports and do not guarantee source fidelity; verify material claims against the original papers.
-
-The numeric-checker preflight reproduced a frozen 895-note comparison and passed 141 tests. Subsequent code review identified a sign-preservation edge case that must be corrected before publishing that patch. Ambiguous PDF glyph candidates locate possible evidence; they are not verified numeric matches. No new release or completion of the paper-review wave is claimed.
 
 - **v0.70.0 independent readers, rubric v3 and numeric checks (2026-10-04, 1,167 notes):**
   Tooling and process release; no published note, official audit report, source
