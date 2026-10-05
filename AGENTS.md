@@ -140,7 +140,13 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current main-branch audit state (2026-10-04, v0.70.0): 1,167 / 1,167 stored official reports PASS, 0 UNSUPPORTED, 0 CONTRADICTED.**
+**Review status — 2026-10-05 (published note baseline: v0.70.0).** Stage 1 wave 1 has completed a first-pass review of 45 notes and is paused at the user's request. That first pass recorded 322 SUPPORTED, 58 PARTIAL, 16 UNSUPPORTED and nine CONTRADICTED field verdicts. These are initial reader judgments, not a count of independently confirmed defects or final publication verdicts.
+
+A correction package covering 96 operations across 40 notes has been applied locally and preserved in private recovery evidence; these corrections are not yet published. Twenty post-repair holistic returns, ten claims inventories and ten official reports are retained. Further review remains incomplete, and 14 additional corrections across nine notes remain unapplied proposals. An assembled report does not establish publication readiness while source adjudication or proposed repairs remain open. Public notes and indexes remain the v0.70.0 baseline. Historical audit PASS totals describe that release's stored reports and do not guarantee source fidelity; verify material claims against the original papers.
+
+The numeric-checker preflight reproduced a frozen 895-note comparison and passed 141 tests. Subsequent code review identified a sign-preservation edge case that must be corrected before publishing that patch. Ambiguous PDF glyph candidates locate possible evidence; they are not verified numeric matches. No new release or completion of the paper-review wave is claimed.
+
+**Release-time stored audit snapshot (2026-10-04, v0.70.0): 1,167 / 1,167 reports PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** These historical results do not describe the unfinished Stage 1 audits reported above.
 
 **Process and calibration update (2026-10-04, v0.70.0).** Rubric v2
 applies through v0.69.0; new audits use rubric v3 from v0.70.0, including the
@@ -172,7 +178,7 @@ both arms pass: A and B each catch 4/4 non-regression and 3/4 improvement
 defects; neither has a control UNSUPPORTED or CONTRADICTED. Rogan's denominator
 year and solo/collective-departure claims retain documented framing latitude.
 The specified decision rule selects one fresh holistic reader plus the numeric
-check for **Stage 1 only**; Stage 1 needs a separate assignment. New ingestion and augmentation use both readers; repaired notes also receive
+check for **Stage 1 only**; at the v0.70.0 release, Stage 1 still required a separate assignment. New ingestion and augmentation use both readers; repaired notes also receive
 both readers again, including during Stage 1. The
 calibration is purposive and cannot establish a residual error rate or a
 causal model comparison. No published note, official report, index or source
@@ -461,7 +467,7 @@ untouched before any explicitly documented audit repair). `PARTIAL`
 verdicts (minor compression or claims whose supporting source passages are
 missing from the fitted audit input) require documented review and do not
 block publication when source verification supports the documented
-acceptance. The unchanged v0.70.0 official reports contain no remaining `UNSUPPORTED` or
+acceptance. The stored reports at the v0.70.0 release contained no remaining `UNSUPPORTED` or
 `CONTRADICTED` verdicts. A CONTRADICTED verdict was returned on a batch-28
 draft and repaired before that release; v0.68.0 repaired Kotha’s published
 contradiction, and v0.69.0 repaired the contradictions disclosed above. Audit
@@ -472,10 +478,10 @@ Agents querying the data can rely on the following:
 - **Every abstract is a verbatim substring of the source PDF.** If your agent quotes an abstract from a note, it is quoting the paper.
 - **Every factual claim in v2 note frontmatter is anchored.** If your agent cites a sample size or a theory from v2 frontmatter, there is a verbatim PDF quote behind it in the `evidence:` block.
 - **Every prose field has passed a semantic audit.** If your agent summarizes a research question, mechanism, or theoretical contribution from a note, it's quoting a claim that was independently cross-checked against the PDF.
-- **Zero current `CONTRADICTED` verdicts in v0.70.0.** This describes the stored audit results, not an absolute guarantee that every source contradiction has been detected.
+- **Zero `CONTRADICTED` verdicts in the v0.70.0 release-time reports.** This describes the historical stored audit results, not an absolute guarantee that every source contradiction has been detected.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The current v0.70.0 main-branch stored audit state was checked locally on 2026-10-04; the separate calibration findings above must not be confused with official-report changes.
+- Notes are a snapshot, not a live database. The v0.70.0 release-time stored audit state was checked locally on 2026-10-04; later Stage 1 findings and unpublished repairs are reported in the dated review status above.
 - The audit can identify hallucinations and direction-reversals, but does not resolve inconsistencies in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts can indicate minor paraphrastic drift, compression, or missing source context in the fitted audit input; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 

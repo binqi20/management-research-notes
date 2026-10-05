@@ -549,6 +549,12 @@ The full library has been swept across releases:
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
 
+**Review status — 2026-10-05 (published note baseline: v0.70.0).** Stage 1 wave 1 has completed a first-pass review of 45 notes and is paused at the user's request. That first pass recorded 322 SUPPORTED, 58 PARTIAL, 16 UNSUPPORTED and nine CONTRADICTED field verdicts. These are initial reader judgments, not a count of independently confirmed defects or final publication verdicts.
+
+A correction package covering 96 operations across 40 notes has been applied locally and preserved in private recovery evidence; these corrections are not yet published. Twenty post-repair holistic returns, ten claims inventories and ten official reports are retained. Further review remains incomplete, and 14 additional corrections across nine notes remain unapplied proposals. An assembled report does not establish publication readiness while source adjudication or proposed repairs remain open. Public notes and indexes remain the v0.70.0 baseline. Historical audit PASS totals describe that release's stored reports and do not guarantee source fidelity; verify material claims against the original papers.
+
+The numeric-checker preflight reproduced a frozen 895-note comparison and passed 141 tests. Subsequent code review identified a sign-preservation edge case that must be corrected before publishing that patch. Ambiguous PDF glyph candidates locate possible evidence; they are not verified numeric matches. No new release or completion of the paper-review wave is claimed.
+
 - **v0.70.0 independent readers, rubric v3 and numeric checks (2026-10-04, 1,167 notes):**
   Tooling and process release; no published note, official audit report, source
   text or index changed. The v0.70.0 census remains 61 v1 / 211 v2 / 895 v3,
@@ -596,8 +602,7 @@ The full library has been swept across releases:
   claims but missed DesJardine's exact SEC-attribution clause. Two claims-task
   revisions and mechanical quotation completions are preserved in private
   evidence. The user's decision rule selects **one fresh holistic reader plus
-  the numeric check for Stage 1 only**; that pass has not started and requires
-  a separate assignment. Repairs still require both readers again. The
+  the numeric check for Stage 1 only**. At the v0.70.0 release, that pass had not started and required a separate assignment. Repairs still require both readers again. The
   purposive calibration does not estimate an error
   rate or establish a causal model comparison.
 
@@ -2241,8 +2246,7 @@ This main-branch snapshot contains **1,167 curated notes**:
 | book-review            |     6 |
 | **Total**              | **1,167** |
 
-All stored official reports PASS in v0.70.0; the private calibration findings
-are disclosed above without replacing those reports. The v0.70.0 corpus contains 61 legacy v1
+All stored official reports passed at the v0.70.0 release. Subsequent Stage 1 findings and the paused, unpublished repair work are disclosed in the dated review status above. The v0.70.0 corpus contains 61 legacy v1
 notes, 211 v2 notes, and 895 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
