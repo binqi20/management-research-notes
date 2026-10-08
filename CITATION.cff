@@ -10,7 +10,7 @@ repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
 date-released: "2026-10-08"
-version: "0.72.0"
+version: "0.73.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -55,6 +55,19 @@ abstract: >-
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
   a published rubric) gates every note into the library.
+  Version 0.73.0 (2026-10-08) completes the correction-only review of all
+  61 legacy V1 notes: 40 corrected notes were published in v0.72.0, the final
+  20 are published here, and one note required no correction. These final
+  corrections cover 123 fields (45 substantive and 78 precision),
+  including 48 exactly approved protected-frontmatter fields. Final paired
+  reviews retain 115 SUPPORTED and 5 source-adjudicated PARTIAL holistic
+  fields, plus 1165 SUPPORTED and 36 source-adjudicated UNVERIFIED
+  claims. All 20 publication-evidence gates pass. An optional traceable
+  PDF-derived abstract check resolves 17 extraction-layout conflicts;
+  three book reviews use the no-abstract sentinel. All 269 tests pass.
+  Original V1 labels, source files and historical stamps remain. Corpus
+  counts are unchanged; paused AMJ repairs remain outside this release.
+  The correction and qualification record is in docs/releases/v0.73.0.md.
   Version 0.72.0 (2026-10-08) publishes minimal corrections to 40 legacy V1
   notes after a first-pass source-fidelity review of all 61 V1 notes. The
   changes cover 165 fields (86 substantive and 79 precision), including 58
@@ -1018,7 +1031,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.72.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.73.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

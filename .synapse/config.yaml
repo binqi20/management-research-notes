@@ -96,7 +96,7 @@ validator:
     - other
   # Fields that may be 'Not reported in paper' for these paper types
   optional_for_type:
-    book-review: [research_question, mechanism_process, sample, theoretical_contribution]
+    book-review: [research_question, mechanism_process, sample, theoretical_contribution, abstract]
     editorial:   [research_question, mechanism_process, sample]
     review:      [mechanism_process, sample]
     conceptual:  [sample, mechanism_process]

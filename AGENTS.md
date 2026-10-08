@@ -16,7 +16,7 @@ focuses on what's portable across agents.
 
 **Management Research Notes** is a file-based academic knowledge base of
 **1,167 curated notes** on peer-reviewed papers in management and business
-sustainability research. The current v0.72.0 main-branch snapshot contains 272
+sustainability research. The current v0.73.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
 and 895 Academy of Management Journal pilot notes across 70 recent issues
 (vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
@@ -58,7 +58,7 @@ can be regenerated with `python tools/build_index.py`.
 - Every `paper_id` is permanent — agents may safely use it as a citation target.
 - Two parts:
   - **YAML frontmatter:** bibliographic metadata (title, authors, year, journal, DOI, volume, issue, pages), paper type, controlled-vocabulary `topics:`, methods, sample (N, country, industry, time period), three custom analytic fields (`unit_of_analysis`, `level_of_theory`, `dependent_variable_family`), and (on v2/v3 notes) an `evidence:` block of ≤25-word verbatim PDF quotes anchoring each factual claim.
-  - **Markdown body:** abstract (intended to reproduce the source abstract; see the dated V1 review holds below), research question, mechanism/process, theoretical contribution, practical implication, limitations, future research, and an APA 7th citation block. **v3 notes add three empirical sections — hypotheses / propositions, data & measures, and key findings** — so the note records not just what a paper studied but what it found.
+  - **Markdown body:** abstract (intended to reproduce the source abstract; see the dated V1 review below), research question, mechanism/process, theoretical contribution, practical implication, limitations, future research, and an APA 7th citation block. **v3 notes add three empirical sections — hypotheses / propositions, data & measures, and key findings** — so the note records not just what a paper studied but what it found.
 - **Good for:** grep / full-text search, loading into context, human reading.
 - **Example query:** `grep -l "stakeholder theory" notes/*.md`.
 
@@ -103,7 +103,7 @@ a pull request, it must follow these 7 rules (paraphrased tool-agnostically
 from [`CLAUDE.md`](CLAUDE.md)):
 
 1. **Never invent bibliographic fields.** Title, authors, year, journal, DOI, volume/issue/pages come only from `library/.../manifest.tsv` or a CrossRef lookup by DOI. Unknown → `Not reported in paper`. Never guess.
-2. **Verbatim means verbatim.** When the extraction prompt says "extract the abstract verbatim," the result must be a contiguous substring of the extracted PDF text (modulo whitespace/hyphen normalization).
+2. **Verbatim means verbatim.** An abstract must match the extracted PDF text under the documented normalization. When PDF layout interrupts that text, the optional [PDF-derived abstract check](docs/abstract-evidence.md) reproduces a hash-bound alternative from the same original PDF. Verify complete abstract boundaries visually; do not paraphrase or overwrite source files. Book reviews without standalone abstracts retain the Abstract heading with `Not reported in paper`.
 3. **Notes are the source of truth.** Never edit `index/synapse.db`, `index/papers.csv`, or `index/library.bib` by hand — they are rebuilt from `notes/`. To fix a paper's metadata, re-run the ingestion script and let the derived index rebuild.
 4. **Stable paper IDs.** Every paper has a `paper_id` of the form `{source-slug}-{year-month}-{first-author-slug}-{year}`. Once assigned, it never changes.
 5. **Validate before committing.** After producing or editing a note, run the validator (`python tools/validate_note.py notes/<id>.md`). On fail, fix the note or move it to `incoming/_flagged/` with a `.reason.txt` explaining why.
@@ -114,7 +114,7 @@ from [`CLAUDE.md`](CLAUDE.md)):
 
 ## 4.1 Parallel agent slot policy
 
-At v0.72.0, use at most **three active workers** with the current four-slot Codex runtime,
+At v0.73.0, use at most **three active workers** with the current four-slot Codex runtime,
 or the lower actual cap. Writers own one assigned note; readers own only their
 assigned Layer-2 or claims sidecar. Keep writing and audit waves separate.
 Record and re-read each return before dispatching the next worker. There is no
@@ -132,7 +132,7 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current review status — v0.72.0, 2026-10-08.** All 61 legacy V1 notes received a first-pass source-fidelity review. This release publishes minimal corrections to 40 eligible notes across 165 fields (86 substantive / 79 precision), including the 58 exactly approved protected-frontmatter fields. Final paired reviews record 238 SUPPORTED / two source-adjudicated PARTIAL holistic fields and 2,543 SUPPORTED / 41 source-adjudicated UNVERIFIED claims. All 40 publication-evidence checks pass. Twenty whole notes remain held for abstract-treatment decisions; Spoor required no change. V1 labels and historical extraction stamps are preserved. See the [release evidence and retained judgments](docs/releases/v0.72.0.md) and [complete correction table](docs/releases/v0.72.0-corrections.md).
+**Current review status — v0.73.0, 2026-10-08.** The correction-only review of all 61 legacy V1 notes is complete: 40 corrected notes were published in v0.72.0, this release publishes the remaining 20, and Spoor required no change. These final 20 corrections cover 123 fields (45 substantive / 78 precision), including 48 exactly approved protected-frontmatter fields. Final paired reviews record 115 SUPPORTED / 5 source-adjudicated PARTIAL holistic fields and 1,165 SUPPORTED / 36 source-adjudicated UNVERIFIED claims. All 20 publication-evidence checks pass. Seventeen complete abstracts use the optional, traceable PDF-derived check; three book reviews retain the Abstract heading with `Not reported in paper`. V1 labels and historical extraction stamps are preserved. See the [release evidence and retained judgments](docs/releases/v0.73.0.md) and [complete correction table](docs/releases/v0.73.0-corrections.md).
 
 **Published Stage 1 subset — v0.71.0, 2026-10-05.** The Stage 1 wave's first-pass review covers 45 notes (322 SUPPORTED / 58 PARTIAL / 16 UNSUPPORTED / 9 CONTRADICTED); those are initial judgments, not final defect counts. Nine approved corrections across six fully reviewed notes are now published, with 54/54 post-repair holistic fields SUPPORTED and 626 SUPPORTED / one source-adjudicated UNVERIFIED claim among 627 claims. Two Zhang comparison-coverage gaps retain separately attributed parent source judgments. See the [full correction and rationale disclosure](docs/releases/v0.71.0.md).
 
@@ -406,7 +406,7 @@ full-raw-text exceptions remain superseded by v0.68.0; none was used here.
 | [amj-vol-68-no-1-trzebiatowski-2024](notes/amj-vol-68-no-1-trzebiatowski-2024.md) | Data & Measures | Repaired: SUPPORTED |
 | [amj-vol-68-no-4-li-2025](notes/amj-vol-68-no-4-li-2025.md) | Limitations | Cleared unchanged: SUPPORTED |
 
-**AMJ accepted-PARTIAL inventory carried into v0.72.0 (unchanged from v0.69.0): 25 fields across 23 notes.** The two additional NBS V1 PARTIAL fields in Rohm and Skandera are disclosed with their source dispositions in the [v0.72.0 release](docs/releases/v0.72.0.md).
+**AMJ accepted-PARTIAL inventory carried into v0.73.0 (unchanged from v0.69.0): 25 fields across 23 notes.** The two NBS V1 PARTIAL fields in Rohm and Skandera are disclosed in [v0.72.0](docs/releases/v0.72.0.md); the final 20-note subset adds the separately adjudicated NBS residuals in [v0.73.0](docs/releases/v0.73.0.md).
 
 | Note | Field | Acceptance basis |
 |---|---|---|
@@ -470,13 +470,13 @@ outcomes do not establish that all undetected errors are absent.
 
 Agents querying the data can rely on the following:
 
-- **Abstract fidelity requires source verification.** The v0.72.0 V1 review identified 20 held notes with unresolved abstract treatment, including truncated extracts and book-review openings. The contiguous-source rule remains unchanged; verify a note’s abstract against the paper before quoting it.
+- **Abstract fidelity requires source verification.** The v0.73.0 review resolves the 20 earlier abstract holds: 17 complete abstracts use reproducible PDF-derived evidence and three book reviews use the no-abstract sentinel. The default source-text rule remains unchanged; verify an abstract against the original paper before quoting it.
 - **Every factual claim in v2 note frontmatter is anchored.** If your agent cites a sample size or a theory from v2 frontmatter, there is a verbatim PDF quote behind it in the `evidence:` block.
 - **Stored semantic audits are historical evidence.** Later reviews can identify defects in previously passing notes. The dated status above distinguishes published corrections from unresolved findings; verify substantive prose claims against the source.
 - **Zero `CONTRADICTED` verdicts in the v0.70.0 release-time reports.** This describes the historical stored audit results, not an absolute guarantee that every source contradiction has been detected.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The v0.70.0 release-time stored audit state was checked locally on 2026-10-04; later V1 findings, held notes, Stage 1 findings and unpublished repairs are reported in the dated review status above.
+- Notes are a snapshot, not a live database. The v0.70.0 release-time stored audit state was checked locally on 2026-10-04; the completed V1 review, Stage 1 findings and unpublished repairs are reported in the dated review status above.
 - The audit can identify hallucinations and direction-reversals, but does not resolve inconsistencies in the source paper itself. Always cite the original paper for any claim of substance.
 - `PARTIAL` verdicts can indicate minor paraphrastic drift, compression, or missing source context in the fitted audit input; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
 
@@ -491,7 +491,7 @@ numeric-check policy does not retrospectively restamp older reports.
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.72.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.73.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

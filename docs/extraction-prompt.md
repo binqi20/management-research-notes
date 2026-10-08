@@ -63,7 +63,10 @@ markdown body. The exact format is shown below.
   repair-and-re-audit loop.
 - For the abstract, extract verbatim. Do not paraphrase. Whitespace may be normalized
   (line wraps removed) but the text must otherwise be a contiguous substring of the
-  source.
+  source. If layout interrupts the original extraction, use the optional
+  [PDF-derived abstract evidence](abstract-evidence.md) check. It reproduces the
+  reading order or visually verified page regions from the same original PDF;
+  preserve original sources and verify the complete abstract boundaries.
 - Preserve diacritics and capitalization.
 - Do not copy headers/footers (journal mastheads, running heads, page numbers).
 - Reconstruct words broken by line-wrap hyphenation.
@@ -144,12 +147,16 @@ You will be told the `paper_type` from a list of: `empirical-quantitative`,
 
 | Paper type            | Fields that may be `Not reported in paper`                         |
 |-----------------------|--------------------------------------------------------------------|
-| `book-review`         | research_question, mechanism, sample, theoretical_contribution, hypotheses, data_measures, key_findings |
+| `book-review`         | research_question, mechanism, sample, theoretical_contribution, **abstract**, hypotheses, data_measures, key_findings |
 | `editorial`           | research_question, mechanism, sample, **abstract**, hypotheses, data_measures, key_findings |
 | `review`              | mechanism, sample, hypotheses, data_measures, key_findings         |
 | `conceptual`          | mechanism, sample, hypotheses, data_measures, key_findings         |
 | `empirical-qualitative`, `empirical-mixed` | hypotheses (inductive studies often have none) |
 | `empirical-quantitative` | none — all fields should be present                             |
+
+**Book-review abstract note:** When the review has no standalone abstract, retain
+the Abstract heading with `Not reported in paper`. Do not label its opening
+paragraph as an abstract. If an actual abstract exists, extract it completely.
 
 **Editorial abstract note:** "From the Editors" pieces typically have no formal
 abstract section. If the editorial has one (rare), extract it verbatim as usual.

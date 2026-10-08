@@ -109,6 +109,13 @@ one `notes/<paper_id>.md`; then self-validates:
 ```
 python tools/validate_note.py notes/<paper_id>.md --flag
 ```
+For a visually verified abstract blocked by PDF layout, use the optional
+[PDF-derived abstract evidence](abstract-evidence.md) procedure and pass
+`--abstract-evidence <local-record.json>` for that single note. Preserve the
+original PDF/text and include the evidence reference in the publication review.
+Book reviews without standalone abstracts keep the Abstract heading with
+`Not reported in paper`.
+
 Each agent returns **OK / FAIL / STOP**. Extraction agents must **not** run the
 Layer 2 audit. v3 notes carry 11 body sections (Abstract, Research Question,
 Hypotheses / Propositions, Mechanism Process, Data & Measures, Key Findings,

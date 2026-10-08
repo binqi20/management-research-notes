@@ -1,6 +1,6 @@
 # Publication evidence check
 
-Current tool contract: **v0.71.0**, `publication-review-v1`. This is a read-only consistency gate for changed notes that require both readers. It neither runs an audit nor edits an official report. Historical reports are not restamped. It is not the one-reader Stage 1 first-pass gate.
+Current tool contract: `publication-review-v1`, introduced in **v0.71.0**, with optional PDF-derived abstract evidence. This is a read-only consistency gate for changed notes that require both readers. It neither runs an audit nor edits an official report. Historical reports are not restamped. It is not the one-reader Stage 1 first-pass gate.
 
 ```sh
 python3 tools/check_publication_readiness.py notes/<id>.md \
@@ -45,6 +45,13 @@ Keep the review and its evidence private. Populate assertions only after actuall
 ```
 
 The example is a schema illustration, not evidence. Supply the actual models and contexts used. Each `evidence.path` is relative to the review file. Include both reader sidecars, numeric dispositions, source/coverage review, applicable authorization and the latest pending registry; the parent verifies their meaning and completeness. The tool requires at least one valid hash-bound evidence entry and validates referenced parent-review/coverage/claims artifacts when those references exist in the official report. It does not discover omitted pending proposals by itself.
+
+When using the optional [PDF-derived abstract check](abstract-evidence.md), add
+`"abstract_evidence": {"path": "../abstract-evidence/<id>.json", "sha256": "<file byte hash>"}`
+to the parent review. The gate verifies this reference, reproduces the extraction
+and checks the abstract. Without this field it uses the original extracted text.
+A supplied stale record blocks readiness even if the original-text match passes.
+The parent still verifies the complete PDF boundaries and all other note content.
 
 Adjudication keys are `layer2:<field_key>` or `claim:<zero-based row index>`, bound to the report hash. Every non-SUPPORTED result needs a disposition (`source_faithful` or `framing`), nonempty rationale and valid raw-line ranges. These fields record a source judgment; adding a hash or line number does not make the judgment true. Parent-confirmed defects remain repair-class and cannot be waived by choosing an accepted disposition.
 

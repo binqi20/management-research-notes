@@ -16,7 +16,9 @@ Checks (in order, with early exit on fatal frontmatter errors):
      are normalized for whitespace, soft hyphens (U+00AD), curly quotes/
      apostrophes (→ ASCII), and stray C0 control characters. A second hyphen-
      agnostic pass tolerates PDF line-wrap concatenation artifacts. Skipped if
-     abstract is "Not reported in paper".
+     abstract is "Not reported in paper". An explicit --abstract-evidence record
+     instead reproduces hash-bound evidence from the original PDF; see
+     docs/abstract-evidence.md. Other quotation checks are unchanged.
   9. Prose drift: any backticked kebab-case token in the body that is within
      edit distance 2 of a real topics.json slug but isn't an exact match is
      flagged as a likely typo (e.g., `unehical-behavior` near `unethical-behavior`).
@@ -37,13 +39,17 @@ Usage:
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import re
 import sys
+import subprocess
 from pathlib import Path
 
 import yaml
+
+import abstract_evidence
 
 # --- locate the Synapse root ------------------------------------------------------
 
@@ -107,7 +113,7 @@ REQUIRED_HEADINGS_V3 = [
 ]
 
 OPTIONAL_FOR_TYPE = {
-    "book-review": {"research_question", "mechanism_process", "sample", "theoretical_contribution",
+    "book-review": {"research_question", "mechanism_process", "sample", "theoretical_contribution", "abstract",
                     "hypotheses", "data_measures", "key_findings"},
     # 'abstract' is optional for editorials because "From the Editors" pieces
     # typically have no formal abstract section. Without this exemption,
@@ -535,11 +541,20 @@ def check_prose_topic_drift(body: str, errors: list[str]) -> None:
             )
 
 
-def check_abstract_verbatim(body_sections: dict, fm: dict, errors: list[str]) -> None:
+def check_abstract_verbatim(body_sections: dict, fm: dict, errors: list[str],
+                            evidence_path: Path | None = None, *, root: Path | None = None) -> None:
     abstract = body_sections.get("Abstract", "")
+    source_root = SYNAPSE_ROOT if root is None else root
+    if evidence_path is not None:
+        try:
+            record = json.loads(evidence_path.read_text(encoding="utf-8"))
+            abstract_evidence.verify(record, source_root, fm, abstract, normalize_ws)
+        except (ValueError, OSError, ImportError, subprocess.SubprocessError, RuntimeError) as exc:
+            errors.append(f"PDF-derived abstract evidence: {exc}")
+        return
     if abstract == NOT_REPORTED or not abstract:
         return
-    text_path = SYNAPSE_ROOT / fm.get("text_path", "")
+    text_path = source_root / fm.get("text_path", "")
     if not text_path.exists():
         errors.append(f"text_path does not exist for verbatim check: {text_path}")
         return
@@ -675,7 +690,7 @@ def check_evidence_anchors(fm: dict, errors: list[str]) -> None:
 # --- main -------------------------------------------------------------------------
 
 
-def validate(note_path: Path) -> list[str]:
+def validate(note_path: Path, abstract_evidence_path: Path | None = None) -> list[str]:
     errors: list[str] = []
     if not note_path.exists():
         return [f"note file does not exist: {note_path}"]
@@ -693,28 +708,30 @@ def validate(note_path: Path) -> list[str]:
     sections = parse_body_sections(body)
     check_required_headings(sections, fm, errors)
     check_apa_citation_doi(sections, fm, errors)
-    check_abstract_verbatim(sections, fm, errors)
+    check_abstract_verbatim(sections, fm, errors, abstract_evidence_path)
     check_prose_topic_drift(body, errors)
     check_evidence_anchors(fm, errors)  # Layer 1 faithfulness audit (v2+ only)
     return errors
 
 
 def main() -> int:
-    args = sys.argv[1:]
-    if not args:
-        print("usage: validate_note.py <note.md> [--flag]", file=sys.stderr)
-        return 2
-    flag = "--flag" in args
-    paths = [Path(a) for a in args if not a.startswith("--")]
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("paths", nargs="+", type=Path)
+    parser.add_argument("--flag", action="store_true")
+    parser.add_argument("--abstract-evidence", type=Path,
+                        help="local pdf-abstract-evidence-v1 JSON; reproduced from the original PDF")
+    args = parser.parse_args()
+    if args.abstract_evidence and len(args.paths) != 1:
+        parser.error("--abstract-evidence requires exactly one note")
     overall = 0
-    for p in paths:
-        errors = validate(p.resolve())
+    for p in args.paths:
+        errors = validate(p.resolve(), args.abstract_evidence)
         if errors:
             overall = 1
             print(f"FAIL  {p}")
             for e in errors:
                 print(f"  - {e}")
-            if flag:
+            if args.flag:
                 FLAGGED.mkdir(parents=True, exist_ok=True)
                 reason = FLAGGED / (p.stem + ".reason.txt")
                 reason.write_text("\n".join(errors) + "\n", encoding="utf-8")

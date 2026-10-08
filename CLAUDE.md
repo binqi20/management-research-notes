@@ -65,9 +65,12 @@ research. Read this file before doing anything in this folder.
    committing new notes. The legacy
    `tools/verify_years.py` is preserved as a year-only alias and is equivalent
    to `verify_metadata.py --field year`.
-2. **Verbatim means verbatim.** When the extraction prompt says "extract the abstract
-   verbatim," the text in the note must appear as a contiguous substring of the
-   extracted PDF text (modulo whitespace). The validator will check this.
+2. **Verbatim means verbatim.** The abstract must match the extracted PDF text under
+   the documented normalization. For layout interruptions, use the optional
+   [PDF-derived abstract check](docs/abstract-evidence.md), which reproduces a
+   hash-bound alternative from the same original PDF. Visually verify complete
+   boundaries and preserve original source files. Book reviews without standalone
+   abstracts retain the heading with `Not reported in paper`.
 3. **Notes are the source of truth.** If you need to fix a paper's metadata, re-run
    the ingestion pipeline for that paper (`tools/ingest_batch.py` to rebuild its
    bundle, then re-extract the note). Don't edit `synapse.db` directly. Don't edit

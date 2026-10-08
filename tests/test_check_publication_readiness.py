@@ -100,6 +100,67 @@ def test_stale_bindings_block(bundle, target):
     assert code == 1 and result["ready"] is False
 
 
+def test_abstract_evidence_reference_must_be_current_and_reproducible(bundle):
+    _, review, run, paths = bundle
+    evidence_path = paths[0].parent / "abstract-evidence.json"
+    evidence_path.write_text('{"schema_version": "invalid"}')
+    review["abstract_evidence"] = {"path": evidence_path.name, "sha256": "stale"}
+    result, code = run()
+    assert code == 1 and "abstract evidence reference is stale" in result["errors"][0]
+    review["abstract_evidence"]["sha256"] = gate.digest(evidence_path)
+    result, code = run()
+    assert code == 1 and "invalid evidence schema" in result["errors"][0]
+
+
+def test_abstract_missing_from_raw_source_needs_verified_alternative(bundle):
+    report, review, run, paths = bundle
+    note = paths[0]
+    note.write_text(note.read_text() + '\n**Abstract**\nInvented abstract outside the source.\n')
+    new_hash = gate.audit.sha256_text(note.read_text())
+    report["input_hashes"]["note_sha256"] = new_hash
+    review["note_sha256"] = new_hash
+    result, code = run()
+    assert code == 1 and "Abstract is not a verbatim substring" in result["errors"][0]
+
+
+def test_publication_gate_replays_valid_pdf_abstract_evidence(bundle):
+    import abstract_evidence as ae
+    fitz = pytest.importorskip("fitz")
+    report, review, run, paths = bundle
+    note, source = paths[:2]
+    abstract = "This synthetic abstract reports 25 observations. It is not a causal result."
+    pdf = note.parent / "paper.pdf"
+    with fitz.open() as doc:
+        doc.new_page().insert_text((40, 50), abstract)
+        doc.save(pdf)
+    note.write_text(note.read_text().replace("text_path: source.txt", "text_path: source.txt\npdf_path: paper.pdf")
+                    + '\n**Abstract**\n' + abstract + '\n')
+    new_hash = gate.audit.sha256_text(note.read_text())
+    review["note_sha256"] = report["input_hashes"]["note_sha256"] = new_hash
+    for key in ("layer_2_provenance", "layer_2_claims_provenance"):
+        report[key]["note_sha256"] = new_hash
+    recipe = {"name": "pymupdf-regions", "regions": [{"page": 1, "rect": [30, 30, 590, 65]}]}
+    text, version = ae.extract(pdf, recipe)
+    record = {
+        "schema_version": "pdf-abstract-evidence-v1", "paper_id": "example",
+        "pdf_path": "paper.pdf", "text_path": "source.txt",
+        "pdf_sha256": gate.digest(pdf), "text_sha256": gate.digest(source),
+        "abstract_sha256": ae.digest(abstract.encode()),
+        "extractor": {**recipe, "version": version},
+        "derived_text_sha256": ae.digest(text.encode()),
+        "boundary_review": {"complete": True, "reviewer": "synthetic test",
+                            "source_location": "page 1", "rationale": "Complete synthetic abstract."},
+    }
+    ep = note.parent / "abstract.json"
+    ep.write_text(json.dumps(record))
+    review["abstract_evidence"] = {"path": ep.name, "sha256": gate.digest(ep)}
+    result, code = run()
+    assert code == 0, result
+    del review["abstract_evidence"]
+    result, code = run()
+    assert code == 1 and "Abstract is not a verbatim substring" in result["errors"][0]
+
+
 @pytest.mark.parametrize("mutation", [
     lambda a, r: r.update(schema_version="wrong"),
     lambda a, r: r.pop("coverage_reviewed"),

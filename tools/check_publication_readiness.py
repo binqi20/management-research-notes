@@ -16,6 +16,7 @@ from pathlib import Path
 # Keep CLI execution read-only even when dependency bytecode caches are absent.
 sys.dont_write_bytecode = True
 import audit_note as audit
+from validate_note import check_abstract_verbatim, parse_body_sections
 
 
 class Blocked(ValueError):
@@ -84,6 +85,17 @@ def _check(note_path: Path, audit_path: Path, review_path: Path) -> str:
         require(review.get(key) is True, f"{key} must be literal true")
     require(isinstance(review.get("pending_corrections"), list)
             and review["pending_corrections"] == [], "pending_corrections must be an empty list")
+    abstract_path = None
+    if "abstract_evidence" in review:
+        reference = review["abstract_evidence"]
+        require(isinstance(reference, dict) and nonempty(reference.get("path")),
+                "abstract_evidence needs a path and sha256")
+        abstract_path = review_path.parent / reference["path"]
+        require(digest(abstract_path) == reference.get("sha256"), "abstract evidence reference is stale")
+    abstract_errors = []
+    check_abstract_verbatim(parse_body_sections(body), fm, abstract_errors,
+                            abstract_path, root=audit.SYNAPSE_ROOT)
+    require(not abstract_errors, "; ".join(abstract_errors))
     require(report.get("overall") == "pass", "official overall must pass")
     require(isinstance(report.get("parse_warnings"), list) and not report["parse_warnings"],
             "official parse_warnings must be an empty list")

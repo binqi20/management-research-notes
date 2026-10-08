@@ -36,7 +36,7 @@ sample:
 # Kalpita Bhar Paul. Ecophenomenology and the Environmental Crisis in the Sundarbans: Towards a Community-Based Ethic
 
 **Abstract**
-Kalpita Bhar Paul’s Ecophenomenology and the Environmental Crisis in the Sundarbans is a powerful and unconventional contribution to the study of organizations, environment, and ethics. Although written in the language of philosophy, the book has implications that resonate deeply with management and organization scholars confronting the limitations of the contemporary sustainability paradigm. Paul’s central claim is that the environmental crisis is not only a biophysical condition but also a crisis of meaning and imagination: a breakdown in how humans understand their relationship with the more-than-human world.
+Not reported in paper
 
 **Research Question**
 Not reported in paper
@@ -56,10 +56,10 @@ Not reported in paper
 Reinecke argues that Paul’s ecophenomenology offers managers and organizations a vocabulary for moving beyond treating nature as capital, risk, or a set of ecosystem services to be optimized. It invites a shift from managing over nature to managing with it—engaging ecological systems as partners in value creation—illustrated by examples such as Patagonia making Earth its sole shareholder and Faith in Nature’s "Nature on the Board" initiative that grants nature formal representation in corporate governance.
 
 **Limitations**
-Reinecke notes that Paul’s call to "let go" and adopt an "ethos of letting be" may appear too contemplative and insufficient amid the accelerating crises of climate change, biodiversity loss, and social inequality, potentially limiting its traction as a prescriptive framework for urgent organizational action.
+Reinecke notes that Paul’s call to "let go" and adopt an "ethos of letting be" may appear too contemplative and insufficient amid the accelerating crises of climate change, biodiversity loss, and social inequality; the reviewer responds by interpreting this as an invitation to redefine agency, rather than withdrawal.
 
 **Future Research**
-The review suggests that organization scholars could build on ecophenomenology as a methodological provocation—studying organizations and institutions as part of, rather than apart from, the living environments that sustain them—and develop leadership and governance approaches for the Anthropocene that cultivate sensitivity to how ecosystems co-create resilience and align strategy with natural limits and rhythms.
+The review suggests that organization scholars could build on ecophenomenology as a methodological provocation—studying organizations and institutions as part of, rather than apart from, the living environments that sustain them.
 
 **APA 7th Citation**
 Reinecke, J. (2026). Kalpita Bhar Paul. Ecophenomenology and the environmental crisis in the Sundarbans: Towards a community-based ethic. *Administrative Science Quarterly*, 71(2), 1–4. https://doi.org/10.1177/00018392261428471
