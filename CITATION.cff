@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-10-05"
-version: "0.71.0"
+date-released: "2026-10-08"
+version: "0.72.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -55,6 +55,17 @@ abstract: >-
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
   a published rubric) gates every note into the library.
+  Version 0.72.0 (2026-10-08) publishes minimal corrections to 40 legacy V1
+  notes after a first-pass source-fidelity review of all 61 V1 notes. The
+  changes cover 165 fields (86 substantive and 79 precision), including 58
+  exactly approved protected-frontmatter fields. Final paired readers record
+  238 SUPPORTED and two source-adjudicated PARTIAL holistic fields, plus
+  2,543 SUPPORTED and 41 source-adjudicated UNVERIFIED claims. All 40
+  publication-evidence checks pass. Twenty whole notes remain held for
+  abstract-treatment decisions; one note requires no correction. Original
+  V1 labels and extraction stamps remain. The corpus stays at 1,167 notes;
+  the paused AMJ corrections remain outside this release. The complete
+  correction and qualification record is in docs/releases/v0.72.0.md.
   Version 0.71.0 (2026-10-05) consolidates the analysis workflow and publishes
   nine approved clause corrections across eight fields in six AMJ 57-3 notes.
   Post-repair holistic audits score 54 of 54 fields SUPPORTED. Claims readers
@@ -1007,7 +1018,7 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.71.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.72.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
   vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts

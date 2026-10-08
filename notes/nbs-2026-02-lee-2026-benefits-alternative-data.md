@@ -30,7 +30,7 @@ theory:
   - "algorithmic decision-making and fairness"
   - "distributional consequences of data"
 topics:
-  - "financial-accounting"
+  - "risk-management"
   - "sustainable-finance"
   - "ai-automation"
   - "developing-economies"
@@ -41,9 +41,9 @@ methods: "Observational study using merged administrative and proprietary data (
 sample:
   industry: "Consumer credit / retail (credit card issuer owned by a Peruvian multi-sector company)"
   country: "Peru"
-  time_period: "January 2021-September 2023 (loyalty and credit registry); credit card applications from June 2022"
+  time_period: "Loyalty transactions: January 2021-September 2023; credit registry: May 2021-September 2023; credit card applications: June 2022"
   units: "Individual credit card applicants (with and without formal credit history)"
-  n: "Applicants grouped into six cohorts (e.g., Group A: 24,899 approved applicants with credit history; Group C: 1,719; Group D: 1,016; Group F: 10,132 no-history rejected applicants also denied elsewhere)"
+  n: "46,039 applicants grouped into six cohorts (e.g., Group A: 24,899 approved applicants with credit history; Group C: 1,719; Group D: 1,016; Group F: 10,132 no-history applicants rejected by the focal issuer who remained absent from the registry; if they applied elsewhere, they were also denied)"
 ---
 
 # Who Benefits from Alternative Data for Credit Scoring? Evidence from Peru
@@ -57,19 +57,19 @@ Can retail transaction data be used as alternative data to construct credit scor
 **Mechanism Process**
 - IV(s): Inclusion of retail loyalty card transaction data (shopping behavior features) in credit scoring algorithms, alongside self-reported socioeconomic characteristics, utility payment-based scores, and administrative credit registry (RCC) data.
 - DV(s): Simulated credit card approval rates and portfolio default risk, separately for applicants with and without a formal credit history.
-- Mediators: Improved risk differentiation via the predictive signal embedded in retail shopping behavior (product mix, consistency of shopping routines).
+- Explanatory pathway: Improved risk differentiation via the predictive signal embedded in retail shopping behavior (product mix, consistency of shopping routines).
 - Moderators: Applicant's credit-history status (no-history vs. with-history); lender's business objective (market share expansion vs. portfolio risk minimization); baseline stringency of the lender's credit policy.
 
-For applicants without a formal credit history, lenders face severe information asymmetry because conventional socioeconomic and utility-based predictors produce highly overlapping risk score distributions for defaulters and non-defaulters. Retail transaction data adds orthogonal behavioral signals (what and how consumers buy) that sharpen the ability to separate low- and high-risk individuals, which expands the set of applicants whose predicted risk falls below approval thresholds. For applicants already in the credit registry, registry data already captures most repayment-relevant information, so retail data produces only marginal reclassification and may even tighten approval when used to identify higher-risk borrowers inside the existing pool.
+For applicants without a formal credit history, lenders face severe information asymmetry because conventional socioeconomic and utility-based predictors provide limited risk differentiation. Retail transaction data adds complementary behavioral signals (what and how consumers buy) that sharpen the ability to separate low- and high-risk individuals, which expands the set of applicants whose predicted risk falls below approval thresholds. For applicants already in the credit registry, registry data already captures most repayment-relevant information, so retail data produces only marginal reclassification and may even tighten approval when used to identify higher-risk borrowers inside the existing pool.
 
 **Theoretical Contribution**
-The paper contributes to four literatures: the distributional consequences of data and algorithmic decision-making in marketing, the use of alternative data for credit scoring (extending Lee, Yang, and Anderson 2025 beyond grocery to multi-domain retail), the emerging literature on nonfinancial firms entering consumer lending, and information-frictions research in credit markets. It reframes marketing data as a nonmarketing asset whose predictive power is concentrated precisely where traditional financial data is missing, and shows that the welfare effect of alternative data depends on which segment of the applicant pool currently suffers from information asymmetry rather than on data volume per se.
+The paper contributes to four literatures: the distributional consequences of data and algorithmic decision-making in marketing, the use of alternative data for credit scoring (extending Lee, Yang, and Anderson 2025 beyond grocery to multi-domain retail), the emerging literature on nonfinancial firms entering consumer lending, and information-frictions research in credit markets. It reframes marketing data as a nonmarketing asset whose incremental predictive value is greatest where traditional financial data is missing, and shows that the effect of alternative data on simulated credit approvals depends on which segment of the applicant pool currently suffers from information asymmetry.
 
 **Practical Implication**
-For lenders, retail transaction data is most valuable as a "second look" tool for evaluating applicants who would otherwise be rejected due to missing credit histories, and can nearly triple approval rates for no-history applicants (from 15.6% to as high as 47.8%) depending on risk appetite. For policy makers, the results suggest alternative data can advance financial inclusion goals for unbanked populations, but realizing these gains requires attention to long-term consumer welfare, procedural and distributive fairness, strategic manipulation risks, and privacy safeguards around cross-sector data sharing.
+For lenders, retail transaction data is valuable as a "second look" tool for evaluating applicants who would otherwise be rejected due to missing credit histories. Separately, simulations show that adding retail data can more than triple approval rates for no-history applicants (from 15.6% to as high as 47.8%) depending on risk appetite. For policy makers, the results suggest alternative data can advance financial inclusion goals for unbanked populations, but realizing these gains requires attention to long-term consumer welfare, procedural and distributive fairness, strategic manipulation risks, and privacy safeguards around cross-sector data sharing.
 
 **Limitations**
-Selection bias remains because the algorithms cannot account for approved applicants who never activated their cards or for rejected applicants who do not appear in the credit registry. The sample is restricted to individuals who voluntarily enrolled in a single firm's loyalty program, limiting generalizability to the broader applicant pool and excluding people entirely invisible to traditional financial data. The analysis relies on simulated rather than randomized field-experimental approval decisions.
+Selection bias remains because model training and validation exclude approved applicants who never activated their cards and rejected applicants who do not appear in the credit registry, although the simulations predict risk scores for both groups. The sample is restricted to individuals who voluntarily enrolled in a single firm's loyalty program, limiting generalizability to the broader applicant pool and not representing people who never applied to the focal lender. The analysis relies on simulated rather than randomized field-experimental approval decisions.
 
 **Future Research**
 The authors suggest extending analyses to broader pools of potential borrowers beyond loyalty-program members, conducting field experiments that deploy alternative-data scoring algorithms in production to validate downstream behavioral effects, and investigating how alternative data reshapes organizational practices beyond credit scoring, including marketing targeting, customer acquisition strategies, and post-approval customer service and operations for newly included borrowers.

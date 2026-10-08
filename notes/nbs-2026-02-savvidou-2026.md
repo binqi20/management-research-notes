@@ -32,8 +32,6 @@ keywords:
   - "Solar"
 theory:
   - "circular economy"
-  - "dynamic material flow analysis"
-  - "explorative scenario analysis"
 topics:
   - "circular-economy"
   - "renewable-energy"
@@ -62,19 +60,19 @@ What is the potential impact of circular technology design strategies—includin
 **Mechanism Process**
 - IV(s): Circular technology design strategies — longer design lifespan, metal intensity (MI) reduction, and substitution of critical metals via novel technologies (e.g., high-temperature superconductors, ferrite magnets, perovskite cells, silver-free silicon).
 - DV(s): Cumulative minor metal demand (2022-2050) and the gap between new demand and quantities available for recovery from decommissioned wind and solar technologies.
-- Mediators: Technology stock dynamics (installed capacity, lifespan distributions) that shape inflow-outflow balances in a stock-driven MFA.
-- Moderators: Technology type (onshore vs offshore wind; c-Si, a-Si, CdTe, CIGS solar) and metal-specific intensities.
+- Model dynamics: Technology stock dynamics (installed capacity, lifespan distributions) that shape inflow-outflow balances in a stock-driven MFA.
+- Model disaggregation and inputs: Technology type (onshore vs offshore wind; c-Si, a-Si, CdTe, CIGS solar) and metal-specific intensities.
 
-Using a dynamic, stock-driven material flow analysis calibrated on Sweden's renewable electricity pathway to 2050, the paper operationalizes each circular design strategy as a parameter change in the MFA (longer assumed lifespan, declining MI trajectories, or shifts to substitute technologies). These parameter changes propagate through the stock-flow equations to alter inflows of new technologies and outflows from decommissioning, which in turn determine primary metal demand and recovery potential. The combination scenario compounds the strategies to show how they jointly reduce demand but also reduce the stock available for future recovery—illustrating a trade-off between demand reduction and secondary supply potential.
+Using a dynamic, stock-driven material flow analysis calibrated on Sweden's renewable electricity pathway to 2050, the paper operationalizes each circular design strategy as a parameter change in the MFA (longer assumed lifespan, declining MI trajectories, or shifts to substitute technologies). Longer lifespans alter technology inflows and decommissioning outflows under the common installed-capacity pathway. MI reduction and substitution change the metal content of technology inflows; the resulting metal flows determine demand and quantities available for recovery. The combination scenario compounds the strategies to show how they jointly reduce demand but also reduce the stock available for future recovery—illustrating a trade-off between demand reduction and secondary supply potential.
 
 **Theoretical Contribution**
-The study extends dynamic MFA research on critical materials by moving beyond recycling-focused circular economy strategies to jointly evaluate three under-studied technology-design strategies—longer design lifespan, MI reduction, and substitution—within a single prospective framework. By modeling these strategies individually and in combination for 11 minor metals across wind and solar sub-technologies, the paper reveals synergies and trade-offs that single-strategy or single-metal studies cannot capture, and shows that circular technology design can materially reduce primary demand even in the absence of efficient end-of-life recycling.
+The study extends dynamic MFA research on critical materials by moving beyond recycling-focused circular economy strategies to jointly evaluate three under-studied technology-design strategies—longer design lifespan, MI reduction, and substitution—within a single prospective framework. By modeling these strategies individually and in combination for 11 minor metals across wind and solar sub-technologies, the paper reveals synergies and trade-offs from jointly assessing multiple strategies and metals, and shows that circular technology design can materially reduce primary demand even in the absence of efficient end-of-life recycling.
 
 **Practical Implication**
 Findings are directly relevant for actors along the wind and solar supply chains—from primary metal extraction and component manufacturing to the electricity sector—and highlight the importance of incorporating technology-design-focused circular economy strategies into energy policy. Because recovery from decommissioned technologies is insufficient to meet new demand for most metals before 2050, policy must still support additional primary or secondary supply while simultaneously incentivizing longer lifespans, MI reduction, and substitution.
 
 **Limitations**
-The analysis runs only until 2050, so it does not fully capture the long-term impact of extended design lifespans, and it relies on uncertain assumptions about future technology deployment, material intensities, and substitution pathways. The study uses Sweden as a single case and focuses on 11 minor metals in specific wind and solar sub-technologies, which limits direct generalizability to other national contexts or broader materials portfolios. It also does not incorporate explicit recycling rates, so the combined effect on primary metal demand and secondary supply is only partially addressed.
+The analysis runs only until 2050, so it does not fully capture the long-term impact of extended design lifespans, and it relies on uncertain assumptions about future technology deployment, material intensities, and substitution pathways. The study uses Sweden as a single case and focuses on 11 minor metals in specific wind and solar sub-technologies. It also does not incorporate explicit recycling rates, so the combined effect on primary metal demand and secondary supply is only partially addressed.
 
 **Future Research**
 Future research could extend the time horizon beyond 2050 to assess long-run lifespan effects and combine the studied strategies with CE strategies from other lifecycle stages—such as operation, maintenance, reuse, refurbishment, and recycling. Researchers could also investigate the performance, supply-risk, and social-environmental-economic trade-offs of specific substitution options, and incorporate recycling rates into the MFA to jointly assess primary metal demand and secondary supply availability.

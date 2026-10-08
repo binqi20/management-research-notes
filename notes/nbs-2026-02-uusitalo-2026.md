@@ -27,8 +27,7 @@ keywords:
   - "Value orientations"
   - "Biodiversity loss"
 theory:
-  - "Value-Belief-Norm theory"
-  - "Schwartz value theory (egoistic, altruistic, biospheric orientations)"
+  - "Three value orientations model (egoistic, altruistic and biospheric; De Groot and Steg, 2008)"
   - "Pro-environmental behaviour (PEB) framework"
   - "Perceived consumer effectiveness"
 topics:
@@ -45,7 +44,7 @@ sample:
   country: "Finland"
   time_period: "August 2022"
   units: "Individual adult consumers aged 18-75, recruited via an online panel with quotas for gender, age, and region"
-  n: "1,000"
+  n: "1,000 returned surveys; 986 participants analyzed after data cleaning"
 ---
 
 # Values, risk and biodiversity-friendly action: perceived consumer effectiveness matters
@@ -66,16 +65,16 @@ What are the antecedents of biodiversity-respectful consumer behaviours, and how
 - Mediators: Perceived risk of biodiversity loss (seriousness, probability, and concern)
 - Moderators: Perceived consumer effectiveness
 
-Grounded in value-belief-norm reasoning, the study argues that stable value orientations shape consumers' cognitive appraisal of biodiversity loss as a risk, which in turn activates pro-environmental actions. Biospheric values (valuing nature intrinsically) strongly elevate risk perception, whereas altruistic values (prioritizing human others) reduce it because biodiversity loss appears distant and indirect relative to immediate human needs. Risk perception then drives three types of behavior. Perceived consumer effectiveness — the belief that one's actions can make a difference — amplifies the translation of risk perception into activism, sustainable consumption, and food choices, functioning as a self-efficacy-like moderator of agency.
+Drawing on the pro-environmental behaviour literature, the study argues that stable value orientations shape consumers' cognitive appraisal of biodiversity loss as a risk, which in turn activates pro-environmental actions. Biospheric values (valuing nature intrinsically) are strongly positively associated with risk perception, whereas altruistic values (prioritizing human others) are negatively associated with it. The authors suggest possible value trade-offs or prioritization of immediate human needs over distant environmental threats as alternative explanations. Risk perception then drives three types of behavior. Perceived consumer effectiveness — the belief that one's actions can make a difference — amplifies the translation of risk perception into activism, sustainable consumption, and food choices, functioning as a self-efficacy-like moderator of agency.
 
 **Theoretical Contribution**
 The study extends the pro-environmental behaviour literature by distinguishing biodiversity-respectful consumption from more familiar climate-oriented behaviours and showing that biospheric values, not altruistic values, are the dominant value-based driver of biodiversity loss risk consciousness. It contributes a moderation account in which perceived consumer effectiveness amplifies the link between risk perception and high-effort sustainable behaviours, advancing understanding of why value-behaviour gaps persist for indirect, hard-to-observe environmental threats. The counterintuitive negative effect of altruistic values highlights that nature must be incorporated as a distinct moral object in theories of sustainable consumption.
 
 **Practical Implication**
-Marketing managers, public campaigners, and policymakers should frame biodiversity loss in terms of both its direct and indirect impacts on human and natural well-being and make the consumer's own potential impact salient. Communications should activate biospheric values, clearly convey the risks of biodiversity loss, and emphasise consumers' agency through active citizenship, sustainable consumption, and biodiversity-respectful food choices (e.g., plant-based, organic, or locally sourced products). Firms can use these insights to design non-greenwashed green marketing that connects product claims to concrete biodiversity outcomes.
+Marketing managers and public campaigners should frame biodiversity loss in terms of both its direct and indirect impacts on human and natural well-being and make the consumer's own potential impact salient. Communications should activate biospheric values, clearly convey the risks of biodiversity loss, and emphasise consumers' agency through active citizenship, sustainable consumption, and biodiversity-respectful food choices (e.g., plant-based, organic, or locally sourced products). Firms can use these insights to design non-greenwashed green marketing that connects product claims to concrete biodiversity outcomes.
 
 **Limitations**
-Model fit was only marginal on some indices (e.g., TLI = 0.89), suggesting the specified pathways may omit relevant constructs. The data are cross-sectional and self-reported, limiting causal inference about value–risk–behaviour links. The Finnish sample, characterized by tradition and conformity-oriented values and relatively pro-environmental attitudes, may not generalize to populations with different cultural value profiles.
+The measurement model reported TLI = 0.89, while the final structural model reported TLI = 0.90 and was described as having acceptable fit. The authors suggest additional constructs or alternative pathways to improve fit. The data are cross-sectional and self-reported, limiting causal inference about value–risk–behaviour links. The Finnish sample, characterized by tradition and conformity-oriented values and relatively pro-environmental attitudes, may not generalize to populations with different cultural value profiles.
 
 **Future Research**
 The authors call for strengthening the model by adding mediators such as moral obligation, eco-anxiety, or biodiversity knowledge, and moderators such as social influence, cultural factors, or personality traits. Longitudinal and experimental designs are needed to establish causality and test specific interventions, and subgroup analyses across demographics and awareness levels would test robustness. Future work should also disaggregate egoistic values (hedonic vs. financial) and altruistic values (local vs. global) and experiment with framing biodiversity loss as a personal or community issue; comparative cross-country studies involving different value orientations are also encouraged.

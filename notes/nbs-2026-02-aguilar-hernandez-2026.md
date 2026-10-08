@@ -37,14 +37,14 @@ topics:
   - "stakeholder-engagement"
   - "latin-america"
   - "global-south"
-unit_of_analysis: "industry"
+unit_of_analysis: "na"
 level_of_theory: "macro"
-dependent_variable_family: "environmental"
+dependent_variable_family: "social"
 methods: "Convergent mixed-methods design combining 19 semi-structured expert interviews (generating 51 priority stakeholder questions), an updated PRISMA systematic literature review (335 peer-reviewed records, 405 research objectives), and thematic analysis following Braun and Clarke (2006); alignment between interview and literature datasets assessed with a Research Alignment Ratio (RAR) computed over 27 sub-themes within four overarching categories"
 sample:
   industry: "Cross-sectoral (waste management, manufacturing, agriculture/forestry/livestock, energy, construction)"
   country: "Latin America and the Caribbean (11 countries plus 3 regional experts; literature dominated by Brazil 49%, Mexico 12%, Chile 8%, Colombia 6%)"
-  time_period: "Interviews March-November 2024; literature review 1997-April 2025 (updating Gallego-Schmid et al., 2024)"
+  time_period: "Interviews March-November 2024; literature review update January 2024-April 2025, combined with records retained from Gallego-Schmid et al. (2024)"
   units: "CE expert interviews and peer-reviewed scientific publications on CE in LAC"
   n: "19 interviews (51 stakeholder questions); 335 publications (405 research objectives)"
 ---
@@ -60,7 +60,7 @@ Is academia addressing relevant questions to support the Circular Economy transi
 **Mechanism Process**
 - Two datasets compared: 51 priority questions from 19 CE expert interviews and 405 research objectives from 335 peer-reviewed publications on CE in LAC
 - Four overarching thematic categories (with 27 sub-themes): (1) technology and data, (2) culture, education and society, (3) economy and market, (4) policy
-- Research Alignment Ratio (RAR): per-sub-theme ratio of interview frequency to literature frequency (centered on 1), classified as High, Medium, or Low alignment
+- Research Alignment Ratio (RAR): per-sub-theme ratio of interview relative frequency to (literature relative frequency + 10^-6), with the denominator adjustment avoiding division by zero (centered on 1), classified as High, Medium, or Low alignment
 - Three key factors driving misalignment between academic research and stakeholder needs: (1) science communication, (2) the process of setting research priorities and defining expected roles, and (3) the level of transdisciplinarity within CE research in LAC
 
 The paper characterizes alignment as a descriptive, thematic comparison rather than a causal test: thematic overlaps at the category level coexist with considerable sub-theme misalignments, particularly in socio-cultural, economic, and policy dimensions. Drawing on the discussion, the authors argue that misalignment is sustained where science communication is fragmented and one-way rather than dialogue-based, where research priorities are set without participatory engagement with non-academic actors (leaving sub-themes such as citizen engagement, SME economic impacts, or monitoring of public policy underexplored), and where CE research remains disciplinarily siloed rather than transdisciplinary. Pragmatic stakeholder engagement, boundary organizations, stronger national-level financial instruments, and transdisciplinary research processes that bridge academic fields while actively involving practitioners and policymakers are offered as enabling conditions for closer alignment.
@@ -72,7 +72,7 @@ The paper advances the debate on the societal role of academic research in susta
 Policymakers, businesses, and practitioners gain a clearer view of where existing CE research provides an actionable knowledge base and where gaps remain—especially in culture/education/society, economy/market, and policy sub-themes such as cross-sectoral interaction, citizen engagement, SME economic impacts, policy instruments, and monitoring of public policy. For academic researchers and funders, the study calls for strengthening participatory research designs, dialogue-based science communication, national-level financial instruments for CE research, and transdisciplinary collaborations that actively involve practitioners and policymakers to translate scientific insights into CE implementation in LAC.
 
 **Limitations**
-The interview sample size (19 experts, 35% response rate) may limit full thematic saturation, reflecting the comparatively small pool of CE experts in LAC versus regions such as Europe. There is a mismatch between interviewees' country expertise and the literature's concentration on Brazil (only 21% of interviewees specialized in Brazil while ~49% of reviewed studies focus on it), which may introduce bias. The degree of coordination and collaboration among CE researchers themselves across LAC was not directly measured.
+The interview sample size (19 experts, 35% response rate) may limit full thematic saturation, reflecting the comparatively small pool of CE experts in LAC versus regions such as Europe. There is a mismatch between interviewees' country expertise and the literature's concentration on Brazil (only 21% of interviewees specialized in Brazil while ~49% of reviewed studies focus on it), which may introduce bias. The authors did not find clear evidence about the degree of coordination and collaboration among CE researchers themselves across LAC.
 
 **Future Research**
 Further country-level research—particularly in Brazil, Mexico, Chile, and Colombia—should refine understanding of research alignment in specific national contexts. Future work should investigate the degree of connection and collaboration among CE researchers across LAC, the role of gender dynamics given that ~70% of interviewees were women and CE initiatives in the region appear often driven by women, and how participatory and pragmatic stakeholder engagement approaches can be applied to LAC's cultural and institutional context to co-develop research agendas. Additional empirical work is needed on the informal sector's CE practices beyond waste management.

@@ -43,7 +43,7 @@ sample:
   industry: "Urban mobility / informal transport"
   country: "Nigeria"
   time_period: "Not reported in paper"
-  units: "Lagos residents aged 18-64 (female 53.3%, male 46.6%; car owners 62.2%, non-car owners 37.7%; employed 80%, unemployed 8.8%, students 11.1%)"
+  units: "Lagos residents aged 18-64 (female 53.3%, male 46.6%; car owners 62.2%, non-car owners 37.7%; employed 80%, unemployed/job-seeking 8.8%, students 11.1%)"
   n: "45"
 ---
 
@@ -56,12 +56,11 @@ Purpose – Although the literature on dynamic ride sharing has grown significan
 Within a collectivist culture, what cultural sharing values influence consumers' engagement in informal ride sharing?
 
 **Mechanism Process**
-- IV(s): Cultural sharing values (interdependence, functional value, cultural morality, obligation) underpinned by Schwartz's cultural value orientations (autonomy vs. embeddedness; egalitarianism vs. hierarchy)
-- DV(s): Consumers' engagement (or disengagement) in informal ride sharing
-- Mediators: Not reported in paper
-- Moderators: Generational differences (older vs. younger consumers); social boundaries of "sharing in" vs. "sharing out"
+- Key constructs: Cultural sharing values (interdependence, functional value, cultural morality, obligation) underpinned by Schwartz's cultural value orientations (autonomy vs. embeddedness; egalitarianism vs. hierarchy)
+- Engagement: Consumers' engagement (or disengagement) in informal ride sharing
+- Contextual differences: Generational differences (older vs. younger consumers); social boundaries of "sharing in" vs. "sharing out"
 
-The authors theorise that culturally transmitted value orientations socialise individuals into shared norms about with whom and why one shares rides. In Nigeria's predominantly collectivist context, embeddedness and interdependence cultivate communal practices, group attachment and altruistic cultural morality that motivate informal ride sharing as a normative, non-transactional practice (Belk, 2010). At the same time, the obligation dimension — rooted in hierarchy and reciprocal expectations — can inhibit engagement, especially among younger consumers who prize autonomy and seek to "escape the gift economy" (Marcoux, 2009). Cultural sharing values therefore operate simultaneously as motivating, inhibiting and conflicting forces, shaping whether consumers enter informal ride sharing on the basis of pure sharing, mutuality or transactional avoidance.
+The authors theorise that culturally transmitted value orientations socialise individuals into shared norms about with whom and why one shares rides. In Nigeria's predominantly collectivist context, interdependence is expressed through communal practices and group attachment that motivate informal ride sharing as a normative practice. Altruistic cultural morality also supports non-transactional, pure sharing (Belk, 2010). At the same time, the obligation dimension — rooted in hierarchy and reciprocal expectations — can inhibit engagement, especially among younger consumers who prize autonomy and seek to "escape the gift economy" (Marcoux, 2009). Cultural sharing values therefore operate simultaneously as motivating, inhibiting and conflicting forces, shaping whether consumers engage in informal ride sharing through pure sharing or mutuality, or prefer transactional alternatives to avoid social indebtedness.
 
 **Theoretical Contribution**
 The study extends Schwartz's (2006) theory of cultural value dimensions into the sharing-economy literature by identifying four sub-dimensions of cultural sharing values — interdependence, functional value, cultural morality and obligation — that shape consumer engagement in informal ride sharing within a collectivist culture. By integrating Belk's (2010) conceptualisation of sharing, Marcoux's (2009) escaping the gift economy and Arnould and Rose's (2016) mutuality, it uncovers three key roles (motivating, inhibiting and conflicted) played by cultural sharing values, and shows that even within collectivist cultures subgroups may hold divergent values that challenge the dominant cultural narrative.

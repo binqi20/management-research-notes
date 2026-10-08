@@ -29,16 +29,14 @@ keywords:
   - "Formalization"
   - "Qualitative content analysis"
 theory:
-  - "social hotspots analysis"
-  - "informal-formal sector integration"
-  - "participatory formalization"
+  - "Not reported in paper"
 topics:
   - "waste-management"
   - "circular-economy"
   - "india"
   - "developing-economies"
 unit_of_analysis: "industry"
-level_of_theory: "meso"
+level_of_theory: "cross-level"
 dependent_variable_family: "social"
 methods: "Exploratory qualitative case study using 18 semi-structured stakeholder interviews (experts from NGOs, private service providers, citizen initiatives, and journalists; itinerant waste buyers; waste pickers; conservancy workers; small and large aggregators) with chain-referral sampling; interview transcripts analyzed via inductive qualitative content analysis (Hsieh & Shannon, 2005) using three-level hierarchical coding in Atlas.ti to identify social and systemic hotspots in the formal and informal plastic waste management sectors"
 sample:
@@ -58,24 +56,24 @@ Waste management systems in lowmiddle-income countries are strained due to rapid
 What are the social and systemic (institutional) hotspots in the formal and informal plastic waste management systems of Chennai, India, and how do the lived conditions of workers in each sector compare in ways that can inform more inclusive and effective formalization policies?
 
 **Mechanism Process**
-- IV(s): Sectoral setting (informal vs. formal plastic waste management), privatization of solid waste management, caste/gender hierarchies, decentralized vs. hierarchical organization
-- DV(s): Social hotspots (economic conditions, social discrimination, legal conflicts, occupational conditions), systemic hotspots (structural/organizational, data/knowledge, material-specific, mistrust), and workers' preference to remain informal
-- Mediators: Worker autonomy, power imbalances in formal hierarchy, supervisor exploitation, data transparency, bookkeeping practices, and system-hiding behaviors
-- Moderators: Worker position in the hierarchy (L0/L1/L2 aggregators, conservancy workers), gender, caste, and type of plastic polymer handled
+- Focal settings: Sectoral setting (informal vs. formal plastic waste management), privatization of solid waste management, caste/gender hierarchies, decentralized vs. hierarchical organization
+- Observed hotspots and preferences: Social hotspots (economic conditions, social discrimination, legal conflicts, occupational conditions), systemic hotspots (structural/organizational, data/knowledge, material-specific, mistrust), and workers' preference to remain informal
+- Explanatory themes and data barriers: Worker autonomy, power imbalances in formal hierarchy, supervisor exploitation, data transparency, bookkeeping practices, and system-hiding behaviors
+- Contextual differences: Worker position in the hierarchy (L0/L1/L2 aggregators, conservancy workers), gender, caste, and type of plastic polymer handled
 
-The paper argues that because the formal sector in Chennai has been privatized and is organized hierarchically, frontline formal workers face pay cuts, longer hours, reduced job security, and caste- and gender-based discrimination from supervisors, producing social hotspots comparable to or worse than those in the IWS. The IWS, by contrast, is decentralized and autonomous, which buffers its workers from hierarchical abuses and offers flexible hours and regular cash flow, generating a preference among the most vulnerable workers to remain informal. At the systemic level, the formal system's lack of transparency, infrastructure, and citizen trust interact with the IWS's system-hiding and absence of bookkeeping so that neither sector alone can deliver efficient, socially just plastic waste management, motivating participatory rather than top-down integration.
+The paper argues that because the formal sector in Chennai has been privatized and is organized hierarchically, frontline formal workers face pay cuts, longer hours, reduced job security, and caste- and gender-based discrimination from supervisors, producing social hotspots comparable to or worse than those in the IWS. The IWS, by contrast, is decentralized and autonomous, which buffers its workers from hierarchical abuses and offers flexible hours and regular cash flow, generating a preference among the most vulnerable workers to remain informal. At the systemic level, the formal system faces gaps in transparency, infrastructure and citizen trust, while the IWS faces data barriers from system-hiding and limited bookkeeping. The authors advocate participatory rather than top-down integration.
 
 **Theoretical Contribution**
-The study offers the first side-by-side qualitative comparison of social and institutional hotspots in the formal and informal plastic waste management sectors of a single Indian megacity, challenging the dominant "savior" framing of formalization by showing that the formal sector does not automatically provide better working conditions. It extends work on social life cycle assessment and informal-sector integration by contextualizing social dynamics in both sectors simultaneously and theorizing how privatization, hierarchy, and autonomy jointly shape worker outcomes. It reframes formalization as a participatory, bottom-up process that must preserve the autonomy and knowledge of informal workers while extending legal protections and social security.
+The study offers the first side-by-side qualitative comparison of social and institutional hotspots in the formal and informal plastic waste management sectors of a single Indian megacity, challenging the "savior" framing in several arguments for formalization by showing that the formal sector does not automatically provide better working conditions. It contextualizes global narratives about the IWS through a comparison of both sectors and qualitative evidence linking privatization, hierarchy and autonomy to worker conditions. It reframes formalization as a participatory, bottom-up process that must preserve the autonomy and knowledge of informal workers while extending legal protections and social security.
 
 **Practical Implication**
-Policymakers in Chennai and comparable Indian cities should move beyond top-down absorption of informal workers into the formal system and instead pursue participatory integration models such as the SWaCH cooperative in Pune and waste picker cooperatives in São Paulo, giving workers a voice in decision-making while preserving their autonomy. Municipal authorities should provide proper protective equipment, fair compensation, and transparent reporting for formal sector workers; address infrastructure gaps; engage self-organized waste worker associations to improve data collection on the IWS; and use monetary incentives to mobilize IWS capacity for collecting non-profitable plastic polymers that currently escape both systems.
+Policymakers in Chennai and comparable Indian cities should move beyond top-down absorption of informal workers into the formal system and instead pursue participatory integration models such as the SWaCH cooperative in Pune and waste picker cooperatives in São Paulo, giving workers a voice in decision-making while preserving their autonomy. Municipal authorities should provide proper protective equipment, fair compensation, and transparent reporting for formal sector workers; address infrastructure gaps; engage self-organized waste worker associations to improve data collection on the IWS; and use monetary incentives to mobilize IWS capacity for collecting non-profitable plastic polymers.
 
 **Limitations**
 The study is exploratory: chain-referral sampling introduces selection bias, and time constraints plus informal workers' reluctance to participate meant the sample of 18 stakeholders is not fully representative of the broader population. Interviewer-interviewee hierarchy and subjective interpretation during transcription and translation may further bias the data. Findings on downstream recycling are specific to plastics and may not generalize to other recyclable streams, and the evidence base is local to Chennai.
 
 **Future Research**
-Further research should engage self-organized associations of informal workers to overcome data collection barriers and build more representative pictures of the IWS across Indian cities. Comparative work is needed on participatory, bottom-up integration models (e.g., SWaCH Pune, São Paulo cooperatives) applied to other Indian megacities, and on how transparent reporting and independent worker-satisfaction surveys can be institutionalized within privatized SWM systems. Studies should also explore how monetary incentives can mobilize IWS capacity for collecting non-profitable plastic polymers and reduce environmental leakage.
+Future studies can be improved by transparent reporting of formal-sector data. Engaging self-organized associations of informal workers and building trust can improve data collection on the IWS.
 
 **APA 7th Citation**
 Ravisandiran, S. M., Navarre, N., Mogollón, J. M., & Cucurachi, S. (2026). Reframing perceptions on the informal and formal waste sectors: An analysis of the social and systemic hotspots of the plastic waste management system of Chennai, India. *Journal of Industrial Ecology*, 30(1), 151-163. https://doi.org/10.1007/s44498-026-00012-4

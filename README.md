@@ -64,8 +64,10 @@ specific prior study — that naive workflow breaks down for three reasons:
   hundred full papers at once. You need *distilled* notes small enough to load
   in bulk but faithful enough to support real argument.
 - **Provenance is non-negotiable.** Every analytic claim in a note is traceable
-  to a cited paper. The verbatim abstract is checked as a contiguous substring
-  of the extracted PDF text, every factual claim in a v2 note carries a ≤25-word
+  to a cited paper. Abstracts are checked against the extracted PDF text; the V1 review
+  identified 20 held notes with unresolved abstract treatment, as disclosed below.
+  For eligible notes, the unchanged contiguous-substring check applies. Every
+  factual claim in a v2 note carries a ≤25-word
   evidence anchor verified against the PDF by `tools/validate_note.py`, and a
   two-layer faithfulness audit (see [below](#faithfulness-audit)) has a
   fresh-eyes LLM subagent cross-check the prose fields. Passing audits are
@@ -90,19 +92,21 @@ economics working papers, organization theory, policy analysis, STS, labor
 studies. Fork the repo, point it at your own manifest, and the validator and
 audit layer come along for free.
 
-The current v0.71.0 design targets libraries growing from dozens to tens of thousands of
+The current v0.72.0 design targets libraries growing from dozens to tens of thousands of
 papers. Whether the shape holds at that scale is an empirical question rather
 than a settled assumption: some parts — one file per paper, SQLite-derived
 indexes, the controlled-vocabulary topic list, even the extraction prompt's
 field set — may need to evolve as the library grows, new sources appear, or
-research workflows change. Treat the v0.71.0 architecture as a working
+research workflows change. Treat the v0.72.0 architecture as a working
 hypothesis refined by each release, not a frozen spec.
 
 ## Faithfulness audit
 
-**Current review status — v0.71.0, 2026-10-05.** The Stage 1 wave's first-pass review covers 45 notes (322 SUPPORTED / 58 PARTIAL / 16 UNSUPPORTED / 9 CONTRADICTED); those are initial judgments, not final defect counts. Nine approved corrections across six fully reviewed notes are now published, with 54/54 post-repair holistic fields SUPPORTED and 626 SUPPORTED / one source-adjudicated UNVERIFIED claim among 627 claims. Two Zhang comparison-coverage gaps retain separately attributed parent source judgments. See the [full correction and rationale disclosure](docs/releases/v0.71.0.md).
+**Current review status — v0.72.0, 2026-10-08.** All 61 legacy V1 notes received a first-pass source-fidelity review. This release publishes minimal corrections to 40 eligible notes across 165 fields (86 substantive / 79 precision), including the 58 exactly approved protected-frontmatter fields. Final paired reviews record 238 SUPPORTED / two source-adjudicated PARTIAL holistic fields and 2,543 SUPPORTED / 41 source-adjudicated UNVERIFIED claims. All 40 publication-evidence checks pass. Twenty whole notes remain held for abstract-treatment decisions; Spoor required no change. V1 labels and historical extraction stamps are preserved. See the [release evidence and retained judgments](docs/releases/v0.72.0.md) and [complete correction table](docs/releases/v0.72.0-corrections.md).
 
-The larger wave remains paused. Of 96 applied operations across 40 notes, 87 operations in 34 notes remain unpublished; 14 further operations across nine notes remain unapplied proposals. An assembled report alone is not publication readiness. The [v0.71.0 workflow](docs/analysis-workflow.md) and [publication-evidence gate](docs/publication-readiness.md) require current evidence, resolved dispositions and an explicit selected-note scope. Historical audit PASS totals are not guarantees of source fidelity; verify material claims against the original papers.
+**Published Stage 1 subset — v0.71.0, 2026-10-05.** The Stage 1 wave's first-pass review covers 45 notes (322 SUPPORTED / 58 PARTIAL / 16 UNSUPPORTED / 9 CONTRADICTED); those are initial judgments, not final defect counts. Nine approved corrections across six fully reviewed notes are now published, with 54/54 post-repair holistic fields SUPPORTED and 626 SUPPORTED / one source-adjudicated UNVERIFIED claim among 627 claims. Two Zhang comparison-coverage gaps retain separately attributed parent source judgments. See the [full correction and rationale disclosure](docs/releases/v0.71.0.md).
+
+The larger AMJ Stage 1 wave remains paused. Of 96 applied operations across 40 notes, 87 operations in 34 notes remain unpublished; 14 further operations across nine notes remain unapplied proposals. An assembled report alone is not publication readiness. The [v0.71.0 workflow](docs/analysis-workflow.md) and [publication-evidence gate](docs/publication-readiness.md) require current evidence, resolved dispositions and an explicit selected-note scope. Historical audit PASS totals are not guarantees of source fidelity; verify material claims against the original papers.
 
 **Numeric checker — v0.71.0 (patch first published 2026-10-05).** Empirical year endpoints, ambiguous glyph candidates and explicit negative signs are handled separately. Candidates never add hits; zero-hit and glyph-only rows require raw verification. The corrected tool reproduced all 895 frozen reports: 46,916 numeric occurrences, 2,721 zero-hit occurrences across 455 notes and 12,266 candidate locations. These are advisory counts, not defect counts. The earlier numeric patch passed 152 tests; the v0.71.0 release adds the separately tested publication-evidence gate.
 
@@ -555,6 +559,8 @@ The full library has been swept across releases:
   extraction prompt. Manifest lint and scoped CrossRef pass 13/13 with
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
+
+- **v0.72.0 V1 correction subset (2026-10-08, 1,167 notes):** All 61 V1 notes received an extraction/data, holistic and claims first pass. Forty eligible notes now contain 165 corrected fields (86 substantive / 79 precision); 20 whole notes remain held and one is unchanged. Both fresh readers, raw-source adjudication, independent source workshops and all 40 publication-evidence gates are complete. Final results are 238 SUPPORTED / two accepted PARTIAL holistic fields and 2,543 SUPPORTED / 41 source-adjudicated UNVERIFIED claims. [Scope, qualifications and every correction](docs/releases/v0.72.0.md) are disclosed. Counts remain 61 V1 / 211 V2 / 895 V3; bibliography and historical extraction stamps are unchanged. The paused AMJ corrections remain outside this release.
 
 - **v0.71.0 workflow consolidation and six completed corrections (2026-10-05, 1,167 notes):** Nine clause corrections across eight fields in Crossland, Broschak, Marr, Reilly and two Zhang notes (AMJ 57-3) are published after both readers and source adjudication; 34 changed notes and all 14 pending proposals remain outside this release. Post-repair holistic results are 54/54 SUPPORTED; claims are 626 SUPPORTED plus one source-adjudicated UNVERIFIED. Two parent-resolved coverage gaps are disclosed. [Every before/after clause, severity and raw-line reference](docs/releases/v0.71.0.md) is retained with the academic publication rationale. The [workflow](docs/analysis-workflow.md) strengthens per-study extraction, formulas, units, comparisons, finite adjudication and release boundaries; a new read-only readiness tool checks hash-bound evidence. Counts remain 61 v1 / 211 v2 / 895 v3. This releases verified improvements without claiming flawless accuracy or completion of Stage 1.
 
@@ -2195,7 +2201,7 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this snapshot
 
-The current **v0.71.0** snapshot contains **1,167 curated notes**:
+The current **v0.72.0** snapshot contains **1,167 curated notes**:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
@@ -2249,7 +2255,7 @@ The current **v0.71.0** snapshot contains **1,167 curated notes**:
 | book-review            |     6 |
 | **Total**              | **1,167** |
 
-All stored official reports passed at the v0.70.0 release. The current v0.71.0 selected corrections and unfinished Stage 1 work are disclosed above. The v0.71.0 corpus contains 61 legacy v1
+All stored official reports passed at the v0.70.0 release. The current v0.72.0 V1 corrections, held V1 notes and unfinished Stage 1 work are disclosed above. The v0.72.0 corpus contains 61 legacy v1
 notes, 211 v2 notes, and 895 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
@@ -2383,7 +2389,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.71.0},
+  version      = {0.72.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}

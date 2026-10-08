@@ -26,9 +26,9 @@ keywords:
   - "open science"
   - "scientific integrity"
   - "scholar-practitioner gap"
-  - "global inclusion"
+  - "global and inclusive"
   - "business school accreditation"
-  - "rigor and relevance"
+  - "impact and rigor"
 theory:
   - "engaged scholarship"
 topics:
@@ -51,7 +51,7 @@ sample:
 # 2025 Presidential Address: Activism, Impact and Science: Management Scholarship in a Challenging Era
 
 **Abstract**
-2025 PRESIDENTIAL ADDRESS: ACTIVISM, IMPACT AND SCIENCE: MANAGEMENT SCHOLARSHIP IN A CHALLENGING ERA PETER BAMBERGER Tel Aviv University
+Not reported in paper
 
 **Research Question**
 Not reported in paper
@@ -62,13 +62,13 @@ Not reported in paper
 - Mediators: Not reported in paper
 - Moderators: Not reported in paper
 
-Bamberger advances a normative argument rather than a causal model. He contends that management scholarship can have impact only if it is relevant, but that relevance must be pursued without sacrificing rigor or scientific credibility. He argues that the payoff structures governing scholarship (citation-based metrics, high-impact journal counts, and ranking systems) incentivize questionable research practices and crowd out socially useful work; that academic activism, while understandable, can undermine open science and fuel anti-intellectualism when advocacy shapes design and execution; and that engaged scholarship — agenda-setting, globally inclusive, and communicated accessibly to practitioners and publics — is the route by which management science can simultaneously enhance rigor, relevance, and credibility.
+Bamberger advances a normative argument rather than a causal model. He contends that management scholarship can have impact only if it is relevant, but that relevance must be pursued without sacrificing rigor or scientific credibility. He argues that the payoff structures governing scholarship (citation-based metrics, high-impact journal counts, and ranking systems) likely incentivize questionable research practices, while the field's focus on novelty and theoretical contribution has weakened attention to social utility; that academic activism can undermine open science and fuel anti-intellectualism when advocacy shapes design and execution; and that engaged scholarship — agenda-setting, globally inclusive, and communicated accessibly to practitioners and publics — is the route by which management science can enhance relevance and credibility.
 
 **Theoretical Contribution**
 The address synthesizes three AOM-led initiatives into a programmatic vision for the field: (a) reforming the definition and measurement of scholarly impact through an AACSB-led coalition aimed at updating accreditation and ranking criteria to reward evidence-based real-world impact; (b) reaffirming academic freedom alongside open science and scientific integrity, with explicit warnings about how advocacy-driven research erodes credibility; and (c) building bridges for global relevance by extending AOM's infrastructure to underrepresented regions and by translating research for practitioner and public audiences. Bamberger frames these as components of Van de Ven's engaged scholarship, arguing that this stance is how the field can "set the agenda" on issues such as human-capital sustainability, business as a vehicle for peace and development, and redesigning educational organizations.
 
 **Practical Implication**
-Business school deans, journal editors, publishers, and tenure committees should adjust incentive structures so that evidence-based, real-world impact and diverse forms of contribution — not just theoretical novelty or high-impact-journal placement — are recognized and rewarded. Scholars studying politically loaded topics (e.g., DEI, pay transparency, inequality) should keep advocacy out of research design and execution and report findings fully, including inconvenient ones. The field should invest in globally inclusive infrastructure (memberships, workshops, open-access outlets, rotating meetings) and in practitioner-accessible communication channels such as AOM Today so that research can reach and inform decision-makers.
+Business school deans, journal editors and publishers need revised incentive structures that reward evidence-based, real-world impact; the proposed reforms also aim to incentivize tenure committees to recognize diverse forms of contribution, beyond theoretical novelty or high-impact-journal placement. Scholars studying politically loaded topics (e.g., DEI, pay transparency, inequality) should keep advocacy out of research design and execution and report findings fully, including inconvenient ones. The address describes AOM initiatives to expand globally inclusive infrastructure (memberships, workshops, open-access outlets, rotating meetings) and practitioner-accessible communication channels such as AOM Today so that research can reach and inform decision-makers.
 
 **Limitations**
 Not reported in paper

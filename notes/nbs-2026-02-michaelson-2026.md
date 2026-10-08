@@ -45,11 +45,11 @@ Why is moral distress — a central concept in bioethics — largely absent from
 
 **Mechanism Process**
 - IV(s): Moral knowledge, agency to act, and desire; institutional constraints; characteristics of moral communities (voice, exit, loyalty)
-- DV(s): Moral conditions (moral action, moral distress, moral rationalization, moral impotence, moral dilemmas, moral ignorance, moral uncertainty, moral ineptitude); quality of moral work life
+- DV(s): Moral conditions (moral action, moral distress, moral rationalization, moral impotence, moral dilemmas, moral ignorance, moral uncertainty, moral ineptitude)
 - Mediators: Not reported in paper
 - Moderators: Not reported in paper
 
-The paper theorizes that ethical outcomes at work arise from the joint configuration of three elements — whether an agent knows the right thing to do, has the agency to act on it, and desires to do so. Different combinations yield a taxonomy of eight moral conditions, with moral distress defined as knowing and desiring the right action yet lacking agency due to institutional constraints. In business, the tension between profit maximization and other moral purposes makes moral distress an ever-present, existential condition that is often reframed as moral rationalization. Morally supportive communities — characterized by shared moral purpose, opportunities for voice, and loyalty — can align knowledge, action, and desire and mitigate distress across both medicine and business.
+The paper theorizes that ethical outcomes at work arise from the joint configuration of three elements — whether an agent knows the right thing to do, has the agency to act on it, and desires to do so. Different combinations yield a taxonomy of eight moral conditions, with moral distress defined as knowing and desiring the right action yet lacking agency due to institutional constraints. In business, the tension between profit maximization and other moral purposes may make moral distress a pervasive, existential condition; the paper contrasts moral-distress and moral-rationalization interpretations of illustrative business cases. Morally supportive communities — characterized by shared moral purpose, opportunities for voice, and loyalty — can align knowledge, action, and desire and mitigate distress across both medicine and business.
 
 **Theoretical Contribution**
 The article bridges bioethics and business ethics by importing moral distress into business ethics discourse and reframing it as an existential condition of modern business rather than an exceptional event. It develops a novel taxonomy of eight moral conditions based on combinations of moral knowledge, agency, and desire, and theorizes morally supportive communities as a mechanism for cultivating right desires and aligning them with moral knowledge and action.
@@ -58,7 +58,7 @@ The article bridges bioethics and business ethics by importing moral distress in
 The authors suggest that organizations in healthcare, business, and beyond should cultivate morally supportive communities that articulate a common moral end beyond profit, remove institutional constraints that impede workers' ability to act on their moral convictions, and create conditions for voice and loyalty so that moral knowledge, agency, and desire can be aligned.
 
 **Limitations**
-Not reported in paper
+The conceptual analysis cannot determine whether its illustrative cases reflect moral rationalization or moral distress, does not test differing motives between healthcare and business workers, and establishes a possibility of business moral distress whose prevalence/causes/consequences require empirical study.
 
 **Future Research**
 The paper invites further work applying moral distress to additional problems of business ethics, extending business ethics thinking on stakeholder relationships and moral agency back into bioethics, and exploring how different ethical theories apply to distinct relationships (e.g., patients and customers, employees and managers, providers and payers) across healthcare and business settings.
