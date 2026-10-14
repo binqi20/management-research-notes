@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-10-08"
-version: "0.73.0"
+date-released: "2026-10-14"
+version: "0.74.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -55,6 +55,17 @@ abstract: >-
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
   a published rubric) gates every note into the library.
+  Version 0.74.0 (2026-10-14) closes the selected 34-note AMJ correction
+  scope with 179 approved operations across 129 fields (51 substantive and
+  78 precision), including 14 protected metadata fields across ten notes.
+  Current paired reviews, source adjudications, independent final verification
+  and all 34 publication-evidence gates are complete. Original reader results
+  retain 305 SUPPORTED and one PARTIAL holistic fields, plus 3927 SUPPORTED,
+  30 UNVERIFIED and one CONTRADICTED claims; source dispositions and
+  separately attributed parent coverage are disclosed with the corrections.
+  Bibliography, V3 labels, historical stamps and the completed V1 work are
+  unchanged. The separate 87-note AMJ queue is outside this scope. See
+  docs/releases/v0.74.0.md for evidence, qualifications and process deviations.
   Version 0.73.0 (2026-10-08) completes the correction-only review of all
   61 legacy V1 notes: 40 corrected notes were published in v0.72.0, the final
   20 are published here, and one note required no correction. These final
@@ -1031,14 +1042,15 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.73.0 snapshot contains 1,167 curated
+  perfectly-clean batch. The current v0.74.0 snapshot contains 1,167 curated
   notes: 272 from the Network for Business Sustainability monthly digests
   and 895 AMJ pilot notes across vol. 57 no. 1-3 plus vol. 58 no. 1 through
-  vol. 69 no. 1. All three vol-57 v3 issues pass at 117/117 prose-field verdicts
-  SUPPORTED; the unchanged v0.70.0 stored official reports have 1,167/1,167 PASS
-  and zero UNSUPPORTED or CONTRADICTED verdicts; the separate calibration
-  diagnostic above remains pending retrospective review. An AGENTS.md file provides
+  vol. 69 no. 1. The historical v0.70.0 stored reports recorded 1,167/1,167
+  PASS with zero UNSUPPORTED or CONTRADICTED verdicts. Those release-time
+  labels do not describe the subsequent V1 and AMJ reviews summarized above;
+  their retained reservations, source adjudications and remaining retrospective
+  scope are disclosed in the dated release records. An AGENTS.md file provides
   a tool-agnostic
   entry point so that AI agents (Claude Code, Cursor, Windsurf, custom
-  SDK apps) can discover and consume the data with known faithfulness
-  guarantees.
+  SDK apps) can discover and consume the data with documented source checks
+  and their limits.

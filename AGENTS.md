@@ -16,7 +16,7 @@ focuses on what's portable across agents.
 
 **Management Research Notes** is a file-based academic knowledge base of
 **1,167 curated notes** on peer-reviewed papers in management and business
-sustainability research. The current v0.73.0 main-branch snapshot contains 272
+sustainability research. The current v0.74.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
 and 895 Academy of Management Journal pilot notes across 70 recent issues
 (vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
@@ -114,7 +114,7 @@ from [`CLAUDE.md`](CLAUDE.md)):
 
 ## 4.1 Parallel agent slot policy
 
-At v0.73.0, use at most **three active workers** with the current four-slot Codex runtime,
+At v0.74.0, use at most **three active workers** with the current four-slot Codex runtime,
 or the lower actual cap. Writers own one assigned note; readers own only their
 assigned Layer-2 or claims sidecar. Keep writing and audit waves separate.
 Record and re-read each return before dispatching the next worker. There is no
@@ -132,16 +132,18 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current review status — v0.73.0, 2026-10-08.** The correction-only review of all 61 legacy V1 notes is complete: 40 corrected notes were published in v0.72.0, this release publishes the remaining 20, and Spoor required no change. These final 20 corrections cover 123 fields (45 substantive / 78 precision), including 48 exactly approved protected-frontmatter fields. Final paired reviews record 115 SUPPORTED / 5 source-adjudicated PARTIAL holistic fields and 1,165 SUPPORTED / 36 source-adjudicated UNVERIFIED claims. All 20 publication-evidence checks pass. Seventeen complete abstracts use the optional, traceable PDF-derived check; three book reviews retain the Abstract heading with `Not reported in paper`. V1 labels and historical extraction stamps are preserved. See the [release evidence and retained judgments](docs/releases/v0.73.0.md) and [complete correction table](docs/releases/v0.73.0-corrections.md).
+**Current review status — v0.74.0, 2026-10-14.** The selected 34-note AMJ closeout publishes 179 explicitly approved operations across 129 distinct fields (51 substantive / 78 precision), including 14 protected-frontmatter fields across ten notes. All 34 notes have current paired reviews, source adjudications, independent final verification and passing publication-evidence checks. Original judgments remain visible: 305 SUPPORTED / one PARTIAL holistic fields and 3,927 SUPPORTED / 30 UNVERIFIED / one CONTRADICTED claims. The reservations have separately documented source dispositions; they are not relabeled as unanimous support. Historical V3 labels and extraction stamps remain intact. See the [release scope and evidence](docs/releases/v0.74.0.md), [every correction](docs/releases/v0.74.0-corrections.md), and [retained judgments and parent coverage](docs/releases/v0.74.0-review.md).
+
+**Completed V1 review — v0.73.0, 2026-10-08.** The correction-only review of all 61 legacy V1 notes is complete: 40 corrected notes were published in v0.72.0, v0.73.0 published the remaining 20, and Spoor required no change. These final 20 corrections cover 123 fields (45 substantive / 78 precision), including 48 exactly approved protected-frontmatter fields. Final paired reviews record 115 SUPPORTED / 5 source-adjudicated PARTIAL holistic fields and 1,165 SUPPORTED / 36 source-adjudicated UNVERIFIED claims. All 20 publication-evidence checks pass. Seventeen complete abstracts use the optional, traceable PDF-derived check; three book reviews retain the Abstract heading with `Not reported in paper`. V1 labels and historical extraction stamps are preserved. See the [release evidence and retained judgments](docs/releases/v0.73.0.md) and [complete correction table](docs/releases/v0.73.0-corrections.md).
 
 **Published Stage 1 subset — v0.71.0, 2026-10-05.** The Stage 1 wave's first-pass review covers 45 notes (322 SUPPORTED / 58 PARTIAL / 16 UNSUPPORTED / 9 CONTRADICTED); those are initial judgments, not final defect counts. Nine approved corrections across six fully reviewed notes are now published, with 54/54 post-repair holistic fields SUPPORTED and 626 SUPPORTED / one source-adjudicated UNVERIFIED claim among 627 claims. Two Zhang comparison-coverage gaps retain separately attributed parent source judgments. See the [full correction and rationale disclosure](docs/releases/v0.71.0.md).
 
-The larger AMJ Stage 1 wave remains paused. Of 96 applied operations across 40 notes, 87 operations in 34 notes remain unpublished; 14 further operations across nine notes remain unapplied proposals. An assembled report alone is not publication readiness. The [v0.71.0 workflow](docs/analysis-workflow.md) and [publication-evidence gate](docs/publication-readiness.md) require current evidence, resolved dispositions and an explicit selected-note scope. Historical audit PASS totals are not guarantees of source fidelity; verify material claims against the original papers.
+The 34-note scope now closes the remaining 87 previously applied Stage 1 operations and all 14 carried proposals, together with subsequently approved corrections. The separate 87-note AMJ queue remains outside this completed scope and has not been resumed. An assembled report alone is not publication readiness. The [v0.71.0 workflow](docs/analysis-workflow.md) and [publication-evidence gate](docs/publication-readiness.md) require current evidence, resolved dispositions and an explicit selected-note scope. Historical audit PASS totals are not guarantees of source fidelity; verify material claims against the original papers.
 
 **Numeric checker — v0.71.0 (patch first published 2026-10-05).** Empirical year endpoints, ambiguous glyph candidates and explicit negative signs are handled separately. Candidates never add hits; zero-hit and glyph-only rows require raw verification. The corrected tool reproduced all 895 frozen reports: 46,916 numeric occurrences, 2,721 zero-hit occurrences across 455 notes and 12,266 candidate locations. These are advisory counts, not defect counts. The earlier numeric patch passed 152 tests; the v0.71.0 release adds the separately tested publication-evidence gate.
 
 
-**Release-time stored audit snapshot (2026-10-04, v0.70.0): 1,167 / 1,167 reports PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** These historical results do not describe the unfinished Stage 1 audits reported above.
+**Release-time stored audit snapshot (2026-10-04, v0.70.0): 1,167 / 1,167 reports PASS, 0 UNSUPPORTED, 0 CONTRADICTED.** These historical results do not describe the later V1 and AMJ reviews reported above.
 
 **Process and calibration update (2026-10-04, v0.70.0).** Rubric v2
 applies through v0.69.0; new audits use rubric v3 from v0.70.0, including the
@@ -406,7 +408,7 @@ full-raw-text exceptions remain superseded by v0.68.0; none was used here.
 | [amj-vol-68-no-1-trzebiatowski-2024](notes/amj-vol-68-no-1-trzebiatowski-2024.md) | Data & Measures | Repaired: SUPPORTED |
 | [amj-vol-68-no-4-li-2025](notes/amj-vol-68-no-4-li-2025.md) | Limitations | Cleared unchanged: SUPPORTED |
 
-**AMJ accepted-PARTIAL inventory carried into v0.73.0 (unchanged from v0.69.0): 25 fields across 23 notes.** The two NBS V1 PARTIAL fields in Rohm and Skandera are disclosed in [v0.72.0](docs/releases/v0.72.0.md); the final 20-note subset adds the separately adjudicated NBS residuals in [v0.73.0](docs/releases/v0.73.0.md).
+**Earlier AMJ accepted-PARTIAL inventory: 25 fields across 23 notes, unchanged from v0.69.0.** None of these notes belongs to the v0.74.0 closeout. That release adds one separately source-adjudicated PARTIAL field in To (Data & Measures), disclosed in the [v0.74.0 review record](docs/releases/v0.74.0-review.md). The two NBS V1 PARTIAL fields in Rohm and Skandera are disclosed in [v0.72.0](docs/releases/v0.72.0.md); the final 20-note subset adds the separately adjudicated NBS residuals in [v0.73.0](docs/releases/v0.73.0.md).
 
 | Note | Field | Acceptance basis |
 |---|---|---|
@@ -491,7 +493,7 @@ numeric-check policy does not retrospectively restamp older reports.
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.73.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.74.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

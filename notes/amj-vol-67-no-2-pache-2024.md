@@ -28,13 +28,13 @@ topics: ["hybrid-organizations", "board-of-directors", "social-enterprise", "ins
 unit_of_analysis: "organization"
 level_of_theory: "meso"
 dependent_variable_family: "mixed"
-methods: "Inductive longitudinal comparative case study of five work integration social enterprises (WISEs) with institutionally diverse boards in France; data include 81 semi-structured interviews with field experts, board members, senior managers, and middle managers; archival data (bylaws, board minutes, board packs, annual reports); on-site observations; and follow-up interviews in 2018, 2021, and 2022; within-case analysis followed by cross-case analysis with double-coder validation."
+methods: "Inductive longitudinal comparative case study of five work integration social enterprises (WISEs) with institutionally diverse boards in France; data draw on a broader study comprising 81 taped semi-structured interviews across eight WISEs, plus interviews with 14 field experts; archival data (bylaws, board minutes, board packs, annual reports); on-site observations; and follow-up interviews in 2018, 2021, and 2022; within-case analysis followed by cross-case analysis with double-coder validation."
 sample:
   industry: "Work integration social enterprises in recycling and temp work sectors"
   country: "France"
   time_period: "Founding (1985-1998) through 2007, with follow-up interviews in 2018, 2021, and 2022"
   units: "Five work integration social enterprises (WISEs) with institutionally diverse boards"
-  n: "5 WISEs (RECYCLE, FORWORK, NOWASTE, TEMPO, RECRUIT) with 81 interviews across the cases"
+  n: "5 focal WISEs (RECYCLE, FORWORK, NOWASTE, TEMPO, RECRUIT), selected from eight WISEs covered by 81 taped interviews in the broader study"
 
 evidence:
   sample_n: "five work integration social enterprises (WISEs) with"
@@ -73,7 +73,7 @@ The integrative model of hybrid governance shows that institutionally diverse bo
 
 **Data & Measures**
 Inductive, interpretive comparative case design; patterns are identified across cases rather than estimated, and no causal identification is claimed.
-- Data corpus: 81 taped semi-structured interviews (30-180 minutes, conducted 2007-2008) with board members, senior managers, executive directors, and founders across the five focal WISEs (drawn from eight originally studied), plus 14 field-expert interviews; archival data (bylaws, board minutes, board packs, annual reports, roughly 300-900 pages per case); on-site observations over two-to-five-day site visits; and follow-up interviews in 2018, 2021, and 2022.
+- Data corpus: 81 taped semi-structured interviews (30-180 minutes, conducted 2007-2008) with board members, senior managers, executive directors, and founders across the eight originally studied WISEs, of which five with institutionally diverse boards are focal here, plus interviews with 14 field experts; archival data (bylaws, board minutes, board packs, annual reports, roughly 300-900 pages per case); on-site observations over two-to-five-day site visits; and follow-up interviews in 2018, 2021, and 2022.
 - Attentional engagement: coded from "traces" of decision-makers' attention following established practice (Rerup, 2009), assessing how far board and senior-manager conversations focused on both social and commercial goals over 10-to-22-year windows; two patterns (oscillating vs. dual-focus) emerged inductively.
 - Logic representation: board members and senior managers were coded as representing the social logic, the commercial logic, or "hybrid" (building on DiMaggio & Powell, 1983), based on their professional training and experience, then triangulated with interview and observational data.
 - Reliability and analysis: two independent coders performed the power/logics coding to reduce coder bias, with disagreements resolved by consensus; within-case analysis preceded cross-case comparison (Eisenhardt, 1989).
@@ -88,13 +88,13 @@ Inductive, interpretive comparative case design; patterns are identified across 
 The paper develops an integrative model of hybrid governance that uncovers how institutionally diverse boards can effectively serve as guardrails of organizational hybridity. It extends research on hybrids by identifying a previously undocumented "dual-focus attentional engagement" pattern alongside the more familiar "oscillating" pattern, shows how the interplay between board structure and relational leadership processes mitigates cognitive and emotional faultline conflicts, and contributes to organizational attention theory by mapping how governance structures and processes shape the availability, accessibility, and activation of multiple institutional logics — including emotion-management as a key, previously underemphasized lever.
 
 **Practical Implication**
-The study offers concrete guidance for the boards of hybrid (and increasingly, conventional) organizations seeking to balance social, environmental, and financial goals: (a) enshrine board composition rules in bylaws to lock in continuous representation of competing logics and prevent political drift; (b) appoint hybrid leaders who can perform enculturation and bridging work; and (c) institutionalize practices such as dual-KPI agendas, beneficiary site visits, and senior-manager participation in board meetings to keep both logics accessible and activated in decision-making.
+The findings suggest that sustaining attention to multiple goals requires considering both board composition and structure and how boards interact with senior managers. These governance issues also matter for conventional corporations seeking to integrate social and environmental goals alongside financial goals.
 
 **Limitations**
 Generalizability is limited by the qualitative design and the focus on relatively small French WISEs operating under similar regulatory pressures; decision-making power may differ in larger hybrids where senior managers play a larger role. The data did not allow strong claims about the relationship between attentional engagement patterns and organizational performance, nor about whether enculturation and bridging are individually necessary, since no case exhibited only one of the two relational leadership processes.
 
 **Future Research**
-Future work should examine how larger hybrids and hybrids combining different sets of logics with varying compatibility maintain dual-focus attention; how legal status and democratic organizational forms shape board structures and their ability to safeguard hybridity; whether the size and composition of boards moderate these dynamics; and how emotional control and power relations interact with cognition to shape how individuals enact institutional logics, leveraging recent work on institutions and emotions.
+Future work should examine how larger hybrids and hybrids combining different sets of logics with varying compatibility maintain dual-focus attention; how legal status and democratic organizational forms shape board structures and their ability to safeguard hybridity; whether and how board size shapes these dynamics; and how emotional control and power relations shape how individuals enact institutional logics, leveraging recent work on institutions and emotions.
 
 **APA 7th Citation**
 Pache, A.-C., Battilana, J., & Spencer, C. (2024). An integrative model of hybrid governance: The role of boards in helping sustain organizational hybridity. *Academy of Management Journal*, 67(2), 437–467. https://doi.org/10.5465/amj.2021.0966
