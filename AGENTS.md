@@ -122,7 +122,7 @@ close-agent operation in this runtime; completed threads may still occupy slots.
 Never reuse a writer or repairer context as a reader or silently substitute a
 model. The parent assembles reports and rebuilds indexes.
 
-**Reader assignment — 2026-10-14:** future claims readers use `gpt-6.1-sol` with `xhigh` effort; holistic readers remain `gpt-6-astra` with `medium` effort. Follow the [dispatch and runtime-verification contract](docs/claims-verification.md#reader-assignment--effective-2026-10-14). These settings do not restamp historical reports or authorize a new batch.
+**Reader assignment — 2026-10-14:** future claims readers use `gpt-6.1-sol` with `xhigh` effort; holistic readers use `gpt-6-astra` with `xhigh` effort. Follow the [dispatch and runtime-verification contract](docs/claims-verification.md#reader-assignment--effective-2026-10-14). These settings do not restamp historical reports or authorize a new batch.
 
 ---
 

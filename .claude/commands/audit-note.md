@@ -80,7 +80,7 @@ inspect the first block between the `---` fences). Check:
 
 Follow `docs/pipeline-runbook.md` Step 2.5 and the dated reader assignment in `docs/claims-verification.md`. Validate and complete numeric source adjudication first. Parent-generate the holistic prompt with `--prompt-only` and the claims prompt with `--claims-prompt-only` from the same frozen note and fitted source.
 
-Dispatch separate fresh blind contexts: holistic `gpt-6-astra` with `medium` effort; claims `gpt-6.1-sol` with `xhigh` effort. Verify actual model and effort before supplying analytical input; stop on mismatch or unavailability instead of silently substituting. These settings belong to the Codex dispatch, not the audit tool's generic `--auditor-model` flag. The Codex workflow uses OpenAI models only.
+Dispatch separate fresh blind contexts: holistic `gpt-6-astra` with `xhigh` effort; claims `gpt-6.1-sol` with `xhigh` effort. Verify actual model and effort before supplying analytical input; stop on mismatch or unavailability instead of silently substituting. These settings belong to the Codex dispatch, not the audit tool's generic `--auditor-model` flag. The Codex workflow uses OpenAI models only.
 
 After reading the complete returns and adjudicating coverage, disagreements and adverse claims against raw evidence, assemble the report:
 

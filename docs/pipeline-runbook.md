@@ -156,7 +156,7 @@ the identical fitted source, and writes `incoming/_audits/<paper_id>.claims.json
 under [`claims-verification.md`](claims-verification.md): every atomic claim
 in the three v3 fields, plus every direction, prescription and generalizability
 target in the six legacy fields. Its provenance additionally has
-`pass: "claims-v1"`. The [current reader assignment](claims-verification.md#reader-assignment--effective-2026-10-14), approved 2026-10-14, is `gpt-6-astra`/`medium` for (a) and `gpt-6.1-sol`/`xhigh` for (b). Set these explicitly in the Codex dispatch and verify actual model and effort from runtime metadata before supplying the analytical prompt. Stop on mismatch or unavailability; a fallback requires user authorization and a ledger entry. Earlier Astra/Sol assignments and completed reports remain historical.
+`pass: "claims-v1"`. The [current reader assignment](claims-verification.md#reader-assignment--effective-2026-10-14), approved 2026-10-14, is `gpt-6-astra`/`xhigh` for (a) and `gpt-6.1-sol`/`xhigh` for (b). Set these explicitly in the Codex dispatch and verify actual model and effort from runtime metadata before supplying the analytical prompt. Stop on mismatch or unavailability; a fallback requires user authorization and a ledger entry. Earlier Astra/Sol assignments and completed reports remain historical.
 
 The parent checks coverage and adjudicates every disagreement and every
 UNVERIFIED or CONTRADICTED claim against the raw text before assembly, recording

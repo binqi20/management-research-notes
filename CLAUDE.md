@@ -157,7 +157,7 @@ research. Read this file before doing anything in this folder.
    and structured claims readers, with runtime-verified OpenAI model diversity
    when available, and parent raw-text adjudication before assembling every
    report before repairs (the Stage 1 exception follows the calibration rule).
-   Follow the dated model/effort assignment in `docs/claims-verification.md`: holistic `gpt-6-astra`/`medium`; claims `gpt-6.1-sol`/`xhigh`. Verify actual runtime metadata before analytical input and stop on an unavailable or mismatched assignment; no silent fallback.
+   Follow the dated model/effort assignment in `docs/claims-verification.md`: holistic `gpt-6-astra`/`xhigh`; claims `gpt-6.1-sol`/`xhigh`. Verify actual runtime metadata before analytical input and stop on an unavailable or mismatched assignment; no silent fallback.
    The Codex holistic path uses GPT-6 Astra (`gpt-6-astra`; GPT-5.6 Sol through batch 29) independent audit agents that write
    `incoming/_audits/{paper_id}.layer2.json` with provenance fields, then
    assembles the official report with

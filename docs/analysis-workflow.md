@@ -42,7 +42,7 @@ Validate the note and run `tools/check_numbers.py`. Resolve every zero-hit token
 
 For abstract extraction-layout conflicts, the optional [PDF-derived abstract check](abstract-evidence.md) reproduces hash-bound evidence from the original PDF. This exception applies only to the abstract; preserve the original source text, fitter, evidence-anchor checks and claims-quotation checks. Confirm complete abstract boundaries visually. Book reviews without standalone abstracts keep the heading with `Not reported in paper`.
 
-Use the [current reader assignment](claims-verification.md#reader-assignment--effective-2026-10-14): claims `gpt-6.1-sol`/`xhigh`, holistic `gpt-6-astra`/`medium`. Freeze both model and effort before dispatch; create the worker, verify its actual runtime metadata, then supply analytical input. An unavailable assignment requires an explicitly authorized fallback.
+Use the [current reader assignment](claims-verification.md#reader-assignment--effective-2026-10-14): claims `gpt-6.1-sol`/`xhigh`, holistic `gpt-6-astra`/`xhigh`. Freeze both model and effort before dispatch; create the worker, verify its actual runtime metadata, then supply analytical input. An unavailable assignment requires an explicitly authorized fallback.
 
 Generate both prompts parent-side from the frozen note and the same standard fitted source. The writer/repairer, holistic reader and claims reader use distinct contexts. Record actual runtime metadata, not self-reported model names. The source is the final PDF-text block, not an identically worded heading quoted in the task. Read the supplied prompt completely in bounded chunks and recover truncated displays; loading bytes or reporting a line count does not prove reading.
 

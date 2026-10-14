@@ -168,12 +168,12 @@ reviewed by the parent, not inferred from valid JSON.
 
 ## Reader assignment — effective 2026-10-14
 
-The user approved these settings for future independent reviews:
+The user approved these settings for future independent reviews. The later 2026-10-14 instruction raises holistic effort from `medium` to `xhigh`; it supersedes the earlier same-day assignment while preserving completed reviews and historical runtime stamps:
 
 | Role | Model | Reasoning effort |
 |---|---|---|
 | Independent claims reader (`claims-v1`) | `gpt-6.1-sol` | `xhigh` (extra high) |
-| Holistic Layer-2 reader | `gpt-6-astra` | `medium` (unchanged) |
+| Holistic Layer-2 reader | `gpt-6-astra` | `xhigh` (extra high) |
 
 The claims task remains the complete check of individual statements, numbers, units, formulas, directions, attribution, comparisons and qualifications specified above. This assignment changes the runtime, not the rubric, coverage requirement, fitter or evidence standard. It does not start a new batch or authorize rerunning completed reviews. Historical reports and extraction/augmentation stamps retain the models and efforts that actually produced them.
 
