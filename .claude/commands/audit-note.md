@@ -78,26 +78,19 @@ inspect the first block between the `---` fences). Check:
 
 ### Step 3 — Run the audit
 
-```bash
-python tools/audit_note.py notes/<paper_id>.md
-```
+Follow `docs/pipeline-runbook.md` Step 2.5 and the dated reader assignment in `docs/claims-verification.md`. Validate and complete numeric source adjudication first. Parent-generate the holistic prompt with `--prompt-only` and the claims prompt with `--claims-prompt-only` from the same frozen note and fitted source.
 
-For the current Codex workflow, run Layer 1 locally and use a fresh independent
-GPT-5.6 Sol auditor to write `incoming/_audits/<paper_id>.layer2.json`; then assemble
-the official report with:
+Dispatch separate fresh blind contexts: holistic `gpt-6-astra` with `medium` effort; claims `gpt-6.1-sol` with `xhigh` effort. Verify actual model and effort before supplying analytical input; stop on mismatch or unavailability instead of silently substituting. These settings belong to the Codex dispatch, not the audit tool's generic `--auditor-model` flag. The Codex workflow uses OpenAI models only.
+
+After reading the complete returns and adjudicating coverage, disagreements and adverse claims against raw evidence, assemble the report:
 
 ```bash
 python tools/audit_note.py notes/<paper_id>.md \
-  --layer-2-json incoming/_audits/<paper_id>.layer2.json
+  --layer-2-json incoming/_audits/<paper_id>.layer2.json \
+  --claims-json incoming/_audits/<paper_id>.claims.json
 ```
 
-The old direct Claude CLI path remains available only as a deliberate legacy
-fallback, for example `python tools/audit_note.py notes/<paper_id>.md
---auditor-model claude-opus-4-6`.
-
-**Expected cost:** ~1–5 minutes wall clock per invocation, dominated by
-the Layer 2 subagent dispatch. If Layer 1 fails, Layer 2 is
-short-circuited and the whole thing takes about one second.
+Retain the separately authorized Stage 1 first-pass reader-count exception only within its assigned scope; new, augmented and repaired notes require both readers. Preserve completed reviews and historical model stamps. A passing audit is followed by the publication-evidence gate when publication is authorized.
 
 ### Step 4 — Report the verdict to the user
 
@@ -142,8 +135,7 @@ in one sentence each:
 2. **Re-extract:** "Re-run `tools/prepare_paper.py` + extraction for
    this paper if the root cause is a bad initial extraction" (the
    cleanest fix).
-3. **Flag:** "If you want the failure recorded in `_flagged/`, re-run
-   `python tools/audit_note.py notes/<paper_id>.md --flag` directly."
+3. **Flag:** "If you want the failure recorded in `_flagged/`, repeat Step 3's external-sidecar assembly command with `--flag`, preserving both current reader returns."
 
 ---
 

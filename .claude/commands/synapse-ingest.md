@@ -187,16 +187,7 @@ failures to the user** before proceeding.
 
 ## Step 2 — Extract notes in parallel batches
 
-For every bundle produced in step 1, dispatch one `Agent` subtask to extract
-that paper into a Synapse note. **Synapse agent-slot policy: keep at most 6
-active extraction agents per wave.** Do not attempt larger waves unless the user
-explicitly changes this policy after a new cap test. Dispatch a wave, wait for
-workers to return, record each result, close each completed agent thread, then
-spawn the next wave.
-
-If spawning hits an agent-cap error, timeout, or coordination problem, fall back
-from 6 to 5, then 3, then serial execution. Do not weaken the extraction/audit
-separation to recover speed.
+For every bundle produced in step 1, dispatch one extraction worker for that paper. Follow `AGENTS.md` §4.1: at most three active workers, or the lower live cap. Read and record every completed return before the next dispatch; do not assume completed contexts free a slot. Reduce concurrency on a cap error while preserving writer/reader independence.
 
 Extraction agents write notes only. They must not run the semantic Layer 2 audit
 on their own work, and they must not produce the external Layer 2 JSON. The
@@ -261,80 +252,24 @@ Use the following prompt template for each dispatch, filling in `<PAPER_ID>`:
 >   `incoming/_flagged/<PAPER_ID>.reason.txt` explaining what went wrong.
 >   Do NOT write a `notes/` file.
 
-## Step 2.5 — Independent Layer 2 audit
+## Step 2.5 — Independent holistic and claims audit
 
-After notes validate structurally, dispatch separate GPT-5.6 Sol auditor agents.
-**Keep at most 6 active auditor agents per wave.** Do not attempt larger waves
-unless the user explicitly changes this policy after a new cap test. Do not mix
-extraction and audit waves for the same issue. As with extraction, record each
-returned audit result, close the completed auditor thread, then spawn the next
-wave.
+Follow the current `docs/pipeline-runbook.md` Step 2.5 and `docs/claims-verification.md` reader assignment. After validation and numeric preflight, the parent adjudicates every zero-hit and glyph candidate against raw evidence, then generates both prompts from the frozen note and the same fitted source.
 
-If an audit-agent spawn hits an active-agent cap, timeout, or coordination
-problem even at 6, fall back to 5, then 3, then serial execution while
-preserving auditor independence. Each auditor handles exactly one note. The
-preferred input is the self-contained audit prompt:
+Use fresh blind contexts separate from each other and every writer/repairer: holistic `gpt-6-astra` with `medium` effort; claims `gpt-6.1-sol` with `xhigh` effort (user assignment, 2026-10-14). Set model and effort explicitly in the Codex dispatch and verify actual runtime turn metadata before supplying the analytical prompt. Stop on mismatch or unavailability; a fallback needs user authorization. Keep at most three active workers, or the lower live cap, and read each completed return before the next dispatch.
 
-1. Run `python tools/audit_note.py notes/<PAPER_ID>.md --prompt-only` and read
-   its output — it contains the current rubric, the note body, and the
-   anchor-aware fitted PDF text (so what the auditor sees is exactly what the
-   assembled report's `audit_context` records).
-2. `tools/audit_note.py` usage notes for `--layer-2-json` (provenance shape).
+Generate the holistic prompt with `python tools/audit_note.py notes/<PAPER_ID>.md --prompt-only` and the claims prompt with `--claims-prompt-only`. Preserve prompts locally, their hashes, complete returns and runtime records. Readers write only their assigned `.layer2.json` or `.claims.json` with the required provenance; neither reader assembles the official report or changes the note.
 
-(Reading `docs/audit-rubric.md`, the note, and the raw extracted text directly
-is a legacy fallback — it can diverge from the recorded `audit_context` on
-long papers.)
-
-The auditor must not read the extraction agent's reasoning, drafts, chat
-transcript, or self-evaluation. It emits a JSON file at
-`incoming/_audits/<PAPER_ID>.layer2.json` with this top-level shape:
-
-```json
-{
-  "provenance": {
-    "paper_id": "<PAPER_ID>",
-    "note_sha256": "<sha256 of current note text>",
-    "text_sha256": "<sha256 of current extracted PDF text>",
-    "rubric_version": "v2",
-    "auditor_model": "<model name>",
-    "generated_at": "<UTC ISO timestamp>",
-    "dispatch_mode": "codex-independent-agent"
-  },
-  "layer_2": {
-    "overall": "pass",
-    "scores": {
-      "research_question": {
-        "verdict": "SUPPORTED",
-        "confidence": "high",
-        "evidence_page_hint": null,
-        "note": "..."
-      }
-    }
-  }
-}
-```
-
-The `scores` object must include every prose field the note contains, per
-`docs/audit-rubric.md` (rubric v2): for **v1/v2 notes**, the six fields
-`research_question`, `mechanism_process`, `theoretical_contribution`,
-`practical_implication`, `limitations`, `future_research`; for **v3 notes**,
-those six plus `hypotheses`, `data_measures`, and `key_findings` (nine total).
-Missing fields are an audit error, not an implied pass — assembly rejects the
-JSON. `rubric_version` must be `"v2"`; a `"v1"` stamp is rejected.
-
-The parent operator then assembles the official report:
+The parent verifies quotations, coverage and provenance, adjudicates every disagreement and adverse claim against raw source, and preserves reader judgments separately from parent dispositions. Assemble all reports in the assigned wave before repairs. New, augmented and repaired notes require both readers; the one-reader Stage 1 first-pass exception applies only to that expressly assigned retrospective scope.
 
 ```bash
 python tools/audit_note.py notes/<PAPER_ID>.md \
   --layer-2-json incoming/_audits/<PAPER_ID>.layer2.json \
-  --auditor-model <model name> \
+  --claims-json incoming/_audits/<PAPER_ID>.claims.json \
   --flag
 ```
 
-This command verifies Layer 1 anchors, validates the external Layer 2 provenance
-against the current note/PDF hashes, writes
-`incoming/_audits/<PAPER_ID>.audit.json`, and writes
-`incoming/_flagged/<PAPER_ID>.reason.txt` only if the audit fails.
+The tool validates and assembles external evidence; it does not schedule Codex workers or set reasoning effort. Preserve historical model stamps and use the publication-evidence gate before any authorized release.
 
 ## Step 3 — Aggregate outcomes
 

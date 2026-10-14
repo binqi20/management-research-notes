@@ -24,9 +24,9 @@ source; three CrossRef gates bracket extraction to catch hand-entry errors.
   v0.4–v0.19 precedent). When an issue's analysis, audit, and gates are all
   clean, publish that issue: commit, push, tag, GitHub Release. Publication
   still requires the user's explicit go-ahead in the conversation that runs it.
-- **Parallel-agent cap = 6.** At most 6 active extraction agents *or* 6 active
-  audit agents per wave. Never mix extraction and audit in the same wave. On any
-  cap/timeout/coordination trouble, fall back 6 → 5 → 3 → serial. See
+- **Parallel-agent cap = 3 or the lower live platform cap.** Never mix
+  extraction and audit in the same wave. On cap/timeout/coordination trouble,
+  reduce concurrency, down to serial if necessary. See
   [`AGENTS.md` §4.1](../AGENTS.md).
 
 ## Runtime modes
@@ -35,13 +35,10 @@ Two equivalent ways to run Steps 2–2.5, sharing the same caps, write scopes, a
 independence rules. Pick by runtime; never mix extraction and audit in one wave
 in either mode.
 
-- **Wave mode (Codex).** The operator session dispatches ≤6 extraction workers,
-  waits for all to return, closes them, then dispatches ≤6 audit workers as a
-  separate wave. Repeat per wave until the issue is covered. This is the mode the
-  worked ledgers under `incoming/_ledgers/` record.
+- **Wave mode (Codex).** The operator session dispatches at most three extraction workers (or the lower live cap), reads and records every complete return, then dispatches independent audit workers under the same cap as a separate wave. Preserve reader contexts for authorized follow-up; do not assume an ended turn frees a platform slot. Repeat per wave until the issue is covered. Historical ledgers retain their actual dispatch settings.
 - **Chunked two-phase mode (Claude Code / code-orchestrated runtimes).** Split the
   issue into chunks of ~4–5 papers. For each chunk: Phase E runs the chunk's
-  extraction agents concurrently **to completion** (barrier), then Phase A runs
+  extraction agents **to completion** (barrier), scheduled under the same three-worker or lower live cap, then Phase A runs
   fresh audit agents for the chunk's validated notes concurrently to completion.
   Chunk k's audits must finish before chunk k+1's extraction starts (no
   cross-chunk overlap — a mixed 9–10-agent burst is the historical rate-limit
@@ -51,7 +48,7 @@ in either mode.
   must report the pre-fix cause either way.
 
 In both modes: extraction agents write only `notes/<paper_id>.md`; audit agents
-write only `incoming/_audits/<paper_id>.layer2.json`; **subagents never run git
+write only their assigned `.layer2.json` or `.claims.json` sidecars in `incoming/_audits/` (or the frozen local evidence directory); **subagents never run git
 commands** (staging, committing, tagging, and pushing are parent-session actions
 only); the parent session verifies expected files **on disk** (never trusting
 agent self-reports), assembles official audits, makes repairs, and rebuilds
@@ -159,9 +156,7 @@ the identical fitted source, and writes `incoming/_audits/<paper_id>.claims.json
 under [`claims-verification.md`](claims-verification.md): every atomic claim
 in the three v3 fields, plus every direction, prescription and generalizability
 target in the six legacy fields. Its provenance additionally has
-`pass: "claims-v1"`. Use another OpenAI model for (b) when a runtime-verified
-probe succeeds (v0.70.0: Astra holistic, Sol claims); otherwise use separate
-fresh Astra contexts and record the fallback explicitly.
+`pass: "claims-v1"`. The [current reader assignment](claims-verification.md#reader-assignment--effective-2026-10-14), approved 2026-10-14, is `gpt-6-astra`/`medium` for (a) and `gpt-6.1-sol`/`xhigh` for (b). Set these explicitly in the Codex dispatch and verify actual model and effort from runtime metadata before supplying the analytical prompt. Stop on mismatch or unavailability; a fallback requires user authorization and a ledger entry. Earlier Astra/Sol assignments and completed reports remain historical.
 
 The parent checks coverage and adjudicates every disagreement and every
 UNVERIFIED or CONTRADICTED claim against the raw text before assembly, recording

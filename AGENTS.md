@@ -122,6 +122,8 @@ close-agent operation in this runtime; completed threads may still occupy slots.
 Never reuse a writer or repairer context as a reader or silently substitute a
 model. The parent assembles reports and rebuilds indexes.
 
+**Reader assignment — 2026-10-14:** future claims readers use `gpt-6.1-sol` with `xhigh` effort; holistic readers remain `gpt-6-astra` with `medium` effort. Follow the [dispatch and runtime-verification contract](docs/claims-verification.md#reader-assignment--effective-2026-10-14). These settings do not restamp historical reports or authorize a new batch.
+
 ---
 
 ## 5. Faithfulness guarantees
@@ -154,8 +156,9 @@ raw lines. The corpus run found 2,728 advisory zero-hit occurrences in 457 of
 895 AMJ v3 notes, not 2,728 proven errors.
 
 The writer context is never a reader. New ingestion, augmentation and repair
-re-audits use fresh blind holistic and claims readers; actual runtime stamps
-verified gpt-6-astra and gpt-5.6-sol respectively. The parent adjudicates every
+re-audits use fresh blind holistic and claims readers. The completed v0.74.0
+closeout verified gpt-6-astra and gpt-5.6-sol respectively; future dispatch follows
+the dated reader assignment in §4.1. The parent adjudicates every
 disagreement and non-supported claim against raw text before assembly, and
 assembles all reports before repairs. Reports record both readers and writer
 models; there is no family gate. The Claude CLI is an unused manual fallback.

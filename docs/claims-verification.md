@@ -166,13 +166,24 @@ six string-valued keys shown above. Preserve note spelling and punctuation in
 `note_clause`; paraphrases are not verbatim. Coverage and semantic support are
 reviewed by the parent, not inferred from valid JSON.
 
+## Reader assignment — effective 2026-10-14
+
+The user approved these settings for future independent reviews:
+
+| Role | Model | Reasoning effort |
+|---|---|---|
+| Independent claims reader (`claims-v1`) | `gpt-6.1-sol` | `xhigh` (extra high) |
+| Holistic Layer-2 reader | `gpt-6-astra` | `medium` (unchanged) |
+
+The claims task remains the complete check of individual statements, numbers, units, formulas, directions, attribution, comparisons and qualifications specified above. This assignment changes the runtime, not the rubric, coverage requirement, fitter or evidence standard. It does not start a new batch or authorize rerunning completed reviews. Historical reports and extraction/augmentation stamps retain the models and efforts that actually produced them.
+
+Set both model and reasoning effort explicitly in the Codex worker dispatch. Before supplying the analytical prompt, verify the actual model and effort from runtime turn metadata and save that provenance with the parent-generated prompt hash. A model catalog entry, worker self-report or requested configuration alone does not verify execution. Stop on unavailability or mismatch; obtain user authorization for a fallback instead of silently changing model or effort. The writer/repairer, holistic reader and claims reader remain separate contexts.
+
+`tools/audit_note.py` generates prompts and validates/assembles external JSON; it does not launch these Codex workers or set their reasoning effort. `--auditor-model` and the generic `DEFAULT_AUDITOR_MODEL` are not claims-worker scheduling controls. The actual claims model belongs in its sidecar's `provenance.auditor_model`; the actual effort belongs in the runtime evidence. No new schema key or generic constant replacement is needed. Preserve historical batch scripts; freeze the requested settings explicitly in the next authorized batch's dispatcher and ledger.
+
 ## Parent assembly contract
 
-The claims reader is separate from the holistic reader and from every writer.
-Use a different OpenAI model when runtime metadata verifies that it is available;
-otherwise record the same-model, separate-context fallback in the ledger. Both
-readers receive identical fitted source text through the audit tool's prompt
-modes. Run `check_numbers.py` first; adjudicate each zero-hit token against raw
+The claims reader is separate from the holistic reader and from every writer. Use the current reader assignment above; any authorized fallback must be recorded explicitly and still use separate fresh contexts. Both readers receive identical fitted source text through the audit tool's prompt modes. Run `check_numbers.py` first; adjudicate each zero-hit token against raw
 lines before dispatch. Neither numeric matches nor reader agreement prove truth.
 
 Before assembly, the parent checks every reader disagreement and every UNVERIFIED
