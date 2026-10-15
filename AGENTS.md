@@ -15,11 +15,11 @@ focuses on what's portable across agents.
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**1,180 curated notes** on peer-reviewed papers in management and business
-sustainability research. The current v0.76.0 main-branch snapshot contains 272
+**1,188 curated notes** on peer-reviewed papers in management and business
+sustainability research. The current v0.77.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
-and 908 Academy of Management Journal pilot notes across 72 recent issues
-(vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 3). Every note is a single Markdown
+and 916 Academy of Management Journal pilot notes across 73 recent issues
+(vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 4). Every note is a single Markdown
 file with YAML frontmatter and a structured Markdown body. The repository
 is MIT licensed; individual PDFs are not redistributed.
 
@@ -134,7 +134,9 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current review status — v0.76.0, 2026-10-15.** AMJ 2026, Volume 69, Issue 3 adds 7 V3 notes; 2 existing DOI-matched NBS V2 analyses are preserved, completing coverage of all nine downloaded papers. Current paired reviews retain 62 SUPPORTED / 1 PARTIAL holistic fields and 1,205 SUPPORTED / 5 UNVERIFIED claims. One precision body correction was made before publication, followed by both fresh full-note readers for every repaired note. All 7 publication-evidence checks pass; reader reservations retain separate source adjudications. SQLite, CSV and BibTeX contain 1,180 records (61 V1 / 211 V2 / 908 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.76.0.md).
+**Current review status — v0.77.0, 2026-10-15.** AMJ 2026, Volume 69, Issue 4 adds 8 V3 notes; 1 existing DOI-matched NBS V2 analysis is preserved, completing coverage of all nine downloaded papers. Current paired reviews retain 72 SUPPORTED holistic fields and 1,185 SUPPORTED / 2 UNVERIFIED claims. 2 precision body corrections were made before publication, followed by both fresh full-note readers for every repaired note. All 8 publication-evidence checks pass; reader reservations retain separate source adjudications. SQLite, CSV and BibTeX contain 1,188 records (61 V1 / 211 V2 / 916 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.77.0.md).
+
+**Published review status — v0.76.0, 2026-10-15.** AMJ 2026, Volume 69, Issue 3 adds 7 V3 notes; 2 existing DOI-matched NBS V2 analyses are preserved, completing coverage of all nine downloaded papers. Current paired reviews retain 62 SUPPORTED / 1 PARTIAL holistic fields and 1,205 SUPPORTED / 5 UNVERIFIED claims. One precision body correction was made before publication, followed by both fresh full-note readers for every repaired note. All 7 publication-evidence checks pass; reader reservations retain separate source adjudications. SQLite, CSV and BibTeX contain 1,180 records (61 V1 / 211 V2 / 908 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.76.0.md).
 
 **Published review status — v0.75.0, 2026-10-15.** AMJ 2026, Volume 69, Issue 2 adds 6 V3 notes; 3 existing DOI-matched NBS V2 analyses are preserved, completing coverage of all nine downloaded papers. Current paired reviews retain 54 SUPPORTED holistic fields and 1,321 SUPPORTED / 4 UNVERIFIED claims. 3 precision body corrections were made before publication, followed by both fresh full-note readers for every repaired note. All 6 publication-evidence checks pass; reader reservations retain separate source adjudications. SQLite, CSV and BibTeX contain 1,173 records (61 V1 / 211 V2 / 901 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.75.0.md).
 
@@ -500,7 +502,7 @@ numeric-check policy does not retrospectively restamp older reports.
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.76.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.77.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 

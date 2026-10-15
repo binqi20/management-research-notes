@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Notes](https://img.shields.io/badge/curated%20notes-1180-brightgreen.svg)](notes/)
+[![Notes](https://img.shields.io/badge/curated%20notes-1188-brightgreen.svg)](notes/)
 [![Sources](https://img.shields.io/badge/sources-NBS%20%2B%20AMJ-orange.svg)](#whats-in-this-snapshot)
-[![Review](https://img.shields.io/badge/review-AMJ%2069%20Issue%203%20reviewed-blue.svg)](#faithfulness-audit)
+[![Review](https://img.shields.io/badge/review-AMJ%2069%20Issue%204%20reviewed-blue.svg)](#faithfulness-audit)
 [![For AI agents](https://img.shields.io/badge/for%20AI%20agents-AGENTS.md-blueviolet.svg)](AGENTS.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19564336.svg)](https://doi.org/10.5281/zenodo.19564336)
 
@@ -93,17 +93,19 @@ economics working papers, organization theory, policy analysis, STS, labor
 studies. Fork the repo, point it at your own manifest, and the validator and
 audit layer come along for free.
 
-The current v0.76.0 design targets libraries growing from dozens to tens of thousands of
+The current v0.77.0 design targets libraries growing from dozens to tens of thousands of
 papers. Whether the shape holds at that scale is an empirical question rather
 than a settled assumption: some parts — one file per paper, SQLite-derived
 indexes, the controlled-vocabulary topic list, even the extraction prompt's
 field set — may need to evolve as the library grows, new sources appear, or
-research workflows change. Treat the v0.76.0 architecture as a working
+research workflows change. Treat the v0.77.0 architecture as a working
 hypothesis refined by each release, not a frozen spec.
 
 ## Faithfulness audit
 
-**Current review status — v0.76.0, 2026-10-15.** AMJ 2026, Volume 69, Issue 3 adds 7 V3 notes; 2 existing DOI-matched NBS V2 analyses are preserved, completing coverage of all nine downloaded papers. Current paired reviews retain 62 SUPPORTED / 1 PARTIAL holistic fields and 1,205 SUPPORTED / 5 UNVERIFIED claims. One precision body correction was made before publication, followed by both fresh full-note readers for every repaired note. All 7 publication-evidence checks pass; reader reservations retain separate source adjudications. SQLite, CSV and BibTeX contain 1,180 records (61 V1 / 211 V2 / 908 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.76.0.md).
+**Current review status — v0.77.0, 2026-10-15.** AMJ 2026, Volume 69, Issue 4 adds 8 V3 notes; 1 existing DOI-matched NBS V2 analysis is preserved, completing coverage of all nine downloaded papers. Current paired reviews retain 72 SUPPORTED holistic fields and 1,185 SUPPORTED / 2 UNVERIFIED claims. 2 precision body corrections were made before publication, followed by both fresh full-note readers for every repaired note. All 8 publication-evidence checks pass; reader reservations retain separate source adjudications. SQLite, CSV and BibTeX contain 1,188 records (61 V1 / 211 V2 / 916 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.77.0.md).
+
+**Published review status — v0.76.0, 2026-10-15.** AMJ 2026, Volume 69, Issue 3 adds 7 V3 notes; 2 existing DOI-matched NBS V2 analyses are preserved, completing coverage of all nine downloaded papers. Current paired reviews retain 62 SUPPORTED / 1 PARTIAL holistic fields and 1,205 SUPPORTED / 5 UNVERIFIED claims. One precision body correction was made before publication, followed by both fresh full-note readers for every repaired note. All 7 publication-evidence checks pass; reader reservations retain separate source adjudications. SQLite, CSV and BibTeX contain 1,180 records (61 V1 / 211 V2 / 908 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.76.0.md).
 
 **Published review status — v0.75.0, 2026-10-15.** AMJ 2026, Volume 69, Issue 2 adds 6 V3 notes; 3 existing DOI-matched NBS V2 analyses are preserved, completing coverage of all nine downloaded papers. Current paired reviews retain 54 SUPPORTED holistic fields and 1,321 SUPPORTED / 4 UNVERIFIED claims. 3 precision body corrections were made before publication, followed by both fresh full-note readers for every repaired note. All 6 publication-evidence checks pass; reader reservations retain separate source adjudications. SQLite, CSV and BibTeX contain 1,173 records (61 V1 / 211 V2 / 901 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.75.0.md).
 
@@ -566,6 +568,14 @@ The full library has been swept across releases:
   extraction prompt. Manifest lint and scoped CrossRef pass 13/13 with
   zero new false-positive entries; SQLite, CSV, and BibTeX all contain
   1,141 records.
+
+- **v0.77.0 — AMJ Volume 69, Issue 4 (2026-10-15):**
+  AMJ 2026, Volume 69, Issue 4 adds 8 V3 notes; 1 existing DOI-matched NBS V2 analyses
+  are preserved, completing coverage of all nine downloaded papers. Final reviews: 72
+  SUPPORTED holistic fields; 1,185 SUPPORTED / 2 UNVERIFIED claims, with source
+  dispositions retained. 2 precision draft repairs and both fresh readers for each
+  repaired note; all 8 readiness gates pass. Corpus: 1,188 notes (61 V1 / 211 V2 / 916
+  V3). See [release evidence](docs/releases/v0.77.0.md).
 
 - **v0.76.0 — AMJ Volume 69, Issue 3 (2026-10-15):**
   AMJ 2026, Volume 69, Issue 3 adds 7 V3 notes; 2 existing DOI-matched NBS V2 analyses
@@ -2247,7 +2257,7 @@ Or, from inside a Claude Code session: `/audit-note <paper_id>`.
 
 ## What's in this snapshot
 
-The current **v0.76.0** snapshot contains **1,180 curated notes**:
+The current **v0.77.0** snapshot contains **1,188 curated notes**:
 
 - **NBS 2026-02** — 77 notes distilled from the [Network for Business
   Sustainability (NBS)](https://nbs.net/) February 2026 monthly research
@@ -2255,7 +2265,7 @@ The current **v0.76.0** snapshot contains **1,180 curated notes**:
   recovered and added in v0.3.0.)
 - **NBS 2025-12** — 82 notes from the NBS **December 2025** monthly digest, spanning the *Ecological Economics* biodiversity-and-finance special issue, AMJ, *Business & Society*, *Review of Finance*, *Strategic Management Journal*, and other journals (added in v0.20.0).
 - **NBS 2026-01** — 113 notes from the NBS **January 2026** monthly digest, led by the *Journal of Business Ethics* (40) with *Research Policy* (14), the *Journal of Environmental Economics and Management*, *Organization Science*, *Human Relations*, *The Journal of Finance*, *MIS Quarterly*, and other journals (added in v0.21.0).
-- **AMJ pilot** — 908 notes across 72 recent issues of
+- **AMJ pilot** — 916 notes across 73 recent issues of
   the [Academy of Management Journal](https://journals.aom.org/journal/amj)
   (vol. 57 no. 1 through vol. 57 no. 3, vol. 58 no. 1 through vol. 58 no. 6, vol. 59 no. 1 through vol.
   59 no. 6, vol. 60 no. 1 through vol.
@@ -2266,7 +2276,8 @@ The current **v0.76.0** snapshot contains **1,180 curated notes**:
   64 no. 6, vol. 65 no. 1 through vol.
   65 no. 6, vol. 66 no. 1 through vol.
   66 no. 6, vol. 67 no. 1 through vol. 67 no. 6, vol. 68 no. 1
-  through vol. 68 no. 6, and vol. 69 no. 1 through vol. 69 no. 3).
+  through vol. 68 no. 6, and vol. 69 no. 1 through vol. 69 no. 4).
+  v0.77.0 added vol. 69 no. 4 (8 new notes; 1 existing NBS note retained);
   v0.76.0 added vol. 69 no. 3 (7 new notes; 2 existing NBS notes retained);
   v0.75.0 added vol. 69 no. 2 (6 new notes; 3 existing NBS notes retained);
   v0.33.0 added vol. 57 no. 3 (13 notes);
@@ -2294,17 +2305,18 @@ The current **v0.76.0** snapshot contains **1,180 curated notes**:
 
 | Paper type | Count |
 |---|---:|
-| empirical-quantitative | 678 |
-| empirical-qualitative | 247 |
-| empirical-mixed | 112 |
-| editorial | 74 |
+| empirical-quantitative | 680 |
+| empirical-qualitative | 250 |
+| empirical-mixed | 113 |
+| editorial | 75 |
 | conceptual | 54 |
 | review | 9 |
 | book-review | 6 |
-| **Total** | **1,180** |
+| other | 1 |
+| **Total** | **1,188** |
 
-All stored official reports passed at the v0.70.0 release. The completed V1 review, selected v0.74.0 AMJ closeout and excluded retrospective queue are disclosed above. The v0.76.0 corpus contains 61 legacy v1
-notes, 211 v2 notes, and 908 v3 notes; v2/v3 notes carry an `evidence:` anchor
+All stored official reports passed at the v0.70.0 release. The completed V1 review, selected v0.74.0 AMJ closeout and excluded retrospective queue are disclosed above. The v0.77.0 corpus contains 61 legacy v1
+notes, 211 v2 notes, and 916 v3 notes; v2/v3 notes carry an `evidence:` anchor
 block checked by Layer 1, and v3 notes add Hypotheses / Propositions, Data &
 Measures, and Key Findings. See [Faithfulness audit](#faithfulness-audit) above.
 
@@ -2437,7 +2449,7 @@ you both APA and BibTeX automatically. Or, manually:
   title        = {Management Research Notes: A File-Based Academic Knowledge
                   Base for Management and Business Sustainability Research},
   year         = {2026},
-  version      = {0.76.0},
+  version      = {0.77.0},
   doi          = {10.5281/zenodo.19564336},
   url          = {https://doi.org/10.5281/zenodo.19564336},
   license      = {MIT}
