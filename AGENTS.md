@@ -15,11 +15,11 @@ focuses on what's portable across agents.
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**1,167 curated notes** on peer-reviewed papers in management and business
-sustainability research. The current v0.74.0 main-branch snapshot contains 272
+**1,173 curated notes** on peer-reviewed papers in management and business
+sustainability research. The current v0.75.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
-and 895 Academy of Management Journal pilot notes across 70 recent issues
-(vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 1). Every note is a single Markdown
+and 901 Academy of Management Journal pilot notes across 71 recent issues
+(vol. 57 no. 1-3, plus vol. 58 no. 1 through vol. 69 no. 2). Every note is a single Markdown
 file with YAML frontmatter and a structured Markdown body. The repository
 is MIT licensed; individual PDFs are not redistributed.
 
@@ -134,7 +134,9 @@ audit**:
 - **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
 - **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
 
-**Current review status — v0.74.0, 2026-10-14.** The selected 34-note AMJ closeout publishes 179 explicitly approved operations across 129 distinct fields (51 substantive / 78 precision), including 14 protected-frontmatter fields across ten notes. All 34 notes have current paired reviews, source adjudications, independent final verification and passing publication-evidence checks. Original judgments remain visible: 305 SUPPORTED / one PARTIAL holistic fields and 3,927 SUPPORTED / 30 UNVERIFIED / one CONTRADICTED claims. The reservations have separately documented source dispositions; they are not relabeled as unanimous support. Historical V3 labels and extraction stamps remain intact. See the [release scope and evidence](docs/releases/v0.74.0.md), [every correction](docs/releases/v0.74.0-corrections.md), and [retained judgments and parent coverage](docs/releases/v0.74.0-review.md).
+**Current review status — v0.75.0, 2026-10-15.** AMJ 2026, Volume 69, Issue 2 adds 6 V3 notes; 3 existing DOI-matched NBS V2 analyses are preserved, completing coverage of all nine downloaded papers. Current paired reviews retain 54 SUPPORTED holistic fields and 1,321 SUPPORTED / 4 UNVERIFIED claims. 3 precision body corrections were made before publication, followed by both fresh full-note readers for every repaired note. All 6 publication-evidence checks pass; reader reservations retain separate source adjudications. SQLite, CSV and BibTeX contain 1,173 records (61 V1 / 211 V2 / 901 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.75.0.md).
+
+**Published review status — v0.74.0, 2026-10-14.** The selected 34-note AMJ closeout publishes 179 explicitly approved operations across 129 distinct fields (51 substantive / 78 precision), including 14 protected-frontmatter fields across ten notes. All 34 notes have current paired reviews, source adjudications, independent final verification and passing publication-evidence checks. Original judgments remain visible: 305 SUPPORTED / one PARTIAL holistic fields and 3,927 SUPPORTED / 30 UNVERIFIED / one CONTRADICTED claims. The reservations have separately documented source dispositions; they are not relabeled as unanimous support. Historical V3 labels and extraction stamps remain intact. See the [release scope and evidence](docs/releases/v0.74.0.md), [every correction](docs/releases/v0.74.0-corrections.md), and [retained judgments and parent coverage](docs/releases/v0.74.0-review.md).
 
 **Completed V1 review — v0.73.0, 2026-10-08.** The correction-only review of all 61 legacy V1 notes is complete: 40 corrected notes were published in v0.72.0, v0.73.0 published the remaining 20, and Spoor required no change. These final 20 corrections cover 123 fields (45 substantive / 78 precision), including 48 exactly approved protected-frontmatter fields. Final paired reviews record 115 SUPPORTED / 5 source-adjudicated PARTIAL holistic fields and 1,165 SUPPORTED / 36 source-adjudicated UNVERIFIED claims. All 20 publication-evidence checks pass. Seventeen complete abstracts use the optional, traceable PDF-derived check; three book reviews retain the Abstract heading with `Not reported in paper`. V1 labels and historical extraction stamps are preserved. See the [release evidence and retained judgments](docs/releases/v0.73.0.md) and [complete correction table](docs/releases/v0.73.0-corrections.md).
 
@@ -496,7 +498,7 @@ numeric-check policy does not retrospectively restamp older reports.
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.74.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.75.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
 
 Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
