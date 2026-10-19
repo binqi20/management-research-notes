@@ -2,20 +2,14 @@
 
 **How AI agents can use this repository.**
 
-This file is the tool-agnostic entry point for any AI agent (Claude, GPT,
-Gemini, Cursor, Windsurf, a custom SDK app, or a future framework we
-haven't heard of yet) that wants to read, query, or contribute to the
-Management Research Notes knowledge base. A companion file,
-[`CLAUDE.md`](CLAUDE.md), contains Claude-Code-specific operational
-conventions (slash commands, subagent dispatch, tool names); this file
-focuses on what's portable across agents.
+This is the entry point for agents reading, querying or contributing to Management Research Notes. The Markdown, SQLite, CSV and BibTeX formats can be consumed independently of the production model or vendor. [`CLAUDE.md`](CLAUDE.md) retains the project's working rules under its historical filename; the [current analysis workflow](docs/analysis-workflow.md) and [claims guide](docs/claims-verification.md) govern production and reader assignments.
 
 ---
 
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**1,222 curated notes** on peer-reviewed papers in management and business
+**1,222 curated notes** on scholarly publications in management and business
 sustainability research. The current v0.80.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
 and 950 Academy of Management Journal pilot notes across 76 issues
@@ -23,13 +17,7 @@ and 950 Academy of Management Journal pilot notes across 76 issues
 file with YAML frontmatter and a structured Markdown body. The repository
 is MIT licensed; individual PDFs are not redistributed.
 
-**Why it exists for agents specifically.** Raw PDFs are expensive to load
-in bulk and their text layers vary in quality. These notes are a
-distilled, uniform, verbatim-anchored representation that fits in a
-context window, supports structured querying, and carries strong
-faithfulness guarantees (see §5). An agent can load the whole library
-into a context window when it fits, or query SQL/FTS5 for specific slices,
-then verify substantive claims against the original paper.
+**Why it exists for agents specifically.** Raw PDFs are expensive to load in bulk and their text layers vary in quality. Structured notes support targeted retrieval and comparison through SQL/FTS5 or plain text. Retrieve material relevant to the task, observe the review limits in §5, and verify substantive claims against the original publication.
 
 ---
 
@@ -38,8 +26,8 @@ then verify substantive claims against the original paper.
 Before acting on the data or contributing to it, an agent should read in
 this order:
 
-1. This file (`AGENTS.md`) — entry point, data formats, faithfulness guarantees.
-2. [`CLAUDE.md`](CLAUDE.md) — the 7 hard rules for anyone modifying content (Claude-Code-flavored but content is tool-agnostic).
+1. This file (`AGENTS.md`) — entry point, data formats, review process and limits.
+2. [`CLAUDE.md`](CLAUDE.md) — working rules for anyone modifying content, retained under the historical filename.
 3. [`docs/extraction-prompt.md`](docs/extraction-prompt.md) — the canonical prompt used to produce each note, including the required `evidence:` anchor schema.
 4. [`docs/audit-rubric.md`](docs/audit-rubric.md) — the verdict rubric the faithfulness auditor uses.
 5. [`docs/pipeline-runbook.md`](docs/pipeline-runbook.md) — **if you are ingesting or publishing:** the vendor-neutral step-by-step procedure (gate order, parallel-wave caps, systemic-failure stop conditions, SSH publish).
@@ -57,14 +45,14 @@ can be regenerated with `python tools/build_index.py`.
 - One file per paper, named by stable `paper_id` (e.g. `nbs-2026-02-spoor-2026`).
 - Every `paper_id` is permanent — agents may safely use it as a citation target.
 - Two parts:
-  - **YAML frontmatter:** bibliographic metadata (title, authors, year, journal, DOI, volume, issue, pages), paper type, controlled-vocabulary `topics:`, methods, sample (N, country, industry, time period), three custom analytic fields (`unit_of_analysis`, `level_of_theory`, `dependent_variable_family`), and (on v2/v3 notes) an `evidence:` block of ≤25-word verbatim PDF quotes anchoring each factual claim.
+  - **YAML frontmatter:** bibliographic metadata (title, authors, year, journal, DOI, volume, issue, pages), paper type, controlled-vocabulary `topics:`, methods, sample (N, country, industry, time period), three custom analytic fields (`unit_of_analysis`, `level_of_theory`, `dependent_variable_family`), and (on v2/v3 notes) an `evidence:` block of short source quotations associated with structured fields. Matching an anchor to source text does not certify every claim in its field.
   - **Markdown body:** abstract (intended to reproduce the source abstract; see the dated V1 review below), research question, mechanism/process, theoretical contribution, practical implication, limitations, future research, and an APA 7th citation block. **v3 notes add three empirical sections — hypotheses / propositions, data & measures, and key findings** — so the note records not just what a paper studied but what it found.
 - **Good for:** grep / full-text search, loading into context, human reading.
 - **Example query:** `grep -l "stakeholder theory" notes/*.md`.
 
 ### 3.2 SQLite index (`index/synapse.db`) — derived
 
-- Standard SQLite 3, readable from any language. Tables include `papers`, `authors`, `topics`, `theories`, `methods`, plus FTS5 virtual tables over the abstracts and analytic prose.
+- Standard SQLite 3, readable from any language. Tables include `papers`, `authors`, `topics`, `theories`, `keywords`, plus FTS5 virtual tables over the abstracts and analytic prose.
 - **Good for:** structured queries, counts, filters, joins.
 - **Example query:**
   ```sql
@@ -86,7 +74,7 @@ can be regenerated with `python tools/build_index.py`.
 
 ### 3.4 BibTeX (`index/library.bib`) — derived
 
-- One `@article` per note, DOI-keyed.
+- One `@article` per note, keyed by its stable paper ID.
 - **Good for:** LaTeX, Zotero, Word citation managers. Drop it into your bibliography file and the notes' APA citations round-trip.
 
 ### 3.5 Controlled vocabulary (`index/topics.json`) — derived
@@ -126,13 +114,17 @@ model. The parent assembles reports and rebuilds indexes.
 
 ---
 
-## 5. Faithfulness guarantees
+<a name="5-faithfulness-guarantees"></a>
 
-Every note in this repository has been through a **two-layer faithfulness
-audit**:
+## 5. Review process and limits
 
-- **Layer 1 — Evidence anchors (mechanical).** For v2/v3 notes, each factual claim (sample size, country, industry, time period, theories, methods, keywords — and, on v3, hypotheses, measures, and key findings) carries a ≤25-word verbatim quote from the PDF. The validator checks each quote is a substring of the extracted PDF text under hyphen-tolerant normalization. Fabricated quotes fail deterministically. Earlier v1 notes predate the evidence-anchor schema and are exempt from this layer.
-- **Layer 2 — Semantic audit (fresh independent auditor).** A fresh auditor context reads the PDF, reads the note, and emits a per-field verdict for the six prose fields (research question, mechanism, theoretical contribution, practical implication, limitations, future research — v3 notes add three more: hypotheses, data & measures, key findings) from the set: `SUPPORTED` / `PARTIAL` / `UNSUPPORTED` / `CONTRADICTED`. The auditor cannot be the same agent/session that generated the note. A note is rejected if any verdict is `UNSUPPORTED` or `CONTRADICTED`.
+The [current analysis workflow](docs/analysis-workflow.md) distinguishes mechanical validation, independent readers and parent source adjudication. Historical reports retain the methods and model stamps used at their own release; current requirements do not retrospectively establish that every note received the same checks.
+
+- **Mechanical checks:** validate structure, source-quotation membership and current evidence bindings. V1 notes predate the evidence-anchor schema. An anchor match does not establish the meaning, attribution or completeness of every claim in a field.
+- **Independent reviews:** the current process uses separate blind holistic and claims readers, with writer/reader separation and runtime verification as specified in the [claims guide](docs/claims-verification.md). Inputs follow that guide; direct PDF inspection is used where required rather than assumed for every reader.
+- **Adjudication and publication:** preserve original reader judgments and separately document source dispositions, corrections and authorized exceptions. Apply the [publication-readiness requirements](docs/publication-readiness.md). A PASS label is evidence of a specified review, not a guarantee of flawless accuracy.
+
+The [preserved homepage audit history](FAITHFULNESS-AUDIT.md) and [release records](docs/releases/) provide the dated disclosures. The existing status records below remain unchanged.
 
 **Current review status — v0.80.0, 2026-10-19.** AMJ 2026, Volume 69, Issue 5 publishes eight new V3 notes, including the editorial, and upgrades the existing Fang note from V2 to V3 under its stable ID. All nine downloaded papers have exactly one analysis. Current paired reviews retain 81 SUPPORTED holistic fields and 1,721 SUPPORTED / one UNVERIFIED claim, with a separate source adjudication for the retained reservation. Four corrections across four fields in three notes (three precision, one substantive), including two exact user-approved Fang corrections, preceded the final fresh paired reviews. All nine structural validations and standard publication-evidence checks pass. SQLite, CSV and BibTeX contain 1,222 records (61 V1 / 210 V2 / 951 V3). See the [issue release, corrections and retained judgment](docs/releases/v0.80.0.md).
 
@@ -488,14 +480,14 @@ outcomes do not establish that all undetected errors are absent.
 Agents querying the data can rely on the following:
 
 - **Abstract fidelity requires source verification.** The v0.73.0 review resolves the 20 earlier abstract holds: 17 complete abstracts use reproducible PDF-derived evidence and three book reviews use the no-abstract sentinel. The default source-text rule remains unchanged; verify an abstract against the original paper before quoting it.
-- **Every factual claim in v2 note frontmatter is anchored.** If your agent cites a sample size or a theory from v2 frontmatter, there is a verbatim PDF quote behind it in the `evidence:` block.
+- **Evidence anchors support traceability.** V2/V3 notes associate structured fields with source quotations in an `evidence:` block. Inspect the relevant source context before relying on a sample size, theory or other substantive claim; quotation membership alone is insufficient.
 - **Stored semantic audits are historical evidence.** Later reviews can identify defects in previously passing notes. The dated status above distinguishes published corrections from unresolved findings; verify substantive prose claims against the source.
 - **Zero `CONTRADICTED` verdicts in the v0.70.0 release-time reports.** This describes the historical stored audit results, not an absolute guarantee that every source contradiction has been detected.
 
 **Caveats:**
-- Notes are a snapshot, not a live database. The v0.70.0 release-time stored audit state was checked locally on 2026-10-04; the completed V1 review, Stage 1 findings and unpublished repairs are reported in the dated review status above.
+- Notes are a snapshot, not a live database. The v0.70.0 release-time stored audit state was checked locally on 2026-10-04; subsequent reviews, published corrections and deferred scope are distinguished in the dated status above.
 - The audit can identify hallucinations and direction-reversals, but does not resolve inconsistencies in the source paper itself. Always cite the original paper for any claim of substance.
-- `PARTIAL` verdicts can indicate minor paraphrastic drift, compression, or missing source context in the fitted audit input; they are listed in the per-paper audit JSONs but those JSONs are not published to the repo (they contain per-paper reasoning that is better regenerated on demand).
+- `PARTIAL` verdicts can indicate minor paraphrastic drift, compression, or missing source context in the fitted audit input; full per-paper reports and source-bearing evidence remain local, while public release records disclose review outcomes and dispositions. Preserve valid reports rather than regenerating them merely to obtain unanimous labels.
 
 ---
 
@@ -508,9 +500,9 @@ numeric-check policy does not retrospectively restamp older reports.
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.80.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19564336
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.80.0) [Software]. GitHub. https://github.com/binqi20/management-research-notes/releases/tag/v0.80.0
 
-Or see [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
+See [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata. DOI [10.5281/zenodo.19564336](https://doi.org/10.5281/zenodo.19564336) identifies the original v0.1.0 archive, not v0.80.0; cite that archive separately when it is the version used.
 
 ---
 

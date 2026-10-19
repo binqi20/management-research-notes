@@ -7,54 +7,30 @@ authors:
     given-names: "Binqi"
     orcid: "https://orcid.org/0000-0002-5095-3710"
 repository-code: "https://github.com/binqi20/management-research-notes"
-url: "https://github.com/binqi20/management-research-notes"
+url: "https://github.com/binqi20/management-research-notes/releases/tag/v0.80.0"
 license: MIT
 date-released: "2026-10-19"
 version: "0.80.0"
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.19564336"
-    description: "Zenodo archive of Management Research Notes."
+# DOI 10.5281/zenodo.19564336 identifies the original v0.1.0 archive,
+# not this release. The README links that historical archive separately.
 keywords:
-  # Domain
   - management research
   - business sustainability
-  - business ethics
-  - business research
-  # Research practice
-  - academic research
-  - academic writing
+  - strategic management
+  - corporate social responsibility
   - literature review
-  - literature review tool
-  - zettelkasten
-  - bibliographic metadata
-  # Technical format
-  - sqlite
-  - bibtex
+  - academic research
   - knowledge base
-  - academic knowledge base
   - research infrastructure
-  # AI agents and retrieval
+  - bibliographic metadata
+  - markdown
+  - sqlite
+  - full-text search
+  - bibtex
+  - python
   - ai agents
-  - agents.md
-  - claude code
-  - retrieval-augmented generation
-  # Quality assurance
-  - faithfulness audit
 abstract: >-
-  Management Research Notes is a portable, file-based academic knowledge
-  base for management and business sustainability research. Each
-  peer-reviewed article becomes one Markdown note with YAML frontmatter
-  (trusted bibliographic metadata, a controlled-vocabulary topic taxonomy,
-  three custom analytic fields — unit_of_analysis, level_of_theory,
-  dependent_variable_family — and verbatim evidence anchors on every
-  factual claim) and a human-readable distillation (research question,
-  mechanism, theoretical contribution, practical implication, limitations,
-  future research, APA citation). A small Python pipeline derives a SQLite
-  index with FTS5, a CSV export, and a BibTeX file from the notes, and a
-  two-layer faithfulness audit (mechanical substring check on evidence
-  anchors plus a cold-context independent auditor scoring prose fields against
-  a published rubric) gates every note into the library.
+  Management Research Notes is a management and business sustainability research library for literature discovery, comparison and return to original publications. Structured Markdown notes combine bibliographic metadata, analytic summaries and source references; V3 notes add hypotheses/propositions, data and measures, and key findings. The notes cover empirical studies, editorials, conceptual papers and reviews. A Python pipeline derives SQLite/FTS5, CSV and BibTeX views. The current AI-assisted workflow combines mechanical checks, independent holistic and claims reviews, and source-based adjudication. Evidence anchors support traceability but do not certify every claim. Review coverage and exceptions vary by version; dated records below preserve those distinctions. Verify substantive claims against the original publications.
   Version 0.80.0 (2026-10-19). AMJ 2026, Volume 69, Issue 5 publishes eight new V3 notes, including the editorial, and upgrades the existing Fang note from V2 to V3 under its stable ID. All nine downloaded papers have exactly one analysis. Current paired reviews retain 81 SUPPORTED holistic fields and 1,721 SUPPORTED / one UNVERIFIED claim, with a separate source adjudication for the retained reservation. Four corrections across four fields in three notes (three precision, one substantive), including two exact user-approved Fang corrections, preceded the final fresh paired reviews. All nine structural validations and standard publication-evidence checks pass. SQLite, CSV and BibTeX contain 1,222 records (61 V1 / 210 V2 / 951 V3). See docs/releases/v0.80.0.md for scope, the Fang upgrade, corrections and review limits.
   Version 0.79.0 (2026-10-19). AMJ 2014, Volume 57, Issue 5 adds all 13 downloaded papers as V3 notes, including the editorial. Current paired reviews retain 117 SUPPORTED holistic fields and 2,348 SUPPORTED / 4 UNVERIFIED claims, with separate source adjudications. Seven content operations, 12 canonical-label replacements and one explicitly approved authors-formatting change preceded current paired review. Twelve standard publication-evidence checks pass; Kong is accepted under an explicit one-note PDF-assisted release-gate exception. Powell retains an explicitly approved structural-sentinel exception and its actual validator failure. SQLite, CSV and BibTeX contain 1,214 records (61 V1 / 211 V2 / 942 V3). See docs/releases/v0.79.0.md for scope, corrections and explicit one-note exceptions.
   Version 0.78.0 (2026-10-16) adds all 13 V3 analyses from AMJ Volume 57, Issue 6, including the editorial. Final paired reviews retain 115 SUPPORTED / 2 PARTIAL holistic fields and 2,161 SUPPORTED / 11 UNVERIFIED claims, with separate source adjudications. Five content corrections and 11 canonical-label replacements preceded fresh paired reviews for every changed note. All 13 publication-evidence checks pass. The 1,201-note corpus contains 61 V1, 211 V2 and 929 V3 notes. See docs/releases/v0.78.0.md for scope, corrections and review limits.

@@ -264,13 +264,8 @@ Publish **per issue** (policy updated 2026-07-10): when Steps 0–4.5 are clean 
 the issue and the user has asked for publication —
 
 1. **Release hygiene — update from evidence, not memory:**
-   - README: new changelog entry in "Faithfulness audit" (verdict counts, repairs,
-     record totals), snapshot count, AMJ pilot coverage list + issue-history line,
-     paper-type table (from `sqlite3 index/synapse.db "SELECT paper_type, COUNT(*)
-     FROM papers GROUP BY 1"`), version-tier sentence, BibTeX `version`.
-   - `CITATION.cff`: `version`, `date-released`, a new abstract paragraph, and the
-     current-snapshot sentence. Validate with `python3 -c "import yaml;
-     yaml.safe_load(open('CITATION.cff'))"`.
+   - README: update the dated snapshot totals, source/issue coverage, version-tier sentence, latest-release summary/link and BibTeX version/release URL. Keep the homepage concise; put detailed verdict counts, repairs, exceptions and record totals in `docs/releases/vX.Y.Z.md`. Report the paper-type census there using `sqlite3 index/synapse.db "SELECT paper_type, COUNT(*) FROM papers GROUP BY 1"`. `FAITHFULNESS-AUDIT.md` preserves the former README section through v0.80.0 verbatim; do not append to or rewrite its preserved block.
+   - `CITATION.cff`: `version`, `date-released`, release `url`, a new abstract paragraph, and the current-snapshot sentence. The original v0.1.0 Zenodo DOI is a separate historical archive, not a DOI for later releases. Validate with `python3 -c "import yaml; yaml.safe_load(open('CITATION.cff'))"`.
    - `AGENTS.md`: §1 counts/coverage, §5 audit state (date + verdict totals),
      §6 citation version.
    - **Version-currency sweep (mandatory, batch-24 lesson):** after updating the
@@ -289,8 +284,8 @@ the issue and the user has asked for publication —
    - **Release-body formatting (batch-32 lesson):** GitHub renders a single
      newline inside release notes as a visible line break, so the GitHub
      Release body must be written ONE PARAGRAPH PER LINE and one bullet per
-     line — never paste the README changelog entry verbatim (it is
-     hard-wrapped at ~72 columns for the file); reflow it first. Tables,
+     line — reflow any hard-wrapped text copied from the detailed release
+     record before using it as a GitHub Release body. Tables,
      headings, and code fences are the only multi-line structures. Twenty-
      seven releases (v0.1.0–v0.19.1, v0.63.0–v0.65.0) rendered as broken
      lines until the workshop reflowed them on 2026-09-07.
@@ -394,8 +389,8 @@ Propositions, Data & Measures, and Key Findings. Two tiers, two treatments:
   note, never silently summarized as current knowledge. Required handling:
   (a) the first line of Key Findings (v3) — or Research Question on v1/v2 —
   states "This article has been retracted; the following summarizes its
-  originally reported findings."; (b) the README changelog and the GitHub
-  Release name the retraction and link the publisher's notice; (c) an
+  originally reported findings."; (b) the detailed release record in
+  `docs/releases/` and the GitHub Release name the retraction and link the publisher's notice, with a linked notice in the README's current release summary; (c) an
   observations-queue entry records it; (d) bibliographic fields are NOT
   edited — the note stays a faithful record of what was published, and no
   acquisition/status field is repurposed as a retraction flag. Evidence for
