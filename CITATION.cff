@@ -9,8 +9,8 @@ authors:
 repository-code: "https://github.com/binqi20/management-research-notes"
 url: "https://github.com/binqi20/management-research-notes"
 license: MIT
-date-released: "2026-10-16"
-version: "0.78.0"
+date-released: "2026-10-19"
+version: "0.79.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.19564336"
@@ -55,6 +55,7 @@ abstract: >-
   two-layer faithfulness audit (mechanical substring check on evidence
   anchors plus a cold-context independent auditor scoring prose fields against
   a published rubric) gates every note into the library.
+  Version 0.79.0 (2026-10-19). AMJ 2014, Volume 57, Issue 5 adds all 13 downloaded papers as V3 notes, including the editorial. Current paired reviews retain 117 SUPPORTED holistic fields and 2,348 SUPPORTED / 4 UNVERIFIED claims, with separate source adjudications. Seven content operations, 12 canonical-label replacements and one explicitly approved authors-formatting change preceded current paired review. Twelve standard publication-evidence checks pass; Kong is accepted under an explicit one-note PDF-assisted release-gate exception. Powell retains an explicitly approved structural-sentinel exception and its actual validator failure. SQLite, CSV and BibTeX contain 1,214 records (61 V1 / 211 V2 / 942 V3). See docs/releases/v0.79.0.md for scope, corrections and explicit one-note exceptions.
   Version 0.78.0 (2026-10-16) adds all 13 V3 analyses from AMJ Volume 57, Issue 6, including the editorial. Final paired reviews retain 115 SUPPORTED / 2 PARTIAL holistic fields and 2,161 SUPPORTED / 11 UNVERIFIED claims, with separate source adjudications. Five content corrections and 11 canonical-label replacements preceded fresh paired reviews for every changed note. All 13 publication-evidence checks pass. The 1,201-note corpus contains 61 V1, 211 V2 and 929 V3 notes. See docs/releases/v0.78.0.md for scope, corrections and review limits.
   Version 0.77.0 (2026-10-15) adds 8 V3 analyses from AMJ Volume 69, Issue
   4, preserving 1 existing NBS analysis and completing coverage of its nine
@@ -1070,9 +1071,9 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.78.0 snapshot contains 1,201 curated
+  perfectly-clean batch. The current v0.79.0 snapshot contains 1,214 curated
   notes: 272 from the Network for Business Sustainability monthly digests
-  and 929 AMJ pilot notes across vol. 57 no. 1-3 and no. 6 plus vol. 58 no. 1 through
+  and 942 AMJ pilot notes across vol. 57 no. 1-3 and no. 5-6 plus vol. 58 no. 1 through
   vol. 69 no. 4. The historical v0.70.0 stored reports recorded 1,167/1,167
   PASS with zero UNSUPPORTED or CONTRADICTED verdicts. Those release-time
   labels do not describe the subsequent V1 and AMJ reviews summarized above;

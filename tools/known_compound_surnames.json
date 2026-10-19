@@ -88,6 +88,11 @@
       "manifest_surname": "Vaujany",
       "crossref_family": "de Vaujany",
       "rationale": "François-Xavier de Vaujany — French 'de Vaujany' nobiliary particle. CrossRef stores 'de Vaujany'; manifest (filename-derived) uses the citation short form 'Vaujany'. NBS 2026-01; DOI verified (title gate-matches CrossRef). Suppressed 2026-06-06."
+    },
+    "10.5465/amj.2012.0360": {
+      "manifest_surname": "Vries",
+      "crossref_family": "de Vries",
+      "rationale": "Thomas A. de Vries — compound family name. PDF byline on AMJ 57(5), p. 1334 reads 'THOMAS A. DE VRIES'; CrossRef stores given='Thomas A.', family='de Vries'. The download manifest and filename use the short form 'Vries'; retain that identifier while full note author metadata uses 'de Vries'. Suppressed 2026-10-18."
     }
   }
 }
