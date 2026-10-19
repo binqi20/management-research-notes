@@ -26,6 +26,8 @@ Plain text and standard exports let researchers and developers use the same mate
 
 **v0.80.0 · 19 October 2026 · 1,222 notes**
 
+**Most notes cover publications in UTD24 journals**, the [24 leading business journals](https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/list-of-journals) used in The University of Texas at Dallas’s business school research rankings. Coverage is especially deep in the *Academy of Management Journal*.
+
 | Source collection | Notes | Coverage |
 |---|---:|---|
 | Network for Business Sustainability (NBS) digests | 272 | December 2025, January 2026 and February 2026 |
