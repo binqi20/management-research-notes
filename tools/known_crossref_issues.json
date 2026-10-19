@@ -10,6 +10,9 @@
     "fail the gate. Duplicate keys are rejected at load time."
   ],
   "entries": {
+    "amj-vol-69-no-5-toubiana-2026": {
+      "title": "CrossRef title contains inline <i>Academy of Management Journal</i> markup and whitespace before the following colon. The literal comparator flags it, but the lexical title matches the original PDF p. 917 and the publisher article/issue title at https://journals.aom.org/doi/10.5465/amj.2026.4005. The note preserves the trusted manifest title; only this paper/title formatting false positive is registered. Suppressed 2026-10-19."
+    },
     "nbs-2026-02-reinecke-2026": {
       "title": "CrossRef record duplicates the title and embeds the author name mid-string ('...PaulKalpita Bhar. Ecophenomenology and the Environmental Crisis in the Sundarbans...'). The note's title matches the PDF correctly. Suppressed 2026-05-09."
     },
