@@ -9,11 +9,11 @@ This is the entry point for agents reading, querying or contributing to Manageme
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**1,235 curated notes** on scholarly publications in management and business
-sustainability research. The current v0.81.0 main-branch snapshot contains 272
+**1,248 curated notes** on scholarly publications in management and business
+sustainability research. The current v0.82.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
-and 963 Academy of Management Journal pilot notes across 77 issues
-(vol. 57 no. 1 through vol. 69 no. 5). Every note is a single Markdown
+and 976 Academy of Management Journal issue-batch notes across 78 issues
+(vol. 56 no. 6, all issues of vols. 57–68, and vol. 69 nos. 1–5). Every note is a single Markdown
 file with YAML frontmatter and a structured Markdown body. The repository
 is MIT licensed; individual PDFs are not redistributed.
 
@@ -126,7 +126,9 @@ The [current analysis workflow](docs/analysis-workflow.md) distinguishes mechani
 
 The [preserved homepage audit history](FAITHFULNESS-AUDIT.md) and [release records](docs/releases/) provide the dated disclosures. The existing status records below remain unchanged.
 
-**Current review status — v0.81.0, 2026-10-20.** AMJ 2014, Volume 57, Issue 4 adds all 13 downloaded papers as V3 notes, including the editorial. Current paired reviews retain 117 SUPPORTED holistic fields and 2,484 SUPPORTED / four UNVERIFIED claims, with separate source adjudications. Twelve body corrections across 11 fields in ten drafts (nine precision, three substantive) preceded the final fresh paired reviews; no protected metadata was repaired. All 13 standard publication-evidence checks pass. Boone and Mair retain explicitly approved Practical Implication sentinel exceptions and their actual structural-validator failures; the other 11 structural validations pass. SQLite, CSV and BibTeX contain 1,235 records (61 V1 / 210 V2 / 964 V3). See the [issue release, corrections and exceptions](docs/releases/v0.81.0.md).
+**Current review status — v0.82.0, 2026-10-20.** AMJ 2013, Volume 56, Issue 6 adds all 13 downloaded papers as V3 notes, including the editorial. Current paired reviews retain 116 SUPPORTED / one CONTRADICTED holistic fields and 2,304 SUPPORTED / one UNVERIFIED / one CONTRADICTED claims, with separate source adjudications. Ten body operations across eight fields in five drafts (eight precision, two substantive) preceded fresh paired reviews for every repaired note; no protected metadata was repaired. Three explicitly approved one-note exceptions retain the actual failed checks: Colquitt’s title-format mismatch, Devers’s Practical Implication sentinel and Inoue’s PDF/text threshold-glyph discrepancy. Inoue’s official audit and standard publication-evidence gate remain failed, and its original reader labels remain unchanged; the other 12 publication-evidence checks pass. Twelve structural and twelve seven-field bibliographic checks pass, with Devers and Colquitt respectively excepted. SQLite, CSV and BibTeX contain 1,248 records (61 V1 / 210 V2 / 977 V3). See the [issue release, corrections and exceptions](docs/releases/v0.82.0.md).
+
+**Published review status — v0.81.0, 2026-10-20.** AMJ 2014, Volume 57, Issue 4 adds all 13 downloaded papers as V3 notes, including the editorial. Current paired reviews retain 117 SUPPORTED holistic fields and 2,484 SUPPORTED / four UNVERIFIED claims, with separate source adjudications. Twelve body corrections across 11 fields in ten drafts (nine precision, three substantive) preceded the final fresh paired reviews; no protected metadata was repaired. All 13 standard publication-evidence checks pass. Boone and Mair retain explicitly approved Practical Implication sentinel exceptions and their actual structural-validator failures; the other 11 structural validations pass. SQLite, CSV and BibTeX contain 1,235 records (61 V1 / 210 V2 / 964 V3). See the [issue release, corrections and exceptions](docs/releases/v0.81.0.md).
 
 **Published review status — v0.80.0, 2026-10-19.** AMJ 2026, Volume 69, Issue 5 publishes eight new V3 notes, including the editorial, and upgrades the existing Fang note from V2 to V3 under its stable ID. All nine downloaded papers have exactly one analysis. Current paired reviews retain 81 SUPPORTED holistic fields and 1,721 SUPPORTED / one UNVERIFIED claim, with a separate source adjudication for the retained reservation. Four corrections across four fields in three notes (three precision, one substantive), including two exact user-approved Fang corrections, preceded the final fresh paired reviews. All nine structural validations and standard publication-evidence checks pass. SQLite, CSV and BibTeX contain 1,222 records (61 V1 / 210 V2 / 951 V3). See the [issue release, corrections and retained judgment](docs/releases/v0.80.0.md).
 
@@ -502,9 +504,9 @@ numeric-check policy does not retrospectively restamp older reports.
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.81.0) [Software]. GitHub. https://github.com/binqi20/management-research-notes/releases/tag/v0.81.0
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.82.0) [Software]. GitHub. https://github.com/binqi20/management-research-notes/releases/tag/v0.82.0
 
-See [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata. DOI [10.5281/zenodo.19564336](https://doi.org/10.5281/zenodo.19564336) identifies the original v0.1.0 archive, not v0.81.0; cite that archive separately when it is the version used.
+See [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata. DOI [10.5281/zenodo.19564336](https://doi.org/10.5281/zenodo.19564336) identifies the original v0.1.0 archive, not v0.82.0; cite that archive separately when it is the version used.
 
 ---
 

@@ -80,6 +80,7 @@ Before compressing the paper into the note, make a short private per-study evide
 
 - Write formula operations in order before paraphrasing; distinguish changes of logged variables from logs of changes, and sums from averages.
 - Keep value, sign, unit, denominator, study, outcome and time window together. Hours are not meetings, interviews are not unique participants, and an annual rate is not a one-year-ahead rate.
+- Preserve temporal referents: distinguish the duration of an event or exposure from the timing or persistence of its effects, including in future-research summaries. Do not shorten either into "event duration" unless that is the source's meaning.
 - For each comparison or robustness statement, identify comparator, dimension, direction and condition; check every named model, subgroup, study or cycle. Preserve null, marginal and contrary results.
 - Distinguish author predictions, observations, proposed explanations and recommendations. A conditional argument must retain its condition, and a method described as rare is not necessarily introduced by this paper.
 - Read tables with headers and footnotes alongside prose. If the paper conflicts with itself, represent the discrepancy explicitly; do not invent an explanation or silently prefer one account.
