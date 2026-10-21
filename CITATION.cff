@@ -7,10 +7,10 @@ authors:
     given-names: "Binqi"
     orcid: "https://orcid.org/0000-0002-5095-3710"
 repository-code: "https://github.com/binqi20/management-research-notes"
-url: "https://github.com/binqi20/management-research-notes/releases/tag/v0.82.0"
+url: "https://github.com/binqi20/management-research-notes/releases/tag/v0.83.0"
 license: MIT
-date-released: "2026-10-20"
-version: "0.82.0"
+date-released: "2026-10-21"
+version: "0.83.0"
 # DOI 10.5281/zenodo.19564336 identifies the original v0.1.0 archive,
 # not this release. The README links that historical archive separately.
 keywords:
@@ -31,6 +31,7 @@ keywords:
   - ai agents
 abstract: >-
   Management Research Notes is a management and business sustainability research library for literature discovery, comparison and return to original publications. Structured Markdown notes combine bibliographic metadata, analytic summaries and source references; V3 notes add hypotheses/propositions, data and measures, and key findings. The notes cover empirical studies, editorials, conceptual papers and reviews. A Python pipeline derives SQLite/FTS5, CSV and BibTeX views. The current AI-assisted workflow combines mechanical checks, independent holistic and claims reviews, and source-based adjudication. Evidence anchors support traceability but do not certify every claim. Review coverage and exceptions vary by version; dated records below preserve those distinctions. Verify substantive claims against the original publications.
+  Version 0.83.0 (2026-10-21). AMJ 2013, Volume 56, Issue 5 adds all 13 downloaded papers as V3 notes, including the editorial. Current paired reviews retain 116 SUPPORTED / one PARTIAL holistic fields and 2,362 SUPPORTED / one UNVERIFIED claims, with separate source adjudications. Twenty post-review body operations across 14 fields in eight drafts (ten canonical-label substitutions, nine precision and one substantive correction) preceded fresh paired reviews for every repaired note; no protected metadata was repaired. All 13 structural validations and normal publication-evidence checks pass. Colquitt retains an explicitly approved title-format exception and its actual failed bibliographic check; the other 12 seven-field checks pass. The user accepted an issue-scoped writer-runtime provenance qualification: five writers lack proof of own-runtime verification before explicit assignment, although completed runtime logs confirm the required model and effort. All 52 reader runtimes were independently verified before analytical dispatch. SQLite, CSV and BibTeX contain 1,261 records (61 V1 / 210 V2 / 990 V3). See docs/releases/v0.83.0.md for scope, corrections, retained judgments and qualifications.
   Version 0.82.0 (2026-10-20). AMJ 2013, Volume 56, Issue 6 adds all 13 downloaded papers as V3 notes, including the editorial. Current paired reviews retain 116 SUPPORTED / one CONTRADICTED holistic fields and 2,304 SUPPORTED / one UNVERIFIED / one CONTRADICTED claims, with separate source adjudications. Ten body operations across eight fields in five drafts (eight precision, two substantive) preceded fresh paired reviews for every repaired note; no protected metadata was repaired. Three explicitly approved one-note exceptions retain the actual failed checks: Colquitt’s title-format mismatch, Devers’s Practical Implication sentinel and Inoue’s PDF/text threshold-glyph discrepancy. Inoue’s official audit and standard publication-evidence gate remain failed, and its original reader labels remain unchanged; the other 12 publication-evidence checks pass. Twelve structural and twelve seven-field bibliographic checks pass, with Devers and Colquitt respectively excepted. SQLite, CSV and BibTeX contain 1,248 records (61 V1 / 210 V2 / 977 V3). See docs/releases/v0.82.0.md for scope, corrections, retained judgments and explicit one-note exceptions.
   Version 0.81.0 (2026-10-20). AMJ 2014, Volume 57, Issue 4 adds all 13 downloaded papers as V3 notes, including the editorial. Current paired reviews retain 117 SUPPORTED holistic fields and 2,484 SUPPORTED / four UNVERIFIED claims, with separate source adjudications. Twelve body corrections across 11 fields in ten drafts (nine precision, three substantive) preceded the final fresh paired reviews; no protected metadata was repaired. All 13 standard publication-evidence checks pass. Boone and Mair retain explicitly approved Practical Implication sentinel exceptions and their actual structural-validator failures; the other 11 structural validations pass. SQLite, CSV and BibTeX contain 1,235 records (61 V1 / 210 V2 / 964 V3). See docs/releases/v0.81.0.md for scope, corrections, retained judgments and explicit one-note exceptions.
   Version 0.80.0 (2026-10-19). AMJ 2026, Volume 69, Issue 5 publishes eight new V3 notes, including the editorial, and upgrades the existing Fang note from V2 to V3 under its stable ID. All nine downloaded papers have exactly one analysis. Current paired reviews retain 81 SUPPORTED holistic fields and 1,721 SUPPORTED / one UNVERIFIED claim, with a separate source adjudication for the retained reservation. Four corrections across four fields in three notes (three precision, one substantive), including two exact user-approved Fang corrections, preceded the final fresh paired reviews. All nine structural validations and standard publication-evidence checks pass. SQLite, CSV and BibTeX contain 1,222 records (61 V1 / 210 V2 / 951 V3). See docs/releases/v0.80.0.md for scope, the Fang upgrade, corrections and review limits.
@@ -1050,9 +1051,9 @@ abstract: >-
   Ong, Xu) and served as the standalone validation of the
   extraction_model verbatim fix in docs/extraction-prompt.md; 13/13
   Layer 1 first-try PASS, 13/13 Layer 2 PASS with 0 PARTIAL — the third
-  perfectly-clean batch. The current v0.82.0 snapshot contains 1,248 curated
+  perfectly-clean batch. The current v0.83.0 snapshot contains 1,261 curated
   notes: 272 from the Network for Business Sustainability monthly digests
-  and 976 AMJ issue-batch notes across 78 issues: vol. 56 no. 6, all issues
+  and 989 AMJ issue-batch notes across 79 issues: vol. 56 nos. 5–6, all issues
   of vols. 57–68, and vol. 69 nos. 1–5. The historical v0.70.0 stored reports recorded 1,167/1,167
   PASS with zero UNSUPPORTED or CONTRADICTED verdicts. Those release-time
   labels do not describe the subsequent V1 and AMJ reviews summarized above;
