@@ -24,18 +24,18 @@ Plain text and standard exports let researchers and developers use the same mate
 
 ## What's in this snapshot
 
-**v0.84.0 · 2 November 2026 · 1,274 notes**
+**v0.85.0 · 3 November 2026 · 1,287 notes**
 
 **Most notes cover publications in UTD24 journals**, the [24 leading business journals](https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/list-of-journals) used in The University of Texas at Dallas’s business school research rankings. Coverage is especially deep in the *Academy of Management Journal*.
 
 | Source collection | Notes | Coverage |
 |---|---:|---|
 | Network for Business Sustainability (NBS) digests | 272 | December 2025, January 2026 and February 2026 |
-| Academy of Management Journal (AMJ) issue batches | 1,002 | 80 issues: Volume 56 Issues 4–6; all issues of Volumes 57–68; Volume 69 Issues 1–5 |
+| Academy of Management Journal (AMJ) issue batches | 1,015 | 81 issues: Volume 56 Issues 3–6; all issues of Volumes 57–68; Volume 69 Issues 1–5 |
 
-Seven NBS-source notes also cover AMJ papers, bringing the total to **1,009 distinct AMJ publications** without duplicate analyses. The corpus contains **61 V1, 210 V2 and 1,003 V3 notes**. These version labels describe note formats, not accuracy ratings.
+Seven NBS-source notes also cover AMJ papers, bringing the total to **1,022 distinct AMJ publications** without duplicate analyses. The corpus contains **61 V1, 210 V2 and 1,016 V3 notes**. These version labels describe note formats, not accuracy ratings.
 
-The latest release adds all 13 AMJ Volume 56 Issue 4 notes, including the editorial. See the [v0.84.0 release record](docs/releases/v0.84.0.md) for scope, corrections, retained reader judgments and publication checks, and [earlier release records](docs/releases/) for their respective scopes.
+The latest release adds all 13 AMJ Volume 56 Issue 3 notes, including the editorial. See the [v0.85.0 release record](docs/releases/v0.85.0.md) for scope, corrections, retained reader judgments and publication checks, and [earlier release records](docs/releases/) for their respective scopes.
 
 ## Quick start
 
@@ -123,12 +123,12 @@ Use [CITATION.cff](CITATION.cff) or GitHub’s **Cite this repository** control 
   title   = {Management Research Notes: A File-Based Academic Knowledge Base
              for Management and Business Sustainability Research},
   year    = {2026},
-  version = {0.84.0},
-  url     = {https://github.com/binqi20/management-research-notes/releases/tag/v0.84.0}
+  version = {0.85.0},
+  url     = {https://github.com/binqi20/management-research-notes/releases/tag/v0.85.0}
 }
 ```
 
-The [original v0.1.0 Zenodo archive](https://doi.org/10.5281/zenodo.19564336) has its own DOI; it is not an archive of v0.84.0. Later Zenodo deposits remain paused. When using a note’s substantive content, also cite the original publication using its bibliographic metadata and APA citation block.
+The [original v0.1.0 Zenodo archive](https://doi.org/10.5281/zenodo.19564336) has its own DOI; it is not an archive of v0.85.0. Later Zenodo deposits remain paused. When using a note’s substantive content, also cite the original publication using its bibliographic metadata and APA citation block.
 
 ## Author
 

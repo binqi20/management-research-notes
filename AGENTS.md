@@ -9,11 +9,11 @@ This is the entry point for agents reading, querying or contributing to Manageme
 ## 1. What this repository is
 
 **Management Research Notes** is a file-based academic knowledge base of
-**1,274 curated notes** on scholarly publications in management and business
-sustainability research. The current v0.84.0 main-branch snapshot contains 272
+**1,287 curated notes** on scholarly publications in management and business
+sustainability research. The current v0.85.0 main-branch snapshot contains 272
 Network for Business Sustainability notes (2025-12, 2026-01, 2026-02)
-and 1,002 Academy of Management Journal issue-batch notes across 80 issues
-(vol. 56 nos. 4–6, all issues of vols. 57–68, and vol. 69 nos. 1–5). Every note is a single Markdown
+and 1,015 Academy of Management Journal issue-batch notes across 81 issues
+(vol. 56 nos. 3–6, all issues of vols. 57–68, and vol. 69 nos. 1–5). Every note is a single Markdown
 file with YAML frontmatter and a structured Markdown body. The repository
 is MIT licensed; individual PDFs are not redistributed.
 
@@ -126,7 +126,9 @@ The [current analysis workflow](docs/analysis-workflow.md) distinguishes mechani
 
 The [preserved homepage audit history](FAITHFULNESS-AUDIT.md) and [release records](docs/releases/) provide the dated disclosures. The existing status records below remain unchanged.
 
-**Current review status — v0.84.0, 2026-11-02.** AMJ 2013, Volume 56, Issue 4 adds all 13 downloaded papers as V3 notes, including the Mayer editorial. Current paired reviews retain 117 SUPPORTED holistic fields and 2,203 SUPPORTED / one UNVERIFIED claims, with a separate source adjudication for Ray. Five post-review body operations across four fields in three drafts (four precision and one substantive) preceded fresh paired reviews for every repaired note; no protected metadata was repaired. All 13 structural validations, seven-field bibliographic checks and normal publication-evidence gates pass. No scoped exception was needed. All 13 writers and 32 independent readers had their own actual runtime verified before analytical dispatch. SQLite, CSV and BibTeX contain 1,274 records (61 V1 / 210 V2 / 1,003 V3). See the [issue release, corrections and retained judgment](docs/releases/v0.84.0.md).
+**Current review status — v0.85.0, 2026-11-03.** AMJ 2013, Volume 56, Issue 3 adds all 13 downloaded papers as V3 notes, including the Pollock editorial. Current paired reviews retain 116 SUPPORTED / one PARTIAL holistic fields and 2,229 SUPPORTED / 16 UNVERIFIED claims, with separate source adjudications. One precision body correction in Krause preceded fresh paired reviews; the exact approved Nederveen Pieterse author-format change occurred before its first readers. All 13 structural validations, seven-field bibliographic checks and normal publication-evidence gates pass. No new scoped exception was required. All 13 writers and 28 independent readers had their own actual runtime verified before analytical dispatch. SQLite, CSV and BibTeX contain 1,287 records (61 V1 / 210 V2 / 1,016 V3). See the [issue release, corrections and retained judgments](docs/releases/v0.85.0.md).
+
+**Published review status — v0.84.0, 2026-11-02.** AMJ 2013, Volume 56, Issue 4 adds all 13 downloaded papers as V3 notes, including the Mayer editorial. Current paired reviews retain 117 SUPPORTED holistic fields and 2,203 SUPPORTED / one UNVERIFIED claims, with a separate source adjudication for Ray. Five post-review body operations across four fields in three drafts (four precision and one substantive) preceded fresh paired reviews for every repaired note; no protected metadata was repaired. All 13 structural validations, seven-field bibliographic checks and normal publication-evidence gates pass. No scoped exception was needed. All 13 writers and 32 independent readers had their own actual runtime verified before analytical dispatch. SQLite, CSV and BibTeX contain 1,274 records (61 V1 / 210 V2 / 1,003 V3). See the [issue release, corrections and retained judgment](docs/releases/v0.84.0.md).
 
 **Published review status — v0.83.0, 2026-10-21.** AMJ 2013, Volume 56, Issue 5 adds all 13 downloaded papers as V3 notes, including the editorial. Current paired reviews retain 116 SUPPORTED / one PARTIAL holistic fields and 2,362 SUPPORTED / one UNVERIFIED claims, with separate source adjudications. Twenty post-review body operations across 14 fields in eight drafts (ten canonical-label substitutions, nine precision and one substantive correction) preceded fresh paired reviews for every repaired note; no protected metadata was repaired. All 13 structural validations and normal publication-evidence checks pass. Colquitt retains an explicitly approved title-format exception and its actual failed bibliographic check; the other 12 seven-field checks pass. The user accepted an issue-scoped writer-runtime provenance qualification: five writers lack proof of own-runtime verification before explicit assignment, although completed runtime logs confirm the required model and effort. All 52 reader runtimes were independently verified before analytical dispatch. SQLite, CSV and BibTeX contain 1,261 records (61 V1 / 210 V2 / 990 V3). See the [issue release, corrections and qualifications](docs/releases/v0.83.0.md).
 
@@ -508,9 +510,9 @@ numeric-check policy does not retrospectively restamp older reports.
 - **Citing the underlying paper:** Use the APA citation block at the bottom of each note's body. That's the canonical citation; the DOI is in the frontmatter and is machine-verifiable via CrossRef.
 - **Citing this knowledge base as a research tool:** If your agent or application uses Management Research Notes as a retrieval source, please cite the repository itself:
 
-> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.84.0) [Software]. GitHub. https://github.com/binqi20/management-research-notes/releases/tag/v0.84.0
+> Tang, B. (2026). *Management Research Notes: A File-Based Academic Knowledge Base for Management and Business Sustainability Research* (Version 0.85.0) [Software]. GitHub. https://github.com/binqi20/management-research-notes/releases/tag/v0.85.0
 
-See [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata. DOI [10.5281/zenodo.19564336](https://doi.org/10.5281/zenodo.19564336) identifies the original v0.1.0 archive, not v0.84.0; cite that archive separately when it is the version used.
+See [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata. DOI [10.5281/zenodo.19564336](https://doi.org/10.5281/zenodo.19564336) identifies the original v0.1.0 archive, not v0.85.0; cite that archive separately when it is the version used.
 
 ---
 
